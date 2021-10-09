@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  getit:
+    build: .
+    # volumes: 
+    #   - ./:/go/src/app
+
+  test:
+    build: .
+    command: ["go","test","./..."]
+    volumes:
+      - ./:/go/src/app
