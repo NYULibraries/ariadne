@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ctx:context-objects
+xmlns:ctx="info:ofi/fmt:xml:xsd:ctx"
+xsi:schemaLocation="info:ofi/fmt:xml:xsd:ctx http://www.openurl.info/registry/docs/info:ofi/fmt:xml:xsd:ctx"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ctx:context-object
+  identifier=""
+  timestamp="{{ .Timestamp }}"
+  version="Z39.88-2004">
+  <ctx:referent>
+    <ctx:metadata-by-val>
+      <ctx:format>info:ofi/fmt:xml:xsd:{{ .Genre }}</ctx:format>
+      <ctx:metadata>
+        <rft:{{ .Genre }}
+          xmlns:rft="info:ofi/fmt:xml:xsd:{{ .Genre }}"
+          xsi:schemaLocation="info:ofi/fmt:xml:xsd:{{ .Genre }} http://www.openurl.info/registry/docs/info:ofi/fmt:xml:xsd:{{ .Genre }}">
+          {{- range $i, $valArr := .RftValues -}}
+            {{ range $j, $val := $valArr }}
+              <rft:{{$i}}>{{$val}}</rft:{{$i}}>
+            {{- end -}}
+          {{- end -}}
+        </rft:{{ .Genre }}>
+      </ctx:metadata>
+    </ctx:metadata-by-val>
+  </ctx:referent>
+</ctx:context-object>
+</ctx:context-objects>
