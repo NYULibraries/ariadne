@@ -11,7 +11,29 @@ import (
 
 const sfxUrl string = "http://sfx.library.nyu.edu/sfxlcl41"
 
-func postToSfx() (err error) {
+func postToSfx(xmlBody string) (bodyString string, err error) {
+	client := http.Client{}
+	params := url.Values{}
+
+	params.Add("url_ctx_fmt", "info:ofi/fmt:xml:xsd:ctx")
+	params.Add("sfx.response_type", "multi_obj_xml")
+	params.Add("sfx.show_availability", "1")
+	params.Add("sfx.ignore_date_threshold", "1")
+	params.Add("sfx.doi_url", "http://dx.doi.org")
+	params.Add("url_ctx_val", xmlBody)
+
+	req, err := http.NewRequest("POST", sfxUrl, strings.NewReader(params.Encode()))
+	req.PostForm = params
+	req.Header.Add("Content-Type", "application/x-www-form-urlencoded")
+
+	resp, err := client.Do(req)
+	if err != nil {
+		return
+	}
+	defer resp.Body.Close()
+
+	body, err := ioutil.ReadAll(resp.Body)
+	bodyString = string(body)
 	return
 }
 
@@ -30,26 +52,7 @@ func main() {
 		panic("PANIC!!!")
 	}
 
-	client := http.Client{}
-	params := url.Values{}
-	params.Add("url_ctx_fmt", "info:ofi/fmt:xml:xsd:ctx")
-	params.Add("sfx.response_type", "multi_obj_xml")
-	params.Add("sfx.show_availability", "1")
-	params.Add("sfx.ignore_date_threshold", "1")
-	params.Add("sfx.doi_url", "http://dx.doi.org")
-	params.Add("url_ctx_val", result)
-	req, err := http.NewRequest("POST", sfxUrl, strings.NewReader(params.Encode()))
-	req.PostForm = params
-	req.Header.Add("Content-Type", "application/x-www-form-urlencoded")
-	resp, err := client.Do(req)
-
-	if err != nil {
-		fmt.Printf("Request Failed: %s", err)
-		return
-	}
-	defer resp.Body.Close()
-	body, err := ioutil.ReadAll(resp.Body) // Log the request body
-	bodyString := string(body)
+	bodyString, err := postToSfx(result)
 	fmt.Println(bodyString)
 
 }
