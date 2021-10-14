@@ -19,18 +19,6 @@ var validGenres = map[string]bool{
 	"bookitem":   true,
 }
 
-// Represents a <data> element
-type Data struct {
-	XMLName xml.Name `xml:"data"`
-	Entry   []Entry  `xml:"entry"`
-}
-
-// Represents an <entry> element
-type Entry struct {
-	Name string `xml:"name"`
-	Age  int    `xml:"age"`
-}
-
 type Timestamp time.Time
 
 type ContextObject struct {
@@ -47,6 +35,7 @@ type ContextObjectResp struct {
 
 type CtxObjEl struct {
 	XMLName       xml.Name          `xml:"ctx_obj"`
+	CtxObjAttrs   string            //`xml:"ctx_obj_attributes"`
 	CtxObjTargets []CtxObjTargetsEl `xml:"ctx_obj_targets"`
 }
 
