@@ -8,7 +8,7 @@ RUN go mod tidy && \
     go clean -modcache
 
 FROM alpine:latest  
-WORKDIR /go/src/app
+WORKDIR /app
 COPY --from=builder /app ./
 EXPOSE 8080
 CMD ["./getit"]  

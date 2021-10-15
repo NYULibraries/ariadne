@@ -38,17 +38,13 @@ func Resolve(w http.ResponseWriter, r *http.Request) {
 
 	ctx, err := sfx.ToCtxObjReq(r.URL.Query())
 	if err != nil {
-		log.Println(err)
-		w.WriteHeader(http.StatusBadRequest)
-		json.NewEncoder(w).Encode(map[string]interface{}{"status": "error", "message": "Invalid OpenURL"})
+		handleError(err, w, "Invalid OpenURL")
 		return
 	}
 
 	resp, err := sfx.Post(ctx)
 	if err != nil {
-		log.Println(err)
-		w.WriteHeader(http.StatusBadRequest)
-		json.NewEncoder(w).Encode(map[string]interface{}{"status": "error", "message": "Invalid response from SFX"})
+		handleError(err, w, "Invalid response from SFX")
 		return
 	}
 
@@ -59,4 +55,10 @@ func Resolve(w http.ResponseWriter, r *http.Request) {
 func Healthcheck(w http.ResponseWriter, r *http.Request) {
 	w.Header().Add("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(map[string]interface{}{"status": "ok"})
+}
+
+func handleError(err error, w http.ResponseWriter, message string) {
+	log.Println(err)
+	w.WriteHeader(http.StatusBadRequest)
+	json.NewEncoder(w).Encode(map[string]interface{}{"status": "error", "message": message})
 }

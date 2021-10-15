@@ -9,15 +9,15 @@ services:
     networks:
       - getit-net
     # volumes: 
-    #   - ./:/go/src/app
+    #   - ./:/app
 
-  backend-test:
+  gotest:
     build: 
       context: backend/
       dockerfile: Dockerfile.test
     command: ["go","test","./..."]
     volumes:
-      - ./:/go/src/app
+      - ./:/app
 
 networks:
   getit-net:
