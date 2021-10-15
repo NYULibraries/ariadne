@@ -24,7 +24,7 @@ func main() {
 func NewRouter() *mux.Router {
 	router := mux.NewRouter().StrictSlash(true)
 	router.HandleFunc("/healthcheck", Healthcheck).Methods("GET")
-	router.HandleFunc("/", Index).Methods("GET")
+	router.HandleFunc("/", Resolve).Methods("GET")
 
 	return router
 }
@@ -32,7 +32,7 @@ func NewRouter() *mux.Router {
 // Take an incoming Querystring, convert to context object XML, send a post to SFX
 // and write the response JSON
 // TODO: Throttle requests? Or throttle in frontend?
-func Index(w http.ResponseWriter, r *http.Request) {
+func Resolve(w http.ResponseWriter, r *http.Request) {
 	// s := "http://yourserver:3000/resolve?sid=FirstSearch%3AWorldCat&genre=book&title=Fairy+tales&date=1898&aulast=Andersen&aufirst=H&auinitm=C&rfr_id=info%3Asid%2Ffirstsearch.oclc.org%3AWorldCat&rft.genre=book&rft_id=info%3Aoclcnum%2F7675437&rft.aulast=Andersen&rft.aufirst=H&rft.auinitm=C&rft.btitle=Fairy+tales&rft.date=1898&rft.place=Philadelphia&rft.pub=H.+Altemus+Co.&rft.genre=book"
 	w.Header().Add("Content-Type", "application/json")
 
