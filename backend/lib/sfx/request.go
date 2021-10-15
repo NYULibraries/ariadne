@@ -41,23 +41,27 @@ func validGenre(genre []string) (string, error) {
 	if len(genre) > 0 && validGenres[genre[0]] {
 		return genre[0], nil
 	}
-	return "", fmt.Errorf("genre not in list of allowed genres")
+	return "", fmt.Errorf("genre not in list of allowed genres: %v", genre)
 }
 
 // Take an openurl and return a map of only the rft-prefixed fields
 // These are the fields we are going to parse into XML as part of the
 // post request params
-func parseOpenURL(qs url.Values) (parsed map[string][]string, err error) {
-	parsed = make(map[string][]string)
+func parseOpenURL(qs url.Values) (map[string][]string, error) {
+	parsed := make(map[string][]string)
+
 	for key, val := range qs {
 		if strings.HasPrefix(key, "rft.") {
-			// TODO: Dedupe
+			// TODO: Dedupe on values
 			newKey := strings.Split(key, ".")
 			parsed[newKey[1]] = val
 		}
 	}
+	if len(parsed) == 0 {
+		return nil, fmt.Errorf("no valid OpenURL querystring params")
+	}
 
-	return
+	return parsed, nil
 }
 
 func isValidXML(data []byte) bool {
@@ -79,6 +83,10 @@ func (c *ContextObjectReq) toXML() (result string, err error) {
 		return result, fmt.Errorf("could not execute go template from context object request: %v", err)
 	}
 
+	if !isValidXML(tpl.Bytes()) {
+		return result, fmt.Errorf("request context object XML is not valid XML: %v", err)
+	}
+
 	result = tpl.String()
 	return
 }
@@ -91,7 +99,7 @@ func setContextObjectReq(qs url.Values) (ctx *ContextObjectReq, err error) {
 		return ctx, fmt.Errorf("could not parse OpenURL: %v", err)
 	}
 
-	validGenre, err := validGenre(qs["genre"])
+	validGenre, err := validGenre(rfts["genre"])
 	if err != nil {
 		return ctx, fmt.Errorf("genre is not valid: %v", err)
 	}
@@ -133,10 +141,6 @@ func ToCtxObjReq(qs url.Values) (ctxObjReqXml string, err error) {
 	ctxObjReqXml, err = ctxObjReq.toXML()
 	if err != nil {
 		return ctxObjReqXml, fmt.Errorf("could not convert request context object to XML: %v", err)
-	}
-
-	if !isValidXML([]byte(ctxObjReqXml)) {
-		return ctxObjReqXml, fmt.Errorf("request context object XML is not valid XML: %v", err)
 	}
 
 	return
