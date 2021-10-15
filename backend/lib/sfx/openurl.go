@@ -1,7 +1,7 @@
 package sfx
 
 // The full spec of OpenURL fields as defined here:
-// https://developers.exlibrisgroup.com/sfx/apis/web_services/openUrl/
+// https://biblio.ugent.be/publication/760060/file/760063.pdf
 // May or may not come in handy for this application
 type OpenUrl struct {
 	Genre   string

@@ -1,13 +1,24 @@
 version: "3.9"
 
 services:
-  getit:
-    build: .
+  backend:
+    build: 
+      context: backend/
+    ports:
+      - "8080:8080"
+    networks:
+      - getit-net
     # volumes: 
     #   - ./:/go/src/app
 
-  test:
-    build: .
+  backend-test:
+    build: 
+      context: backend/
+      dockerfile: Dockerfile.test
     command: ["go","test","./..."]
     volumes:
       - ./:/go/src/app
+
+networks:
+  getit-net:
+    driver: bridge

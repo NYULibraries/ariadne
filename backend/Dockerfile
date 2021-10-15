@@ -10,4 +10,5 @@ RUN go mod tidy && \
 FROM alpine:latest  
 WORKDIR /go/src/app
 COPY --from=builder /app ./
+EXPOSE 8080
 CMD ["./getit"]  
