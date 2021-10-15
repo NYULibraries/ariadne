@@ -34,5 +34,4 @@ docker-compose run backend-test
 
 ## TODO:
 
-- Better cascading error handling/printing
 - Testing

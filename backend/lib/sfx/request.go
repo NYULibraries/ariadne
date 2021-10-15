@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"encoding/xml"
-	"errors"
+	"fmt"
 	"io/ioutil"
 	"net/http"
 	"net/url"
@@ -41,7 +41,7 @@ func validGenre(genre []string) (string, error) {
 	if len(genre) > 0 && validGenres[genre[0]] {
 		return genre[0], nil
 	}
-	return "", errors.New("Not a valid genre")
+	return "", fmt.Errorf("genre not in list of allowed genres")
 }
 
 // Take an openurl and return a map of only the rft-prefixed fields
@@ -71,12 +71,12 @@ func (c *ContextObjectReq) toXML() (result string, err error) {
 
 	t, err = t.ParseFiles("templates/index.goxml")
 	if err != nil {
-		return
+		return result, fmt.Errorf("could not load template parse file: %v", err)
 	}
 
 	var tpl bytes.Buffer
 	if err = t.Execute(&tpl, c); err != nil {
-		return
+		return result, fmt.Errorf("could not execute go template from context object request: %v", err)
 	}
 
 	result = tpl.String()
@@ -88,12 +88,12 @@ func (c *ContextObjectReq) toXML() (result string, err error) {
 func setContextObjectReq(qs url.Values) (ctx *ContextObjectReq, err error) {
 	rfts, err := parseOpenURL(qs)
 	if err != nil {
-		return
+		return ctx, fmt.Errorf("could not parse OpenURL: %v", err)
 	}
 
 	validGenre, err := validGenre(qs["genre"])
 	if err != nil {
-		return
+		return ctx, fmt.Errorf("genre is not valid: %v", err)
 	}
 
 	now := time.Now()
@@ -115,7 +115,7 @@ func toJson(from []byte) (to string, err error) {
 
 	b, err := json.Marshal(p)
 	if err != nil {
-		return
+		return to, fmt.Errorf("could not marshal contect object struct to json: %v", err)
 	}
 	to = string(b)
 
@@ -127,16 +127,16 @@ func toJson(from []byte) (to string, err error) {
 func ToCtxObjReq(qs url.Values) (ctxObjReqXml string, err error) {
 	ctxObjReq, err := setContextObjectReq(qs)
 	if err != nil {
-		return
+		return ctxObjReqXml, fmt.Errorf("could not create context object for request: %v", err)
 	}
 
 	ctxObjReqXml, err = ctxObjReq.toXML()
 	if err != nil {
-		return
+		return ctxObjReqXml, fmt.Errorf("could not convert request context object to XML: %v", err)
 	}
 
 	if !isValidXML([]byte(ctxObjReqXml)) {
-		return
+		return ctxObjReqXml, fmt.Errorf("request context object XML is not valid XML: %v", err)
 	}
 
 	return
@@ -156,7 +156,7 @@ func Post(xmlBody string) (body string, err error) {
 
 	req, err := http.NewRequest("POST", sfxUrl, strings.NewReader(params.Encode()))
 	if err != nil {
-		return
+		return body, fmt.Errorf("could not initialize request to SFX server: %v", err)
 	}
 
 	req.PostForm = params
@@ -165,7 +165,7 @@ func Post(xmlBody string) (body string, err error) {
 	client := http.Client{}
 	resp, err := client.Do(req)
 	if err != nil {
-		return
+		return body, fmt.Errorf("could not do post to SFX server: %v", err)
 	}
 
 	defer resp.Body.Close()
@@ -174,7 +174,7 @@ func Post(xmlBody string) (body string, err error) {
 	// Convert to JSON before returning
 	body, err = toJson(sfxResp)
 	if err != nil {
-		return
+		return body, fmt.Errorf("could not convert SFX response XML to JSON: %v", err)
 	}
 
 	return
