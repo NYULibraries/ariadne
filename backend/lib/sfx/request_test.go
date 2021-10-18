@@ -14,7 +14,7 @@ import (
 
 const mockTimestamp = "2017-10-27T10:49:40-04:00"
 
-func TestValidGenre(t *testing.T) {
+func TestIsValidGenre(t *testing.T) {
 	var tests = []struct {
 		genre       []string
 		expected    string
@@ -29,13 +29,13 @@ func TestValidGenre(t *testing.T) {
 	for _, tt := range tests {
 		testname := fmt.Sprintf("%s", tt.genre)
 		t.Run(testname, func(t *testing.T) {
-			ans, err := validGenre(tt.genre)
+			ans, err := isValidGenre(tt.genre)
 			if ans != tt.expected {
-				t.Errorf("validGenre returned '%v', expecting '%v'", ans, tt.expected)
+				t.Errorf("isValidGenre returned '%v', expecting '%v'", ans, tt.expected)
 			}
 			if tt.expectedErr != nil {
 				if err == nil {
-					t.Errorf("validGenre err was '%v', expecting '%v'", err, tt.expectedErr)
+					t.Errorf("isValidGenre err was '%v', expecting '%v'", err, tt.expectedErr)
 				}
 			}
 		})
@@ -92,12 +92,13 @@ func TestIsValidXML(t *testing.T) {
 	}
 }
 
-func TestToXML(t *testing.T) {
+func TestToRequestXML(t *testing.T) {
 	var tests = []struct {
-		ctx         *ContextObjectReq
+		ctx         *CtxObjReq
+		tpl         ctxObjTpl
 		expectedErr error
 	}{
-		{&ContextObjectReq{RftValues: map[string][]string{"rft:genre": {"book"}, "rft:btitle": {"a book"}}, Timestamp: mockTimestamp, Genre: "book"}, nil},
+		{&CtxObjReq{}, ctxObjTpl{RftValues: map[string][]string{"rft:genre": {"book"}, "rft:btitle": {"a book"}}, Timestamp: mockTimestamp, Genre: "book"}, nil},
 	}
 
 	// Create the templates/index.goxml in the current test context temporarily
@@ -116,20 +117,20 @@ func TestToXML(t *testing.T) {
 		testname := fmt.Sprintf("%s", tt.ctx)
 		t.Run(testname, func(t *testing.T) {
 			c := tt.ctx
-			ans, err := c.toXML()
-			if !strings.HasPrefix(ans, `<?xml version="1.0" encoding="UTF-8"?>`) {
-				t.Errorf("toXML didn't return an XML document")
+			err := c.toRequestXML(tt.tpl)
+			if !strings.HasPrefix(c.RequestXML, `<?xml version="1.0" encoding="UTF-8"?>`) {
+				t.Errorf("toRequestXML didn't return an XML document")
 			}
 			if tt.expectedErr != nil {
 				if err == nil {
-					t.Errorf("toXML err was '%v', expecting '%v'", err, tt.expectedErr)
+					t.Errorf("toRequestXML err was '%v', expecting '%v'", err, tt.expectedErr)
 				}
 			}
 		})
 	}
 }
 
-func TestSetContextObjectReq(t *testing.T) {
+func TestSetCtxObjReq(t *testing.T) {
 	var tests = []struct {
 		querystring   url.Values
 		expectedGenre string
@@ -143,19 +144,16 @@ func TestSetContextObjectReq(t *testing.T) {
 	for _, tt := range tests {
 		testname := fmt.Sprintf("%s", tt.querystring)
 		t.Run(testname, func(t *testing.T) {
-			ans, err := setContextObjectReq(tt.querystring)
-			fmt.Printf("this is the obj %v", err)
+			ans, err := setCtxObjReq(tt.querystring)
+
 			if tt.expectedErr != nil {
 				if err == nil {
-					t.Errorf("setContextObjectReq err was '%v', expecting '%v'", err, tt.expectedErr)
+					t.Errorf("setCtxObjReq err was '%v', expecting '%v'", err, tt.expectedErr)
 				}
 			}
 			if err == nil {
-				if ans.Genre != tt.expectedGenre {
-					t.Errorf("setContextObjectReq.Genre returned '%v', expecting '%v'", ans, tt.expectedGenre)
-				}
-				if reflect.DeepEqual(ans.RftValues, tt.expectedRfts) {
-					t.Errorf("setContextObjectReq.RftValues returned '%v', expecting '%v'", ans, tt.expectedRfts)
+				if !strings.HasPrefix(ans.RequestXML, `<?xml version="1.0" encoding="UTF-8"?>`) {
+					t.Errorf("requestXML isn't an XML document")
 				}
 			}
 		})
@@ -171,7 +169,7 @@ func TestSetContextObjectReq(t *testing.T) {
 // func setContextObjectReq(qs url.Values) (ctx *ContextObjectReq, err error) {
 // func toJson(from []byte) (to string, err error) {
 // func ToCtxObjReq(qs url.Values) (ctxObjReqXml string, err error) {
-// func Post(xmlBody string) (body string, err error) {
+// func Post(requestXML string) (body string, err error) {
 
 // Util function for copying a file from a source to a new dest
 func copy(src, dst string) (int64, error) {
