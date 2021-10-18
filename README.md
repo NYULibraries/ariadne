@@ -34,4 +34,6 @@ docker-compose run backend-test
 
 ## TODO:
 
-- Testing
+- Testing - round out request coverage - ~80%
+- GraphQL
+- Frontend - react? vue?

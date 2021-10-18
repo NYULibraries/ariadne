@@ -70,7 +70,7 @@ func isValidXML(data []byte) bool {
 
 // Convert a context object request to an XML string
 // via gotemplates, in order to set it up as a post param to SFX
-func (c *ContextObjectReq) toXML() (result string, err error) {
+func (c ContextObjectReq) toXML() (result string, err error) {
 	t := template.New("index.goxml")
 
 	t, err = t.ParseFiles("templates/index.goxml")
@@ -123,7 +123,7 @@ func toJson(from []byte) (to string, err error) {
 
 	b, err := json.Marshal(p)
 	if err != nil {
-		return to, fmt.Errorf("could not marshal contect object struct to json: %v", err)
+		return to, fmt.Errorf("could not marshal context object struct to json: %v", err)
 	}
 	to = string(b)
 
