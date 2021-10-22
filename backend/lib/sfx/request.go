@@ -20,7 +20,7 @@ type Timestamp time.Time
 
 // Values needed for templating an SFX request are parsed
 type ctxObjTpl struct {
-	RftValues map[string][]string
+	RftValues *OpenURL
 	Timestamp string
 	Genre     string
 }
@@ -28,12 +28,6 @@ type ctxObjTpl struct {
 // Object representing everything that's needed to request from SFX
 type CtxObjReq struct {
 	RequestXML string
-}
-
-// Mainly for documenting
-type SFXRequest interface {
-	Request()
-	toRequestXML()
 }
 
 // Take a querystring from the request and convert it to a valid
@@ -172,21 +166,30 @@ func isValidGenre(genre []string) (string, error) {
 // Take an openurl and return a map of only the rft-prefixed fields
 // These are the fields we are going to parse into XML as part of the
 // post request params
-func parseOpenURL(qs url.Values) (map[string][]string, error) {
-	parsed := make(map[string][]string)
+func parseOpenURL(qs url.Values) (*OpenURL, error) {
+	parsed := make(map[string]interface{})
 
-	for key, val := range qs {
-		if strings.HasPrefix(key, "rft.") {
-			// TODO: Dedupe on values
-			newKey := strings.Split(key, ".")
-			parsed[newKey[1]] = val
+	for k, v := range qs {
+		// Strip the "rft." prefix from the OpenURL
+		// and map into valid OpenURL fields
+		if strings.HasPrefix(k, "rft.") {
+			// E.g. "rft.book" becomes "book"
+			newKey := strings.Split(k, ".")[1]
+			parsed[newKey] = v
 		}
 	}
-	if len(parsed) == 0 {
-		return nil, fmt.Errorf("no valid OpenURL querystring params")
+
+	jsonbody, err := json.Marshal(parsed)
+	if err != nil {
+		return nil, fmt.Errorf("could not marshal parsed querystring to json: %v", err)
 	}
 
-	return parsed, nil
+	openurl := OpenURL{}
+	if err := json.Unmarshal(jsonbody, &openurl); err != nil {
+		return nil, fmt.Errorf("could not unmarshal parsed querystring from json to OpenURL: %v", err)
+	}
+
+	return &openurl, nil
 }
 
 // Validate XML, by marshalling and checking for a blank error
