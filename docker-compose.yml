@@ -9,15 +9,29 @@ services:
     networks:
       - resolve-net
     # volumes: 
-    #   - ./:/app
+    #   - ./backend:/app
 
   gotest:
     build: 
       context: backend/
       dockerfile: Dockerfile.test
-    command: ["go","test","./..."]
+    command: ["go","test","-cover","./..."]
     volumes:
-      - ./:/app
+      - ./backend:/app
+
+  gocover:
+    build: 
+      context: backend/
+      dockerfile: Dockerfile.test
+    command: 
+      - /bin/sh
+      - -c
+      - |
+        go test -coverprofile=coverage.out ./... &&
+        go tool cover -func=coverage.out
+        # go tool cover -html=coverage.out
+    volumes:
+      - ./backend:/app
 
 networks:
   resolve-net:

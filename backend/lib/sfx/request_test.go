@@ -100,6 +100,8 @@ func TestToRequestXML(t *testing.T) {
 		expectedErr error
 	}{
 		{&CtxObjReq{}, ctxObjTpl{RftValues: &OpenURL{"genre": {"book"}, "btitle": {"a book"}}, Timestamp: mockTimestamp, Genre: "book"}, nil},
+		{&CtxObjReq{}, ctxObjTpl{}, errors.New("error")},
+		{&CtxObjReq{}, ctxObjTpl{RftValues: &OpenURL{"genre": {"<rft:"}}, Timestamp: mockTimestamp, Genre: "book"}, errors.New("error")},
 	}
 
 	// Create the templates/index.goxml in the current test context temporarily
@@ -119,7 +121,7 @@ func TestToRequestXML(t *testing.T) {
 		t.Run(testname, func(t *testing.T) {
 			c := tt.ctx
 			err := c.toRequestXML(tt.tpl)
-			if !strings.HasPrefix(c.RequestXML, `<?xml version="1.0" encoding="UTF-8"?>`) {
+			if tt.expectedErr == nil && !strings.HasPrefix(c.RequestXML, `<?xml version="1.0" encoding="UTF-8"?>`) {
 				t.Errorf("toRequestXML didn't return an XML document")
 			}
 			if tt.expectedErr != nil {
@@ -133,12 +135,11 @@ func TestToRequestXML(t *testing.T) {
 
 func TestSetCtxObjReq(t *testing.T) {
 	var tests = []struct {
-		querystring   url.Values
-		expectedGenre string
-		expectedRfts  map[string][]string
-		expectedErr   error
+		querystring url.Values
+		expected    *CtxObjReq
+		expectedErr error
 	}{
-		{map[string][]string{"genre": {"book"}, "rft.genre": {"book"}, "rft.btitle": {"a book"}}, "book", map[string][]string{"rft:genre": {"book"}, "rft:btitle": {"a book"}}, nil},
+		{map[string][]string{"genre": {"book"}, "rft.genre": {"book"}, "rft.btitle": {"a book"}}, "book", map[string][]string{"genre": {"book"}, "btitle": {"a book"}}, nil},
 		{map[string][]string{}, "book", map[string][]string{"rft:genre": {"book"}, "rft:btitle": {"a book"}}, nil},
 	}
 
