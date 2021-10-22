@@ -16,7 +16,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           xsi:schemaLocation="info:ofi/fmt:xml:xsd:{{ .Genre }} http://www.openurl.info/registry/docs/info:ofi/fmt:xml:xsd:{{ .Genre }}">
           {{- range $i, $valArr := .RftValues -}}
             {{ range $j, $val := $valArr }}
-              <rft:{{$i}}>{{$val}}</rft:{{$i}}>
+              <rft:{{$i | ToLower}}>{{$val}}</rft:{{$i | ToLower}}>
             {{- end -}}
           {{- end -}}
         </rft:{{ .Genre }}>

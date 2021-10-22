@@ -14,7 +14,7 @@ import (
 
 const mockTimestamp = "2017-10-27T10:49:40-04:00"
 
-func TestIsValidGenre(t *testing.T) {
+func TestValidGenre(t *testing.T) {
 	var tests = []struct {
 		genre       []string
 		expected    string
@@ -29,13 +29,13 @@ func TestIsValidGenre(t *testing.T) {
 	for _, tt := range tests {
 		testname := fmt.Sprintf("%s", tt.genre)
 		t.Run(testname, func(t *testing.T) {
-			ans, err := isValidGenre(tt.genre)
+			ans, err := validGenre(tt.genre)
 			if ans != tt.expected {
-				t.Errorf("isValidGenre returned '%v', expecting '%v'", ans, tt.expected)
+				t.Errorf("validGenre returned '%v', expecting '%v'", ans, tt.expected)
 			}
 			if tt.expectedErr != nil {
 				if err == nil {
-					t.Errorf("isValidGenre err was '%v', expecting '%v'", err, tt.expectedErr)
+					t.Errorf("validGenre err was '%v', expecting '%v'", err, tt.expectedErr)
 				}
 			}
 		})
@@ -98,7 +98,7 @@ func TestToRequestXML(t *testing.T) {
 		tpl         ctxObjTpl
 		expectedErr error
 	}{
-		{&CtxObjReq{}, ctxObjTpl{RftValues: map[string][]string{"rft:genre": {"book"}, "rft:btitle": {"a book"}}, Timestamp: mockTimestamp, Genre: "book"}, nil},
+		{&CtxObjReq{}, ctxObjTpl{RftValues: &OpenURL{"genre": {"book"}, "btitle": {"a book"}}, Timestamp: mockTimestamp, Genre: "book"}, nil},
 	}
 
 	// Create the templates/index.goxml in the current test context temporarily

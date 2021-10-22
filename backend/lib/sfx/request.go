@@ -8,6 +8,7 @@ import (
 	"io/ioutil"
 	"net/http"
 	"net/url"
+	"reflect"
 	"strings"
 	"text/template"
 	"time"
@@ -24,6 +25,8 @@ type ctxObjTpl struct {
 	Timestamp string
 	Genre     string
 }
+
+type OpenURL map[string][]string
 
 // Object representing everything that's needed to request from SFX
 type CtxObjReq struct {
@@ -87,7 +90,7 @@ func (c CtxObjReq) Request() (body string, err error) {
 // via gotemplates, in order to set it up as a post param to SFX
 // Store in CtxObjReq.RequestXML
 func (c *CtxObjReq) toRequestXML(tplVals ctxObjTpl) error {
-	t := template.New("index.goxml")
+	t := template.New("index.goxml").Funcs(template.FuncMap{"ToLower": strings.ToLower})
 
 	t, err := t.ParseFiles("templates/index.goxml")
 	if err != nil {
@@ -116,7 +119,7 @@ func setCtxObjReq(qs url.Values) (ctx *CtxObjReq, err error) {
 		return ctx, fmt.Errorf("could not parse OpenURL: %v", err)
 	}
 
-	isValidGenre, err := isValidGenre(rfts["genre"])
+	genre, err := validGenre((*rfts)["genre"])
 	if err != nil {
 		return ctx, fmt.Errorf("genre is not valid: %v", err)
 	}
@@ -126,7 +129,7 @@ func setCtxObjReq(qs url.Values) (ctx *CtxObjReq, err error) {
 	tmpl := ctxObjTpl{
 		Timestamp: now.Format(time.RFC3339Nano),
 		RftValues: rfts,
-		Genre:     isValidGenre,
+		Genre:     genre,
 	}
 
 	// Init the empty object to populate with toRequestXML
@@ -155,7 +158,7 @@ func genresList() (genresList map[string]bool) {
 }
 
 // Only return a valid genre that has been allowed by the OpenURL spec
-func isValidGenre(genre []string) (string, error) {
+func validGenre(genre []string) (string, error) {
 	validGenres := genresList()
 	if len(genre) > 0 && validGenres[genre[0]] {
 		return genre[0], nil
@@ -163,7 +166,7 @@ func isValidGenre(genre []string) (string, error) {
 	return "", fmt.Errorf("genre not in list of allowed genres: %v", genre)
 }
 
-// Take an openurl and return a map of only the rft-prefixed fields
+// Take an openurl and return an OpenURL object of only the rft-prefixed fields
 // These are the fields we are going to parse into XML as part of the
 // post request params
 func parseOpenURL(qs url.Values) (*OpenURL, error) {
@@ -175,7 +178,7 @@ func parseOpenURL(qs url.Values) (*OpenURL, error) {
 		if strings.HasPrefix(k, "rft.") {
 			// E.g. "rft.book" becomes "book"
 			newKey := strings.Split(k, ".")[1]
-			parsed[newKey] = v
+			parsed[strings.Title(newKey)] = v
 		}
 	}
 
@@ -187,6 +190,10 @@ func parseOpenURL(qs url.Values) (*OpenURL, error) {
 	openurl := OpenURL{}
 	if err := json.Unmarshal(jsonbody, &openurl); err != nil {
 		return nil, fmt.Errorf("could not unmarshal parsed querystring from json to OpenURL: %v", err)
+	}
+
+	if reflect.DeepEqual(openurl, OpenURL{}) {
+		return nil, fmt.Errorf("no valid querystring values to parse: %v", err)
 	}
 
 	return &openurl, nil
