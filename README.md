@@ -1,8 +1,8 @@
-# GetIt
+# Resolve
 
 ## Backend
 
-The GetIt backend is a simple API written in Golang, that takes an [OpenURL](https://biblio.ugent.be/publication/760060/file/760063.pdf) and returns electronic links from an SFX Knowledgebase that represent NYU's e-holdings of the resource identified by the OpenURL. It is essentially an API wrapper for the [SFX LinkResolver](https://exlibrisgroup.com/products/primo-discovery-service/sfx-link-resolver/) and so is itself an OpenURL Link Resolver.
+The Resolve backend is a simple API written in Golang, that takes an [OpenURL](https://biblio.ugent.be/publication/760060/file/760063.pdf) and returns electronic links from an SFX Knowledgebase that represent NYU's e-holdings of the resource identified by the OpenURL. It is essentially an API wrapper for the [SFX LinkResolver](https://exlibrisgroup.com/products/primo-discovery-service/sfx-link-resolver/) and so is itself an OpenURL Link Resolver.
 
 Under the hood it translates the OpenURL from a GET request as querystring parameters to an XML `ContextObject` for posting to the [SFX Web Service](https://developers.exlibrisgroup.com/sfx/apis/web_services/openurl/), and then parses the resulting XML into a JSON string to pass on to the presentation layer.
 
@@ -14,7 +14,7 @@ Since the backend is a Golang application, you can run it while developing with:
 go run server.go
 ```
 
-But we've also containerized it:
+But it's also containerized:
 
 ```
 docker-compose up backend
@@ -30,7 +30,7 @@ docker-compose run backend-test
 
 ## Frontend
 
-
+The frontend takes OpenURLs as querystring params and makes async calls to the backend with the OpenURL. Should parse the returned JSON to just pull out the target URLs with display text and coverage text if available.
 
 ## TODO:
 

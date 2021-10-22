@@ -3,9 +3,9 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"getit/lib/sfx"
 	"log"
 	"net/http"
+	"resolve/lib/sfx"
 
 	"github.com/gorilla/mux"
 )

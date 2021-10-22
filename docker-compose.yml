@@ -7,7 +7,7 @@ services:
     ports:
       - "8080:8080"
     networks:
-      - getit-net
+      - resolve-net
     # volumes: 
     #   - ./:/app
 
@@ -20,5 +20,5 @@ services:
       - ./:/app
 
 networks:
-  getit-net:
+  resolve-net:
     driver: bridge
