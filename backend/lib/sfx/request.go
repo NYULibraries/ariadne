@@ -33,6 +33,11 @@ type CtxObjReq struct {
 	RequestXML string
 }
 
+type SFXRequest interface {
+	Request()
+	toRequestXML()
+}
+
 // Take a querystring from the request and convert it to a valid
 // XML string for use in the POST to SFX, return CtxObjReq object
 func Init(qs url.Values) (ctxObjReq *CtxObjReq, err error) {
@@ -170,7 +175,7 @@ func validGenre(genre []string) (string, error) {
 // These are the fields we are going to parse into XML as part of the
 // post request params
 func parseOpenURL(qs url.Values) (*OpenURL, error) {
-	parsed := make(map[string]interface{})
+	parsed := &OpenURL{}
 
 	for k, v := range qs {
 		// Strip the "rft." prefix from the OpenURL
@@ -178,25 +183,15 @@ func parseOpenURL(qs url.Values) (*OpenURL, error) {
 		if strings.HasPrefix(k, "rft.") {
 			// E.g. "rft.book" becomes "book"
 			newKey := strings.Split(k, ".")[1]
-			parsed[strings.Title(newKey)] = v
+			(*parsed)[newKey] = v
 		}
 	}
 
-	jsonbody, err := json.Marshal(parsed)
-	if err != nil {
-		return nil, fmt.Errorf("could not marshal parsed querystring to json: %v", err)
+	if reflect.DeepEqual(parsed, &OpenURL{}) {
+		return nil, fmt.Errorf("no valid querystring values to parse")
 	}
 
-	openurl := OpenURL{}
-	if err := json.Unmarshal(jsonbody, &openurl); err != nil {
-		return nil, fmt.Errorf("could not unmarshal parsed querystring from json to OpenURL: %v", err)
-	}
-
-	if reflect.DeepEqual(openurl, OpenURL{}) {
-		return nil, fmt.Errorf("no valid querystring values to parse: %v", err)
-	}
-
-	return &openurl, nil
+	return parsed, nil
 }
 
 // Validate XML, by marshalling and checking for a blank error

@@ -48,14 +48,15 @@ func TestParseOpenURL(t *testing.T) {
 		expected    map[string][]string
 		expectedErr error
 	}{
-		{map[string][]string{"genre": {"book"}, "rft.genre": {"book"}}, map[string][]string{"rft:genre": {"book"}}, nil},
-		{map[string][]string{"genre": {"book"}, "rft.genre": {"journal", "book"}}, map[string][]string{"rft:genre": {"journal", "book"}}, nil},
-		{map[string][]string{"genre": {"book"}, "rft.genre": {"journal"}}, map[string][]string{"rft:genre": {"journal"}}, nil},
-		{map[string][]string{"genre": {"book"}}, map[string][]string{}, errors.New("error")},
+		{map[string][]string{"genre": {"book"}, "rft.genre": {"book"}}, OpenURL{"genre": {"book"}}, nil},
+		{map[string][]string{"genre": {"book"}, "rft.genre": {"journal", "book"}}, OpenURL{"genre": {"journal", "book"}}, nil},
+		{map[string][]string{"genre": {"book"}, "rft.genre": {"journal"}}, OpenURL{"genre": {"journal"}}, nil},
+		{map[string][]string{"genre": {"book"}}, OpenURL{}, errors.New("error")},
 	}
 
 	for _, tt := range tests {
 		testname := fmt.Sprintf("%s", tt.queryString)
+
 		t.Run(testname, func(t *testing.T) {
 			ans, err := parseOpenURL(tt.queryString)
 			if reflect.DeepEqual(ans, tt.expected) {
