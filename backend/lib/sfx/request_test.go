@@ -136,11 +136,10 @@ func TestToRequestXML(t *testing.T) {
 func TestSetCtxObjReq(t *testing.T) {
 	var tests = []struct {
 		querystring url.Values
-		expected    *CtxObjReq
 		expectedErr error
 	}{
-		{map[string][]string{"genre": {"book"}, "rft.genre": {"book"}, "rft.btitle": {"a book"}}, "book", map[string][]string{"genre": {"book"}, "btitle": {"a book"}}, nil},
-		{map[string][]string{}, "book", map[string][]string{"rft:genre": {"book"}, "rft:btitle": {"a book"}}, nil},
+		{map[string][]string{"genre": {"book"}}, nil},
+		{map[string][]string{"rft.genre": {"book"}}, nil},
 	}
 
 	for _, tt := range tests {
