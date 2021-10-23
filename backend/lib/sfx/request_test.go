@@ -161,9 +161,53 @@ func TestSetCtxObjReq(t *testing.T) {
 	}
 }
 
+func TestToResponseJson(t *testing.T) {
+	dummyXMLResponse := `
+<ctx_obj_set>
+	<ctx_obj>
+		<ctx_obj_targets>
+			<target>
+				<target_url>http://answers.library.newschool.edu/</target_url>
+			</target>
+		</ctx_obj_targets>
+	</ctx_obj>
+</ctx_obj_set>`
+	dummyJSONResponse := `{"ctx_obj":[{"ctx_obj_targets":[{"target":[{"target_name":"","target_public_name":"","target_url":"http://answers.library.newschool.edu/","authentication":"","proxy":""}]}]}]}`
+	var tests = []struct {
+		from        []byte
+		expected    string
+		expectedErr error
+	}{
+		{[]byte(dummyXMLResponse), dummyJSONResponse, nil},
+	}
+
+	// Temporarily copy templates into this directory so the relative path is correct
+	copyTmpTemplates(t)
+	defer removeTmpTemplates()
+
+	for _, tt := range tests {
+		testname := fmt.Sprintf("%s", tt.expected)
+		t.Run(testname, func(t *testing.T) {
+			ans, err := toResponseJson(tt.from)
+			// if err != nil {
+			// 	t.Errorf("error %v", err)
+			// }
+			if tt.expectedErr != nil {
+				if err == nil {
+					t.Errorf("toResponseJson err was '%v', expecting '%v'", err, tt.expectedErr)
+				}
+			}
+			if ans != tt.expected {
+				t.Errorf("toResponseJson was '%v', expecting '%v'", ans, tt.expected)
+			}
+		})
+	}
+}
+
 // func (c CtxObjReq) Request() (body string, err error) {
 // func Init(qs url.Values) (ctxObjReq *CtxObjReq, err error) {
-// func toResponseJson(from []byte) (to string, err error) {
+
+// Helpers
 
 // Temporarily copy templates into this directory so the relative path is correct
 func copyTmpTemplates(t *testing.T) {
