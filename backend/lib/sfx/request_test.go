@@ -104,17 +104,9 @@ func TestToRequestXML(t *testing.T) {
 		{&CtxObjReq{}, ctxObjTpl{RftValues: &OpenURL{"genre": {"<rft:"}}, Timestamp: mockTimestamp, Genre: "book"}, errors.New("error")},
 	}
 
-	// Create the templates/index.goxml in the current test context temporarily
-	// and delete after the test completes
-	err := os.Mkdir("templates", 0755)
-	if err != nil {
-		t.Errorf("could not create temp templates dir")
-	}
-	_, err = copy("../../templates/index.goxml", "./templates/index.goxml")
-	if err != nil {
-		t.Errorf("could not copy template file")
-	}
-	defer os.RemoveAll("templates")
+	// Temporarily copy templates into this directory so the relative path is correct
+	copyTmpTemplates(t)
+	defer removeTmpTemplates()
 
 	for _, tt := range tests {
 		testname := fmt.Sprintf("%s", tt.ctx)
@@ -138,15 +130,23 @@ func TestSetCtxObjReq(t *testing.T) {
 		querystring url.Values
 		expectedErr error
 	}{
-		{map[string][]string{"genre": {"book"}}, nil},
-		{map[string][]string{"rft.genre": {"book"}}, nil},
+		{map[string][]string{"genre": {"book"}}, errors.New("error")},
+		{map[string][]string{"rft.genre": {"podcast"}}, errors.New("error")},
+		{map[string][]string{"rft.genre": {"book"}, "rft.aulast": {"<rft:"}}, nil},
+		{map[string][]string{"rft.genre": {"book"}, "rft.btitle": {"dune"}}, nil},
 	}
+
+	// Temporarily copy templates into this directory so the relative path is correct
+	copyTmpTemplates(t)
+	defer removeTmpTemplates()
 
 	for _, tt := range tests {
 		testname := fmt.Sprintf("%s", tt.querystring)
 		t.Run(testname, func(t *testing.T) {
 			ans, err := setCtxObjReq(tt.querystring)
-
+			// if err != nil {
+			// 	t.Errorf("error %v", err)
+			// }
 			if tt.expectedErr != nil {
 				if err == nil {
 					t.Errorf("setCtxObjReq err was '%v', expecting '%v'", err, tt.expectedErr)
@@ -161,16 +161,28 @@ func TestSetCtxObjReq(t *testing.T) {
 	}
 }
 
-// type ContextObjectReq struct {
-// 	RftValues map[string][]string
-// 	Timestamp string
-// 	Genre     string
-// }
+// func (c CtxObjReq) Request() (body string, err error) {
+// func Init(qs url.Values) (ctxObjReq *CtxObjReq, err error) {
+// func toResponseJson(from []byte) (to string, err error) {
 
-// func setContextObjectReq(qs url.Values) (ctx *ContextObjectReq, err error) {
-// func toJson(from []byte) (to string, err error) {
-// func ToCtxObjReq(qs url.Values) (ctxObjReqXml string, err error) {
-// func Post(requestXML string) (body string, err error) {
+// Temporarily copy templates into this directory so the relative path is correct
+func copyTmpTemplates(t *testing.T) {
+	// Create the templates/index.goxml in the current test context temporarily
+	// and delete after the test completes
+	err := os.Mkdir("templates", 0755)
+	if err != nil {
+		t.Errorf("could not create temp templates dir: %v", err)
+	}
+	_, err = copy("../../templates/index.goxml", "./templates/index.goxml")
+	if err != nil {
+		t.Errorf("could not copy template file")
+	}
+}
+
+// Delete temporary templates directory from current path
+func removeTmpTemplates() {
+	os.RemoveAll("templates")
+}
 
 // Util function for copying a file from a source to a new dest
 func copy(src, dst string) (int64, error) {
