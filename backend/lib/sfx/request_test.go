@@ -162,7 +162,7 @@ func TestSetCtxObjReq(t *testing.T) {
 }
 
 func TestToResponseJson(t *testing.T) {
-	dummyXMLResponse := `
+	dummyGoodXMLResponse := `
 <ctx_obj_set>
 	<ctx_obj>
 		<ctx_obj_targets>
@@ -172,13 +172,16 @@ func TestToResponseJson(t *testing.T) {
 		</ctx_obj_targets>
 	</ctx_obj>
 </ctx_obj_set>`
+	dummyBadXMLResponse := `
+<ctx_obj_set`
 	dummyJSONResponse := `{"ctx_obj":[{"ctx_obj_targets":[{"target":[{"target_name":"","target_public_name":"","target_url":"http://answers.library.newschool.edu/","authentication":"","proxy":""}]}]}]}`
 	var tests = []struct {
 		from        []byte
 		expected    string
 		expectedErr error
 	}{
-		{[]byte(dummyXMLResponse), dummyJSONResponse, nil},
+		{[]byte(dummyGoodXMLResponse), dummyJSONResponse, nil},
+		{[]byte(dummyBadXMLResponse), "", errors.New("error")},
 	}
 
 	// Temporarily copy templates into this directory so the relative path is correct

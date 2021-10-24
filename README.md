@@ -42,12 +42,9 @@ And this should return the same set of links for use in the frontend:
 
 ## TODO:
 
-- Use goroutines
 - Sanitize urls to make sure no XML injection is allowed via querystring
 - Use Gin or other more performant http framework
-- Testing 
-  - round out request coverage - ~80%
-  - test server.go
+- Testing - round out to ~80%
 - GraphQL?
 - Frontend 
   - react? vue?
