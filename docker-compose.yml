@@ -27,7 +27,7 @@ services:
     # volumes:
     #   - ./backend:/app
 
-  gotest:
+  backend-test:
     build: 
       context: backend/
       dockerfile: Dockerfile.test
@@ -35,7 +35,7 @@ services:
     volumes:
       - ./backend:/app
 
-  gocover:
+  backend-test-coverage:
     build: 
       context: backend/
       dockerfile: Dockerfile.test
