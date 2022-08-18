@@ -11,7 +11,23 @@ services:
     # volumes: 
     #   - ./backend:/app
 
-  gotest:
+  backend-debug:
+    build:
+      context: backend/
+      dockerfile: Dockerfile.debug
+    cap_add:
+      - SYS_PTRACE
+    ports:
+      - "2345:2345"
+      - "8080:8080"
+    networks:
+      - resolve-net
+    security_opt:
+      - apparmor:unconfined
+    # volumes:
+    #   - ./backend:/app
+
+  backend-test:
     build: 
       context: backend/
       dockerfile: Dockerfile.test
@@ -19,7 +35,7 @@ services:
     volumes:
       - ./backend:/app
 
-  gocover:
+  backend-test-coverage:
     build: 
       context: backend/
       dockerfile: Dockerfile.test
