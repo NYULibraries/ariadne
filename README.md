@@ -22,6 +22,57 @@ docker-compose up backend
 # http://localhost:8080/?sid=FirstSearch%3AWorldCat&genre=book&title=Fairy+tales&date=1898&aulast=Andersen&aufirst=H&auinitm=C&rfr_id=info%3Asid%2Ffirstsearch.oclc.org%3AWorldCat&rft.genre=book&rft_id=info%3Aoclcnum%2F7675437&rft.aulast=Andersen&rft.aufirst=H&rft.auinitm=C&rft.btitle=Fairy+tales&rft.date=1898&rft.place=Philadelphia&rft.pub=H.+Altemus+Co.&rft.genre=book
 ```
 
+To run a [delve](https://github.com/go-delve/delve) debuggable containerized instance:
+
+```
+docker-compose up -d backend-debug
+```
+
+To remotely debug this container instance in a command-line [delve](https://github.com/go-delve/delve)
+session, run `dlv`, making sure to map the remote container source path `/app/` to
+the local source path on the machine where the remote debugging session is being run.
+This will allow the `dlv` client to find the source file being referenced by the
+`dlv` running in the container.
+
+Example:
+
+```
+$ dlv connect localhost:2345
+Type 'help' for list of commands.
+(dlv) list main.main
+Showing /app/main.go:11 (PC: 0x87c6ef)
+Command failed: open /app/main.go: no such file or directory
+(dlv) config substitute-path /app/ [LOCAL SOURCE CODE ABSOLUTE PATH]
+(dlv) list main.main
+Showing /app/main.go:11 (PC: 0x87c6ef)
+     6:	)
+     7:	
+     8:	// Run on port 8080
+     9:	const appPort = "8080"
+    10:	
+    11:	func main() {
+    12:		router := NewRouter()
+    13:	
+    14:		log.Println("Listening on port", appPort)
+    15:		log.Fatal(http.ListenAndServe(":"+appPort, router))
+    16:	}
+(dlv) 
+```
+
+To remote debug in Goland:
+[Attach to a process in the Docker container](https://www.jetbrains.com/help/go/attach-to-running-go-processes-with-debugger.html#attach-to-a-process-in-the-docker-container)
+
+To prevent the container from exiting after the headless `dlv` instance running
+inside the container is killed, add this to the `backend-debug` service definition
+in _backend/Dockerfile.debug_:
+
+```yaml
+command: tail -f /dev/null
+```
+
+See [Keep a container running in compose \#1926](https://github.com/docker/compose/issues/1926)
+for other methods.
+
 ### Testing
 
 ```
