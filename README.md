@@ -42,7 +42,7 @@ Type 'help' for list of commands.
 (dlv) list main.main
 Showing /app/main.go:11 (PC: 0x87c6ef)
 Command failed: open /app/main.go: no such file or directory
-(dlv) config substitute-path /app/ ~/resolve/backend/
+(dlv) config substitute-path /app/ [LOCAL SOURCE CODE ABSOLUTE PATH]
 (dlv) list main.main
 Showing /app/main.go:11 (PC: 0x87c6ef)
      6:	)
