@@ -2,9 +2,19 @@
 
 ## Backend
 
-The Resolve backend is a simple API written in Golang, that takes an [OpenURL](https://biblio.ugent.be/publication/760060/file/760063.pdf) and returns electronic links from an SFX Knowledgebase that represent NYU's e-holdings of the resource identified by the OpenURL. It is essentially an API wrapper for the [SFX LinkResolver](https://exlibrisgroup.com/products/primo-discovery-service/sfx-link-resolver/) and so is itself an OpenURL Link Resolver.
+The Resolve backend is a simple API written in Golang, that takes
+an [OpenURL](https://biblio.ugent.be/publication/760060/file/760063.pdf) and
+returns electronic links from an SFX Knowledgebase that represent NYU's
+e-holdings of the resource identified by the OpenURL. It is essentially an API
+wrapper for
+the [SFX LinkResolver](https://exlibrisgroup.com/products/primo-discovery-service/sfx-link-resolver/)
+and so is itself an OpenURL Link Resolver.
 
-Under the hood it translates the OpenURL from a GET request as querystring parameters to an XML `ContextObject` for posting to the [SFX Web Service](https://developers.exlibrisgroup.com/sfx/apis/web_services/openurl/), and then parses the resulting XML into a JSON string to pass on to the presentation layer.
+Under the hood it translates the OpenURL from a GET request as querystring
+parameters to an XML `ContextObject` for posting to
+the [SFX Web Service](https://developers.exlibrisgroup.com/sfx/apis/web_services/openurl/)
+, and then parses the resulting XML into a JSON string to pass on to the
+presentation layer.
 
 ### Usage
 
@@ -22,15 +32,19 @@ docker-compose up backend
 # http://localhost:8080/?sid=FirstSearch%3AWorldCat&genre=book&title=Fairy+tales&date=1898&aulast=Andersen&aufirst=H&auinitm=C&rfr_id=info%3Asid%2Ffirstsearch.oclc.org%3AWorldCat&rft.genre=book&rft_id=info%3Aoclcnum%2F7675437&rft.aulast=Andersen&rft.aufirst=H&rft.auinitm=C&rft.btitle=Fairy+tales&rft.date=1898&rft.place=Philadelphia&rft.pub=H.+Altemus+Co.&rft.genre=book
 ```
 
-To run a [delve](https://github.com/go-delve/delve) debuggable containerized instance:
+To run a [delve](https://github.com/go-delve/delve) debuggable containerized
+instance:
 
 ```
 docker-compose up -d backend-debug
 ```
 
-To remotely debug this container instance in a command-line [delve](https://github.com/go-delve/delve)
-session, run `dlv`, making sure to map the remote container source path `/app/` to
-the local source path on the machine where the remote debugging session is being run.
+To remotely debug this container instance in a
+command-line [delve](https://github.com/go-delve/delve)
+session, run `dlv`, making sure to map the remote container source path `/app/`
+to
+the local source path on the machine where the remote debugging session is being
+run.
 This will allow the `dlv` client to find the source file being referenced by the
 `dlv` running in the container.
 
@@ -63,7 +77,8 @@ To remote debug in Goland:
 [Attach to a process in the Docker container](https://www.jetbrains.com/help/go/attach-to-running-go-processes-with-debugger.html#attach-to-a-process-in-the-docker-container)
 
 To prevent the container from exiting after the headless `dlv` instance running
-inside the container is killed, add this to the `backend-debug` service definition
+inside the container is killed, add this to the `backend-debug` service
+definition
 in _backend/Dockerfile.debug_:
 
 ```yaml
@@ -81,7 +96,9 @@ docker-compose run backend-test
 
 ## Frontend
 
-The frontend takes OpenURLs as querystring params and makes async calls to the backend with the OpenURL. Should parse the returned JSON to just pull out the target URLs with display text and coverage text if available.
+The frontend takes OpenURLs as querystring params and makes async calls to the
+backend with the OpenURL. Should parse the returned JSON to just pull out the
+target URLs with display text and coverage text if available.
 
 For instance this is the existing service for The New Yorker:
 
@@ -97,6 +114,7 @@ And this should return the same set of links for use in the frontend:
 - Use Gin or other more performant http framework
 - Testing - round out to ~80%
 - GraphQL?
-- Frontend 
-  - react? vue?
-  - Debounce, memoize and otherwise cache requests so as not to bombard the SFX server
+- Frontend
+    - react? vue?
+    - Debounce, memoize and otherwise cache requests so as not to bombard the
+      SFX server
