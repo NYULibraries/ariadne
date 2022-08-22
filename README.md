@@ -21,13 +21,12 @@ version of the JSON API.
 
 ### Usage
 
-Since the backend is a Go application, you can run it while developing with:
-
 ```
-go run server.go
+cd backend/
+go run .
 ```
 
-But it's also containerized:
+Run in a container:
 
 ```
 docker-compose up backend
