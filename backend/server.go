@@ -26,10 +26,10 @@ func NewRouter() *mux.Router {
 
 	router := mux.NewRouter().StrictSlash(true)
 
-	router.HandleFunc("/", ResolveHTML).Methods("GET")
-	router.HandleFunc("/v0", ResolveJSON).Methods("GET")
 	router.HandleFunc("/healthcheck", Healthcheck).Methods("GET")
+	router.HandleFunc("/resolve", ResolveHTML).Methods("GET")
 	router.PathPrefix("/static/").Handler(http.StripPrefix("/static/", fileServer))
+	router.HandleFunc("/v0", ResolveJSON).Methods("GET")
 
 	return router
 }
