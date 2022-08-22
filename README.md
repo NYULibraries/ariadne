@@ -2,7 +2,7 @@
 
 ## Backend
 
-The Resolve backend is a simple API written in Golang, that takes
+The Resolve backend is a simple API written in Go, that takes
 an [OpenURL](https://biblio.ugent.be/publication/760060/file/760063.pdf) and
 returns electronic links from an SFX Knowledgebase that represent NYU's
 e-holdings of the resource identified by the OpenURL. It is essentially an API
@@ -18,7 +18,7 @@ presentation layer.
 
 ### Usage
 
-Since the backend is a Golang application, you can run it while developing with:
+Since the backend is a Go application, you can run it while developing with:
 
 ```
 go run server.go
