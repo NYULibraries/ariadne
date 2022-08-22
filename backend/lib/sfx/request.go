@@ -2,6 +2,7 @@ package sfx
 
 import (
 	"bytes"
+	_ "embed"
 	"encoding/json"
 	"encoding/xml"
 	"fmt"
@@ -16,6 +17,9 @@ import (
 
 // SFX url
 const sfxUrl string = "http://sfx.library.nyu.edu/sfxlcl41"
+
+//go:embed templates/sfx-request.xml
+var sfxRequestTemplate string
 
 type Timestamp time.Time
 
@@ -95,9 +99,9 @@ func (c CtxObjReq) Request() (body string, err error) {
 // via gotemplates, in order to set it up as a post param to SFX
 // Store in CtxObjReq.RequestXML
 func (c *CtxObjReq) toRequestXML(tplVals ctxObjTpl) error {
-	t := template.New("index.goxml").Funcs(template.FuncMap{"ToLower": strings.ToLower})
+	t := template.New("sfx-request.xml").Funcs(template.FuncMap{"ToLower": strings.ToLower})
 
-	t, err := t.ParseFiles("templates/index.goxml")
+	t, err := t.Parse(sfxRequestTemplate)
 	if err != nil {
 		return fmt.Errorf("could not load template parse file: %v", err)
 	}
