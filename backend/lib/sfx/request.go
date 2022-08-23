@@ -44,7 +44,7 @@ type SFXRequest interface {
 
 // Take a querystring from the request and convert it to a valid
 // XML string for use in the POST to SFX, return SFXContextObjectRequest object
-func Init(qs url.Values) (sfxContextObjectRequest *SFXContextObjectRequest, err error) {
+func NewSFXContextObjectRequest(qs url.Values) (sfxContextObjectRequest *SFXContextObjectRequest, err error) {
 	sfxContextObjectRequest, err = setSFXContextObjectRequest(qs)
 	if err != nil {
 		return sfxContextObjectRequest, fmt.Errorf("could not create context object for request: %v", err)

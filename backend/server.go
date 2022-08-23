@@ -39,7 +39,7 @@ func NewRouter() *mux.Router {
 func ResolveJSON(w http.ResponseWriter, r *http.Request) {
 	w.Header().Add("Content-Type", "application/json")
 
-	sfxContext, err := sfx.Init(r.URL.Query())
+	sfxContext, err := sfx.NewSFXContextObjectRequest(r.URL.Query())
 	if err != nil {
 		handleError(err, w, "Invalid OpenURL")
 		return
