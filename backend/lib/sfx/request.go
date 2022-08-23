@@ -122,8 +122,8 @@ func (c *SFXContextObjectRequest) toRequestXML(tplVals sfxContextObjectRequestBo
 
 // Setup the SFXContextObjectTpl instance we'll need to run with
 // the gotemplates to create the valid XML string param
-func setSFXContextObjectRequest(qs url.Values) (sfxContext *SFXContextObjectRequest, err error) {
-	rfts, err := parseOpenURL(qs)
+func setSFXContextObjectRequest(queryStringValues url.Values) (sfxContext *SFXContextObjectRequest, err error) {
+	rfts, err := parseOpenURL(queryStringValues)
 	if err != nil {
 		return sfxContext, fmt.Errorf("could not parse OpenURL: %v", err)
 	}
@@ -178,10 +178,10 @@ func validGenre(genre []string) (string, error) {
 // Take an openurl and return an OpenURL object of only the rft-prefixed fields
 // These are the fields we are going to parse into XML as part of the
 // post request params
-func parseOpenURL(qs url.Values) (*OpenURL, error) {
+func parseOpenURL(queryStringValues url.Values) (*OpenURL, error) {
 	parsed := &OpenURL{}
 
-	for k, v := range qs {
+	for k, v := range queryStringValues {
 		// Strip the "rft." prefix from the OpenURL
 		// and map into valid OpenURL fields
 		if strings.HasPrefix(k, "rft.") {
