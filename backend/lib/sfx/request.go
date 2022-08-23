@@ -24,7 +24,7 @@ var sfxRequestTemplate string
 type Timestamp time.Time
 
 // Values needed for templating an SFX request are parsed
-type sfxContextObjectTpl struct {
+type sfxContextObjectRequestBody struct {
 	RftValues *OpenURL
 	Timestamp string
 	Genre     string
@@ -98,7 +98,7 @@ func (c SFXContextObjectRequest) Request() (body string, err error) {
 // Convert a context object request to an XML string
 // via gotemplates, in order to set it up as a post param to SFX
 // Store in SFXContextObjectRequest.RequestXML
-func (c *SFXContextObjectRequest) toRequestXML(tplVals sfxContextObjectTpl) error {
+func (c *SFXContextObjectRequest) toRequestXML(tplVals sfxContextObjectRequestBody) error {
 	t := template.New("sfx-request.xml").Funcs(template.FuncMap{"ToLower": strings.ToLower})
 
 	t, err := t.Parse(sfxRequestTemplate)
@@ -135,7 +135,7 @@ func setSFXContextObjectReq(qs url.Values) (sfxContext *SFXContextObjectRequest,
 
 	// Set up template values, but discard after generating requestXML
 	now := time.Now()
-	tmpl := sfxContextObjectTpl{
+	tmpl := sfxContextObjectRequestBody{
 		Timestamp: now.Format(time.RFC3339Nano),
 		RftValues: rfts,
 		Genre:     genre,

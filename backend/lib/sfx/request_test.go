@@ -94,12 +94,12 @@ func TestIsValidXML(t *testing.T) {
 func TestToRequestXML(t *testing.T) {
 	var tests = []struct {
 		sfxContext  *SFXContextObjectRequest
-		tpl         sfxContextObjectTpl
+		tpl         sfxContextObjectRequestBody
 		expectedErr error
 	}{
-		{&SFXContextObjectRequest{}, sfxContextObjectTpl{RftValues: &OpenURL{"genre": {"book"}, "btitle": {"a book"}}, Timestamp: mockTimestamp, Genre: "book"}, nil},
-		{&SFXContextObjectRequest{}, sfxContextObjectTpl{}, errors.New("error")},
-		{&SFXContextObjectRequest{}, sfxContextObjectTpl{RftValues: &OpenURL{"genre": {"<rft:"}}, Timestamp: mockTimestamp, Genre: "book"}, errors.New("error")},
+		{&SFXContextObjectRequest{}, sfxContextObjectRequestBody{RftValues: &OpenURL{"genre": {"book"}, "btitle": {"a book"}}, Timestamp: mockTimestamp, Genre: "book"}, nil},
+		{&SFXContextObjectRequest{}, sfxContextObjectRequestBody{}, errors.New("error")},
+		{&SFXContextObjectRequest{}, sfxContextObjectRequestBody{RftValues: &OpenURL{"genre": {"<rft:"}}, Timestamp: mockTimestamp, Genre: "book"}, errors.New("error")},
 	}
 
 	for _, tt := range tests {
