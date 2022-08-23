@@ -24,7 +24,7 @@ var sfxRequestTemplate string
 type Timestamp time.Time
 
 // Values needed for templating an SFX request are parsed
-type ctxObjTpl struct {
+type sfxContextObjectTpl struct {
 	RftValues *OpenURL
 	Timestamp string
 	Genre     string
@@ -33,7 +33,7 @@ type ctxObjTpl struct {
 type OpenURL map[string][]string
 
 // Object representing everything that's needed to request from SFX
-type CtxObjReq struct {
+type SFXContextObjectReq struct {
 	RequestXML string
 }
 
@@ -43,20 +43,20 @@ type SFXRequest interface {
 }
 
 // Take a querystring from the request and convert it to a valid
-// XML string for use in the POST to SFX, return CtxObjReq object
-func Init(qs url.Values) (ctxObjReq *CtxObjReq, err error) {
-	ctxObjReq, err = setCtxObjReq(qs)
+// XML string for use in the POST to SFX, return SFXContextObjectReq object
+func Init(qs url.Values) (sfxContextObjectReq *SFXContextObjectReq, err error) {
+	sfxContextObjectReq, err = setSFXContextObjectReq(qs)
 	if err != nil {
-		return ctxObjReq, fmt.Errorf("could not create context object for request: %v", err)
+		return sfxContextObjectReq, fmt.Errorf("could not create context object for request: %v", err)
 	}
 
 	return
 }
 
 // Construct and run the actual POST request to the SFX server
-// Expects an XML string in a CtxObjReq obj which will be appended to the PostForm params
+// Expects an XML string in a SFXContextObjectReq obj which will be appended to the PostForm params
 // Body is blank because that is how SFX expects it
-func (c CtxObjReq) Request() (body string, err error) {
+func (c SFXContextObjectReq) Request() (body string, err error) {
 	params := url.Values{}
 	params.Add("url_ctx_fmt", "info:ofi/fmt:xml:xsd:ctx")
 	params.Add("sfx.response_type", "multi_obj_xml")
@@ -97,8 +97,8 @@ func (c CtxObjReq) Request() (body string, err error) {
 
 // Convert a context object request to an XML string
 // via gotemplates, in order to set it up as a post param to SFX
-// Store in CtxObjReq.RequestXML
-func (c *CtxObjReq) toRequestXML(tplVals ctxObjTpl) error {
+// Store in SFXContextObjectReq.RequestXML
+func (c *SFXContextObjectReq) toRequestXML(tplVals sfxContextObjectTpl) error {
 	t := template.New("sfx-request.xml").Funcs(template.FuncMap{"ToLower": strings.ToLower})
 
 	t, err := t.Parse(sfxRequestTemplate)
@@ -120,32 +120,32 @@ func (c *CtxObjReq) toRequestXML(tplVals ctxObjTpl) error {
 	return nil
 }
 
-// Setup the CtxObjTpl instance we'll need to run with
+// Setup the SFXContextObjectTpl instance we'll need to run with
 // the gotemplates to create the valid XML string param
-func setCtxObjReq(qs url.Values) (ctx *CtxObjReq, err error) {
+func setSFXContextObjectReq(qs url.Values) (sfxContext *SFXContextObjectReq, err error) {
 	rfts, err := parseOpenURL(qs)
 	if err != nil {
-		return ctx, fmt.Errorf("could not parse OpenURL: %v", err)
+		return sfxContext, fmt.Errorf("could not parse OpenURL: %v", err)
 	}
 
 	genre, err := validGenre((*rfts)["genre"])
 	if err != nil {
-		return ctx, fmt.Errorf("genre is not valid: %v", err)
+		return sfxContext, fmt.Errorf("genre is not valid: %v", err)
 	}
 
 	// Set up template values, but discard after generating requestXML
 	now := time.Now()
-	tmpl := ctxObjTpl{
+	tmpl := sfxContextObjectTpl{
 		Timestamp: now.Format(time.RFC3339Nano),
 		RftValues: rfts,
 		Genre:     genre,
 	}
 
 	// Init the empty object to populate with toRequestXML
-	ctx = &CtxObjReq{}
+	sfxContext = &SFXContextObjectReq{}
 
-	if err := ctx.toRequestXML(tmpl); err != nil {
-		return ctx, fmt.Errorf("could not convert request context object to XML: %v", err)
+	if err := sfxContext.toRequestXML(tmpl); err != nil {
+		return sfxContext, fmt.Errorf("could not convert request context object to XML: %v", err)
 	}
 
 	return
@@ -205,7 +205,7 @@ func isValidXML(data []byte) bool {
 
 // Convert the response XML from SFX into a JSON string
 func toResponseJson(from []byte) (to string, err error) {
-	var p CtxObjSet
+	var p SFXContextObjectSet
 	if err = xml.Unmarshal(from, &p); err != nil {
 		return
 	}

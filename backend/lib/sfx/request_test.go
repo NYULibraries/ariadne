@@ -76,8 +76,8 @@ func TestIsValidXML(t *testing.T) {
 		testXMLFile string
 		expected    bool
 	}{
-		{"../../testdata/ctxObj_good.xml", true},
-		{"../../testdata/ctxObj_bad.xml", false},
+		{"../../testdata/sfx-context-object-good.xml", true},
+		{"../../testdata/sfx-context-object-bad.xml", false},
 		{"", false},
 	}
 
@@ -95,13 +95,13 @@ func TestIsValidXML(t *testing.T) {
 
 func TestToRequestXML(t *testing.T) {
 	var tests = []struct {
-		ctx         *CtxObjReq
-		tpl         ctxObjTpl
+		sfxContext  *SFXContextObjectReq
+		tpl         sfxContextObjectTpl
 		expectedErr error
 	}{
-		{&CtxObjReq{}, ctxObjTpl{RftValues: &OpenURL{"genre": {"book"}, "btitle": {"a book"}}, Timestamp: mockTimestamp, Genre: "book"}, nil},
-		{&CtxObjReq{}, ctxObjTpl{}, errors.New("error")},
-		{&CtxObjReq{}, ctxObjTpl{RftValues: &OpenURL{"genre": {"<rft:"}}, Timestamp: mockTimestamp, Genre: "book"}, errors.New("error")},
+		{&SFXContextObjectReq{}, sfxContextObjectTpl{RftValues: &OpenURL{"genre": {"book"}, "btitle": {"a book"}}, Timestamp: mockTimestamp, Genre: "book"}, nil},
+		{&SFXContextObjectReq{}, sfxContextObjectTpl{}, errors.New("error")},
+		{&SFXContextObjectReq{}, sfxContextObjectTpl{RftValues: &OpenURL{"genre": {"<rft:"}}, Timestamp: mockTimestamp, Genre: "book"}, errors.New("error")},
 	}
 
 	// Temporarily copy templates into this directory so the relative path is correct
@@ -109,9 +109,9 @@ func TestToRequestXML(t *testing.T) {
 	defer removeTmpTemplates()
 
 	for _, tt := range tests {
-		testname := fmt.Sprintf("%s", tt.ctx)
+		testname := fmt.Sprintf("%s", tt.sfxContext)
 		t.Run(testname, func(t *testing.T) {
-			c := tt.ctx
+			c := tt.sfxContext
 			err := c.toRequestXML(tt.tpl)
 			if tt.expectedErr == nil && !strings.HasPrefix(c.RequestXML, `<?xml version="1.0" encoding="UTF-8"?>`) {
 				t.Errorf("toRequestXML didn't return an XML document")
@@ -125,7 +125,7 @@ func TestToRequestXML(t *testing.T) {
 	}
 }
 
-func TestSetCtxObjReq(t *testing.T) {
+func TestSetSFXContextObjectReq(t *testing.T) {
 	var tests = []struct {
 		querystring url.Values
 		expectedErr error
@@ -143,13 +143,13 @@ func TestSetCtxObjReq(t *testing.T) {
 	for _, tt := range tests {
 		testname := fmt.Sprintf("%s", tt.querystring)
 		t.Run(testname, func(t *testing.T) {
-			ans, err := setCtxObjReq(tt.querystring)
+			ans, err := setSFXContextObjectReq(tt.querystring)
 			// if err != nil {
 			// 	t.Errorf("error %v", err)
 			// }
 			if tt.expectedErr != nil {
 				if err == nil {
-					t.Errorf("setCtxObjReq err was '%v', expecting '%v'", err, tt.expectedErr)
+					t.Errorf("setSFXContextObjectReq err was '%v', expecting '%v'", err, tt.expectedErr)
 				}
 			}
 			if err == nil {
@@ -207,8 +207,8 @@ func TestToResponseJson(t *testing.T) {
 	}
 }
 
-// func (c CtxObjReq) Request() (body string, err error) {
-// func Init(qs url.Values) (ctxObjReq *CtxObjReq, err error) {
+// func (c SFXContextObjectReq) Request() (body string, err error) {
+// func Init(qs url.Values) (sfxContextObjectReq *SFXContextObjectReq, err error) {
 
 // Helpers
 
