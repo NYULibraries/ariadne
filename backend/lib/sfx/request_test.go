@@ -119,7 +119,7 @@ func TestToRequestXML(t *testing.T) {
 	}
 }
 
-func TestSetSFXContextObjectReq(t *testing.T) {
+func TestSetSFXContextObjectRequest(t *testing.T) {
 	var tests = []struct {
 		querystring url.Values
 		expectedErr error
