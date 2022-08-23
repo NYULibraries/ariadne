@@ -33,7 +33,7 @@ type sfxContextObjectTpl struct {
 type OpenURL map[string][]string
 
 // Object representing everything that's needed to request from SFX
-type SFXContextObjectReq struct {
+type SFXContextObjectRequest struct {
 	RequestXML string
 }
 
@@ -43,20 +43,20 @@ type SFXRequest interface {
 }
 
 // Take a querystring from the request and convert it to a valid
-// XML string for use in the POST to SFX, return SFXContextObjectReq object
-func Init(qs url.Values) (sfxContextObjectReq *SFXContextObjectReq, err error) {
-	sfxContextObjectReq, err = setSFXContextObjectReq(qs)
+// XML string for use in the POST to SFX, return SFXContextObjectRequest object
+func Init(qs url.Values) (sfxContextObjectRequest *SFXContextObjectRequest, err error) {
+	sfxContextObjectRequest, err = setSFXContextObjectReq(qs)
 	if err != nil {
-		return sfxContextObjectReq, fmt.Errorf("could not create context object for request: %v", err)
+		return sfxContextObjectRequest, fmt.Errorf("could not create context object for request: %v", err)
 	}
 
 	return
 }
 
 // Construct and run the actual POST request to the SFX server
-// Expects an XML string in a SFXContextObjectReq obj which will be appended to the PostForm params
+// Expects an XML string in a SFXContextObjectRequest obj which will be appended to the PostForm params
 // Body is blank because that is how SFX expects it
-func (c SFXContextObjectReq) Request() (body string, err error) {
+func (c SFXContextObjectRequest) Request() (body string, err error) {
 	params := url.Values{}
 	params.Add("url_ctx_fmt", "info:ofi/fmt:xml:xsd:ctx")
 	params.Add("sfx.response_type", "multi_obj_xml")
@@ -97,8 +97,8 @@ func (c SFXContextObjectReq) Request() (body string, err error) {
 
 // Convert a context object request to an XML string
 // via gotemplates, in order to set it up as a post param to SFX
-// Store in SFXContextObjectReq.RequestXML
-func (c *SFXContextObjectReq) toRequestXML(tplVals sfxContextObjectTpl) error {
+// Store in SFXContextObjectRequest.RequestXML
+func (c *SFXContextObjectRequest) toRequestXML(tplVals sfxContextObjectTpl) error {
 	t := template.New("sfx-request.xml").Funcs(template.FuncMap{"ToLower": strings.ToLower})
 
 	t, err := t.Parse(sfxRequestTemplate)
@@ -122,7 +122,7 @@ func (c *SFXContextObjectReq) toRequestXML(tplVals sfxContextObjectTpl) error {
 
 // Setup the SFXContextObjectTpl instance we'll need to run with
 // the gotemplates to create the valid XML string param
-func setSFXContextObjectReq(qs url.Values) (sfxContext *SFXContextObjectReq, err error) {
+func setSFXContextObjectReq(qs url.Values) (sfxContext *SFXContextObjectRequest, err error) {
 	rfts, err := parseOpenURL(qs)
 	if err != nil {
 		return sfxContext, fmt.Errorf("could not parse OpenURL: %v", err)
@@ -142,7 +142,7 @@ func setSFXContextObjectReq(qs url.Values) (sfxContext *SFXContextObjectReq, err
 	}
 
 	// Init the empty object to populate with toRequestXML
-	sfxContext = &SFXContextObjectReq{}
+	sfxContext = &SFXContextObjectRequest{}
 
 	if err := sfxContext.toRequestXML(tmpl); err != nil {
 		return sfxContext, fmt.Errorf("could not convert request context object to XML: %v", err)

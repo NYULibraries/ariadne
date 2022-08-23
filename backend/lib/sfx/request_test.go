@@ -93,13 +93,13 @@ func TestIsValidXML(t *testing.T) {
 
 func TestToRequestXML(t *testing.T) {
 	var tests = []struct {
-		sfxContext  *SFXContextObjectReq
+		sfxContext  *SFXContextObjectRequest
 		tpl         sfxContextObjectTpl
 		expectedErr error
 	}{
-		{&SFXContextObjectReq{}, sfxContextObjectTpl{RftValues: &OpenURL{"genre": {"book"}, "btitle": {"a book"}}, Timestamp: mockTimestamp, Genre: "book"}, nil},
-		{&SFXContextObjectReq{}, sfxContextObjectTpl{}, errors.New("error")},
-		{&SFXContextObjectReq{}, sfxContextObjectTpl{RftValues: &OpenURL{"genre": {"<rft:"}}, Timestamp: mockTimestamp, Genre: "book"}, errors.New("error")},
+		{&SFXContextObjectRequest{}, sfxContextObjectTpl{RftValues: &OpenURL{"genre": {"book"}, "btitle": {"a book"}}, Timestamp: mockTimestamp, Genre: "book"}, nil},
+		{&SFXContextObjectRequest{}, sfxContextObjectTpl{}, errors.New("error")},
+		{&SFXContextObjectRequest{}, sfxContextObjectTpl{RftValues: &OpenURL{"genre": {"<rft:"}}, Timestamp: mockTimestamp, Genre: "book"}, errors.New("error")},
 	}
 
 	for _, tt := range tests {
@@ -193,5 +193,5 @@ func TestToResponseJson(t *testing.T) {
 	}
 }
 
-// func (c SFXContextObjectReq) Request() (body string, err error) {
-// func Init(qs url.Values) (sfxContextObjectReq *SFXContextObjectReq, err error) {
+// func (c SFXContextObjectRequest) Request() (body string, err error) {
+// func Init(qs url.Values) (sfxContextObjectRequest *SFXContextObjectRequest, err error) {
