@@ -3,10 +3,8 @@ package sfx
 import (
 	"errors"
 	"fmt"
-	"io"
 	"io/ioutil"
 	"net/url"
-	"os"
 	"reflect"
 	"strings"
 	"testing"
@@ -76,8 +74,8 @@ func TestIsValidXML(t *testing.T) {
 		testXMLFile string
 		expected    bool
 	}{
-		{"../../testdata/sfx-context-object-good.xml", true},
-		{"../../testdata/sfx-context-object-bad.xml", false},
+		{"../../testdata/sfx-context-object-valid.xml", true},
+		{"../../testdata/sfx-context-object-invalid-truncated.xml", false},
 		{"", false},
 	}
 
@@ -103,10 +101,6 @@ func TestToRequestXML(t *testing.T) {
 		{&SFXContextObjectReq{}, sfxContextObjectTpl{}, errors.New("error")},
 		{&SFXContextObjectReq{}, sfxContextObjectTpl{RftValues: &OpenURL{"genre": {"<rft:"}}, Timestamp: mockTimestamp, Genre: "book"}, errors.New("error")},
 	}
-
-	// Temporarily copy templates into this directory so the relative path is correct
-	copyTmpTemplates(t)
-	defer removeTmpTemplates()
 
 	for _, tt := range tests {
 		testname := fmt.Sprintf("%s", tt.sfxContext)
@@ -135,10 +129,6 @@ func TestSetSFXContextObjectReq(t *testing.T) {
 		{map[string][]string{"rft.genre": {"book"}, "rft.aulast": {"<rft:"}}, nil},
 		{map[string][]string{"rft.genre": {"book"}, "rft.btitle": {"dune"}}, nil},
 	}
-
-	// Temporarily copy templates into this directory so the relative path is correct
-	copyTmpTemplates(t)
-	defer removeTmpTemplates()
 
 	for _, tt := range tests {
 		testname := fmt.Sprintf("%s", tt.querystring)
@@ -184,10 +174,6 @@ func TestToResponseJson(t *testing.T) {
 		{[]byte(dummyBadXMLResponse), "", errors.New("error")},
 	}
 
-	// Temporarily copy templates into this directory so the relative path is correct
-	copyTmpTemplates(t)
-	defer removeTmpTemplates()
-
 	for _, tt := range tests {
 		testname := fmt.Sprintf("%s", tt.expected)
 		t.Run(testname, func(t *testing.T) {
@@ -209,50 +195,3 @@ func TestToResponseJson(t *testing.T) {
 
 // func (c SFXContextObjectReq) Request() (body string, err error) {
 // func Init(qs url.Values) (sfxContextObjectReq *SFXContextObjectReq, err error) {
-
-// Helpers
-
-// Temporarily copy templates into this directory so the relative path is correct
-func copyTmpTemplates(t *testing.T) {
-	// Create the templates/index.goxml in the current test context temporarily
-	// and delete after the test completes
-	err := os.Mkdir("templates", 0755)
-	if err != nil {
-		t.Errorf("could not create temp templates dir: %v", err)
-	}
-	_, err = copy("../../templates/index.goxml", "./templates/index.goxml")
-	if err != nil {
-		t.Errorf("could not copy template file")
-	}
-}
-
-// Delete temporary templates directory from current path
-func removeTmpTemplates() {
-	os.RemoveAll("templates")
-}
-
-// Util function for copying a file from a source to a new dest
-func copy(src, dst string) (int64, error) {
-	sourceFileStat, err := os.Stat(src)
-	if err != nil {
-		return 0, err
-	}
-
-	if !sourceFileStat.Mode().IsRegular() {
-		return 0, fmt.Errorf("%s is not a regular file", src)
-	}
-
-	source, err := os.Open(src)
-	if err != nil {
-		return 0, err
-	}
-	defer source.Close()
-
-	destination, err := os.Create(dst)
-	if err != nil {
-		return 0, err
-	}
-	defer destination.Close()
-	nBytes, err := io.Copy(destination, source)
-	return nBytes, err
-}
