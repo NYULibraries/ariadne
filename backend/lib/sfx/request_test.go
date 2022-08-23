@@ -133,13 +133,13 @@ func TestSetSFXContextObjectReq(t *testing.T) {
 	for _, tt := range tests {
 		testname := fmt.Sprintf("%s", tt.querystring)
 		t.Run(testname, func(t *testing.T) {
-			ans, err := setSFXContextObjectReq(tt.querystring)
+			ans, err := setSFXContextObjectRequest(tt.querystring)
 			// if err != nil {
 			// 	t.Errorf("error %v", err)
 			// }
 			if tt.expectedErr != nil {
 				if err == nil {
-					t.Errorf("setSFXContextObjectReq err was '%v', expecting '%v'", err, tt.expectedErr)
+					t.Errorf("setSFXContextObjectRequest err was '%v', expecting '%v'", err, tt.expectedErr)
 				}
 			}
 			if err == nil {

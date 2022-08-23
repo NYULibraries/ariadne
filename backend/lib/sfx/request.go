@@ -45,7 +45,7 @@ type SFXRequest interface {
 // Take a querystring from the request and convert it to a valid
 // XML string for use in the POST to SFX, return SFXContextObjectRequest object
 func Init(qs url.Values) (sfxContextObjectRequest *SFXContextObjectRequest, err error) {
-	sfxContextObjectRequest, err = setSFXContextObjectReq(qs)
+	sfxContextObjectRequest, err = setSFXContextObjectRequest(qs)
 	if err != nil {
 		return sfxContextObjectRequest, fmt.Errorf("could not create context object for request: %v", err)
 	}
@@ -122,7 +122,7 @@ func (c *SFXContextObjectRequest) toRequestXML(tplVals sfxContextObjectRequestBo
 
 // Setup the SFXContextObjectTpl instance we'll need to run with
 // the gotemplates to create the valid XML string param
-func setSFXContextObjectReq(qs url.Values) (sfxContext *SFXContextObjectRequest, err error) {
+func setSFXContextObjectRequest(qs url.Values) (sfxContext *SFXContextObjectRequest, err error) {
 	rfts, err := parseOpenURL(qs)
 	if err != nil {
 		return sfxContext, fmt.Errorf("could not parse OpenURL: %v", err)
