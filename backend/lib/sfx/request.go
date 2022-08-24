@@ -16,7 +16,7 @@ import (
 )
 
 // SFX url
-const sfxUrl string = "http://sfx.library.nyu.edu/sfxlcl41"
+const sfxURL string = "http://sfx.library.nyu.edu/sfxlcl41"
 
 //go:embed templates/sfx-request.xml
 var sfxRequestTemplate string
@@ -63,7 +63,7 @@ func (c SFXContextObjectRequest) Request() (body string, err error) {
 	params.Add("sfx.doi_url", "http://dx.doi.org")
 	params.Add("url_ctx_val", c.RequestXML)
 
-	request, err := http.NewRequest("POST", sfxUrl, strings.NewReader(params.Encode()))
+	request, err := http.NewRequest("POST", sfxURL, strings.NewReader(params.Encode()))
 	if err != nil {
 		return body, fmt.Errorf("could not initialize request to SFX server: %v", err)
 	}
