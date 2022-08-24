@@ -21,8 +21,6 @@ const sfxUrl string = "http://sfx.library.nyu.edu/sfxlcl41"
 //go:embed templates/sfx-request.xml
 var sfxRequestTemplate string
 
-type Timestamp time.Time
-
 // Values needed for templating an SFX request are parsed
 type sfxContextObjectRequestBody struct {
 	RftValues *OpenURL
