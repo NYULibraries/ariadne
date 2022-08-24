@@ -74,19 +74,19 @@ func (c SFXContextObjectRequest) Request() (body string, err error) {
 	req.Header.Add("Content-Type", "application/x-www-form-urlencoded")
 
 	client := http.Client{}
-	resp, err := client.Do(req)
+	response, err := client.Do(req)
 	if err != nil {
 		return body, fmt.Errorf("could not do post to SFX server: %v", err)
 	}
 
-	defer resp.Body.Close()
-	sfxResp, err := ioutil.ReadAll(resp.Body)
+	defer response.Body.Close()
+	sfxResponse, err := ioutil.ReadAll(response.Body)
 	if err != nil {
 		return body, fmt.Errorf("could not read response from SFX server: %v", err)
 	}
 
 	// Convert to JSON before returning
-	body, err = toResponseJson(sfxResp)
+	body, err = toResponseJson(sfxResponse)
 
 	if err != nil {
 		return body, fmt.Errorf("could not convert SFX response XML to JSON: %v", err)

@@ -45,13 +45,13 @@ func ResolveJSON(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	resp, err := sfxContext.Request()
+	response, err := sfxContext.Request()
 	if err != nil {
 		handleError(err, w, "Invalid response from SFX")
 		return
 	}
 
-	fmt.Fprintln(w, resp)
+	fmt.Fprintln(w, response)
 }
 
 func ResolveHTML(w http.ResponseWriter, r *http.Request) {
