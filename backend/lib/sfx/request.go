@@ -65,16 +65,16 @@ func (c SFXContextObjectRequest) Request() (body string, err error) {
 	params.Add("sfx.doi_url", "http://dx.doi.org")
 	params.Add("url_ctx_val", c.RequestXML)
 
-	req, err := http.NewRequest("POST", sfxUrl, strings.NewReader(params.Encode()))
+	request, err := http.NewRequest("POST", sfxUrl, strings.NewReader(params.Encode()))
 	if err != nil {
 		return body, fmt.Errorf("could not initialize request to SFX server: %v", err)
 	}
 
-	req.PostForm = params
-	req.Header.Add("Content-Type", "application/x-www-form-urlencoded")
+	request.PostForm = params
+	request.Header.Add("Content-Type", "application/x-www-form-urlencoded")
 
 	client := http.Client{}
-	response, err := client.Do(req)
+	response, err := client.Do(request)
 	if err != nil {
 		return body, fmt.Errorf("could not do post to SFX server: %v", err)
 	}
