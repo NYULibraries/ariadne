@@ -93,9 +93,19 @@ for other methods.
 
 ### Testing
 
+Run all tests:
+
 ```
 cd backend/
 go test ./...
+```
+
+Update test golden files:
+
+```
+cd backend/
+go test -update ./...
+# Files ./testdata/server/golden/*.json have been updated. 
 ```
 
 Run tests in a container:
