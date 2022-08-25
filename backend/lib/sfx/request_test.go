@@ -74,8 +74,8 @@ func TestIsValidXML(t *testing.T) {
 		testXMLFile string
 		expected    bool
 	}{
-		{"../../testdata/sfx-context-object-valid.xml", true},
-		{"../../testdata/sfx-context-object-invalid-truncated.xml", false},
+		{"./testdata/sfx-context-object-valid.xml", true},
+		{"./testdata/sfx-context-object-invalid-truncated.xml", false},
 		{"", false},
 	}
 

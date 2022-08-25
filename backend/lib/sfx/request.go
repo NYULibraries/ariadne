@@ -15,8 +15,8 @@ import (
 	"time"
 )
 
-// SFX url
-const sfxURL string = "http://sfx.library.nyu.edu/sfxlcl41"
+// SFX service URL
+var sfxURL string = "http://sfx.library.nyu.edu/sfxlcl41"
 
 //go:embed templates/sfx-request.xml
 var sfxRequestTemplate string
@@ -91,6 +91,10 @@ func (c SFXContextObjectRequest) Request() (body string, err error) {
 	}
 
 	return
+}
+
+func SetSFXURL(dependencyInjectedURL string) {
+	sfxURL = dependencyInjectedURL
 }
 
 // Convert a context object request to an XML string
