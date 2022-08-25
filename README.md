@@ -94,6 +94,13 @@ for other methods.
 ### Testing
 
 ```
+cd backend/
+go test ./...
+```
+
+Run tests in a container:
+
+```
 docker-compose run backend-test
 ```
 
