@@ -1,7 +1,6 @@
 package main
 
 import (
-	"embed"
 	"flag"
 	"fmt"
 	"io"
@@ -20,9 +19,6 @@ type TestCase struct {
 	// OpenURL querystring
 	queryString string
 }
-
-//go:embed all:testdata
-var testdataFS embed.FS
 
 // When set, golden files are update with the outputs of the test run.
 var updateGolden = flag.Bool("update-golden", false, "update the golden files")
@@ -86,6 +82,13 @@ func TestResponseJSONRoute(t *testing.T) {
 			response := responseRecorder.Result()
 			body, _ := io.ReadAll(response.Body)
 
+			if *updateGolden {
+				err = updateGoldenFile(testCase, body)
+				if err != nil {
+					t.Fatal(err)
+				}
+			}
+
 			goldenValue, err := getGoldenValue(testCase)
 			if err != nil {
 				t.Fatal(err)
@@ -107,7 +110,8 @@ func getSFXFakeResponse(testCase TestCase) (string, error) {
 }
 
 func getTestdataFileContents(filename string) (string, error) {
-	var bytes, err = testdataFS.ReadFile(filename)
+	bytes, err := os.ReadFile(filename)
+
 	if err != nil {
 		return filename, err
 	}
@@ -121,4 +125,8 @@ func goldenFile(testCase TestCase) string {
 
 func sfxFakeResponseFile(testCase TestCase) string {
 	return "testdata/server/fixtures/sfx-fake-responses/" + testCase.key + ".xml"
+}
+
+func updateGoldenFile(testCase TestCase, bytes []byte) error {
+	return os.WriteFile(goldenFile(testCase), bytes, 644)
 }
