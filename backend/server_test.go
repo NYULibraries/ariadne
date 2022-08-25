@@ -46,10 +46,7 @@ func TestResponseJSONRoute(t *testing.T) {
 
 	fakeSFXServer := httptest.NewServer(
 		http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-			sfxFakeResponseFile := "testdata/server/fixtures/sfx-fake-responses/" +
-				currentTestCase.name +
-				".xml"
-			sfxFakeResponse, err := getTestdataFileContents(sfxFakeResponseFile)
+			sfxFakeResponse, err := getSFXFakeResponse(currentTestCase)
 			if err != nil {
 				t.Fatal(err)
 			}
@@ -82,19 +79,26 @@ func TestResponseJSONRoute(t *testing.T) {
 			response := responseRecorder.Result()
 			body, _ := io.ReadAll(response.Body)
 
-			goldenFileName := "testdata/server/golden/" +
-				testCase.name +
-				".json"
-			goldenJSON, err := getTestdataFileContents(goldenFileName)
+			goldenValue, err := getGoldenValue(testCase)
 			if err != nil {
 				t.Fatal(err)
 			}
 
-			if string(body) != goldenJSON {
-				t.Errorf(goldenJSON)
+			if string(body) != goldenValue {
+				t.Errorf(goldenValue)
 			}
 		})
 	}
+}
+
+func getGoldenValue(testCase TestCase) (string, error) {
+	return getTestdataFileContents(
+		"testdata/server/golden/" + testCase.name + ".json")
+}
+
+func getSFXFakeResponse(testCase TestCase) (string, error) {
+	return getTestdataFileContents(
+		"testdata/server/fixtures/sfx-fake-responses/" + testCase.name + ".xml")
 }
 
 func getTestdataFileContents(filename string) (string, error) {
