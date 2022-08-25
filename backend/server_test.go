@@ -23,9 +23,6 @@ type TestCase struct {
 // When set, golden files are update with the outputs of the test run.
 var updateGolden = flag.Bool("update-golden", false, "update the golden files")
 
-// When set, requests are made to the real SFX service and the fake response fixture files are updated.
-var updateSFX = flag.Bool("update-sfx", false, "update the SFX fixtures")
-
 func TestMain(m *testing.M) {
 	flag.Parse()
 	os.Exit(m.Run())
