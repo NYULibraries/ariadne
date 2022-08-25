@@ -14,8 +14,10 @@ import (
 
 type TestCase struct {
 	// Identifier used for fixture and golden file basename.
-	key         string
-	name        string
+	key string
+	// Human-readable name/description of test case
+	name string
+	// OpenURL querystring
 	queryString string
 }
 
