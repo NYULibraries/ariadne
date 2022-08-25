@@ -72,7 +72,7 @@ func TestResponseJSONRoute(t *testing.T) {
 				nil,
 			)
 			if err != nil {
-				t.Fail()
+				t.Fatal(err)
 			}
 
 			responseRecorder := httptest.NewRecorder()
