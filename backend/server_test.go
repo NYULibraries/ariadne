@@ -20,7 +20,6 @@ type TestCase struct {
 	queryString string
 }
 
-// When set, golden files are update with the outputs of the test run.
 var updateGolden = flag.Bool("update-golden", false, "update the golden files")
 
 func TestMain(m *testing.M) {
