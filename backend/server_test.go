@@ -99,13 +99,11 @@ func TestResponseJSONRoute(t *testing.T) {
 }
 
 func getGoldenValue(testCase TestCase) (string, error) {
-	return getTestdataFileContents(
-		"testdata/server/golden/" + testCase.key + ".json")
+	return getTestdataFileContents(goldenFile(testCase))
 }
 
 func getSFXFakeResponse(testCase TestCase) (string, error) {
-	return getTestdataFileContents(
-		"testdata/server/fixtures/sfx-fake-responses/" + testCase.key + ".xml")
+	return getTestdataFileContents(sfxFakeResponseFile(testCase))
 }
 
 func getTestdataFileContents(filename string) (string, error) {
@@ -115,4 +113,12 @@ func getTestdataFileContents(filename string) (string, error) {
 	}
 
 	return string(bytes), nil
+}
+
+func goldenFile(testCase TestCase) string {
+	return "testdata/server/golden/" + testCase.key + ".json"
+}
+
+func sfxFakeResponseFile(testCase TestCase) string {
+	return "testdata/server/fixtures/sfx-fake-responses/" + testCase.key + ".xml"
 }
