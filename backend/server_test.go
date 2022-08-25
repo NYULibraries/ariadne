@@ -50,7 +50,10 @@ func TestResponseJSONRoute(t *testing.T) {
 				t.Fatal(err)
 			}
 
-			fmt.Fprint(w, sfxFakeResponse)
+			_, err = fmt.Fprint(w, sfxFakeResponse)
+			if err != nil {
+				t.Fatal(err)
+			}
 		}),
 	)
 	defer fakeSFXServer.Close()
