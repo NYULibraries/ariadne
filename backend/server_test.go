@@ -20,7 +20,7 @@ type TestCase struct {
 	queryString string
 }
 
-var updateGolden = flag.Bool("update-golden", false, "update the golden files")
+var update = flag.Bool("update", false, "update the golden files")
 
 func TestMain(m *testing.M) {
 	flag.Parse()
@@ -81,7 +81,7 @@ func TestResponseJSONRoute(t *testing.T) {
 			response := responseRecorder.Result()
 			body, _ := io.ReadAll(response.Body)
 
-			if *updateGolden {
+			if *update {
 				err = updateGoldenFile(testCase, body)
 				if err != nil {
 					t.Fatal(err)
