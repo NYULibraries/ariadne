@@ -11,7 +11,7 @@
     <target_service_id>111021039760001</target_service_id>
     <service_type>getFullTxt</service_type>
     <parser>Gale::InfoTrac</parser>
-    <parse_param>url=http://infotrac.galegroup.com/& database=ITOF & loc_id=sfx_loc1 & art=yes & ltitle=Global+Competitiveness</parse_param>
+    <parse_param>url=http://infotrac.galegroup.com/&amp; database=ITOF &amp; loc_id=sfx_loc1 &amp; art=yes &amp; ltitle=Global+Competitiveness</parse_param>
     <proxy>no</proxy>
     <crossref>no</crossref>
     <note />

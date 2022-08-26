@@ -9,7 +9,7 @@
                 <target_service_id>111068679117002</target_service_id>
                 <service_type>getFullTxt</service_type>
                 <parser>ALLEN::ALLEN</parser>
-                <parse_param>url=afs.allenpress.com/afsonline & exception1=1</parse_param>
+                <parse_param>url=afs.allenpress.com/afsonline &amp; exception1=1</parse_param>
                 <proxy>no</proxy>
                 <crossref>no</crossref>
                 <note />
