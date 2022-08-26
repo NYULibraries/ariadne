@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ctx_obj_set>
+    <ctx_obj identifier="123">
+        <ctx_obj_attributes>
+            &lt;perldata&gt;
+                &lt;hash&gt;
+                    &lt;item key="rft.issn"&gt;0363-2415&lt;/item&gt;
+                    &lt;item key="_stash"&gt;
+                        &lt;hash&gt;
+                            &lt;item key="@rfr_id"&gt;
+                                &lt;array&gt;
+                                    &lt;item key="0"&gt;info:sid/metalib.com:PUBMED
+                                    &lt;/item&gt;
+                                &lt;/array&gt;
+                            &lt;/item&gt;
+                        &lt;/hash&gt;
+                    &lt;/item&gt;
+                    &lt;item key="ctx_ver"&gt;Z39.88-2004&lt;/item&gt;
+                    &lt;item key="rft.year"&gt;2004&lt;/item&gt;
+                    &lt;item key="rft.eissn"&gt;1548-8446&lt;/item&gt;
+                    &lt;item key="@rfr_id"&gt;
+                        &lt;array&gt;
+                            &lt;item key="0"&gt;info:sid/metalib.com:PUBMED&lt;/item&gt;
+                        &lt;/array&gt;
+                    &lt;/item&gt;
+                    &lt;item key="rft.place"&gt;Bethesda, MD&lt;/item&gt;
+                    &lt;item key="@sfx.subcategory"&gt;
+                        &lt;array&gt;
+                            &lt;item key="0"&gt;Fisheries and Aquaculture&lt;/item&gt;
+                        &lt;/array&gt;
+                    &lt;/item&gt;
+                    &lt;item key="@rft_id"&gt;
+                        &lt;array&gt;&lt;/array&gt;
+                    &lt;/item&gt;
+                    &lt;item key="sfx.response_type"&gt;multi_obj_xml&lt;/item&gt;
+                    &lt;item key="sfx.ignore_char_set"&gt;1&lt;/item&gt;
+                    &lt;item key="req.session_id"&gt;
+                        s3AEDD874-14F1-11DD-931E-85C8F42DA125
+                    &lt;/item&gt;
+                    &lt;item key="char_set"&gt;utf8&lt;/item&gt;
+                    &lt;item key="ctx_id"&gt;123&lt;/item&gt;
+                    &lt;item key="rft.object_type"&gt;JOURNAL&lt;/item&gt;
+                    &lt;item key="rft.issue_start"&gt;2&lt;/item&gt;
+                    &lt;item key="sfx.has_full_text"&gt;yes&lt;/item&gt;
+                    &lt;item key="rft.object_id"&gt;954925522723&lt;/item&gt;
+                    &lt;item key="rft.volume_start"&gt;2&lt;/item&gt;
+                    &lt;item key="rft.volume"&gt;2&lt;/item&gt;
+                    &lt;item key="sfx.request_id"&gt;601158&lt;/item&gt;
+                    &lt;item key="rft.genre"&gt;journal&lt;/item&gt;
+                    &lt;item key="req.user_group"&gt;&lt;/item&gt;
+                    &lt;item key="rft.pub"&gt;American Fisheries Society&lt;/item&gt;
+                    &lt;item key="rfr.rfr"&gt;metalib.com:PUBMED&lt;/item&gt;
+                    &lt;item key="rft.issue"&gt;2&lt;/item&gt;
+                    &lt;item key="req.faculty"&gt;&lt;/item&gt;
+                    &lt;item key="sfx.openurl"&gt;&lt;/item&gt;
+                    &lt;item key="req.language"&gt;English&lt;/item&gt;
+                    &lt;item key="rft.title"&gt;Fisheries&lt;/item&gt;
+                    &lt;item key="@rfe_id"&gt;
+                        &lt;array&gt;&lt;/array&gt;
+                    &lt;/item&gt;
+                    &lt;item key="rft.coden"&gt;FISHDN&lt;/item&gt;
+                    &lt;item key="rft.jtitle"&gt;Fisheries&lt;/item&gt;
+                    &lt;item key="sfx.sourcename"&gt;METALIB&lt;/item&gt;
+                    &lt;item key="rft_val_fmt"&gt;journal&lt;/item&gt;
+                    &lt;item key="sfx.sid"&gt;metalib.com:PUBMED&lt;/item&gt;
+                    &lt;item key="rft.date"&gt;2004&lt;/item&gt;
+                    &lt;item key="@sfx.category"&gt;
+                        &lt;array&gt;
+                            &lt;item key="0"&gt;Agriculture Sciences&lt;/item&gt;
+                        &lt;/array&gt;
+                    &lt;/item&gt;
+                &lt;/hash&gt;
+            &lt;/perldata&gt;
+        </ctx_obj_attributes>
+        <ctx_obj_targets>
+            <target>
+                <target_name>ALLEN_PRESS_AMERICAN_FISHERIES_SOCIETY
+                </target_name>
+                <target_public_name>American Fisheries Society test
+                </target_public_name>
+                <target_service_id>111068679117002</target_service_id>
+                <service_type>getFullTxt</service_type>
+                <parser>ALLEN::ALLEN</parser>
+                <parse_param>url=afs.allenpress.com/afsonline &amp;
+                    exception1=1
+                </parse_param>
+                <proxy>no</proxy>
+                <crossref>no</crossref>
+                <note/>
+                <authentication/>
+                <char_set/>
+                <displayer/>
+                <target_url></target_url>
+            </target>
+        </ctx_obj_targets>
+    </ctx_obj>
+</ctx_obj_set>

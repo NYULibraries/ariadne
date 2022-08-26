@@ -7,7 +7,7 @@ import (
 	"io/fs"
 	"log"
 	"net/http"
-	"resolve/lib/sfx"
+	"resolve/sfx"
 
 	"github.com/gorilla/mux"
 )
@@ -39,19 +39,19 @@ func NewRouter() *mux.Router {
 func ResolveJSON(w http.ResponseWriter, r *http.Request) {
 	w.Header().Add("Content-Type", "application/json")
 
-	ctx, err := sfx.Init(r.URL.Query())
+	sfxContext, err := sfx.NewSFXContextObjectRequest(r.URL.Query())
 	if err != nil {
 		handleError(err, w, "Invalid OpenURL")
 		return
 	}
 
-	resp, err := ctx.Request()
+	response, err := sfxContext.Request()
 	if err != nil {
 		handleError(err, w, "Invalid response from SFX")
 		return
 	}
 
-	fmt.Fprintln(w, resp)
+	fmt.Fprintln(w, response)
 }
 
 func ResolveHTML(w http.ResponseWriter, r *http.Request) {

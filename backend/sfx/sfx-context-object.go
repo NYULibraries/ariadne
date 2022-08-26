@@ -3,16 +3,16 @@ package sfx
 // Mapped out the entire Context Object responses possible from SFX as defined here:
 // https://developers.exlibrisgroup.com/sfx/apis/web_services/openurl/
 // But most of it is likely not useful for pulling out links of interest to us
-type CtxObjSet struct {
-	CtxObj *[]CtxObj `xml:"ctx_obj" json:"ctx_obj"`
+type SFXContextObjectSet struct {
+	SFXContextObject *[]SFXContextObject `xml:"ctx_obj" json:"ctx_obj"`
 }
 
-type CtxObj struct {
-	// CtxObjAttrs   string
-	CtxObjTargets *[]CtxObjTargets `xml:"ctx_obj_targets" json:"ctx_obj_targets"`
+type SFXContextObject struct {
+	// SFXContextObjectAttrs   string
+	SFXContextObjectTargets *[]SFXContextObjectTargets `xml:"ctx_obj_targets" json:"ctx_obj_targets"`
 }
 
-type CtxObjTargets struct {
+type SFXContextObjectTargets struct {
 	Targets *[]Target `xml:"target" json:"target"`
 }
 
@@ -48,20 +48,32 @@ type Coverage struct {
 	CoverageText *[]CoverageText `xml:"coverage_text" json:"coverage_text,omitempty"`
 	From         *[]FromTo       `xml:"from" json:"from,omitempty"`
 	To           *[]FromTo       `xml:"to" json:"to,omitempty"`
-	Embargo      string          `xml:"embargo" json:"embargo,omitempty"`
+	Embargo      *Embargo        `xml:"embargo" json:"embargo,omitempty"`
+}
+
+type Embargo struct {
+	Availability string `xml:"availability" json:"availability,omitempty"`
+	Month        string `xml:"month" json:"month,omitempty"`
+	Days         string `xml:"days" json:"days,omitempty"`
 }
 
 type CoverageText struct {
-	ThresholdText *[]ThresholdText `xml:"threshold_text" json:"threshold_text,omitempty"`
-	EmbargoText   string           `xml:"embargo_text" json:"embargo_text,omitempty"`
+	ThresholdText *[]ThresholdText    `xml:"threshold_text" json:"threshold_text,omitempty"`
+	EmbargoText   *[]EmbargoStatement `xml:"embargo_text" json:"embargo_text,omitempty"`
+}
+
+type EmbargoStatement struct {
+	EmbargoStatement string `xml:"embargo_statement" json:"embargo_statement,omitempty"`
 }
 
 type FromTo struct {
 	Year   string `xml:"year" json:"year,omitempty"`
+	Month  string `xml:"month" json:"month,omitempty"`
+	Day    string `xml:"day" json:"day,omitempty"`
 	Volume string `xml:"volume" json:"volume,omitempty"`
 	Issue  string `xml:"issue" json:"issue,omitempty"`
 }
 
 type ThresholdText struct {
-	CoverageStatement string `xml:"coverage_statement" json:"coverage_statement,omitempty"`
+	CoverageStatement []string `xml:"coverage_statement" json:"coverage_statement,omitempty"`
 }

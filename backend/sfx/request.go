@@ -15,16 +15,14 @@ import (
 	"time"
 )
 
-// SFX url
-const sfxUrl string = "http://sfx.library.nyu.edu/sfxlcl41"
+// SFX service URL
+var sfxURL string = "http://sfx.library.nyu.edu/sfxlcl41"
 
 //go:embed templates/sfx-request.xml
 var sfxRequestTemplate string
 
-type Timestamp time.Time
-
 // Values needed for templating an SFX request are parsed
-type ctxObjTpl struct {
+type sfxContextObjectRequestBody struct {
 	RftValues *OpenURL
 	Timestamp string
 	Genre     string
@@ -33,7 +31,7 @@ type ctxObjTpl struct {
 type OpenURL map[string][]string
 
 // Object representing everything that's needed to request from SFX
-type CtxObjReq struct {
+type SFXContextObjectRequest struct {
 	RequestXML string
 }
 
@@ -43,20 +41,20 @@ type SFXRequest interface {
 }
 
 // Take a querystring from the request and convert it to a valid
-// XML string for use in the POST to SFX, return CtxObjReq object
-func Init(qs url.Values) (ctxObjReq *CtxObjReq, err error) {
-	ctxObjReq, err = setCtxObjReq(qs)
+// XML string for use in the POST to SFX, return SFXContextObjectRequest object
+func NewSFXContextObjectRequest(qs url.Values) (sfxContextObjectRequest *SFXContextObjectRequest, err error) {
+	sfxContextObjectRequest, err = setSFXContextObjectRequest(qs)
 	if err != nil {
-		return ctxObjReq, fmt.Errorf("could not create context object for request: %v", err)
+		return sfxContextObjectRequest, fmt.Errorf("could not create context object for request: %v", err)
 	}
 
 	return
 }
 
 // Construct and run the actual POST request to the SFX server
-// Expects an XML string in a CtxObjReq obj which will be appended to the PostForm params
+// Expects an XML string in a SFXContextObjectRequest obj which will be appended to the PostForm params
 // Body is blank because that is how SFX expects it
-func (c CtxObjReq) Request() (body string, err error) {
+func (c SFXContextObjectRequest) Request() (body string, err error) {
 	params := url.Values{}
 	params.Add("url_ctx_fmt", "info:ofi/fmt:xml:xsd:ctx")
 	params.Add("sfx.response_type", "multi_obj_xml")
@@ -65,28 +63,28 @@ func (c CtxObjReq) Request() (body string, err error) {
 	params.Add("sfx.doi_url", "http://dx.doi.org")
 	params.Add("url_ctx_val", c.RequestXML)
 
-	req, err := http.NewRequest("POST", sfxUrl, strings.NewReader(params.Encode()))
+	request, err := http.NewRequest("POST", sfxURL, strings.NewReader(params.Encode()))
 	if err != nil {
 		return body, fmt.Errorf("could not initialize request to SFX server: %v", err)
 	}
 
-	req.PostForm = params
-	req.Header.Add("Content-Type", "application/x-www-form-urlencoded")
+	request.PostForm = params
+	request.Header.Add("Content-Type", "application/x-www-form-urlencoded")
 
 	client := http.Client{}
-	resp, err := client.Do(req)
+	response, err := client.Do(request)
 	if err != nil {
 		return body, fmt.Errorf("could not do post to SFX server: %v", err)
 	}
 
-	defer resp.Body.Close()
-	sfxResp, err := ioutil.ReadAll(resp.Body)
+	defer response.Body.Close()
+	sfxResponse, err := ioutil.ReadAll(response.Body)
 	if err != nil {
 		return body, fmt.Errorf("could not read response from SFX server: %v", err)
 	}
 
 	// Convert to JSON before returning
-	body, err = toResponseJson(sfxResp)
+	body, err = toResponseJson(sfxResponse)
 
 	if err != nil {
 		return body, fmt.Errorf("could not convert SFX response XML to JSON: %v", err)
@@ -95,10 +93,14 @@ func (c CtxObjReq) Request() (body string, err error) {
 	return
 }
 
+func SetSFXURL(dependencyInjectedURL string) {
+	sfxURL = dependencyInjectedURL
+}
+
 // Convert a context object request to an XML string
 // via gotemplates, in order to set it up as a post param to SFX
-// Store in CtxObjReq.RequestXML
-func (c *CtxObjReq) toRequestXML(tplVals ctxObjTpl) error {
+// Store in SFXContextObjectRequest.RequestXML
+func (c *SFXContextObjectRequest) toRequestXML(tplVals sfxContextObjectRequestBody) error {
 	t := template.New("sfx-request.xml").Funcs(template.FuncMap{"ToLower": strings.ToLower})
 
 	t, err := t.Parse(sfxRequestTemplate)
@@ -120,32 +122,32 @@ func (c *CtxObjReq) toRequestXML(tplVals ctxObjTpl) error {
 	return nil
 }
 
-// Setup the CtxObjTpl instance we'll need to run with
+// Setup the SFXContextObjectTpl instance we'll need to run with
 // the gotemplates to create the valid XML string param
-func setCtxObjReq(qs url.Values) (ctx *CtxObjReq, err error) {
-	rfts, err := parseOpenURL(qs)
+func setSFXContextObjectRequest(queryStringValues url.Values) (sfxContext *SFXContextObjectRequest, err error) {
+	rfts, err := parseOpenURL(queryStringValues)
 	if err != nil {
-		return ctx, fmt.Errorf("could not parse OpenURL: %v", err)
+		return sfxContext, fmt.Errorf("could not parse OpenURL: %v", err)
 	}
 
 	genre, err := validGenre((*rfts)["genre"])
 	if err != nil {
-		return ctx, fmt.Errorf("genre is not valid: %v", err)
+		return sfxContext, fmt.Errorf("genre is not valid: %v", err)
 	}
 
 	// Set up template values, but discard after generating requestXML
 	now := time.Now()
-	tmpl := ctxObjTpl{
+	tmpl := sfxContextObjectRequestBody{
 		Timestamp: now.Format(time.RFC3339Nano),
 		RftValues: rfts,
 		Genre:     genre,
 	}
 
 	// Init the empty object to populate with toRequestXML
-	ctx = &CtxObjReq{}
+	sfxContext = &SFXContextObjectRequest{}
 
-	if err := ctx.toRequestXML(tmpl); err != nil {
-		return ctx, fmt.Errorf("could not convert request context object to XML: %v", err)
+	if err := sfxContext.toRequestXML(tmpl); err != nil {
+		return sfxContext, fmt.Errorf("could not convert request context object to XML: %v", err)
 	}
 
 	return
@@ -178,10 +180,10 @@ func validGenre(genre []string) (string, error) {
 // Take an openurl and return an OpenURL object of only the rft-prefixed fields
 // These are the fields we are going to parse into XML as part of the
 // post request params
-func parseOpenURL(qs url.Values) (*OpenURL, error) {
+func parseOpenURL(queryStringValues url.Values) (*OpenURL, error) {
 	parsed := &OpenURL{}
 
-	for k, v := range qs {
+	for k, v := range queryStringValues {
 		// Strip the "rft." prefix from the OpenURL
 		// and map into valid OpenURL fields
 		if strings.HasPrefix(k, "rft.") {
@@ -205,12 +207,12 @@ func isValidXML(data []byte) bool {
 
 // Convert the response XML from SFX into a JSON string
 func toResponseJson(from []byte) (to string, err error) {
-	var p CtxObjSet
+	var p SFXContextObjectSet
 	if err = xml.Unmarshal(from, &p); err != nil {
 		return
 	}
 
-	b, err := json.Marshal(p)
+	b, err := json.MarshalIndent(p, "", "    ")
 	if err != nil {
 		return to, fmt.Errorf("could not marshal context object struct to json: %v", err)
 	}
