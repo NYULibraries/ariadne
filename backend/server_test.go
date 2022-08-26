@@ -72,7 +72,7 @@ func TestResponseJSONRoute(t *testing.T) {
 				nil,
 			)
 			if err != nil {
-				t.Fatal(err)
+				t.Fatalf("Error creating new HTTP request: %s", err)
 			}
 
 			responseRecorder := httptest.NewRecorder()
@@ -84,17 +84,19 @@ func TestResponseJSONRoute(t *testing.T) {
 			if *update {
 				err = updateGoldenFile(testCase, body)
 				if err != nil {
-					t.Fatal(err)
+					t.Fatalf("Error updating golden file: %s", err)
 				}
 			}
 
 			goldenValue, err := getGoldenValue(testCase)
 			if err != nil {
-				t.Fatal(err)
+				t.Fatalf("Error retrieving golden value for test case \"%s\": %s",
+					testCase.name, err)
 			}
 
-			if string(body) != goldenValue {
-				t.Errorf(goldenValue)
+			actualValue := string(body)
+			if actualValue != goldenValue {
+				t.Errorf("expected:\n\n%s\n\ngot:\n\n%s\n\n", goldenValue, actualValue)
 			}
 		})
 	}
