@@ -7,7 +7,7 @@ import (
 	"io/fs"
 	"log"
 	"net/http"
-	"resolve/lib/sfx"
+	"resolve/sfx"
 
 	"github.com/gorilla/mux"
 )

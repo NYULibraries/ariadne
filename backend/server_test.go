@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"net/http/httptest"
 	"os"
-	"resolve/lib/sfx"
+	"resolve/sfx"
 	"testing"
 )
 
