@@ -75,9 +75,13 @@ func ResolveJSON(w http.ResponseWriter, r *http.Request) {
 }
 
 func ResolveHTML(w http.ResponseWriter, r *http.Request) {
-	w.Header().Add("Content Type", "text/html")
-
-	http.ServeFile(w, r, "./templates/index.html")
+	// http.ServeFile(w, r, "./templates/index.html")
+	p, err := loadPage("title")
+	if err != nil {
+		handleHtmlError(err, w, "Page not found")
+		return
+	}
+	renderHTML(w, "title", p)
 }
 
 // Healthcheck returns a successful response, that's it
