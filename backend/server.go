@@ -4,9 +4,11 @@ import (
 	"embed"
 	"encoding/json"
 	"fmt"
+	"html/template"
 	"io/fs"
 	"log"
 	"net/http"
+	"os"
 	"resolve/lib/sfx"
 
 	"github.com/gorilla/mux"
@@ -67,6 +69,21 @@ func Healthcheck(w http.ResponseWriter, r *http.Request) {
 }
 
 func handleError(err error, w http.ResponseWriter, message string) {
+	log.Println(err)
+	w.WriteHeader(http.StatusBadRequest)
+	json.NewEncoder(w).Encode(map[string]interface{}{"status": "error", "message": message})
+}
+
+func renderHTML(w http.ResponseWriter, tmpl string, p *Page) {
+
+	err := templates.ExecuteTemplate(w, tmpl+".html", p)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+}
+
+func handleHtmlError(err error, w http.ResponseWriter, message string) {
 	log.Println(err)
 	w.WriteHeader(http.StatusBadRequest)
 	json.NewEncoder(w).Encode(map[string]interface{}{"status": "error", "message": message})
