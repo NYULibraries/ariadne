@@ -129,5 +129,5 @@ func sfxFakeResponseFile(testCase TestCase) string {
 }
 
 func updateGoldenFile(testCase TestCase, bytes []byte) error {
-	return os.WriteFile(goldenFile(testCase), bytes, 644)
+	return os.WriteFile(goldenFile(testCase), bytes, 0644)
 }
