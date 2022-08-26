@@ -2,75 +2,75 @@
 <ctx_obj_set>
     <ctx_obj identifier="123">
         <ctx_obj_attributes>
-            <perldata>
-                <hash>
-                    <item key="rft.issn">0363-2415</item>
-                    <item key="_stash">
-                        <hash>
-                            <item key="@rfr_id">
-                                <array>
-                                    <item key="0">info:sid/metalib.com:PUBMED
-                                    </item>
-                                </array>
-                            </item>
-                        </hash>
-                    </item>
-                    <item key="ctx_ver">Z39.88-2004</item>
-                    <item key="rft.year">2004</item>
-                    <item key="rft.eissn">1548-8446</item>
-                    <item key="@rfr_id">
-                        <array>
-                            <item key="0">info:sid/metalib.com:PUBMED</item>
-                        </array>
-                    </item>
-                    <item key="rft.place">Bethesda, MD</item>
-                    <item key="@sfx.subcategory">
-                        <array>
-                            <item key="0">Fisheries and Aquaculture</item>
-                        </array>
-                    </item>
-                    <item key="@rft_id">
-                        <array></array>
-                    </item>
-                    <item key="sfx.response_type">multi_obj_xml</item>
-                    <item key="sfx.ignore_char_set">1</item>
-                    <item key="req.session_id">
+            &lt;perldata&gt;
+                &lt;hash&gt;
+                    &lt;item key="rft.issn"&gt;0363-2415&lt;/item&gt;
+                    &lt;item key="_stash"&gt;
+                        &lt;hash&gt;
+                            &lt;item key="@rfr_id"&gt;
+                                &lt;array&gt;
+                                    &lt;item key="0"&gt;info:sid/metalib.com:PUBMED
+                                    &lt;/item&gt;
+                                &lt;/array&gt;
+                            &lt;/item&gt;
+                        &lt;/hash&gt;
+                    &lt;/item&gt;
+                    &lt;item key="ctx_ver"&gt;Z39.88-2004&lt;/item&gt;
+                    &lt;item key="rft.year"&gt;2004&lt;/item&gt;
+                    &lt;item key="rft.eissn"&gt;1548-8446&lt;/item&gt;
+                    &lt;item key="@rfr_id"&gt;
+                        &lt;array&gt;
+                            &lt;item key="0"&gt;info:sid/metalib.com:PUBMED&lt;/item&gt;
+                        &lt;/array&gt;
+                    &lt;/item&gt;
+                    &lt;item key="rft.place"&gt;Bethesda, MD&lt;/item&gt;
+                    &lt;item key="@sfx.subcategory"&gt;
+                        &lt;array&gt;
+                            &lt;item key="0"&gt;Fisheries and Aquaculture&lt;/item&gt;
+                        &lt;/array&gt;
+                    &lt;/item&gt;
+                    &lt;item key="@rft_id"&gt;
+                        &lt;array&gt;&lt;/array&gt;
+                    &lt;/item&gt;
+                    &lt;item key="sfx.response_type"&gt;multi_obj_xml&lt;/item&gt;
+                    &lt;item key="sfx.ignore_char_set"&gt;1&lt;/item&gt;
+                    &lt;item key="req.session_id"&gt;
                         s3AEDD874-14F1-11DD-931E-85C8F42DA125
-                    </item>
-                    <item key="char_set">utf8</item>
-                    <item key="ctx_id">123</item>
-                    <item key="rft.object_type">JOURNAL</item>
-                    <item key="rft.issue_start">2</item>
-                    <item key="sfx.has_full_text">yes</item>
-                    <item key="rft.object_id">954925522723</item>
-                    <item key="rft.volume_start">2</item>
-                    <item key="rft.volume">2</item>
-                    <item key="sfx.request_id">601158</item>
-                    <item key="rft.genre">journal</item>
-                    <item key="req.user_group"></item>
-                    <item key="rft.pub">American Fisheries Society</item>
-                    <item key="rfr.rfr">metalib.com:PUBMED</item>
-                    <item key="rft.issue">2</item>
-                    <item key="req.faculty"></item>
-                    <item key="sfx.openurl"></item>
-                    <item key="req.language">English</item>
-                    <item key="rft.title">Fisheries</item>
-                    <item key="@rfe_id">
-                        <array></array>
-                    </item>
-                    <item key="rft.coden">FISHDN</item>
-                    <item key="rft.jtitle">Fisheries</item>
-                    <item key="sfx.sourcename">METALIB</item>
-                    <item key="rft_val_fmt">journal</item>
-                    <item key="sfx.sid">metalib.com:PUBMED</item>
-                    <item key="rft.date">2004</item>
-                    <item key="@sfx.category">
-                        <array>
-                            <item key="0">Agriculture Sciences</item>
-                        </array>
-                    </item>
-                </hash>
-            </perldata>
+                    &lt;/item&gt;
+                    &lt;item key="char_set"&gt;utf8&lt;/item&gt;
+                    &lt;item key="ctx_id"&gt;123&lt;/item&gt;
+                    &lt;item key="rft.object_type"&gt;JOURNAL&lt;/item&gt;
+                    &lt;item key="rft.issue_start"&gt;2&lt;/item&gt;
+                    &lt;item key="sfx.has_full_text"&gt;yes&lt;/item&gt;
+                    &lt;item key="rft.object_id"&gt;954925522723&lt;/item&gt;
+                    &lt;item key="rft.volume_start"&gt;2&lt;/item&gt;
+                    &lt;item key="rft.volume"&gt;2&lt;/item&gt;
+                    &lt;item key="sfx.request_id"&gt;601158&lt;/item&gt;
+                    &lt;item key="rft.genre"&gt;journal&lt;/item&gt;
+                    &lt;item key="req.user_group"&gt;&lt;/item&gt;
+                    &lt;item key="rft.pub"&gt;American Fisheries Society&lt;/item&gt;
+                    &lt;item key="rfr.rfr"&gt;metalib.com:PUBMED&lt;/item&gt;
+                    &lt;item key="rft.issue"&gt;2&lt;/item&gt;
+                    &lt;item key="req.faculty"&gt;&lt;/item&gt;
+                    &lt;item key="sfx.openurl"&gt;&lt;/item&gt;
+                    &lt;item key="req.language"&gt;English&lt;/item&gt;
+                    &lt;item key="rft.title"&gt;Fisheries&lt;/item&gt;
+                    &lt;item key="@rfe_id"&gt;
+                        &lt;array&gt;&lt;/array&gt;
+                    &lt;/item&gt;
+                    &lt;item key="rft.coden"&gt;FISHDN&lt;/item&gt;
+                    &lt;item key="rft.jtitle"&gt;Fisheries&lt;/item&gt;
+                    &lt;item key="sfx.sourcename"&gt;METALIB&lt;/item&gt;
+                    &lt;item key="rft_val_fmt"&gt;journal&lt;/item&gt;
+                    &lt;item key="sfx.sid"&gt;metalib.com:PUBMED&lt;/item&gt;
+                    &lt;item key="rft.date"&gt;2004&lt;/item&gt;
+                    &lt;item key="@sfx.category"&gt;
+                        &lt;array&gt;
+                            &lt;item key="0"&gt;Agriculture Sciences&lt;/item&gt;
+                        &lt;/array&gt;
+                    &lt;/item&gt;
+                &lt;/hash&gt;
+            &lt;/perldata&gt;
         </ctx_obj_attributes>
         <ctx_obj_targets>
             <target>
