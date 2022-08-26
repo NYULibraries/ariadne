@@ -212,7 +212,7 @@ func toResponseJson(from []byte) (to string, err error) {
 		return
 	}
 
-	b, err := json.Marshal(p)
+	b, err := json.MarshalIndent(p, "", "    ")
 	if err != nil {
 		return to, fmt.Errorf("could not marshal context object struct to json: %v", err)
 	}
