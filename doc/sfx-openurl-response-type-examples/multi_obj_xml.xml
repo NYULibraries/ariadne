@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ctx_obj_set>
+    <ctx_obj identifier="123">
+        <ctx_obj_attributes><perldata> <hash> <item key="rft.issn">0363-2415</item> <item key="_stash"> <hash> <item key="@rfr_id"> <array> <item key="0">info:sid/metalib.com:PUBMED</item> </array> </item> </hash> </item> <item key="ctx_ver">Z39.88-2004</item> <item key="rft.year">2004</item> <item key="rft.eissn">1548-8446</item> <item key="@rfr_id"> <array> <item key="0">info:sid/metalib.com:PUBMED</item> </array> </item> <item key="rft.place">Bethesda, MD</item> <item key="@sfx.subcategory"> <array> <item key="0">Fisheries and Aquaculture</item> </array> </item> <item key="@rft_id"> <array> </array> </item> <item key="sfx.response_type">multi_obj_xml</item> <item key="sfx.ignore_char_set">1</item> <item key="req.session_id">s3AEDD874-14F1-11DD-931E-85C8F42DA125</item> <item key="char_set">utf8</item> <item key="ctx_id">123</item> <item key="rft.object_type">JOURNAL</item> <item key="rft.issue_start">2</item> <item key="sfx.has_full_text">yes</item> <item key="rft.object_id">954925522723</item> <item key="rft.volume_start">2</item> <item key="rft.volume">2</item> <item key="sfx.request_id">601158</item> <item key="rft.genre">journal</item> <item key="req.user_group"></item> <item key="rft.pub">American Fisheries Society</item> <item key="rfr.rfr">metalib.com:PUBMED</item> <item key="rft.issue">2</item> <item key="req.faculty"></item> <item key="sfx.openurl"></item> <item key="req.language">English</item> <item key="rft.title">Fisheries</item> <item key="@rfe_id"> <array> </array> </item> <item key="rft.coden">FISHDN</item> <item key="rft.jtitle">Fisheries</item> <item key="sfx.sourcename">METALIB</item> <item key="rft_val_fmt">journal</item> <item key="sfx.sid">metalib.com:PUBMED</item> <item key="rft.date">2004</item> <item key="@sfx.category"> <array> <item key="0">Agriculture Sciences</item> </array> </item> </hash> </perldata></ctx_obj_attributes>
+        <ctx_obj_targets>
+            <target>
+                <target_name>ALLEN_PRESS_AMERICAN_FISHERIES_SOCIETY</target_name>
+                <target_public_name>American Fisheries Society test</target_public_name>
+                <target_service_id>111068679117002</target_service_id>
+                <service_type>getFullTxt</service_type>
+                <parser>ALLEN::ALLEN</parser>
+                <parse_param>url=afs.allenpress.com/afsonline & exception1=1</parse_param>
+                <proxy>no</proxy>
+                <crossref>no</crossref>
+                <note />
+                <authentication />
+                <char_set />
+                <displayer />
+                <target_url></target_url>
+            </target>
+        </ctx_obj_targets>
+    </ctx_obj>
+</ctx_obj_set>

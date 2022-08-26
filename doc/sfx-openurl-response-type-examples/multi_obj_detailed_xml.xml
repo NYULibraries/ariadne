@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ctx_obj_set>
+    <ctx_obj identifier="123">
+        <ctx_obj_attributes><perldata> <hash> <item key="rft.issn">1068-0241</item> <item key="_stash"> <hash> </hash> </item> <item key="ctx_ver">Z39.88-2004</item> <item key="rft.year">2004</item> <item key="rft.place">[Indiana, Pa.</item> <item key="@rft_id"> <array> </array> </item> <item key="sfx.response_type">multi_obj_detailed_xml</item> <item key="sfx.ignore_char_set">1</item> <item key="req.session_id">s139900F4-14F2-11DD-931E-85C8F42DA125</item> <item key="ctx_id">123</item> <item key="rft.object_type">JOURNAL</item> <item key="rft.issue_start">2</item> <item key="@sfx.related_object_ids"> <array> <item key="0">110978984565299</item> </array> </item> <item key="sfx.has_full_text">yes</item> <item key="rft.object_id">991042749796234</item> <item key="rft.volume_start">2</item> <item key="rft.volume">2</item> <item key="rft.genre">journal</item> <item key="sfx.request_id">601163</item> <item key="rft.pub">American Society for Competitiveness</item> <item key="req.user_group"></item> <item key="rft.issue">2</item> <item key="req.faculty"></item> <item key="rft.title">Advances in competitiveness research</item> <item key="req.language">English</item> <item key="@rfe_id"> <array> </array> </item> <item key="@sfx.related_objects"> <array> <item key="0"> <hash> <item key="rft.volume_start">2</item> <item key="rft.volume">2</item> <item key="rft.issn">1071-0736</item><item key="rft.pub">Emerald Group Publishing, Ltd.</item> <item key="ctx_ver">Z39.88-2004</item> <item key="rft.issue">2</item> <item key="rft.year">2004</item><item key="rft.place">Indiana, PA</item> <item key="req.language">English</item> <item key="rft.title">Global competitiveness</item><itemkey="@sfx.subcategory"> <array> <item key="0">Business Management</item> <item key="1">Economics</item> <item key="2">International Business &amp; Transnational Corporations</item> <item key="3">Trade and Commerce</item> <item key="4">Mining Engineering</item> </array> </item> <item key="@rft.stitle"> <array> <item key="0">GLOBAL COMPETITIVENESS JGC</item> </array> </item> <item key="sfx.response_type">multi_obj_detailed_xml</item> <item key="sfx.sourcename">DEFAULT</item> <item key="rft_val_fmt">journal</item> <item key="sfx.ignore_char_set">1</item> <item key="rft.date">2004</item> <item key="sfx.sid">DEFAULT</item> <item key="req.session_id">s139900F4-14F2-11DD-931E-85C8F42DA125</item> <item key="ctx_id">123</item> <item key="@sfx.category"> <array> <item key="0">Business, Economy and Management</item> <item key="1">Business, Economy and Management</item> <item key="2">Business, Economy and Management</item> <item key="3">Business, Economy and Management</item> <item key="4">Engineering</item> </array> </item> <item key="rft.object_type">JOURNAL</item> <item key="rft.issue_start">2</item> <item key="@sfx.related_object_ids"> <array> <item key="0">991042749796234</item> </array> </item> <item key="rft.object_id">110978984565299</item> </hash> </item> </array> </item> <item key="sfx.sourcename">DEFAULT</item> <item key="rft.jtitle">Advances in competitiveness research</item> <item key="rft_val_fmt">journal</item> <itemkey="rft.date">2004</item> <item key="sfx.sid">DEFAULT</item> </hash> </perldata></ctx_obj_attributes>
+<ctx_obj_targets>
+<target>
+    <target_name>GALEGROUP_IT_INFOTRAC_ONEFILE_JOURNALS</target_name>
+    <target_public_name>GaleGroup General OneFile</target_public_name>
+    <object_portfolio_id>1000000000710897</object_portfolio_id>
+    <target_id>111021039760000</target_id>
+    <target_service_id>111021039760001</target_service_id>
+    <service_type>getFullTxt</service_type>
+    <parser>Gale::InfoTrac</parser>
+    <parse_param>url=http://infotrac.galegroup.com/& database=ITOF & loc_id=sfx_loc1 & art=yes & ltitle=Global+Competitiveness</parse_param>
+    <proxy>no</proxy>
+    <crossref>no</crossref>
+    <note />
+    <authentication />
+    <char_set />
+    <displayer />
+    <target_url></target_url>
+    <is_related>remote</is_related>
+    <related_service_info>
+        <relation_type>CONTINUED_BY</relation_type>
+        <related_object_issn>1071-0736</related_object_issn>
+        <related_object_title>Global competitiveness</related_object_title>
+        <related_object_id>110978984565299</related_object_id>
+    </related_service_info>
+    <coverage>
+        <coverage_text>
+            <threshold_text>
+                <coverage_statement>Available from 1999</coverage_statement>
+            </threshold_text>
+            <embargo_text />
+        </coverage_text>
+        <from>
+            <year>1999</year>
+        </from>
+        <embargo />
+    </coverage>
+</target>
+</ctx_obj_targets>
+        </ctx_obj>
+        </ctx_obj_set>
