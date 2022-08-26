@@ -63,5 +63,5 @@ type FromTo struct {
 }
 
 type ThresholdText struct {
-	CoverageStatement string `xml:"coverage_statement" json:"coverage_statement,omitempty"`
+	CoverageStatement []string `xml:"coverage_statement" json:"coverage_statement,omitempty"`
 }
