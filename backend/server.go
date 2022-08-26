@@ -17,6 +17,24 @@ import (
 //go:embed static
 var staticFiles embed.FS
 
+// The function template.Must is a convenience wrapper that panics when passed a non-nil error value,
+// and otherwise returns the *Template unaltered
+var templates = template.Must(template.ParseFiles("templates/title.html"))
+
+type Page struct {
+	Title string
+	Body  []byte
+}
+
+func loadPage(title string) (*Page, error) {
+	filename := title + ".html"
+	body, err := os.ReadFile("templates/" + filename)
+	if err != nil {
+		return nil, err
+	}
+	return &Page{Title: title, Body: body}, nil
+}
+
 // Setup a new mux router with the appropriate routes for this app
 func NewRouter() *mux.Router {
 	var staticFS = fs.FS(staticFiles)
