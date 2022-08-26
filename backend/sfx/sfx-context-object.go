@@ -58,6 +58,8 @@ type CoverageText struct {
 
 type FromTo struct {
 	Year   string `xml:"year" json:"year,omitempty"`
+	Month  string `xml:"month" json:"month,omitempty"`
+	Day    string `xml:"day" json:"day,omitempty"`
 	Volume string `xml:"volume" json:"volume,omitempty"`
 	Issue  string `xml:"issue" json:"issue,omitempty"`
 }
