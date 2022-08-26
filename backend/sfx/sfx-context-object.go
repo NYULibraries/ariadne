@@ -48,12 +48,22 @@ type Coverage struct {
 	CoverageText *[]CoverageText `xml:"coverage_text" json:"coverage_text,omitempty"`
 	From         *[]FromTo       `xml:"from" json:"from,omitempty"`
 	To           *[]FromTo       `xml:"to" json:"to,omitempty"`
-	Embargo      string          `xml:"embargo" json:"embargo,omitempty"`
+	Embargo      *Embargo        `xml:"embargo" json:"embargo,omitempty"`
+}
+
+type Embargo struct {
+	Availability string `xml:"availability" json:"availability,omitempty"`
+	Month        string `xml:"month" json:"month,omitempty"`
+	Days         string `xml:"days" json:"days,omitempty"`
 }
 
 type CoverageText struct {
-	ThresholdText *[]ThresholdText `xml:"threshold_text" json:"threshold_text,omitempty"`
-	EmbargoText   string           `xml:"embargo_text" json:"embargo_text,omitempty"`
+	ThresholdText *[]ThresholdText    `xml:"threshold_text" json:"threshold_text,omitempty"`
+	EmbargoText   *[]EmbargoStatement `xml:"embargo_text" json:"embargo_text,omitempty"`
+}
+
+type EmbargoStatement struct {
+	EmbargoStatement string `xml:"embargo_statement" json:"embargo_statement,omitempty"`
 }
 
 type FromTo struct {
