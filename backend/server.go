@@ -13,6 +13,12 @@ import (
 //go:embed static
 var staticFiles embed.FS
 
+// Healthcheck returns a successful response, that's it
+func Healthcheck(w http.ResponseWriter, r *http.Request) {
+	w.Header().Add("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(map[string]interface{}{"status": "ok"})
+}
+
 // Setup a new mux router with the appropriate routes for this app
 func NewRouter() *http.ServeMux {
 	var staticFS = fs.FS(staticFiles)
@@ -56,12 +62,6 @@ func ResolveHTML(w http.ResponseWriter, r *http.Request) {
 	w.Header().Add("Content Type", "text/html")
 
 	http.ServeFile(w, r, "./templates/index.html")
-}
-
-// Healthcheck returns a successful response, that's it
-func Healthcheck(w http.ResponseWriter, r *http.Request) {
-	w.Header().Add("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(map[string]interface{}{"status": "ok"})
 }
 
 func handleError(err error, w http.ResponseWriter, message string) {
