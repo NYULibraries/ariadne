@@ -15,19 +15,6 @@ import (
 	"time"
 )
 
-// SFX service URL
-var sfxURL string = "http://sfx.library.nyu.edu/sfxlcl41"
-
-//go:embed templates/sfx-request.xml
-var sfxRequestTemplate string
-
-// Values needed for templating an SFX request are parsed
-type sfxContextObjectRequestBody struct {
-	RftValues *OpenURL
-	Timestamp string
-	Genre     string
-}
-
 type OpenURL map[string][]string
 
 // Object representing everything that's needed to request from SFX
@@ -40,16 +27,18 @@ type SFXRequest interface {
 	toRequestXML()
 }
 
-// Take a querystring from the request and convert it to a valid
-// XML string for use in the POST to SFX, return SFXContextObjectRequest object
-func NewSFXContextObjectRequest(qs url.Values) (sfxContextObjectRequest *SFXContextObjectRequest, err error) {
-	sfxContextObjectRequest, err = setSFXContextObjectRequest(qs)
-	if err != nil {
-		return sfxContextObjectRequest, fmt.Errorf("could not create context object for request: %v", err)
-	}
-
-	return
+// Values needed for templating an SFX request are parsed
+type sfxContextObjectRequestBody struct {
+	RftValues *OpenURL
+	Timestamp string
+	Genre     string
 }
+
+//go:embed templates/sfx-request.xml
+var sfxRequestTemplate string
+
+// SFX service URL
+var sfxURL string = "http://sfx.library.nyu.edu/sfxlcl41"
 
 // Construct and run the actual POST request to the SFX server
 // Expects an XML string in a SFXContextObjectRequest obj which will be appended to the PostForm params
@@ -93,10 +82,6 @@ func (c SFXContextObjectRequest) Request() (body string, err error) {
 	return
 }
 
-func SetSFXURL(dependencyInjectedURL string) {
-	sfxURL = dependencyInjectedURL
-}
-
 // Convert a context object request to an XML string
 // via gotemplates, in order to set it up as a post param to SFX
 // Store in SFXContextObjectRequest.RequestXML
@@ -120,6 +105,64 @@ func (c *SFXContextObjectRequest) toRequestXML(tplVals sfxContextObjectRequestBo
 	// Set requestXML to this converted XML string
 	c.RequestXML = tpl.String()
 	return nil
+}
+
+// Take a querystring from the request and convert it to a valid
+// XML string for use in the POST to SFX, return SFXContextObjectRequest object
+func NewSFXContextObjectRequest(qs url.Values) (sfxContextObjectRequest *SFXContextObjectRequest, err error) {
+	sfxContextObjectRequest, err = setSFXContextObjectRequest(qs)
+	if err != nil {
+		return sfxContextObjectRequest, fmt.Errorf("could not create context object for request: %v", err)
+	}
+
+	return
+}
+
+func SetSFXURL(dependencyInjectedURL string) {
+	sfxURL = dependencyInjectedURL
+}
+
+// A list of the valid genres as defined by the OpenURL spec
+func genresList() (genresList map[string]bool) {
+	genresList = map[string]bool{
+		"journal":    true,
+		"book":       true,
+		"conference": true,
+		"article":    true,
+		"preprint":   true,
+		"proceeding": true,
+		"bookitem":   true,
+	}
+
+	return
+}
+
+// Validate XML, by marshalling and checking for a blank error
+func isValidXML(data []byte) bool {
+	return xml.Unmarshal(data, new(interface{})) == nil
+}
+
+// Take an openurl and return an OpenURL object of only the rft-prefixed fields
+// These are the fields we are going to parse into XML as part of the
+// post request params
+func parseOpenURL(queryStringValues url.Values) (*OpenURL, error) {
+	parsed := &OpenURL{}
+
+	for k, v := range queryStringValues {
+		// Strip the "rft." prefix from the OpenURL
+		// and map into valid OpenURL fields
+		if strings.HasPrefix(k, "rft.") {
+			// E.g. "rft.book" becomes "book"
+			newKey := strings.Split(k, ".")[1]
+			(*parsed)[newKey] = v
+		}
+	}
+
+	if reflect.DeepEqual(parsed, &OpenURL{}) {
+		return nil, fmt.Errorf("no valid querystring values to parse")
+	}
+
+	return parsed, nil
 }
 
 // Setup the SFXContextObjectTpl instance we'll need to run with
@@ -153,58 +196,6 @@ func setSFXContextObjectRequest(queryStringValues url.Values) (sfxContext *SFXCo
 	return
 }
 
-// A list of the valid genres as defined by the OpenURL spec
-func genresList() (genresList map[string]bool) {
-	genresList = map[string]bool{
-		"journal":    true,
-		"book":       true,
-		"conference": true,
-		"article":    true,
-		"preprint":   true,
-		"proceeding": true,
-		"bookitem":   true,
-	}
-
-	return
-}
-
-// Only return a valid genre that has been allowed by the OpenURL spec
-func validGenre(genre []string) (string, error) {
-	validGenres := genresList()
-	if len(genre) > 0 && validGenres[genre[0]] {
-		return genre[0], nil
-	}
-	return "", fmt.Errorf("genre not in list of allowed genres: %v", genre)
-}
-
-// Take an openurl and return an OpenURL object of only the rft-prefixed fields
-// These are the fields we are going to parse into XML as part of the
-// post request params
-func parseOpenURL(queryStringValues url.Values) (*OpenURL, error) {
-	parsed := &OpenURL{}
-
-	for k, v := range queryStringValues {
-		// Strip the "rft." prefix from the OpenURL
-		// and map into valid OpenURL fields
-		if strings.HasPrefix(k, "rft.") {
-			// E.g. "rft.book" becomes "book"
-			newKey := strings.Split(k, ".")[1]
-			(*parsed)[newKey] = v
-		}
-	}
-
-	if reflect.DeepEqual(parsed, &OpenURL{}) {
-		return nil, fmt.Errorf("no valid querystring values to parse")
-	}
-
-	return parsed, nil
-}
-
-// Validate XML, by marshalling and checking for a blank error
-func isValidXML(data []byte) bool {
-	return xml.Unmarshal(data, new(interface{})) == nil
-}
-
 // Convert the response XML from SFX into a JSON string
 func toResponseJson(from []byte) (to string, err error) {
 	var p SFXContextObjectSet
@@ -219,4 +210,13 @@ func toResponseJson(from []byte) (to string, err error) {
 	to = string(b)
 
 	return
+}
+
+// Only return a valid genre that has been allowed by the OpenURL spec
+func validGenre(genre []string) (string, error) {
+	validGenres := genresList()
+	if len(genre) > 0 && validGenres[genre[0]] {
+		return genre[0], nil
+	}
+	return "", fmt.Errorf("genre not in list of allowed genres: %v", genre)
 }
