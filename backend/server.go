@@ -8,15 +8,13 @@ import (
 	"log"
 	"net/http"
 	"resolve/sfx"
-
-	"github.com/gorilla/mux"
 )
 
 //go:embed static
 var staticFiles embed.FS
 
 // Setup a new mux router with the appropriate routes for this app
-func NewRouter() *mux.Router {
+func NewRouter() *http.ServeMux {
 	var staticFS = fs.FS(staticFiles)
 	staticContent, err := fs.Sub(staticFS, "static")
 	if err != nil {
@@ -24,12 +22,12 @@ func NewRouter() *mux.Router {
 	}
 	fileServer := http.FileServer(http.FS(staticContent))
 
-	router := mux.NewRouter().StrictSlash(true)
+	router := http.NewServeMux()
 
-	router.HandleFunc("/healthcheck", Healthcheck).Methods("GET")
-	router.HandleFunc("/resolve", ResolveHTML).Methods("GET")
-	router.PathPrefix("/static/").Handler(http.StripPrefix("/static/", fileServer))
-	router.HandleFunc("/v0/", ResolveJSON).Methods("GET")
+	router.HandleFunc("/healthcheck", Healthcheck)
+	router.HandleFunc("/resolve", ResolveHTML)
+	router.Handle("/static/", http.StripPrefix("/static/", fileServer))
+	router.HandleFunc("/v0/", ResolveJSON)
 
 	return router
 }
