@@ -164,7 +164,25 @@ func TestToResponseJson(t *testing.T) {
 </ctx_obj_set>`
 	dummyBadXMLResponse := `
 <ctx_obj_set`
-	dummyJSONResponse := `{"ctx_obj":[{"ctx_obj_targets":[{"target":[{"target_name":"","target_public_name":"","target_url":"http://answers.library.newschool.edu/","authentication":"","proxy":""}]}]}]}`
+	dummyJSONResponse := `{
+    "ctx_obj": [
+        {
+            "ctx_obj_targets": [
+                {
+                    "target": [
+                        {
+                            "target_name": "",
+                            "target_public_name": "",
+                            "target_url": "http://answers.library.newschool.edu/",
+                            "authentication": "",
+                            "proxy": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}`
 	var tests = []struct {
 		from        []byte
 		expected    string
