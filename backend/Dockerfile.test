@@ -1,7 +1,6 @@
 FROM golang:1.17
 
 WORKDIR /app
-RUN go get -u golang.org/x/lint/golint
 COPY . . 
 RUN go build -o app .
 
