@@ -1,3 +1,14 @@
+# This Dockerfile is used for building both `backend-debug` and `backend-test`
+# Docker Compose services.  It's primary duty is `backend-test`: providing automated
+# testing in CI.  The main use case for a delve debuggable container is to
+# troubleshoot problems that are manifesting in our containerized environments
+# but not in our local development environments.  In such a case, we would actually
+# be running delve in a productionized container, not this debug/test container.
+# This Dockerfile helps to document the process of setting up delve debuggable
+# containers.
+# TODO: Document the differences between setting up delve using the base image
+# in this Dockerfile and the base image used for building production containers.
+
 FROM golang:1.19.1
 
 WORKDIR /app

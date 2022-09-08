@@ -2,24 +2,29 @@ version: "3.9"
 
 services:
   backend:
-    build: 
+    build:
       context: backend/
     ports:
       - "8080:8080"
     networks:
       - resolve-net
-    # volumes: 
+    # volumes:
     #   - ./backend:/app
 
   backend-debug:
     build:
       context: backend/
+      # See file header comment in Dockerfile.debug-and-test
       dockerfile: Dockerfile.debug-and-test
+    # Dockerfile.debug-and-test is primarily a test container.  We need to override
+    # the `go test...` CMD, running delve instead.
     command: [ "./util/dlv", "--listen=:2345", "--headless=true", "--api-version=2", "--accept-multiclient", "exec", "./resolve" ]
     cap_add:
       - SYS_PTRACE
     ports:
+      # Delve port
       - "2345:2345"
+      # Application port
       - "8080:8080"
     networks:
       - resolve-net
@@ -29,18 +34,19 @@ services:
     #   - ./backend:/app
 
   backend-test:
-    build: 
+    build:
       context: backend/
+      # See file header comment in Dockerfile.debug-and-test
       dockerfile: Dockerfile.debug-and-test
     command: ["go","test","-cover","./..."]
     volumes:
       - ./backend:/app
 
   backend-test-coverage:
-    build: 
+    build:
       context: backend/
       dockerfile: Dockerfile.test
-    command: 
+    command:
       - /bin/sh
       - -c
       - |
