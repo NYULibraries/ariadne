@@ -3,10 +3,8 @@ package sfx
 import (
 	"errors"
 	"fmt"
-	"io"
 	"io/ioutil"
 	"net/url"
-	"os"
 	"reflect"
 	"strings"
 	"testing"
@@ -76,8 +74,8 @@ func TestIsValidXML(t *testing.T) {
 		testXMLFile string
 		expected    bool
 	}{
-		{"../../testdata/ctxObj_good.xml", true},
-		{"../../testdata/ctxObj_bad.xml", false},
+		{"./testdata/sfx-context-object-valid.xml", true},
+		{"./testdata/sfx-context-object-invalid-truncated.xml", false},
 		{"", false},
 	}
 
@@ -95,23 +93,19 @@ func TestIsValidXML(t *testing.T) {
 
 func TestToRequestXML(t *testing.T) {
 	var tests = []struct {
-		ctx         *CtxObjReq
-		tpl         ctxObjTpl
+		sfxContext  *SFXContextObjectRequest
+		tpl         sfxContextObjectRequestBody
 		expectedErr error
 	}{
-		{&CtxObjReq{}, ctxObjTpl{RftValues: &OpenURL{"genre": {"book"}, "btitle": {"a book"}}, Timestamp: mockTimestamp, Genre: "book"}, nil},
-		{&CtxObjReq{}, ctxObjTpl{}, errors.New("error")},
-		{&CtxObjReq{}, ctxObjTpl{RftValues: &OpenURL{"genre": {"<rft:"}}, Timestamp: mockTimestamp, Genre: "book"}, errors.New("error")},
+		{&SFXContextObjectRequest{}, sfxContextObjectRequestBody{RftValues: &OpenURL{"genre": {"book"}, "btitle": {"a book"}}, Timestamp: mockTimestamp, Genre: "book"}, nil},
+		{&SFXContextObjectRequest{}, sfxContextObjectRequestBody{}, errors.New("error")},
+		{&SFXContextObjectRequest{}, sfxContextObjectRequestBody{RftValues: &OpenURL{"genre": {"<rft:"}}, Timestamp: mockTimestamp, Genre: "book"}, errors.New("error")},
 	}
 
-	// Temporarily copy templates into this directory so the relative path is correct
-	copyTmpTemplates(t)
-	defer removeTmpTemplates()
-
 	for _, tt := range tests {
-		testname := fmt.Sprintf("%s", tt.ctx)
+		testname := fmt.Sprintf("%s", tt.sfxContext)
 		t.Run(testname, func(t *testing.T) {
-			c := tt.ctx
+			c := tt.sfxContext
 			err := c.toRequestXML(tt.tpl)
 			if tt.expectedErr == nil && !strings.HasPrefix(c.RequestXML, `<?xml version="1.0" encoding="UTF-8"?>`) {
 				t.Errorf("toRequestXML didn't return an XML document")
@@ -125,7 +119,7 @@ func TestToRequestXML(t *testing.T) {
 	}
 }
 
-func TestSetCtxObjReq(t *testing.T) {
+func TestSetSFXContextObjectRequest(t *testing.T) {
 	var tests = []struct {
 		querystring url.Values
 		expectedErr error
@@ -136,20 +130,16 @@ func TestSetCtxObjReq(t *testing.T) {
 		{map[string][]string{"rft.genre": {"book"}, "rft.btitle": {"dune"}}, nil},
 	}
 
-	// Temporarily copy templates into this directory so the relative path is correct
-	copyTmpTemplates(t)
-	defer removeTmpTemplates()
-
 	for _, tt := range tests {
 		testname := fmt.Sprintf("%s", tt.querystring)
 		t.Run(testname, func(t *testing.T) {
-			ans, err := setCtxObjReq(tt.querystring)
+			ans, err := setSFXContextObjectRequest(tt.querystring)
 			// if err != nil {
 			// 	t.Errorf("error %v", err)
 			// }
 			if tt.expectedErr != nil {
 				if err == nil {
-					t.Errorf("setCtxObjReq err was '%v', expecting '%v'", err, tt.expectedErr)
+					t.Errorf("setSFXContextObjectRequest err was '%v', expecting '%v'", err, tt.expectedErr)
 				}
 			}
 			if err == nil {
@@ -174,7 +164,25 @@ func TestToResponseJson(t *testing.T) {
 </ctx_obj_set>`
 	dummyBadXMLResponse := `
 <ctx_obj_set`
-	dummyJSONResponse := `{"ctx_obj":[{"ctx_obj_targets":[{"target":[{"target_name":"","target_public_name":"","target_url":"http://answers.library.newschool.edu/","authentication":"","proxy":""}]}]}]}`
+	dummyJSONResponse := `{
+    "ctx_obj": [
+        {
+            "ctx_obj_targets": [
+                {
+                    "target": [
+                        {
+                            "target_name": "",
+                            "target_public_name": "",
+                            "target_url": "http://answers.library.newschool.edu/",
+                            "authentication": "",
+                            "proxy": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}`
 	var tests = []struct {
 		from        []byte
 		expected    string
@@ -183,10 +191,6 @@ func TestToResponseJson(t *testing.T) {
 		{[]byte(dummyGoodXMLResponse), dummyJSONResponse, nil},
 		{[]byte(dummyBadXMLResponse), "", errors.New("error")},
 	}
-
-	// Temporarily copy templates into this directory so the relative path is correct
-	copyTmpTemplates(t)
-	defer removeTmpTemplates()
 
 	for _, tt := range tests {
 		testname := fmt.Sprintf("%s", tt.expected)
@@ -207,52 +211,5 @@ func TestToResponseJson(t *testing.T) {
 	}
 }
 
-// func (c CtxObjReq) Request() (body string, err error) {
-// func Init(qs url.Values) (ctxObjReq *CtxObjReq, err error) {
-
-// Helpers
-
-// Temporarily copy templates into this directory so the relative path is correct
-func copyTmpTemplates(t *testing.T) {
-	// Create the templates/index.goxml in the current test context temporarily
-	// and delete after the test completes
-	err := os.Mkdir("templates", 0755)
-	if err != nil {
-		t.Errorf("could not create temp templates dir: %v", err)
-	}
-	_, err = copy("../../templates/index.goxml", "./templates/index.goxml")
-	if err != nil {
-		t.Errorf("could not copy template file")
-	}
-}
-
-// Delete temporary templates directory from current path
-func removeTmpTemplates() {
-	os.RemoveAll("templates")
-}
-
-// Util function for copying a file from a source to a new dest
-func copy(src, dst string) (int64, error) {
-	sourceFileStat, err := os.Stat(src)
-	if err != nil {
-		return 0, err
-	}
-
-	if !sourceFileStat.Mode().IsRegular() {
-		return 0, fmt.Errorf("%s is not a regular file", src)
-	}
-
-	source, err := os.Open(src)
-	if err != nil {
-		return 0, err
-	}
-	defer source.Close()
-
-	destination, err := os.Create(dst)
-	if err != nil {
-		return 0, err
-	}
-	defer destination.Close()
-	nBytes, err := io.Copy(destination, source)
-	return nBytes, err
-}
+// func (c SFXContextObjectRequest) Request() (body string, err error) {
+// func Init(qs url.Values) (sfxContextObjectRequest *SFXContextObjectRequest, err error) {

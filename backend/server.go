@@ -5,44 +5,43 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"resolve/lib/sfx"
-
-	"github.com/gorilla/mux"
+	"resolve/sfx"
 )
 
+// Healthcheck returns a successful response, that's it
+func Healthcheck(w http.ResponseWriter, r *http.Request) {
+	w.Header().Add("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(map[string]interface{}{"status": "ok"})
+}
+
 // Setup a new mux router with the appropriate routes for this app
-func NewRouter() *mux.Router {
-	router := mux.NewRouter().StrictSlash(true)
-	router.HandleFunc("/healthcheck", Healthcheck).Methods("GET")
-	router.HandleFunc("/", Resolve).Methods("GET")
+func NewRouter() *http.ServeMux {
+	router := http.NewServeMux()
+
+	router.HandleFunc("/healthcheck", Healthcheck)
+	router.HandleFunc("/v0/", ResolveJSON)
 
 	return router
 }
 
 // Take an incoming Querystring, convert to context object XML, send a post to SFX
 // and write the response JSON
-func Resolve(w http.ResponseWriter, r *http.Request) {
+func ResolveJSON(w http.ResponseWriter, r *http.Request) {
 	w.Header().Add("Content-Type", "application/json")
 
-	ctx, err := sfx.Init(r.URL.Query())
+	sfxContext, err := sfx.NewSFXContextObjectRequest(r.URL.Query())
 	if err != nil {
 		handleError(err, w, "Invalid OpenURL")
 		return
 	}
 
-	resp, err := ctx.Request()
+	response, err := sfxContext.Request()
 	if err != nil {
 		handleError(err, w, "Invalid response from SFX")
 		return
 	}
 
-	fmt.Fprintln(w, resp)
-}
-
-// Healthcheck returns a successful response, that's it
-func Healthcheck(w http.ResponseWriter, r *http.Request) {
-	w.Header().Add("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(map[string]interface{}{"status": "ok"})
+	fmt.Fprintln(w, response)
 }
 
 func handleError(err error, w http.ResponseWriter, message string) {

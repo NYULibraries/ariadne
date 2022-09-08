@@ -1,8 +1,6 @@
-FROM golang:1.17
+FROM golang:1.19.1
 
 WORKDIR /app
-RUN go get -u golang.org/x/lint/golint
 COPY . . 
-RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -ldflags '-extldflags "-static"' -o app .
 
 CMD [ "go", "test", "./...", "-cover" ]

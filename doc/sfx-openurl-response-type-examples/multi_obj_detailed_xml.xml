@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ctx_obj_set>
+    <ctx_obj identifier="123">
+        <ctx_obj_attributes>
+            &lt;perldata&gt;
+                &lt;hash&gt;
+                    &lt;item key="rft.issn"&gt;1068-0241&lt;/item&gt;
+                    &lt;item key="_stash"&gt;
+                        &lt;hash&gt;&lt;/hash&gt;
+                    &lt;/item&gt;
+                    &lt;item key="ctx_ver"&gt;Z39.88-2004&lt;/item&gt;
+                    &lt;item key="rft.year"&gt;2004&lt;/item&gt;
+                    &lt;item key="rft.place"&gt;[Indiana, Pa.&lt;/item&gt;
+                    &lt;item key="@rft_id"&gt;
+                        &lt;array&gt;&lt;/array&gt;
+                    &lt;/item&gt;
+                    &lt;item key="sfx.response_type"&gt;multi_obj_detailed_xml&lt;/item&gt;
+                    &lt;item key="sfx.ignore_char_set"&gt;1&lt;/item&gt;
+                    &lt;item key="req.session_id"&gt;
+                        s139900F4-14F2-11DD-931E-85C8F42DA125
+                    &lt;/item&gt;
+                    &lt;item key="ctx_id"&gt;123&lt;/item&gt;
+                    &lt;item key="rft.object_type"&gt;JOURNAL&lt;/item&gt;
+                    &lt;item key="rft.issue_start"&gt;2&lt;/item&gt;
+                    &lt;item key="@sfx.related_object_ids"&gt;
+                        &lt;array&gt;
+                            &lt;item key="0"&gt;110978984565299&lt;/item&gt;
+                        &lt;/array&gt;
+                    &lt;/item&gt;
+                    &lt;item key="sfx.has_full_text"&gt;yes&lt;/item&gt;
+                    &lt;item key="rft.object_id"&gt;991042749796234&lt;/item&gt;
+                    &lt;item key="rft.volume_start"&gt;2&lt;/item&gt;
+                    &lt;item key="rft.volume"&gt;2&lt;/item&gt;
+                    &lt;item key="rft.genre"&gt;journal&lt;/item&gt;
+                    &lt;item key="sfx.request_id"&gt;601163&lt;/item&gt;
+                    &lt;item key="rft.pub"&gt;American Society for Competitiveness
+                    &lt;/item&gt;
+                    &lt;item key="req.user_group"&gt;&lt;/item&gt;
+                    &lt;item key="rft.issue"&gt;2&lt;/item&gt;
+                    &lt;item key="req.faculty"&gt;&lt;/item&gt;
+                    &lt;item key="rft.title"&gt;Advances in competitiveness research
+                    &lt;/item&gt;
+                    &lt;item key="req.language"&gt;English&lt;/item&gt;
+                    &lt;item key="@rfe_id"&gt;
+                        &lt;array&gt;&lt;/array&gt;
+                    &lt;/item&gt;
+                    &lt;item key="@sfx.related_objects"&gt;
+                    &lt;array&gt;
+                    &lt;item key="0"&gt;
+                        &lt;hash&gt;
+                        &lt;item key="rft.volume_start"&gt;2&lt;/item&gt;
+                        &lt;item key="rft.volume"&gt;2&lt;/item&gt;
+                        &lt;item key="rft.issn"&gt;1071-0736&lt;/item&gt;
+                        &lt;item key="rft.pub"&gt;Emerald Group Publishing, Ltd.
+                        &lt;/item&gt;
+                        &lt;item key="ctx_ver"&gt;Z39.88-2004&lt;/item&gt;
+                        &lt;item key="rft.issue"&gt;2&lt;/item&gt;
+                        &lt;item key="rft.year"&gt;2004&lt;/item&gt;
+                        &lt;item key="rft.place"&gt;Indiana, PA&lt;/item&gt;
+                        &lt;item key="req.language"&gt;English&lt;/item&gt;
+                        &lt;item key="rft.title"&gt;Global competitiveness&lt;/item&gt;
+                        &lt;itemkey="@sfx.subcategory"&gt;
+                        &lt;array&gt;
+                            &lt;item key="0"&gt;Business Management&lt;/item&gt;
+                            &lt;item key="1"&gt;Economics&lt;/item&gt;
+                            &lt;item key="2"&gt;International Business &amp;
+                                Transnational Corporations
+                            &lt;/item&gt;
+                            &lt;item key="3"&gt;Trade and Commerce&lt;/item&gt;
+                            &lt;item key="4"&gt;Mining Engineering&lt;/item&gt;
+                        &lt;/array&gt;
+                    &lt;/item&gt;
+                    &lt;item key="@rft.stitle"&gt;
+                        &lt;array&gt;
+                            &lt;item key="0"&gt;GLOBAL COMPETITIVENESS JGC&lt;/item&gt;
+                        &lt;/array&gt;
+                    &lt;/item&gt;
+                    &lt;item key="sfx.response_type"&gt;multi_obj_detailed_xml&lt;/item&gt;
+                    &lt;item key="sfx.sourcename"&gt;DEFAULT&lt;/item&gt;
+                    &lt;item key="rft_val_fmt"&gt;journal&lt;/item&gt;
+                    &lt;item key="sfx.ignore_char_set"&gt;1&lt;/item&gt;
+                    &lt;item key="rft.date"&gt;2004&lt;/item&gt;
+                    &lt;item key="sfx.sid"&gt;DEFAULT&lt;/item&gt;
+                    &lt;item key="req.session_id"&gt;
+                        s139900F4-14F2-11DD-931E-85C8F42DA125
+                    &lt;/item&gt;
+                    &lt;item key="ctx_id"&gt;123&lt;/item&gt;
+                    &lt;item key="@sfx.category"&gt;
+                        &lt;array&gt;
+                            &lt;item key="0"&gt;Business, Economy and Management
+                            &lt;/item&gt;
+                            &lt;item key="1"&gt;Business, Economy and Management
+                            &lt;/item&gt;
+                            &lt;item key="2"&gt;Business, Economy and Management
+                            &lt;/item&gt;
+                            &lt;item key="3"&gt;Business, Economy and Management
+                            &lt;/item&gt;
+                            &lt;item key="4"&gt;Engineering&lt;/item&gt;
+                        &lt;/array&gt;
+                    &lt;/item&gt;
+                    &lt;item key="rft.object_type"&gt;JOURNAL&lt;/item&gt;
+                    &lt;item key="rft.issue_start"&gt;2&lt;/item&gt;
+                    &lt;item key="@sfx.related_object_ids"&gt;
+                        &lt;array&gt;
+                            &lt;item key="0"&gt;991042749796234&lt;/item&gt;
+                        &lt;/array&gt;
+                    &lt;/item&gt;
+                    &lt;item key="rft.object_id"&gt;110978984565299&lt;/item&gt;
+                &lt;/hash&gt;
+            &lt;/item&gt;
+        &lt;/array&gt;
+    &lt;/item&gt;
+    &lt;item key="sfx.sourcename"&gt;DEFAULT&lt;/item&gt;
+    &lt;item key="rft.jtitle"&gt;Advances in competitiveness research&lt;/item&gt;
+    &lt;item key="rft_val_fmt"&gt;journal&lt;/item&gt;
+    &lt;itemkey="rft.date"&gt;2004
+&lt;/item&gt; &lt;item key="sfx.sid"&gt;DEFAULT&lt;/item&gt; &lt;/hash&gt; &lt;/perldata&gt;</ctx_obj_attributes>
+<ctx_obj_targets>
+<target>
+    <target_name>GALEGROUP_IT_INFOTRAC_ONEFILE_JOURNALS</target_name>
+    <target_public_name>GaleGroup General OneFile</target_public_name>
+    <object_portfolio_id>1000000000710897</object_portfolio_id>
+    <target_id>111021039760000</target_id>
+    <target_service_id>111021039760001</target_service_id>
+    <service_type>getFullTxt</service_type>
+    <parser>Gale::InfoTrac</parser>
+    <parse_param>url=http://infotrac.galegroup.com/&amp; database=ITOF &amp; loc_id=sfx_loc1 &amp; art=yes &amp; ltitle=Global+Competitiveness</parse_param>
+    <proxy>no</proxy>
+    <crossref>no</crossref>
+    <note />
+    <authentication />
+    <char_set />
+    <displayer />
+    <target_url></target_url>
+    <is_related>remote</is_related>
+    <related_service_info>
+        <relation_type>CONTINUED_BY</relation_type>
+        <related_object_issn>1071-0736</related_object_issn>
+        <related_object_title>Global competitiveness</related_object_title>
+        <related_object_id>110978984565299</related_object_id>
+    </related_service_info>
+    <coverage>
+        <coverage_text>
+            <threshold_text>
+                <coverage_statement>Available from 1999</coverage_statement>
+            </threshold_text>
+            <embargo_text />
+        </coverage_text>
+        <from>
+            <year>1999</year>
+        </from>
+        <embargo />
+    </coverage>
+</target>
+</ctx_obj_targets>
+        </ctx_obj>
+        </ctx_obj_set>

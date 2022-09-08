@@ -1,2 +1,6 @@
 resolve
 coverage.out
+
+//for Vlad's dev environment
+go.work
+c.out
