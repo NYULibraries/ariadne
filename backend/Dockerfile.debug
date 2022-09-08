@@ -2,7 +2,8 @@
 FROM golang:1.17 AS builder
 WORKDIR /app
 COPY . .
-RUN go mod tidy && \
+RUN apk add build-base && \
+    go mod tidy && \
     go install -v ./... && \
     go build -gcflags="all=-N -l" -o resolve && \
     go clean -modcache && \
