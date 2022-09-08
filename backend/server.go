@@ -1,17 +1,12 @@
 package main
 
 import (
-	"embed"
 	"encoding/json"
 	"fmt"
-	"io/fs"
 	"log"
 	"net/http"
 	"resolve/sfx"
 )
-
-//go:embed static
-var staticFiles embed.FS
 
 // Healthcheck returns a successful response, that's it
 func Healthcheck(w http.ResponseWriter, r *http.Request) {
@@ -21,18 +16,9 @@ func Healthcheck(w http.ResponseWriter, r *http.Request) {
 
 // Setup a new mux router with the appropriate routes for this app
 func NewRouter() *http.ServeMux {
-	var staticFS = fs.FS(staticFiles)
-	staticContent, err := fs.Sub(staticFS, "static")
-	if err != nil {
-		log.Fatal(err)
-	}
-	fileServer := http.FileServer(http.FS(staticContent))
-
 	router := http.NewServeMux()
 
 	router.HandleFunc("/healthcheck", Healthcheck)
-	router.HandleFunc("/resolve", ResolveHTML)
-	router.Handle("/static/", http.StripPrefix("/static/", fileServer))
 	router.HandleFunc("/v0/", ResolveJSON)
 
 	return router
@@ -56,12 +42,6 @@ func ResolveJSON(w http.ResponseWriter, r *http.Request) {
 	}
 
 	fmt.Fprintln(w, response)
-}
-
-func ResolveHTML(w http.ResponseWriter, r *http.Request) {
-	w.Header().Add("Content Type", "text/html")
-
-	http.ServeFile(w, r, "./templates/index.html")
 }
 
 func handleError(err error, w http.ResponseWriter, message string) {
