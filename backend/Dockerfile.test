@@ -1,6 +1,16 @@
 FROM golang:1.19.1
 
 WORKDIR /app
-COPY . . 
+COPY . .
+RUN go mod tidy && \
+    go install -v ./... && \
+    go build -gcflags="all=-N -l" -o resolve && \
+    go clean -modcache && \
+    go install -v github.com/go-delve/delve/cmd/dlv@v1.9.0 && \
+    mkdir util && \
+    cp /go/bin/dlv util/
+
+EXPOSE 2345
+EXPOSE 8080
 
 CMD [ "go", "test", "./...", "-cover" ]

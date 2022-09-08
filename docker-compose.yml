@@ -14,7 +14,8 @@ services:
   backend-debug:
     build:
       context: backend/
-      dockerfile: Dockerfile.debug
+      dockerfile: Dockerfile.test
+    command: [ "./util/dlv", "--listen=:2345", "--headless=true", "--api-version=2", "--accept-multiclient", "exec", "./resolve" ]
     cap_add:
       - SYS_PTRACE
     ports:
