@@ -8,6 +8,7 @@ import (
 	"net/http/httptest"
 	"os"
 	"resolve/sfx"
+	"resolve/util"
 	"testing"
 )
 
@@ -96,7 +97,23 @@ func TestResponseJSONRoute(t *testing.T) {
 
 			actualValue := string(body)
 			if actualValue != goldenValue {
-				t.Errorf("expected:\n\n%s\n\ngot:\n\n%s\n\n", goldenValue, actualValue)
+				err := writeActualToTmp(testCase, actualValue)
+				if err != nil {
+					t.Fatalf("Error writing actual temp file for test case \"%s\": %s",
+						testCase.name, err)
+				}
+
+				goldenFile := goldenFile(testCase)
+				actualFile := tmpFile(testCase)
+				diff, err := util.Diff(goldenFile, actualFile)
+				if err != nil {
+					t.Fatalf("Error diff'ing %s vs. %s: %s\n" +
+						"Manually diff these files to determine the reasons for test failure.",
+						goldenFile, actualFile, err)
+				}
+
+				t.Errorf("golden and actual values do not match\noutput of `diff %s %s`:\n%s\n",
+					goldenFile, actualFile, diff)
 			}
 		})
 	}
@@ -128,6 +145,14 @@ func sfxFakeResponseFile(testCase TestCase) string {
 	return "testdata/server/fixtures/sfx-fake-responses/" + testCase.key + ".xml"
 }
 
+func tmpFile(testCase TestCase) string {
+	return "testdata/server/tmp/actual/" + testCase.key + ".json"
+}
+
 func updateGoldenFile(testCase TestCase, bytes []byte) error {
 	return os.WriteFile(goldenFile(testCase), bytes, 0644)
+}
+
+func writeActualToTmp(testCase TestCase, actual string) error {
+	return os.WriteFile(tmpFile(testCase), []byte(actual), 0644)
 }
