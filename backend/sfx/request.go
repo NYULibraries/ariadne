@@ -38,7 +38,8 @@ type sfxContextObjectRequestBody struct {
 var sfxRequestTemplate string
 
 // SFX service URL
-var sfxURL string = "http://sfx.library.nyu.edu/sfxlcl41"
+const DefaultSFXURL = "http://sfx.library.nyu.edu/sfxlcl41"
+var sfxURL = DefaultSFXURL
 
 // Construct and run the actual POST request to the SFX server
 // Expects an XML string in a SFXContextObjectRequest obj which will be appended to the PostForm params
