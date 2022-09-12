@@ -6,6 +6,7 @@ backend/testdata/server/tmp/*
 !backend/testdata/server/tmp/actual/
 backend/testdata/server/tmp/actual/*
 !backend/testdata/server/tmp/actual/.gitkeep
+Makefile
 
 //for Vlad's dev environment
 go.work
