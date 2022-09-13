@@ -1,6 +1,20 @@
 version: "3.9"
 
 services:
+  frontend:
+    build:
+      context: frontend/
+    ports:
+      - "3000:3000"
+    networks:
+      - resolve-net
+    volumes:
+      - ./frontend:/app
+    depends_on:
+      - backend
+    # volumes:
+    #   - ./frontend:/app
+
   backend:
     build:
       context: backend/
