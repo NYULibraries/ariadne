@@ -1,9 +1,11 @@
 import './App.css';
+import List from './components/List/List';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <h1>Resolve project is under construction</h1>
+      <List />
     </div>
   );
 }
