@@ -21,7 +21,19 @@ type TestCase struct {
 	queryString string
 }
 
-var update = flag.Bool("update", false, "update the golden files")
+var updateGoldenFiles = flag.Bool("update-golden-files", false, "update the golden files")
+
+// --update-sfx-fake-responses flag?
+// Ideally we also want to a flag for updating SFX fake response fixture files,
+// but it appears that ordering of elements in the SFX response XML and the elements
+// in the escaped XML in <perldata> is not stable.
+// See comment in monday.com ticket "Add sample integration test for OpenURL resolver":
+// https://nyu-lib.monday.com/boards/765008773/pulses/3073776565/posts/1676502313
+// Thus the same request submitted multiple times in less than a second
+// might end up generating responses that differ only in element ordering.  If this
+// in fact is confirmed to be the case, in order for --update-sfx-fake-responses
+// to be useful, we would need to write some utility code to normalize the SFX
+// responses before writing out the fixture files.
 
 func TestMain(m *testing.M) {
 	flag.Parse()
@@ -82,7 +94,7 @@ func TestResponseJSONRoute(t *testing.T) {
 			response := responseRecorder.Result()
 			body, _ := io.ReadAll(response.Body)
 
-			if *update {
+			if *updateGoldenFiles {
 				err = updateGoldenFile(testCase, body)
 				if err != nil {
 					t.Fatalf("Error updating golden file: %s", err)
@@ -107,7 +119,7 @@ func TestResponseJSONRoute(t *testing.T) {
 				actualFile := tmpFile(testCase)
 				diff, err := util.Diff(goldenFile, actualFile)
 				if err != nil {
-					t.Fatalf("Error diff'ing %s vs. %s: %s\n" +
+					t.Fatalf("Error diff'ing %s vs. %s: %s\n"+
 						"Manually diff these files to determine the reasons for test failure.",
 						goldenFile, actualFile, err)
 				}
