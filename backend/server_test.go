@@ -24,7 +24,7 @@ type TestCase struct {
 var updateGoldenFiles = flag.Bool("update-golden-files", false, "update the golden files")
 
 // --update-sfx-fake-responses flag?
-// Ideally we also want to a flag for updating SFX fake response fixture files,
+// Ideally we also want to have a flag for updating SFX fake response fixture files,
 // but it appears that ordering of elements in the SFX response XML and the elements
 // in the escaped XML in <perldata> is not stable.
 // See comment in monday.com ticket "Add sample integration test for OpenURL resolver":
