@@ -1,6 +1,8 @@
 resolve
 coverage.out
 
+.vscode
+
 // Temporary files for diff'ing of actual values against golden files.
 backend/testdata/server/tmp/*
 !backend/testdata/server/tmp/actual/
