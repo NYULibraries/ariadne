@@ -31,3 +31,35 @@
 ul {
   list-style-type: none;
 }
+
+.i-am-centered {
+  margin: 18px 0px 0px 190px;
+  max-width: 600px;
+}
+
+.list-group {
+  border: 1px solid #ddd;
+  border-width: 3px; 
+  border-color:#c7c7c7;
+  border-radius: 10px;
+}
+
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+  background-color:#6c07ae;
+}
+
+.mb-1:hover {
+  text-decoration: underline;
+  color: #6c07ae;
+}
+
+
+h6 {
+  color: #6c07ae;
+}
+
+.mb-1 {
+  text-align: left;
+}
