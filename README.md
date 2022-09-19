@@ -1,5 +1,28 @@
 # OpenURL Resolver
 
+## Frontend
+
+### Usage
+
+Clone the repo and then:
+
+```
+cd frontend && yarn install
+```
+
+Start the client locally:
+
+```
+cd frontend && yarn start
+```
+
+Run in a container:
+
+```
+docker-compose up frontend
+```
+
+
 ## Backend
 
 The OpenURL Resolver backend provides a simple JSON API written in Go that takes
