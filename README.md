@@ -112,6 +112,23 @@ for other methods.
 
 ### Testing
 
+### frontend
+
+Run all tests:
+
+```
+cd frontend/
+yarn test
+```
+
+Run tests in a container:
+
+```
+docker-compose run --rm frontend-test
+```
+
+### backend
+
 Run all tests:
 
 ```
