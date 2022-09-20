@@ -4,8 +4,6 @@ ARG production
 
 ENV INSTALL_PATH /app
 
-RUN npm install pm2@latest -g
-
 COPY package.json yarn.lock /tmp/
 RUN cd /tmp && yarn install $(if [[ ! -z $production ]]; then echo "--production"; fi) \
   && mkdir -p ${INSTALL_PATH} \
