@@ -1,0 +1,62 @@
+{
+    "ctx_obj": [
+        {
+            "ctx_obj_targets": [
+                {
+                    "target": [
+                        {
+                            "target_name": "NEW NAME!!!",
+                            "target_public_name": "PressReader",
+                            "target_url": "\n                    http://proxy.library.nyu.edu/login?url=https://www.pressreader.com/italy/corriere-fiorentino\n                ",
+                            "authentication": "",
+                            "proxy": "yes",
+                            "coverage": [
+                                {
+                                    "coverage_text": [
+                                        {
+                                            "threshold_text": [
+                                                {}
+                                            ],
+                                            "embargo_text": [
+                                                {
+                                                    "embargo_statement": "Most recent 3 month(s)\n                                available\n                            "
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "embargo": {
+                                        "availability": "available",
+                                        "month": "3",
+                                        "days": "90"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "target_name": "ASK_A_LIBRARIAN_LCL",
+                            "target_public_name": "Ask a Librarian",
+                            "target_url": "http://library.nyu.edu/ask/",
+                            "authentication": "",
+                            "proxy": "no",
+                            "coverage": [
+                                {
+                                    "coverage_text": [
+                                        {
+                                            "threshold_text": [
+                                                {}
+                                            ],
+                                            "embargo_text": [
+                                                {}
+                                            ]
+                                        }
+                                    ],
+                                    "embargo": {}
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
