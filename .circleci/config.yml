@@ -1,0 +1,72 @@
+version: 2.1
+
+auth_quay: &auth_quay
+    run:
+        name: Authenticate Quay
+        command: |
+            docker login -u "$QUAY_USERNAME" -p "$QUAY_PASSWORD" quay.io
+
+docker-defaults: &docker-defaults
+    docker:
+        -   image: quay.io/nyulibraries/circleci_docker:20.10.6-dc-1.29.1-0
+    working_directory: ~/app
+
+jobs:
+    backend-test:
+        <<: *docker-defaults
+        steps:
+            - checkout
+            - setup_remote_docker
+            - run:
+                  name: Build backend-test
+                  command: |
+                      docker-compose build backend-test
+            - run:
+                  name: Check formatting and coding style
+                  command: |
+                      docker-compose run backend-test gofmt -l .
+                      test -z $(docker-compose run backend-test gofmt -l .)
+                      docker-compose run backend-test golint -set_exit_status
+            - run:
+                  name: Run tests
+                  command: |
+                      docker-compose run backend-test
+            - <<: *auth_quay
+            - run:
+                name: Push images to Quay
+                command: |
+                    export BRANCH_NO_SLASH=${CIRCLE_BRANCH//\//_}
+                    docker tag resolve quay.io/nyulibraries/resolve:latest
+                    docker tag resolve quay.io/nyulibraries/resolve:${BRANCH_NO_SLASH}
+                    docker tag resolve quay.io/nyulibraries/resolve:${BRANCH_NO_SLASH}-${CIRCLE_SHA1}
+                    docker push quay.io/nyulibraries/resolve:latest
+                    docker push quay.io/nyulibraries/resolve:${BRANCH_NO_SLASH}
+                    docker push quay.io/nyulibraries/resolve:${BRANCH_NO_SLASH}-${CIRCLE_SHA1}
+    backend-build:
+        <<: *docker-defaults
+        steps:
+            - checkout
+            - setup_remote_docker
+            - run:
+                name: Build backend
+                command: |
+                    docker-compose build backend
+            - <<: *auth_quay
+            - run:
+                name: Push images to Quay
+                command: |
+                    export BRANCH_NO_SLASH=${CIRCLE_BRANCH//\//_}
+                    docker tag resolve quay.io/nyulibraries/resolve:latest
+                    docker tag resolve quay.io/nyulibraries/resolve:${BRANCH_NO_SLASH}
+                    docker tag resolve quay.io/nyulibraries/resolve:${BRANCH_NO_SLASH}-${CIRCLE_SHA1}
+                    docker push quay.io/nyulibraries/resolve:latest
+                    docker push quay.io/nyulibraries/resolve:${BRANCH_NO_SLASH}
+                    docker push quay.io/nyulibraries/resolve:${BRANCH_NO_SLASH}-${CIRCLE_SHA1}
+
+workflows:
+    backend-test-build-push-to-quay:
+        jobs:
+            - backend-test
+            - backend-build:
+                requires:
+                    - backend-test
