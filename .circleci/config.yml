@@ -11,6 +11,22 @@ docker-defaults: &docker-defaults
         -   image: quay.io/nyulibraries/circleci_docker:20.10.6-dc-1.29.1-0
     working_directory: ~/app
 
+commands:
+    tag-images-and-push-to-quay:
+        description: Tag "latest", git branch, and git branch + git commit SHA1
+        steps:
+            - <<: *auth_quay
+            - run:
+                  name: Tag images and push to Quay
+                  command: |
+                      export BRANCH_NO_SLASH=${CIRCLE_BRANCH//\//_}
+                      docker tag resolve quay.io/nyulibraries/resolve:latest
+                      docker tag resolve quay.io/nyulibraries/resolve:${BRANCH_NO_SLASH}
+                      docker tag resolve quay.io/nyulibraries/resolve:${BRANCH_NO_SLASH}-${CIRCLE_SHA1}
+                      docker push quay.io/nyulibraries/resolve:latest
+                      docker push quay.io/nyulibraries/resolve:${BRANCH_NO_SLASH}
+                      docker push quay.io/nyulibraries/resolve:${BRANCH_NO_SLASH}-${CIRCLE_SHA1}
+
 jobs:
     backend-test:
         <<: *docker-defaults
@@ -31,17 +47,8 @@ jobs:
                   name: Run tests
                   command: |
                       docker-compose run backend-test
-            - <<: *auth_quay
-            - run:
-                name: Push images to Quay
-                command: |
-                    export BRANCH_NO_SLASH=${CIRCLE_BRANCH//\//_}
-                    docker tag resolve quay.io/nyulibraries/resolve:latest
-                    docker tag resolve quay.io/nyulibraries/resolve:${BRANCH_NO_SLASH}
-                    docker tag resolve quay.io/nyulibraries/resolve:${BRANCH_NO_SLASH}-${CIRCLE_SHA1}
-                    docker push quay.io/nyulibraries/resolve:latest
-                    docker push quay.io/nyulibraries/resolve:${BRANCH_NO_SLASH}
-                    docker push quay.io/nyulibraries/resolve:${BRANCH_NO_SLASH}-${CIRCLE_SHA1}
+            - tag-images-and-push-to-quay
+
     backend-build:
         <<: *docker-defaults
         steps:
@@ -51,17 +58,7 @@ jobs:
                 name: Build backend
                 command: |
                     docker-compose build backend
-            - <<: *auth_quay
-            - run:
-                name: Push images to Quay
-                command: |
-                    export BRANCH_NO_SLASH=${CIRCLE_BRANCH//\//_}
-                    docker tag resolve quay.io/nyulibraries/resolve:latest
-                    docker tag resolve quay.io/nyulibraries/resolve:${BRANCH_NO_SLASH}
-                    docker tag resolve quay.io/nyulibraries/resolve:${BRANCH_NO_SLASH}-${CIRCLE_SHA1}
-                    docker push quay.io/nyulibraries/resolve:latest
-                    docker push quay.io/nyulibraries/resolve:${BRANCH_NO_SLASH}
-                    docker push quay.io/nyulibraries/resolve:${BRANCH_NO_SLASH}-${CIRCLE_SHA1}
+            - tag-images-and-push-to-quay
 
 workflows:
     backend-test-build-push-to-quay:
