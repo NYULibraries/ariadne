@@ -60,7 +60,7 @@ jobs:
 #      - tag-images-and-push-to-quay
 
 workflows:
-  backend-test-build-push-to-quay:
+  backend-test-and-build:
     jobs:
       - backend-test
       - backend-build:
