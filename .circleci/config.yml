@@ -46,7 +46,7 @@ jobs:
           name: Run tests
           command: |
             docker-compose run backend-test
-      - tag-images-and-push-to-quay
+#      - tag-images-and-push-to-quay
 
   backend-build:
     <<: *docker-defaults
@@ -57,7 +57,7 @@ jobs:
           name: Build backend service
           command: |
             docker-compose build backend
-      - tag-images-and-push-to-quay
+#      - tag-images-and-push-to-quay
 
 workflows:
   backend-test-build-push-to-quay:
