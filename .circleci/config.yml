@@ -46,6 +46,7 @@ jobs:
           name: Run tests
           command: |
             docker-compose run backend-test
+# Don't tag and push to Quay until we decide upon a (semi-)permanent repository name.
 #      - tag-images-and-push-to-quay
 
   backend-build:
@@ -57,6 +58,7 @@ jobs:
           name: Build backend service
           command: |
             docker-compose build backend
+# Don't tag and push to Quay until we decide upon a (semi-)permanent repository name.
 #      - tag-images-and-push-to-quay
 
 workflows:
