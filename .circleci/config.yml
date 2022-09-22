@@ -42,7 +42,6 @@ jobs:
                   command: |
                       docker-compose run backend-test gofmt -l .
                       test -z $(docker-compose run backend-test gofmt -l .)
-                      docker-compose run backend-test golint -set_exit_status
             - run:
                   name: Run tests
                   command: |
