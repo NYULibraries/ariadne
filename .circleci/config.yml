@@ -38,7 +38,7 @@ jobs:
           command: |
             docker-compose build backend-test
       - run:
-          name: Check formatting and coding style
+          name: Check formatting
           command: |
             docker-compose run backend-test gofmt -l .
             test -z $(docker-compose run backend-test gofmt -l .)
