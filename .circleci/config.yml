@@ -34,7 +34,7 @@ jobs:
             - checkout
             - setup_remote_docker
             - run:
-                  name: Build backend-test
+                  name: Build backend-test service
                   command: |
                       docker-compose build backend-test
             - run:
@@ -54,7 +54,7 @@ jobs:
             - checkout
             - setup_remote_docker
             - run:
-                name: Build backend
+                name: Build backend service
                 command: |
                     docker-compose build backend
             - tag-images-and-push-to-quay
