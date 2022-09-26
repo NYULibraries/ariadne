@@ -39,8 +39,8 @@ services:
       # See file header comment in Dockerfile.debug-and-test
       dockerfile: Dockerfile.debug-and-test
     command: ["go","test","-cover","./..."]
-    volumes:
-      - ./backend:/app
+   # volumes:
+   #   - ./backend:/app
 
   backend-test-coverage:
     build:
@@ -53,8 +53,8 @@ services:
         go test -coverprofile=coverage.out ./... &&
         go tool cover -func=coverage.out
         # go tool cover -html=coverage.out
-    volumes:
-      - ./backend:/app
+    # volumes:
+    #  - ./backend:/app
 
 networks:
   resolve-net:
