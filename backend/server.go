@@ -44,6 +44,7 @@ func ResolveJSON(w http.ResponseWriter, r *http.Request) {
 	}
 
 	fmt.Fprintln(w, response)
+
 }
 
 func handleError(err error, w http.ResponseWriter, message string) {
