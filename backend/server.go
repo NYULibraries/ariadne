@@ -27,6 +27,8 @@ func NewRouter() *http.ServeMux {
 // Take an incoming Querystring, convert to context object XML, send a post to SFX
 // and write the response JSON
 func ResolveJSON(w http.ResponseWriter, r *http.Request) {
+	enableCors(&w)
+
 	w.Header().Add("Content-Type", "application/json")
 
 	sfxContext, err := sfx.NewSFXContextObjectRequest(r.URL.Query())
@@ -48,4 +50,8 @@ func handleError(err error, w http.ResponseWriter, message string) {
 	log.Println(err)
 	w.WriteHeader(http.StatusBadRequest)
 	json.NewEncoder(w).Encode(map[string]interface{}{"status": "error", "message": message})
+}
+
+func enableCors(w *http.ResponseWriter) {
+	(*w).Header().Set("Access-Control-Allow-Origin", "*")
 }
