@@ -33,6 +33,7 @@ ul {
 }
 
 .i-am-centered {
+  display: flex;
   margin: 18px 0px 0px 190px;
   max-width: 600px;
 }
@@ -43,6 +44,11 @@ ul {
   border-color:#c7c7c7;
   border-radius: 10px;
 }
+
+.ask-librarian {
+  margin: 170px -56px 0px 50px;
+}
+
 
 .navbar {
   margin-bottom: 0;
