@@ -52,12 +52,12 @@ jobs:
             if [[ "$gofmt_result" =~ [[:alnum:]] ]]
             then
                 echo -e "\n\ngofmt check fail:\n$gofmt_result"
-                check_formatting_exit_status=1
+                exit_status=1
             else
-                check_formatting_exit_status=0
+                exit_status=0
             fi
 
-            exit $check_formatting_exit_status
+            exit $exit_status
       - run:
           name: Run tests
           command: |
