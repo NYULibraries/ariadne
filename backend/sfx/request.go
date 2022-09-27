@@ -1,6 +1,6 @@
 package sfx
-
-import (
+# TODO: Remove this intentional violation of gofmt rules
+        import (
 	"bytes"
 	_ "embed"
 	"encoding/json"

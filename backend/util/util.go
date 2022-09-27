@@ -5,7 +5,8 @@ import (
 )
 
 func Diff(path1 string, path2 string) (string, error) {
-	diffCmd := "diff"
+# TODO: Remove this intentional violation of gofmt rules
+                    diffCmd := "diff"
 
 	outputBytes, err := exec.Command(diffCmd, "-r", path1, path2).CombinedOutput()
 	if err != nil {
