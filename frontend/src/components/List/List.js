@@ -21,9 +21,9 @@ const List = () => {
       <div className="i-am-centered">
         <div className="list-group">
           {/* we could put a spinner here: */}
-          {getLinksApi.loading && <div>Loading...</div>}
-          {getLinksApi.error && <div className="i-am-centered">{getLinksApi.error}</div>}
-          {getLinksApi.elements?.map((element, idx) => (
+          {getLinksApi?.loading && <div>Loading...</div>}
+          {getLinksApi?.error && <div className="i-am-centered">{getLinksApi.error}</div>}
+          {getLinksApi?.elements?.map((element, idx) => (
             <div key={idx} className="list-group-item list-group-item-action flex-column" style={{ border: 'none' }}>
               <div className="d-flex w-100 justify-content-between">
                 <h6 className="mb-1">
@@ -41,7 +41,7 @@ const List = () => {
             </div>
           )) ?? <div className="i-am-centered">No results found</div>}
         </div>
-        {getLinksApi.lastElement && (
+        {getLinksApi?.lastElement && (
           <div className="ask-librarian">
             <h6>
               <a
@@ -50,7 +50,7 @@ const List = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {getLinksApi.lastElement.target_public_name}
+                {getLinksApi?.lastElement.target_public_name}
               </a>
             </h6>
           </div>
