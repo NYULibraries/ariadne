@@ -40,7 +40,7 @@ jobs:
       - run:
           name: Check formatting
           command: |
-            gofmt_result="$( docker-compose run backend-test /bin/bash -c 'export APP_PATH=/tmp/; if [[ ! -z $( find $APP_PATH -name "*.go\
+            gofmt_result="$( docker-compose run backend-test /bin/bash -c 'export APP_PATH=/app/; if [[ ! -z $( find $APP_PATH -name "*.go\
             " ) ]]; then gofmt -l $APP_PATH; else echo >&2 "No *.go files found in path: $APP_PATH"; fi' )"
 
             # Even if `gofmt -l $APP_PATH` returns no paths, there still seem to
