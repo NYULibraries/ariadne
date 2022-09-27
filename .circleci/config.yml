@@ -40,7 +40,7 @@ jobs:
       - run:
           name: Check formatting
           command: |
-            result="$( docker-compose run backend-test /bin/bash -c 'export APP_PATH=/tmp/; if [[ ! -z $( find $APP_PATH -name "*.go" ) ]]; then gofmt -l $APP_PATH; else echo >&2 "No *.go files found in path: $APP_PATH"; fi' )"
+            result="$( docker-compose run backend-test /bin/bash -c 'export APP_PATH=/app/; if [[ ! -z $( find $APP_PATH -name "*.go" ) ]]; then gofmt -l $APP_PATH; else echo >&2 "No *.go files found in path: $APP_PATH"; fi' )"
             echo -e "\n$result\n"
             test -z "$result"
       - run:
