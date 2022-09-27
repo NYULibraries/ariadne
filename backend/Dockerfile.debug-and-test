@@ -18,6 +18,8 @@ RUN go mod tidy && \
     go install -v ./... && \
     go build -gcflags="all=-N -l" -o resolve && \
     go clean -modcache && \
+    # TODO: Re-enable this after finishing CircleCI configuration. \
+    #       This was temporarily disabled to speed up builds for testing and debugging. \
     go install -v github.com/go-delve/delve/cmd/dlv@v1.9.0 && \
     mkdir tools && \
     cp /go/bin/dlv tools/
