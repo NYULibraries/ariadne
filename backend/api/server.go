@@ -10,8 +10,7 @@ import (
 
 // Healthcheck returns a successful response, that's it
 func Healthcheck(w http.ResponseWriter, r *http.Request) {
-// TODO: Remove this intentional violation of gofmt rules
-w.Header().Add("Content-Type", "application/json")
+	w.Header().Add("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(map[string]interface{}{"status": "ok"})
 }
 

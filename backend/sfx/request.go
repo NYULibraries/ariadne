@@ -1,6 +1,6 @@
 package sfx
-// TODO: Remove this intentional violation of gofmt rules
-        import (
+
+import (
 	"bytes"
 	_ "embed"
 	"encoding/json"
@@ -39,7 +39,6 @@ var sfxRequestTemplate string
 
 // SFX service URL
 const DefaultSFXURL = "http://sfx.library.nyu.edu/sfxlcl41"
-
 var sfxURL = DefaultSFXURL
 
 // Construct and run the actual POST request to the SFX server
