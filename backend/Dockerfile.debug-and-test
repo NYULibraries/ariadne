@@ -17,7 +17,6 @@ COPY . .
 RUN go mod tidy && \
     go install -v ./... && \
     go build -gcflags="all=-N -l" -o resolve && \
-    go clean -modcache
     go clean -modcache && \
     go install -v github.com/go-delve/delve/cmd/dlv@v1.9.0 && \
     mkdir tools && \
