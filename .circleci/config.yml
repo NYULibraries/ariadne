@@ -41,7 +41,7 @@ jobs:
           name: Check formatting
           command: |
             result="$( docker-compose run backend-test /bin/bash -c 'export APP_PATH=/tmp/; if [[ ! -z $( find $APP_PATH -name "*.go" ) ]]; then gofmt -l $APP_PATH; else echo >&2 "No *.go files found in path: $APP_PATH"; fi' )"
-            echo -e "\n\nFiles with formatting different from gofmt's:\n$result"
+            echo -e "\n\ngofmt check failed:\n$result"
             test -z "$result"
       - run:
           name: Run tests
