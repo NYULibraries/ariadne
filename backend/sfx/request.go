@@ -39,6 +39,7 @@ var sfxRequestTemplate string
 
 // SFX service URL
 const DefaultSFXURL = "http://sfx.library.nyu.edu/sfxlcl41"
+
 var sfxURL = DefaultSFXURL
 
 // Construct and run the actual POST request to the SFX server
