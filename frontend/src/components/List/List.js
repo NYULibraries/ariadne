@@ -39,7 +39,7 @@ const List = () => {
                 <small>{element.coverage[0].coverage_text[0].threshold_text[0].coverage_statement}</small>
               </div>
             </div>
-          ))}
+          )) ?? <div className="i-am-centered">No results found</div>}
         </div>
         {getLinksApi.lastElement && (
           <div className="ask-librarian">
