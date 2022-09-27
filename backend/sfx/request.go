@@ -1,5 +1,5 @@
 package sfx
-# TODO: Remove this intentional violation of gofmt rules
+// TODO: Remove this intentional violation of gofmt rules
         import (
 	"bytes"
 	_ "embed"
