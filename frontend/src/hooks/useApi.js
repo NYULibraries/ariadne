@@ -5,8 +5,10 @@ const useApi = () => {
   const [elements, setElements] = useState([]);
   const [error, setError] = useState(null);
   const [lastElement, setLastElement] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const request = async () => {
+    setLoading(true);
     try {
       const response = await getLinks();
       const jsonData = await response.data;
@@ -15,10 +17,12 @@ const useApi = () => {
       setLastElement(arrOfLinks.at(-1));
     } catch (error) {
       setError(error.message || 'Something went wrong');
+    } finally {
+      setLoading(false);
     }
   };
 
-  return { elements, request, lastElement, error };
+  return { elements, request, lastElement, error, loading };
 };
 
 export default useApi;
