@@ -44,7 +44,7 @@ jobs:
             " ) ]]; then gofmt -l $APP_PATH; else echo >&2 "No *.go files found in path: $APP_PATH"; fi' )"
 
             # Strange non-printing characters occur in gofmt_result in CircleCI                                                            
-            gofmt_result_cleaned=$( echo $gofmt_result | tr -cd '\11\12\15\40-\176' )
+            gofmt_result_cleaned=''
 
             if [ -z "$gofmt_result_cleaned" ]
             then
