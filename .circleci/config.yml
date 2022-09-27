@@ -43,15 +43,12 @@ jobs:
             gofmt_result="$( docker-compose run backend-test /bin/bash -c 'export APP_PATH=/app/; if [[ ! -z $( find $APP_PATH -name "*.go\
             " ) ]]; then gofmt -l $APP_PATH; else echo >&2 "No *.go files found in path: $APP_PATH"; fi' )"
 
-            # Strange non-printing characters occur in gofmt_result in CircleCI                                                            
-            gofmt_result_cleaned=''
-
-            if [ -z "$gofmt_result_cleaned" ]
+            if [[ "$gofmt_result" =~ [[:alnum:]] ]]
             then
-                check_formatting_exit_status=0
-            else
-                echo -e "gofmt check fail:\n$gofmt_result_cleaned"
+                echo -e "gofmt check fail:\n$gofmt_result"
                 check_formatting_exit_status=1
+            else
+                check_formatting_exit_status=0
             fi
 
             exit $check_formatting_exit_status
