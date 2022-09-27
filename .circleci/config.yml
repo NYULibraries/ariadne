@@ -49,7 +49,7 @@ jobs:
             # characters.
             if [[ "$gofmt_result" =~ [[:alnum:]] ]]
             then
-                echo -e "gofmt check fail:\n$gofmt_result"
+                echo -e "\n\ngofmt check fail:\n$gofmt_result"
                 check_formatting_exit_status=1
             else
                 check_formatting_exit_status=0
