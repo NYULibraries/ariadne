@@ -1,6 +1,6 @@
 package sfx
 
-       import (
+import (
 	"bytes"
 	_ "embed"
 	"encoding/json"
