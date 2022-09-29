@@ -2,6 +2,7 @@ resolve
 coverage.out
 
 .vscode
+.DS_store
 
 // Temporary files for diff'ing of actual values against golden files.
 backend/testdata/server/tmp/*
