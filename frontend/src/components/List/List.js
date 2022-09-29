@@ -25,7 +25,7 @@ const List = () => {
           {getLinksApi?.error && <div className="i-am-centered">{getLinksApi.error}</div>}
           {getLinksApi?.elements?.map((element, idx) => (
             <div key={idx} className="list-group-item list-group-item-action flex-column" style={{ border: 'none' }}>
-              <div className="d-flex w-100 justify-content-between">
+              <div className="row">
                 <h6 className="mb-1">
                   <a
                     style={{ textDecoration: 'none', color: '#6c07ae' }}
