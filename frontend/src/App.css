@@ -69,3 +69,7 @@ h6 {
 .mb-1 {
   text-align: left;
 }
+
+.image:hover {
+  opacity: 0.8;
+}
