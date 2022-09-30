@@ -8,8 +8,7 @@
 
 .i-am-centered {
   display: flex;
-  margin: 18px 0px 0px 190px;
-  max-width: 800px;
+  margin: 18px 0px 0px 118px;
 }
 
 .list-group {
@@ -17,6 +16,7 @@
   border-width: 3px; 
   border-color:#c7c7c7;
   border-radius: 10px;
+  max-width: 800px;
 }
 
 .row a:hover {
@@ -52,6 +52,11 @@ h6 {
   color: #6c07ae;
 }
 
+
+.ask-librarian{
+  white-space: nowrap;
+  margin: 220px 74px 0px 190px;
+}
 /* 
   Styles for the Banner component
 */
