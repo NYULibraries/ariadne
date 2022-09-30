@@ -31,7 +31,7 @@ const List = () => {
                     {element.target_public_name}
                   </a>
                 </h6>
-                <small>{element.coverage[0].coverage_text[0].threshold_text[0].coverage_statement}</small>
+                <small>{element.coverage[0].coverage_text[0].threshold_text[0].coverage_statement.join('. ')}</small>
               </div>
             </div>
           )) ?? <div className="i-am-centered">No results found</div>}
