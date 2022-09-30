@@ -150,7 +150,7 @@ Update test golden files:
 
 ```
 cd backend/
-go test -update ./...
+go test --update-golden-files ./...
 # Files ./testdata/server/golden/*.json have been updated. 
 ```
 

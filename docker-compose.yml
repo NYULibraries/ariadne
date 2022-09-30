@@ -41,7 +41,7 @@ services:
       dockerfile: Dockerfile.debug-and-test
     # Dockerfile.debug-and-test is primarily a test container.  We need to override
     # the `go test...` CMD, running delve instead.
-    command: [ "./util/dlv", "--listen=:2345", "--headless=true", "--api-version=2", "--accept-multiclient", "exec", "./resolve" ]
+    command: [ "./tools/dlv", "--listen=:2345", "--headless=true", "--api-version=2", "--accept-multiclient", "exec", "./resolve" ]
     cap_add:
       - SYS_PTRACE
     ports:
@@ -68,7 +68,7 @@ services:
   backend-test-coverage:
     build:
       context: backend/
-      dockerfile: Dockerfile.test
+      dockerfile: Dockerfile.debug-and-test
     command:
       - /bin/sh
       - -c
