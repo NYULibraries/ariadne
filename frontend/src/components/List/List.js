@@ -12,7 +12,7 @@ const List = () => {
 
   return (
     <>
-      <div className="jumbotron" style={{ backgroundColor: '#F7EDA3' }}>
+      <div className="jumbotron">
         <div className="container text-center">
           <p>Displaying search results...</p>
           <p>Note: Alternate titles might have matched your search terms</p>
@@ -26,13 +26,8 @@ const List = () => {
           {getLinksApi?.elements?.map((element, idx) => (
             <div key={idx} className="list-group-item list-group-item-action flex-column" style={{ border: 'none' }}>
               <div className="row">
-                <h6 className="mb-1">
-                  <a
-                    style={{ textDecoration: 'none', color: '#6c07ae' }}
-                    href={element.target_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                <h6>
+                  <a href={element.target_url} target="_blank" rel="noopener noreferrer">
                     {element.target_public_name}
                   </a>
                 </h6>
@@ -44,12 +39,7 @@ const List = () => {
         {getLinksApi?.lastElement && (
           <div className="ask-librarian">
             <h6>
-              <a
-                style={{ textDecoration: 'none', color: '#6c07ae' }}
-                href={getLinksApi.lastElement.target_url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href={getLinksApi.lastElement.target_url} target="_blank" rel="noopener noreferrer">
                 {getLinksApi?.lastElement.target_public_name}
               </a>
             </h6>

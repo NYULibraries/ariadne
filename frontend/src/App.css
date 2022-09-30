@@ -2,6 +2,10 @@
   Styles for the List component
 */
 
+.jumbotron {
+  background-color: #F7EDA3;
+}
+
 .i-am-centered {
   display: flex;
   margin: 18px 0px 0px 190px;
@@ -15,13 +19,14 @@
   border-radius: 10px;
 }
 
-.mb-1:hover {
+.row a:hover {
   text-decoration: underline;
   color: #6c07ae;
 }
 
-.mb-1 {
-  text-align: left;
+.row a {
+  text-decoration: none;
+  color: #6c07ae ;
 }
 
 .ask-librarian {
@@ -33,16 +38,30 @@
   text-decoration: underline;
 }
 
+.ask-librarian a {
+  text-decoration: none;
+  color: #6c07ae;
+}
+
+.ask-librarian a:hover {
+  text-decoration: underline;
+  color: #6c07ae;
+}
+
 h6 {
   color: #6c07ae;
 }
 
-
 /* 
   Styles for the Banner component
 */
-.image:hover {
+
+.image {
   opacity: 0.8;
+}
+
+.image:hover {
+  opacity: 1;
 }
 
 .navbar {
