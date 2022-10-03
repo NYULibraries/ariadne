@@ -10,8 +10,8 @@ services:
       - resolve-net
     depends_on:
       - backend
-    volumes:
-      - ./frontend:/app
+    #volumes:
+    #  - ./frontend:/app
 
   frontend-test:
     build:
