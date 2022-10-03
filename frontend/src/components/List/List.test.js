@@ -59,3 +59,9 @@ test('Loading... no longer present in the DOM after loading data', async () => {
   const { getByText } = render(<List />);
   await waitForElementToBeRemoved(() => getByText(/Loading/i));
 });
+
+test(' Successfully connects to backend', async () => {
+  render(<List />);
+  const networkError = await waitFor(() => screen.getByText(/Network error/i));
+  expect(networkError).not.toBeInTheDocument();
+});
