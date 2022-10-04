@@ -1,32 +1,35 @@
 version: "3.9"
 
+x-build-frontend: &x-build-frontend
+  image: resolve_frontend
+  build:
+    context: frontend/
+    cache_from:
+      - resolve_frontend
+  networks:
+    - resolve-net
+  depends_on:
+    - backend
+
+x-development-volumes-frontend: &x-development-volumes-frontend
+  volumes:
+    - ./frontend:/app
+
 services:
   frontend:
-    build:
-      context: frontend/
+    <<: *x-build-frontend
     ports:
       - "3000:3000"
-    networks:
-      - resolve-net
-    depends_on:
-      - backend
     environment:
       - REACT_APP_API_URL=http://localhost:8080/v0/
-    #volumes:
-    #  - ./frontend:/app
+    #<<: *x-development-volumes-frontend
 
   frontend-test:
-    build:
-      context: frontend/
+    <<: *x-build-frontend
     command: yarn test
-    networks:
-      - resolve-net
-    depends_on:
-      - backend
     environment:
       - REACT_APP_API_URL=http://backend:8080/v0/
-    #volumes:
-    #  - ./frontend:/app
+    #<<: *x-development-volumes-frontend
 
   backend:
     build:
