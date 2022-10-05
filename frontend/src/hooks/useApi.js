@@ -16,7 +16,7 @@ const useApi = () => {
       setElements(arrOfLinks.slice(0, -1));
       setLastElement(arrOfLinks.at(-1));
     } catch (error) {
-      setError(error.message || 'Something went wrong');
+      setError('Something went wrong');
     } finally {
       setLoading(false);
     }
