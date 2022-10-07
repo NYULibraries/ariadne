@@ -1,12 +1,14 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect } from 'react';
+import { getCoverageStatement } from '../../aux/helpers';
 import useApi from '../../hooks/useApi';
 
 const List = () => {
-  const getLinksApi = useApi();
+  const backendClient = useApi();
 
   useEffect(() => {
-    getLinksApi.request();
+    backendClient.fetchResource();
+    // We want to fetch the resource only once when component mounts, so we pass an empty array as a second argument
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -20,27 +22,28 @@ const List = () => {
       </div>
       <div className="i-am-centered">
         <div className="list-group">
-          {/* we could put a spinner here: */}
-          {getLinksApi?.loading && <div>Loading...</div>}
-          {getLinksApi?.error && <div className="i-am-centered">{getLinksApi.error}</div>}
-          {getLinksApi?.elements?.map((element, idx) => (
+          {/* TODO: we could put a spinner here: */}
+          {backendClient?.loading && <div>Loading...</div>}
+          {backendClient?.error && <div className="i-am-centered">{backendClient.error}</div>}
+          {backendClient?.resource?.map((link, idx) => (
             <div key={idx} className="list-group-item list-group-item-action flex-column" style={{ border: 'none' }}>
               <div className="row">
                 <h6>
-                  <a href={element.target_url} target="_blank" rel="noopener noreferrer">
-                    {element.target_public_name}
+                  <a href={link.target_url} target="_blank" rel="noopener noreferrer">
+                    {link.target_public_name}
                   </a>
                 </h6>
-                <small>{element.coverage[0].coverage_text[0].threshold_text[0].coverage_statement.join('. ')}</small>
+                {/* TODO: add a getCoverageStatement helper method */}
+                <small>{getCoverageStatement(link)}</small>
               </div>
             </div>
           )) ?? <div className="i-am-centered">No results found</div>}
         </div>
-        {getLinksApi?.lastElement && (
+        {backendClient?.resourceLastElement && (
           <div className="ask-librarian">
             <h6>
-              <a href={getLinksApi.lastElement.target_url} target="_blank" rel="noopener noreferrer">
-                {getLinksApi?.lastElement.target_public_name}
+              <a href={backendClient?.resourceLastElement?.target_url} target="_blank" rel="noopener noreferrer">
+                {backendClient?.resourceLastElement?.target_public_name}
               </a>
             </h6>
           </div>
