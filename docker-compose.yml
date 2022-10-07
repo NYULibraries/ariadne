@@ -23,14 +23,14 @@ services:
       - "3000:3000"
     environment:
       - REACT_APP_BACKEND_URL=http://localhost:8080/v0/
-    <<: *x-development-volumes-frontend
+    # <<: *x-development-volumes-frontend
 
   frontend-test:
     <<: *x-build-frontend
     command: yarn test
     environment:
       - REACT_APP_API_URL=http://backend:8080/v0/
-    <<: *x-development-volumes-frontend
+    # <<: *x-development-volumes-frontend
 
   backend:
     build:
