@@ -1,6 +1,5 @@
 const getLinks = (jsonData) => {
-  const result = jsonData.ctx_obj[0].ctx_obj_targets[0].target;
-  return result;
+  return jsonData.ctx_obj[0].ctx_obj_targets[0].target;
 };
 
 const getCoverageStatement = (link) => {
