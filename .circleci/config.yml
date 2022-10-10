@@ -37,18 +37,18 @@ jobs:
           name: Build frontend-test service
           command:  |
             docker-compose build frontend-test
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            - v1-dependencies-
-      - run:
-          name: Install dependencies
-          command: |
-            yarn install
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+      # - restore_cache:
+      #     keys:
+      #       - v1-dependencies-{{ checksum "package.json" }}
+      #       - v1-dependencies-
+      # - run:
+      #     name: Install dependencies
+      #     command: |
+      #       yarn install
+      # - save_cache:
+      #     paths:
+      #       - node_modules
+      #     key: v1-dependencies-{{ checksum "package.json" }}
       - run:
           name: Run tests
           command: |
