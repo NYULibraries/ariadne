@@ -114,6 +114,13 @@ jobs:
 #      - tag-images-and-push-to-quay
 
 workflows:
+  version: 2.1
+  frontend-test-and-build:
+    jobs:
+      - frontend-test
+      - frontend-build:
+          requires:
+            - frontend-test
   backend-test-and-build:
     jobs:
       - backend-test
