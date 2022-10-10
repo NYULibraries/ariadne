@@ -28,6 +28,42 @@ commands:
             docker push quay.io/nyulibraries/resolve:${BRANCH_NO_SLASH}-${CIRCLE_SHA1}
 
 jobs:
+  frontend-test:
+    <<: *docker-defaults
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Build frontend-test service
+          command:  |
+            docker-compose build frontend-test
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+      - run:
+          name: Install dependencies
+          command: |
+            yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run:
+          name: Run tests
+          command: |
+            docker-compose run frontend-test
+
+  frontend-build:
+    <<: *docker-defaults
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Build frontend service
+          command:  |
+            docker-compose build frontend
+
   backend-test:
     <<: *docker-defaults
     steps:
