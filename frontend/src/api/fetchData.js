@@ -5,4 +5,4 @@ const query =
 
 const fetchData = () => apiClient.get('/' + query);
 
-export default fetchData;
+export default { fetchData };

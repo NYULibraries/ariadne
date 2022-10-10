@@ -2,9 +2,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect } from 'react';
 import { getCoverageStatement } from '../../aux/helpers';
 import useApi from '../../hooks/useApi';
+import linksApi from '../../api/fetchData';
 
 const List = () => {
-  const backendClient = useApi();
+  const backendClient = useApi(linksApi.fetchData);
 
   useEffect(() => {
     backendClient.fetchResource();
