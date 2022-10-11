@@ -1,5 +1,38 @@
 # OpenURL Resolver
 
+## Frontend
+
+### Usage
+
+Clone the repo and then:
+
+```
+cd frontend && yarn install
+```
+
+Start the client locally:
+
+```
+cd frontend && yarn start
+```
+
+Run in a container:
+
+```
+docker-compose up frontend
+```
+
+### Environment Variables
+
+In order for the app to function correctly, a user must set up their own environment variables.
+
+Create a .env file in the frontend directory that includes:
+
+```
+REACT_APP_API_URL= // your backend URL
+```
+
+
 ## Backend
 
 The OpenURL Resolver backend provides a simple JSON API written in Go that takes
@@ -88,6 +121,23 @@ See [Keep a container running in compose \#1926](https://github.com/docker/compo
 for other methods.
 
 ### Testing
+
+### frontend
+
+Run all tests:
+
+```
+cd frontend/
+yarn test
+```
+
+Run tests in a container:
+
+```
+docker-compose run --rm frontend-test
+```
+
+### backend
 
 Run all tests:
 
