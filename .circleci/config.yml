@@ -28,6 +28,30 @@ commands:
             docker push quay.io/nyulibraries/resolve:${BRANCH_NO_SLASH}-${CIRCLE_SHA1}
 
 jobs:
+  frontend-test:
+    <<: *docker-defaults
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Build frontend-test service
+          command:  |
+            docker-compose build frontend-test
+      - run:
+          name: Run tests
+          command: |
+            docker-compose run frontend-test
+
+  frontend-build:
+    <<: *docker-defaults
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Build frontend service
+          command:  |
+            docker-compose build frontend
+
   backend-test:
     <<: *docker-defaults
     steps:
@@ -78,6 +102,13 @@ jobs:
 #      - tag-images-and-push-to-quay
 
 workflows:
+  version: 2.1
+  frontend-test-and-build:
+    jobs:
+      - frontend-test
+      - frontend-build:
+          requires:
+            - frontend-test
   backend-test-and-build:
     jobs:
       - backend-test
