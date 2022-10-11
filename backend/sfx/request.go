@@ -49,6 +49,7 @@ func (c SFXContextObjectRequest) Request() (body string, err error) {
 	params := url.Values{}
 	params.Add("url_ctx_fmt", "info:ofi/fmt:xml:xsd:ctx")
 	params.Add("sfx.response_type", "multi_obj_xml")
+	// Do we always need these parameters? Umlaut adds them only in certain conditions: https://github.com/team-umlaut/umlaut/blob/master/app/service_adaptors/sfx.rb#L145-L153
 	params.Add("sfx.show_availability", "1")
 	params.Add("sfx.ignore_date_threshold", "1")
 	params.Add("sfx.doi_url", "http://dx.doi.org")
@@ -125,6 +126,7 @@ func SetSFXURL(dependencyInjectedURL string) {
 }
 
 // A list of the valid genres as defined by the OpenURL spec
+// Is this correct? See genres list on NISO spec page 59: https://groups.niso.org/higherlogic/ws/public/download/14833/z39_88_2004_r2010.pdf
 func genresList() (genresList map[string]bool) {
 	genresList = map[string]bool{
 		"journal":    true,
