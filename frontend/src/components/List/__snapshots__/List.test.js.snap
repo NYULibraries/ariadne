@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a last element 1`] = `
+<div
+  class="jumbotron"
+>
+  <div
+    class="container text-center"
+  >
+    <p>
+      Displaying search results...
+    </p>
+    <p>
+      Note: Alternate titles might have matched your search terms
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders a list of elements 1`] = `
+<div
+  class="jumbotron"
+>
+  <div
+    class="container text-center"
+  >
+    <p>
+      Displaying search results...
+    </p>
+    <p>
+      Note: Alternate titles might have matched your search terms
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders a list of elements and a last element 1`] = `
+<div
+  class="jumbotron"
+>
+  <div
+    class="container text-center"
+  >
+    <p>
+      Displaying search results...
+    </p>
+    <p>
+      Note: Alternate titles might have matched your search terms
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders an error when error 1`] = `
+<div
+  class="jumbotron"
+>
+  <div
+    class="container text-center"
+  >
+    <p>
+      Displaying search results...
+    </p>
+    <p>
+      Note: Alternate titles might have matched your search terms
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders correctly 1`] = `
+<div
+  class="jumbotron"
+>
+  <div
+    class="container text-center"
+  >
+    <p>
+      Displaying search results...
+    </p>
+    <p>
+      Note: Alternate titles might have matched your search terms
+    </p>
+  </div>
+</div>
+`;
