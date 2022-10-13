@@ -15,6 +15,16 @@ x-development-volumes-frontend: &x-development-volumes-frontend
   volumes:
     - ./frontend:/app
 
+x-build-backend-test: &x-build-backend-test
+  image: backend_test
+  build:
+    context: backend/
+    # See file header comment in Dockerfile.debug-and-test
+    dockerfile: Dockerfile.debug-and-test
+
+x-development-volumes-backend: &x-development-volumes-backend
+  volumes:
+    - ./backend:/app
 
 services:
   frontend:
@@ -39,14 +49,10 @@ services:
       - "8080:8080"
     networks:
       - resolve-net
-    # volumes:
-    #   - ./backend:/app
+    # <<: *x-development-volumes-backend
 
   backend-debug:
-    build:
-      context: backend/
-      # See file header comment in Dockerfile.debug-and-test
-      dockerfile: Dockerfile.debug-and-test
+    <<: *x-build-backend-test
     # Dockerfile.debug-and-test is primarily a test container.  We need to override
     # the `go test...` CMD, running delve instead.
     command: [ "./tools/dlv", "--listen=:2345", "--headless=true", "--api-version=2", "--accept-multiclient", "exec", "./resolve" ]
@@ -61,22 +67,15 @@ services:
       - resolve-net
     security_opt:
       - apparmor:unconfined
-    # volumes:
-    #   - ./backend:/app
+    # <<: *x-development-volumes-backend
 
   backend-test:
-    build:
-      context: backend/
-      # See file header comment in Dockerfile.debug-and-test
-      dockerfile: Dockerfile.debug-and-test
+    <<: *x-build-backend-test
     command: ["go","test","-cover","./..."]
-   # volumes:
-   #   - ./backend:/app
+    # <<: *x-development-volumes-backend
 
   backend-test-coverage:
-    build:
-      context: backend/
-      dockerfile: Dockerfile.debug-and-test
+    <<: *x-build-backend-test
     command:
       - /bin/sh
       - -c
@@ -84,8 +83,7 @@ services:
         go test -coverprofile=coverage.out ./... &&
         go tool cover -func=coverage.out
         # go tool cover -html=coverage.out
-    # volumes:
-    #  - ./backend:/app
+    # <<: *x-development-volumes-backend
 
 networks:
   resolve-net:
