@@ -1,7 +1,5 @@
 import apiClient from './apiClient';
 
-var query = window.location.search;
-
-const fetchData = () => apiClient.get('/' + query);
+const fetchData = () => apiClient.get('/' + `${window.location.search}`);
 
 export default { fetchData };
