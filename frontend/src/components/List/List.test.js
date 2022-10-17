@@ -38,11 +38,11 @@ test('renders Loading...', () => {
   expect(linkElement).toBeInTheDocument();
 });
 
-// test('renders a E Journal Full Text link', async () => {
-//   render(<List />);
-//   const linkElement = await waitFor(() => screen.getByText(/E Journal Full Text/i));
-//   expect(linkElement).toBeInTheDocument();
-// });
+test('renders a E Journal Full Text link', async () => {
+  render(<List />);
+  const linkElement = await waitFor(() => screen.getByText(/E Journal Full Text/i));
+  expect(linkElement).toBeInTheDocument();
+});
 
 test('renders a Gale General OneFile link', async () => {
   render(<List />);
