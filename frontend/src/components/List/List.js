@@ -21,11 +21,11 @@ const List = () => {
           <p>Note: Alternate titles might have matched your search terms</p>
         </div>
       </div>
+      {/* TODO: we could put a spinner here: */}
+      {backendClient.loading && <div className="loader">Loading...</div>}
+      {backendClient.error && <div className="i-am-centered">{backendClient.error}</div>}
       <div className="i-am-centered">
         <div className="list-group">
-          {/* TODO: we could put a spinner here: */}
-          {backendClient.loading && <div>Loading...</div>}
-          {backendClient.error && <div className="i-am-centered">{backendClient.error}</div>}
           {backendClient.resource?.map((link, idx) => (
             <div key={idx} className="list-group-item list-group-item-action flex-column" style={{ border: 'none' }}>
               <div className="row">
