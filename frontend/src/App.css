@@ -11,6 +11,11 @@
   margin: 18px 0px 0px 118px;
 }
 
+.loader {
+  display: flex;
+  justify-content: center;
+}
+
 .list-group {
   border: 1px solid #ddd;
   border-width: 3px; 
