@@ -17,15 +17,16 @@ exports[`render correctly 1`] = `
     </div>
   </div>
   <div
+    class="loader"
+  >
+    Loading...
+  </div>
+  <div
     class="i-am-centered"
   >
     <div
       class="list-group"
-    >
-      <div>
-        Loading...
-      </div>
-    </div>
+    />
   </div>
 </DocumentFragment>
 `;

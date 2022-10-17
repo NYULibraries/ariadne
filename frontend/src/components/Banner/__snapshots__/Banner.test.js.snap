@@ -3,7 +3,7 @@
 exports[`renders correctly 1`] = `
 <DocumentFragment>
   <nav
-    class="navbar navbar-expand-lg navbar-light bg-#57068c"
+    class="color-nav navbar navbar-expand-lg navbar-light"
   >
     <div
       class="container"
