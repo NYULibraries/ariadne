@@ -22,17 +22,6 @@ Run in a container:
 docker-compose up frontend
 ```
 
-### Environment Variables
-
-In order for the app to function correctly, a user must set up their own environment variables.
-
-Create a .env file in the frontend directory that includes:
-
-```
-REACT_APP_API_URL= // your backend URL
-```
-
-
 ## Backend
 
 The OpenURL Resolver backend provides a simple JSON API written in Go that takes
