@@ -10,3 +10,8 @@ test('renders the NYU Libraries logo', async () => {
   const linkElement = await waitFor(() => screen.getByAltText(/NYU Libraries logo/i));
   expect(linkElement).toBeInTheDocument();
 });
+
+test('renders correctly', () => {
+  const { asFragment } = render(<Banner />);
+  expect(asFragment()).toMatchSnapshot();
+});
