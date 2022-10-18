@@ -31,14 +31,14 @@ services:
     <<: *x-build-frontend
     ports:
       - "3000:3000"
-    environment:
-      - REACT_APP_API_URL=http://localhost:8080/v0/
     # <<: *x-development-volumes-frontend
 
   frontend-test:
     <<: *x-build-frontend
     command: yarn test
     environment:
+      # We need to override REACT_APP_API_URL in `.env.test` in order to test against
+      # `backend` service.
       - REACT_APP_API_URL=http://backend:8080/v0/
     # <<: *x-development-volumes-frontend
 
