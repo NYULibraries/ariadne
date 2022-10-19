@@ -47,12 +47,12 @@ func ResolveJSON(w http.ResponseWriter, r *http.Request) {
 
 }
 
+func enableCors(w *http.ResponseWriter) {
+	(*w).Header().Set("Access-Control-Allow-Origin", "*")
+}
+
 func handleError(err error, w http.ResponseWriter, message string) {
 	log.Println(err)
 	w.WriteHeader(http.StatusBadRequest)
 	json.NewEncoder(w).Encode(map[string]interface{}{"status": "error", "message": message})
-}
-
-func enableCors(w *http.ResponseWriter) {
-	(*w).Header().Set("Access-Control-Allow-Origin", "*")
 }
