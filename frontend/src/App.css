@@ -34,6 +34,10 @@
   color: #6c07ae ;
 }
 
+#border-style {
+ border: none;
+}
+
 .ask-librarian {
   margin: 170px -56px 0px 50px;
   max-width: 150px;
