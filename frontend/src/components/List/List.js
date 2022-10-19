@@ -27,7 +27,7 @@ const List = () => {
       <div className="i-am-centered">
         <div className="list-group">
           {backendClient.resource?.map((link, idx) => (
-            <div key={idx} className="list-group-item list-group-item-action flex-column" style={{ border: 'none' }}>
+            <div key={idx} className="list-group-item list-group-item-action flex-column" id="border-style">
               <div className="row">
                 <h6>
                   <a href={link.target_url} target="_blank" rel="noopener noreferrer">
