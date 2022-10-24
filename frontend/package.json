@@ -15,6 +15,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --coverage --watchAll=false",
+    "test:e2e": "yarn playwright test",
+    "test:e2e:debug": "yarn playwright test --debug",
+    "posttest:e2e": "yarn playwright show-report",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
