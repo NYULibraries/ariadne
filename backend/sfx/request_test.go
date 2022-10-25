@@ -93,13 +93,13 @@ func TestIsValidXML(t *testing.T) {
 
 func TestToRequestXML(t *testing.T) {
 	var tests = []struct {
-		sfxContext  *sfxContextObjectRequest
-		tpl         sfxContextObjectRequestBody
+		sfxContext  *multipleObjectsRequest
+		tpl         multipleObjectsRequestBody
 		expectedErr error
 	}{
-		{&sfxContextObjectRequest{}, sfxContextObjectRequestBody{RftValues: &openURL{"genre": {"book"}, "btitle": {"a book"}}, Timestamp: mockTimestamp, Genre: "book"}, nil},
-		{&sfxContextObjectRequest{}, sfxContextObjectRequestBody{}, errors.New("error")},
-		{&sfxContextObjectRequest{}, sfxContextObjectRequestBody{RftValues: &openURL{"genre": {"<rft:"}}, Timestamp: mockTimestamp, Genre: "book"}, errors.New("error")},
+		{&multipleObjectsRequest{}, multipleObjectsRequestBody{RftValues: &openURL{"genre": {"book"}, "btitle": {"a book"}}, Timestamp: mockTimestamp, Genre: "book"}, nil},
+		{&multipleObjectsRequest{}, multipleObjectsRequestBody{}, errors.New("error")},
+		{&multipleObjectsRequest{}, multipleObjectsRequestBody{RftValues: &openURL{"genre": {"<rft:"}}, Timestamp: mockTimestamp, Genre: "book"}, errors.New("error")},
 	}
 
 	for _, tt := range tests {
@@ -133,13 +133,13 @@ func TestSetSFXContextObjectRequest(t *testing.T) {
 	for _, tt := range tests {
 		testname := fmt.Sprintf("%s", tt.querystring)
 		t.Run(testname, func(t *testing.T) {
-			ans, err := setSFXContextObjectRequest(tt.querystring)
+			ans, err := setMultipleObjectsRequest(tt.querystring)
 			// if err != nil {
 			// 	t.Errorf("error %v", err)
 			// }
 			if tt.expectedErr != nil {
 				if err == nil {
-					t.Errorf("setSFXContextObjectRequest err was '%v', expecting '%v'", err, tt.expectedErr)
+					t.Errorf("setMultipleObjectsRequest err was '%v', expecting '%v'", err, tt.expectedErr)
 				}
 			}
 			if err == nil {
@@ -211,5 +211,5 @@ func TestToResponseJson(t *testing.T) {
 	}
 }
 
-// func (c sfxContextObjectRequest) Request() (body string, err error) {
-// func Init(qs url.Values) (sfxContextObjectRequest *sfxContextObjectRequest, err error) {
+// func (c multipleObjectsRequest) Request() (body string, err error) {
+// func Init(qs url.Values) (multipleObjectsRequest *multipleObjectsRequest, err error) {
