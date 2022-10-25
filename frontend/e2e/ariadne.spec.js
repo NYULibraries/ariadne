@@ -45,32 +45,32 @@ test('renders Loading...', async ({ page }) => {
 
 test('renders a E Journal Full Text link', async ({ page }) => {
   await page.goto(baseURl + queryStrings[0]);
-  const [page1] = await Promise.all([
+  const [page2] = await Promise.all([
     page.waitForEvent('popup'),
     page.getByRole('link', { name: 'E Journal Full Text' }).click(),
   ]);
-  expect(page1.url()).toBe('http://proxy.library.nyu.edu/login?url=http://archives.newyorker.com/#folio=C1');
+  expect(page2.url()).toBe('http://proxy.library.nyu.edu/login?url=http://archives.newyorker.com/#folio=C1');
 });
 
 test('renders a Gale General OneFile link', async ({ page }) => {
   await page.goto(baseURl + queryStrings[0]);
-  const [page2] = await Promise.all([
+  const [page3] = await Promise.all([
     page.waitForEvent('popup'),
     page.getByRole('link', { name: 'Gale General OneFile' }).click(),
   ]);
-  expect(page2.url()).toBe(
+  expect(page3.url()).toBe(
     'http://proxy.library.nyu.edu/login?url=https://link.gale.com/apps/pub/1161/ITOF?u=nysl_me_newyorku'
   );
 });
 
 test('renders Ask a Librarian', async ({ page }) => {
   await page.goto(baseURl + queryStrings[0]);
-  const [page2] = await Promise.all([
+  const [page4] = await Promise.all([
     page.waitForEvent('popup'),
     page.getByRole('link', { name: 'Ask a Librarian' }).click(),
   ]);
   expect(await page.textContent('.ask-librarian')).toBe('Ask a Librarian');
-  expect(page2.url()).toBe('https://library.nyu.edu/ask/');
+  expect(page4.url()).toBe('https://library.nyu.edu/ask/');
 });
 
 test('Loading... no longer present in the DOM after loading data', async ({ page }) => {
