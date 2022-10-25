@@ -71,7 +71,7 @@ func (c sfxContextObjectRequest) Request() (body string, err error) {
 	}
 
 	// Convert to JSON before returning
-	body, err = toResponseJson(sfxResponse)
+	body, err = toResponseJSON(sfxResponse)
 
 	if err != nil {
 		return body, fmt.Errorf("could not convert SFX response XML to JSON: %v", err)
@@ -196,7 +196,7 @@ func setSFXContextObjectRequest(queryStringValues url.Values) (sfxContext *sfxCo
 }
 
 // Convert the response XML from SFX into a JSON string
-func toResponseJson(from []byte) (to string, err error) {
+func toResponseJSON(from []byte) (to string, err error) {
 	var p SFXContextObjectSet
 	if err = xml.Unmarshal(from, &p); err != nil {
 		return

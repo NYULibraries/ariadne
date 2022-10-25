@@ -195,17 +195,17 @@ func TestToResponseJson(t *testing.T) {
 	for _, tt := range tests {
 		testname := fmt.Sprintf("%s", tt.expected)
 		t.Run(testname, func(t *testing.T) {
-			ans, err := toResponseJson(tt.from)
+			ans, err := toResponseJSON(tt.from)
 			// if err != nil {
 			// 	t.Errorf("error %v", err)
 			// }
 			if tt.expectedErr != nil {
 				if err == nil {
-					t.Errorf("toResponseJson err was '%v', expecting '%v'", err, tt.expectedErr)
+					t.Errorf("toResponseJSON err was '%v', expecting '%v'", err, tt.expectedErr)
 				}
 			}
 			if ans != tt.expected {
-				t.Errorf("toResponseJson was '%v', expecting '%v'", ans, tt.expected)
+				t.Errorf("toResponseJSON was '%v', expecting '%v'", ans, tt.expected)
 			}
 		})
 	}
