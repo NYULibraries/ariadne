@@ -5,10 +5,10 @@ coverage.out
 .DS_store
 
 // Temporary files for diff'ing of actual values against golden files.
-backend/testdata/server/tmp/*
-!backend/testdata/server/tmp/actual/
-backend/testdata/server/tmp/actual/*
-!backend/testdata/server/tmp/actual/.gitkeep
+backend/api/testdata/server/tmp/*
+!backend/api/testdata/server/tmp/actual/
+backend/api/testdata/server/tmp/actual/*
+!backend/api/testdata/server/tmp/actual/.gitkeep
 Makefile
 
 //for Vlad's dev environment
