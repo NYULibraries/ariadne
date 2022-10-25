@@ -15,21 +15,21 @@ import (
 	"time"
 )
 
-type OpenURL map[string][]string
-
-// Object representing everything that's needed to request from SFX
-type SFXContextObjectRequest struct {
-	RequestXML string
-}
+type openURL map[string][]string
 
 type SFXRequest interface {
 	Request()
 	toRequestXML()
 }
 
+// Object representing everything that's needed to request from SFX
+type sfxContextObjectRequest struct {
+	RequestXML string
+}
+
 // Values needed for templating an SFX request are parsed
 type sfxContextObjectRequestBody struct {
-	RftValues *OpenURL
+	RftValues *openURL
 	Timestamp string
 	Genre     string
 }
@@ -43,9 +43,9 @@ const DefaultSFXURL = "http://sfx.library.nyu.edu/sfxlcl41"
 var sfxURL = DefaultSFXURL
 
 // Construct and run the actual POST request to the SFX server
-// Expects an XML string in a SFXContextObjectRequest obj which will be appended to the PostForm params
+// Expects an XML string in a sfxContextObjectRequest obj which will be appended to the PostForm params
 // Body is blank because that is how SFX expects it
-func (c SFXContextObjectRequest) Request() (body string, err error) {
+func (c sfxContextObjectRequest) Request() (body string, err error) {
 	params := url.Values{}
 	params.Add("url_ctx_fmt", "info:ofi/fmt:xml:xsd:ctx")
 	params.Add("sfx.response_type", "multi_obj_xml")
@@ -87,8 +87,8 @@ func (c SFXContextObjectRequest) Request() (body string, err error) {
 
 // Convert a context object request to an XML string
 // via gotemplates, in order to set it up as a post param to SFX
-// Store in SFXContextObjectRequest.RequestXML
-func (c *SFXContextObjectRequest) toRequestXML(tplVals sfxContextObjectRequestBody) error {
+// Store in sfxContextObjectRequest.RequestXML
+func (c *sfxContextObjectRequest) toRequestXML(tplVals sfxContextObjectRequestBody) error {
 	t := template.New("sfx-request.xml").Funcs(template.FuncMap{"ToLower": strings.ToLower})
 
 	t, err := t.Parse(sfxRequestTemplate)
@@ -111,8 +111,8 @@ func (c *SFXContextObjectRequest) toRequestXML(tplVals sfxContextObjectRequestBo
 }
 
 // Take a querystring from the request and convert it to a valid
-// XML string for use in the POST to SFX, return SFXContextObjectRequest object
-func NewSFXContextObjectRequest(qs url.Values) (sfxContextObjectRequest *SFXContextObjectRequest, err error) {
+// XML string for use in the POST to SFX, return sfxContextObjectRequest object
+func NewSFXContextObjectRequest(qs url.Values) (sfxContextObjectRequest *sfxContextObjectRequest, err error) {
 	sfxContextObjectRequest, err = setSFXContextObjectRequest(qs)
 	if err != nil {
 		return sfxContextObjectRequest, fmt.Errorf("could not create context object for request: %v", err)
@@ -149,8 +149,8 @@ func isValidXML(data []byte) bool {
 // Take an openurl and return an OpenURL object of only the rft-prefixed fields
 // These are the fields we are going to parse into XML as part of the
 // post request params
-func parseOpenURL(queryStringValues url.Values) (*OpenURL, error) {
-	parsed := &OpenURL{}
+func parseOpenURL(queryStringValues url.Values) (*openURL, error) {
+	parsed := &openURL{}
 
 	for k, v := range queryStringValues {
 		// Strip the "rft." prefix from the OpenURL
@@ -162,7 +162,7 @@ func parseOpenURL(queryStringValues url.Values) (*OpenURL, error) {
 		}
 	}
 
-	if reflect.DeepEqual(parsed, &OpenURL{}) {
+	if reflect.DeepEqual(parsed, &openURL{}) {
 		return nil, fmt.Errorf("no valid querystring values to parse")
 	}
 
@@ -171,7 +171,7 @@ func parseOpenURL(queryStringValues url.Values) (*OpenURL, error) {
 
 // Setup the SFXContextObjectTpl instance we'll need to run with
 // the gotemplates to create the valid XML string param
-func setSFXContextObjectRequest(queryStringValues url.Values) (sfxContext *SFXContextObjectRequest, err error) {
+func setSFXContextObjectRequest(queryStringValues url.Values) (sfxContext *sfxContextObjectRequest, err error) {
 	rfts, err := parseOpenURL(queryStringValues)
 	if err != nil {
 		return sfxContext, fmt.Errorf("could not parse OpenURL: %v", err)
@@ -191,7 +191,7 @@ func setSFXContextObjectRequest(queryStringValues url.Values) (sfxContext *SFXCo
 	}
 
 	// Init the empty object to populate with toRequestXML
-	sfxContext = &SFXContextObjectRequest{}
+	sfxContext = &sfxContextObjectRequest{}
 
 	if err := sfxContext.toRequestXML(tmpl); err != nil {
 		return sfxContext, fmt.Errorf("could not convert request context object to XML: %v", err)
