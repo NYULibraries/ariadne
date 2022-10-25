@@ -12,6 +12,17 @@ test('renders the Corriere Fiorentino page correctly', async ({ page }) => {
   await expect(page).toHaveScreenshot('corriere_fiorentino.png');
 });
 
+test('renders a Press Reader link', async ({ page }) => {
+  await page.goto(baseURl + queryStrings[1]);
+  const [page2] = await Promise.all([
+    page.waitForEvent('popup'),
+    page.getByRole('link', { name: 'PressReader' }).click(),
+  ]);
+  expect(page2.url()).toBe(
+    'http://proxy.library.nyu.edu/login?url=https://www.pressreader.com/italy/corriere-fiorentino'
+  );
+});
+
 test('renders the New Yorker page correctly', async ({ page }) => {
   await page.goto(baseURl + queryStrings[0]);
   await expect(page).toHaveScreenshot('new_yorker.png');
