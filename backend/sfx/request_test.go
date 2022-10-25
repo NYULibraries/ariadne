@@ -211,5 +211,5 @@ func TestToResponseJson(t *testing.T) {
 	}
 }
 
-// func (c multipleObjectsRequest) Request() (body string, err error) {
+// func (c multipleObjectsRequest) Do() (body string, err error) {
 // func Init(qs url.Values) (multipleObjectsRequest *multipleObjectsRequest, err error) {

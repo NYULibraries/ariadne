@@ -40,7 +40,7 @@ var sfxURL = DefaultSFXURL
 // Construct and run the actual POST request to the SFX server
 // Expects an XML string in a multipleObjectsRequest obj which will be appended to the PostForm params
 // Body is blank because that is how SFX expects it
-func (c multipleObjectsRequest) Request() (body string, err error) {
+func (c multipleObjectsRequest) Do() (body string, err error) {
 	params := url.Values{}
 	params.Add("url_ctx_fmt", "info:ofi/fmt:xml:xsd:ctx")
 	params.Add("sfx.response_type", "multi_obj_xml")
