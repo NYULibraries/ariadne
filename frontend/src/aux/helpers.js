@@ -3,7 +3,7 @@ const getLinks = (jsonData) => {
 };
 
 const getCoverageStatement = (link) => {
-  return link.coverage[0].coverage_text[0].threshold_text[0].coverage_statement.join('. ');
+  return link.coverage[0].coverage_text[0].threshold_text[0].coverage_statement?.join('. ');
 };
 
 export { getLinks, getCoverageStatement };
