@@ -17,11 +17,6 @@ import (
 
 type openURL map[string][]string
 
-type SFXRequest interface {
-	Request()
-	toRequestXML()
-}
-
 // Object representing everything that's needed to request from SFX
 type sfxContextObjectRequest struct {
 	RequestXML string
