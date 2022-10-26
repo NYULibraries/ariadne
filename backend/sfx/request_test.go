@@ -25,9 +25,6 @@ func TestNewMultipleObjectsRequest(t *testing.T) {
 		testname := fmt.Sprintf("%s", tt.querystring)
 		t.Run(testname, func(t *testing.T) {
 			ans, err := NewMultipleObjectsRequest(tt.querystring)
-			// if err != nil {
-			// 	t.Errorf("error %v", err)
-			// }
 			if tt.expectedErr != nil {
 				if err == nil {
 					t.Errorf("setMultipleObjectsRequest err was '%v', expecting '%v'", err, tt.expectedErr)
