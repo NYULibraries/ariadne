@@ -21,13 +21,13 @@ func TestNewMultipleObjectsRequest(t *testing.T) {
 		{map[string][]string{"rft.genre": {"book"}, "rft.btitle": {"dune"}}, nil},
 	}
 
-	for _, tt := range tests {
-		testname := fmt.Sprintf("%s", tt.querystring)
-		t.Run(testname, func(t *testing.T) {
-			ans, err := NewMultipleObjectsRequest(tt.querystring)
-			if tt.expectedError != nil {
+	for _, testCase := range tests {
+		testName := fmt.Sprintf("%s", testCase.querystring)
+		t.Run(testName, func(t *testing.T) {
+			ans, err := NewMultipleObjectsRequest(testCase.querystring)
+			if testCase.expectedError != nil {
 				if err == nil {
-					t.Errorf("NewMultipleObjectsRequest returned no error, expecting '%v'", tt.expectedError)
+					t.Errorf("NewMultipleObjectsRequest returned no error, expecting '%v'", testCase.expectedError)
 				}
 			}
 			if err == nil {
