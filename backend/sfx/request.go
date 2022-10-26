@@ -16,7 +16,7 @@ import (
 var sfxRequestTemplate string
 
 // Object representing everything that's needed to request from SFX
-type multipleObjectsRequest struct {
+type MultipleObjectsRequest struct {
 	RequestXML string
 }
 
@@ -28,9 +28,9 @@ type multipleObjectsRequestBody struct {
 }
 
 // Construct and run the actual POST request to the SFX server
-// Expects an XML string in a multipleObjectsRequest obj which will be appended to the PostForm params
+// Expects an XML string in a MultipleObjectsRequest obj which will be appended to the PostForm params
 // Body is blank because that is how SFX expects it
-func (c multipleObjectsRequest) Do() (body string, err error) {
+func (c MultipleObjectsRequest) Do() (body string, err error) {
 	params := url.Values{}
 	params.Add("url_ctx_fmt", "info:ofi/fmt:xml:xsd:ctx")
 	params.Add("sfx.response_type", "multi_obj_xml")
@@ -72,8 +72,8 @@ func (c multipleObjectsRequest) Do() (body string, err error) {
 
 // Convert a request to an XML string
 // via gotemplates, in order to set it up as a post param to SFX
-// Store in multipleObjectsRequest.RequestXML
-func (c *multipleObjectsRequest) toRequestXML(tplVals multipleObjectsRequestBody) error {
+// Store in MultipleObjectsRequest.RequestXML
+func (c *MultipleObjectsRequest) toRequestXML(tplVals multipleObjectsRequestBody) error {
 	t := template.New("sfx-request.xml").Funcs(template.FuncMap{"ToLower": strings.ToLower})
 
 	t, err := t.Parse(sfxRequestTemplate)
@@ -97,7 +97,7 @@ func (c *multipleObjectsRequest) toRequestXML(tplVals multipleObjectsRequestBody
 
 // Setup the SFXContextObjectTpl instance we'll need to run with
 // the gotemplates to create the valid XML string param
-func setMultipleObjectsRequest(queryStringValues url.Values) (sfxContext *multipleObjectsRequest, err error) {
+func setMultipleObjectsRequest(queryStringValues url.Values) (sfxContext *MultipleObjectsRequest, err error) {
 	rfts, err := parseOpenURL(queryStringValues)
 	if err != nil {
 		return sfxContext, fmt.Errorf("could not parse OpenURL: %v", err)
@@ -117,7 +117,7 @@ func setMultipleObjectsRequest(queryStringValues url.Values) (sfxContext *multip
 	}
 
 	// Init the empty object to populate with toRequestXML
-	sfxContext = &multipleObjectsRequest{}
+	sfxContext = &MultipleObjectsRequest{}
 
 	if err := sfxContext.toRequestXML(tmpl); err != nil {
 		return sfxContext, fmt.Errorf("could not convert multiple objects request to XML: %v", err)

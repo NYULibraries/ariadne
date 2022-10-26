@@ -17,8 +17,8 @@ const DefaultSFXURL = "http://sfx.library.nyu.edu/sfxlcl41"
 var sfxURL = DefaultSFXURL
 
 // Take a querystring from the request and convert it to a valid
-// XML string for use in the POST to SFX, return multipleObjectsRequest object
-func NewSFXMultipleObjectsRequest(qs url.Values) (multipleObjectsRequest *multipleObjectsRequest, err error) {
+// XML string for use in the POST to SFX, return MultipleObjectsRequest object
+func NewSFXMultipleObjectsRequest(qs url.Values) (multipleObjectsRequest *MultipleObjectsRequest, err error) {
 	multipleObjectsRequest, err = setMultipleObjectsRequest(qs)
 	if err != nil {
 		return multipleObjectsRequest, fmt.Errorf("could not create a multiple objects request for query string values: %v", err)

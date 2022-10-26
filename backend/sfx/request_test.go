@@ -44,13 +44,13 @@ func TestSetSFXContextObjectRequest(t *testing.T) {
 
 func TestToRequestXML(t *testing.T) {
 	var tests = []struct {
-		sfxContext  *multipleObjectsRequest
+		sfxContext  *MultipleObjectsRequest
 		tpl         multipleObjectsRequestBody
 		expectedErr error
 	}{
-		{&multipleObjectsRequest{}, multipleObjectsRequestBody{RftValues: &openURL{"genre": {"book"}, "btitle": {"a book"}}, Timestamp: mockTimestamp, Genre: "book"}, nil},
-		{&multipleObjectsRequest{}, multipleObjectsRequestBody{}, errors.New("error")},
-		{&multipleObjectsRequest{}, multipleObjectsRequestBody{RftValues: &openURL{"genre": {"<rft:"}}, Timestamp: mockTimestamp, Genre: "book"}, errors.New("error")},
+		{&MultipleObjectsRequest{}, multipleObjectsRequestBody{RftValues: &openURL{"genre": {"book"}, "btitle": {"a book"}}, Timestamp: mockTimestamp, Genre: "book"}, nil},
+		{&MultipleObjectsRequest{}, multipleObjectsRequestBody{}, errors.New("error")},
+		{&MultipleObjectsRequest{}, multipleObjectsRequestBody{RftValues: &openURL{"genre": {"<rft:"}}, Timestamp: mockTimestamp, Genre: "book"}, errors.New("error")},
 	}
 
 	for _, tt := range tests {
@@ -130,5 +130,5 @@ func TestToResponseJson(t *testing.T) {
 	}
 }
 
-// func (c multipleObjectsRequest) Do() (body string, err error) {
-// func Init(qs url.Values) (multipleObjectsRequest *multipleObjectsRequest, err error) {
+// func (c MultipleObjectsRequest) Do() (body string, err error) {
+// func Init(qs url.Values) (MultipleObjectsRequest *MultipleObjectsRequest, err error) {
