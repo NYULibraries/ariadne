@@ -41,13 +41,13 @@ func resolveJSON(w http.ResponseWriter, r *http.Request) {
 
 	w.Header().Add("Content-Type", "application/json")
 
-	sfxMultipleObjectsRequest, err := sfx.NewSFXMultipleObjectsRequest(r.URL.Query())
+	request, err := sfx.NewSFXMultipleObjectsRequest(r.URL.Query())
 	if err != nil {
 		handleError(err, w, "Invalid OpenURL")
 		return
 	}
 
-	response, err := sfx.Do(sfxMultipleObjectsRequest)
+	response, err := sfx.Do(request)
 	if err != nil {
 		handleError(err, w, "Invalid response from SFX")
 		return
