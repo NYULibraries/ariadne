@@ -4,7 +4,6 @@ import (
 	"bytes"
 	_ "embed"
 	"fmt"
-	"io/ioutil"
 	"net/http"
 	"net/url"
 	"strings"
@@ -30,7 +29,7 @@ type multipleObjectsRequestBody struct {
 // Construct and run the actual POST request to the SFX server
 // Expects an XML string in a MultipleObjectsRequest obj which will be appended to the PostForm params
 // Body is blank because that is how SFX expects it
-func (c MultipleObjectsRequest) do() (body string, err error) {
+func (c MultipleObjectsRequest) do() (*MultipleObjectsResponse, error) {
 	params := url.Values{}
 	params.Add("url_ctx_fmt", "info:ofi/fmt:xml:xsd:ctx")
 	params.Add("sfx.response_type", "multi_obj_xml")
@@ -42,7 +41,7 @@ func (c MultipleObjectsRequest) do() (body string, err error) {
 
 	request, err := http.NewRequest("POST", sfxURL, strings.NewReader(params.Encode()))
 	if err != nil {
-		return body, fmt.Errorf("could not initialize request to SFX server: %v", err)
+		return &MultipleObjectsResponse{}, fmt.Errorf("could not initialize request to SFX server: %v", err)
 	}
 
 	request.PostForm = params
@@ -51,23 +50,16 @@ func (c MultipleObjectsRequest) do() (body string, err error) {
 	client := http.Client{}
 	response, err := client.Do(request)
 	if err != nil {
-		return body, fmt.Errorf("could not do post to SFX server: %v", err)
+		return &MultipleObjectsResponse{}, fmt.Errorf("could not do post to SFX server: %v", err)
 	}
-
 	defer response.Body.Close()
-	sfxResponse, err := ioutil.ReadAll(response.Body)
+
+	multipleObjectsResponse, err := newMultipleObjectsResponse(response)
 	if err != nil {
-		return body, fmt.Errorf("could not read response from SFX server: %v", err)
+		return multipleObjectsResponse, err
 	}
 
-	// Convert to JSON before returning
-	body, err = toResponseJSON(sfxResponse)
-
-	if err != nil {
-		return body, fmt.Errorf("could not convert SFX response XML to JSON: %v", err)
-	}
-
-	return
+	return multipleObjectsResponse, nil
 }
 
 // Convert a request to an XML string

@@ -1,5 +1,14 @@
 package sfx
 
+import "net/http"
+
+type MultipleObjectsResponse struct {
+	HTTPResponse            *http.Response
+	JSON                    string
+	MultiObjXMLResponseBody MultiObjXMLResponseBody
+	XML                     string
+}
+
 // Mapped out the entire Context Object responses possible from SFX as defined here:
 // https://developers.exlibrisgroup.com/sfx/apis/web_services/openurl/
 // But most of it is likely not useful for pulling out links of interest to us

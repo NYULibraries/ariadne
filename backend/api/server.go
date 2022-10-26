@@ -53,6 +53,5 @@ func resolveJSON(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	fmt.Fprintln(w, response)
-
+	fmt.Fprintln(w, response.JSON)
 }
