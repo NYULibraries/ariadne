@@ -50,7 +50,7 @@ func TestNewMultipleObjectsResponse(t *testing.T) {
 		expectedError error
 	}{
 		{"Good SFX response", makeFakeHTTPResponse(dummyGoodXMLResponse), dummyJSONResponse, nil},
-		{"Bad SFX response", makeFakeHTTPResponse(dummyBadXMLResponse), "", errors.New("error")},
+		{"Bad SFX response", makeFakeHTTPResponse(dummyBadXMLResponse), "", errors.New("XML syntax error on line 2: unexpected EOF")},
 	}
 
 	for _, testCase := range testCases {
@@ -59,6 +59,9 @@ func TestNewMultipleObjectsResponse(t *testing.T) {
 			if testCase.expectedError != nil {
 				if err == nil {
 					t.Errorf("newMultipleObjectsResponse returned no error, expecting '%v'", testCase.expectedError)
+				}
+				if err.Error() != testCase.expectedError.Error() {
+					t.Errorf("newMultipleObjectsResponse returned error '%v', expecting '%v'", err, testCase.expectedError)
 				}
 			}
 			if err != nil && testCase.expectedError == nil {
