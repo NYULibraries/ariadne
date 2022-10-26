@@ -15,8 +15,8 @@ func TestNewMultipleObjectsRequest(t *testing.T) {
 		querystring   url.Values
 		expectedError error
 	}{
-		{map[string][]string{"genre": {"book"}}, errors.New("error")},
-		{map[string][]string{"rft.genre": {"podcast"}}, errors.New("error")},
+		{map[string][]string{"genre": {"book"}}, errors.New("could not parse OpenURL: no valid querystring values to parse")},
+		{map[string][]string{"rft.genre": {"podcast"}}, errors.New("genre is not valid: genre not in list of allowed genres: [podcast]")},
 		{map[string][]string{"rft.genre": {"book"}, "rft.aulast": {"<rft:"}}, nil},
 		{map[string][]string{"rft.genre": {"book"}, "rft.btitle": {"dune"}}, nil},
 	}
@@ -28,6 +28,9 @@ func TestNewMultipleObjectsRequest(t *testing.T) {
 			if testCase.expectedError != nil {
 				if err == nil {
 					t.Errorf("NewMultipleObjectsRequest returned no error, expecting '%v'", testCase.expectedError)
+				}
+				if err.Error() != testCase.expectedError.Error() {
+					t.Errorf("NewMultipleObjectsRequest returned error '%v', expecting '%v'", err, testCase.expectedError)
 				}
 			}
 			if err == nil {
