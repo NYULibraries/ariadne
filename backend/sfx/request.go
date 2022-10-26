@@ -3,19 +3,17 @@ package sfx
 import (
 	"bytes"
 	_ "embed"
-	"encoding/json"
-	"encoding/xml"
 	"fmt"
 	"io/ioutil"
 	"net/http"
 	"net/url"
-	"reflect"
 	"strings"
 	"text/template"
 	"time"
 )
 
-type openURL map[string][]string
+//go:embed templates/sfx-request.xml
+var sfxRequestTemplate string
 
 // Object representing everything that's needed to request from SFX
 type multipleObjectsRequest struct {
@@ -28,14 +26,6 @@ type multipleObjectsRequestBody struct {
 	Timestamp string
 	Genre     string
 }
-
-//go:embed templates/sfx-request.xml
-var sfxRequestTemplate string
-
-// SFX service URL
-const DefaultSFXURL = "http://sfx.library.nyu.edu/sfxlcl41"
-
-var sfxURL = DefaultSFXURL
 
 // Construct and run the actual POST request to the SFX server
 // Expects an XML string in a multipleObjectsRequest obj which will be appended to the PostForm params
@@ -105,65 +95,6 @@ func (c *multipleObjectsRequest) toRequestXML(tplVals multipleObjectsRequestBody
 	return nil
 }
 
-// Take a querystring from the request and convert it to a valid
-// XML string for use in the POST to SFX, return multipleObjectsRequest object
-func NewSFXMultipleObjectsRequest(qs url.Values) (multipleObjectsRequest *multipleObjectsRequest, err error) {
-	multipleObjectsRequest, err = setMultipleObjectsRequest(qs)
-	if err != nil {
-		return multipleObjectsRequest, fmt.Errorf("could not create a multiple objects request for query string values: %v", err)
-	}
-
-	return
-}
-
-func SetSFXURL(dependencyInjectedURL string) {
-	sfxURL = dependencyInjectedURL
-}
-
-// A list of the valid genres as defined by the OpenURL spec
-// Is this correct? See genres list on NISO spec page 59: https://groups.niso.org/higherlogic/ws/public/download/14833/z39_88_2004_r2010.pdf
-func genresList() (genresList map[string]bool) {
-	genresList = map[string]bool{
-		"journal":    true,
-		"book":       true,
-		"conference": true,
-		"article":    true,
-		"preprint":   true,
-		"proceeding": true,
-		"bookitem":   true,
-	}
-
-	return
-}
-
-// Validate XML, by marshalling and checking for a blank error
-func isValidXML(data []byte) bool {
-	return xml.Unmarshal(data, new(interface{})) == nil
-}
-
-// Take an openurl and return an OpenURL object of only the rft-prefixed fields
-// These are the fields we are going to parse into XML as part of the
-// post request params
-func parseOpenURL(queryStringValues url.Values) (*openURL, error) {
-	parsed := &openURL{}
-
-	for k, v := range queryStringValues {
-		// Strip the "rft." prefix from the OpenURL
-		// and map into valid OpenURL fields
-		if strings.HasPrefix(k, "rft.") {
-			// E.g. "rft.book" becomes "book"
-			newKey := strings.Split(k, ".")[1]
-			(*parsed)[newKey] = v
-		}
-	}
-
-	if reflect.DeepEqual(parsed, &openURL{}) {
-		return nil, fmt.Errorf("no valid querystring values to parse")
-	}
-
-	return parsed, nil
-}
-
 // Setup the SFXContextObjectTpl instance we'll need to run with
 // the gotemplates to create the valid XML string param
 func setMultipleObjectsRequest(queryStringValues url.Values) (sfxContext *multipleObjectsRequest, err error) {
@@ -193,29 +124,4 @@ func setMultipleObjectsRequest(queryStringValues url.Values) (sfxContext *multip
 	}
 
 	return
-}
-
-// Convert the response XML from SFX into a JSON string
-func toResponseJSON(from []byte) (to string, err error) {
-	var p SFXContextObjectSet
-	if err = xml.Unmarshal(from, &p); err != nil {
-		return
-	}
-
-	b, err := json.MarshalIndent(p, "", "    ")
-	if err != nil {
-		return to, fmt.Errorf("could not marshal context object struct to json: %v", err)
-	}
-	to = string(b)
-
-	return
-}
-
-// Only return a valid genre that has been allowed by the OpenURL spec
-func validGenre(genre []string) (string, error) {
-	validGenres := genresList()
-	if len(genre) > 0 && validGenres[genre[0]] {
-		return genre[0], nil
-	}
-	return "", fmt.Errorf("genre not in list of allowed genres: %v", genre)
 }
