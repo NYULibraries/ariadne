@@ -87,6 +87,17 @@ func (c *MultipleObjectsRequest) toRequestXML(tplVals multipleObjectsRequestBody
 	return nil
 }
 
+// Take a querystring from the request and convert it to a valid
+// XML string for use in the POST to SFX, return MultipleObjectsRequest object
+func NewMultipleObjectsRequest(qs url.Values) (*MultipleObjectsRequest, error) {
+	multipleObjectsRequest, err := setMultipleObjectsRequest(qs)
+	if err != nil {
+		return multipleObjectsRequest, fmt.Errorf("could not create a multiple objects request for query string values: %v", err)
+	}
+
+	return multipleObjectsRequest, nil
+}
+
 // Setup the SFXContextObjectTpl instance we'll need to run with
 // the gotemplates to create the valid XML string param
 func setMultipleObjectsRequest(queryStringValues url.Values) (sfxContext *MultipleObjectsRequest, err error) {

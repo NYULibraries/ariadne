@@ -41,7 +41,7 @@ func multipleRecordsHandler(w http.ResponseWriter, r *http.Request) {
 
 	w.Header().Add("Content-Type", "application/json")
 
-	sfxRequest, err := sfx.NewSFXMultipleObjectsRequest(r.URL.Query())
+	sfxRequest, err := sfx.NewMultipleObjectsRequest(r.URL.Query())
 	if err != nil {
 		handleError(err, w, "Invalid OpenURL")
 		return
