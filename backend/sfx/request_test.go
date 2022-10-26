@@ -33,6 +33,9 @@ func TestNewMultipleObjectsRequest(t *testing.T) {
 					t.Errorf("NewMultipleObjectsRequest returned error '%v', expecting '%v'", err, testCase.expectedError)
 				}
 			}
+			if err != nil && testCase.expectedError == nil {
+				t.Errorf("NewMultipleObjectsRequest returned error '%v', expecting no errors", err)
+			}
 			if err == nil {
 				if !strings.HasPrefix(ans.RequestXML, `<?xml version="1.0" encoding="UTF-8"?>`) {
 					t.Errorf("requestXML isn't an XML document")
