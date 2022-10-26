@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
+	"net/http/httputil"
 	"net/url"
 	"reflect"
 	"strings"
@@ -40,6 +41,12 @@ func newMultipleObjectsResponse(httpResponse *http.Response) (*MultipleObjectsRe
 	multipleObjectsResponse := &MultipleObjectsResponse{
 		HTTPResponse: httpResponse,
 	}
+
+	dumpedHTTPResponse, err := httputil.DumpResponse(httpResponse, true)
+	if err != nil {
+		return multipleObjectsResponse, fmt.Errorf("could not dump HTTP response")
+	}
+	multipleObjectsResponse.DumpedHTTPResponse = string(dumpedHTTPResponse)
 
 	body, err := ioutil.ReadAll(httpResponse.Body)
 	if err != nil {

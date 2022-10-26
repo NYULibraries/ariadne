@@ -3,6 +3,7 @@ package sfx
 import "net/http"
 
 type MultipleObjectsResponse struct {
+	DumpedHTTPResponse      string
 	HTTPResponse            *http.Response
 	JSON                    string
 	MultiObjXMLResponseBody MultiObjXMLResponseBody
