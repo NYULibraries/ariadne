@@ -27,7 +27,7 @@ func TestNewMultipleObjectsRequest(t *testing.T) {
 			ans, err := NewMultipleObjectsRequest(tt.querystring)
 			if tt.expectedErr != nil {
 				if err == nil {
-					t.Errorf("setMultipleObjectsRequest err was '%v', expecting '%v'", err, tt.expectedErr)
+					t.Errorf("NewMultipleObjectsRequest err was '%v', expecting '%v'", err, tt.expectedErr)
 				}
 			}
 			if err == nil {
