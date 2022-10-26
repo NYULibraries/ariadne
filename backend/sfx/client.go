@@ -16,6 +16,10 @@ const DefaultSFXURL = "http://sfx.library.nyu.edu/sfxlcl41"
 
 var sfxURL = DefaultSFXURL
 
+func Do(request *MultipleObjectsRequest) (string, error) {
+	return request.do()
+}
+
 // Take a querystring from the request and convert it to a valid
 // XML string for use in the POST to SFX, return MultipleObjectsRequest object
 func NewSFXMultipleObjectsRequest(qs url.Values) (multipleObjectsRequest *MultipleObjectsRequest, err error) {

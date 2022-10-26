@@ -47,7 +47,7 @@ func resolveJSON(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	response, err := sfxMultipleObjectsRequest.Do()
+	response, err := sfx.Do(sfxMultipleObjectsRequest)
 	if err != nil {
 		handleError(err, w, "Invalid response from SFX")
 		return
