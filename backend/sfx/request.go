@@ -12,7 +12,7 @@ import (
 	"time"
 )
 
-//go:embed templates/sfx-request.xml
+//go:embed templates/context-objects.xml
 var sfxRequestTemplate string
 
 // Object representing everything that's needed to request from SFX
