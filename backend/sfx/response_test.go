@@ -68,7 +68,7 @@ func TestNewMultipleObjectsResponse(t *testing.T) {
 				t.Errorf("newMultipleObjectsResponse returned error '%v', expecting no errors", err)
 			}
 			if multipleObjectsResponse.JSON != testCase.expected {
-				t.Errorf("newMultipleObjectsResponse was '%v', expecting '%v'", multipleObjectsResponse.JSON, testCase.expected)
+				t.Errorf("multipleObjectsResponse.JSON was '%v', expecting '%v'", multipleObjectsResponse.JSON, testCase.expected)
 			}
 		})
 	}
