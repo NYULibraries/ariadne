@@ -77,7 +77,7 @@ func parseOpenURL(queryStringValues url.Values) (*openURL, error) {
 
 // Convert the response XML from SFX into a JSON string
 func toResponseJSON(from []byte) (to string, err error) {
-	var p SFXContextObjectSet
+	var p MultiObjXMLResponseBody
 	if err = xml.Unmarshal(from, &p); err != nil {
 		return
 	}

@@ -3,16 +3,16 @@ package sfx
 // Mapped out the entire Context Object responses possible from SFX as defined here:
 // https://developers.exlibrisgroup.com/sfx/apis/web_services/openurl/
 // But most of it is likely not useful for pulling out links of interest to us
-type SFXContextObjectSet struct {
-	SFXContextObject *[]SFXContextObject `xml:"ctx_obj" json:"ctx_obj"`
+type MultiObjXMLResponseBody struct {
+	ContextObject *[]ContextObject `xml:"ctx_obj" json:"ctx_obj"`
 }
 
-type SFXContextObject struct {
+type ContextObject struct {
 	// SFXContextObjectAttrs   string
-	SFXContextObjectTargets *[]SFXContextObjectTargets `xml:"ctx_obj_targets" json:"ctx_obj_targets"`
+	SFXContextObjectTargets *[]ContextObjectTargets `xml:"ctx_obj_targets" json:"ctx_obj_targets"`
 }
 
-type SFXContextObjectTargets struct {
+type ContextObjectTargets struct {
 	Targets *[]Target `xml:"target" json:"target"`
 }
 
