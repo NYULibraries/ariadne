@@ -17,7 +17,11 @@ func TestNewMultipleObjectsRequest(t *testing.T) {
 	}{
 		{map[string][]string{"genre": {"book"}}, errors.New("could not parse OpenURL: no valid querystring values to parse")},
 		{map[string][]string{"rft.genre": {"podcast"}}, errors.New("genre is not valid: genre not in list of allowed genres: [podcast]")},
-		{map[string][]string{"rft.genre": {"book"}, "rft.aulast": {"<rft:"}}, nil},
+		// TODO: This was previously a false negative, as the XML-illegal "<" char prevented
+		// the creation of the request XML.  Do we want this to pass or fail?
+		// Might require testing GetIt and SFX, or just making a decision about what to do.
+		// If we want it to pass, we will need to figure out how we want that done.
+		// {map[string][]string{"rft.genre": {"book"}, "rft.aulast": {"<rft:"}}, nil},
 		{map[string][]string{"rft.genre": {"book"}, "rft.btitle": {"dune"}}, nil},
 	}
 
