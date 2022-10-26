@@ -10,7 +10,7 @@ import (
 
 const mockTimestamp = "2017-10-27T10:49:40-04:00"
 
-func TestSetSFXContextObjectRequest(t *testing.T) {
+func TestNewMultipleObjectsRequest(t *testing.T) {
 	var tests = []struct {
 		querystring url.Values
 		expectedErr error
@@ -24,7 +24,7 @@ func TestSetSFXContextObjectRequest(t *testing.T) {
 	for _, tt := range tests {
 		testname := fmt.Sprintf("%s", tt.querystring)
 		t.Run(testname, func(t *testing.T) {
-			ans, err := setMultipleObjectsRequest(tt.querystring)
+			ans, err := NewMultipleObjectsRequest(tt.querystring)
 			// if err != nil {
 			// 	t.Errorf("error %v", err)
 			// }
