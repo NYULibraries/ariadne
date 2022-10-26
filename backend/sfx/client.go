@@ -4,9 +4,6 @@ import (
 	"encoding/json"
 	"encoding/xml"
 	"fmt"
-	"io/ioutil"
-	"net/http"
-	"net/http/httputil"
 	"net/url"
 	"reflect"
 	"strings"
@@ -32,42 +29,6 @@ func NewSFXMultipleObjectsRequest(qs url.Values) (multipleObjectsRequest *Multip
 	}
 
 	return
-}
-
-func newMultipleObjectsResponse(httpResponse *http.Response) (*MultipleObjectsResponse, error) {
-	// NOTE: `defer httpResponse.Body.Close()` should have already been called by the client
-	// before passing to this function.
-
-	multipleObjectsResponse := &MultipleObjectsResponse{
-		HTTPResponse: httpResponse,
-	}
-
-	dumpedHTTPResponse, err := httputil.DumpResponse(httpResponse, true)
-	if err != nil {
-		return multipleObjectsResponse, fmt.Errorf("could not dump HTTP response")
-	}
-	multipleObjectsResponse.DumpedHTTPResponse = string(dumpedHTTPResponse)
-
-	body, err := ioutil.ReadAll(httpResponse.Body)
-	if err != nil {
-		return multipleObjectsResponse, fmt.Errorf("could not read response from SFX server: %v", err)
-	}
-
-	multipleObjectsResponse.XML = string(body)
-
-	var multiObjXMLResponseBody MultiObjXMLResponseBody
-	if err = xml.Unmarshal(body, &multiObjXMLResponseBody); err != nil {
-		return multipleObjectsResponse, err
-	}
-
-	json, err := json.MarshalIndent(multiObjXMLResponseBody, "", "    ")
-	if err != nil {
-		return multipleObjectsResponse, fmt.Errorf("could not marshal SFX response body to JSON: %v", err)
-	}
-
-	multipleObjectsResponse.JSON = string(json)
-
-	return multipleObjectsResponse, nil
 }
 
 func SetSFXURL(dependencyInjectedURL string) {
