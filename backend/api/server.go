@@ -13,7 +13,7 @@ func NewRouter() *http.ServeMux {
 	router := http.NewServeMux()
 
 	router.HandleFunc("/healthcheck", healthCheck)
-	router.HandleFunc("/v0/", resolveJSON)
+	router.HandleFunc("/v0/", multipleRecordsHandler)
 
 	return router
 }
@@ -36,7 +36,7 @@ func healthCheck(w http.ResponseWriter, r *http.Request) {
 
 // Take an incoming Querystring, convert to context object XML, send a post to SFX
 // and write the response JSON
-func resolveJSON(w http.ResponseWriter, r *http.Request) {
+func multipleRecordsHandler(w http.ResponseWriter, r *http.Request) {
 	enableCors(&w)
 
 	w.Header().Add("Content-Type", "application/json")
