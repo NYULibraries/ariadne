@@ -12,8 +12,8 @@ const mockTimestamp = "2017-10-27T10:49:40-04:00"
 
 func TestNewMultipleObjectsRequest(t *testing.T) {
 	var tests = []struct {
-		querystring url.Values
-		expectedErr error
+		querystring   url.Values
+		expectedError error
 	}{
 		{map[string][]string{"genre": {"book"}}, errors.New("error")},
 		{map[string][]string{"rft.genre": {"podcast"}}, errors.New("error")},
@@ -25,9 +25,9 @@ func TestNewMultipleObjectsRequest(t *testing.T) {
 		testname := fmt.Sprintf("%s", tt.querystring)
 		t.Run(testname, func(t *testing.T) {
 			ans, err := NewMultipleObjectsRequest(tt.querystring)
-			if tt.expectedErr != nil {
+			if tt.expectedError != nil {
 				if err == nil {
-					t.Errorf("NewMultipleObjectsRequest returned no error, expecting '%v'", tt.expectedErr)
+					t.Errorf("NewMultipleObjectsRequest returned no error, expecting '%v'", tt.expectedError)
 				}
 			}
 			if err == nil {
