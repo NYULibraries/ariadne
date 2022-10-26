@@ -49,28 +49,26 @@ func TestNewMultipleObjectsRequest(t *testing.T) {
 	}
 }
 
-func TestToRequestXML(t *testing.T) {
+func TestRequestXML(t *testing.T) {
 	var tests = []struct {
-		sfxContext  *MultipleObjectsRequest
+		name        string
 		tpl         multipleObjectsRequestBody
 		expectedErr error
 	}{
-		{&MultipleObjectsRequest{}, multipleObjectsRequestBody{RftValues: &openURL{"genre": {"book"}, "btitle": {"a book"}}, Timestamp: mockTimestamp, Genre: "book"}, nil},
-		{&MultipleObjectsRequest{}, multipleObjectsRequestBody{}, errors.New("error")},
-		{&MultipleObjectsRequest{}, multipleObjectsRequestBody{RftValues: &openURL{"genre": {"<rft:"}}, Timestamp: mockTimestamp, Genre: "book"}, errors.New("error")},
+		{"genre=\"book\"; btitle=\"a book\"", multipleObjectsRequestBody{RftValues: &openURL{"genre": {"book"}, "btitle": {"a book"}}, Timestamp: mockTimestamp, Genre: "book"}, nil},
+		{"[empty request body]", multipleObjectsRequestBody{}, errors.New("error")},
+		{"genre=\"<rft:\"", multipleObjectsRequestBody{RftValues: &openURL{"genre": {"<rft:"}}, Timestamp: mockTimestamp, Genre: "book"}, errors.New("error")},
 	}
 
-	for _, tt := range tests {
-		testname := fmt.Sprintf("%s", tt.sfxContext)
-		t.Run(testname, func(t *testing.T) {
-			c := tt.sfxContext
-			err := c.toRequestXML(tt.tpl)
-			if tt.expectedErr == nil && !strings.HasPrefix(c.RequestXML, `<?xml version="1.0" encoding="UTF-8"?>`) {
+	for _, testCase := range tests {
+		t.Run(testCase.name, func(t *testing.T) {
+			actualXML, err := requestXML(testCase.tpl)
+			if testCase.expectedErr == nil && !strings.HasPrefix(actualXML, `<?xml version="1.0" encoding="UTF-8"?>`) {
 				t.Errorf("toRequestXML didn't return an XML document")
 			}
-			if tt.expectedErr != nil {
+			if testCase.expectedErr != nil {
 				if err == nil {
-					t.Errorf("toRequestXML err was '%v', expecting '%v'", err, tt.expectedErr)
+					t.Errorf("toRequestXML err was '%v', expecting '%v'", err, testCase.expectedErr)
 				}
 			}
 		})

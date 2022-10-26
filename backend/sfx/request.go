@@ -65,7 +65,7 @@ func (c MultipleObjectsRequest) do() (*MultipleObjectsResponse, error) {
 // Convert a request to an XML string
 // via gotemplates, in order to set it up as a post param to SFX
 // Store in MultipleObjectsRequest.RequestXML
-func (c *MultipleObjectsRequest) toRequestXML(tplVals multipleObjectsRequestBody) error {
+func (c *MultipleObjectsRequest) ParseRequestXML(tplVals multipleObjectsRequestBody) error {
 	t := template.New("sfx-request.xml").Funcs(template.FuncMap{"ToLower": strings.ToLower})
 
 	t, err := t.Parse(sfxRequestTemplate)
@@ -110,9 +110,31 @@ func NewMultipleObjectsRequest(queryStringValues url.Values) (*MultipleObjectsRe
 		Genre:     genre,
 	}
 
-	if err := multipleObjectsRequest.toRequestXML(tmpl); err != nil {
+	// Set requestXML to this converted XML string
+	multipleObjectsRequest.RequestXML, err = requestXML(tmpl)
+	if err := multipleObjectsRequest.ParseRequestXML(tmpl); err != nil {
 		return multipleObjectsRequest, fmt.Errorf("could not convert multiple objects request to XML: %v", err)
 	}
 
 	return multipleObjectsRequest, nil
+}
+
+func requestXML(templateValues multipleObjectsRequestBody) (string, error) {
+	t := template.New("sfx-request.xml").Funcs(template.FuncMap{"ToLower": strings.ToLower})
+
+	t, err := t.Parse(sfxRequestTemplate)
+	if err != nil {
+		return "", fmt.Errorf("could not load template parse file: %v", err)
+	}
+
+	var tpl bytes.Buffer
+	if err = t.Execute(&tpl, templateValues); err != nil {
+		return "", fmt.Errorf("could not execute go template from multiple objects request: %v", err)
+	}
+
+	if !isValidXML(tpl.Bytes()) {
+		return "", fmt.Errorf("request multiple objects XML is not valid XML: %v", err)
+	}
+
+	return tpl.String(), nil
 }
