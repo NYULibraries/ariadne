@@ -89,26 +89,17 @@ func (c *MultipleObjectsRequest) toRequestXML(tplVals multipleObjectsRequestBody
 
 // Take a querystring from the request and convert it to a valid
 // XML string for use in the POST to SFX, return MultipleObjectsRequest object
-func NewMultipleObjectsRequest(qs url.Values) (*MultipleObjectsRequest, error) {
-	multipleObjectsRequest, err := setMultipleObjectsRequest(qs)
-	if err != nil {
-		return multipleObjectsRequest, fmt.Errorf("could not create a multiple objects request for query string values: %v", err)
-	}
+func NewMultipleObjectsRequest(queryStringValues url.Values) (*MultipleObjectsRequest, error) {
+	multipleObjectsRequest := &MultipleObjectsRequest{}
 
-	return multipleObjectsRequest, nil
-}
-
-// Setup the SFXContextObjectTpl instance we'll need to run with
-// the gotemplates to create the valid XML string param
-func setMultipleObjectsRequest(queryStringValues url.Values) (sfxContext *MultipleObjectsRequest, err error) {
 	rfts, err := parseOpenURL(queryStringValues)
 	if err != nil {
-		return sfxContext, fmt.Errorf("could not parse OpenURL: %v", err)
+		return multipleObjectsRequest, fmt.Errorf("could not parse OpenURL: %v", err)
 	}
 
 	genre, err := validGenre((*rfts)["genre"])
 	if err != nil {
-		return sfxContext, fmt.Errorf("genre is not valid: %v", err)
+		return multipleObjectsRequest, fmt.Errorf("genre is not valid: %v", err)
 	}
 
 	// Set up template values, but discard after generating requestXML
@@ -119,12 +110,9 @@ func setMultipleObjectsRequest(queryStringValues url.Values) (sfxContext *Multip
 		Genre:     genre,
 	}
 
-	// Init the empty object to populate with toRequestXML
-	sfxContext = &MultipleObjectsRequest{}
-
-	if err := sfxContext.toRequestXML(tmpl); err != nil {
-		return sfxContext, fmt.Errorf("could not convert multiple objects request to XML: %v", err)
+	if err := multipleObjectsRequest.toRequestXML(tmpl); err != nil {
+		return multipleObjectsRequest, fmt.Errorf("could not convert multiple objects request to XML: %v", err)
 	}
 
-	return
+	return multipleObjectsRequest, nil
 }
