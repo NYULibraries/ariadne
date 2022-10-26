@@ -1,7 +1,6 @@
 package sfx
 
 import (
-	"encoding/json"
 	"encoding/xml"
 	"fmt"
 	"net/url"
@@ -66,22 +65,6 @@ func parseOpenURL(queryStringValues url.Values) (*openURL, error) {
 	}
 
 	return parsed, nil
-}
-
-// Convert the response XML from SFX into a JSON string
-func toResponseJSON(from []byte) (to string, err error) {
-	var p MultiObjXMLResponseBody
-	if err = xml.Unmarshal(from, &p); err != nil {
-		return
-	}
-
-	b, err := json.MarshalIndent(p, "", "    ")
-	if err != nil {
-		return to, fmt.Errorf("could not marshal context object struct to json: %v", err)
-	}
-	to = string(b)
-
-	return
 }
 
 // Only return a valid genre that has been allowed by the OpenURL spec
