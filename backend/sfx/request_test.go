@@ -48,12 +48,12 @@ func TestNewMultipleObjectsRequest(t *testing.T) {
 func TestRequestXML(t *testing.T) {
 	var tests = []struct {
 		name        string
-		tpl         multipleObjectsRequestBody
+		tpl         multipleObjectsRequestBodyParams
 		expectedErr error
 	}{
-		{"genre=\"book\"; btitle=\"a book\"", multipleObjectsRequestBody{RftValues: &openURL{"genre": {"book"}, "btitle": {"a book"}}, Timestamp: mockTimestamp, Genre: "book"}, nil},
-		{"[empty request body]", multipleObjectsRequestBody{}, errors.New("error")},
-		{"genre=\"<rft:\"", multipleObjectsRequestBody{RftValues: &openURL{"genre": {"<rft:"}}, Timestamp: mockTimestamp, Genre: "book"}, errors.New("error")},
+		{"genre=\"book\"; btitle=\"a book\"", multipleObjectsRequestBodyParams{RftValues: &openURL{"genre": {"book"}, "btitle": {"a book"}}, Timestamp: mockTimestamp, Genre: "book"}, nil},
+		{"[empty request body]", multipleObjectsRequestBodyParams{}, errors.New("error")},
+		{"genre=\"<rft:\"", multipleObjectsRequestBodyParams{RftValues: &openURL{"genre": {"<rft:"}}, Timestamp: mockTimestamp, Genre: "book"}, errors.New("error")},
 	}
 
 	for _, testCase := range tests {

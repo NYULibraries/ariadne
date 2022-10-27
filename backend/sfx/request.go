@@ -20,7 +20,7 @@ type MultipleObjectsRequest struct {
 }
 
 // Values needed for templating an SFX request are parsed
-type multipleObjectsRequestBody struct {
+type multipleObjectsRequestBodyParams struct {
 	RftValues *openURL
 	Timestamp string
 	Genre     string
@@ -65,7 +65,7 @@ func (c MultipleObjectsRequest) do() (*MultipleObjectsResponse, error) {
 // Convert a request to an XML string
 // via gotemplates, in order to set it up as a post param to SFX
 // Store in MultipleObjectsRequest.RequestXML
-func (c *MultipleObjectsRequest) ParseRequestXML(tplVals multipleObjectsRequestBody) error {
+func (c *MultipleObjectsRequest) ParseRequestXML(tplVals multipleObjectsRequestBodyParams) error {
 	t := template.New("sfx-request.xml").Funcs(template.FuncMap{"ToLower": strings.ToLower})
 
 	t, err := t.Parse(sfxRequestTemplate)
@@ -104,7 +104,7 @@ func NewMultipleObjectsRequest(queryStringValues url.Values) (*MultipleObjectsRe
 
 	// Set up template values, but discard after generating requestXML
 	now := time.Now()
-	tmpl := multipleObjectsRequestBody{
+	tmpl := multipleObjectsRequestBodyParams{
 		Timestamp: now.Format(time.RFC3339Nano),
 		RftValues: rfts,
 		Genre:     genre,
@@ -119,7 +119,7 @@ func NewMultipleObjectsRequest(queryStringValues url.Values) (*MultipleObjectsRe
 	return multipleObjectsRequest, nil
 }
 
-func requestXML(templateValues multipleObjectsRequestBody) (string, error) {
+func requestXML(templateValues multipleObjectsRequestBodyParams) (string, error) {
 	t := template.New("sfx-request.xml").Funcs(template.FuncMap{"ToLower": strings.ToLower})
 
 	t, err := t.Parse(sfxRequestTemplate)
