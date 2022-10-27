@@ -59,6 +59,26 @@ func NewMultipleObjectsRequest(queryStringValues url.Values) (*MultipleObjectsRe
 		return multipleObjectsRequest, fmt.Errorf("could not convert multiple objects request to XML: %v", err)
 	}
 
+	httpRequest, err := newMultipleObjectsHTTPRequest(multipleObjectsRequest.RequestXML)
+	if err != nil {
+		return multipleObjectsRequest, fmt.Errorf("could not create new multiple objects request: %v", err)
+	}
+	// NOTE: This appears to drain httpRequest.Body, so when getting the dumped
+	// HTTP request later, make sure to get it from multipleObjectsRequest.HTTPRequest
+	// and not httpRequest.
+	multipleObjectsRequest.HTTPRequest = (*httpRequest)
+
+	dumpedHTTPRequest, err := httputil.DumpRequest(&multipleObjectsRequest.HTTPRequest, true)
+	if err != nil {
+		// TODO: Log this.  MultipleObjectsRequest.DumpedHTTPRequest field is for
+		// debugging only - it should not block the user request.
+	}
+	multipleObjectsRequest.DumpedHTTPRequest = string(dumpedHTTPRequest)
+
+	return multipleObjectsRequest, nil
+}
+
+func newMultipleObjectsHTTPRequest(requestXML string) (*http.Request, error) {
 	params := url.Values{}
 	params.Add("url_ctx_fmt", "info:ofi/fmt:xml:xsd:ctx")
 	params.Add("sfx.response_type", "multi_obj_xml")
@@ -66,26 +86,17 @@ func NewMultipleObjectsRequest(queryStringValues url.Values) (*MultipleObjectsRe
 	params.Add("sfx.show_availability", "1")
 	params.Add("sfx.ignore_date_threshold", "1")
 	params.Add("sfx.doi_url", "http://dx.doi.org")
-	params.Add("url_ctx_val", multipleObjectsRequest.RequestXML)
+	params.Add("url_ctx_val", requestXML)
 
 	request, err := http.NewRequest("POST", sfxURL, strings.NewReader(params.Encode()))
 	if err != nil {
-		return multipleObjectsRequest, fmt.Errorf("could not initialize request to SFX server: %v", err)
+		return request, fmt.Errorf("could not initialize request to SFX server: %v", err)
 	}
 
 	request.PostForm = params
 	request.Header.Add("Content-Type", "application/x-www-form-urlencoded")
 
-	dumpedHTTPRequest, err := httputil.DumpRequest(request, true)
-	if err != nil {
-		// TODO: Log this.  MultipleObjectsRequest.DumpedHTTPRequest field is for
-		// debugging only - it should not block the user request.
-	}
-	multipleObjectsRequest.DumpedHTTPRequest = string(dumpedHTTPRequest)
-
-	multipleObjectsRequest.HTTPRequest = (*request)
-
-	return multipleObjectsRequest, nil
+	return request, nil
 }
 
 // Parse SFX request body params from querystring.  For now, we use only fields
