@@ -89,7 +89,7 @@ func TestParseOpenURL(t *testing.T) {
 
 		t.Run(testname, func(t *testing.T) {
 			ans, err := parseMultipleObjectsRequestParams(tt.queryString)
-			if reflect.DeepEqual(ans, tt.expected) {
+			if ! reflect.DeepEqual(ans, tt.expected) {
 				t.Errorf("parseMultipleObjectsRequestParams returned '%v', expecting '%v'", ans, tt.expected)
 			}
 			if tt.expectedErr != nil {
