@@ -5,8 +5,6 @@ import (
 	"fmt"
 )
 
-type openURL map[string][]string
-
 // SFX service URL
 const DefaultSFXURL = "http://sfx.library.nyu.edu/sfxlcl41"
 

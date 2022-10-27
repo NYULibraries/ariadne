@@ -72,16 +72,16 @@ func TestRequestXML(t *testing.T) {
 	}
 }
 
-func TestParseOpenURL(t *testing.T) {
+func TestParseMultipleObjectsRequestParams(t *testing.T) {
 	var tests = []struct {
 		queryString map[string][]string
 		expected    map[string][]string
 		expectedErr error
 	}{
-		{map[string][]string{"genre": {"book"}, "rft.genre": {"book"}}, openURL{"genre": {"book"}}, nil},
-		{map[string][]string{"genre": {"book"}, "rft.genre": {"journal", "book"}}, openURL{"genre": {"journal", "book"}}, nil},
-		{map[string][]string{"genre": {"book"}, "rft.genre": {"journal"}}, openURL{"genre": {"journal"}}, nil},
-		{map[string][]string{"genre": {"book"}}, openURL{}, errors.New("error")},
+		{map[string][]string{"genre": {"book"}, "rft.genre": {"book"}}, map[string][]string{"genre": {"book"}}, nil},
+		{map[string][]string{"genre": {"book"}, "rft.genre": {"journal", "book"}}, map[string][]string{"genre": {"journal", "book"}}, nil},
+		{map[string][]string{"genre": {"book"}, "rft.genre": {"journal"}}, map[string][]string{"genre": {"journal"}}, nil},
+		{map[string][]string{"genre": {"book"}}, map[string][]string{}, errors.New("error")},
 	}
 
 	for _, tt := range tests {

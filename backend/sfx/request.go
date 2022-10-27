@@ -115,7 +115,7 @@ func parseMultipleObjectsRequestParams(queryStringValues url.Values) (multipleOb
 		}
 	}
 
-	if reflect.DeepEqual(rfts, &openURL{}) {
+	if reflect.DeepEqual(rfts, &map[string][]string{}) {
 		return params, fmt.Errorf("no valid querystring values to parse")
 	}
 
