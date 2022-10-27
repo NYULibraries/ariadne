@@ -5,6 +5,7 @@ import (
 	_ "embed"
 	"fmt"
 	"net/http"
+	"net/http/httputil"
 	"net/url"
 	"reflect"
 	"strings"
@@ -17,7 +18,8 @@ var sfxRequestTemplate string
 
 // Object representing everything that's needed to request from SFX
 type MultipleObjectsRequest struct {
-	RequestXML string
+	DumpedHTTPRequest string
+	RequestXML        string
 }
 
 // Values needed for templating an SFX request are parsed
@@ -47,6 +49,13 @@ func (c MultipleObjectsRequest) do() (*MultipleObjectsResponse, error) {
 
 	request.PostForm = params
 	request.Header.Add("Content-Type", "application/x-www-form-urlencoded")
+
+	dumpedHTTPRequest, err := httputil.DumpRequest(request, true)
+	if err != nil {
+		// TODO: Log this.  MultipleObjectsRequest.DumpedHTTPRequest field is for
+		// debugging only - it should not block the user request.
+	}
+	c.DumpedHTTPRequest = string(dumpedHTTPRequest)
 
 	client := http.Client{}
 	response, err := client.Do(request)
