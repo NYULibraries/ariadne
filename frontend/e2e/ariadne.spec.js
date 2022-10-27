@@ -9,22 +9,26 @@ const queryStrings = [
 
 test('renders the Corriere Fiorentino page correctly', async ({ page }) => {
   await page.goto(baseURl + queryStrings[1]);
+  await page.waitForFunction(() => document.querySelector('h6'));
+
   await expect(page).toHaveScreenshot('corriere_fiorentino.png');
 });
 
 test('renders a Press Reader link', async ({ page }) => {
   await page.goto(baseURl + queryStrings[1]);
+  await page.waitForFunction(() => document.querySelector('h6'));
+
   const [page2] = await Promise.all([
     page.waitForEvent('popup'),
     page.getByRole('link', { name: 'PressReader' }).click(),
   ]);
-  expect(page2.url()).toBe(
-    'http://proxy.library.nyu.edu/login?url=https://www.pressreader.com/italy/corriere-fiorentino'
-  );
+  expect(page2.url()).toBe('https://www.pressreader.com/italy/corriere-fiorentino');
 });
 
 test('renders the New Yorker page correctly', async ({ page }) => {
   await page.goto(baseURl + queryStrings[0]);
+  await page.waitForFunction(() => document.querySelector('h6'));
+
   await expect(page).toHaveScreenshot('new_yorker.png');
 });
 
@@ -49,7 +53,7 @@ test('renders a E Journal Full Text link', async ({ page }) => {
     page.waitForEvent('popup'),
     page.getByRole('link', { name: 'E Journal Full Text' }).click(),
   ]);
-  expect(page2.url()).toBe('http://proxy.library.nyu.edu/login?url=http://archives.newyorker.com/#folio=C1');
+  expect(page2.url()).toBe('https://archives.newyorker.com/#folio=C1');
 });
 
 test('renders a Gale General OneFile link', async ({ page }) => {
@@ -59,7 +63,7 @@ test('renders a Gale General OneFile link', async ({ page }) => {
     page.getByRole('link', { name: 'Gale General OneFile' }).click(),
   ]);
   expect(page3.url()).toBe(
-    'http://proxy.library.nyu.edu/login?url=https://link.gale.com/apps/pub/1161/ITOF?u=nysl_me_newyorku'
+    'https://go.gale.com/ps/i.do?p=ITOF&u=nysl_me_newyorku&id=GALE%7C1161&v=2.1&it=aboutJournal'
   );
 });
 
