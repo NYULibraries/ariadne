@@ -4,7 +4,6 @@ import (
 	"errors"
 	"fmt"
 	"io/ioutil"
-	"reflect"
 	"testing"
 )
 
@@ -25,35 +24,6 @@ func TestIsValidXML(t *testing.T) {
 			ans := isValidXML(data)
 			if ans != tt.expected {
 				t.Errorf("isValidXML returned '%v', expecting '%v'", ans, tt.expected)
-			}
-		})
-	}
-}
-
-func TestParseOpenURL(t *testing.T) {
-	var tests = []struct {
-		queryString map[string][]string
-		expected    map[string][]string
-		expectedErr error
-	}{
-		{map[string][]string{"genre": {"book"}, "rft.genre": {"book"}}, openURL{"genre": {"book"}}, nil},
-		{map[string][]string{"genre": {"book"}, "rft.genre": {"journal", "book"}}, openURL{"genre": {"journal", "book"}}, nil},
-		{map[string][]string{"genre": {"book"}, "rft.genre": {"journal"}}, openURL{"genre": {"journal"}}, nil},
-		{map[string][]string{"genre": {"book"}}, openURL{}, errors.New("error")},
-	}
-
-	for _, tt := range tests {
-		testname := fmt.Sprintf("%s", tt.queryString)
-
-		t.Run(testname, func(t *testing.T) {
-			ans, err := parseOpenURL(tt.queryString)
-			if reflect.DeepEqual(ans, tt.expected) {
-				t.Errorf("parseOpenURL returned '%v', expecting '%v'", ans, tt.expected)
-			}
-			if tt.expectedErr != nil {
-				if err == nil {
-					t.Errorf("parseOpenURL err was '%v', expecting '%v'", err, tt.expectedErr)
-				}
 			}
 		})
 	}

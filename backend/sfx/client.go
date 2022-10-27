@@ -3,9 +3,6 @@ package sfx
 import (
 	"encoding/xml"
 	"fmt"
-	"net/url"
-	"reflect"
-	"strings"
 )
 
 type openURL map[string][]string
@@ -42,29 +39,6 @@ func genresList() (genresList map[string]bool) {
 // Validate XML, by marshalling and checking for a blank error
 func isValidXML(data []byte) bool {
 	return xml.Unmarshal(data, new(interface{})) == nil
-}
-
-// Take an openurl and return an OpenURL object of only the rft-prefixed fields
-// These are the fields we are going to parse into XML as part of the
-// post request params
-func parseOpenURL(queryStringValues url.Values) (*openURL, error) {
-	parsed := &openURL{}
-
-	for k, v := range queryStringValues {
-		// Strip the "rft." prefix from the OpenURL
-		// and map into valid OpenURL fields
-		if strings.HasPrefix(k, "rft.") {
-			// E.g. "rft.book" becomes "book"
-			newKey := strings.Split(k, ".")[1]
-			(*parsed)[newKey] = v
-		}
-	}
-
-	if reflect.DeepEqual(parsed, &openURL{}) {
-		return nil, fmt.Errorf("no valid querystring values to parse")
-	}
-
-	return parsed, nil
 }
 
 // Only return a valid genre that has been allowed by the OpenURL spec

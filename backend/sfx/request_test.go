@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"net/url"
+	"reflect"
 	"strings"
 	"testing"
 )
@@ -15,8 +16,8 @@ func TestNewMultipleObjectsRequest(t *testing.T) {
 		querystring   url.Values
 		expectedError error
 	}{
-		{map[string][]string{"genre": {"book"}}, errors.New("could not parse OpenURL: no valid querystring values to parse")},
-		{map[string][]string{"rft.genre": {"podcast"}}, errors.New("genre is not valid: genre not in list of allowed genres: [podcast]")},
+		{map[string][]string{"genre": {"book"}}, errors.New("could not parse required request body params from querystring: no valid querystring values to parse")},
+		{map[string][]string{"rft.genre": {"podcast"}}, errors.New("could not parse required request body params from querystring: genre is not valid: genre not in list of allowed genres: [podcast]")},
 		{map[string][]string{"rft.genre": {"book"}, "rft.aulast": {"<rft:"}}, errors.New("could not convert multiple objects request to XML: request multiple objects XML is not valid XML: <nil>")},
 		{map[string][]string{"rft.genre": {"book"}, "rft.btitle": {"dune"}}, nil},
 	}
@@ -65,6 +66,35 @@ func TestRequestXML(t *testing.T) {
 			if testCase.expectedErr != nil {
 				if err == nil {
 					t.Errorf("toRequestXML err was '%v', expecting '%v'", err, testCase.expectedErr)
+				}
+			}
+		})
+	}
+}
+
+func TestParseOpenURL(t *testing.T) {
+	var tests = []struct {
+		queryString map[string][]string
+		expected    map[string][]string
+		expectedErr error
+	}{
+		{map[string][]string{"genre": {"book"}, "rft.genre": {"book"}}, openURL{"genre": {"book"}}, nil},
+		{map[string][]string{"genre": {"book"}, "rft.genre": {"journal", "book"}}, openURL{"genre": {"journal", "book"}}, nil},
+		{map[string][]string{"genre": {"book"}, "rft.genre": {"journal"}}, openURL{"genre": {"journal"}}, nil},
+		{map[string][]string{"genre": {"book"}}, openURL{}, errors.New("error")},
+	}
+
+	for _, tt := range tests {
+		testname := fmt.Sprintf("%s", tt.queryString)
+
+		t.Run(testname, func(t *testing.T) {
+			ans, err := parseMultipleObjectsRequestParams(tt.queryString)
+			if reflect.DeepEqual(ans, tt.expected) {
+				t.Errorf("parseMultipleObjectsRequestParams returned '%v', expecting '%v'", ans, tt.expected)
+			}
+			if tt.expectedErr != nil {
+				if err == nil {
+					t.Errorf("parseMultipleObjectsRequestParams err was '%v', expecting '%v'", err, tt.expectedErr)
 				}
 			}
 		})

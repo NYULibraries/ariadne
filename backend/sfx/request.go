@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"net/http"
 	"net/url"
+	"reflect"
 	"strings"
 	"text/template"
 	"time"
@@ -62,61 +63,55 @@ func (c MultipleObjectsRequest) do() (*MultipleObjectsResponse, error) {
 	return multipleObjectsResponse, nil
 }
 
-// Convert a request to an XML string
-// via gotemplates, in order to set it up as a post param to SFX
-// Store in MultipleObjectsRequest.RequestXML
-func (c *MultipleObjectsRequest) ParseRequestXML(tplVals multipleObjectsRequestBodyParams) error {
-	t := template.New("sfx-request.xml").Funcs(template.FuncMap{"ToLower": strings.ToLower})
-
-	t, err := t.Parse(sfxRequestTemplate)
-	if err != nil {
-		return fmt.Errorf("could not load template parse file: %v", err)
-	}
-
-	var tpl bytes.Buffer
-	if err = t.Execute(&tpl, tplVals); err != nil {
-		return fmt.Errorf("could not execute go template from multiple objects request: %v", err)
-	}
-
-	if !isValidXML(tpl.Bytes()) {
-		return fmt.Errorf("request multiple objects XML is not valid XML: %v", err)
-	}
-
-	// Set requestXML to this converted XML string
-	c.RequestXML = tpl.String()
-	return nil
-}
-
 // Take a querystring from the request and convert it to a valid
 // XML string for use in the POST to SFX, return MultipleObjectsRequest object
 func NewMultipleObjectsRequest(queryStringValues url.Values) (*MultipleObjectsRequest, error) {
 	multipleObjectsRequest := &MultipleObjectsRequest{}
 
-	rfts, err := parseOpenURL(queryStringValues)
+	multipleObjectsRequestBodyParams, err := parseMultipleObjectsRequestParams(queryStringValues)
 	if err != nil {
-		return multipleObjectsRequest, fmt.Errorf("could not parse OpenURL: %v", err)
+		return multipleObjectsRequest, fmt.Errorf("could not parse required request body params from querystring: %v", err)
 	}
 
-	genre, err := validGenre((*rfts)["genre"])
+	multipleObjectsRequest.RequestXML, err = requestXML(multipleObjectsRequestBodyParams)
 	if err != nil {
-		return multipleObjectsRequest, fmt.Errorf("genre is not valid: %v", err)
-	}
-
-	// Set up template values, but discard after generating requestXML
-	now := time.Now()
-	tmpl := multipleObjectsRequestBodyParams{
-		Timestamp: now.Format(time.RFC3339Nano),
-		RftValues: rfts,
-		Genre:     genre,
-	}
-
-	// Set requestXML to this converted XML string
-	multipleObjectsRequest.RequestXML, err = requestXML(tmpl)
-	if err := multipleObjectsRequest.ParseRequestXML(tmpl); err != nil {
 		return multipleObjectsRequest, fmt.Errorf("could not convert multiple objects request to XML: %v", err)
 	}
 
 	return multipleObjectsRequest, nil
+}
+
+// Parse SFX request body params from querystring.  For now, we use only fields
+// prefixed with "rft.".
+func parseMultipleObjectsRequestParams(queryStringValues url.Values) (multipleObjectsRequestBodyParams, error) {
+	params := multipleObjectsRequestBodyParams{}
+
+	rfts := &openURL{}
+
+	for k, v := range queryStringValues {
+		// Strip the "rft." prefix from the param name and map to valid OpenURL fields
+		if strings.HasPrefix(k, "rft.") {
+			// E.g. "rft.book" becomes "book"
+			newKey := strings.Split(k, ".")[1]
+			(*rfts)[newKey] = v
+		}
+	}
+
+	if reflect.DeepEqual(rfts, &openURL{}) {
+		return params, fmt.Errorf("no valid querystring values to parse")
+	}
+
+	genre, err := validGenre((*rfts)["genre"])
+	if err != nil {
+		return params, fmt.Errorf("genre is not valid: %v", err)
+	}
+
+	now := time.Now()
+	params.Timestamp = now.Format(time.RFC3339Nano)
+	params.RftValues = rfts
+	params.Genre = genre
+
+	return params, nil
 }
 
 func requestXML(templateValues multipleObjectsRequestBodyParams) (string, error) {
