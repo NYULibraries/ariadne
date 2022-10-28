@@ -15,6 +15,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --coverage --watchAll=false",
+    "pretest:e2e": "rm -rf e2e/actual/*",
     "test:e2e": "yarn playwright test",
     "test:e2e:debug": "yarn playwright test --debug",
     "posttest:e2e": "yarn playwright show-report",
