@@ -73,28 +73,29 @@ func TestRequestXML(t *testing.T) {
 }
 
 func TestParseMultipleObjectsRequestParams(t *testing.T) {
-	var tests = []struct {
-		queryString map[string][]string
-		expected    map[string][]string
-		expectedErr error
+	var testCases = []struct {
+		queryString   map[string][]string
+		expected      *map[string][]string
+		expectedError error
 	}{
-		{map[string][]string{"genre": {"book"}, "rft.genre": {"book"}}, map[string][]string{"genre": {"book"}}, nil},
-		{map[string][]string{"genre": {"book"}, "rft.genre": {"journal", "book"}}, map[string][]string{"genre": {"journal", "book"}}, nil},
-		{map[string][]string{"genre": {"book"}, "rft.genre": {"journal"}}, map[string][]string{"genre": {"journal"}}, nil},
-		{map[string][]string{"genre": {"book"}}, map[string][]string{}, errors.New("error")},
+		{map[string][]string{"genre": {"book"}, "rft.genre": {"book"}}, &map[string][]string{"genre": {"book"}}, nil},
+		{map[string][]string{"genre": {"book"}, "rft.genre": {"journal", "book"}}, &map[string][]string{"genre": {"journal", "book"}}, nil},
+		{map[string][]string{"genre": {"book"}, "rft.genre": {"journal"}}, &map[string][]string{"genre": {"journal"}}, nil},
+		{map[string][]string{"genre": {"book"}}, nil, errors.New("error")},
 	}
 
-	for _, tt := range tests {
-		testname := fmt.Sprintf("%s", tt.queryString)
+	for _, testCase := range testCases {
+		testname := fmt.Sprintf("%s", testCase.queryString)
 
 		t.Run(testname, func(t *testing.T) {
-			ans, err := parseMultipleObjectsRequestParams(tt.queryString)
-			if ! reflect.DeepEqual(ans, tt.expected) {
-				t.Errorf("parseMultipleObjectsRequestParams returned '%v', expecting '%v'", ans, tt.expected)
+			params, err := parseMultipleObjectsRequestParams(testCase.queryString)
+			actual := params.RftValues
+			if !reflect.DeepEqual(actual, testCase.expected) {
+				t.Errorf("parseMultipleObjectsRequestParams returned '%v', expecting '%v'", actual, testCase.expected)
 			}
-			if tt.expectedErr != nil {
+			if testCase.expectedError != nil {
 				if err == nil {
-					t.Errorf("parseMultipleObjectsRequestParams err was '%v', expecting '%v'", err, tt.expectedErr)
+					t.Errorf("parseMultipleObjectsRequestParams err was '%v', expecting '%v'", err, testCase.expectedError)
 				}
 			}
 		})
