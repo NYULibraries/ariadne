@@ -53,5 +53,18 @@ func multipleRecordsHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	fmt.Fprintln(w, sfxResponse.JSON)
+	ariadneResponse := response{
+		Errors:  []string{},
+		Records: sfxResponse.MultiObjXMLResponseBody,
+	}
+
+	responseJSON, err := json.MarshalIndent(ariadneResponse, "", "    ")
+	if err != nil {
+		ariadneResponse = response{
+			Errors:  []string{fmt.Sprintf("could not marshal ariadne response to JSON: %v", err)},
+			Records: sfx.MultiObjXMLResponseBody{},
+		}
+	}
+
+	fmt.Fprintln(w, string(responseJSON))
 }
