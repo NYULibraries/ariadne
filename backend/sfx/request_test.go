@@ -52,9 +52,9 @@ func TestRequestXML(t *testing.T) {
 		tpl         multipleObjectsRequestBodyParams
 		expectedErr error
 	}{
-		//{"genre=\"book\"; btitle=\"a book\"", multipleObjectsRequestBodyParams{RftValues: map[string][]string{"genre": {"book"}, "btitle": {"a book"}}, Timestamp: mockTimestamp, Genre: "book"}, nil},
+		{"genre=\"book\"; btitle=\"a book\"", multipleObjectsRequestBodyParams{RftValues: &map[string][]string{"genre": {"book"}, "btitle": {"a book"}}, Timestamp: mockTimestamp, Genre: "book"}, nil},
 		{"[empty request body]", multipleObjectsRequestBodyParams{}, errors.New("error")},
-		//{"genre=\"<rft:\"", multipleObjectsRequestBodyParams{RftValues: map[string][]string{"genre": {"<rft:"}}, Timestamp: mockTimestamp, Genre: "book"}, errors.New("error")},
+		{"genre=\"<rft:\"", multipleObjectsRequestBodyParams{RftValues: &map[string][]string{"genre": {"<rft:"}}, Timestamp: mockTimestamp, Genre: "book"}, errors.New("error")},
 	}
 
 	for _, testCase := range tests {
