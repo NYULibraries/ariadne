@@ -25,7 +25,7 @@ type MultipleObjectsRequest struct {
 
 // Values needed for templating an SFX request are parsed
 type multipleObjectsRequestBodyParams struct {
-	RftValues map[string][]string
+	RftValues *map[string][]string
 	Timestamp string
 	Genre     string
 }
@@ -104,14 +104,14 @@ func newMultipleObjectsHTTPRequest(requestXML string) (*http.Request, error) {
 func parseMultipleObjectsRequestParams(queryStringValues url.Values) (multipleObjectsRequestBodyParams, error) {
 	params := multipleObjectsRequestBodyParams{}
 
-	rfts := map[string][]string{}
+	rfts := &map[string][]string{}
 
 	for k, v := range queryStringValues {
 		// Strip the "rft." prefix from the param name and map to valid OpenURL fields
 		if strings.HasPrefix(k, "rft.") {
 			// E.g. "rft.book" becomes "book"
 			newKey := strings.Split(k, ".")[1]
-			rfts[newKey] = v
+			(*rfts)[newKey] = v
 		}
 	}
 
@@ -119,7 +119,7 @@ func parseMultipleObjectsRequestParams(queryStringValues url.Values) (multipleOb
 		return params, fmt.Errorf("no valid querystring values to parse")
 	}
 
-	genre, err := validGenre(rfts["genre"])
+	genre, err := validGenre((*rfts)["genre"])
 	if err != nil {
 		return params, fmt.Errorf("genre is not valid: %v", err)
 	}
