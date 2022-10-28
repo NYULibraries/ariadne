@@ -121,6 +121,8 @@ func newMultipleObjectsResponse(httpResponse *http.Response) (*MultipleObjectsRe
 		return multipleObjectsResponse, err
 	}
 
+	multipleObjectsResponse.MultiObjXMLResponseBody = multiObjXMLResponseBody
+
 	json, err := json.MarshalIndent(multiObjXMLResponseBody, "", "    ")
 	if err != nil {
 		return multipleObjectsResponse, fmt.Errorf("could not marshal SFX response body to JSON: %v", err)
