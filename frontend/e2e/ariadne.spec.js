@@ -9,12 +9,14 @@ const queryStrings = [
 
 test('renders the Corriere Fiorentino page correctly', async ({ page }) => {
   await page.goto(baseURl + queryStrings[1]);
+
+  await page.waitForFunction(() => document.querySelector('.image'));
   await page.waitForFunction(() => document.querySelector('h6'));
 
   await expect(page).toHaveScreenshot('corriere_fiorentino.png');
 });
 
-test('renders a Press Reader link', async ({ page }) => {
+test.skip('renders a Press Reader link', async ({ page }) => {
   await page.goto(baseURl + queryStrings[1]);
   await page.waitForFunction(() => document.querySelector('h6'));
 
@@ -27,6 +29,8 @@ test('renders a Press Reader link', async ({ page }) => {
 
 test('renders the New Yorker page correctly', async ({ page }) => {
   await page.goto(baseURl + queryStrings[0]);
+
+  await page.waitForFunction(() => document.querySelector('.image'));
   await page.waitForFunction(() => document.querySelector('h6'));
 
   await expect(page).toHaveScreenshot('new_yorker.png');
@@ -47,7 +51,7 @@ test('renders Loading...', async ({ page }) => {
   expect(await page.textContent('.loader')).toBe('Loading...');
 });
 
-test('renders a E Journal Full Text link', async ({ page }) => {
+test.skip('renders a E Journal Full Text link', async ({ page }) => {
   await page.goto(baseURl + queryStrings[0]);
   const [page2] = await Promise.all([
     page.waitForEvent('popup'),
@@ -56,7 +60,7 @@ test('renders a E Journal Full Text link', async ({ page }) => {
   expect(page2.url()).toBe('https://archives.newyorker.com/#folio=C1');
 });
 
-test('renders a Gale General OneFile link', async ({ page }) => {
+test.skip('renders a Gale General OneFile link', async ({ page }) => {
   await page.goto(baseURl + queryStrings[0]);
   const [page3] = await Promise.all([
     page.waitForEvent('popup'),
