@@ -1,7 +1,7 @@
 package api
 
 import (
-	"resolve/sfx"
+	"ariadne/sfx"
 )
 
 type response struct {

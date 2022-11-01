@@ -1,9 +1,9 @@
 package main
 
 import (
+	"ariadne/api"
 	"log"
 	"net/http"
-	"resolve/api"
 )
 
 // Run on port 8080

@@ -7,8 +7,8 @@ RUN go mod tidy && \
     go build && \
     go clean -modcache
 
-FROM alpine:latest  
+FROM alpine:latest
 WORKDIR /app
 COPY --from=builder /app ./
 EXPOSE 8080
-CMD ["./resolve"]  
+CMD ["./ariadne"]
