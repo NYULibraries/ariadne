@@ -1,11 +1,11 @@
 package api
 
 import (
+	"ariadne/sfx"
 	"encoding/json"
 	"fmt"
 	"log"
 	"net/http"
-	"resolve/sfx"
 )
 
 // Setup a new mux router with the appropriate routes for this app

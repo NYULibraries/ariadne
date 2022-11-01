@@ -1,14 +1,14 @@
 package api
 
 import (
+	"ariadne/sfx"
+	"ariadne/util"
 	"flag"
 	"fmt"
 	"io"
 	"net/http"
 	"net/http/httptest"
 	"os"
-	"resolve/sfx"
-	"resolve/util"
 	"testing"
 )
 
