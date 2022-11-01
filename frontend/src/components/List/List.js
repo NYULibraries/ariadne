@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { getCoverageStatement } from '../../aux/helpers';
 import useApi from '../../hooks/useApi';
 import linksApi from '../../api/fetchData';
@@ -7,10 +7,11 @@ import linksApi from '../../api/fetchData';
 const List = () => {
   const backendClient = useApi(linksApi.fetchData);
 
+  const backendClientRef = useRef(null);
+  backendClientRef.current = backendClient;
+
   useEffect(() => {
-    backendClient.fetchResource();
-    // We want to fetch the resource only once when component mounts, so we pass an empty array as a second argument
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    backendClientRef.current.fetchResource();
   }, []);
 
   return (
