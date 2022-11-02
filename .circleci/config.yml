@@ -20,12 +20,12 @@ commands:
           name: Tag images and push to Quay
           command: |
             export BRANCH_NO_SLASH=${CIRCLE_BRANCH//\//_}
-            docker tag resolve quay.io/nyulibraries/resolve:latest
-            docker tag resolve quay.io/nyulibraries/resolve:${BRANCH_NO_SLASH}
-            docker tag resolve quay.io/nyulibraries/resolve:${BRANCH_NO_SLASH}-${CIRCLE_SHA1}
-            docker push quay.io/nyulibraries/resolve:latest
-            docker push quay.io/nyulibraries/resolve:${BRANCH_NO_SLASH}
-            docker push quay.io/nyulibraries/resolve:${BRANCH_NO_SLASH}-${CIRCLE_SHA1}
+            docker tag ariadne quay.io/nyulibraries/ariadne:latest
+            docker tag ariadne quay.io/nyulibraries/ariadne:${BRANCH_NO_SLASH}
+            docker tag ariadne quay.io/nyulibraries/ariadne:${BRANCH_NO_SLASH}-${CIRCLE_SHA1}
+            docker push quay.io/nyulibraries/ariadne:latest
+            docker push quay.io/nyulibraries/ariadne:${BRANCH_NO_SLASH}
+            docker push quay.io/nyulibraries/ariadne:${BRANCH_NO_SLASH}-${CIRCLE_SHA1}
 
 jobs:
   frontend-test:
@@ -41,6 +41,7 @@ jobs:
           name: Run tests
           command: |
             docker-compose run frontend-test
+      - tag-images-and-push-to-quay
 
   frontend-build:
     <<: *docker-defaults
@@ -51,6 +52,7 @@ jobs:
           name: Build frontend service
           command:  |
             docker-compose build frontend
+      - tag-images-and-push-to-quay
 
   backend-test:
     <<: *docker-defaults
@@ -86,8 +88,7 @@ jobs:
           name: Run tests
           command: |
             docker-compose run backend-test
-# Don't tag and push to Quay until we decide upon a (semi-)permanent repository name.
-#      - tag-images-and-push-to-quay
+      - tag-images-and-push-to-quay
 
   backend-build:
     <<: *docker-defaults
