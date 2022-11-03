@@ -14,18 +14,21 @@ docker-defaults: &docker-defaults
 commands:
   tag-images-and-push-to-quay:
     description: Tag "latest", git branch, and git branch + git commit SHA1
+    parameters:
+      image:
+        type: string
     steps:
       - <<: *auth_quay
       - run:
           name: Tag images and push to Quay
           command: |
             export BRANCH_NO_SLASH=${CIRCLE_BRANCH//\//_}
-            docker tag ariadne quay.io/nyulibraries/ariadne:latest
-            docker tag ariadne quay.io/nyulibraries/ariadne:${BRANCH_NO_SLASH}
-            docker tag ariadne quay.io/nyulibraries/ariadne:${BRANCH_NO_SLASH}-${CIRCLE_SHA1}
-            docker push quay.io/nyulibraries/ariadne:latest
-            docker push quay.io/nyulibraries/ariadne:${BRANCH_NO_SLASH}
-            docker push quay.io/nyulibraries/ariadne:${BRANCH_NO_SLASH}-${CIRCLE_SHA1}
+            docker tag << parameters.image >> quay.io/nyulibraries/<< parameters.image >>:latest
+            docker tag << parameters.image >> quay.io/nyulibraries/<< parameters.image >>:${BRANCH_NO_SLASH}
+            docker tag << parameters.image >> quay.io/nyulibraries/<< parameters.image >>:${BRANCH_NO_SLASH}-${CIRCLE_SHA1}
+            docker push quay.io/nyulibraries/<< parameters.image >>:latest
+            docker push quay.io/nyulibraries/<< parameters.image >>:${BRANCH_NO_SLASH}
+            docker push quay.io/nyulibraries/<< parameters.image >>:${BRANCH_NO_SLASH}-${CIRCLE_SHA1}
 
 jobs:
   frontend-test:
@@ -52,7 +55,8 @@ jobs:
           name: Build frontend service
           command:  |
             docker-compose build frontend
-      - tag-images-and-push-to-quay
+      - tag-images-and-push-to-quay:
+          image: "ariadne_frontend-build"
 
   backend-test:
     <<: *docker-defaults
@@ -99,7 +103,8 @@ jobs:
           name: Build backend service
           command: |
             docker-compose build backend
-      - tag-images-and-push-to-quay
+      - tag-images-and-push-to-quay:
+          image: "ariadne_backend-build"
 
 workflows:
   version: 2.1
