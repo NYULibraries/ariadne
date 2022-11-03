@@ -55,7 +55,7 @@ jobs:
           command:  |
             docker-compose build frontend
       - tag-images-and-push-to-quay:
-          image: "ariadne_frontend-build"
+          image: "ariadne_frontend"
 
   backend-test:
     <<: *docker-defaults
@@ -102,7 +102,7 @@ jobs:
           command: |
             docker-compose build backend
       - tag-images-and-push-to-quay:
-          image: "ariadne_backend-build"
+          image: "ariadne_backend"
 
 workflows:
   version: 2.1
