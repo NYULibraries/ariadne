@@ -11,10 +11,6 @@ x-build-frontend: &x-build-frontend
   depends_on:
     - backend
 
-x-development-volumes-frontend: &x-development-volumes-frontend
-  volumes:
-    - ./frontend:/app
-
 x-build-backend: &x-build-backend
   image: ariadne_backend
   build:
@@ -31,6 +27,10 @@ x-build-backend-test: &x-build-backend-test
 x-development-volumes-backend: &x-development-volumes-backend
   volumes:
     - ./backend:/app
+
+x-development-volumes-frontend: &x-development-volumes-frontend
+  volumes:
+    - ./frontend:/app
 
 services:
   frontend:
