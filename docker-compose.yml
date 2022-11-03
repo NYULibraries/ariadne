@@ -15,6 +15,12 @@ x-development-volumes-frontend: &x-development-volumes-frontend
   volumes:
     - ./frontend:/app
 
+x-build-backend: &x-build-backend
+  image: ariadne_backend
+  build:
+    context: backend/
+    dockerfile: Dockerfile
+
 x-build-backend-test: &x-build-backend-test
   image: ariadne_backend-test
   build:
