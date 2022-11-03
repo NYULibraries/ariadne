@@ -1,11 +1,11 @@
 version: "3.9"
 
 x-build-frontend: &x-build-frontend
-  image: ariadne-frontend
+  image: ariadne_frontend
   build:
     context: frontend/
     cache_from:
-      - ariadne-frontend
+      - ariadne_frontend
   networks:
     - ariadne-net
   depends_on:
@@ -16,7 +16,7 @@ x-development-volumes-frontend: &x-development-volumes-frontend
     - ./frontend:/app
 
 x-build-backend-test: &x-build-backend-test
-  image: backend_test
+  image: ariadne_backend-test
   build:
     context: backend/
     # See file header comment in Dockerfile.debug-and-test
