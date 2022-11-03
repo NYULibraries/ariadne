@@ -49,6 +49,7 @@ services:
     # <<: *x-development-volumes-frontend
 
   backend:
+    <<: *x-build-backend
     build:
       context: backend/
     ports:
