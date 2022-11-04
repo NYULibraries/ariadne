@@ -15,10 +15,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --coverage --watchAll=false",
-    "pretest:e2e": "rm -rf e2e/actual/*",
-    "test:e2e": "yarn playwright test",
-    "test:e2e:debug": "yarn playwright test --debug",
-    "posttest:e2e": "yarn playwright show-report",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -40,7 +36,6 @@
     ]
   },
   "devDependencies": {
-    "@playwright/test": "^1.27.1",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
