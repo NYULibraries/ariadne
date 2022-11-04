@@ -7,6 +7,9 @@ import linksApi from '../../api/fetchData';
 const List = () => {
   const backendClient = useApi(linksApi.fetchData);
 
+  // This is a ref to the backendClient object. It has a property called .current. The value is persisted between renders.
+  // useRef doesn’t notify you when its content changes. Mutating the .current property doesn’t cause a re-render. Refs are not counted as dependencies for useEffect
+  // https://reactjs.org/docs/hooks-reference.html#useref
   const backendClientRef = useRef(null);
   backendClientRef.current = backendClient;
 
