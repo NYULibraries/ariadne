@@ -1,13 +1,13 @@
 version: "3.9"
 
 x-build-frontend: &x-build-frontend
-  image: resolve-frontend
+  image: ariadne-frontend
   build:
     context: frontend/
     cache_from:
-      - resolve-frontend
+      - ariadne-frontend
   networks:
-    - resolve-net
+    - ariadne-net
   depends_on:
     - backend
 
@@ -48,14 +48,14 @@ services:
     ports:
       - "8080:8080"
     networks:
-      - resolve-net
+      - ariadne-net
     # <<: *x-development-volumes-backend
 
   backend-debug:
     <<: *x-build-backend-test
     # Dockerfile.debug-and-test is primarily a test container.  We need to override
     # the `go test...` CMD, running delve instead.
-    command: [ "./tools/dlv", "--listen=:2345", "--headless=true", "--api-version=2", "--accept-multiclient", "exec", "./resolve" ]
+    command: [ "./tools/dlv", "--listen=:2345", "--headless=true", "--api-version=2", "--accept-multiclient", "exec", "./ariadne" ]
     cap_add:
       - SYS_PTRACE
     ports:
@@ -64,7 +64,7 @@ services:
       # Application port
       - "8080:8080"
     networks:
-      - resolve-net
+      - ariadne-net
     security_opt:
       - apparmor:unconfined
     # <<: *x-development-volumes-backend
@@ -86,5 +86,5 @@ services:
     # <<: *x-development-volumes-backend
 
 networks:
-  resolve-net:
+  ariadne-net:
     driver: bridge
