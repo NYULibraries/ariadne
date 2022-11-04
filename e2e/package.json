@@ -6,6 +6,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "pretest:e2e": "rm -rf tests/actual/*",
     "test:e2e": "yarn playwright test",
     "test:e2e:debug": "yarn playwright test --debug",
     "posttest:e2e": "yarn playwright show-report"
