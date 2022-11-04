@@ -3,11 +3,9 @@ package sfx
 import (
 	"bytes"
 	_ "embed"
-	"encoding/json"
-	"encoding/xml"
 	"fmt"
-	"io/ioutil"
 	"net/http"
+	"net/http/httputil"
 	"net/url"
 	"reflect"
 	"strings"
@@ -15,37 +13,72 @@ import (
 	"time"
 )
 
-type OpenURL map[string][]string
+//go:embed templates/context-objects.xml
+var sfxRequestTemplate string
 
 // Object representing everything that's needed to request from SFX
-type SFXContextObjectRequest struct {
-	RequestXML string
-}
-
-type SFXRequest interface {
-	Request()
-	toRequestXML()
+type MultipleObjectsRequest struct {
+	DumpedHTTPRequest string
+	HTTPRequest       http.Request
+	RequestXML        string
 }
 
 // Values needed for templating an SFX request are parsed
-type sfxContextObjectRequestBody struct {
-	RftValues *OpenURL
+type multipleObjectsRequestBodyParams struct {
+	RftValues *map[string][]string
 	Timestamp string
 	Genre     string
 }
 
-//go:embed templates/sfx-request.xml
-var sfxRequestTemplate string
+func (c MultipleObjectsRequest) do() (*MultipleObjectsResponse, error) {
+	client := http.Client{}
+	response, err := client.Do(&c.HTTPRequest)
+	if err != nil {
+		return &MultipleObjectsResponse{}, fmt.Errorf("could not do post to SFX server: %v", err)
+	}
+	defer response.Body.Close()
 
-// SFX service URL
-const DefaultSFXURL = "http://sfx.library.nyu.edu/sfxlcl41"
+	multipleObjectsResponse, err := newMultipleObjectsResponse(response)
+	if err != nil {
+		return multipleObjectsResponse, err
+	}
 
-var sfxURL = DefaultSFXURL
+	return multipleObjectsResponse, nil
+}
 
-// Construct and run the actual POST request to the SFX server
-// Expects an XML string in a SFXContextObjectRequest obj which will be appended to the PostForm params
-// Body is blank because that is how SFX expects it
-func (c SFXContextObjectRequest) Request() (body string, err error) {
+func NewMultipleObjectsRequest(queryStringValues url.Values) (*MultipleObjectsRequest, error) {
+	multipleObjectsRequest := &MultipleObjectsRequest{}
+
+	multipleObjectsRequestBodyParams, err := parseMultipleObjectsRequestParams(queryStringValues)
+	if err != nil {
+		return multipleObjectsRequest, fmt.Errorf("could not parse required request body params from querystring: %v", err)
+	}
+
+	multipleObjectsRequest.RequestXML, err = requestXML(multipleObjectsRequestBodyParams)
+	if err != nil {
+		return multipleObjectsRequest, fmt.Errorf("could not convert multiple objects request to XML: %v", err)
+	}
+
+	httpRequest, err := newMultipleObjectsHTTPRequest(multipleObjectsRequest.RequestXML)
+	if err != nil {
+		return multipleObjectsRequest, fmt.Errorf("could not create new multiple objects request: %v", err)
+	}
+	// NOTE: This appears to drain httpRequest.Body, so when getting the dumped
+	// HTTP request later, make sure to get it from multipleObjectsRequest.HTTPRequest
+	// and not httpRequest.
+	multipleObjectsRequest.HTTPRequest = (*httpRequest)
+
+	dumpedHTTPRequest, err := httputil.DumpRequest(&multipleObjectsRequest.HTTPRequest, true)
+	if err != nil {
+		// TODO: Log this.  MultipleObjectsRequest.DumpedHTTPRequest field is for
+		// debugging only - it should not block the user request.
+	}
+	multipleObjectsRequest.DumpedHTTPRequest = string(dumpedHTTPRequest)
+
+	return multipleObjectsRequest, nil
+}
+
+func newMultipleObjectsHTTPRequest(requestXML string) (*http.Request, error) {
 	params := url.Values{}
 	params.Add("url_ctx_fmt", "info:ofi/fmt:xml:xsd:ctx")
 	params.Add("sfx.response_type", "multi_obj_xml")
@@ -53,174 +86,68 @@ func (c SFXContextObjectRequest) Request() (body string, err error) {
 	params.Add("sfx.show_availability", "1")
 	params.Add("sfx.ignore_date_threshold", "1")
 	params.Add("sfx.doi_url", "http://dx.doi.org")
-	params.Add("url_ctx_val", c.RequestXML)
+	params.Add("url_ctx_val", requestXML)
 
 	request, err := http.NewRequest("POST", sfxURL, strings.NewReader(params.Encode()))
 	if err != nil {
-		return body, fmt.Errorf("could not initialize request to SFX server: %v", err)
+		return request, fmt.Errorf("could not initialize request to SFX server: %v", err)
 	}
 
 	request.PostForm = params
 	request.Header.Add("Content-Type", "application/x-www-form-urlencoded")
 
-	client := http.Client{}
-	response, err := client.Do(request)
-	if err != nil {
-		return body, fmt.Errorf("could not do post to SFX server: %v", err)
-	}
-
-	defer response.Body.Close()
-	sfxResponse, err := ioutil.ReadAll(response.Body)
-	if err != nil {
-		return body, fmt.Errorf("could not read response from SFX server: %v", err)
-	}
-
-	// Convert to JSON before returning
-	body, err = toResponseJson(sfxResponse)
-
-	if err != nil {
-		return body, fmt.Errorf("could not convert SFX response XML to JSON: %v", err)
-	}
-
-	return
+	return request, nil
 }
 
-// Convert a context object request to an XML string
-// via gotemplates, in order to set it up as a post param to SFX
-// Store in SFXContextObjectRequest.RequestXML
-func (c *SFXContextObjectRequest) toRequestXML(tplVals sfxContextObjectRequestBody) error {
-	t := template.New("sfx-request.xml").Funcs(template.FuncMap{"ToLower": strings.ToLower})
+// Parse SFX request body params from querystring.  For now, we use only fields
+// prefixed with "rft.".
+func parseMultipleObjectsRequestParams(queryStringValues url.Values) (multipleObjectsRequestBodyParams, error) {
+	params := multipleObjectsRequestBodyParams{}
 
-	t, err := t.Parse(sfxRequestTemplate)
-	if err != nil {
-		return fmt.Errorf("could not load template parse file: %v", err)
-	}
-
-	var tpl bytes.Buffer
-	if err = t.Execute(&tpl, tplVals); err != nil {
-		return fmt.Errorf("could not execute go template from context object request: %v", err)
-	}
-
-	if !isValidXML(tpl.Bytes()) {
-		return fmt.Errorf("request context object XML is not valid XML: %v", err)
-	}
-
-	// Set requestXML to this converted XML string
-	c.RequestXML = tpl.String()
-	return nil
-}
-
-// Take a querystring from the request and convert it to a valid
-// XML string for use in the POST to SFX, return SFXContextObjectRequest object
-func NewSFXContextObjectRequest(qs url.Values) (sfxContextObjectRequest *SFXContextObjectRequest, err error) {
-	sfxContextObjectRequest, err = setSFXContextObjectRequest(qs)
-	if err != nil {
-		return sfxContextObjectRequest, fmt.Errorf("could not create context object for request: %v", err)
-	}
-
-	return
-}
-
-func SetSFXURL(dependencyInjectedURL string) {
-	sfxURL = dependencyInjectedURL
-}
-
-// A list of the valid genres as defined by the OpenURL spec
-// Is this correct? See genres list on NISO spec page 59: https://groups.niso.org/higherlogic/ws/public/download/14833/z39_88_2004_r2010.pdf
-func genresList() (genresList map[string]bool) {
-	genresList = map[string]bool{
-		"journal":    true,
-		"book":       true,
-		"conference": true,
-		"article":    true,
-		"preprint":   true,
-		"proceeding": true,
-		"bookitem":   true,
-	}
-
-	return
-}
-
-// Validate XML, by marshalling and checking for a blank error
-func isValidXML(data []byte) bool {
-	return xml.Unmarshal(data, new(interface{})) == nil
-}
-
-// Take an openurl and return an OpenURL object of only the rft-prefixed fields
-// These are the fields we are going to parse into XML as part of the
-// post request params
-func parseOpenURL(queryStringValues url.Values) (*OpenURL, error) {
-	parsed := &OpenURL{}
+	rfts := &map[string][]string{}
 
 	for k, v := range queryStringValues {
-		// Strip the "rft." prefix from the OpenURL
-		// and map into valid OpenURL fields
+		// Strip the "rft." prefix from the param name and map to valid OpenURL fields
 		if strings.HasPrefix(k, "rft.") {
 			// E.g. "rft.book" becomes "book"
 			newKey := strings.Split(k, ".")[1]
-			(*parsed)[newKey] = v
+			(*rfts)[newKey] = v
 		}
 	}
 
-	if reflect.DeepEqual(parsed, &OpenURL{}) {
-		return nil, fmt.Errorf("no valid querystring values to parse")
-	}
-
-	return parsed, nil
-}
-
-// Setup the SFXContextObjectTpl instance we'll need to run with
-// the gotemplates to create the valid XML string param
-func setSFXContextObjectRequest(queryStringValues url.Values) (sfxContext *SFXContextObjectRequest, err error) {
-	rfts, err := parseOpenURL(queryStringValues)
-	if err != nil {
-		return sfxContext, fmt.Errorf("could not parse OpenURL: %v", err)
+	if reflect.DeepEqual(rfts, &map[string][]string{}) {
+		return params, fmt.Errorf("no valid querystring values to parse")
 	}
 
 	genre, err := validGenre((*rfts)["genre"])
 	if err != nil {
-		return sfxContext, fmt.Errorf("genre is not valid: %v", err)
+		return params, fmt.Errorf("genre is not valid: %v", err)
 	}
 
-	// Set up template values, but discard after generating requestXML
 	now := time.Now()
-	tmpl := sfxContextObjectRequestBody{
-		Timestamp: now.Format(time.RFC3339Nano),
-		RftValues: rfts,
-		Genre:     genre,
-	}
+	params.Timestamp = now.Format(time.RFC3339Nano)
+	params.RftValues = rfts
+	params.Genre = genre
 
-	// Init the empty object to populate with toRequestXML
-	sfxContext = &SFXContextObjectRequest{}
-
-	if err := sfxContext.toRequestXML(tmpl); err != nil {
-		return sfxContext, fmt.Errorf("could not convert request context object to XML: %v", err)
-	}
-
-	return
+	return params, nil
 }
 
-// Convert the response XML from SFX into a JSON string
-func toResponseJson(from []byte) (to string, err error) {
-	var p SFXContextObjectSet
-	if err = xml.Unmarshal(from, &p); err != nil {
-		return
-	}
+func requestXML(templateValues multipleObjectsRequestBodyParams) (string, error) {
+	t := template.New("sfx-request.xml").Funcs(template.FuncMap{"ToLower": strings.ToLower})
 
-	b, err := json.MarshalIndent(p, "", "    ")
+	t, err := t.Parse(sfxRequestTemplate)
 	if err != nil {
-		return to, fmt.Errorf("could not marshal context object struct to json: %v", err)
+		return "", fmt.Errorf("could not load template parse file: %v", err)
 	}
-	to = string(b)
 
-	return
-}
-
-// Only return a valid genre that has been allowed by the OpenURL spec
-func validGenre(genre []string) (string, error) {
-	validGenres := genresList()
-	if len(genre) > 0 && validGenres[genre[0]] {
-		return genre[0], nil
+	var tpl bytes.Buffer
+	if err = t.Execute(&tpl, templateValues); err != nil {
+		return "", fmt.Errorf("could not execute go template from multiple objects request: %v", err)
 	}
-	return "", fmt.Errorf("genre not in list of allowed genres: %v", genre)
+
+	if !isValidXML(tpl.Bytes()) {
+		return "", fmt.Errorf("request multiple objects XML is not valid XML: %v", err)
+	}
+
+	return tpl.String(), nil
 }
