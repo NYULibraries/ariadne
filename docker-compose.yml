@@ -11,6 +11,17 @@ x-build-frontend: &x-build-frontend
   depends_on:
     - backend
 
+x-build-frontend-test: &x-build-frontend-test
+  image: ariadne_frontend-test
+  build:
+    context: frontend/
+    cache_from:
+      - ariadne_frontend-test
+  networks:
+    - ariadne-net
+  depends_on:
+    - backend
+
 x-build-backend: &x-build-backend
   image: ariadne_backend
   build:
@@ -40,7 +51,7 @@ services:
     # <<: *x-development-volumes-frontend
 
   frontend-test:
-    <<: *x-build-frontend
+    <<: *x-build-frontend-test
     command: yarn test
     environment:
       # We need to override REACT_APP_API_URL in `.env.test` in order to test against
