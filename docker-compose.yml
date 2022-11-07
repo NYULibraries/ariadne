@@ -26,6 +26,13 @@ x-development-volumes-backend: &x-development-volumes-backend
   volumes:
     - ./backend:/app
 
+x-build-e2e: &x-build-e2e
+  image: ariadne-e2e
+  build:
+    context: ./e2e
+    cache_from:
+      - ariadne-e2e
+
 services:
   frontend:
     <<: *x-build-frontend
@@ -84,6 +91,18 @@ services:
         go tool cover -func=coverage.out
         # go tool cover -html=coverage.out
     # <<: *x-development-volumes-backend
+
+  e2e:
+    <<: *x-build-e2e
+    depends_on:
+      - backend
+      - frontend
+    command: yarn test:e2e
+    networks:
+      - ariadne-net
+    environment:
+      - PLAYWRIGHT_BASE_URL=http://frontend:3000/
+    # <<: *x-development-volumes-frontend 
 
 networks:
   ariadne-net:
