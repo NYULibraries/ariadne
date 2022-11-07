@@ -149,6 +149,15 @@ Run tests in a container:
 docker-compose run backend-test
 ```
 
+### E2E tests
+
+Run tests:
+
+```
+cd e2e/
+yarn test:e2e
+```
+
 ## Example
 
 This is the existing SFX service response for The New Yorker:
