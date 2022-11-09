@@ -3,6 +3,8 @@ package api
 import (
 	"ariadne/sfx"
 	"ariadne/util"
+	_ "embed"
+	"encoding/json"
 	"flag"
 	"fmt"
 	"io"
@@ -12,15 +14,19 @@ import (
 	"testing"
 )
 
+//go:embed testdata/server/test-cases.json
+var testCasesJSON []byte
+
 type TestCase struct {
 	// Identifier used for fixture and golden file basename.
-	key string
+	Key string
 	// Human-readable name/description of test case
-	name string
+	Name string
 	// OpenURL querystring
-	queryString string
+	QueryString string
 }
 
+var testCases []TestCase
 var updateGoldenFiles = flag.Bool("update-golden-files", false, "update the golden files")
 
 // --update-sfx-fake-responses flag?
@@ -37,24 +43,17 @@ var updateGoldenFiles = flag.Bool("update-golden-files", false, "update the gold
 
 func TestMain(m *testing.M) {
 	flag.Parse()
+
+	err := json.Unmarshal(testCasesJSON, &testCases)
+	if err != nil {
+		panic(fmt.Sprintf("Error reading test cases file: %s", err))
+	}
+
 	os.Exit(m.Run())
 }
 
 func TestResponseJSONRoute(t *testing.T) {
 	var currentTestCase TestCase
-
-	testCases := []TestCase{
-		{
-			key:         "corriere-fiorentino",
-			name:        "Corriere Fiorentino",
-			queryString: "ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2018-07-15T02:13:26IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo-dedupmrg524707060&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=journal&rft.jtitle=Corriere%20Fiorentino&rft.btitle=Corriere%20Fiorentino&rft.aulast=&rft.aufirst=&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.pub=&rft.place=Italy&rft.issn=&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=3400000000000901&rft.primo=dedupmrg524707060&rft.eisbn=&rft_dat=<NYUMARCIT>3400000000000901</NYUMARCIT><grp_id>582323038</grp_id><oa></oa><url></url>&rft_id=info:oai/&req.language=eng",
-		},
-		{
-			key:         "the-new-yorker",
-			name:        "The New Yorker",
-			queryString: "url_ver=Z39.88-2004&url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&ctx_ver=Z39.88-2004&ctx_tim=2021-10-22T12%3A29%3A27-04%3A00&ctx_id=&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rft.aulast=Ross&rft.date=2002&rft.eissn=2163-3827&rft.genre=journal&rft.issn=0028-792X&rft.jtitle=New+Yorker&rft.language=eng&rft.lccn=++2011201780&rft.object_id=110975413975944&rft.oclcnum=909782404&rft.place=New+York&rft.private_data=909782404<fssessid>0<%2Ffssessid>&rft.pub=F-R+Pub.+Corp.&rft.stitle=NEW+YORKER&rft.title=New+Yorker&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft_id=info%3Aoclcnum%2F909782404&rft_id=urn%3AISSN%3A0028-792X&req.ip=209.150.44.95&rfr_id=info%3Asid%2FFirstSearch%3AWorldCat",
-		},
-	}
 
 	fakeSFXServer := httptest.NewServer(
 		http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
@@ -76,12 +75,12 @@ func TestResponseJSONRoute(t *testing.T) {
 	router := NewRouter()
 
 	for _, testCase := range testCases {
-		t.Run(testCase.name, func(t *testing.T) {
+		t.Run(testCase.Name, func(t *testing.T) {
 			currentTestCase = testCase
 
 			request, err := http.NewRequest(
 				"GET",
-				"/v0/?"+testCase.queryString,
+				"/v0/?"+testCase.QueryString,
 				nil,
 			)
 			if err != nil {
@@ -104,7 +103,7 @@ func TestResponseJSONRoute(t *testing.T) {
 			goldenValue, err := getGoldenValue(testCase)
 			if err != nil {
 				t.Fatalf("Error retrieving golden value for test case \"%s\": %s",
-					testCase.name, err)
+					testCase.Name, err)
 			}
 
 			actualValue := string(body)
@@ -112,7 +111,7 @@ func TestResponseJSONRoute(t *testing.T) {
 				err := writeActualToTmp(testCase, actualValue)
 				if err != nil {
 					t.Fatalf("Error writing actual temp file for test case \"%s\": %s",
-						testCase.name, err)
+						testCase.Name, err)
 				}
 
 				goldenFile := goldenFile(testCase)
@@ -149,16 +148,27 @@ func getTestdataFileContents(filename string) (string, error) {
 	return string(bytes), nil
 }
 
+func getTestCases() ([]TestCase, error) {
+	testCases := []TestCase{}
+
+	err := json.Unmarshal(testCasesJSON, &testCases)
+	if err != nil {
+		return testCases, err
+	}
+
+	return testCases, nil
+}
+
 func goldenFile(testCase TestCase) string {
-	return "testdata/server/golden/" + testCase.key + ".json"
+	return "testdata/server/golden/" + testCase.Key + ".json"
 }
 
 func sfxFakeResponseFile(testCase TestCase) string {
-	return "testdata/server/fixtures/sfx-fake-responses/" + testCase.key + ".xml"
+	return "testdata/server/fixtures/sfx-fake-responses/" + testCase.Key + ".xml"
 }
 
 func tmpFile(testCase TestCase) string {
-	return "testdata/server/tmp/actual/" + testCase.key + ".json"
+	return "testdata/server/tmp/actual/" + testCase.Key + ".json"
 }
 
 func updateGoldenFile(testCase TestCase, bytes []byte) error {
