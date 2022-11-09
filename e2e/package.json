@@ -1,0 +1,17 @@
+{
+  "name": "ariadne-playwright",
+  "version": "1.0.0",
+  "description": "Playwright E2E tests for ariadne",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "pretest:e2e": "rm -rf tests/actual/*",
+    "test:e2e": "yarn playwright test",
+    "test:e2e:debug": "yarn playwright test --debug",
+    "posttest:e2e": "yarn playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.27.1"
+  }
+}
