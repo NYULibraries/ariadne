@@ -12,7 +12,7 @@ x-build-frontend: &x-build-frontend
     - backend
 
 x-build-frontend-test: &x-build-frontend-test
-  image: ariadne_frontend-test
+  image: ariadne_frontend_test
   build:
     context: frontend/
     cache_from:
@@ -29,7 +29,7 @@ x-build-backend: &x-build-backend
     dockerfile: Dockerfile
 
 x-build-backend-test: &x-build-backend-test
-  image: ariadne_backend-test
+  image: ariadne_backend_test
   build:
     context: backend/
     # See file header comment in Dockerfile.debug-and-test
