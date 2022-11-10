@@ -23,9 +23,9 @@ testCases.forEach( testCase => {
     });
 
     test.skip('renders correctly', async () => {
-      const snapshot = render(<List />);
+      const actual = render(<List />);
       await waitForElementToBeRemoved(() => screen.getByText(/Loading.../i));
-      expect(snapshot.asFragment()).toMatchSnapshot();
+      expect(actual.asFragment()).toMatchSnapshot();
     });
 
     test('renders the search results', async () => {
