@@ -21,7 +21,7 @@ const List = () => {
     <>
       <div className="jumbotron">
         <div className="container text-center">
-          <p>Displaying search results...</p>
+          <p>{RESULTS_HEADER_TEXT}</p>
           <p>Note: Alternate titles might have matched your search terms</p>
         </div>
       </div>
@@ -59,4 +59,5 @@ const List = () => {
 };
 
 export const LOADING_TEXT = 'Loading...';
+export const RESULTS_HEADER_TEXT = 'Displaying search results...';
 export default List;

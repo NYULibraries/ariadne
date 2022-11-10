@@ -1,6 +1,6 @@
 import { render, screen, waitFor, waitForElementToBeRemoved } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import List, {LOADING_TEXT} from './List';
+import List, {LOADING_TEXT, RESULTS_HEADER_TEXT} from './List';
 import { getTestCases } from '../../testutils';
 import apiClient from '../../api/apiClient';
 
@@ -73,12 +73,12 @@ testCases.forEach( testCase => {
       expect(actual.asFragment()).toMatchSnapshot();
     });
 
-    test('renders the search results', async () => {
+    test('renders the search results header text', async () => {
       render(<List />);
       // See comment at top of file: 'Clearing "wrap in act()" warnings'
       await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
-      const linkElement = await waitFor(() => screen.getByText(/Displaying search results.../i));
-      expect(linkElement).toBeInTheDocument();
+      const resultsHeaderText = await waitFor(() => screen.getByText(new RegExp(RESULTS_HEADER_TEXT, 'i')));
+      expect(resultsHeaderText).toBeInTheDocument();
     });
 
     test(`renders ${LOADING_TEXT}`, async () => {
