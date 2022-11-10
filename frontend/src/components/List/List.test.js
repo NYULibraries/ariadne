@@ -61,10 +61,17 @@ testCases.forEach( testCase => {
       jest.clearAllMocks();
     });
 
-    test('renders with a className of list-group', async () => {
-      const { container } = render(<List />);
+    test(`renders ${LOADING_TEXT}`, async () => {
+      render(<List />);
+      const linkElement = screen.getByText(LOADING_TEXT_REGEXP);
+      expect(linkElement).toBeInTheDocument();
+      // See comment at top of file: 'Clearing "wrap in act()" warnings'
       await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
-      expect(container.getElementsByClassName('list-group').length).toBe(1);
+    });
+
+    test(`${LOADING_TEXT} no longer present in the DOM after loading data`, async () => {
+      const { getByText } = render(<List />);
+      await waitForElementToBeRemoved(() => getByText(LOADING_TEXT_REGEXP));
     });
 
     test('renders correctly', async () => {
@@ -81,12 +88,10 @@ testCases.forEach( testCase => {
       expect(resultsHeaderText).toBeInTheDocument();
     });
 
-    test(`renders ${LOADING_TEXT}`, async () => {
-      render(<List />);
-      const linkElement = screen.getByText(LOADING_TEXT_REGEXP);
-      expect(linkElement).toBeInTheDocument();
-      // See comment at top of file: 'Clearing "wrap in act()" warnings'
+    test('renders with a className of list-group', async () => {
+      const { container } = render(<List />);
       await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
+      expect(container.getElementsByClassName('list-group').length).toBe(1);
     });
 
     test('renders Ask a Librarian', async () => {
@@ -95,11 +100,6 @@ testCases.forEach( testCase => {
       await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
       const linkElement = await waitFor(() => screen.getByText(/Ask a Librarian/i));
       expect(linkElement).toBeInTheDocument();
-    });
-
-    test(`${LOADING_TEXT} no longer present in the DOM after loading data`, async () => {
-      const { getByText } = render(<List />);
-      await waitForElementToBeRemoved(() => getByText(LOADING_TEXT_REGEXP));
     });
 
   });
