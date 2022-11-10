@@ -67,7 +67,7 @@ testCases.forEach( testCase => {
       expect(container.getElementsByClassName('list-group').length).toBe(1);
     });
 
-    test.skip('renders correctly', async () => {
+    test('renders correctly', async () => {
       const actual = render(<List />);
       await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
       expect(actual.asFragment()).toMatchSnapshot();
