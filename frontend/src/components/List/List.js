@@ -26,7 +26,7 @@ const List = () => {
         </div>
       </div>
       {/* TODO: we could put a spinner here: */}
-      {backendClient.loading && <div className="loader">Loading...</div>}
+      {backendClient.loading && <div className="loader">{LOADING_TEXT}</div>}
       {backendClient.error && <div className="i-am-centered">{backendClient.error}</div>}
       <div className="i-am-centered">
         <div className="list-group">
@@ -58,4 +58,5 @@ const List = () => {
   );
 };
 
+export const LOADING_TEXT = 'Loading...';
 export default List;

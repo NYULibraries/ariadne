@@ -1,7 +1,9 @@
 import { render, screen, waitFor, waitForElementToBeRemoved } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import List from './List';
+import List, {LOADING_TEXT} from './List';
 import { getTestCases } from '../../testutils';
+
+const LOADING_TEXT_REGEXP = new RegExp(LOADING_TEXT, 'i');
 
 const testCases = getTestCases();
 testCases.forEach( testCase => {
@@ -24,7 +26,7 @@ testCases.forEach( testCase => {
 
     test.skip('renders correctly', async () => {
       const actual = render(<List />);
-      await waitForElementToBeRemoved(() => screen.getByText(/Loading.../i));
+      await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
       expect(actual.asFragment()).toMatchSnapshot();
     });
 
@@ -34,9 +36,9 @@ testCases.forEach( testCase => {
       expect(linkElement).toBeInTheDocument();
     });
 
-    test('renders Loading...', () => {
+    test(`renders ${LOADING_TEXT}`, () => {
       render(<List />);
-      const linkElement = screen.getByText(/Loading/i);
+      const linkElement = screen.getByText(LOADING_TEXT_REGEXP);
       expect(linkElement).toBeInTheDocument();
     });
 
@@ -46,9 +48,9 @@ testCases.forEach( testCase => {
       expect(linkElement).toBeInTheDocument();
     });
 
-    test('Loading... no longer present in the DOM after loading data', async () => {
+    test(`${LOADING_TEXT} no longer present in the DOM after loading data`, async () => {
       const { getByText } = render(<List />);
-      await waitForElementToBeRemoved(() => getByText(/Loading/i));
+      await waitForElementToBeRemoved(() => getByText(LOADING_TEXT_REGEXP));
     });
 
   });
