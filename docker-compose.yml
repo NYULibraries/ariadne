@@ -3,7 +3,11 @@ version: "3.9"
 x-build-frontend: &x-build-frontend
   image: ariadne_frontend
   build:
-    context: frontend/
+    # See build comment in x-build-frontend-test for why we use ./ instead of
+    # frontend/ here.
+    # Should we choose to create a separate Dockerfile.test for Jest tests container
+    # we can have this context be frontend/.
+    context: ./
     cache_from:
       - ariadne_frontend
   networks:
