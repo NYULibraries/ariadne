@@ -10,6 +10,7 @@ x-build-frontend: &x-build-frontend
     context: ./
     cache_from:
       - ariadne_frontend
+    dockerfile: frontend/Dockerfile
   networks:
     - ariadne-net
   depends_on:
