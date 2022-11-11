@@ -39,13 +39,21 @@ const config = {
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
+    browserName: 'chromium',
+    // viewport: { width: 1280, height: 720 },
+    // ignoreHTTPSErrors: true,
+    launchOptions: {
+      headless: true,
+    },
     /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
     actionTimeout: 0,
     /* Base URL to use in actions like `await page.goto('/')`. */
     baseURL: process.env.PLAYWRIGHT_BASE_URL,
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    trace: 'retain-on-failure',
+
+    /* Browser context options. See https://playwright.dev/docs/api/class-browsercontext */
   },
 
   /* Configure projects for major browsers */
