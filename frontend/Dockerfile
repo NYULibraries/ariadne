@@ -4,7 +4,7 @@ ARG production
 
 ENV INSTALL_PATH /app
 
-COPY package.json yarn.lock /tmp/
+COPY frontend/package.json frontend/yarn.lock /tmp/
 RUN cd /tmp && yarn install $(if [[ ! -z $production ]]; then echo "--production"; fi) \
   && mkdir -p ${INSTALL_PATH} \
   && cd ${INSTALL_PATH} \
@@ -13,7 +13,9 @@ RUN cd /tmp && yarn install $(if [[ ! -z $production ]]; then echo "--production
 
 WORKDIR ${INSTALL_PATH}
 
-COPY . .
+COPY frontend .
+COPY backend/api/testdata/server/test-cases.json src/testutils/backend-testdata/test-cases.json
+COPY backend/api/testdata/server/golden src/testutils/backend-testdata/golden
 
 EXPOSE 3000
 

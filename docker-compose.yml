@@ -14,9 +14,12 @@ x-build-frontend: &x-build-frontend
 x-build-frontend-test: &x-build-frontend-test
   image: ariadne_frontend_test
   build:
-    context: frontend/
+    # Context needs to include backend/ in order to copy over backend/api/testdata/
+    # files needed for stubbing out the backend responses.
+    context: ./
     cache_from:
       - ariadne_frontend-test
+    dockerfile: frontend/Dockerfile
   networks:
     - ariadne-net
   depends_on:
