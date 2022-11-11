@@ -52,7 +52,7 @@ testCases.forEach( testCase => {
     beforeEach(() => {
       delete window.location;
       window.location = new URL(`${process.env.REACT_APP_API_URL}?${testCase.queryString}`);
-      jest.spyOn(apiClient, 'get').mockResolvedValue( { data: testCase.response });
+      jest.spyOn(apiClient, 'get').mockResolvedValue(testCase.response);
     });
 
     afterEach(() => {
