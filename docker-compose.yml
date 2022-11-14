@@ -1,22 +1,35 @@
 version: "3.9"
 
 x-build-frontend: &x-build-frontend
-  image: ariadne-frontend
+  image: ariadne_frontend
   build:
     context: frontend/
     cache_from:
-      - ariadne-frontend
+      - ariadne_frontend
   networks:
     - ariadne-net
   depends_on:
     - backend
 
-x-development-volumes-frontend: &x-development-volumes-frontend
-  volumes:
-    - ./frontend:/app
+x-build-frontend-test: &x-build-frontend-test
+  image: ariadne_frontend_test
+  build:
+    context: frontend/
+    cache_from:
+      - ariadne_frontend-test
+  networks:
+    - ariadne-net
+  depends_on:
+    - backend
+
+x-build-backend: &x-build-backend
+  image: ariadne_backend
+  build:
+    context: backend/
+    dockerfile: Dockerfile
 
 x-build-backend-test: &x-build-backend-test
-  image: backend_test
+  image: ariadne_backend_test
   build:
     context: backend/
     # See file header comment in Dockerfile.debug-and-test
@@ -33,6 +46,10 @@ x-build-e2e: &x-build-e2e
     cache_from:
       - ariadne-e2e
 
+x-development-volumes-frontend: &x-development-volumes-frontend
+  volumes:
+    - ./frontend:/app
+
 services:
   frontend:
     <<: *x-build-frontend
@@ -41,7 +58,7 @@ services:
     # <<: *x-development-volumes-frontend
 
   frontend-test:
-    <<: *x-build-frontend
+    <<: *x-build-frontend-test
     command: yarn test
     environment:
       # We need to override REACT_APP_API_URL in `.env.test` in order to test against
@@ -50,6 +67,7 @@ services:
     # <<: *x-development-volumes-frontend
 
   backend:
+    <<: *x-build-backend
     build:
       context: backend/
     ports:

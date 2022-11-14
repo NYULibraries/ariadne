@@ -11,7 +11,8 @@ export default (apiFunc) => {
     setLoading(true);
     try {
       const response = await apiFunc(...args);
-      const arrOfLinks = getLinks(response.data.records);
+      const responseBody = await response.json();
+      const arrOfLinks = getLinks(responseBody.records);
       setResource(arrOfLinks.slice(0, -1));
       setResourceLastElement(arrOfLinks.at(-1));
     } catch (error) {
