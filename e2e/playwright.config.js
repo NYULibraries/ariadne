@@ -8,8 +8,6 @@ dotenv.config();
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
  */
-// require('dotenv').config();
-
 
 /**
  * @see https://playwright.dev/docs/test-configuration
@@ -39,12 +37,17 @@ const config = {
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    browserName: 'chromium',
-    // viewport: { width: 1280, height: 720 },
-    // ignoreHTTPSErrors: true,
-    launchOptions: {
-      headless: true,
-    },
+
+    /* Browser to use. See https://playwright.dev/docs/api/class-browsertype. */
+    /* We are already using only chromium in our projects.
+    All tests are run in a headless mode by default */
+
+    // browserName: 'chromium',
+    // // viewport: { width: 1280, height: 720 },
+    // // ignoreHTTPSErrors: true,
+    // launchOptions: {
+    //   headless: true,
+    // },
     /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
     actionTimeout: 0,
     /* Base URL to use in actions like `await page.goto('/')`. */
