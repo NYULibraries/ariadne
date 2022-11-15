@@ -2,6 +2,7 @@ import { render, screen, waitFor, waitForElementToBeRemoved } from '@testing-lib
 import '@testing-library/jest-dom';
 import List, {LOADING_TEXT, RESULTS_HEADER_TEXT} from './List';
 import {
+  getTestCasesBackendFetchExceptions,
   getTestCasesBackendHttpErrorResponses,
   getTestCasesBackendResponsesIncludeErrors,
   getTestCasesBackendSuccess,
@@ -111,6 +112,30 @@ describe.each(getTestCasesBackendSuccess())('$name', (testCase) => {
     });
 
   });
+
+describe.each(getTestCasesBackendFetchExceptions())('$name', (testCase) => {
+
+  beforeEach(() => {
+    delete window.location;
+    window.location = new URL(`${process.env.REACT_APP_API_URL}?${testCase.queryString}`);
+    jest.spyOn(apiClient, 'get')
+      .mockImplementation(() => Promise.reject(new TypeError('Failed to fetch')));
+  });
+
+  afterEach(() => {
+    delete window.location;
+    window.location = new URL('http://localhost:3000');
+    jest.clearAllMocks();
+  });
+
+  test('renders backend fetch errors correctly', async () => {
+    const actual = render(<List />);
+    await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
+    expect(actual.asFragment()).toMatchSnapshot();
+  });
+
+});
+
 describe.each(getTestCasesBackendHttpErrorResponses())
   (`HTTP $httpErrorCode ($httpErrorMessage) error`,
    (testCase) => {

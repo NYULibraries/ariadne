@@ -24,7 +24,7 @@ export default (apiFunc) => {
         setError(`The backend API returned an HTTP error response: ${response.status} (${response.statusText})`);
       }
     } catch (error) {
-      setError(`Error fetching data from the Ariadne API: ${error.name}: ${error.message}`);
+      setError(`Error fetching data from the Ariadne API: ${error}`);
     } finally {
       setLoading(false);
     }
