@@ -61,6 +61,37 @@ exports[`Corriere Fiorentino renders correctly 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Response includes 2 errors and an empty SFX response renders errors included in backend response correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="jumbotron"
+  >
+    <div
+      class="container text-center"
+    >
+      <p>
+        Displaying search results...
+      </p>
+      <p>
+        Note: Alternate titles might have matched your search terms
+      </p>
+    </div>
+  </div>
+  <div
+    class="i-am-centered"
+  >
+    The backend API returned errors: "[ERROR 1]", "[ERROR 2]"
+  </div>
+  <div
+    class="i-am-centered"
+  >
+    <div
+      class="list-group"
+    />
+  </div>
+</DocumentFragment>
+`;
+
 exports[`The New Yorker renders correctly 1`] = `
 <DocumentFragment>
   <div

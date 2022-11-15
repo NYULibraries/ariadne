@@ -2,6 +2,7 @@ import { render, screen, waitFor, waitForElementToBeRemoved } from '@testing-lib
 import '@testing-library/jest-dom';
 import List, {LOADING_TEXT, RESULTS_HEADER_TEXT} from './List';
 import {
+  getTestCasesBackendResponsesIncludeErrors,
   getTestCasesBackendSuccess
 } from '../../testutils';
 import apiClient from '../../api/apiClient';
@@ -108,6 +109,48 @@ testCasesBackendSuccess.forEach( testCase => {
       await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
       const linkElement = await waitFor(() => screen.getByText(/Ask a Librarian/i));
       expect(linkElement).toBeInTheDocument();
+    });
+
+  });
+});
+const testCasesBackendResponsesIncludeErrors = getTestCasesBackendResponsesIncludeErrors();
+testCasesBackendResponsesIncludeErrors.forEach( testCase => {
+  describe(testCase.name, () => {
+
+    beforeEach(() => {
+      delete window.location;
+      window.location = new URL(`${process.env.REACT_APP_API_URL}?${testCase.queryString}`);
+      jest.spyOn(apiClient, 'get').mockResolvedValue(
+        new Response(
+          JSON.stringify(testCase.response, null, '    '),
+          { status: 200, statusText: 'OK' }
+        )
+      );
+    });
+
+    afterEach(() => {
+      delete window.location;
+      window.location = new URL('http://localhost:3000');
+      jest.clearAllMocks();
+    });
+
+    test(`renders ${LOADING_TEXT}`, async () => {
+      render(<List />);
+      const linkElement = screen.getByText(LOADING_TEXT_REGEXP);
+      expect(linkElement).toBeInTheDocument();
+      // See comment at top of file: 'Clearing "wrap in act()" warnings'
+      await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
+    });
+
+    test(`${LOADING_TEXT} no longer present in the DOM after loading data`, async () => {
+      const { getByText } = render(<List />);
+      await waitForElementToBeRemoved(() => getByText(LOADING_TEXT_REGEXP));
+    });
+
+    test('renders errors included in backend response correctly', async () => {
+      const actual = render(<List />);
+      await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
+      expect(actual.asFragment()).toMatchSnapshot();
     });
 
   });
