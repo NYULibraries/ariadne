@@ -4,7 +4,7 @@ import List, {LOADING_TEXT, RESULTS_HEADER_TEXT} from './List';
 import {
   getTestCasesBackendHttpErrorResponses,
   getTestCasesBackendResponsesIncludeErrors,
-  getTestCasesBackendSuccess
+  getTestCasesBackendSuccess,
 } from '../../testutils';
 import apiClient from '../../api/apiClient';
 
