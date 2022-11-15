@@ -49,20 +49,18 @@ const LOADING_TEXT_REGEXP = new RegExp(LOADING_TEXT, 'i');
 // condition).  These unintuitive cases have been labeled with comments that
 // refer to this long explanatory comment.
 
-const testCasesBackendSuccess = getTestCasesBackendSuccess();
-testCasesBackendSuccess.forEach( testCase => {
-  describe(testCase.name, () => {
+describe.each(getTestCasesBackendSuccess())('$name', (testCase) => {
 
     beforeEach(() => {
       delete window.location;
       window.location = new URL(`${process.env.REACT_APP_API_URL}?${testCase.queryString}`);
       jest.spyOn(apiClient, 'get')
-          .mockResolvedValue(
-              new Response(
-                  JSON.stringify(testCase.response, null, '    '),
-                  { status: 200, statusText: 'OK' }
-              )
-          );
+        .mockResolvedValue(
+          new Response(
+            JSON.stringify(testCase.response, null, '    '),
+            { status: 200, statusText: 'OK' }
+          )
+        );
     });
 
     afterEach(() => {
@@ -113,10 +111,9 @@ testCasesBackendSuccess.forEach( testCase => {
     });
 
   });
-});
-const testCasesBackendHttpErrorResponses = getTestCasesBackendHttpErrorResponses();
-testCasesBackendHttpErrorResponses.forEach( testCase => {
-  describe(`HTTP ${testCase.httpErrorCode} (${testCase.httpErrorMessage}) error`, () => {
+describe.each(getTestCasesBackendHttpErrorResponses())
+  (`HTTP $httpErrorCode ($httpErrorMessage) error`,
+   (testCase) => {
 
     beforeEach(() => {
       delete window.location;
@@ -154,48 +151,44 @@ testCasesBackendHttpErrorResponses.forEach( testCase => {
       expect(actual.asFragment()).toMatchSnapshot();
     });
 
-  });
 });
 
-const testCasesBackendResponsesIncludeErrors = getTestCasesBackendResponsesIncludeErrors();
-testCasesBackendResponsesIncludeErrors.forEach( testCase => {
-  describe(testCase.name, () => {
+describe.each(getTestCasesBackendResponsesIncludeErrors())('$name', (testCase) => {
 
-    beforeEach(() => {
-      delete window.location;
-      window.location = new URL(`${process.env.REACT_APP_API_URL}?${testCase.queryString}`);
-      jest.spyOn(apiClient, 'get').mockResolvedValue(
-        new Response(
-          JSON.stringify(testCase.response, null, '    '),
-          { status: 200, statusText: 'OK' }
-        )
-      );
-    });
-
-    afterEach(() => {
-      delete window.location;
-      window.location = new URL('http://localhost:3000');
-      jest.clearAllMocks();
-    });
-
-    test(`renders ${LOADING_TEXT}`, async () => {
-      render(<List />);
-      const loadingIndicator = screen.getByText(LOADING_TEXT_REGEXP);
-      expect(loadingIndicator).toBeInTheDocument();
-      // See comment at top of file: 'Clearing "wrap in act()" warnings'
-      await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
-    });
-
-    test(`${LOADING_TEXT} no longer present in the DOM after loading data`, async () => {
-      const { getByText } = render(<List />);
-      await waitForElementToBeRemoved(() => getByText(LOADING_TEXT_REGEXP));
-    });
-
-    test('renders errors included in backend response correctly', async () => {
-      const actual = render(<List />);
-      await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
-      expect(actual.asFragment()).toMatchSnapshot();
-    });
-
+  beforeEach(() => {
+    delete window.location;
+    window.location = new URL(`${process.env.REACT_APP_API_URL}?${testCase.queryString}`);
+    jest.spyOn(apiClient, 'get').mockResolvedValue(
+      new Response(
+        JSON.stringify(testCase.response, null, '    '),
+        { status: 200, statusText: 'OK' }
+      )
+    );
   });
+
+  afterEach(() => {
+    delete window.location;
+    window.location = new URL('http://localhost:3000');
+    jest.clearAllMocks();
+  });
+
+  test(`renders ${LOADING_TEXT}`, async () => {
+    render(<List />);
+    const loadingIndicator = screen.getByText(LOADING_TEXT_REGEXP);
+    expect(loadingIndicator).toBeInTheDocument();
+    // See comment at top of file: 'Clearing "wrap in act()" warnings'
+    await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
+  });
+
+  test(`${LOADING_TEXT} no longer present in the DOM after loading data`, async () => {
+    const { getByText } = render(<List />);
+    await waitForElementToBeRemoved(() => getByText(LOADING_TEXT_REGEXP));
+  });
+
+  test('renders errors included in backend response correctly', async () => {
+    const actual = render(<List />);
+    await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
+    expect(actual.asFragment()).toMatchSnapshot();
+  });
+
 });
