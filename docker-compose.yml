@@ -53,6 +53,8 @@ x-development-volumes-frontend: &x-development-volumes-frontend
 services:
   frontend:
     <<: *x-build-frontend
+    environment:
+      - REACT_APP_API_URL=http://backend:8080/v0/
     ports:
       - "3000:3000"
     # <<: *x-development-volumes-frontend
