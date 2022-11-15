@@ -73,8 +73,8 @@ testCasesBackendSuccess.forEach( testCase => {
 
     test(`renders ${LOADING_TEXT}`, async () => {
       render(<List />);
-      const linkElement = screen.getByText(LOADING_TEXT_REGEXP);
-      expect(linkElement).toBeInTheDocument();
+      const loadingIndicator = screen.getByText(LOADING_TEXT_REGEXP);
+      expect(loadingIndicator).toBeInTheDocument();
       // See comment at top of file: 'Clearing "wrap in act()" warnings'
       await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
     });
@@ -137,8 +137,8 @@ testCasesBackendHttpErrorResponses.forEach( testCase => {
 
     test(`renders ${LOADING_TEXT}`, async () => {
       render(<List />);
-      const linkElement = screen.getByText(LOADING_TEXT_REGEXP);
-      expect(linkElement).toBeInTheDocument();
+      const loadingIndicator = screen.getByText(LOADING_TEXT_REGEXP);
+      expect(loadingIndicator).toBeInTheDocument();
       // See comment at top of file: 'Clearing "wrap in act()" warnings'
       await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
     });
@@ -180,8 +180,8 @@ testCasesBackendResponsesIncludeErrors.forEach( testCase => {
 
     test(`renders ${LOADING_TEXT}`, async () => {
       render(<List />);
-      const linkElement = screen.getByText(LOADING_TEXT_REGEXP);
-      expect(linkElement).toBeInTheDocument();
+      const loadingIndicator = screen.getByText(LOADING_TEXT_REGEXP);
+      expect(loadingIndicator).toBeInTheDocument();
       // See comment at top of file: 'Clearing "wrap in act()" warnings'
       await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
     });
