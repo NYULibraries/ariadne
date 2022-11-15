@@ -108,8 +108,8 @@ testCasesBackendSuccess.forEach( testCase => {
       render(<List />);
       // See comment at top of file: 'Clearing "wrap in act()" warnings'
       await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
-      const linkElement = await waitFor(() => screen.getByText(/Ask a Librarian/i));
-      expect(linkElement).toBeInTheDocument();
+      const askALibrarian = await waitFor(() => screen.getByText(/Ask a Librarian/i));
+      expect(askALibrarian).toBeInTheDocument();
     });
 
   });
