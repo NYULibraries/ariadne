@@ -2,8 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Prefer actual backend/api/testdata/ files if they exist (i.e. running tests on
-// local machine while working in the repo).  If in a container, the backend/api/testdata/
-// files will have been copied into this directory.
+// local machine while working in the repo).
 const BACKEND_API_TESTDATA_DIR_IN_REPO = path.join(
   __dirname,
   '..',
@@ -14,6 +13,7 @@ const BACKEND_API_TESTDATA_DIR_IN_REPO = path.join(
   'testdata',
   'server',
 );
+// If in a container, the backend/api/testdata/ files will have been copied into this directory.
 const BACKEND_API_TESTDATA_DIR_IN_CONTAINER = path.join(
   __dirname,
   'backend-testdata',
@@ -27,6 +27,7 @@ const BACKEND_API_TEST_CASES_INDEX = path.join(BACKEND_API_TESTDATA_DIR, 'test-c
 
 function getTestCasesBackendFetchExceptions() {
   return [
+    // Backend is down, or not accessible.
     {
       name : 'TypeError: Failed to fetch',
       // The New Yorker
