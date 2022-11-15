@@ -24,7 +24,7 @@ x-build-frontend-test: &x-build-frontend-test
     context: ./
     cache_from:
       - ariadne_frontend-test
-    dockerfile: frontend/Dockerfile
+    dockerfile: frontend/Dockerfile.test
 
 x-build-backend: &x-build-backend
   image: ariadne_backend
