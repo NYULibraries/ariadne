@@ -25,6 +25,17 @@ const BACKEND_API_TESTDATA_DIR = fs.existsSync(BACKEND_API_TESTDATA_DIR_IN_REPO)
 const BACKEND_API_TEST_CASES_GOLDEN_FILES_DIR = path.join(BACKEND_API_TESTDATA_DIR, 'golden');
 const BACKEND_API_TEST_CASES_INDEX = path.join(BACKEND_API_TESTDATA_DIR, 'test-cases.json');
 
+function getTestCasesBackendFetchExceptions() {
+  return [
+    {
+      name : 'TypeError: Failed to fetch',
+      // The New Yorker
+      queryString : 'ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2018-07-15T02:13:26IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo-dedupmrg524707060&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=journal&rft.jtitle=Corriere%20Fiorentino&rft.btitle=Corriere%20Fiorentino&rft.aulast=&rft.aufirst=&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.pub=&rft.place=Italy&rft.issn=&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=3400000000000901&rft.primo=dedupmrg524707060&rft.eisbn=&rft_dat=<NYUMARCIT>3400000000000901</NYUMARCIT><grp_id>582323038</grp_id><oa></oa><url></url>&rft_id=info:oai/&req.language=eng',
+      error       : 'TypeError: Failed to fetch',
+    },
+  ];
+}
+
 // At the moment, all HTTP errors are treated basically the same by the frontend:
 // codes and error text are simply printed out for the user.  No error-specific
 // handling is done.  We test just a few possible error scenarios, but others are
@@ -93,6 +104,7 @@ function getResponse(key) {
 }
 
 export {
+  getTestCasesBackendFetchExceptions,
   getTestCasesBackendHttpErrorResponses,
   getTestCasesBackendResponsesIncludeErrors,
   getTestCasesBackendSuccess,
