@@ -25,8 +25,8 @@ const BACKEND_API_TESTDATA_DIR = fs.existsSync(BACKEND_API_TESTDATA_DIR_IN_REPO)
 const BACKEND_API_TEST_CASES_GOLDEN_FILES_DIR = path.join(BACKEND_API_TESTDATA_DIR, 'golden');
 const BACKEND_API_TEST_CASES_INDEX = path.join(BACKEND_API_TESTDATA_DIR, 'test-cases.json');
 
-function getTestCases() {
-    const testCasesFromAriadneBackendApi = require(BACKEND_API_TEST_CASES_INDEX);
+function getTestCasesBackendSuccess() {
+  const testCasesFromAriadneBackendApi = require(BACKEND_API_TEST_CASES_INDEX);
 
   testCasesFromAriadneBackendApi.forEach(testCase => {
     testCase.response = getResponse(testCase.key);
@@ -42,5 +42,5 @@ function getResponse(key) {
 }
 
 export {
-    getTestCases,
+  getTestCasesBackendSuccess,
 };

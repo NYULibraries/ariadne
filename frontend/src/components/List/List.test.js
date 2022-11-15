@@ -1,7 +1,9 @@
 import { render, screen, waitFor, waitForElementToBeRemoved } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import List, {LOADING_TEXT, RESULTS_HEADER_TEXT} from './List';
-import { getTestCases } from '../../testutils';
+import {
+  getTestCasesBackendSuccess
+} from '../../testutils';
 import apiClient from '../../api/apiClient';
 
 const LOADING_TEXT_REGEXP = new RegExp(LOADING_TEXT, 'i');
@@ -45,14 +47,20 @@ const LOADING_TEXT_REGEXP = new RegExp(LOADING_TEXT, 'i');
 // condition).  These unintuitive cases have been labeled with comments that
 // refer to this long explanatory comment.
 
-const testCases = getTestCases();
-testCases.forEach( testCase => {
+const testCasesBackendSuccess = getTestCasesBackendSuccess();
+testCasesBackendSuccess.forEach( testCase => {
   describe(testCase.name, () => {
 
     beforeEach(() => {
       delete window.location;
       window.location = new URL(`${process.env.REACT_APP_API_URL}?${testCase.queryString}`);
-      jest.spyOn(apiClient, 'get').mockResolvedValue(testCase.response);
+      jest.spyOn(apiClient, 'get')
+          .mockResolvedValue(
+              new Response(
+                  JSON.stringify(testCase.response, null, '    '),
+                  { status: 200, statusText: 'OK' }
+              )
+          );
     });
 
     afterEach(() => {
