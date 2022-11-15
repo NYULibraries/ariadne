@@ -61,6 +61,130 @@ exports[`Corriere Fiorentino renders correctly 1`] = `
 </DocumentFragment>
 `;
 
+exports[`HTTP 400 (Bad Request) error is rendered correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="jumbotron"
+  >
+    <div
+      class="container text-center"
+    >
+      <p>
+        Displaying search results...
+      </p>
+      <p>
+        Note: Alternate titles might have matched your search terms
+      </p>
+    </div>
+  </div>
+  <div
+    class="i-am-centered"
+  >
+    The backend API returned an HTTP error response: 400 (Bad Request)
+  </div>
+  <div
+    class="i-am-centered"
+  >
+    <div
+      class="list-group"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`HTTP 403 (Forbidden) error is rendered correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="jumbotron"
+  >
+    <div
+      class="container text-center"
+    >
+      <p>
+        Displaying search results...
+      </p>
+      <p>
+        Note: Alternate titles might have matched your search terms
+      </p>
+    </div>
+  </div>
+  <div
+    class="i-am-centered"
+  >
+    The backend API returned an HTTP error response: 403 (Forbidden)
+  </div>
+  <div
+    class="i-am-centered"
+  >
+    <div
+      class="list-group"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`HTTP 408 (Request Timeout) error is rendered correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="jumbotron"
+  >
+    <div
+      class="container text-center"
+    >
+      <p>
+        Displaying search results...
+      </p>
+      <p>
+        Note: Alternate titles might have matched your search terms
+      </p>
+    </div>
+  </div>
+  <div
+    class="i-am-centered"
+  >
+    The backend API returned an HTTP error response: 408 (Request Timeout)
+  </div>
+  <div
+    class="i-am-centered"
+  >
+    <div
+      class="list-group"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`HTTP 500 (Internal Server Error) error is rendered correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="jumbotron"
+  >
+    <div
+      class="container text-center"
+    >
+      <p>
+        Displaying search results...
+      </p>
+      <p>
+        Note: Alternate titles might have matched your search terms
+      </p>
+    </div>
+  </div>
+  <div
+    class="i-am-centered"
+  >
+    The backend API returned an HTTP error response: 500 (Internal Server Error)
+  </div>
+  <div
+    class="i-am-centered"
+  >
+    <div
+      class="list-group"
+    />
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Response includes 2 errors and an empty SFX response renders errors included in backend response correctly 1`] = `
 <DocumentFragment>
   <div

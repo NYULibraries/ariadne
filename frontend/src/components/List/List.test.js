@@ -2,6 +2,7 @@ import { render, screen, waitFor, waitForElementToBeRemoved } from '@testing-lib
 import '@testing-library/jest-dom';
 import List, {LOADING_TEXT, RESULTS_HEADER_TEXT} from './List';
 import {
+  getTestCasesBackendHttpErrorResponses,
   getTestCasesBackendResponsesIncludeErrors,
   getTestCasesBackendSuccess
 } from '../../testutils';
@@ -113,6 +114,49 @@ testCasesBackendSuccess.forEach( testCase => {
 
   });
 });
+const testCasesBackendHttpErrorResponses = getTestCasesBackendHttpErrorResponses();
+testCasesBackendHttpErrorResponses.forEach( testCase => {
+  describe(`HTTP ${testCase.httpErrorCode} (${testCase.httpErrorMessage}) error`, () => {
+
+    beforeEach(() => {
+      delete window.location;
+      window.location = new URL(`${process.env.REACT_APP_API_URL}?${testCase.queryString}`);
+      jest.spyOn(apiClient, 'get').mockResolvedValue(
+        new Response(
+          null,
+          { status: testCase.httpErrorCode, statusText: testCase.httpErrorMessage }
+        )
+      );
+    });
+
+    afterEach(() => {
+      delete window.location;
+      window.location = new URL('http://localhost:3000');
+      jest.clearAllMocks();
+    });
+
+    test(`renders ${LOADING_TEXT}`, async () => {
+      render(<List />);
+      const linkElement = screen.getByText(LOADING_TEXT_REGEXP);
+      expect(linkElement).toBeInTheDocument();
+      // See comment at top of file: 'Clearing "wrap in act()" warnings'
+      await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
+    });
+
+    test(`${LOADING_TEXT} no longer present in the DOM after loading data`, async () => {
+      const { getByText } = render(<List />);
+      await waitForElementToBeRemoved(() => getByText(LOADING_TEXT_REGEXP));
+    });
+
+    test(`is rendered correctly`, async () => {
+      const actual = render(<List />);
+      await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
+      expect(actual.asFragment()).toMatchSnapshot();
+    });
+
+  });
+});
+
 const testCasesBackendResponsesIncludeErrors = getTestCasesBackendResponsesIncludeErrors();
 testCasesBackendResponsesIncludeErrors.forEach( testCase => {
   describe(testCase.name, () => {
