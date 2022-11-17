@@ -7,6 +7,8 @@ import (
 	"net/http"
 )
 
+const defaultPort = "8080"
+
 var port string
 
 var ServerCmd = &cobra.Command{
@@ -19,7 +21,7 @@ var ServerCmd = &cobra.Command{
 }
 
 func init() {
-	ServerCmd.Flags().StringVarP(&port, "port", "p", "8080", "Port to run server on")
+	ServerCmd.Flags().StringVarP(&port, "port", "p", defaultPort, "Port to run server on")
 }
 
 func start() {
