@@ -4,7 +4,7 @@ import (
 	"ariadne/sfx"
 )
 
-type response struct {
+type Response struct {
 	Errors  []string                    `json:"errors""`
 	Records sfx.MultiObjXMLResponseBody `json:"records"`
 }
