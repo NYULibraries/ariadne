@@ -5,5 +5,6 @@ import (
 )
 
 var DebugCmd = &cobra.Command{
-	Use: "debug",
+	Use:   "debug",
+	Short: "Debugging utilities",
 }
