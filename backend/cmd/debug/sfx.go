@@ -8,6 +8,11 @@ import (
 	"ariadne/sfx"
 )
 
+func init() {
+	DebugCmd.AddCommand(dumpSFXHTTPRequestCmd)
+	DebugCmd.AddCommand(dumpSFXHTTPResponseCmd)
+}
+
 var dumpSFXHTTPRequestCmd = &cobra.Command{
 	Use:     "sfx-request [query string]",
 	Short:   "Dump SFX HTTP request for query string",
@@ -38,11 +43,6 @@ var dumpSFXHTTPResponseCmd = &cobra.Command{
 
 		fmt.Println(dump)
 	},
-}
-
-func init() {
-	DebugCmd.AddCommand(dumpSFXHTTPRequestCmd)
-	DebugCmd.AddCommand(dumpSFXHTTPResponseCmd)
 }
 
 func dumpSFXHTTPRequest(queryString string) (string, error) {
