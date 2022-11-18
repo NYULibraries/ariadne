@@ -57,6 +57,13 @@ describe('Backend success', () => {
       delete window.location;
       window.location = new URL(`${process.env.REACT_APP_API_URL}?${testCase.queryString}`);
       jest.spyOn(apiClient, 'get')
+        // Even though theoretically we should only need to intercept `apiClient.get`
+        // once using `.mockResolvedValueOnce`, we instead set no limit on
+        // number of interceptions because in React 18, the data fetch hook
+        // gets called twice in Strict Mode. See this Reddit thread:
+        // https://www.reddit.com/r/reactjs/comments/vi6q6f/what_is_the_recommended_way_to_load_data_for/
+        // We need to make sure that the tests always used the fake value, so we
+        // use `.mockResolvedValue`.
         .mockResolvedValue(
           new Response(
             JSON.stringify(testCase.response, null, '    '),
