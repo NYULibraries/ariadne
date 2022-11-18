@@ -9,7 +9,7 @@ test('renders the App component', () => {
   render(<App />);
 });
 
-test('renders the Link component', () => {
+test('renders the List component', () => {
   render(<List />);
 });
 

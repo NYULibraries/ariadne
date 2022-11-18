@@ -1,72 +1,241 @@
 import { render, screen, waitFor, waitForElementToBeRemoved } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import List from './List';
+import List, {LOADING_TEXT, RESULTS_HEADER_TEXT} from './List';
+import {
+  getTestCasesBackendFetchExceptions,
+  getTestCasesBackendHttpErrorResponses,
+  getTestCasesBackendResponsesIncludeErrors,
+  getTestCasesBackendSuccess,
+} from '../../testutils';
+import apiClient from '../../api/apiClient';
 
-const queryString =
-  '?url_ver=Z39.88-2004&url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&ctx_ver=Z39.88-2004&ctx_tim=2021-10-22T12%3A29%3A27-04%3A00&ctx_id=&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rft.aulast=Ross&rft.date=2002&rft.eissn=2163-3827&rft.genre=journal&rft.issn=0028-792X&rft.jtitle=New+Yorker&rft.language=eng&rft.lccn=++2011201780&rft.object_id=110975413975944&rft.oclcnum=909782404&rft.place=New+York&rft.private_data=909782404%3Cfssessid%3E0%3C%2Ffssessid%3E&rft.pub=F-R+Pub.+Corp.&rft.stitle=NEW+YORKER&rft.title=New+Yorker&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft_id=info%3Aoclcnum%2F909782404&rft_id=urn%3AISSN%3A0028-792X&req.ip=209.150.44.95&rfr_id=info%3Asid%2FFirstSearch%3AWorldCat';
+const LOADING_TEXT_REGEXP = new RegExp(LOADING_TEXT, 'i');
 
-const searchURL = `${process.env.REACT_APP_API_URL}` + queryString;
+// Clearing "wrap in act()" warnings
+// =====================================================
+//
+// Even though @testing-library/react supposedly already wraps in `act()`, warnings
+// appeared in test output after `jest.spyOn(apiClient, 'get')...` was introduced
+// for https://nyu-lib.monday.com/boards/765008773/views/61942705.
+//
+// Sample warning:
+//
+// -----BEGIN SAMPLE-----
+// Warning: An update to List inside a test was not wrapped in act(...).
+//
+//     When testing, code that causes React state updates should be wrapped into act(...):
+//
+// act(() => {
+//   /* fire events that update state */
+// });
+// /* assert on the output */
+// -----END SAMPLE-----
+//
+// According to this article:
+//
+//     "React Testing Library and the “not wrapped in act” Errors"
+//     https://davidwcai.medium.com/react-testing-library-and-the-not-wrapped-in-act-errors-491a5629193b
+//
+// ...there are several cases which can generate warnings.  What seem to apply
+// to tests in this file are these two cases:
+//
+// - Case 1: Asynchronous Updates
+// - Case 3: Premature Exit
+//
+// Adding `await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));`
+// to tests that were generating these warnings resolved the issue.  In some cases
+// adding this line was something that would normally be done anyway to avoid race
+// conditions, but in other cases they had to be inserted even when it wouldn't
+// appear to be necessary (e.g. `waitFor` on the next line would prevent a race
+// condition).  These unintuitive cases have been labeled with comments that
+// refer to this long explanatory comment.
 
-beforeEach(() => {
-  delete window.location;
-  window.location = new URL(searchURL);
+describe('Backend success', () => {
+  describe.each(getTestCasesBackendSuccess())('$name', (testCase) => {
+
+    beforeEach(() => {
+      delete window.location;
+      window.location = new URL(`${process.env.REACT_APP_API_URL}?${testCase.queryString}`);
+      jest.spyOn(apiClient, 'get')
+        // Even though theoretically we should only need to intercept `apiClient.get`
+        // once using `.mockResolvedValueOnce`, we instead set no limit on
+        // number of interceptions because in React 18, the data fetch hook
+        // gets called twice in Strict Mode. See this Reddit thread:
+        // https://www.reddit.com/r/reactjs/comments/vi6q6f/what_is_the_recommended_way_to_load_data_for/
+        // We need to make sure that the tests always used the fake value, so we
+        // use `.mockResolvedValue`.
+        .mockResolvedValue(
+          new Response(
+            JSON.stringify(testCase.response, null, '    '),
+            { status: 200, statusText: 'OK' }
+          )
+        );
+    });
+
+    afterEach(() => {
+      delete window.location;
+      window.location = new URL('http://localhost:3000');
+      jest.clearAllMocks();
+    });
+
+    test(`renders ${LOADING_TEXT}`, async () => {
+      render(<List />);
+      const loadingIndicator = screen.getByText(LOADING_TEXT_REGEXP);
+      expect(loadingIndicator).toBeInTheDocument();
+      // See comment at top of file: 'Clearing "wrap in act()" warnings'
+      await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
+    });
+
+    test(`${LOADING_TEXT} no longer present in the DOM after loading data`, async () => {
+      const { getByText } = render(<List />);
+      await waitForElementToBeRemoved(() => getByText(LOADING_TEXT_REGEXP));
+    });
+
+    test('renders correctly', async () => {
+      const actual = render(<List />);
+      await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
+      expect(actual.asFragment()).toMatchSnapshot();
+    });
+
+    test('renders the search results header text', async () => {
+      render(<List />);
+      // See comment at top of file: 'Clearing "wrap in act()" warnings'
+      await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
+      const resultsHeaderText = await waitFor(() => screen.getByText(new RegExp(RESULTS_HEADER_TEXT, 'i')));
+      expect(resultsHeaderText).toBeInTheDocument();
+    });
+
+    test('renders with a className of list-group', async () => {
+      const { container } = render(<List />);
+      await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
+      expect(container.getElementsByClassName('list-group').length).toBe(1);
+    });
+
+    test('renders Ask a Librarian', async () => {
+      render(<List />);
+      // See comment at top of file: 'Clearing "wrap in act()" warnings'
+      await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
+      const askALibrarian = await waitFor(() => screen.getByText(/Ask a Librarian/i));
+      expect(askALibrarian).toBeInTheDocument();
+    });
+
+  });
+
 });
 
-afterEach(() => {
-  delete window.location;
-  window.location = new URL('http://localhost:3000');
+describe('Backend fetch exceptions', () => {
+
+  describe.each(getTestCasesBackendFetchExceptions())('$name', (testCase) => {
+
+    beforeEach(() => {
+      delete window.location;
+      window.location = new URL(`${process.env.REACT_APP_API_URL}?${testCase.queryString}`);
+      jest.spyOn(apiClient, 'get')
+        .mockImplementation(() => Promise.reject(new TypeError('Failed to fetch')));
+    });
+
+    afterEach(() => {
+      delete window.location;
+      window.location = new URL('http://localhost:3000');
+      jest.clearAllMocks();
+    });
+
+    test('renders backend fetch errors correctly', async () => {
+      const actual = render(<List />);
+      await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
+      expect(actual.asFragment()).toMatchSnapshot();
+    });
+
+  });
+
 });
 
-test('renders with a className of list-group', () => {
-  const { container } = render(<List />);
-  expect(container.getElementsByClassName('list-group').length).toBe(1);
+describe('Backend HTTP error responses', () => {
+
+  describe.each(getTestCasesBackendHttpErrorResponses())
+  (`HTTP $httpErrorCode ($httpErrorMessage) error`,
+   (testCase) => {
+
+     beforeEach(() => {
+       delete window.location;
+       window.location = new URL(`${process.env.REACT_APP_API_URL}?${testCase.queryString}`);
+       jest.spyOn(apiClient, 'get').mockResolvedValue(
+         new Response(
+           null,
+           { status: testCase.httpErrorCode, statusText: testCase.httpErrorMessage }
+         )
+       );
+     });
+
+     afterEach(() => {
+       delete window.location;
+       window.location = new URL('http://localhost:3000');
+       jest.clearAllMocks();
+     });
+
+     test(`renders ${LOADING_TEXT}`, async () => {
+       render(<List />);
+       const loadingIndicator = screen.getByText(LOADING_TEXT_REGEXP);
+       expect(loadingIndicator).toBeInTheDocument();
+       // See comment at top of file: 'Clearing "wrap in act()" warnings'
+       await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
+     });
+
+     test(`${LOADING_TEXT} no longer present in the DOM after loading data`, async () => {
+       const { getByText } = render(<List />);
+       await waitForElementToBeRemoved(() => getByText(LOADING_TEXT_REGEXP));
+     });
+
+     test(`is rendered correctly`, async () => {
+       const actual = render(<List />);
+       await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
+       expect(actual.asFragment()).toMatchSnapshot();
+     });
+
+   });
+
 });
 
-test('renders links to the NYU Libraries catalog', async () => {
-  const result = render(<List />);
-  await waitForElementToBeRemoved(() => screen.getByText(/Loading.../i));
+describe('Backend response includes errors', () => {
 
-  const links = await waitFor(() => result.getAllByRole('link'));
-  expect(links.length).toBe(13);
-});
+  describe.each(getTestCasesBackendResponsesIncludeErrors())('$name', (testCase) => {
 
-test.skip('renders correctly', async () => {
-  const snapshot = render(<List />);
-  await waitForElementToBeRemoved(() => screen.getByText(/Loading.../i));
-  expect(snapshot.asFragment()).toMatchSnapshot();
-});
+    beforeEach(() => {
+      delete window.location;
+      window.location = new URL(`${process.env.REACT_APP_API_URL}?${testCase.queryString}`);
+      jest.spyOn(apiClient, 'get').mockResolvedValue(
+        new Response(
+          JSON.stringify(testCase.response, null, '    '),
+          { status: 200, statusText: 'OK' }
+        )
+      );
+    });
 
-test('renders the search results', async () => {
-  render(<List />);
-  const linkElement = await waitFor(() => screen.getByText(/Displaying search results.../i));
-  expect(linkElement).toBeInTheDocument();
-});
+    afterEach(() => {
+      delete window.location;
+      window.location = new URL('http://localhost:3000');
+      jest.clearAllMocks();
+    });
 
-test('renders Loading...', () => {
-  render(<List />);
-  const linkElement = screen.getByText(/Loading/i);
-  expect(linkElement).toBeInTheDocument();
-});
+    test(`renders ${LOADING_TEXT}`, async () => {
+      render(<List />);
+      const loadingIndicator = screen.getByText(LOADING_TEXT_REGEXP);
+      expect(loadingIndicator).toBeInTheDocument();
+      // See comment at top of file: 'Clearing "wrap in act()" warnings'
+      await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
+    });
 
-test('renders a E Journal Full Text link', async () => {
-  render(<List />);
-  const linkElement = await waitFor(() => screen.getByText(/E Journal Full Text/i));
-  expect(linkElement).toBeInTheDocument();
-});
+    test(`${LOADING_TEXT} no longer present in the DOM after loading data`, async () => {
+      const { getByText } = render(<List />);
+      await waitForElementToBeRemoved(() => getByText(LOADING_TEXT_REGEXP));
+    });
 
-test('renders a Gale General OneFile link', async () => {
-  render(<List />);
-  const linkElement = await waitFor(() => screen.getByText(/Gale General OneFile/i));
-  expect(linkElement).toBeInTheDocument();
-});
+    test('renders errors included in backend response correctly', async () => {
+      const actual = render(<List />);
+      await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
+      expect(actual.asFragment()).toMatchSnapshot();
+    });
 
-test('renders Ask a Librarian', async () => {
-  render(<List />);
-  const linkElement = await waitFor(() => screen.getByText(/Ask a Librarian/i));
-  expect(linkElement).toBeInTheDocument();
-});
+  });
 
-test('Loading... no longer present in the DOM after loading data', async () => {
-  const { getByText } = render(<List />);
-  await waitForElementToBeRemoved(() => getByText(/Loading/i));
 });

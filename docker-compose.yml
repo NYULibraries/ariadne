@@ -3,9 +3,14 @@ version: "3.9"
 x-build-frontend: &x-build-frontend
   image: ariadne_frontend
   build:
-    context: frontend/
+    # See build comment in x-build-frontend-test for why we use ./ instead of
+    # frontend/ here.
+    # Should we choose to create a separate Dockerfile.test for Jest tests container
+    # we can have this context be frontend/.
+    context: ./
     cache_from:
       - ariadne_frontend
+    dockerfile: frontend/Dockerfile
   networks:
     - ariadne-net
   depends_on:
@@ -14,13 +19,12 @@ x-build-frontend: &x-build-frontend
 x-build-frontend-test: &x-build-frontend-test
   image: ariadne_frontend_test
   build:
-    context: frontend/
+    # Context needs to include backend/ in order to copy over backend/api/testdata/
+    # files needed for stubbing out the backend responses.
+    context: ./
     cache_from:
       - ariadne_frontend-test
-  networks:
-    - ariadne-net
-  depends_on:
-    - backend
+    dockerfile: frontend/Dockerfile.test
 
 x-build-backend: &x-build-backend
   image: ariadne_backend
@@ -53,10 +57,6 @@ services:
   frontend-test:
     <<: *x-build-frontend-test
     command: yarn test
-    environment:
-      # We need to override REACT_APP_API_URL in `.env.test` in order to test against
-      # `backend` service.
-      - REACT_APP_API_URL=http://backend:8080/v0/
     # <<: *x-development-volumes-frontend
 
   backend:
