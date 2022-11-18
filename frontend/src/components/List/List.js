@@ -13,6 +13,21 @@ const List = () => {
   const backendClientRef = useRef(null);
   backendClientRef.current = backendClient;
 
+  // Be aware that this hook will run twice when running in Strict Mode in React 18.
+  //
+  // Note also that while it's been customary to do data fetching via hooks
+  // as low down in the component hierarchy as possible to avoid the unnecessary/undesired
+  // child component re-renderings that could happen when fetching data in components
+  // higher up in the hierarchy, the React core team and the community are rethinking
+  // data fetching best practices, and it might be good to use newer methods in future projects.
+  //
+  // See this React thread, which has an important 6/22 post from Dan Abramov of
+  // the React core team that includes a summary of the issues as well as links
+  // to the Beta React Docs outlining the new guidance:
+  //
+  //   "What is the recommended way to load data for React 18?"
+  //   https://www.reddit.com/r/reactjs/comments/vi6q6f/what_is_the_recommended_way_to_load_data_for/
+  //
   useEffect(() => {
     backendClientRef.current.fetchResource();
   }, []);
@@ -21,12 +36,12 @@ const List = () => {
     <>
       <div className="jumbotron">
         <div className="container text-center">
-          <p>Displaying search results...</p>
+          <p>{RESULTS_HEADER_TEXT}</p>
           <p>Note: Alternate titles might have matched your search terms</p>
         </div>
       </div>
       {/* TODO: we could put a spinner here: */}
-      {backendClient.loading && <div className="loader">Loading...</div>}
+      {backendClient.loading && <div className="loader">{LOADING_TEXT}</div>}
       {backendClient.error && <div className="i-am-centered">{backendClient.error}</div>}
       <div className="i-am-centered">
         <div className="list-group">
@@ -58,4 +73,6 @@ const List = () => {
   );
 };
 
+export const LOADING_TEXT = 'Loading...';
+export const RESULTS_HEADER_TEXT = 'Displaying search results...';
 export default List;
