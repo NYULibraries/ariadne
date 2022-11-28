@@ -38,7 +38,7 @@ jobs:
       - setup_remote_docker
       - run:
           name: Build frontend-test service
-          command:  |
+          command: |
             docker-compose build frontend-test
       - run:
           name: Run tests
@@ -54,7 +54,7 @@ jobs:
       - setup_remote_docker
       - run:
           name: Build frontend service
-          command:  |
+          command: |
             docker-compose build frontend
       - tag-images-and-push-to-quay:
           image: "ariadne_frontend"
@@ -107,6 +107,21 @@ jobs:
             docker-compose build backend
       - tag-images-and-push-to-quay:
           image: "ariadne_backend"
+  e2e:
+    <<: *docker-defaults
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Build e2e-test service
+          command: |
+            docker-compose build e2e
+      - run:
+          name: Run tests
+          command: |
+            docker-compose run e2e
+      - tag-images-and-push-to-quay:
+          image: "ariadne_e2e_test"
 
 workflows:
   version: 2.1
@@ -122,3 +137,6 @@ workflows:
       - backend-build:
           requires:
             - backend-test
+  e2e:
+    jobs:
+      - e2e
