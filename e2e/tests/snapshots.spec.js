@@ -12,22 +12,22 @@ test('renders the Corriere Fiorentino against golden correctly', async ({ page }
   await page.waitForFunction(() => document.querySelector('h6'));
 
   const snapshot = await page.innerHTML('body');
-  fs.writeFileSync('tests/actual/corriere-fiorentino.html', snapshot);
+  // fs.writeFileSync('tests/actual/corriere-fiorentino.html', snapshot);
   const golden = fs.readFileSync('tests/golden/corriere-fiorentino.html', 'utf8');
   const stringifiedSnapshot = JSON.stringify(snapshot);
   const stringifiedGolden = JSON.stringify(golden);
   const ok = stringifiedSnapshot === stringifiedGolden;
 
-  if (stringifiedGolden !== stringifiedSnapshot) {
-    try {
-      execSync('diff -c tests/golden/corriere-fiorentino.html e2e/actual/corriere-fiorentino.html');
-    } catch (error) {
-      // eslint-disable-next-line no-console
-      console.log(error.stdout.toString());
-      // eslint-disable-next-line no-console
-      console.log(error.stderr.toString());
-    }
-  }
+  // if (stringifiedGolden !== stringifiedSnapshot) {
+  //   try {
+  //     execSync('diff -c tests/golden/corriere-fiorentino.html e2e/actual/corriere-fiorentino.html');
+  //   } catch (error) {
+  //     // eslint-disable-next-line no-console
+  //     console.log(error.stdout.toString());
+  //     // eslint-disable-next-line no-console
+  //     console.log(error.stderr.toString());
+  //   }
+  // }
 
   expect(ok).toBeTruthy();
 });
