@@ -11,12 +11,20 @@ export default (apiFunc) => {
     setLoading(true);
     try {
       const response = await apiFunc(...args);
-      const responseBody = await response.json();
-      const arrOfLinks = getLinks(responseBody.records);
-      setResource(arrOfLinks.slice(0, -1));
-      setResourceLastElement(arrOfLinks.at(-1));
+      if (response.ok) {
+        const responseBody = await response.json();
+        if (responseBody.errors.length === 0) {
+          const arrOfLinks = getLinks(responseBody.records);
+          setResource(arrOfLinks.slice(0, -1));
+          setResourceLastElement(arrOfLinks.at(-1));
+        } else {
+          setError(`The backend API returned errors: ${responseBody.errors.map((error) => `"${error}"`).join(', ')}`);
+        }
+      } else {
+        setError(`The backend API returned an HTTP error response: ${response.status} (${response.statusText})`);
+      }
     } catch (error) {
-      setError('Something went wrong');
+      setError(`Error fetching data from the Ariadne API: ${error}`);
     } finally {
       setLoading(false);
     }
