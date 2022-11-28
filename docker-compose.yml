@@ -44,11 +44,11 @@ x-development-volumes-backend: &x-development-volumes-backend
     - ./backend:/app
 
 x-build-e2e: &x-build-e2e
-  image: ariadne-e2e
+  image: ariadne_e2e
   build:
     context: ./e2e
     cache_from:
-      - ariadne-e2e
+      - ariadne_e2e
 
 x-development-volumes-frontend: &x-development-volumes-frontend
   volumes:

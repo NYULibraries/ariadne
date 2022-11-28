@@ -121,7 +121,7 @@ jobs:
           command: |
             docker-compose run e2e
       - tag-images-and-push-to-quay:
-          image: "ariadne_e2e_test"
+          image: "ariadne_e2e"
 
 workflows:
   version: 2.1
