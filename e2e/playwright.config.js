@@ -1,7 +1,7 @@
 // @ts-check
 const { devices } = require('@playwright/test');
 require('dotenv').config(
-  { path: require('path').join(__dirname, './', '.env.test') }
+  { path: require('path').join(__dirname, '.env.test') }
 )
 
 /**
