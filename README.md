@@ -24,19 +24,16 @@ docker-compose up frontend
 
 ## Backend
 
-The Ariadne backend provides a simple JSON API written in Go that takes
-an [OpenURL](https://biblio.ugent.be/publication/760060/file/760063.pdf) and
-returns electronic links from an SFX Knowledgebase that represent NYU's
-e-holdings of the resource identified by the OpenURL. It is essentially an API
-wrapper for
-the [SFX LinkResolver](https://exlibrisgroup.com/products/primo-discovery-service/sfx-link-resolver/)
+The Ariadne backend is a REST API written in Go that takes
+an [OpenURL](https://biblio.ugent.be/publication/760060/file/760063.pdf) submitted
+via query string and returns JSON data containing electronic links from an
+SFX Knowledgebase that represent NYU's e-holdings of the resource identified by
+the OpenURL. It is essentially an API wrapper for the [SFX LinkResolver](https://exlibrisgroup.com/products/primo-discovery-service/sfx-link-resolver/),
 and so is itself an OpenURL Link Resolver.
 
-Under the hood it translates the OpenURL from a GET request as querystring
-parameters to an XML `ContextObject` for posting to
-the [SFX Web Service](https://developers.exlibrisgroup.com/sfx/apis/web_services/openurl/)
-, and then parses the resulting XML into a JSON string to pass on to the
-presentation layer.
+Under the hood it translates the OpenURL query string parameters to an XML `ContextObject`
+for POST'ing to the [SFX Web Service](https://developers.exlibrisgroup.com/sfx/apis/web_services/openurl/),
+parses the XML response into a JSON string which it delivers to the frontend.
 
 ### Usage
 
