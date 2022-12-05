@@ -91,7 +91,10 @@ describe('Backend success', () => {
       await waitForElementToBeRemoved(() => getByText(LOADING_TEXT_REGEXP));
     });
 
-    test('renders correctly', async () => {
+    // TODO: Re-enable this test after Ask a Librarian changes have been made
+    // in the frontend:
+    // https://nyu-lib.monday.com/boards/765008773/pulses/3548498827/posts/1845149349
+    test.skip('renders correctly', async () => {
       const actual = render(<List />);
       await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
       expect(actual.asFragment()).toMatchSnapshot();
@@ -111,7 +114,10 @@ describe('Backend success', () => {
       expect(container.getElementsByClassName('list-group').length).toBe(1);
     });
 
-    test('renders Ask a Librarian', async () => {
+    // TODO: Re-enable this test after Ask a Librarian changes have been made
+    // in the frontend:
+    // https://nyu-lib.monday.com/boards/765008773/pulses/3548498827/posts/1845149349
+    test.skip('renders Ask a Librarian', async () => {
       render(<List />);
       // See comment at top of file: 'Clearing "wrap in act()" warnings'
       await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
