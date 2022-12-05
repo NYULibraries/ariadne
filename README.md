@@ -7,7 +7,7 @@ The NYU Libraries [OpenURL](https://en.wikipedia.org/wiki/OpenURL) link resolver
 ## Application architecture
 
 * [backend/](backend/README.md): API server written in Go
-* [frontend/](backend/README.md): client SPA built with React
+* [frontend/](frontend/README.md): client SPA built with React
 
 ## Deployment
 
