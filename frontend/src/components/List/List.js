@@ -59,13 +59,16 @@ const List = () => {
           ))}
           {backendClient.resource?.length === 0 && <div className="i-am-centered">No results found</div>}
         </div>
-        {backendClient.resourceLastElement && (
+        {!backendClient.loading && (
           <div className="ask-librarian">
-            <h6>
-              <a href={backendClient.resourceLastElement.target_url} target="_blank" rel="noopener noreferrer">
-                {backendClient.resourceLastElement.target_public_name}
-              </a>
-            </h6>
+            <div id="subtitle">Need help?</div>
+            <div id="title">
+              <h6>
+                <a href={ASK_LIBRARIAN_URL} target="_blank" rel="noopener noreferrer">
+                  {ASK_LIBRARIAN_TEXT}
+                </a>
+              </h6>
+            </div>
           </div>
         )}
       </div>
@@ -75,4 +78,6 @@ const List = () => {
 
 export const LOADING_TEXT = 'Loading...';
 export const RESULTS_HEADER_TEXT = 'Displaying search results...';
+export const ASK_LIBRARIAN_URL = 'https://library.nyu.edu/ask/';
+export const ASK_LIBRARIAN_TEXT = 'Ask a Librarian';
 export default List;
