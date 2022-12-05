@@ -442,28 +442,6 @@
                                         "embargo": {}
                                     }
                                 ]
-                            },
-                            {
-                                "target_name": "ASK_A_LIBRARIAN_LCL",
-                                "target_public_name": "Ask a Librarian",
-                                "target_url": "http://library.nyu.edu/ask/",
-                                "authentication": "",
-                                "proxy": "no",
-                                "coverage": [
-                                    {
-                                        "coverage_text": [
-                                            {
-                                                "threshold_text": [
-                                                    {}
-                                                ],
-                                                "embargo_text": [
-                                                    {}
-                                                ]
-                                            }
-                                        ],
-                                        "embargo": {}
-                                    }
-                                ]
                             }
                         ]
                     }

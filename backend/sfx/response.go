@@ -95,6 +95,17 @@ type ThresholdText struct {
 	CoverageStatement []string `xml:"coverage_statement" json:"coverage_statement,omitempty"`
 }
 
+func (multipleObjectsResponse *MultipleObjectsResponse) RemoveTarget(targetURL string) {
+	currentTargets := (*(*multipleObjectsResponse.MultiObjXMLResponseBody.ContextObject)[0].SFXContextObjectTargets)[0].Targets
+	var newTargets []Target
+	for _, target := range *currentTargets {
+		if target.TargetUrl != targetURL {
+			newTargets = append(newTargets, target)
+		}
+	}
+	(*(*multipleObjectsResponse.MultiObjXMLResponseBody.ContextObject)[0].SFXContextObjectTargets)[0].Targets = &newTargets
+}
+
 func newMultipleObjectsResponse(httpResponse *http.Response) (*MultipleObjectsResponse, error) {
 	// NOTE: `defer httpResponse.Body.Close()` should have already been called by the client
 	// before passing to this function.
