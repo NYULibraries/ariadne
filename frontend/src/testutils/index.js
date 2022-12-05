@@ -1,4 +1,4 @@
-const fs = require('fs');
+import * as fs from 'node:fs';
 const path = require('path');
 
 // Prefer actual backend/api/testdata/ files if they exist (i.e. running tests on

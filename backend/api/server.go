@@ -53,6 +53,10 @@ func multipleRecordsHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	// Remove the Ask a Librarian target -- for details, see:
+	// https://nyu-lib.monday.com/boards/765008773/pulses/3548498827
+	sfxResponse.RemoveTarget("http://library.nyu.edu/ask/")
+
 	ariadneResponse := Response{
 		Errors:  []string{},
 		Records: sfxResponse.MultiObjXMLResponseBody,
