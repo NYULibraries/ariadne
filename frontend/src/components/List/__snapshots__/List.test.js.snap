@@ -27,6 +27,28 @@ exports[`Backend HTTP error responses HTTP 400 (Bad Request) error is rendered c
     <div
       class="list-group"
     />
+    <div
+      class="ask-librarian"
+    >
+      <div
+        id="subtitle"
+      >
+        Need help?
+      </div>
+      <div
+        id="title"
+      >
+        <h6>
+          <a
+            href="https://library.nyu.edu/ask/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Ask a Librarian
+          </a>
+        </h6>
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -58,6 +80,28 @@ exports[`Backend HTTP error responses HTTP 403 (Forbidden) error is rendered cor
     <div
       class="list-group"
     />
+    <div
+      class="ask-librarian"
+    >
+      <div
+        id="subtitle"
+      >
+        Need help?
+      </div>
+      <div
+        id="title"
+      >
+        <h6>
+          <a
+            href="https://library.nyu.edu/ask/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Ask a Librarian
+          </a>
+        </h6>
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -89,6 +133,28 @@ exports[`Backend HTTP error responses HTTP 408 (Request Timeout) error is render
     <div
       class="list-group"
     />
+    <div
+      class="ask-librarian"
+    >
+      <div
+        id="subtitle"
+      >
+        Need help?
+      </div>
+      <div
+        id="title"
+      >
+        <h6>
+          <a
+            href="https://library.nyu.edu/ask/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Ask a Librarian
+          </a>
+        </h6>
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -120,6 +186,28 @@ exports[`Backend HTTP error responses HTTP 500 (Internal Server Error) error is 
     <div
       class="list-group"
     />
+    <div
+      class="ask-librarian"
+    >
+      <div
+        id="subtitle"
+      >
+        Need help?
+      </div>
+      <div
+        id="title"
+      >
+        <h6>
+          <a
+            href="https://library.nyu.edu/ask/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Ask a Librarian
+          </a>
+        </h6>
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -151,6 +239,28 @@ exports[`Backend fetch exceptions TypeError: Failed to fetch renders backend fet
     <div
       class="list-group"
     />
+    <div
+      class="ask-librarian"
+    >
+      <div
+        id="subtitle"
+      >
+        Need help?
+      </div>
+      <div
+        id="title"
+      >
+        <h6>
+          <a
+            href="https://library.nyu.edu/ask/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Ask a Librarian
+          </a>
+        </h6>
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -182,6 +292,28 @@ exports[`Backend response includes errors Response includes 2 errors and an empt
     <div
       class="list-group"
     />
+    <div
+      class="ask-librarian"
+    >
+      <div
+        id="subtitle"
+      >
+        Need help?
+      </div>
+      <div
+        id="title"
+      >
+        <h6>
+          <a
+            href="https://library.nyu.edu/ask/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Ask a Librarian
+          </a>
+        </h6>
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
