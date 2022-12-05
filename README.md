@@ -171,11 +171,5 @@ JSON:
 
 ## TODO:
 
-- Sanitize urls to make sure no XML injection is allowed via querystring
-- Use Gin or other more performant http framework
-- Testing - round out to ~80%
-- GraphQL?
-- Frontend
-    - react? vue?
-    - Debounce, memoize and otherwise cache requests so as not to bombard the
-      SFX server
+- Sanitize urls to prevent XML injection via query string
+- Minimize load on the SFX server through backend and/or frontend debouncing, memo-izing, caching, etc.
