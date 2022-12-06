@@ -1,6 +1,6 @@
 import { render, screen, waitFor, waitForElementToBeRemoved } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import List, {LOADING_TEXT, RESULTS_HEADER_TEXT} from './List';
+import List, { ASK_LIBRARIAN_TEXT, ASK_LIBRARIAN_URL, LOADING_TEXT, RESULTS_HEADER_TEXT } from './List';
 import {
   getTestCasesBackendFetchExceptions,
   getTestCasesBackendHttpErrorResponses,
@@ -52,11 +52,11 @@ const LOADING_TEXT_REGEXP = new RegExp(LOADING_TEXT, 'i');
 
 describe('Backend success', () => {
   describe.each(getTestCasesBackendSuccess())('$name', (testCase) => {
-
     beforeEach(() => {
       delete window.location;
       window.location = new URL(`${process.env.REACT_APP_API_URL}?${testCase.queryString}`);
-      jest.spyOn(apiClient, 'get')
+      jest
+        .spyOn(apiClient, 'get')
         // Even though theoretically we should only need to intercept `apiClient.get`
         // once using `.mockResolvedValueOnce`, we instead set no limit on
         // number of interceptions because in React 18, the data fetch hook
@@ -65,10 +65,7 @@ describe('Backend success', () => {
         // We need to make sure that the tests always used the fake value, so we
         // use `.mockResolvedValue`.
         .mockResolvedValue(
-          new Response(
-            JSON.stringify(testCase.response, null, '    '),
-            { status: 200, statusText: 'OK' }
-          )
+          new Response(JSON.stringify(testCase.response, null, '    '), { status: 200, statusText: 'OK' })
         );
     });
 
@@ -91,10 +88,7 @@ describe('Backend success', () => {
       await waitForElementToBeRemoved(() => getByText(LOADING_TEXT_REGEXP));
     });
 
-    // TODO: Re-enable this test after Ask a Librarian changes have been made
-    // in the frontend:
-    // https://nyu-lib.monday.com/boards/765008773/pulses/3548498827/posts/1845149349
-    test.skip('renders correctly', async () => {
+    test('renders correctly', async () => {
       const actual = render(<List />);
       await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
       expect(actual.asFragment()).toMatchSnapshot();
@@ -114,30 +108,29 @@ describe('Backend success', () => {
       expect(container.getElementsByClassName('list-group').length).toBe(1);
     });
 
-    // TODO: Re-enable this test after Ask a Librarian changes have been made
-    // in the frontend:
-    // https://nyu-lib.monday.com/boards/765008773/pulses/3548498827/posts/1845149349
-    test.skip('renders Ask a Librarian', async () => {
+    test(`renders ${ASK_LIBRARIAN_TEXT}`, async () => {
       render(<List />);
       // See comment at top of file: 'Clearing "wrap in act()" warnings'
       await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
-      const askALibrarian = await waitFor(() => screen.getByText(/Ask a Librarian/i));
+      const askALibrarian = await waitFor(() => screen.getByText(ASK_LIBRARIAN_TEXT));
       expect(askALibrarian).toBeInTheDocument();
     });
 
+    test(`renders ${ASK_LIBRARIAN_TEXT} with a link to ${ASK_LIBRARIAN_URL}`, async () => {
+      render(<List />);
+      await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
+      const askALibrarian = await waitFor(() => screen.getByText(ASK_LIBRARIAN_TEXT));
+      expect(askALibrarian).toHaveAttribute('href', ASK_LIBRARIAN_URL);
+    });
   });
-
 });
 
 describe('Backend fetch exceptions', () => {
-
   describe.each(getTestCasesBackendFetchExceptions())('$name', (testCase) => {
-
     beforeEach(() => {
       delete window.location;
       window.location = new URL(`${process.env.REACT_APP_API_URL}?${testCase.queryString}`);
-      jest.spyOn(apiClient, 'get')
-        .mockImplementation(() => Promise.reject(new TypeError('Failed to fetch')));
+      jest.spyOn(apiClient, 'get').mockImplementation(() => Promise.reject(new TypeError('Failed to fetch')));
     });
 
     afterEach(() => {
@@ -151,70 +144,61 @@ describe('Backend fetch exceptions', () => {
       await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
       expect(actual.asFragment()).toMatchSnapshot();
     });
-
   });
-
 });
 
 describe('Backend HTTP error responses', () => {
+  describe.each(getTestCasesBackendHttpErrorResponses())(
+    `HTTP $httpErrorCode ($httpErrorMessage) error`,
+    (testCase) => {
+      beforeEach(() => {
+        delete window.location;
+        window.location = new URL(`${process.env.REACT_APP_API_URL}?${testCase.queryString}`);
+        jest
+          .spyOn(apiClient, 'get')
+          .mockResolvedValue(
+            new Response(null, { status: testCase.httpErrorCode, statusText: testCase.httpErrorMessage })
+          );
+      });
 
-  describe.each(getTestCasesBackendHttpErrorResponses())
-  (`HTTP $httpErrorCode ($httpErrorMessage) error`,
-   (testCase) => {
+      afterEach(() => {
+        delete window.location;
+        window.location = new URL('http://localhost:3000');
+        jest.clearAllMocks();
+      });
 
-     beforeEach(() => {
-       delete window.location;
-       window.location = new URL(`${process.env.REACT_APP_API_URL}?${testCase.queryString}`);
-       jest.spyOn(apiClient, 'get').mockResolvedValue(
-         new Response(
-           null,
-           { status: testCase.httpErrorCode, statusText: testCase.httpErrorMessage }
-         )
-       );
-     });
+      test(`renders ${LOADING_TEXT}`, async () => {
+        render(<List />);
+        const loadingIndicator = screen.getByText(LOADING_TEXT_REGEXP);
+        expect(loadingIndicator).toBeInTheDocument();
+        // See comment at top of file: 'Clearing "wrap in act()" warnings'
+        await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
+      });
 
-     afterEach(() => {
-       delete window.location;
-       window.location = new URL('http://localhost:3000');
-       jest.clearAllMocks();
-     });
+      test(`${LOADING_TEXT} no longer present in the DOM after loading data`, async () => {
+        const { getByText } = render(<List />);
+        await waitForElementToBeRemoved(() => getByText(LOADING_TEXT_REGEXP));
+      });
 
-     test(`renders ${LOADING_TEXT}`, async () => {
-       render(<List />);
-       const loadingIndicator = screen.getByText(LOADING_TEXT_REGEXP);
-       expect(loadingIndicator).toBeInTheDocument();
-       // See comment at top of file: 'Clearing "wrap in act()" warnings'
-       await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
-     });
-
-     test(`${LOADING_TEXT} no longer present in the DOM after loading data`, async () => {
-       const { getByText } = render(<List />);
-       await waitForElementToBeRemoved(() => getByText(LOADING_TEXT_REGEXP));
-     });
-
-     test(`is rendered correctly`, async () => {
-       const actual = render(<List />);
-       await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
-       expect(actual.asFragment()).toMatchSnapshot();
-     });
-
-   });
-
+      test(`is rendered correctly`, async () => {
+        const actual = render(<List />);
+        await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
+        expect(actual.asFragment()).toMatchSnapshot();
+      });
+    }
+  );
 });
 
 describe('Backend response includes errors', () => {
-
   describe.each(getTestCasesBackendResponsesIncludeErrors())('$name', (testCase) => {
-
     beforeEach(() => {
       delete window.location;
       window.location = new URL(`${process.env.REACT_APP_API_URL}?${testCase.queryString}`);
-      jest.spyOn(apiClient, 'get').mockResolvedValue(
-        new Response(
-          JSON.stringify(testCase.response, null, '    '),
-          { status: 200, statusText: 'OK' }
-        )
-      );
+      jest
+        .spyOn(apiClient, 'get')
+        .mockResolvedValue(
+          new Response(JSON.stringify(testCase.response, null, '    '), { status: 200, statusText: 'OK' })
+        );
     });
 
     afterEach(() => {
@@ -241,7 +225,5 @@ describe('Backend response includes errors', () => {
       await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
       expect(actual.asFragment()).toMatchSnapshot();
     });
-
   });
-
 });

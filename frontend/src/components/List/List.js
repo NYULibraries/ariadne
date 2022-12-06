@@ -81,8 +81,8 @@ const List = () => {
   );
 };
 
-export const ASK_LIBRARIAN_URL = 'https://library.nyu.edu/ask/';
 export const ASK_LIBRARIAN_TEXT = 'Ask a Librarian';
+export const ASK_LIBRARIAN_URL = 'https://library.nyu.edu/ask/';
 export const LOADING_TEXT = 'Loading...';
 export const RESULTS_HEADER_TEXT = 'Displaying search results...';
 export default List;
