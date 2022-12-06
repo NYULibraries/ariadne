@@ -22,31 +22,37 @@ exports[`Backend HTTP error responses HTTP 400 (Bad Request) error is rendered c
     The backend API returned an HTTP error response: 400 (Bad Request)
   </div>
   <div
-    class="i-am-centered"
+    class="container"
   >
     <div
-      class="list-group"
-    />
-    <div
-      class="ask-librarian"
+      class="row"
     >
       <div
-        id="subtitle"
+        class="col"
       >
-        Need help?
+        <div
+          class="list-group"
+        />
       </div>
       <div
-        id="title"
+        class="col-md-5 offset-md-1"
       >
-        <h6>
-          <a
-            href="https://library.nyu.edu/ask/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Ask a Librarian
-          </a>
-        </h6>
+        <div
+          class="ask-librarian"
+        >
+          <h5>
+            Need help?
+          </h5>
+          <h6>
+            <a
+              href="https://library.nyu.edu/ask/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Ask a Librarian
+            </a>
+          </h6>
+        </div>
       </div>
     </div>
   </div>
@@ -75,31 +81,37 @@ exports[`Backend HTTP error responses HTTP 403 (Forbidden) error is rendered cor
     The backend API returned an HTTP error response: 403 (Forbidden)
   </div>
   <div
-    class="i-am-centered"
+    class="container"
   >
     <div
-      class="list-group"
-    />
-    <div
-      class="ask-librarian"
+      class="row"
     >
       <div
-        id="subtitle"
+        class="col"
       >
-        Need help?
+        <div
+          class="list-group"
+        />
       </div>
       <div
-        id="title"
+        class="col-md-5 offset-md-1"
       >
-        <h6>
-          <a
-            href="https://library.nyu.edu/ask/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Ask a Librarian
-          </a>
-        </h6>
+        <div
+          class="ask-librarian"
+        >
+          <h5>
+            Need help?
+          </h5>
+          <h6>
+            <a
+              href="https://library.nyu.edu/ask/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Ask a Librarian
+            </a>
+          </h6>
+        </div>
       </div>
     </div>
   </div>
@@ -128,31 +140,37 @@ exports[`Backend HTTP error responses HTTP 408 (Request Timeout) error is render
     The backend API returned an HTTP error response: 408 (Request Timeout)
   </div>
   <div
-    class="i-am-centered"
+    class="container"
   >
     <div
-      class="list-group"
-    />
-    <div
-      class="ask-librarian"
+      class="row"
     >
       <div
-        id="subtitle"
+        class="col"
       >
-        Need help?
+        <div
+          class="list-group"
+        />
       </div>
       <div
-        id="title"
+        class="col-md-5 offset-md-1"
       >
-        <h6>
-          <a
-            href="https://library.nyu.edu/ask/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Ask a Librarian
-          </a>
-        </h6>
+        <div
+          class="ask-librarian"
+        >
+          <h5>
+            Need help?
+          </h5>
+          <h6>
+            <a
+              href="https://library.nyu.edu/ask/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Ask a Librarian
+            </a>
+          </h6>
+        </div>
       </div>
     </div>
   </div>
@@ -181,31 +199,37 @@ exports[`Backend HTTP error responses HTTP 500 (Internal Server Error) error is 
     The backend API returned an HTTP error response: 500 (Internal Server Error)
   </div>
   <div
-    class="i-am-centered"
+    class="container"
   >
     <div
-      class="list-group"
-    />
-    <div
-      class="ask-librarian"
+      class="row"
     >
       <div
-        id="subtitle"
+        class="col"
       >
-        Need help?
+        <div
+          class="list-group"
+        />
       </div>
       <div
-        id="title"
+        class="col-md-5 offset-md-1"
       >
-        <h6>
-          <a
-            href="https://library.nyu.edu/ask/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Ask a Librarian
-          </a>
-        </h6>
+        <div
+          class="ask-librarian"
+        >
+          <h5>
+            Need help?
+          </h5>
+          <h6>
+            <a
+              href="https://library.nyu.edu/ask/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Ask a Librarian
+            </a>
+          </h6>
+        </div>
       </div>
     </div>
   </div>
@@ -234,31 +258,37 @@ exports[`Backend fetch exceptions TypeError: Failed to fetch renders backend fet
     Error fetching data from the Ariadne API: TypeError: Failed to fetch
   </div>
   <div
-    class="i-am-centered"
+    class="container"
   >
     <div
-      class="list-group"
-    />
-    <div
-      class="ask-librarian"
+      class="row"
     >
       <div
-        id="subtitle"
+        class="col"
       >
-        Need help?
+        <div
+          class="list-group"
+        />
       </div>
       <div
-        id="title"
+        class="col-md-5 offset-md-1"
       >
-        <h6>
-          <a
-            href="https://library.nyu.edu/ask/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Ask a Librarian
-          </a>
-        </h6>
+        <div
+          class="ask-librarian"
+        >
+          <h5>
+            Need help?
+          </h5>
+          <h6>
+            <a
+              href="https://library.nyu.edu/ask/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Ask a Librarian
+            </a>
+          </h6>
+        </div>
       </div>
     </div>
   </div>
@@ -287,31 +317,37 @@ exports[`Backend response includes errors Response includes 2 errors and an empt
     The backend API returned errors: "[ERROR 1]", "[ERROR 2]"
   </div>
   <div
-    class="i-am-centered"
+    class="container"
   >
     <div
-      class="list-group"
-    />
-    <div
-      class="ask-librarian"
+      class="row"
     >
       <div
-        id="subtitle"
+        class="col"
       >
-        Need help?
+        <div
+          class="list-group"
+        />
       </div>
       <div
-        id="title"
+        class="col-md-5 offset-md-1"
       >
-        <h6>
-          <a
-            href="https://library.nyu.edu/ask/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Ask a Librarian
-          </a>
-        </h6>
+        <div
+          class="ask-librarian"
+        >
+          <h5>
+            Need help?
+          </h5>
+          <h6>
+            <a
+              href="https://library.nyu.edu/ask/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Ask a Librarian
+            </a>
+          </h6>
+        </div>
       </div>
     </div>
   </div>
