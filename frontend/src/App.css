@@ -39,33 +39,14 @@
 }
 
 .ask-librarian {
-  margin: 170px -56px 0px 50px;
-  max-width: 150px;
+  margin-top: 11rem;
 }
 
-.ask-librarian:hover {
-  text-decoration: underline;
-}
-
-.ask-librarian a {
-  text-decoration: none;
-  color: #6c07ae;
-}
-
-.ask-librarian a:hover {
-  text-decoration: underline;
-  color: #6c07ae;
-}
 
 h6 {
   color: #6c07ae;
 }
 
-
-.ask-librarian{
-  white-space: nowrap;
-  margin: 220px 74px 0px 190px;
-}
 /* 
   Styles for the Banner component
 */
@@ -85,7 +66,11 @@ h6 {
 }
 
 
-
+@media screen and (max-width: 800px) {
+  .ask-librarian {
+    margin: 2rem 0rem 2rem 0rem;
+  }
+}
 
 
 
