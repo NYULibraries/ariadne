@@ -5,6 +5,6 @@ import (
 )
 
 type Response struct {
-	Errors  []string                    `json:"errors""`
+	Errors  []string                    `json:"errors"`
 	Records sfx.MultiObjXMLResponseBody `json:"records"`
 }
