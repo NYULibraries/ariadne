@@ -25,17 +25,17 @@ exports[`Backend HTTP error responses HTTP 400 (Bad Request) error is rendered c
     class="container"
   >
     <div
-      class="row"
+      class="row row-cols-md-12"
     >
       <div
-        class="col"
+        class="col-md-8"
       >
         <div
           class="list-group"
         />
       </div>
       <div
-        class="col-md-5 offset-md-1"
+        class="col-md-4"
       >
         <div
           class="ask-librarian"
@@ -84,17 +84,17 @@ exports[`Backend HTTP error responses HTTP 403 (Forbidden) error is rendered cor
     class="container"
   >
     <div
-      class="row"
+      class="row row-cols-md-12"
     >
       <div
-        class="col"
+        class="col-md-8"
       >
         <div
           class="list-group"
         />
       </div>
       <div
-        class="col-md-5 offset-md-1"
+        class="col-md-4"
       >
         <div
           class="ask-librarian"
@@ -143,17 +143,17 @@ exports[`Backend HTTP error responses HTTP 408 (Request Timeout) error is render
     class="container"
   >
     <div
-      class="row"
+      class="row row-cols-md-12"
     >
       <div
-        class="col"
+        class="col-md-8"
       >
         <div
           class="list-group"
         />
       </div>
       <div
-        class="col-md-5 offset-md-1"
+        class="col-md-4"
       >
         <div
           class="ask-librarian"
@@ -202,17 +202,17 @@ exports[`Backend HTTP error responses HTTP 500 (Internal Server Error) error is 
     class="container"
   >
     <div
-      class="row"
+      class="row row-cols-md-12"
     >
       <div
-        class="col"
+        class="col-md-8"
       >
         <div
           class="list-group"
         />
       </div>
       <div
-        class="col-md-5 offset-md-1"
+        class="col-md-4"
       >
         <div
           class="ask-librarian"
@@ -261,17 +261,17 @@ exports[`Backend fetch exceptions TypeError: Failed to fetch renders backend fet
     class="container"
   >
     <div
-      class="row"
+      class="row row-cols-md-12"
     >
       <div
-        class="col"
+        class="col-md-8"
       >
         <div
           class="list-group"
         />
       </div>
       <div
-        class="col-md-5 offset-md-1"
+        class="col-md-4"
       >
         <div
           class="ask-librarian"
@@ -320,17 +320,17 @@ exports[`Backend response includes errors Response includes 2 errors and an empt
     class="container"
   >
     <div
-      class="row"
+      class="row row-cols-md-12"
     >
       <div
-        class="col"
+        class="col-md-8"
       >
         <div
           class="list-group"
         />
       </div>
       <div
-        class="col-md-5 offset-md-1"
+        class="col-md-4"
       >
         <div
           class="ask-librarian"
@@ -374,10 +374,10 @@ exports[`Backend success Corriere Fiorentino renders correctly 1`] = `
     class="container"
   >
     <div
-      class="row"
+      class="row row-cols-md-12"
     >
       <div
-        class="col"
+        class="col-md-8"
       >
         <div
           class="list-group"
@@ -405,7 +405,7 @@ exports[`Backend success Corriere Fiorentino renders correctly 1`] = `
         </div>
       </div>
       <div
-        class="col-md-5 offset-md-1"
+        class="col-md-4"
       >
         <div
           class="ask-librarian"
@@ -449,10 +449,10 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
     class="container"
   >
     <div
-      class="row"
+      class="row row-cols-md-12"
     >
       <div
-        class="col"
+        class="col-md-8"
       >
         <div
           class="list-group"
@@ -700,7 +700,7 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
         </div>
       </div>
       <div
-        class="col-md-5 offset-md-1"
+        class="col-md-4"
       >
         <div
           class="ask-librarian"
