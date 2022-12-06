@@ -45,8 +45,8 @@ const List = () => {
       {backendClient.loading && <div className="loader">{LOADING_TEXT}</div>}
       {backendClient.error && <div className="i-am-centered">{backendClient.error}</div>}
       <Container>
-        <Row>
-          <Col>
+        <Row md={12}>
+          <Col md={8}>
             <div className="list-group">
               {backendClient.resource?.map((link, idx) => (
                 <div key={idx} className="list-group-item list-group-item-action flex-column border-0">
@@ -63,7 +63,7 @@ const List = () => {
               {backendClient.resource?.length === 0 && <p>No results found</p>}
             </div>
           </Col>
-          <Col md={{ span: 5, offset: 1 }}>
+          <Col md={4}>
             {!backendClient.loading && (
               <div className="ask-librarian">
                 <h5>Need help?</h5>
