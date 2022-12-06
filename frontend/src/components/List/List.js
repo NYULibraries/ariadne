@@ -49,7 +49,7 @@ const List = () => {
           <Col>
             <div className="list-group">
               {backendClient.resource?.map((link, idx) => (
-                <div key={idx} className="list-group-item list-group-item-action flex-column" id="border-style">
+                <div key={idx} className="list-group-item list-group-item-action flex-column border-0">
                   <div className="row">
                     <h6>
                       <a href={link.target_url} target="_blank" rel="noopener noreferrer">
