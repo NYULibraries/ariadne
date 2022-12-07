@@ -37,22 +37,22 @@ test.skip('renders the New Yorker against golden correctly', async ({ page }) =>
   await page.waitForFunction(() => document.querySelector('h6'));
 
   const snapshot = await page.innerHTML('body');
-  fs.writeFileSync('e2e/test/new-yorker1.html', snapshot);
+  // fs.writeFileSync('tests/actual//new-yorker.html', snapshot);
   const golden = fs.readFileSync('tests/golden/new-yorker.html', { encoding: 'utf8' });
   const stringifiedSnapshot = JSON.stringify(snapshot);
   const stringifiedGolden = JSON.stringify(golden);
   const ok = stringifiedSnapshot === stringifiedGolden;
 
-  if (stringifiedGolden !== stringifiedSnapshot) {
-    try {
-      // eslint-disable-next-line no-unused-vars
-      execSync('diff -c tests/golden/new-yorker.html e2e/actual/new-yorker.html');
-    } catch (error) {
-      // eslint-disable-next-line no-console
-      console.log(error.stdout.toString());
-      // eslint-disable-next-line no-console
-      console.log(error.stderr.toString());
-    }
-  }
+  // if (stringifiedGolden !== stringifiedSnapshot) {
+  //   try {
+  //     // eslint-disable-next-line no-unused-vars
+  //     execSync('diff -c tests/golden/new-yorker.html e2e/actual/new-yorker.html');
+  //   } catch (error) {
+  //     // eslint-disable-next-line no-console
+  //     console.log(error.stdout.toString());
+  //     // eslint-disable-next-line no-console
+  //     console.log(error.stderr.toString());
+  //   }
+  // }
   expect(ok).toBe(true);
 });

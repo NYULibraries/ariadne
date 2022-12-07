@@ -76,7 +76,7 @@ test('renders Ask a Librarian', async ({ page }) => {
     page.waitForEvent('popup', { timeout: 10000 }),
     page.getByRole('link', { name: 'Ask a Librarian' }).click(),
   ]);
-  expect(await page.textContent('.ask-librarian')).toBe('Ask a Librarian');
+  expect(await page.textContent('.ask-librarian')).toBe('Need help?Ask a Librarian');
   expect(page4.url()).toBe('https://library.nyu.edu/ask/');
 });
 
