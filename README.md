@@ -158,6 +158,12 @@ cd e2e/
 yarn test:e2e
 ```
 
+Run E2E tests in a container:
+
+```
+docker-compose run --rm e2e
+```
+
 ## Example
 
 This is the existing SFX service response for The New Yorker:

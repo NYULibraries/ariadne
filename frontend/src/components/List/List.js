@@ -3,6 +3,7 @@ import { useEffect, useRef } from 'react';
 import { getCoverageStatement } from '../../aux/helpers';
 import useApi from '../../hooks/useApi';
 import linksApi from '../../api/fetchData';
+import { Col, Container, Row } from 'react-bootstrap';
 
 const List = () => {
   const backendClient = useApi(linksApi.fetchData);
@@ -43,36 +44,45 @@ const List = () => {
       {/* TODO: we could put a spinner here: */}
       {backendClient.loading && <div className="loader">{LOADING_TEXT}</div>}
       {backendClient.error && <div className="i-am-centered">{backendClient.error}</div>}
-      <div className="i-am-centered">
-        <div className="list-group">
-          {backendClient.resource?.map((link, idx) => (
-            <div key={idx} className="list-group-item list-group-item-action flex-column" id="border-style">
-              <div className="row">
+      <Container>
+        <Row md={12}>
+          <Col md={8}>
+            <div className="list-group">
+              {backendClient.resource?.map((link, idx) => (
+                <div key={idx} className="list-group-item list-group-item-action flex-column border-0">
+                  <div className="row">
+                    <h6>
+                      <a href={link.target_url} target="_blank" rel="noopener noreferrer">
+                        {link.target_public_name}
+                      </a>
+                    </h6>
+                    <small>{getCoverageStatement(link)}</small>
+                  </div>
+                </div>
+              ))}
+              {backendClient.resource?.length === 0 && <p>No results found</p>}
+            </div>
+          </Col>
+          <Col md={4}>
+            {!backendClient.loading && (
+              <div className="ask-librarian">
+                <h5>Need help?</h5>
                 <h6>
-                  <a href={link.target_url} target="_blank" rel="noopener noreferrer">
-                    {link.target_public_name}
+                  <a href={ASK_LIBRARIAN_URL} target="_blank" rel="noopener noreferrer">
+                    {ASK_LIBRARIAN_TEXT}
                   </a>
                 </h6>
-                <small>{getCoverageStatement(link)}</small>
               </div>
-            </div>
-          ))}
-          {backendClient.resource?.length === 0 && <div className="i-am-centered">No results found</div>}
-        </div>
-        {backendClient.resourceLastElement && (
-          <div className="ask-librarian">
-            <h6>
-              <a href={backendClient.resourceLastElement.target_url} target="_blank" rel="noopener noreferrer">
-                {backendClient.resourceLastElement.target_public_name}
-              </a>
-            </h6>
-          </div>
-        )}
-      </div>
+            )}
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 };
 
+export const ASK_LIBRARIAN_TEXT = 'Ask a Librarian';
+export const ASK_LIBRARIAN_URL = 'https://library.nyu.edu/ask/';
 export const LOADING_TEXT = 'Loading...';
 export const RESULTS_HEADER_TEXT = 'Displaying search results...';
 export default List;
