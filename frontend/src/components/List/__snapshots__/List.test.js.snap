@@ -388,6 +388,50 @@ exports[`Backend success Corriere Fiorentino renders correctly 1`] = `
             <div
               class="row"
             >
+              <span>
+                <p
+                  class="resource-type"
+                >
+                  article
+                </p>
+                <h2
+                  class="title"
+                >
+                  Informed consent and the geriatric dental patient
+                </h2>
+                <p>
+                  Odom, John G 
+                  <span>
+                    •
+                  </span>
+                   1992
+                </p>
+                <p
+                  style="margin: 0px 0px 10px;"
+                >
+                  <span
+                    style="box-sizing: border-box;"
+                  >
+                    Published in Journal
+                  </span>
+                  <span
+                    style="font-style: italic;"
+                  >
+                    Special Care in Dentistry.
+                  </span>
+                  Volume 12.Issue 5.Page 202-206.
+                </p>
+                <dl
+                  class="citation-info"
+                >
+                  <dt>
+                    ISSN:
+                  </dt>
+                  <dd>
+                    0275-1879
+                  </dd>
+                </dl>
+              </span>
               <h6>
                 <a
                   href="
@@ -463,26 +507,50 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
             <div
               class="row"
             >
-              <h6>
-                <a
-                  href="http://proxy.library.nyu.edu/login?url=http://archives.newyorker.com/#folio=C1"
-                  rel="noopener noreferrer"
-                  target="_blank"
+              <span>
+                <p
+                  class="resource-type"
                 >
-                  E Journal Full Text
-                </a>
-              </h6>
-              <small>
-                Available from 1925
-              </small>
-            </div>
-          </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
-            <div
-              class="row"
-            >
+                  article
+                </p>
+                <h2
+                  class="title"
+                >
+                  Informed consent and the geriatric dental patient
+                </h2>
+                <p>
+                  Odom, John G 
+                  <span>
+                    •
+                  </span>
+                   1992
+                </p>
+                <p
+                  style="margin: 0px 0px 10px;"
+                >
+                  <span
+                    style="box-sizing: border-box;"
+                  >
+                    Published in Journal
+                  </span>
+                  <span
+                    style="font-style: italic;"
+                  >
+                    Special Care in Dentistry.
+                  </span>
+                  Volume 12.Issue 5.Page 202-206.
+                </p>
+                <dl
+                  class="citation-info"
+                >
+                  <dt>
+                    ISSN:
+                  </dt>
+                  <dd>
+                    0275-1879
+                  </dd>
+                </dl>
+              </span>
               <h6>
                 <a
                   href="http://proxy.library.nyu.edu/login?url=http://gateway.proquest.com/openurl?rft_id=41130&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&url_ver=Z39.88-2004&res_dat=xri%3Apqm&rfr_id=info%3Axri%2Fsid%3Aprimo&genre=journal"
@@ -503,6 +571,178 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
             <div
               class="row"
             >
+              <span>
+                <p
+                  class="resource-type"
+                >
+                  article
+                </p>
+                <h2
+                  class="title"
+                >
+                  Informed consent and the geriatric dental patient
+                </h2>
+                <p>
+                  Odom, John G 
+                  <span>
+                    •
+                  </span>
+                   1992
+                </p>
+                <p
+                  style="margin: 0px 0px 10px;"
+                >
+                  <span
+                    style="box-sizing: border-box;"
+                  >
+                    Published in Journal
+                  </span>
+                  <span
+                    style="font-style: italic;"
+                  >
+                    Special Care in Dentistry.
+                  </span>
+                  Volume 12.Issue 5.Page 202-206.
+                </p>
+                <dl
+                  class="citation-info"
+                >
+                  <dt>
+                    ISSN:
+                  </dt>
+                  <dd>
+                    0275-1879
+                  </dd>
+                </dl>
+              </span>
+              <h6>
+                <a
+                  href="http://proxy.library.nyu.edu/login?url=http://archives.newyorker.com/#folio=C1"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  E Journal Full Text
+                </a>
+              </h6>
+              <small>
+                Available from 1925
+              </small>
+            </div>
+          </div>
+          <div
+            class="list-group-item list-group-item-action flex-column border-0"
+          >
+            <div
+              class="row"
+            >
+              <span>
+                <p
+                  class="resource-type"
+                >
+                  article
+                </p>
+                <h2
+                  class="title"
+                >
+                  Informed consent and the geriatric dental patient
+                </h2>
+                <p>
+                  Odom, John G 
+                  <span>
+                    •
+                  </span>
+                   1992
+                </p>
+                <p
+                  style="margin: 0px 0px 10px;"
+                >
+                  <span
+                    style="box-sizing: border-box;"
+                  >
+                    Published in Journal
+                  </span>
+                  <span
+                    style="font-style: italic;"
+                  >
+                    Special Care in Dentistry.
+                  </span>
+                  Volume 12.Issue 5.Page 202-206.
+                </p>
+                <dl
+                  class="citation-info"
+                >
+                  <dt>
+                    ISSN:
+                  </dt>
+                  <dd>
+                    0275-1879
+                  </dd>
+                </dl>
+              </span>
+              <h6>
+                <a
+                  href="http://proxy.library.nyu.edu/login?url=https://global.factiva.com/en/du/headlines.asp?XSID=S001dbr5DEs5DEmN9MpMD6mNDVyMHmnRsIuMcNG1pRRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQQAA&CurrentSourcesDesc=sc_u_gtny%2CNew+Yorker&CurrentSources=U%7Cgtny"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Factiva
+                </a>
+              </h6>
+              <small>
+                Available from 1997
+              </small>
+            </div>
+          </div>
+          <div
+            class="list-group-item list-group-item-action flex-column border-0"
+          >
+            <div
+              class="row"
+            >
+              <span>
+                <p
+                  class="resource-type"
+                >
+                  article
+                </p>
+                <h2
+                  class="title"
+                >
+                  Informed consent and the geriatric dental patient
+                </h2>
+                <p>
+                  Odom, John G 
+                  <span>
+                    •
+                  </span>
+                   1992
+                </p>
+                <p
+                  style="margin: 0px 0px 10px;"
+                >
+                  <span
+                    style="box-sizing: border-box;"
+                  >
+                    Published in Journal
+                  </span>
+                  <span
+                    style="font-style: italic;"
+                  >
+                    Special Care in Dentistry.
+                  </span>
+                  Volume 12.Issue 5.Page 202-206.
+                </p>
+                <dl
+                  class="citation-info"
+                >
+                  <dt>
+                    ISSN:
+                  </dt>
+                  <dd>
+                    0275-1879
+                  </dd>
+                </dl>
+              </span>
               <h6>
                 <a
                   href="http://proxy.library.nyu.edu/login?url=http://find.galegroup.com/openurl/openurl?url_ver=Z39.88-2004&url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&rft.issn=0028-792X&res_id=info%3Asid%2Fgale%3ASHAX&req_dat=info%3Asid%2Fgale%3Augnid%3Anew64731&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&ctx_enc=info%3Aofi%3Aenc%3AUTF-8&rft.date=2002&rft.jtitle=New+Yorker"
@@ -523,6 +763,50 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
             <div
               class="row"
             >
+              <span>
+                <p
+                  class="resource-type"
+                >
+                  article
+                </p>
+                <h2
+                  class="title"
+                >
+                  Informed consent and the geriatric dental patient
+                </h2>
+                <p>
+                  Odom, John G 
+                  <span>
+                    •
+                  </span>
+                   1992
+                </p>
+                <p
+                  style="margin: 0px 0px 10px;"
+                >
+                  <span
+                    style="box-sizing: border-box;"
+                  >
+                    Published in Journal
+                  </span>
+                  <span
+                    style="font-style: italic;"
+                  >
+                    Special Care in Dentistry.
+                  </span>
+                  Volume 12.Issue 5.Page 202-206.
+                </p>
+                <dl
+                  class="citation-info"
+                >
+                  <dt>
+                    ISSN:
+                  </dt>
+                  <dd>
+                    0275-1879
+                  </dd>
+                </dl>
+              </span>
               <h6>
                 <a
                   href="http://proxy.library.nyu.edu/login?url=https://link.gale.com/apps/pub/1161/ITOF?u=nysl_me_newyorku"
@@ -543,6 +827,50 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
             <div
               class="row"
             >
+              <span>
+                <p
+                  class="resource-type"
+                >
+                  article
+                </p>
+                <h2
+                  class="title"
+                >
+                  Informed consent and the geriatric dental patient
+                </h2>
+                <p>
+                  Odom, John G 
+                  <span>
+                    •
+                  </span>
+                   1992
+                </p>
+                <p
+                  style="margin: 0px 0px 10px;"
+                >
+                  <span
+                    style="box-sizing: border-box;"
+                  >
+                    Published in Journal
+                  </span>
+                  <span
+                    style="font-style: italic;"
+                  >
+                    Special Care in Dentistry.
+                  </span>
+                  Volume 12.Issue 5.Page 202-206.
+                </p>
+                <dl
+                  class="citation-info"
+                >
+                  <dt>
+                    ISSN:
+                  </dt>
+                  <dd>
+                    0275-1879
+                  </dd>
+                </dl>
+              </span>
               <h6>
                 <a
                   href="http://proxy.library.nyu.edu/login?url=https://link.gale.com/apps/pub/1161/LitRC?u=new64731"
@@ -563,6 +891,50 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
             <div
               class="row"
             >
+              <span>
+                <p
+                  class="resource-type"
+                >
+                  article
+                </p>
+                <h2
+                  class="title"
+                >
+                  Informed consent and the geriatric dental patient
+                </h2>
+                <p>
+                  Odom, John G 
+                  <span>
+                    •
+                  </span>
+                   1992
+                </p>
+                <p
+                  style="margin: 0px 0px 10px;"
+                >
+                  <span
+                    style="box-sizing: border-box;"
+                  >
+                    Published in Journal
+                  </span>
+                  <span
+                    style="font-style: italic;"
+                  >
+                    Special Care in Dentistry.
+                  </span>
+                  Volume 12.Issue 5.Page 202-206.
+                </p>
+                <dl
+                  class="citation-info"
+                >
+                  <dt>
+                    ISSN:
+                  </dt>
+                  <dd>
+                    0275-1879
+                  </dd>
+                </dl>
+              </span>
               <h6>
                 <a
                   href="http://proxy.library.nyu.edu/login?url=https://advance.lexis.com/api/search/advanced?source=MTA2OTUwNg&identityprofileid=W4HVBF32601"
@@ -583,6 +955,50 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
             <div
               class="row"
             >
+              <span>
+                <p
+                  class="resource-type"
+                >
+                  article
+                </p>
+                <h2
+                  class="title"
+                >
+                  Informed consent and the geriatric dental patient
+                </h2>
+                <p>
+                  Odom, John G 
+                  <span>
+                    •
+                  </span>
+                   1992
+                </p>
+                <p
+                  style="margin: 0px 0px 10px;"
+                >
+                  <span
+                    style="box-sizing: border-box;"
+                  >
+                    Published in Journal
+                  </span>
+                  <span
+                    style="font-style: italic;"
+                  >
+                    Special Care in Dentistry.
+                  </span>
+                  Volume 12.Issue 5.Page 202-206.
+                </p>
+                <dl
+                  class="citation-info"
+                >
+                  <dt>
+                    ISSN:
+                  </dt>
+                  <dd>
+                    0275-1879
+                  </dd>
+                </dl>
+              </span>
               <h6>
                 <a
                   href="http://proxy.library.nyu.edu/login?url=http://archives.newyorker.com/#folio=C1"
@@ -603,6 +1019,50 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
             <div
               class="row"
             >
+              <span>
+                <p
+                  class="resource-type"
+                >
+                  article
+                </p>
+                <h2
+                  class="title"
+                >
+                  Informed consent and the geriatric dental patient
+                </h2>
+                <p>
+                  Odom, John G 
+                  <span>
+                    •
+                  </span>
+                   1992
+                </p>
+                <p
+                  style="margin: 0px 0px 10px;"
+                >
+                  <span
+                    style="box-sizing: border-box;"
+                  >
+                    Published in Journal
+                  </span>
+                  <span
+                    style="font-style: italic;"
+                  >
+                    Special Care in Dentistry.
+                  </span>
+                  Volume 12.Issue 5.Page 202-206.
+                </p>
+                <dl
+                  class="citation-info"
+                >
+                  <dt>
+                    ISSN:
+                  </dt>
+                  <dd>
+                    0275-1879
+                  </dd>
+                </dl>
+              </span>
               <h6>
                 <a
                   href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_id=41130&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&url_ver=Z39.88-2004&res_dat=xri%3Apqm&rfr_id=info%3Axri%2Fsid%3Aprimo&genre=journal"
@@ -623,6 +1083,50 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
             <div
               class="row"
             >
+              <span>
+                <p
+                  class="resource-type"
+                >
+                  article
+                </p>
+                <h2
+                  class="title"
+                >
+                  Informed consent and the geriatric dental patient
+                </h2>
+                <p>
+                  Odom, John G 
+                  <span>
+                    •
+                  </span>
+                   1992
+                </p>
+                <p
+                  style="margin: 0px 0px 10px;"
+                >
+                  <span
+                    style="box-sizing: border-box;"
+                  >
+                    Published in Journal
+                  </span>
+                  <span
+                    style="font-style: italic;"
+                  >
+                    Special Care in Dentistry.
+                  </span>
+                  Volume 12.Issue 5.Page 202-206.
+                </p>
+                <dl
+                  class="citation-info"
+                >
+                  <dt>
+                    ISSN:
+                  </dt>
+                  <dd>
+                    0275-1879
+                  </dd>
+                </dl>
+              </span>
               <h6>
                 <a
                   href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_id=16493&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&url_ver=Z39.88-2004&rfr_id=info%3Axri%2Fsid%3Aprimo&res_dat=xri%3Apqm&genre=journal"
@@ -643,6 +1147,50 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
             <div
               class="row"
             >
+              <span>
+                <p
+                  class="resource-type"
+                >
+                  article
+                </p>
+                <h2
+                  class="title"
+                >
+                  Informed consent and the geriatric dental patient
+                </h2>
+                <p>
+                  Odom, John G 
+                  <span>
+                    •
+                  </span>
+                   1992
+                </p>
+                <p
+                  style="margin: 0px 0px 10px;"
+                >
+                  <span
+                    style="box-sizing: border-box;"
+                  >
+                    Published in Journal
+                  </span>
+                  <span
+                    style="font-style: italic;"
+                  >
+                    Special Care in Dentistry.
+                  </span>
+                  Volume 12.Issue 5.Page 202-206.
+                </p>
+                <dl
+                  class="citation-info"
+                >
+                  <dt>
+                    ISSN:
+                  </dt>
+                  <dd>
+                    0275-1879
+                  </dd>
+                </dl>
+              </span>
               <h6>
                 <a
                   href="http://proxy.library.nyu.edu/login?url=http://www.newyorker.com/archive"
@@ -663,6 +1211,50 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
             <div
               class="row"
             >
+              <span>
+                <p
+                  class="resource-type"
+                >
+                  article
+                </p>
+                <h2
+                  class="title"
+                >
+                  Informed consent and the geriatric dental patient
+                </h2>
+                <p>
+                  Odom, John G 
+                  <span>
+                    •
+                  </span>
+                   1992
+                </p>
+                <p
+                  style="margin: 0px 0px 10px;"
+                >
+                  <span
+                    style="box-sizing: border-box;"
+                  >
+                    Published in Journal
+                  </span>
+                  <span
+                    style="font-style: italic;"
+                  >
+                    Special Care in Dentistry.
+                  </span>
+                  Volume 12.Issue 5.Page 202-206.
+                </p>
+                <dl
+                  class="citation-info"
+                >
+                  <dt>
+                    ISSN:
+                  </dt>
+                  <dd>
+                    0275-1879
+                  </dd>
+                </dl>
+              </span>
               <h6>
                 <a
                   href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_id=41130&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&res_dat=xri%3Apqm&rfr_id=info%3Axri%2Fsid%3Aprimo&url_ver=Z39.88-2004&genre=journal"
@@ -674,26 +1266,6 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
               </h6>
               <small>
                 Available from 2002/11/04
-              </small>
-            </div>
-          </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
-            <div
-              class="row"
-            >
-              <h6>
-                <a
-                  href="http://proxy.library.nyu.edu/login?url=https://global.factiva.com/en/du/headlines.asp?XSID=S001dbr5DEs5DEmN9MpMD6mNDVyMHmnRsIuMcNG1pRRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQQAA&CurrentSourcesDesc=sc_u_gtny%2CNew+Yorker&CurrentSources=U%7Cgtny"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Factiva
-                </a>
-              </h6>
-              <small>
-                Available from 1997
               </small>
             </div>
           </div>
