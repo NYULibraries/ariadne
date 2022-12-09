@@ -54,21 +54,31 @@ const List = () => {
                 <div key={idx} className="list-group-item list-group-item-action flex-column border-0">
                   <div className="row">
                     <span>
-                      {/* Add metadata placeholders here */}
-                      <p className="resource-type">{link.genre}</p>
-                      <h2 className="title">{link.article_title}</h2>
-                      <p>
-                        {link.author} <span>•</span> {link.date}
-                      </p>
-                      <p style={{ margin: '0 0 10px' }}>
-                        <span style={{ boxSizing: 'border-box' }}>Published in Journal </span>
-                        <span style={{ fontStyle: 'italic' }}>{link.journal_title}. </span>
-                        Volume {link.volume}. Issue {link.issue}. Page {link.start_page}-{link.end_page}.
-                      </p>
-                      <dl className="citation-info">
-                        <dt>ISSN:</dt>
-                        <dd>{link.issn}</dd>
-                      </dl>
+                      {link.genre && <p className="resource-type">{link.genre}</p>}
+                      {link.article_title && <h2 className="title">{link.article_title}</h2>}
+                      {link.author && link.date && (
+                        <p>
+                          {link.author} <span>•</span> {link.date}
+                        </p>
+                      )}
+                      {(link.journal_title || link.volume || link.issue || link.start_page || link.end_page) && (
+                        <p style={{ margin: '0 0 10px' }}>
+                          <span style={{ boxSizing: 'border-box' }}>
+                            {link.journal_title && 'Published in Journal'}
+                          </span>
+                          <span style={{ fontStyle: 'italic' }}>{link.journal_title && link.journal_title + '.'}</span>
+                          {link.volume && 'Volume ' + link.volume + '.'}
+                          {link.issue && 'Issue ' + link.issue + '.'}
+                          {link.start_page && 'Page ' + link.start_page}
+                          {link.end_page && '-' + link.end_page + '.'}
+                        </p>
+                      )}
+                      {link.issn && (
+                        <dl className="citation-info">
+                          <dt>ISSN:</dt>
+                          <dd>{link.issn}</dd>
+                        </dl>
+                      )}
                     </span>
                     <h6>
                       <a href={link.target_url} target="_blank" rel="noopener noreferrer">
