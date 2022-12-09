@@ -32,6 +32,8 @@ const List = () => {
   useEffect(() => {
     backendClientRef.current.fetchResource();
   }, []);
+  // eslint-disable-next-line no-console
+  console.log('backendClient', backendClient.resource);
 
   return (
     <>
@@ -51,6 +53,23 @@ const List = () => {
               {backendClient.resource?.map((link, idx) => (
                 <div key={idx} className="list-group-item list-group-item-action flex-column border-0">
                   <div className="row">
+                    <span>
+                      {/* Add metadata placeholders here */}
+                      <p className="resource-type">{link.genre}</p>
+                      <h2 className="title">{link.article_title}</h2>
+                      <p>
+                        {link.author} <span>•</span> {link.date}
+                      </p>
+                      <p style={{ margin: '0 0 10px' }}>
+                        <span style={{ boxSizing: 'border-box' }}>Published in Journal </span>
+                        <span style={{ fontStyle: 'italic' }}>{link.journal_title}. </span>
+                        Volume {link.volume}. Issue {link.issue}. Page {link.start_page}-{link.end_page}.
+                      </p>
+                      <dl className="citation-info">
+                        <dt>ISSN:</dt>
+                        <dd>{link.issn}</dd>
+                      </dl>
+                    </span>
                     <h6>
                       <a href={link.target_url} target="_blank" rel="noopener noreferrer">
                         {link.target_public_name}
