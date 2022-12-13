@@ -4,6 +4,8 @@ import { getCoverageStatement } from '../../aux/helpers';
 import useApi from '../../hooks/useApi';
 import linksApi from '../../api/fetchData';
 import { Col, Container, Row } from 'react-bootstrap';
+import metaData from '../../metadata.json';
+import MetaDataPlaceholders from '../MetaDataPlaceholders/MetaDataPlaceholders';
 
 const List = () => {
   const backendClient = useApi(linksApi.fetchData);
@@ -32,8 +34,6 @@ const List = () => {
   useEffect(() => {
     backendClientRef.current.fetchResource();
   }, []);
-  // eslint-disable-next-line no-console
-  console.log('backendClient', backendClient.resource);
 
   return (
     <>
@@ -53,33 +53,7 @@ const List = () => {
               {backendClient.resource?.map((link, idx) => (
                 <div key={idx} className="list-group-item list-group-item-action flex-column border-0">
                   <div className="row">
-                    <span>
-                      {link.genre && <p className="resource-type">{link.genre}</p>}
-                      {link.article_title && <h2 className="title">{link.article_title}</h2>}
-                      {link.author && link.date && (
-                        <p>
-                          {link.author} <span>•</span> {link.date}
-                        </p>
-                      )}
-                      {(link.journal_title || link.volume || link.issue || link.start_page || link.end_page) && (
-                        <p style={{ margin: '0 0 10px' }}>
-                          <span style={{ boxSizing: 'border-box' }}>
-                            {link.journal_title && 'Published in Journal'}
-                          </span>
-                          <span style={{ fontStyle: 'italic' }}>{link.journal_title && link.journal_title + '.'}</span>
-                          {link.volume && 'Volume ' + link.volume + '.'}
-                          {link.issue && 'Issue ' + link.issue + '.'}
-                          {link.start_page && 'Page ' + link.start_page}
-                          {link.end_page && '-' + link.end_page + '.'}
-                        </p>
-                      )}
-                      {link.issn && (
-                        <dl className="citation-info">
-                          <dt>ISSN:</dt>
-                          <dd>{link.issn}</dd>
-                        </dl>
-                      )}
-                    </span>
+                    <MetaDataPlaceholders metadataPlaceholders={metaData} />
                     <h6>
                       <a href={link.target_url} target="_blank" rel="noopener noreferrer">
                         {link.target_public_name}
@@ -89,7 +63,14 @@ const List = () => {
                   </div>
                 </div>
               ))}
-              {backendClient.resource?.length === 0 && <p>No results found</p>}
+              {(backendClient.resource?.length === 0 || backendClient.error) && (
+                <>
+                  <div className="list-group-item list-group-item-action flex-column border-0">
+                    <p>No results found</p>
+                    <MetaDataPlaceholders metadataPlaceholders={metaData} />
+                  </div>
+                </>
+              )}
             </div>
           </Col>
           <Col md={4}>
@@ -114,4 +95,5 @@ export const ASK_LIBRARIAN_TEXT = 'Ask a Librarian';
 export const ASK_LIBRARIAN_URL = 'https://library.nyu.edu/ask/';
 export const LOADING_TEXT = 'Loading...';
 export const RESULTS_HEADER_TEXT = 'Displaying search results...';
+
 export default List;
