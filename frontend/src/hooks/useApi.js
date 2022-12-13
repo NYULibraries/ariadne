@@ -1,12 +1,10 @@
 import { useState } from 'react';
 import { getLinks } from '../aux/helpers';
-import metaData from './metadata.json';
 
 export default (apiFunc) => {
   const [resource, setResource] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [metadataPlaceholders] = useState(metaData);
 
   const fetchResource = async (...args) => {
     setLoading(true);
@@ -17,7 +15,6 @@ export default (apiFunc) => {
         if (responseBody.errors.length === 0) {
           const arrOfLinks = getLinks(responseBody.records);
           arrOfLinks.sort((a, b) => a.target_public_name.localeCompare(b.target_public_name));
-          arrOfLinks.map((obj) => Object.assign(obj, metadataPlaceholders));
           setResource(arrOfLinks);
         } else {
           setError(`The backend API returned errors: ${responseBody.errors.map((error) => `"${error}"`).join(', ')}`);
