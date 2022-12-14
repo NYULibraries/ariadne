@@ -1,12 +1,13 @@
 // @ts-check
 const { devices } = require('@playwright/test');
+require('dotenv').config(
+  { path: require('path').join(__dirname, '.env.test') }
+)
 
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
  */
-// require('dotenv').config();
-
 
 /**
  * @see https://playwright.dev/docs/test-configuration
@@ -21,7 +22,7 @@ const config = {
      * Maximum time expect() should wait for the condition to be met.
      * For example in `await expect(locator).toHaveText();`
      */
-    timeout: 5000,
+    timeout: 10000,
     toHaveScreenshot: { maxDiffPixels: 400 },
   },
   /* Run tests in files in parallel */
@@ -33,16 +34,29 @@ const config = {
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter: 'list',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
+
+    /* Browser to use. See https://playwright.dev/docs/api/class-browsertype. */
+    /* We are already using only chromium in our projects.
+    All tests are run in a headless mode by default */
+
+    // browserName: 'chromium',
+    // // viewport: { width: 1280, height: 720 },
+    // // ignoreHTTPSErrors: true,
+    // launchOptions: {
+    //   headless: true,
+    // },
     /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
     actionTimeout: 0,
     /* Base URL to use in actions like `await page.goto('/')`. */
-    // baseURL: 'http://localhost:3000',
+    baseURL: process.env.PLAYWRIGHT_BASE_URL,
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    trace: 'retain-on-failure',
+
+    /* Browser context options. See https://playwright.dev/docs/api/class-browsercontext */
   },
 
   /* Configure projects for major browsers */

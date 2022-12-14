@@ -43,6 +43,13 @@ x-development-volumes-backend: &x-development-volumes-backend
   volumes:
     - ./backend:/app
 
+x-build-e2e: &x-build-e2e
+  image: ariadne_e2e
+  build:
+    context: ./e2e
+    cache_from:
+      - ariadne_e2e
+
 x-development-volumes-frontend: &x-development-volumes-frontend
   volumes:
     - ./frontend:/app
@@ -50,6 +57,8 @@ x-development-volumes-frontend: &x-development-volumes-frontend
 services:
   frontend:
     <<: *x-build-frontend
+    environment:
+      - REACT_APP_API_URL=http://backend:8080/v0/
     ports:
       - "3000:3000"
     # <<: *x-development-volumes-frontend
@@ -102,6 +111,18 @@ services:
         go tool cover -func=coverage.out
         # go tool cover -html=coverage.out
     # <<: *x-development-volumes-backend
+
+  e2e:
+    <<: *x-build-e2e
+    depends_on:
+      - backend
+      - frontend
+    command: yarn test:e2e
+    networks:
+      - ariadne-net
+    environment:
+      - PLAYWRIGHT_BASE_URL=http://frontend:3000/
+    # <<: *x-development-volumes-frontend 
 
 networks:
   ariadne-net:

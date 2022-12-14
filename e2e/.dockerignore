@@ -6,5 +6,4 @@ node_modules/
 /playwright-report/
 /playwright/.cache/
 
-/tests/actual/
-
+.env.test

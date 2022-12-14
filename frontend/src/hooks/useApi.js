@@ -4,7 +4,6 @@ import { getLinks } from '../aux/helpers';
 export default (apiFunc) => {
   const [resource, setResource] = useState(null);
   const [error, setError] = useState(null);
-  const [resourceLastElement, setResourceLastElement] = useState(null);
   const [loading, setLoading] = useState(false);
 
   const fetchResource = async (...args) => {
@@ -15,8 +14,7 @@ export default (apiFunc) => {
         const responseBody = await response.json();
         if (responseBody.errors.length === 0) {
           const arrOfLinks = getLinks(responseBody.records);
-          setResource(arrOfLinks.slice(0, -1));
-          setResourceLastElement(arrOfLinks.at(-1));
+          setResource(arrOfLinks);
         } else {
           setError(`The backend API returned errors: ${responseBody.errors.map((error) => `"${error}"`).join(', ')}`);
         }
@@ -30,5 +28,5 @@ export default (apiFunc) => {
     }
   };
 
-  return { resource, fetchResource, error, resourceLastElement, loading };
+  return { resource, fetchResource, error, loading };
 };

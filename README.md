@@ -21,3 +21,9 @@ Run tests:
 cd e2e/
 yarn test:e2e
 ```
+
+Run E2E tests in a container:
+
+```
+docker-compose run --rm e2e
+```
