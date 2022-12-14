@@ -12,7 +12,7 @@ test('renders the Corriere Fiorentino against golden correctly', async ({ page }
   await page.waitForFunction(() => document.querySelector('h6'));
 
   const snapshot = await page.innerHTML('body');
-  // fs.writeFileSync('tests/actual/corriere-fiorentino.html', snapshot);
+  // fs.writeFileSync('tests/golden/corriere-fiorentino.html', snapshot);
   const golden = fs.readFileSync('tests/golden/corriere-fiorentino.html', 'utf8');
   const stringifiedSnapshot = JSON.stringify(snapshot);
   const stringifiedGolden = JSON.stringify(golden);
