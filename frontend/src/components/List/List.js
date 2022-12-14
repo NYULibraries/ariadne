@@ -5,7 +5,7 @@ import useApi from '../../hooks/useApi';
 import linksApi from '../../api/fetchData';
 import { Col, Container, Row } from 'react-bootstrap';
 import metaData from '../../metadata.json';
-import MetaDataPlaceholders from '../MetaDataPlaceholders/MetaDataPlaceholders';
+import DisplayMetadata from '../DisplayMetadata/DisplayMetadata';
 
 const List = () => {
   const backendClient = useApi(linksApi.fetchData);
@@ -50,10 +50,12 @@ const List = () => {
         <Row md={12}>
           <Col md={8}>
             <div className="list-group">
+              <div className="list-group-item list-group-item-action flex-column border-0">
+                <DisplayMetadata metadataPlaceholders={metaData} />
+              </div>
               {backendClient.resource?.map((link, idx) => (
                 <div key={idx} className="list-group-item list-group-item-action flex-column border-0">
                   <div className="row">
-                    <MetaDataPlaceholders metadataPlaceholders={metaData} />
                     <h6>
                       <a href={link.target_url} target="_blank" rel="noopener noreferrer">
                         {link.target_public_name}
@@ -67,7 +69,6 @@ const List = () => {
                 <>
                   <div className="list-group-item list-group-item-action flex-column border-0">
                     <p>No results found</p>
-                    <MetaDataPlaceholders metadataPlaceholders={metaData} />
                   </div>
                 </>
               )}
