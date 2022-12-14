@@ -11,9 +11,5 @@ RUN yarn install
 
 RUN npx playwright install
 
-
 # RUN playwright tests
 CMD ["yarn", "test:e2e"]
-
-
-

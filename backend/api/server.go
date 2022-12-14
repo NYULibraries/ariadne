@@ -57,14 +57,14 @@ func multipleRecordsHandler(w http.ResponseWriter, r *http.Request) {
 	// https://nyu-lib.monday.com/boards/765008773/pulses/3548498827
 	sfxResponse.RemoveTarget("http://library.nyu.edu/ask/")
 
-	ariadneResponse := response{
+	ariadneResponse := Response{
 		Errors:  []string{},
 		Records: sfxResponse.MultiObjXMLResponseBody,
 	}
 
 	responseJSON, err := json.MarshalIndent(ariadneResponse, "", "    ")
 	if err != nil {
-		ariadneResponse = response{
+		ariadneResponse = Response{
 			Errors:  []string{fmt.Sprintf("could not marshal ariadne response to JSON: %v", err)},
 			Records: sfx.MultiObjXMLResponseBody{},
 		}
