@@ -147,8 +147,8 @@ and then fed to the ariadne command.  This command is exactly the same as the pr
 ```
 
 * `debug api-json` output can be piped through
-   `[jq](https://stedolan.github.io/jq/)` or
-   [fx](https://github.com/antonmedv/fx)).  Get list of all targets returned by the
+   [jq](https://stedolan.github.io/jq/) or
+   [fx](https://github.com/antonmedv/fx).  Get list of all targets returned by the
 previous command example which contain the string "gale" by piping through `fx`
 with the appropriate reducer:
 
