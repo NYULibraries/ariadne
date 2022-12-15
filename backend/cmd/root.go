@@ -12,13 +12,9 @@ import (
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "ariadne",
-	Short: "[TODO: short description]",
-	Long: `[TODO: long multiline description]:
-
-[Line 1]
-[Line 2]
-[Line 3]`,
+	Use: "ariadne",
+	Long: "`ariadne`" + ` is the backend application for the NYU Libraries OpenURL link resolver.
+Use ariadne to start the API server and to debug backend requests and responses.`,
 }
 
 func Execute() {
