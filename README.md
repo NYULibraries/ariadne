@@ -26,6 +26,7 @@ Run tests:
 
 ```
 cd e2e/
+yarn install
 yarn test:e2e
 ```
 
