@@ -14,6 +14,7 @@ export default (apiFunc) => {
         const responseBody = await response.json();
         if (responseBody.errors.length === 0) {
           const arrOfLinks = getLinks(responseBody.records);
+          arrOfLinks.sort((a, b) => a.target_public_name.localeCompare(b.target_public_name));
           setResource(arrOfLinks);
         } else {
           setError(`The backend API returned errors: ${responseBody.errors.map((error) => `"${error}"`).join(', ')}`);

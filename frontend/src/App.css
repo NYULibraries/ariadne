@@ -67,12 +67,42 @@ h6 {
   .ask-librarian {
     margin: 2rem 0rem 2rem 0rem;
   }
+  .i-am-centered {
+    margin: 18px 0px 0px 38px;
+  }
 }
 
+h2.title {
+  font-style: italic;
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: 0;
+  font-weight: normal;
+}
 
+dl.citation-info {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
+dl.citation-info dt {
+  float: left;
+  clear: left;
+  font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 80px;
+}
 
+dl.citation-info dd {
+  margin-left: 100px;
+}
 
+p.resource-type {
+  margin: 0;
+  text-transform: capitalize;
+}
 
 
 

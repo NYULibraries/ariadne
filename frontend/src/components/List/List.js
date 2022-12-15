@@ -4,6 +4,8 @@ import { getCoverageStatement } from '../../aux/helpers';
 import useApi from '../../hooks/useApi';
 import linksApi from '../../api/fetchData';
 import { Col, Container, Row } from 'react-bootstrap';
+import metaData from '../../metadata.json';
+import DisplayMetadata from '../DisplayMetadata/DisplayMetadata';
 
 const List = () => {
   const backendClient = useApi(linksApi.fetchData);
@@ -48,6 +50,9 @@ const List = () => {
         <Row md={12}>
           <Col md={8}>
             <div className="list-group">
+              <div className="list-group-item list-group-item-action flex-column border-0">
+                <DisplayMetadata metadataPlaceholders={metaData} />
+              </div>
               {backendClient.resource?.map((link, idx) => (
                 <div key={idx} className="list-group-item list-group-item-action flex-column border-0">
                   <div className="row">
@@ -60,7 +65,13 @@ const List = () => {
                   </div>
                 </div>
               ))}
-              {backendClient.resource?.length === 0 && <p>No results found</p>}
+              {(backendClient.resource?.length === 0 || backendClient.error) && (
+                <>
+                  <div className="list-group-item list-group-item-action flex-column border-0">
+                    <p>No results found</p>
+                  </div>
+                </>
+              )}
             </div>
           </Col>
           <Col md={4}>
@@ -85,4 +96,5 @@ export const ASK_LIBRARIAN_TEXT = 'Ask a Librarian';
 export const ASK_LIBRARIAN_URL = 'https://library.nyu.edu/ask/';
 export const LOADING_TEXT = 'Loading...';
 export const RESULTS_HEADER_TEXT = 'Displaying search results...';
+
 export default List;
