@@ -1,0 +1,452 @@
+{
+	"errors": [],
+	"records": {
+		"ctx_obj": [
+			{
+				"ctx_obj_targets": [
+					{
+						"target": [
+							{
+								"target_name": "Preferred_Links_LCL",
+								"target_public_name": "E Journal Full Text",
+								"target_url": "http://proxy.library.nyu.edu/login?url=http://archives.newyorker.com/#folio=C1",
+								"authentication": "",
+								"proxy": "yes",
+								"coverage": [
+									{
+										"coverage_text": [
+											{
+												"threshold_text": [
+													{
+														"coverage_statement": [
+															"Available from 1925"
+														]
+													}
+												],
+												"embargo_text": [
+													{}
+												]
+											}
+										],
+										"from": [
+											{
+												"year": "1925"
+											}
+										],
+										"embargo": {}
+									}
+								]
+							},
+							{
+								"target_name": "ART_DESIGN_AND_ARCHITECTURE_COLLECTION",
+								"target_public_name": "Art, Design & Architecture Collection",
+								"target_url": "http://gateway.proquest.com/openurl?rft_id=41130&res_dat=xri%3Apqm&url_ver=Z39.88-2004&rfr_id=info%3Axri%2Fsid%3Aprimo&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&genre=journal",
+								"authentication": "",
+								"proxy": "yes",
+								"coverage": [
+									{
+										"coverage_text": [
+											{
+												"threshold_text": [
+													{
+														"coverage_statement": [
+															"Available from 2002/11/04"
+														]
+													}
+												],
+												"embargo_text": [
+													{}
+												]
+											}
+										],
+										"from": [
+											{
+												"year": "2002",
+												"month": "11",
+												"day": "04"
+											}
+										],
+										"embargo": {}
+									}
+								]
+							},
+							{
+								"target_name": "GALEGROUP_DB_SHAKESPEARE_COLLECTION_PERI",
+								"target_public_name": "Gale Cengage Shakespeare Collection Periodicals",
+								"target_url": "http://proxy.library.nyu.edu/login?url=http://find.galegroup.com/openurl/openurl?url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&url_ver=Z39.88-2004&rft.issn=0028-792X&ctx_enc=info%3Aofi%3Aenc%3AUTF-8&res_id=info%3Asid%2Fgale%3ASHAX&rft.date=2002&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&req_dat=info%3Asid%2Fgale%3Augnid%3Anew64731&rft.jtitle=New+Yorker",
+								"authentication": "",
+								"proxy": "yes",
+								"coverage": [
+									{
+										"coverage_text": [
+											{
+												"threshold_text": [
+													{
+														"coverage_statement": [
+															"Available from 2002"
+														]
+													}
+												],
+												"embargo_text": [
+													{}
+												]
+											}
+										],
+										"from": [
+											{
+												"year": "2002"
+											}
+										],
+										"embargo": {}
+									}
+								]
+							},
+							{
+								"target_name": "GALE_GENERAL_ONEFILE",
+								"target_public_name": "Gale General OneFile",
+								"target_url": "http://proxy.library.nyu.edu/login?url=https://link.gale.com/apps/pub/1161/ITOF?u=nysl_me_newyorku",
+								"authentication": "NovelNY: Only available to users within the NYUNY network.",
+								"proxy": "yes",
+								"coverage": [
+									{
+										"coverage_text": [
+											{
+												"threshold_text": [
+													{
+														"coverage_statement": [
+															"Available from 2002/01/14"
+														]
+													}
+												],
+												"embargo_text": [
+													{}
+												]
+											}
+										],
+										"from": [
+											{
+												"year": "2002",
+												"month": "01",
+												"day": "14"
+											}
+										],
+										"embargo": {}
+									}
+								]
+							},
+							{
+								"target_name": "GALE_LITERATURE_RESOURCE_CENTER",
+								"target_public_name": "Gale Literature Resource Center",
+								"target_url": "http://proxy.library.nyu.edu/login?url=https://link.gale.com/apps/pub/1161/LitRC?u=new64731",
+								"authentication": "",
+								"proxy": "yes",
+								"coverage": [
+									{
+										"coverage_text": [
+											{
+												"threshold_text": [
+													{
+														"coverage_statement": [
+															"Available from 1978/01/01  until 1978/12/31",
+															"Available from 1982/01/01  until 1982/12/31",
+															"Available from 1989/01/01  until 1989/12/31",
+															"Available from 1996/01/01  until 1996/12/31",
+															"Available from 2002/01/01"
+														]
+													}
+												],
+												"embargo_text": [
+													{}
+												]
+											}
+										],
+										"from": [
+											{
+												"year": "1978",
+												"month": "01",
+												"day": "01"
+											},
+											{
+												"year": "1982",
+												"month": "01",
+												"day": "01"
+											},
+											{
+												"year": "1989",
+												"month": "01",
+												"day": "01"
+											},
+											{
+												"year": "1996",
+												"month": "01",
+												"day": "01"
+											},
+											{
+												"year": "2002",
+												"month": "01",
+												"day": "01"
+											}
+										],
+										"to": [
+											{
+												"year": "1978",
+												"month": "12",
+												"day": "31"
+											},
+											{
+												"year": "1982",
+												"month": "12",
+												"day": "31"
+											},
+											{
+												"year": "1989",
+												"month": "12",
+												"day": "31"
+											},
+											{
+												"year": "1996",
+												"month": "12",
+												"day": "31"
+											}
+										],
+										"embargo": {}
+									}
+								]
+							},
+							{
+								"target_name": "LEXIS_ADVANCE_US",
+								"target_public_name": "Lexis Advance US",
+								"target_url": "http://proxy.library.nyu.edu/login?url=https://advance.lexis.com/api/search/advanced?source=MTA2OTUwNg&identityprofileid=W4HVBF32601",
+								"authentication": "",
+								"proxy": "yes",
+								"coverage": [
+									{
+										"coverage_text": [
+											{
+												"threshold_text": [
+													{
+														"coverage_statement": [
+															"Available from 1999"
+														]
+													}
+												],
+												"embargo_text": [
+													{}
+												]
+											}
+										],
+										"from": [
+											{
+												"year": "1999"
+											}
+										],
+										"embargo": {}
+									}
+								]
+							},
+							{
+								"target_name": "MISCELLANEOUS_EJOURNALS",
+								"target_public_name": "Miscellaneous Ejournals",
+								"target_url": "http://proxy.library.nyu.edu/login?url=http://archives.newyorker.com/#folio=C1",
+								"authentication": "",
+								"proxy": "yes",
+								"coverage": [
+									{
+										"coverage_text": [
+											{
+												"threshold_text": [
+													{
+														"coverage_statement": [
+															"Available from 1925"
+														]
+													}
+												],
+												"embargo_text": [
+													{}
+												]
+											}
+										],
+										"from": [
+											{
+												"year": "1925"
+											}
+										],
+										"embargo": {}
+									}
+								]
+							},
+							{
+								"target_name": "MUSIC_AND_PERFORMING_ARTS_COLLECTION",
+								"target_public_name": "Music & Performing Arts Collection",
+								"target_url": "http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?genre=journal&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rfr_id=info%3Axri%2Fsid%3Aprimo&url_ver=Z39.88-2004&res_dat=xri%3Apqm&rft_id=16493",
+								"authentication": "",
+								"proxy": "yes",
+								"coverage": [
+									{
+										"coverage_text": [
+											{
+												"threshold_text": [
+													{
+														"coverage_statement": [
+															"Available from 2001/08/20  until 2017/01/02"
+														]
+													}
+												],
+												"embargo_text": [
+													{}
+												]
+											}
+										],
+										"from": [
+											{
+												"year": "2001",
+												"month": "08",
+												"day": "20"
+											}
+										],
+										"to": [
+											{
+												"year": "2017",
+												"month": "01",
+												"day": "02"
+											}
+										],
+										"embargo": {}
+									}
+								]
+							},
+							{
+								"target_name": "MUSIC_AND_PERFORMING_ARTS_COLLECTION",
+								"target_public_name": "Music & Performing Arts Collection",
+								"target_url": "http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?genre=journal&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rfr_id=info%3Axri%2Fsid%3Aprimo&url_ver=Z39.88-2004&res_dat=xri%3Apqm&rft_id=41130",
+								"authentication": "",
+								"proxy": "yes",
+								"coverage": [
+									{
+										"coverage_text": [
+											{
+												"threshold_text": [
+													{
+														"coverage_statement": [
+															"Available from 2002/11/04"
+														]
+													}
+												],
+												"embargo_text": [
+													{}
+												]
+											}
+										],
+										"from": [
+											{
+												"year": "2002",
+												"month": "11",
+												"day": "04"
+											}
+										],
+										"embargo": {}
+									}
+								]
+							},
+							{
+								"target_name": "OPINIONARCHIVES",
+								"target_public_name": "OpinionArchives",
+								"target_url": "http://proxy.library.nyu.edu/login?url=http://www.newyorker.com/archive",
+								"authentication": "",
+								"proxy": "yes",
+								"coverage": [
+									{
+										"coverage_text": [
+											{
+												"threshold_text": [
+													{
+														"coverage_statement": [
+															"Available from 1925"
+														]
+													}
+												],
+												"embargo_text": [
+													{}
+												]
+											}
+										],
+										"from": [
+											{
+												"year": "1925"
+											}
+										],
+										"embargo": {}
+									}
+								]
+							},
+							{
+								"target_name": "PROQUEST_CENTRAL",
+								"target_public_name": "ProQuest Central",
+								"target_url": "http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?genre=journal&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rfr_id=info%3Axri%2Fsid%3Aprimo&url_ver=Z39.88-2004&res_dat=xri%3Apqm&rft_id=41130",
+								"authentication": "",
+								"proxy": "yes",
+								"coverage": [
+									{
+										"coverage_text": [
+											{
+												"threshold_text": [
+													{
+														"coverage_statement": [
+															"Available from 2002/11/04"
+														]
+													}
+												],
+												"embargo_text": [
+													{}
+												]
+											}
+										],
+										"from": [
+											{
+												"year": "2002",
+												"month": "11",
+												"day": "04"
+											}
+										],
+										"embargo": {}
+									}
+								]
+							},
+							{
+								"target_name": "FACTIVA",
+								"target_public_name": "Factiva",
+								"target_url": "http://proxy.library.nyu.edu/login?url=https://global.factiva.com/en/du/headlines.asp?XSID=S001dbr5DEs5DEmN9MpMD6mNDVyMHmnRsIuMcNG1pRRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQQAA&CurrentSources=U%7Cgtny&CurrentSourcesDesc=sc_u_gtny%2CNew+Yorker",
+								"authentication": "Requires NYU NetID.",
+								"proxy": "yes",
+								"coverage": [
+									{
+										"coverage_text": [
+											{
+												"threshold_text": [
+													{
+														"coverage_statement": [
+															"Available from 1997"
+														]
+													}
+												],
+												"embargo_text": [
+													{}
+												]
+											}
+										],
+										"from": [
+											{
+												"year": "1997"
+											}
+										],
+										"embargo": {}
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+}
