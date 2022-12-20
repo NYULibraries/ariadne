@@ -1,8 +1,8 @@
 const { test, expect } = require('@playwright/test');
 const fs = require('fs');
 
-const NYJSONDATA = fs.readFileSync(require('path').join(__dirname, 'testdata/ny.json'));
-const CFJSONDATA = fs.readFileSync(require('path').join(__dirname, 'testdata/cf.json'));
+const NYJSONDATA = fs.readFileSync(require('path').join(__dirname, 'testdata/ny.json'), { encoding: 'utf8'});
+const CFJSONDATA = fs.readFileSync(require('path').join(__dirname, 'testdata/cf.json'), { encoding: 'utf8'});
 
 
 const queryStrings = [
