@@ -176,5 +176,30 @@ test('stubs out Loading...', async ({ page }) => {
   expect(await page.textContent('.loader')).toBe('Loading...');
 });
 
+test('stubs out a E Journal Full Text link', async ({ page }) => {
+  // Replace this with the expected URL from the JSON file
+  const expectedUrl = 'http://proxy.library.nyu.edu/login?url=http://archives.newyorker.com/#folio=C1';
+
+  // Define a mock HTTP request handler for the /v0/ URL path to intercept the request and return a mocked response.
+  await page.route('**/v0/*', async route => {
+    // Return a mock response with a JSON body and a 200 status code
+    await route.fulfill({
+      status: 200,
+      contentType: 'application/json',
+      body: NYJSONDATA
+    });
+  });
+
+  // Navigate to the frontend URL, which will make a request to the backend URL
+  await page.goto('/' + queryStrings[0]);
+
+  // Wait for the response to be returned and the page to render
+  await page.waitForFunction(() => document.querySelector('.image'));
+  await page.waitForFunction(() => document.querySelector('h6'));
+
+  // Check if the expected URL is present in the DOM
+  const link = await page.$('a[href="' + expectedUrl + '"]');
+  expect(link).not.toBeNull();
+});
 
 
