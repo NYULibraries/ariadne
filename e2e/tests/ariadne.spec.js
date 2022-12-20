@@ -113,14 +113,17 @@ test('stubs out the New Yorker page request', async ({ page }) => {
 });
 
 test('stubs out the Corriere Fiorentino page request', async ({ page }) => {
-  await page.route('**/v0/*', route => {
-    const stubbedResponse = JSON.parse(CFJSONDATA);
-    route.fulfill({
+  // Define a mock HTTP request handler to intercept the request and log the details
+  await page.route('**/v0/*', async route => {
+    await route.fulfill({
       status: 200,
       contentType: 'application/json',
-      body: stubbedResponse
+      body: CFJSONDATA
     });
   });
+
+  // Log messages from the browser console to the test console
+  page.on('console', msg => console.log(msg.text()));
 
   await page.goto('/' + queryStrings[1]);
 
@@ -171,31 +174,6 @@ test('stubs out Loading...', async ({ page }) => {
 
   await page.goto('/' + queryStrings[0]);
   expect(await page.textContent('.loader')).toBe('Loading...');
-});
-
-
-test('stubs out an html page', async ({ page }) => {
-  await page.route('**/v0/*', route => {
-    route.fulfill({
-      status: 200,
-      headers: { 'Content-Type': 'text/html' },
-      body: `
-        <html>
-          <body>
-            <div class="image"></div>
-            <h6>Corriere Fiorentino</h6>
-          </body>
-        </html>
-      `
-    });
-  });
-
-  await page.goto('/' + queryStrings[1]);
-
-  await page.waitForFunction(() => document.querySelector('.image'));
-  await page.waitForFunction(() => document.querySelector('h6'), { timeout: 10000 });
-
-  await expect(page).toHaveScreenshot('corriere_stub__fiorentino.png');
 });
 
 
