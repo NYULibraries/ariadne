@@ -92,8 +92,7 @@ test('Loading... no longer present in the DOM after loading data', async ({ page
 
 test('stubs out the New Yorker page request', async ({ page }) => {
   //Define a mock HTTP request handler for the /v0/ URL path to intercept the request and return a mocked response.
-  await page.route('http://localhost:8080/v0/?url_ver=Z39.88-2004&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&ctx_ver=Z39.88-2004&ctx_tim=2021-10-22T12:29:27-04:00&ctx_id=&ctx_enc=info:ofi/enc:UTF-8&rft.aulast=Ross&rft.date=2002&rft.eissn=2163-3827&rft.genre=journal&rft.issn=0028-792X&rft.jtitle=New+Yorker&rft.language=eng&rft.lccn=++2011201780&rft.object_id=110975413975944&rft.oclcnum=909782404&rft.place=New+York&rft.private_data=909782404<fssessid>0</fssessid>&rft.pub=F-R+Pub.+Corp.&rft.stitle=NEW+YORKER&rft.title=New+Yorker&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft_id=info:oclcnum/909782404&rft_id=urn:ISSN:0028-792X&req.ip=209.150.44.95&rfr_id=info:sid/FirstSearch:WorldCat', async route => {
-    // const stubbedResponse = JSON.parse(NYJSONDATA);
+  await page.route('**/v0/*', async route => {
     //Return a mock response with a JSON body and a 200 status code
    await route.fulfill({
       status: 200,
@@ -131,13 +130,14 @@ test('stubs out the Corriere Fiorentino page request', async ({ page }) => {
   await expect(page).toHaveScreenshot('corriere_fiorentino.png');
 });
 
+
+
 test('stubs out with a className of list-group', async ({ page }) => {
   await page.route('**/v0/*', route => {
-    const stubbedResponse = JSON.parse(NYJSONDATA);
     route.fulfill({
       status: 200,
       contentType: 'application/json',
-      body: stubbedResponse
+      body: NYJSONDATA
     });
   }
   );
@@ -148,11 +148,10 @@ test('stubs out with a className of list-group', async ({ page }) => {
 
 test('stubs out the search results', async ({ page }) => {
   await page.route('**/v0/*', route => {
-    const stubbedResponse = JSON.parse(NYJSONDATA);
     route.fulfill({
       status: 200,
       contentType: 'application/json',
-      body: stubbedResponse
+      body: NYJSONDATA
     });
   });
 
@@ -162,12 +161,11 @@ test('stubs out the search results', async ({ page }) => {
 });
 
 test('stubs out Loading...', async ({ page }) => {
-  await page.route('**v0/*', route => {
-    const stubbedResponse = JSON.parse(NYJSONDATA);
-    route.fulfill({
+  await page.route('**v0/*', async route => {
+    await route.fulfill({
       status: 200,
       contentType: 'application/json',
-      body: stubbedResponse
+      body: NYJSONDATA
     });
   });
 
