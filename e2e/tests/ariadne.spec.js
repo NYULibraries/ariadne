@@ -1,12 +1,13 @@
 const { test, expect } = require('@playwright/test');
 const fs = require('fs');
+const path = require('path');
 
 const getQueryStrings = require('./utils/getQueryStrings');
 
 const queryStrings = getQueryStrings();
 
-const NYJSONDATA = fs.readFileSync(require('path').join(__dirname, '../../backend/api/testdata/server/golden/the-new-yorker.json'), { encoding: 'utf8'});
-const CFJSONDATA = fs.readFileSync(require('path').join(__dirname, '../../backend/api/testdata/server/golden/corriere-fiorentino.json'), { encoding: 'utf8'});
+const NYJSONDATA = fs.readFileSync(path.join(__dirname, '../../backend/api/testdata/server/golden/the-new-yorker.json'), { encoding: 'utf8'});
+const CFJSONDATA = fs.readFileSync(path.join(__dirname, '../../backend/api/testdata/server/golden/corriere-fiorentino.json'), { encoding: 'utf8'});
 
 
 test('stubbing out Ask a Librarian', async ({ page }) => {
