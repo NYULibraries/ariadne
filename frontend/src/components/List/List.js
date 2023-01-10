@@ -5,7 +5,7 @@ import useApi from '../../hooks/useApi';
 import linksApi from '../../api/fetchData';
 import { Col, Container, Row } from 'react-bootstrap';
 import metaData from '../../metadata.json';
-import DisplayMetadata from '../DisplayMetadata/DisplayMetadata';
+import Citation from '../Citation/Citation';
 
 const List = () => {
   const backendClient = useApi(linksApi.fetchData);
@@ -51,7 +51,7 @@ const List = () => {
           <Col md={8}>
             <div className="list-group">
               <div className="list-group-item list-group-item-action flex-column border-0">
-                <DisplayMetadata metadataPlaceholders={metaData} />
+                <Citation metadataPlaceholders={metaData} />
               </div>
               {backendClient.resource?.map((link, idx) => (
                 <div key={idx} className="list-group-item list-group-item-action flex-column border-0">

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const DisplayMetadata = ({ metadataPlaceholders }) => {
+const Citation = ({ metadataPlaceholders }) => {
   return (
     <div>
       {metadataPlaceholders.genre && <p className="resource-type">{metadataPlaceholders.genre}</p>}
@@ -38,8 +38,8 @@ const DisplayMetadata = ({ metadataPlaceholders }) => {
   );
 };
 
-DisplayMetadata.propTypes = {
+Citation.propTypes = {
   metadataPlaceholders: PropTypes.object.isRequired,
 };
 
-export default DisplayMetadata;
+export default Citation;
