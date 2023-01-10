@@ -58,6 +58,14 @@ services:
   frontend:
     <<: *x-build-frontend
     environment:
+      - REACT_APP_API_URL=http://localhost:8080/v0/
+    ports:
+      - "3000:3000"
+    # <<: *x-development-volumes-frontend
+
+  frontend-e2e:
+    <<: *x-build-frontend
+    environment:
       - REACT_APP_API_URL=http://backend:8080/v0/
     ports:
       - "3000:3000"
@@ -116,12 +124,12 @@ services:
     <<: *x-build-e2e
     depends_on:
       - backend
-      - frontend
+      - frontend-e2e
     command: yarn test:e2e
     networks:
       - ariadne-net
     environment:
-      - PLAYWRIGHT_BASE_URL=http://frontend:3000/
+      - PLAYWRIGHT_BASE_URL=http://frontend-e2e:3000/
     # <<: *x-development-volumes-frontend 
 
 networks:
