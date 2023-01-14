@@ -52,6 +52,11 @@ h6 {
   opacity: 0.8;
 }
 
+.image.white-bg {
+  background-color: white;
+}
+
+
 .image:hover {
   opacity: 1;
 }
