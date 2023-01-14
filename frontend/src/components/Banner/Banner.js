@@ -11,7 +11,13 @@ const Banner = () => {
   useEffect(() => {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    const institution = urlParams.get('institution');
+    let institution = urlParams.get('institution');
+    if (urlParams.has('umlaut.institution')) {
+      institution = urlParams.get('umlaut.institution');
+      urlParams.delete('umlaut.institution');
+      urlParams.set('institution', institution);
+      window.location.search = urlParams.toString();
+    }
     if (institution === 'NYUAD') {
       setLogo(`${process.env.PUBLIC_URL}/images/abudhabi-logo-color.svg`);
       setLink('https://nyuad.nyu.edu/en/library.html');
@@ -20,9 +26,6 @@ const Banner = () => {
       setLogo(`${process.env.PUBLIC_URL}/images/shanghai-logo-color.svg`);
       setLink('https://shanghai.nyu.edu/academics/library');
       setImgClass('image white-bg');
-    } else if (institution === 'umlaut.institution') {
-      urlParams.delete('umlaut.institution');
-      window.location.search = urlParams.toString();
     }
   }, []);
   return (
