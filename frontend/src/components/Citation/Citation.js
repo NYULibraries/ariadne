@@ -1,45 +1,56 @@
-import PropTypes from 'prop-types';
+import metaData from '../../metadata.json';
 
-const Citation = ({ metadataPlaceholders }) => {
+const Citation = () => {
+  //const params = (new URL(document.location)).searchParams;
+
+  //const citation = {
+  //  article_title: params.get("rft.atitle") || params.get("atitle"),
+  //  journal_title: params.get("rft.jtitle") || params.get("jtitle"),
+  //  volume: params.get("rft.volume") || params.get("volume"),
+  //  issue: params.get("rft.issue") || params.get("issue"),
+  //  start_page: params.get("rft.spage") || params.get("spage"),
+  //  end_page: params.get("rft.epage") || params.get("epage"),
+  //  genre: params.get("rft.genre") || params.get("genre"),
+  //  issn: params.get("rft.issn") || params.get("issn"),
+  //};
+  //
+  const citation = metaData;
+
   return (
     <div>
-      {metadataPlaceholders.genre && <p className="resource-type">{metadataPlaceholders.genre}</p>}
-      {metadataPlaceholders.article_title && <h2 className="title">{metadataPlaceholders.article_title}</h2>}
-      {metadataPlaceholders.author && metadataPlaceholders.date && (
+      {citation.genre && <p className="resource-type">{citation.genre}</p>}
+      {citation.article_title && <h2 className="title">{citation.article_title}</h2>}
+      {citation.author && citation.date && (
         <p>
-          {metadataPlaceholders.author} <span>•</span> {metadataPlaceholders.date}
+          {citation.author} <span>•</span> {citation.date}
         </p>
       )}
-      {(metadataPlaceholders.journal_title ||
-        metadataPlaceholders.volume ||
-        metadataPlaceholders.issue ||
-        metadataPlaceholders.start_page ||
-        metadataPlaceholders.end_page) && (
+      {(citation.journal_title ||
+        citation.volume ||
+        citation.issue ||
+        citation.start_page ||
+        citation.end_page) && (
         <p style={{ margin: '0 0 10px' }}>
           <span style={{ boxSizing: 'border-box' }}>
-            {metadataPlaceholders.journal_title && 'Published in Journal'}
+            {citation.journal_title && 'Published in Journal'}
           </span>
           <span style={{ fontStyle: 'italic' }}>
-            {metadataPlaceholders.journal_title && metadataPlaceholders.journal_title + '.'}
+            {citation.journal_title && citation.journal_title + '.'}
           </span>
-          {metadataPlaceholders.volume && 'Volume ' + metadataPlaceholders.volume + '.'}
-          {metadataPlaceholders.issue && 'Issue ' + metadataPlaceholders.issue + '.'}
-          {metadataPlaceholders.start_page && 'Page ' + metadataPlaceholders.start_page}
-          {metadataPlaceholders.end_page && '-' + metadataPlaceholders.end_page + '.'}
+          {citation.volume && 'Volume ' + citation.volume + '.'}
+          {citation.issue && 'Issue ' + citation.issue + '.'}
+          {citation.start_page && 'Page ' + citation.start_page}
+          {citation.end_page && '-' + citation.end_page + '.'}
         </p>
       )}
-      {metadataPlaceholders.issn && (
+      {citation.issn && (
         <dl className="citation-info">
           <dt>ISSN:</dt>
-          <dd>{metadataPlaceholders.issn}</dd>
+          <dd>{citation.issn}</dd>
         </dl>
       )}
     </div>
   );
-};
-
-Citation.propTypes = {
-  metadataPlaceholders: PropTypes.object.isRequired,
 };
 
 export default Citation;
