@@ -1,6 +1,6 @@
-import metaData from '../../metadata.json';
+import PropTypes from 'prop-types';
 
-const Citation = () => {
+const Citation = ({ metadataPlaceholders }) => {
   //const params = (new URL(document.location)).searchParams;
 
   //const citation = {
@@ -14,7 +14,23 @@ const Citation = () => {
   //  issn: params.get("rft.issn") || params.get("issn"),
   //};
   //
-  const citation = metaData;
+  const citation = metadataPlaceholders;
+
+  const renderCitation = (citation) => {
+    if (citation.journal_title || citation.volume || citation.issue || citation.start_page || citation.end_page) {
+      return (
+        <p style={{ margin: '0 0 10px' }}>
+          <span style={{ boxSizing: 'border-box' }}>{citation.journal_title && 'Published in Journal'}</span>
+          <span style={{ fontStyle: 'italic' }}>{citation.journal_title && citation.journal_title + '.'}</span>
+          {citation.volume && 'Volume ' + citation.volume + '.'}
+          {citation.issue && 'Issue ' + citation.issue + '.'}
+          {citation.start_page && 'Page ' + citation.start_page}
+          {citation.end_page && '-' + citation.end_page + '.'}
+        </p>
+      );
+    }
+    return null;
+  };
 
   return (
     <div>
@@ -25,24 +41,7 @@ const Citation = () => {
           {citation.author} <span>•</span> {citation.date}
         </p>
       )}
-      {(citation.journal_title ||
-        citation.volume ||
-        citation.issue ||
-        citation.start_page ||
-        citation.end_page) && (
-        <p style={{ margin: '0 0 10px' }}>
-          <span style={{ boxSizing: 'border-box' }}>
-            {citation.journal_title && 'Published in Journal'}
-          </span>
-          <span style={{ fontStyle: 'italic' }}>
-            {citation.journal_title && citation.journal_title + '.'}
-          </span>
-          {citation.volume && 'Volume ' + citation.volume + '.'}
-          {citation.issue && 'Issue ' + citation.issue + '.'}
-          {citation.start_page && 'Page ' + citation.start_page}
-          {citation.end_page && '-' + citation.end_page + '.'}
-        </p>
-      )}
+      {renderCitation(citation)}
       {citation.issn && (
         <dl className="citation-info">
           <dt>ISSN:</dt>
@@ -51,6 +50,10 @@ const Citation = () => {
       )}
     </div>
   );
+};
+
+Citation.propTypes = {
+  metadataPlaceholders: PropTypes.object.isRequired,
 };
 
 export default Citation;
