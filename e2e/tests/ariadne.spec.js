@@ -84,3 +84,32 @@ test('Loading... no longer present in the DOM after loading data', async ({ page
   await page.goto('/' + queryStrings[0]);
   expect(await page.textContent('p')).not.toBe('Loading...');
 });
+
+test('renders the correct NYUAD logo and link based on institution query parameter', async ({ page }) => {
+  await page.goto('/' + '?institution=NYUAD');
+  const linkElement = await page.waitForSelector('a');
+  expect(await linkElement.getAttribute('href')).toBe('https://nyuad.nyu.edu/en/library.html');
+  const imgElement = await linkElement.$('img');
+  expect(await imgElement.getAttribute('src')).toBe(`/images/abudhabi-logo-color.svg`);
+});
+  
+test('renders the correct NYUSH logo and link based on institution query parameter', async ({ page }) => {
+  await page.goto('/' + '?institution=NYUSH');
+  const linkElement = await page.waitForSelector('a');
+  expect(await linkElement.getAttribute('href')).toBe('https://shanghai.nyu.edu/academics/library');
+  const imgElement = await linkElement.$('img');
+  expect(await imgElement.getAttribute('src')).toBe(`/images/shanghai-logo-color.svg`);
+});
+
+test('redirects correctly when institution query parameter is "umlaut.institution"', async ({ page }) => {
+  await page.goto('/' + '?umlaut.institution=NYSH');
+  setTimeout(async () => {
+    const linkElement = await page.waitForSelector('a');
+    expect(await linkElement.getAttribute('href')).toBe('https://shanghai.nyu.edu/academics/library');
+    const imgElement = await linkElement.$('img');
+    expect(await imgElement.getAttribute('src')).toBe(`/images/shanghai-logo-color.svg`);
+  }, 1000);
+});
+  
+
+  
