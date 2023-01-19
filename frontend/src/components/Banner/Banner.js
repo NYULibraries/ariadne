@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { getQueryParameter, getInstitution } from '../../aux/helpers';
 
 const Banner = () => {
   const [logo, setLogo] = useState('https://cdn.library.nyu.edu/images/nyulibraries-logo.svg');
@@ -9,24 +10,11 @@ const Banner = () => {
   const [imgClass, setImgClass] = useState('image');
 
   useEffect(() => {
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    let institution = urlParams.get('institution');
-    if (urlParams.has('umlaut.institution')) {
-      institution = urlParams.get('umlaut.institution');
-      urlParams.delete('umlaut.institution');
-      urlParams.set('institution', institution);
-      window.location.search = urlParams.toString();
-    }
-    if (institution === 'NYUAD') {
-      setLogo(`${process.env.PUBLIC_URL}/images/abudhabi-logo-color.svg`);
-      setLink('https://nyuad.nyu.edu/en/library.html');
-      setImgClass('image white-bg');
-    } else if (institution === 'NYUSH') {
-      setLogo(`${process.env.PUBLIC_URL}/images/shanghai-logo-color.svg`);
-      setLink('https://shanghai.nyu.edu/academics/library');
-      setImgClass('image white-bg');
-    }
+    const institution = getQueryParameter('institution');
+    const { logo, link, imgClass } = getInstitution(institution);
+    setLogo(logo);
+    setLink(link);
+    setImgClass(imgClass);
   }, []);
   return (
     <Navbar className="color-nav" expand="lg">
