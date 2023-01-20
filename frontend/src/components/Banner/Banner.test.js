@@ -97,6 +97,16 @@ describe('getInstitution', () => {
       imgClass: 'image',
     });
   });
+
+  test('returns the default object for unknown institution', () => {
+    const institution = 'unknown';
+    const result = getInstitution(institution);
+    expect(result).toEqual({
+      logo: 'https://cdn.library.nyu.edu/images/nyulibraries-logo.svg',
+      link: 'http://library.nyu.edu',
+      imgClass: 'image',
+    });
+  });
 });
 
 describe('getParameterFromQueryString', () => {
