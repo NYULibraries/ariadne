@@ -17,8 +17,8 @@ test('renders correctly', () => {
   expect(asFragment()).toMatchSnapshot();
 });
 
-/* The next four tests are skipped because currently window object is not available in the test environment
-   Also it is generally not recommended to use the window object in a test environment.
+/* 
+   It is generally not recommended to use the window object in a test environment.
    The window object is not available in all test environments, such as Node.js
    In certain cases mocking methods can be used https://jestjs.io/docs/manual-mocks#mocking-methods-which-are-not-implemented-in-jsdom
    However it's still a work in progress for the Jest team to fully support the window object in the test environment
@@ -26,7 +26,7 @@ test('renders correctly', () => {
    This allows it to run tests in a faster and more consistent environment than running tests in a real browser.
    Similarly, React Testing Library (RTL) is also designed to run in a Node environment and interact with a virtual DOM rather than a real browser.
    */
-test.skip('renders the correct NYUAD logo and link based on institution query parameter', async () => {
+test('renders the correct NYUAD logo and link based on institution query parameter', async () => {
   window.history.pushState({}, null, '/?institution=NYUAD');
   render(<Banner />);
   const linkElement = await waitFor(() => screen.getByAltText(/NYU Libraries logo/i).closest('a'));
@@ -35,7 +35,7 @@ test.skip('renders the correct NYUAD logo and link based on institution query pa
   expect(imgElement).toHaveAttribute('src', `${process.env.PUBLIC_URL}/images/abudhabi-logo-color.svg`);
 });
 
-test.skip('renders the correct NYUSH logo and link based on institution query parameter', async () => {
+test('renders the correct NYUSH logo and link based on institution query parameter', async () => {
   window.history.pushState({}, null, '/?institution=NYUSH');
   render(<Banner />);
   const linkElement = await waitFor(() => screen.getByAltText(/NYU Libraries logo/i).closest('a'));
@@ -44,8 +44,14 @@ test.skip('renders the correct NYUSH logo and link based on institution query pa
   expect(imgElement).toHaveAttribute('src', `${process.env.PUBLIC_URL}/images/shanghai-logo-color.svg`);
 });
 
-test.skip('redirects correctly when institution query parameter is "umlaut.institution"', async () => {
+test('redirects correctly when institution query parameter is "umlaut.institution"', async () => {
   const institution = 'NYUSH';
+  // Source: https://stackoverflow.com/questions/54090231/how-to-fix-error-not-implemented-navigation-except-hash-changes
+  // This is a workaround for to clear `jsdom` error caused by:
+  // https://github.com/jsdom/jsdom/blob/16.0.0/lib/jsdom/living/window/navigation.js#L74-L78
+  const assignMock = jest.fn();
+  delete window.location;
+  window.location = { assign: assignMock };
   window.location.search = `?umlaut.institution=${institution}`;
   render(<Banner />);
   const linkElement = screen.getByAltText(/NYU Libraries logo/i).closest('a');
@@ -54,7 +60,7 @@ test.skip('redirects correctly when institution query parameter is "umlaut.insti
   expect(imgElement).toHaveAttribute('src', `${process.env.PUBLIC_URL}/images/shanghai-logo-color.svg`);
 });
 
-test.skip('changes the background of the logo correctly when institution is NYUSH or NYUAD', async () => {
+test('changes the background of the logo correctly when institution is NYUSH or NYUAD', async () => {
   const institution = 'NYUAD';
   render(<Banner />, {
     route: `?institution=${institution}`,
