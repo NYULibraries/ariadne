@@ -7,5 +7,6 @@ import (
 
 func main() {
 	util.InitSentry()
+	defer util.RecoverWithSentry()
 	cmd.Execute()
 }
