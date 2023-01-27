@@ -56,8 +56,6 @@ func InitSentry() {
 			// Failed to initialize the Sentry SDK
 			log.Printf("sentry.Init: %s", err)
 		}
-		// Flush buffered events before the program terminates
-		defer sentry.Flush(2 * time.Second)
 	}
 }
 
@@ -67,6 +65,7 @@ func InitSentry() {
 func RecoverWithSentry() {
 	if r := recover(); r != nil {
 		sentry.CurrentHub().Recover(r)
+		sentry.Flush(2 * time.Second)
 		// Optionally, re-panic after sending the panic information to Sentry
 		panic(r)
 	}
