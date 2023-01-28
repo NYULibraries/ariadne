@@ -4,10 +4,16 @@ import (
 	"log"
 	"os"
 	"os/exec"
+	"strings"
 	"time"
 
 	"github.com/getsentry/sentry-go"
 )
+
+var validEnvironments = map[string]bool{
+	"dev":  true,
+	"prod": true,
+}
 
 func Diff(path1 string, path2 string) (string, error) {
 	diffCmd := "diff"
@@ -27,17 +33,12 @@ func Diff(path1 string, path2 string) (string, error) {
 	return string(outputBytes), nil
 }
 
-var validEnvironments = map[string]bool{
-	"dev":  true,
-	"prod": true,
-}
-
 // InitSentry initializes the Sentry SDK and sets up error reporting.
 // It uses the SENTRY_DSN and SENTRY_ENVIRONMENT environment variables to configure the SDK.
 func InitSentry() {
 	// Get the values of the SENTRY_DSN and SENTRY_ENVIRONMENT environment variables
 	dsn := os.Getenv("SENTRY_DSN")
-	environment := os.Getenv("SENTRY_ENVIRONMENT")
+	environment := strings.ToLower(os.Getenv("SENTRY_ENVIRONMENT"))
 
 	if dsn == "" || environment == "" {
 		// SENTRY_DSN or SENTRY_ENVIRONMENT environment variable is not set
@@ -49,7 +50,6 @@ func InitSentry() {
 		err := sentry.Init(sentry.ClientOptions{
 			Dsn:              dsn,
 			Environment:      environment,
-			Debug:            true, // Enable debugging mode
 			AttachStacktrace: true,
 		})
 		if err != nil {
