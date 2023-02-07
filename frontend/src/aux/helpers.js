@@ -25,11 +25,11 @@ const getCoverageStatement = (link) => {
 // Helper functions for Banner.js component
 const getParameterFromQueryString = (queryString, parameterName) => {
   const urlParams = new URLSearchParams(queryString);
-  let parameter = urlParams.get(parameterName);
-  if (urlParams.has(`umlaut.${parameterName}`)) {
-    parameter = urlParams.get(`umlaut.${parameterName}`);
-    urlParams.delete(`umlaut.${parameterName}`);
-    urlParams.set(parameterName, parameter);
+  let parameter = urlParams.get(parameterName.toLowerCase());
+  if (urlParams.has(`umlaut.${parameterName.toLowerCase()}`)) {
+    parameter = urlParams.get(`umlaut.${parameterName.toLowerCase()}`);
+    urlParams.delete(`umlaut.${parameterName.toLowerCase()}`);
+    urlParams.set(parameterName.toLowerCase(), parameter);
     history.pushState(null, '', `?${urlParams.toString()}`)
   }
   return parameter;
@@ -47,11 +47,11 @@ const getInstitution = (institution) => {
   let link = DEFAULT_LINK;
   let imgClass = DEFAULT_IMG_CLASS;
 
-  if (institution === NYUAD) {
+  if (institution.toUpperCase() === NYUAD) {
     logo = NYUAD_LOGO;
     link = NYUAD_LINK;
     imgClass = NYUAD_IMG_CLASS;
-  } else if (institution === NYUSH) {
+  } else if (institution.toUpperCase() === NYUSH) {
     logo = NYUSH_LOGO;
     link = NYUSH_LINK;
     imgClass = NYUSH_IMG_CLASS;
