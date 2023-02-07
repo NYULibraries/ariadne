@@ -1,9 +1,10 @@
+import { DEFAULT_IMG_CLASS, DEFAULT_LINK, DEFAULT_LOGO } from '../../aux/institutionConstants';
+import { getInstitution, getQueryParameter } from '../../aux/helpers';
 import { useEffect, useState } from 'react';
+
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { getQueryParameter, getInstitution } from '../../aux/helpers';
-import { DEFAULT_LOGO, DEFAULT_LINK, DEFAULT_IMG_CLASS } from '../../aux/institutionConstants';
 
 const Banner = () => {
   const [logo, setLogo] = useState(DEFAULT_LOGO);

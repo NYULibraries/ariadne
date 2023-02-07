@@ -1,15 +1,15 @@
 import {
-  NYUAD,
-  NYUSH,
-  DEFAULT_LOGO,
-  DEFAULT_LINK,
   DEFAULT_IMG_CLASS,
-  NYUAD_LOGO,
-  NYUAD_LINK,
+  DEFAULT_LINK,
+  DEFAULT_LOGO,
+  NYUAD,
   NYUAD_IMG_CLASS,
-  NYUSH_LOGO,
-  NYUSH_LINK,
+  NYUAD_LINK,
+  NYUAD_LOGO,
+  NYUSH,
   NYUSH_IMG_CLASS,
+  NYUSH_LINK,
+  NYUSH_LOGO
 } from './institutionConstants';
 
 //  Helper functions for useApi hook
@@ -60,4 +60,11 @@ const getInstitution = (institution) => {
   return { logo, link, imgClass };
 };
 
-export { getLinks, getCoverageStatement, getQueryParameter, getInstitution, getParameterFromQueryString };
+export {
+  getCoverageStatement,
+  getInstitution,
+  getLinks,
+  getParameterFromQueryString,
+  getQueryParameter
+};
+
