@@ -1,5 +1,5 @@
 import { DEFAULT_IMG_CLASS, DEFAULT_LINK, DEFAULT_LOGO } from '../../aux/institutionConstants';
-import { getInstitution, getQueryParameter } from '../../aux/helpers';
+import { getInstitution, getInstitutionQueryParameter } from '../../aux/helpers';
 import { useEffect, useState } from 'react';
 
 import Container from 'react-bootstrap/Container';
@@ -12,7 +12,7 @@ const Banner = () => {
   const [imgClass, setImgClass] = useState(DEFAULT_IMG_CLASS);
 
   useEffect(() => {
-    const institution = getQueryParameter('institution');
+    const institution = getInstitutionQueryParameter('institution');
     const { logo, link, imgClass } = getInstitution(institution);
     setLogo(logo);
     setLink(link);

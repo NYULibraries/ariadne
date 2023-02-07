@@ -30,12 +30,12 @@ const getParameterFromQueryString = (queryString, parameterName) => {
     parameter = urlParams.get(`umlaut.${parameterName}`);
     urlParams.delete(`umlaut.${parameterName}`);
     urlParams.set(parameterName, parameter);
-    window.location.search = urlParams.toString();
+    history.pushState(null, '', `?${urlParams.toString()}`)
   }
   return parameter;
 };
 
-const getQueryParameter = (parameterName) => {
+const getInstitutionQueryParameter = (parameterName) => {
   const queryString = window.location.search;
   return getParameterFromQueryString(queryString, parameterName);
 };
@@ -65,6 +65,6 @@ export {
   getInstitution,
   getLinks,
   getParameterFromQueryString,
-  getQueryParameter
+  getInstitutionQueryParameter
 };
 
