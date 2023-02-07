@@ -11,8 +11,8 @@
     ],
     "rules": {
       "eqeqeq": "error",
-      "no-console": ["error", { "allow": ["warn", "error"] }],
-      "prettier/prettier": "error",
+      "no-console": ["warn", { "allow": ["warn", "error"] }],
+      "prettier/prettier": "off",
       "react/display-name": "off",
       "react/no-children-prop": "off",
       "react/react-in-jsx-scope": "off",
