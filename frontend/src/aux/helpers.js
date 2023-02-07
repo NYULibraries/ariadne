@@ -30,6 +30,7 @@ const getParameterFromQueryString = (queryString, parameterName) => {
     parameter = urlParams.get(`umlaut.${parameterName}`);
     urlParams.delete(`umlaut.${parameterName}`);
     urlParams.set(parameterName, parameter);
+    window.location.search = urlParams.toString();
   }
   return parameter;
 };
