@@ -47,11 +47,11 @@ const getInstitution = (institution) => {
   let link = DEFAULT_LINK;
   let imgClass = DEFAULT_IMG_CLASS;
 
-  if (institution.toUpperCase() === NYUAD) {
+  if (institution?.toUpperCase() === NYUAD) {
     logo = NYUAD_LOGO;
     link = NYUAD_LINK;
     imgClass = NYUAD_IMG_CLASS;
-  } else if (institution.toUpperCase() === NYUSH) {
+  } else if (institution?.toUpperCase() === NYUSH) {
     logo = NYUSH_LOGO;
     link = NYUSH_LINK;
     imgClass = NYUSH_IMG_CLASS;
