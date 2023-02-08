@@ -1,20 +1,22 @@
-import { test, expect } from '@playwright/test';
+import { expect, test } from '@playwright/test';
+
 import fs from 'fs';
+
 // This import is not working in CI
 // import { execSync } from 'child_process';
 const getQueryStrings = require('./utils/getQueryStrings');
 
 const queryStrings = getQueryStrings();
 
-const NYJSONDATA = fs.readFileSync(require('path').join(__dirname, '../../backend/api/testdata/server/golden/the-new-yorker.json'), { encoding: 'utf8'});
-const CFJSONDATA = fs.readFileSync(require('path').join(__dirname, '../../backend/api/testdata/server/golden/corriere-fiorentino.json'), { encoding: 'utf8'});
+const NYJSONDATA = fs.readFileSync(require('path').join(__dirname, '../../backend/api/testdata/server/golden/the-new-yorker.json'), { encoding: 'utf8' });
+const CFJSONDATA = fs.readFileSync(require('path').join(__dirname, '../../backend/api/testdata/server/golden/corriere-fiorentino.json'), { encoding: 'utf8' });
 
 
-test('stubbing out the Corriere Fiorentino against golden', async ({ page }) => {
+test('compares the rendered Corriere Fiorentino page to a golden file', async ({ page }) => {
   //Define a mock HTTP request handler for the /v0/ URL path to intercept the request and return a mocked response.
   await page.route('**/v0/*', async route => {
     //Return a mock response with a JSON body and a 200 status code
-   await route.fulfill({
+    await route.fulfill({
       status: 200,
       contentType: 'application/json',
       body: CFJSONDATA
@@ -48,7 +50,7 @@ test('stubbing out the Corriere Fiorentino against golden', async ({ page }) => 
   expect(ok).toBeTruthy();
 });
 
-test('stubbing out the New Yorker against golden', async ({ page }) => {
+test('compares the rendered New Yorker page to a golden file', async ({ page }) => {
   //Define a mock HTTP request handler for the /v0/ URL path to intercept the request and return a mocked response.
   await page.route('**/v0/*', async route => {
     //Return a mock response with a JSON body and a 200 status code
@@ -59,7 +61,7 @@ test('stubbing out the New Yorker against golden', async ({ page }) => {
     });
   });
 
-  await page.goto('/'+ queryStrings[0]);
+  await page.goto('/' + queryStrings[0]);
   await page.waitForFunction(() => document.querySelector('h6'));
 
   const snapshot = await page.innerHTML('body');

@@ -6,11 +6,11 @@ const getQueryStrings = require('./utils/getQueryStrings');
 
 const queryStrings = getQueryStrings();
 
-const NYJSONDATA = fs.readFileSync(path.join(__dirname, '../../backend/api/testdata/server/golden/the-new-yorker.json'), { encoding: 'utf8'});
-const CFJSONDATA = fs.readFileSync(path.join(__dirname, '../../backend/api/testdata/server/golden/corriere-fiorentino.json'), { encoding: 'utf8'});
+const NYJSONDATA = fs.readFileSync(path.join(__dirname, '../../backend/api/testdata/server/golden/the-new-yorker.json'), { encoding: 'utf8' });
+const CFJSONDATA = fs.readFileSync(path.join(__dirname, '../../backend/api/testdata/server/golden/corriere-fiorentino.json'), { encoding: 'utf8' });
 
 
-test('stubbing out Ask a Librarian', async ({ page }) => {
+test('Ask a Librarian link pops up a new Ask a Library tab', async ({ page }) => {
   await page.route('**/v0/*', async route => {
     await route.fulfill({
       status: 200,
@@ -29,11 +29,11 @@ test('stubbing out Ask a Librarian', async ({ page }) => {
 });
 
 
-test('stubs out the New Yorker page request', async ({ page }) => {
+test('renders the New Yorker page', async ({ page }) => {
   //Define a mock HTTP request handler for the /v0/ URL path to intercept the request and return a mocked response.
   await page.route('**/v0/*', async route => {
     //Return a mock response with a JSON body and a 200 status code
-   await route.fulfill({
+    await route.fulfill({
       status: 200,
       contentType: 'application/json',
       body: NYJSONDATA
@@ -51,7 +51,7 @@ test('stubs out the New Yorker page request', async ({ page }) => {
   await expect(page).toHaveScreenshot('new_yorker.png');
 });
 
-test('stubs out the Corriere Fiorentino page request', async ({ page }) => {
+test('renders the Corriere Fiorentino page', async ({ page }) => {
   // Define a mock HTTP request handler to intercept the request and log the details
   await page.route('**/v0/*', async route => {
     await route.fulfill({
@@ -74,7 +74,7 @@ test('stubs out the Corriere Fiorentino page request', async ({ page }) => {
 
 
 
-test('stubs out with a className of list-group', async ({ page }) => {
+test('renders links with a list-group className', async ({ page }) => {
   await page.route('**/v0/*', route => {
     route.fulfill({
       status: 200,
@@ -88,7 +88,7 @@ test('stubs out with a className of list-group', async ({ page }) => {
   expect(await page.$('.list-group')).toBeTruthy();
 });
 
-test('stubs out the search results', async ({ page }) => {
+test('renders the search results', async ({ page }) => {
   await page.route('**/v0/*', route => {
     route.fulfill({
       status: 200,
@@ -97,13 +97,12 @@ test('stubs out the search results', async ({ page }) => {
     });
   });
 
-  await
-  page.goto('/' + queryStrings[0]);
+  await page.goto('/' + queryStrings[0]);
   expect(await page.textContent('p')).toBe('Displaying search results...');
 });
 
 
-test('stubs out a E Journal Full Text link', async ({ page }) => {
+test('renders a E Journal Full Text link', async ({ page }) => {
   // Replace this with the expected URL from the JSON file
   const expectedUrl = 'http://proxy.library.nyu.edu/login?url=http://archives.newyorker.com/#folio=C1';
 
