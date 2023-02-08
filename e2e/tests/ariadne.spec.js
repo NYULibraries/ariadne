@@ -20,12 +20,16 @@ test('Ask a Librarian link pops up a new Ask a Library tab', async ({ page }) =>
   });
 
   await page.goto('/' + queryStrings[0]);
-  const [page4] = await Promise.all([
-    page.waitForEvent('popup', { timeout: 10000 }),
-    page.getByRole('link', { name: 'Ask a Librarian' }).click(),
-  ]);
+  // Playwright's team recommendation for handling popups: https://playwright.dev/docs/pages#handling-popups
+  // Start waiting for popup before clicking. Note no await.
+  const popupPromise = page.waitForEvent('popup');
+  await page.getByRole('link', { name: 'Ask a Librarian' }).click();
+  const popup = await popupPromise;
+  // Wait for the popup to load.
+  await popup.waitForLoadState();
+
   expect(await page.textContent('.ask-librarian')).toBe('Need help?Ask a Librarian');
-  expect(page4.url()).toBe('https://library.nyu.edu/ask/');
+  expect(popup.url()).toBe('https://library.nyu.edu/ask/');
 });
 
 
