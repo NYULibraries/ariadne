@@ -1,20 +1,21 @@
 import PropTypes from 'prop-types';
 
-const Citation = ({ metadataPlaceholders }) => {
-  //const params = (new URL(document.location)).searchParams;
+const Citation = () => {
 
-  //const citation = {
-  //  article_title: params.get("rft.atitle") || params.get("atitle"),
-  //  journal_title: params.get("rft.jtitle") || params.get("jtitle"),
-  //  volume: params.get("rft.volume") || params.get("volume"),
-  //  issue: params.get("rft.issue") || params.get("issue"),
-  //  start_page: params.get("rft.spage") || params.get("spage"),
-  //  end_page: params.get("rft.epage") || params.get("epage"),
-  //  genre: params.get("rft.genre") || params.get("genre"),
-  //  issn: params.get("rft.issn") || params.get("issn"),
-  //};
-  //
-  const citation = metadataPlaceholders;
+  const params = (new URL(document.location)).searchParams;
+
+  const citation = {
+    article_title: params.get("rft.atitle") || params.get("atitle"),
+    journal_title: params.get("rft.jtitle") || params.get("jtitle"),
+    volume: params.get("rft.volume") || params.get("volume"),
+    issue: params.get("rft.issue") || params.get("issue"),
+    start_page: params.get("rft.spage") || params.get("spage"),
+    end_page: params.get("rft.epage") || params.get("epage"),
+    genre: params.get("rft.genre") || params.get("genre"),
+    issn: params.get("rft.issn") || params.get("issn"),
+  };
+  
+  //const citation = metadataPlaceholders;
 
   const renderCitation = (citation) => {
     if (citation.journal_title || citation.volume || citation.issue || citation.start_page || citation.end_page) {

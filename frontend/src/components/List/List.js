@@ -4,7 +4,7 @@ import { getCoverageStatement } from '../../aux/helpers';
 import useApi from '../../hooks/useApi';
 import linksApi from '../../api/fetchData';
 import { Col, Container, Row } from 'react-bootstrap';
-import metaData from '../../metadata.json';
+//import metaData from '../../metadata.json';
 import Citation from '../Citation/Citation';
 
 const List = () => {
@@ -15,6 +15,7 @@ const List = () => {
   // https://reactjs.org/docs/hooks-reference.html#useref
   const backendClientRef = useRef(null);
   backendClientRef.current = backendClient;
+  
 
   // Be aware that this hook will run twice when running in Strict Mode in React 18.
   //
@@ -51,7 +52,7 @@ const List = () => {
           <Col md={8}>
             <div className="list-group">
               <div className="list-group-item list-group-item-action flex-column border-0">
-                <Citation metadataPlaceholders={metaData} />
+                <Citation />
               </div>
               {backendClient.resource?.map((link, idx) => (
                 <div key={idx} className="list-group-item list-group-item-action flex-column border-0">
