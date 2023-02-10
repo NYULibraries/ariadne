@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 
 const Citation = () => {
 
@@ -13,6 +13,8 @@ const Citation = () => {
     end_page: params.get("rft.epage") || params.get("epage"),
     genre: params.get("rft.genre") || params.get("genre"),
     issn: params.get("rft.issn") || params.get("issn"),
+    date: params.get("rft.date") || params.get("date"),
+    author: (params.get("rft.aulast") || params.get("aulast")) + ", " + (params.get("rft.aufirst") || params.get("aufirst"))
   };
   
   //const citation = metadataPlaceholders;
@@ -37,11 +39,11 @@ const Citation = () => {
     <div>
       {citation.genre && <p className="resource-type">{citation.genre}</p>}
       {citation.article_title && <h2 className="title">{citation.article_title}</h2>}
-      {citation.author && citation.date && (
-        <p>
-          {citation.author} <span>•</span> {citation.date}
-        </p>
-      )}
+      <p>
+        {citation.author}
+        {citation.author && citation.date && ( <span>•</span>)}
+        {citation.date}
+      </p>
       {renderCitation(citation)}
       {citation.issn && (
         <dl className="citation-info">
@@ -51,10 +53,6 @@ const Citation = () => {
       )}
     </div>
   );
-};
-
-Citation.propTypes = {
-  metadataPlaceholders: PropTypes.object.isRequired,
 };
 
 export default Citation;
