@@ -48,8 +48,8 @@ test('renders the New Yorker page', async ({ page }) => {
   await page.goto('/' + queryStrings[0]);
 
   //Wait for the response to be returned and the page to render
-  await page.waitForFunction(() => document.querySelector('.image'));
-  await page.waitForFunction(() => document.querySelector('h6'));
+  await page.waitForSelector('.image');
+  await page.waitForSelector('h6');
 
   //Take a screenshot to verify that the page was rendered correctly
   await expect(page).toHaveScreenshot('new_yorker.png');
@@ -65,13 +65,10 @@ test('renders the Corriere Fiorentino page', async ({ page }) => {
     });
   });
 
-  // Log messages from the browser console to the test console for debugging:
-  // page.on('console', msg => console.log(msg.text()));
-
   await page.goto('/' + queryStrings[1]);
 
-  await page.waitForFunction(() => document.querySelector('.image'));
-  await page.waitForFunction(() => document.querySelector('h6'), { timeout: 10000 });
+  await page.waitForSelector('.image');
+  await page.waitForSelector('h6', { timeout: 10000 });
 
   await expect(page).toHaveScreenshot('corriere_fiorentino.png');
 });
@@ -124,8 +121,8 @@ test('renders a E Journal Full Text link', async ({ page }) => {
   await page.goto('/' + queryStrings[0]);
 
   // Wait for the response to be returned and the page to render
-  await page.waitForFunction(() => document.querySelector('.image'));
-  await page.waitForFunction(() => document.querySelector('h6'));
+  await page.waitForSelector('.image');
+  await page.waitForSelector('h6');
 
   // Check if the expected URL is present in the DOM
   const link = await page.$('a[href="' + expectedUrl + '"]');

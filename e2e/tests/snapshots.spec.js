@@ -25,7 +25,7 @@ test('compares the rendered Corriere Fiorentino page to a golden file', async ({
 
   //Navigate to the frontend URL, which will make a request to the backend URL
   await page.goto('/' + queryStrings[1]);
-  await page.waitForFunction(() => document.querySelector('h6'));
+  await page.waitForSelector('h6');
 
   const snapshot = await page.innerHTML('body');
   // fs.writeFileSync('tests/actual/corriere-fiorentino.html', snapshot);
@@ -36,10 +36,11 @@ test('compares the rendered Corriere Fiorentino page to a golden file', async ({
 
   // Actual diffing is not working in CI:
 
-  // if (stringifiedGolden !== stringifiedSnapshot) {
+  // if (!ok) {
   //   try {
-  //     execSync('diff -c tests/golden/corriere-fiorentino.html e2e/actual/corriere-fiorentino.html');
+  //     execSync('diff -c tests/golden/corriere-fiorentino.html tests/actual/corriere-fiorentino.html');
   //   } catch (error) {
+  // TODO: save stdout and stderr into variables, and print them out in the test assertions
   //     // eslint-disable-next-line no-console
   //     console.log(error.stdout.toString());
   //     // eslint-disable-next-line no-console
@@ -62,7 +63,7 @@ test('compares the rendered New Yorker page to a golden file', async ({ page }) 
   });
 
   await page.goto('/' + queryStrings[0]);
-  await page.waitForFunction(() => document.querySelector('h6'));
+  await page.waitForSelector('h6');
 
   const snapshot = await page.innerHTML('body');
   // fs.writeFileSync('tests/actual/new-yorker.html', snapshot);
@@ -71,13 +72,14 @@ test('compares the rendered New Yorker page to a golden file', async ({ page }) 
   const stringifiedGolden = JSON.stringify(golden);
   const ok = stringifiedSnapshot === stringifiedGolden;
 
-  // Acrual diffing is not working in CI:
+  // Actual diffing is not working in CI:
 
-  // if (stringifiedGolden !== stringifiedSnapshot) {
+  // if (!ok) {
   //   try {
   //     // eslint-disable-next-line no-unused-vars
-  //     execSync('diff -c tests/golden/new-yorker.html e2e/actual/new-yorker.html');
+  //     execSync('diff -c tests/golden/new-yorker.html tests/actual/new-yorker.html');
   //   } catch (error) {
+  // TODO: save stdout and stderr into variables, and print them out in the test assertions
   //     // eslint-disable-next-line no-console
   //     console.log(error.stdout.toString());
   //     // eslint-disable-next-line no-console
