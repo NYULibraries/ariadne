@@ -46,7 +46,8 @@ x-development-volumes-backend: &x-development-volumes-backend
 x-build-e2e: &x-build-e2e
   image: ariadne_e2e
   build:
-    context: ./e2e
+    context: ./
+    dockerfile: e2e/Dockerfile
     cache_from:
       - ariadne_e2e
 
