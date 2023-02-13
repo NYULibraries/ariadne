@@ -1,12 +1,20 @@
-import { getInstitution, getInstitutionQueryParameter } from '../../aux/helpers';
+import { useEffect, useState } from 'react';
 
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { getInstitutionQueryParameter } from '../../aux/helpers';
+import { institutions } from '../../aux/institutionConstants';
 
 const Banner = () => {
-  const institution = getInstitutionQueryParameter('institution');
-  const { logo, link, imgClass } = getInstitution(institution);
+  const [bannerInstitutionInfo, setBannerInstitutionInfo] = useState(institutions.nyu);
+
+  useEffect(() => {
+    const institution = getInstitutionQueryParameter('institution');
+    setBannerInstitutionInfo(institutions[institution?.toLowerCase()] || institutions.nyu);
+  }, []);
+
+  const { logo, link, imgClass } = bannerInstitutionInfo;
   return (
     <Navbar className="color-nav" expand="lg">
       <Container>
