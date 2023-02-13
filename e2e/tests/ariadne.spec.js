@@ -136,7 +136,7 @@ test('renders the correct NYUAD logo and link based on institution query paramet
   const imgElement = await linkElement.$('img');
   expect(await imgElement.getAttribute('src')).toBe(`/images/abudhabi-logo-color.svg`);
 });
-  
+
 test('renders the correct NYUSH logo and link based on institution query parameter', async ({ page }) => {
   await page.goto('/' + '?institution=NYUSH');
   const linkElement = await page.waitForSelector('a');
@@ -148,12 +148,11 @@ test('renders the correct NYUSH logo and link based on institution query paramet
 test('redirects correctly when institution query parameter is "umlaut.institution"', async ({ page }) => {
   await page.goto('/' + '?umlaut.institution=NYSH');
   setTimeout(async () => {
-    const linkElement = await page.waitForSelector('a');
+    const linkElement = await page.waitForSelector('a', { timeout: 10000 });
     expect(await linkElement.getAttribute('href')).toBe('https://shanghai.nyu.edu/academics/library');
     const imgElement = await linkElement.$('img');
     expect(await imgElement.getAttribute('src')).toBe(`/images/shanghai-logo-color.svg`);
   }, 1000);
 });
-  
 
-  
+
