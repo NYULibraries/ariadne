@@ -148,7 +148,7 @@ test('renders the correct NYUSH logo and link based on institution query paramet
 test('redirects correctly when institution query parameter is "umlaut.institution"', async ({ page }) => {
   await page.goto('/' + '?umlaut.institution=NYSH');
   setTimeout(async () => {
-    const linkElement = await page.waitForSelector('a', { timeout: 10000 });
+    const linkElement = await page.waitForSelector('a');
     expect(await linkElement.getAttribute('href')).toBe('https://shanghai.nyu.edu/academics/library');
     const imgElement = await linkElement.$('img');
     expect(await imgElement.getAttribute('src')).toBe(`/images/shanghai-logo-color.svg`);
