@@ -1,16 +1,4 @@
-import {
-  DEFAULT_IMG_CLASS,
-  DEFAULT_LINK,
-  DEFAULT_LOGO,
-  NYUAD,
-  NYUAD_IMG_CLASS,
-  NYUAD_LINK,
-  NYUAD_LOGO,
-  NYUSH,
-  NYUSH_IMG_CLASS,
-  NYUSH_LINK,
-  NYUSH_LOGO
-} from './institutionConstants';
+import { institutions } from './institutionConstants';
 
 //  Helper functions for useApi hook
 const getLinks = (jsonData) => {
@@ -40,25 +28,11 @@ const getInstitutionQueryParameter = (parameterName) => {
   return getParameterFromQueryString(queryString, parameterName);
 };
 
-// Helper function for Banner.js component
-
 const getInstitution = (institution) => {
-  let logo = DEFAULT_LOGO;
-  let link = DEFAULT_LINK;
-  let imgClass = DEFAULT_IMG_CLASS;
-
-  if (institution?.toUpperCase() === NYUAD) {
-    logo = NYUAD_LOGO;
-    link = NYUAD_LINK;
-    imgClass = NYUAD_IMG_CLASS;
-  } else if (institution?.toUpperCase() === NYUSH) {
-    logo = NYUSH_LOGO;
-    link = NYUSH_LINK;
-    imgClass = NYUSH_IMG_CLASS;
-  }
-
+  const { logo, link, imgClass } = institutions[institution?.toLowerCase()] || institutions.nyu;
   return { logo, link, imgClass };
 };
+
 
 export {
   getCoverageStatement,
