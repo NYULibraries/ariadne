@@ -1,4 +1,3 @@
-import { institutions } from './institutionConstants';
 
 //  Helper functions for useApi hook
 const getLinks = (jsonData) => {
@@ -28,15 +27,8 @@ const getInstitutionQueryParameter = (parameterName) => {
   return getParameterFromQueryString(queryString, parameterName);
 };
 
-const getInstitution = (institution) => {
-  const { logo, link, imgClass } = institutions[institution?.toLowerCase()] || institutions.nyu;
-  return { logo, link, imgClass };
-};
-
-
 export {
   getCoverageStatement,
-  getInstitution,
   getLinks,
   getParameterFromQueryString,
   getInstitutionQueryParameter
