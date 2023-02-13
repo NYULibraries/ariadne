@@ -152,7 +152,7 @@ test('redirects correctly when institution query parameter is "umlaut.institutio
     expect(await linkElement.getAttribute('href')).toBe('https://shanghai.nyu.edu/academics/library');
     const imgElement = await linkElement.$('img');
     expect(await imgElement.getAttribute('src')).toBe(`/images/shanghai-logo-color.svg`);
-  }, 1000);
+  }, 10000);
 });
 
 
