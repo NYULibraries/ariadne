@@ -112,6 +112,9 @@ func parseMultipleObjectsRequestParams(queryStringValues url.Values) (multipleOb
 			// E.g. "rft.book" becomes "book"
 			newKey := strings.Split(k, ".")[1]
 			(*rfts)[newKey] = v
+			// Without "rft." prefix, use the whole param name
+		} else {
+			(*rfts)[k] = v
 		}
 	}
 
