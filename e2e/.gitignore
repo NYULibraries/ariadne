@@ -7,4 +7,5 @@ node_modules/
 /playwright/.cache/
 
 /tests/actual/
+/tests/diffs/
 

@@ -1,7 +1,8 @@
+import { execSync } from 'child_process';
+import { getTestCasesBackendSuccess } from '../../frontend/src/testutils';
+
 const { test, expect } = require('@playwright/test');
 const fs = require('fs');
-
-import { getTestCasesBackendSuccess } from '../../frontend/src/testutils';
 
 const testCasesBackendSuccess = getTestCasesBackendSuccess();
 
@@ -29,26 +30,37 @@ for (let i = 0; i < testCasesBackendSuccess.length; i++) {
     test('HTML matches expected', async ({ page }) => {
       await page.waitForSelector('h6');
 
-      const snapshot = await page.innerHTML('body');
-      // fs.writeFileSync('tests/actual/new-yorker.html', snapshot);
-      const golden = fs.readFileSync(`tests/golden/${testCase.key}.html`, { encoding: 'utf8' });
-      const ok = snapshot === golden;
+      const actualFile = `tests/actual/${testCase.key}.html`;
+      const actual = await page.innerHTML('body');
+      const goldenFile = `tests/golden/${testCase.key}.html`;
+      const golden = fs.readFileSync(goldenFile, { encoding: 'utf8' });
 
-      // Actual diffing is not working in CI:
+      fs.writeFileSync(actualFile, actual);
 
-      // if (!ok) {
-      //   try {
-      //     // eslint-disable-next-line no-unused-vars
-      //     execSync('diff -c tests/golden/new-yorker.html tests/actual/new-yorker.html');
-      //   } catch (error) {
-      // TODO: save stdout and stderr into variables, and print them out in the test assertions
-      //     // eslint-disable-next-line no-console
-      //     console.log(error.stdout.toString());
-      //     // eslint-disable-next-line no-console
-      //     console.log(error.stderr.toString());
-      //   }
-      // }
-      expect(ok).toBe(true);
+      const ok = ( actual === golden );
+
+      let message = 'Actual search results do not match expected.';
+      if (!ok) {
+        const diffFile = `tests/diffs/${testCase.key}.txt`;
+        const command = `diff ${goldenFile} ${actualFile} | tee ${diffFile}`;
+        let diffOutput;
+        try {
+          diffOutput = new TextDecoder().decode(execSync(command));
+          message += `
+======= BEGIN DIFF OUTPUT ========
+${diffOutput}
+======== END DIFF OUTPUT =========
+
+          [Recorded in diff file: ${diffFile}]`;
+        } catch (e) {
+          // `diff` command failed to create the diff file.
+          message += `  Diff command \`${command}\` failed:
+
+${e.stderr.toString()}`;
+        }
+      }
+
+      expect(ok, message).toBe(true);
     });
 
     test('Ask a Librarian link pops up a new Ask a Library tab', async ({ page }) => {
