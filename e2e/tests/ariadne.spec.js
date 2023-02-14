@@ -1,5 +1,6 @@
 import { execSync } from 'child_process';
 import { getTestCasesBackendSuccess } from '../../frontend/src/testutils';
+import { updateGoldenFiles } from '../testutils';
 
 const { test, expect } = require('@playwright/test');
 const fs = require('fs');
@@ -34,6 +35,14 @@ for (let i = 0; i < testCasesBackendSuccess.length; i++) {
       const actual = await page.innerHTML('body');
       const goldenFile = `tests/golden/${testCase.key}.html`;
       const golden = fs.readFileSync(goldenFile, { encoding: 'utf8' });
+
+      if ( updateGoldenFiles() ) {
+        fs.writeFileSync( goldenFile, actual );
+
+        console.log( `Updated golden file ${ goldenFile }` );
+
+        return;
+      }
 
       fs.writeFileSync(actualFile, actual);
 
