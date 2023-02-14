@@ -134,7 +134,7 @@ test('renders the correct NYUAD logo and link based on institution query paramet
   const linkElement = await page.waitForSelector('a');
   expect(await linkElement.getAttribute('href')).toBe('https://nyuad.nyu.edu/en/library.html');
   const imgElement = await linkElement.$('img');
-  expect(await imgElement.getAttribute('src')).toBe(`/images/abudhabi-logo-color.svg`);
+  expect(await imgElement.getAttribute('src')).toBe(`${process.env.REACT_APP_PUBLIC_URL}/images/abudhabi-logo-color.svg`);
 });
 
 test('renders the correct NYUSH logo and link based on institution query parameter', async ({ page }) => {
@@ -142,7 +142,7 @@ test('renders the correct NYUSH logo and link based on institution query paramet
   const linkElement = await page.waitForSelector('a');
   expect(await linkElement.getAttribute('href')).toBe('https://shanghai.nyu.edu/academics/library');
   const imgElement = await linkElement.$('img');
-  expect(await imgElement.getAttribute('src')).toBe(`/images/shanghai-logo-color.svg`);
+  expect(await imgElement.getAttribute('src')).toBe(`${process.env.REACT_APP_PUBLIC_URL}/images/shanghai-logo-color.svg`);
 });
 
 test('redirects correctly when institution query parameter is "umlaut.institution"', async ({ page }) => {
