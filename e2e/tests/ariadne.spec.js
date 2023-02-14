@@ -1,6 +1,5 @@
 const { test, expect } = require('@playwright/test');
 const fs = require('fs');
-const path = require('path');
 
 import { getTestCasesBackendSuccess } from '../../frontend/src/testutils';
 
