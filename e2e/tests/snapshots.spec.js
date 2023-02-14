@@ -68,9 +68,7 @@ test('compares the rendered New Yorker page to a golden file', async ({ page }) 
   const snapshot = await page.innerHTML('body');
   // fs.writeFileSync('tests/actual/new-yorker.html', snapshot);
   const golden = fs.readFileSync('tests/golden/new-yorker.html', { encoding: 'utf8' });
-  const stringifiedSnapshot = JSON.stringify(snapshot);
-  const stringifiedGolden = JSON.stringify(golden);
-  const ok = stringifiedSnapshot === stringifiedGolden;
+  const ok = ( snapshot === golden );
 
   // Actual diffing is not working in CI:
 
