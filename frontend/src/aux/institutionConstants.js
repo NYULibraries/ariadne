@@ -5,12 +5,12 @@ const institutions = Object.freeze({
         imgClass: 'image'
     },
     nyuad: {
-        logo: `${process.env.PUBLIC_URL}/images/abudhabi-logo-color.svg`,
+        logo: `${process.env.REACT_APP_PUBLIC_URL}/images/abudhabi-logo-color.svg`,
         link: 'https://nyuad.nyu.edu/en/library.html',
         imgClass: 'image white-bg'
     },
     nyush: {
-        logo: `${process.env.PUBLIC_URL}/images/shanghai-logo-color.svg`,
+        logo: `${process.env.REACT_APP_PUBLIC_URL}/images/shanghai-logo-color.svg`,
         link: 'https://shanghai.nyu.edu/academics/library',
         imgClass: 'image white-bg'
     }
