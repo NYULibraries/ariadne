@@ -1,9 +1,10 @@
 import { execSync } from 'child_process';
-import { getTestCasesBackendSuccess } from '../../frontend/src/testutils';
-import { updateGoldenFiles } from '../testutils';
+const fs = require('fs');
 
 const { test, expect } = require('@playwright/test');
-const fs = require('fs');
+
+import { getTestCasesBackendSuccess } from '../../frontend/src/testutils';
+import { updateGoldenFiles } from '../testutils';
 
 const testCasesBackendSuccess = getTestCasesBackendSuccess();
 
