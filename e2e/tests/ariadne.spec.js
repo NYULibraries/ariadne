@@ -13,9 +13,9 @@ for (let i = 0; i < testCasesBackendSuccess.length; i++) {
   const testCase = testCasesBackendSuccess[i];
 
   const stubBackendAPIResponse = async (page) => {
-    //Define a mock HTTP request handler for the /v0/ URL path to intercept the request and return a mocked response.
+    // Define a mock HTTP request handler for the /v0/ URL path to intercept the request and return a mocked response.
     await page.route('**/v0/*', async (route) => {
-      //Return a mock response with a JSON body and a 200 status code
+      // Return a mock response with a JSON body and a 200 status code
       await route.fulfill({
         status: 200,
         contentType: 'application/json',
@@ -104,11 +104,11 @@ ${e.stderr.toString()}`;
     });
 
     test('screenshot matches expected', async ({ page }) => {
-      //Wait for the response to be returned and the page to render
+      // Wait for the response to be returned and the page to render
       await page.waitForSelector('.image');
       await page.waitForSelector('h6');
 
-      //Take a screenshot to verify that the page was rendered correctly
+      // Take a screenshot to verify that the page was rendered correctly
       await expect(page).toHaveScreenshot(`${testCase.key}.png`);
     });
 
