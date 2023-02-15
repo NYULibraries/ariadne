@@ -50,7 +50,7 @@ for (let i = 0; i < testCasesBackendSuccess.length; i++) {
 
       const ok = ( actual === golden );
 
-      let message = 'Actual search results do not match expected.';
+      let message = 'Actual HTML for `${testCase.name}` does not match expected.';
       if (!ok) {
         const diffFile = `tests/diffs/${testCase.key}.txt`;
         const command = `diff ${goldenFile} ${actualFile} | tee ${diffFile}`;
@@ -58,11 +58,12 @@ for (let i = 0; i < testCasesBackendSuccess.length; i++) {
         try {
           diffOutput = new TextDecoder().decode(execSync(command));
           message += `
+
 ======= BEGIN DIFF OUTPUT ========
 ${diffOutput}
 ======== END DIFF OUTPUT =========
 
-          [Recorded in diff file: ${diffFile}]`;
+[Recorded in diff file: ${diffFile}]`;
         } catch (e) {
           // `diff` command failed to create the diff file.
           message += `  Diff command \`${command}\` failed:
