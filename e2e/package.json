@@ -13,6 +13,7 @@
     "@playwright/test": "^1.27.1"
   },
   "dependencies": {
-    "dotenv": "^16.0.3"
+    "dotenv": "^16.0.3",
+    "js-beautify": "^1.14.7"
   }
 }
