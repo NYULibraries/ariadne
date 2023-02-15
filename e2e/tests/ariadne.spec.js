@@ -31,7 +31,7 @@ for (let i = 0; i < testCasesBackendSuccess.length; i++) {
     });
 
     test('page HTML matches expected', async ({ page }) => {
-      // Clean actual and diffs
+      // Clean actual/ and diffs/ files
       // NOTE:
       // We don't bother with error handling because these files get overwritten
       // anyway, and if there were no previous files, or if a previous cleaning/reset
