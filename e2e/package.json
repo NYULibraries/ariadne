@@ -9,11 +9,9 @@
     "pretest:e2e": "rm -rf tests/actual/*",
     "test:e2e": "yarn playwright test"
   },
-  "devDependencies": {
-    "@playwright/test": "^1.27.1"
-  },
   "dependencies": {
     "dotenv": "^16.0.3",
-    "js-beautify": "^1.14.7"
+    "js-beautify": "^1.14.7",
+    "@playwright/test": "^1.27.1"
   }
 }
