@@ -5,7 +5,7 @@ const { test, expect } = require('@playwright/test');
 const beautifyHtml = require('js-beautify').html;
 
 import { getTestCasesBackendSuccess } from '../../frontend/src/testutils';
-import { updateGoldenFiles } from '../testutils';
+import { removeSourceMappingUrlComments, updateGoldenFiles } from '../testutils';
 
 const testCasesBackendSuccess = getTestCasesBackendSuccess();
 
@@ -51,7 +51,9 @@ for (let i = 0; i < testCasesBackendSuccess.length; i++) {
 
       await page.waitForSelector('h6');
 
-      const actual = beautifyHtml(await page.innerHTML('body'));
+      const actual = beautifyHtml(
+        removeSourceMappingUrlComments(await page.content())
+      );
 
       const goldenFile = `tests/golden/${testCase.key}.html`;
       if ( updateGoldenFiles() ) {
