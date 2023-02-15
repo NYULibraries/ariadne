@@ -31,13 +31,29 @@ for (let i = 0; i < testCasesBackendSuccess.length; i++) {
     });
 
     test('HTML matches expected', async ({ page }) => {
+      // Clean actual and diffs
+      // NOTE:
+      // We don't bother with error handling because these files get overwritten
+      // anyway, and if there were no previous files, we don't want the errors
+      // causing distraction.
+      // If deletion fails on existing files, there's a good chance there will
+      // be errors thrown later, which will then correctly fail the test.
+      const actualFile = `tests/actual/${testCase.key}.html`;
+      try {
+        fs.unlinkSync(actualFile);
+      } catch(error) {
+      }
+      const diffFile = `tests/diffs/${testCase.key}.txt`;
+      try {
+        fs.unlinkSync(diffFile);
+      } catch(error) {
+      }
+
       await page.waitForSelector('h6');
 
-      const actualFile = `tests/actual/${testCase.key}.html`;
       const actual = beautifyHtml(await page.innerHTML('body'));
-      const goldenFile = `tests/golden/${testCase.key}.html`;
-      const golden = beautifyHtml(fs.readFileSync(goldenFile, { encoding: 'utf8' }));
 
+      const goldenFile = `tests/golden/${testCase.key}.html`;
       if ( updateGoldenFiles() ) {
         fs.writeFileSync( goldenFile, actual );
 
@@ -45,6 +61,7 @@ for (let i = 0; i < testCasesBackendSuccess.length; i++) {
 
         return;
       }
+      const golden = beautifyHtml(fs.readFileSync(goldenFile, { encoding: 'utf8' }));
 
       fs.writeFileSync(actualFile, actual);
 
@@ -52,7 +69,6 @@ for (let i = 0; i < testCasesBackendSuccess.length; i++) {
 
       let message = 'Actual HTML for `${testCase.name}` does not match expected.';
       if (!ok) {
-        const diffFile = `tests/diffs/${testCase.key}.txt`;
         const command = `diff ${goldenFile} ${actualFile} | tee ${diffFile}`;
         let diffOutput;
         try {
