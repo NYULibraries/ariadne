@@ -6,6 +6,8 @@ node_modules/
 /playwright-report/
 /playwright/.cache/
 
-/tests/actual/
-/tests/diffs/
+tests/actual/*
+!tests/actual/.gitkeep
+tests/diffs/*
+!tests/diffs/.gitkeep
 
