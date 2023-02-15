@@ -30,8 +30,18 @@ yarn install
 yarn test:e2e
 ```
 
+Update golden files for E2E tests (run in _e2e/_):
+
+```
+UPDATE_GOLDEN_FILES=true yarn test:e2e
+```
+(Developer note: it's current not possible to use a custom flag like `--update-golden-files`
+with `playwright`: [\[Feature\] Add support for test\.each / describe\.each \#7036](https://github.com/microsoft/playwright/issues/7036))
+
 Run E2E tests in a container:
 
 ```
 docker-compose run --rm e2e
 ```
+
+
