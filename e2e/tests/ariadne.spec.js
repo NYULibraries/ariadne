@@ -2,6 +2,7 @@ import { execSync } from 'child_process';
 const fs = require('fs');
 
 const { test, expect } = require('@playwright/test');
+const beautifyHtml = require('js-beautify').html;
 
 import { getTestCasesBackendSuccess } from '../../frontend/src/testutils';
 import { updateGoldenFiles } from '../testutils';
@@ -33,9 +34,9 @@ for (let i = 0; i < testCasesBackendSuccess.length; i++) {
       await page.waitForSelector('h6');
 
       const actualFile = `tests/actual/${testCase.key}.html`;
-      const actual = await page.innerHTML('body');
+      const actual = beautifyHtml(await page.innerHTML('body'));
       const goldenFile = `tests/golden/${testCase.key}.html`;
-      const golden = fs.readFileSync(goldenFile, { encoding: 'utf8' });
+      const golden = beautifyHtml(fs.readFileSync(goldenFile, { encoding: 'utf8' }));
 
       if ( updateGoldenFiles() ) {
         fs.writeFileSync( goldenFile, actual );
