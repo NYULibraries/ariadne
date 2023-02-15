@@ -67,7 +67,7 @@ for (let i = 0; i < testCasesBackendSuccess.length; i++) {
 
       const ok = ( actual === golden );
 
-      let message = `Actual HTML for "${testCase.name}" does not match expected.`;
+      let message = `Actual HTML for "${testCase.name}" does not match expected HTML`;
       if (!ok) {
         const command = `diff ${goldenFile} ${actualFile} | tee ${diffFile}`;
         let diffOutput;
