@@ -1,11 +1,11 @@
 import { execSync } from 'child_process';
+import { getTestCasesBackendSuccess } from '../../frontend/src/testutils';
+import { removeSourceMappingUrlComments, updateGoldenFiles } from '../testutils';
+
 const fs = require('fs');
 
 const { test, expect } = require('@playwright/test');
 const beautifyHtml = require('js-beautify').html;
-
-import { getTestCasesBackendSuccess } from '../../frontend/src/testutils';
-import { removeSourceMappingUrlComments, updateGoldenFiles } from '../testutils';
 
 const testCasesBackendSuccess = getTestCasesBackendSuccess();
 
@@ -17,12 +17,12 @@ for (let i = 0; i < testCasesBackendSuccess.length; i++) {
     await page.route('**/v0/*', async (route) => {
       //Return a mock response with a JSON body and a 200 status code
       await route.fulfill({
-                            status: 200,
-                            contentType: 'application/json',
-                            body: JSON.stringify(testCase.response, null, '    '),
-                          });
+        status: 200,
+        contentType: 'application/json',
+        body: JSON.stringify(testCase.response, null, '    '),
+      });
     });
-  }
+  };
 
   test.describe(`${testCase.name}`, () => {
     test.beforeEach(async ({ page }) => {
@@ -41,25 +41,21 @@ for (let i = 0; i < testCasesBackendSuccess.length; i++) {
       const actualFile = `tests/actual/${testCase.key}.html`;
       try {
         fs.unlinkSync(actualFile);
-      } catch(error) {
-      }
+      } catch (error) {}
       const diffFile = `tests/diffs/${testCase.key}.txt`;
       try {
         fs.unlinkSync(diffFile);
-      } catch(error) {
-      }
+      } catch (error) {}
 
       await page.waitForSelector('h6');
 
-      const actual = beautifyHtml(
-        removeSourceMappingUrlComments(await page.content())
-      );
+      const actual = beautifyHtml(removeSourceMappingUrlComments(await page.content()));
 
       const goldenFile = `tests/golden/${testCase.key}.html`;
-      if ( updateGoldenFiles() ) {
-        fs.writeFileSync( goldenFile, actual );
+      if (updateGoldenFiles()) {
+        fs.writeFileSync(goldenFile, actual);
 
-        console.log( `Updated golden file ${ goldenFile }` );
+        console.log(`Updated golden file ${goldenFile}`);
 
         return;
       }
@@ -67,7 +63,7 @@ for (let i = 0; i < testCasesBackendSuccess.length; i++) {
 
       fs.writeFileSync(actualFile, actual);
 
-      const ok = ( actual === golden );
+      const ok = actual === golden;
 
       let message = `Actual HTML for "${testCase.name}" does not match expected HTML`;
       if (!ok) {
