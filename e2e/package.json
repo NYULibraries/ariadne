@@ -6,7 +6,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "pretest:e2e": "rm -rf tests/actual/*",
+    "pretest:e2e": "rm -rf tests/actual/* && rm -rf tests/diffs/*",
     "test:e2e": "yarn playwright test"
   },
   "dependencies": {

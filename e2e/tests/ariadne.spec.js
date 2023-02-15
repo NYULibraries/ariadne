@@ -34,7 +34,8 @@ for (let i = 0; i < testCasesBackendSuccess.length; i++) {
       // Clean actual and diffs
       // NOTE:
       // We don't bother with error handling because these files get overwritten
-      // anyway, and if there were no previous files, we don't want the errors
+      // anyway, and if there were no previous files, or if a previous cleaning/reset
+      // script or process already deleted the previous files, we don't want the errors
       // causing distraction.
       // If deletion fails on existing files, there's a good chance there will
       // be errors thrown later, which will then correctly fail the test.
