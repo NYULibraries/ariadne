@@ -1,8 +1,8 @@
 import { execSync } from 'child_process';
+import * as fs from 'node:fs';
+
 import { getTestCasesBackendSuccess } from '../../frontend/src/testutils';
 import { removeSourceMappingUrlComments, updateGoldenFiles } from '../testutils';
-
-const fs = require('fs');
 
 const { test, expect } = require('@playwright/test');
 const beautifyHtml = require('js-beautify').html;
@@ -30,7 +30,7 @@ for (let i = 0; i < testCasesBackendSuccess.length; i++) {
       await page.goto(`/${testCase.queryString}`);
     });
 
-    test('HTML matches expected', async ({ page }) => {
+    test('page HTML matches expected', async ({ page }) => {
       // Clean actual and diffs
       // NOTE:
       // We don't bother with error handling because these files get overwritten
@@ -103,7 +103,7 @@ ${e.stderr.toString()}`;
       expect(popup.url()).toBe('https://library.nyu.edu/ask/');
     });
 
-    test('matches screenshot', async ({ page }) => {
+    test('screenshot matches expected', async ({ page }) => {
       //Wait for the response to be returned and the page to render
       await page.waitForSelector('.image');
       await page.waitForSelector('h6');
@@ -112,11 +112,11 @@ ${e.stderr.toString()}`;
       await expect(page).toHaveScreenshot(`${testCase.key}.png`);
     });
 
-    test('renders links with a list-group className', async ({ page }) => {
+    test('renders links with a "list-group" class name', async ({ page }) => {
       expect(await page.$('.list-group')).toBeTruthy();
     });
 
-    test('renders the search results', async ({ page }) => {
+    test('returns search results', async ({ page }) => {
       expect(await page.textContent('p')).toBe('Displaying search results...');
     });
   });
