@@ -23,7 +23,7 @@ test('renders the correct NYUAD logo and link based on institution query paramet
   const linkElement = await waitFor(() => screen.getByAltText(/NYU Libraries logo/i).closest('a'));
   expect(linkElement).toHaveAttribute('href', 'https://nyuad.nyu.edu/en/library.html');
   const imgElement = linkElement.querySelector('img');
-  expect(imgElement).toHaveAttribute('src', `${process.env.REACT_APP_PUBLIC_URL}/images/abudhabi-logo-color.svg`);
+  expect(imgElement).toHaveAttribute('src', `/images/abudhabi-logo-color.svg`);
 });
 
 test('renders the correct NYUSH logo and link based on institution query parameter', async () => {
@@ -32,7 +32,7 @@ test('renders the correct NYUSH logo and link based on institution query paramet
   const linkElement = await waitFor(() => screen.getByAltText(/NYU Libraries logo/i).closest('a'));
   expect(linkElement).toHaveAttribute('href', 'https://shanghai.nyu.edu/academics/library');
   const imgElement = linkElement.querySelector('img');
-  expect(imgElement).toHaveAttribute('src', `${process.env.REACT_APP_PUBLIC_URL}/images/shanghai-logo-color.svg`);
+  expect(imgElement).toHaveAttribute('src', `/images/shanghai-logo-color.svg`);
 });
 
 test('redirects correctly when institution query parameter is "umlaut.institution"', async () => {
@@ -48,7 +48,7 @@ test('redirects correctly when institution query parameter is "umlaut.institutio
   const linkElement = screen.getByAltText(/NYU Libraries logo/i).closest('a');
   expect(linkElement).toHaveAttribute('href', 'https://shanghai.nyu.edu/academics/library');
   const imgElement = linkElement.querySelector('img');
-  expect(imgElement).toHaveAttribute('src', `${process.env.REACT_APP_PUBLIC_URL}/images/shanghai-logo-color.svg`);
+  expect(imgElement).toHaveAttribute('src', `/images/shanghai-logo-color.svg`);
 });
 
 test('changes the background of the logo correctly when institution is NYUSH or NYUAD', async () => {
