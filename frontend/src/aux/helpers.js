@@ -13,9 +13,7 @@ const getCoverageStatement = (link) => {
 const getParameterFromQueryString = (queryString, parameterName) => {
   const urlParams = new URLSearchParams(queryString);
   let parameter = urlParams.get(parameterName.toLowerCase());
-  if (urlParams.has(`umlaut.${parameterName.toLowerCase()}`)) {
-    parameter = urlParams.get(`umlaut.${parameterName.toLowerCase()}`);
-  }
+
   return parameter;
 };
 
