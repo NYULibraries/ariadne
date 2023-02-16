@@ -7,7 +7,7 @@ import { getInstitutionQueryParameter } from '../../aux/helpers';
 import { institutions } from '../../aux/institutionConstants';
 
 const Banner = () => {
-  const [bannerInstitutionInfo, setBannerInstitutionInfo] = useState(institutions.nyu);
+  const [bannerInstitutionInfo, setBannerInstitutionInfo] = useState({});
 
   useEffect(() => {
     const institution = getInstitutionQueryParameter('institution');
