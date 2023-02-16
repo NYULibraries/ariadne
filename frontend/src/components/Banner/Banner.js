@@ -6,7 +6,7 @@ import { institutions } from '../../aux/institutionConstants';
 
 const Banner = () => {
   const institution = getInstitutionQueryParameter('institution');
-  const bannerInstitutionInfo = institutions[institution?.toLowerCase()] || institutions.nyu;
+  const bannerInstitutionInfo = institutions[institution] || institutions.nyu;
 
   const { logo, link, imgClass } = bannerInstitutionInfo;
   return (
