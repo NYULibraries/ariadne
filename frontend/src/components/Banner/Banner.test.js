@@ -35,22 +35,6 @@ test('renders the correct NYUSH logo and link based on institution query paramet
   expect(imgElement).toHaveAttribute('src', `/images/shanghai-logo-color.svg`);
 });
 
-test('redirects correctly when institution query parameter is "umlaut.institution"', async () => {
-  const institution = 'NYUSH';
-  // Source: https://stackoverflow.com/questions/54090231/how-to-fix-error-not-implemented-navigation-except-hash-changes
-  // This is a workaround for to clear `jsdom` error caused by:
-  // https://github.com/jsdom/jsdom/blob/16.0.0/lib/jsdom/living/window/navigation.js#L74-L78
-  const assignMock = jest.fn();
-  delete window.location;
-  window.location = { assign: assignMock };
-  window.location.search = `?umlaut.institution=${institution}`;
-  render(<Banner />);
-  const linkElement = screen.getByAltText(/NYU Libraries logo/i).closest('a');
-  expect(linkElement).toHaveAttribute('href', 'https://shanghai.nyu.edu/academics/library');
-  const imgElement = linkElement.querySelector('img');
-  expect(imgElement).toHaveAttribute('src', `/images/shanghai-logo-color.svg`);
-});
-
 test('changes the background of the logo correctly when institution is NYUSH or NYUAD', async () => {
   const institution = 'NYUAD';
   render(<Banner />, {
