@@ -15,12 +15,10 @@ const getParameterFromQueryString = (queryString, parameterName) => {
   let parameter = urlParams.get(parameterName.toLowerCase());
   if (urlParams.has(`umlaut.${parameterName.toLowerCase()}`)) {
     parameter = urlParams.get(`umlaut.${parameterName.toLowerCase()}`);
-    urlParams.delete(`umlaut.${parameterName.toLowerCase()}`);
-    urlParams.set(parameterName.toLowerCase(), parameter);
-    history.pushState(null, '', `?${urlParams.toString()}`)
   }
   return parameter;
 };
+
 
 const getInstitutionQueryParameter = (parameterName) => {
   const queryString = window.location.search;
