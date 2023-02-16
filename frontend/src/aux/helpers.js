@@ -11,8 +11,8 @@ const getCoverageStatement = (link) => {
 
 // Helper functions for Banner.js component
 const getParameterFromQueryString = (queryString, parameterName) => {
-  const urlParams = new URLSearchParams(queryString);
-  let parameter = urlParams.get(parameterName.toLowerCase());
+  const urlParams = new URLSearchParams(queryString.toLowerCase());
+  let parameter = urlParams.get(parameterName);
 
   return parameter;
 };
