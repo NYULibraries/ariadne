@@ -81,6 +81,7 @@ func TestParseMultipleObjectsRequestParams(t *testing.T) {
 		{map[string][]string{"genre": {"book"}, "rft.genre": {"journal", "book"}}, &map[string][]string{"genre": {"journal", "book"}}, nil},
 		{map[string][]string{"genre": {"book"}, "rft.genre": {"journal"}}, &map[string][]string{"genre": {"journal"}}, nil},
 		{map[string][]string{"genre": {"book"}}, &map[string][]string{"genre": {"book"}}, nil},
+		{map[string][]string{"genre": {"podcast"}}, nil, errors.New("error")},
 	}
 
 	for _, testCase := range testCases {
