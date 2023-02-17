@@ -29,8 +29,7 @@ func TestNewMultipleObjectsRequest(t *testing.T) {
 			if testCase.expectedError != nil {
 				if err == nil {
 					t.Errorf("NewMultipleObjectsRequest returned no error, expecting '%v'", testCase.expectedError)
-				}
-				if err.Error() != testCase.expectedError.Error() {
+				} else if err.Error() != testCase.expectedError.Error() {
 					t.Errorf("NewMultipleObjectsRequest returned error '%v', expecting '%v'", err, testCase.expectedError)
 				}
 			}
