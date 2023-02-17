@@ -690,6 +690,189 @@ exports[`Backend response includes errors Response includes 2 errors and an empt
 </DocumentFragment>
 `;
 
+exports[`Backend success "Life" Magazine and the Power of Photography renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="jumbotron"
+  >
+    <div
+      class="container text-center"
+    >
+      <p>
+        Displaying search results...
+      </p>
+      <p>
+        Note: Alternate titles might have matched your search terms
+      </p>
+    </div>
+  </div>
+  <div
+    class="container"
+  >
+    <div
+      class="row row-cols-md-12"
+    >
+      <div
+        class="col-md-8"
+      >
+        <div
+          class="list-group"
+        >
+          <div
+            class="list-group-item list-group-item-action flex-column border-0"
+          >
+            <div>
+              <p
+                class="resource-type"
+              >
+                article
+              </p>
+              <h2
+                class="title"
+              >
+                Informed consent and the geriatric dental patient
+              </h2>
+              <p>
+                Odom, John G 
+                <span>
+                  •
+                </span>
+                 1992
+              </p>
+              <p
+                style="margin: 0px 0px 10px;"
+              >
+                <span
+                  style="box-sizing: border-box;"
+                >
+                  Published in Journal
+                </span>
+                <span
+                  style="font-style: italic;"
+                >
+                  Special Care in Dentistry.
+                </span>
+                Volume 12.Issue 5.Page 202-206.
+              </p>
+              <dl
+                class="citation-info"
+              >
+                <dt>
+                  ISSN:
+                </dt>
+                <dd>
+                  0275-1879
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <div
+            class="list-group-item list-group-item-action flex-column border-0"
+          >
+            <div
+              class="row"
+            >
+              <h6>
+                <a
+                  href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?issue=4&sid=Primo&atitle=%22life%22+magazine+and+the+power+of+photography&spage=144&date=20211201&issn=0004-3079&title=The+Art+Bulletin&genre=article&volume=103"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  EBSCOhost Academic Search Complete
+                </a>
+              </h6>
+              <small>
+                Available from 1975/03/01
+              </small>
+            </div>
+          </div>
+          <div
+            class="list-group-item list-group-item-action flex-column border-0"
+          >
+            <div
+              class="row"
+            >
+              <h6>
+                <a
+                  href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?issn=0004-3079&title=The+Art+Bulletin&genre=article&volume=103&issue=4&sid=Primo&atitle=%22life%22+magazine+and+the+power+of+photography&spage=144&date=20211201"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  EBSCOhost Humanities Full Text
+                </a>
+              </h6>
+              <small>
+                Available from 1987/12/01
+              </small>
+            </div>
+          </div>
+          <div
+            class="list-group-item list-group-item-action flex-column border-0"
+          >
+            <div
+              class="row"
+            >
+              <h6>
+                <a
+                  href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?atitle=%22life%22+magazine+and+the+power+of+photography&sid=Primo&issue=4&date=20211201&spage=144&genre=article&title=The+Art+Bulletin&issn=0004-3079&volume=103"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  EBSCOhost OmniFile Full Text Mega
+                </a>
+              </h6>
+              <small>
+                Available from 1995/03/01
+              </small>
+            </div>
+          </div>
+          <div
+            class="list-group-item list-group-item-action flex-column border-0"
+          >
+            <div
+              class="row"
+            >
+              <h6>
+                <a
+                  href="http://proxy.library.nyu.edu/login?url=https://www.tandfonline.com/openurl?genre=article&issn=0004-3079&issue=4&volume=103&date=2021&spage=144"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Taylor & Francis Complete Library Database Model
+                </a>
+              </h6>
+              <small>
+                Available from 1913/09/01 volume: 1 issue: 1
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-md-4"
+      >
+        <div
+          class="ask-librarian"
+        >
+          <h5>
+            Need help?
+          </h5>
+          <h6>
+            <a
+              href="https://library.nyu.edu/ask/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Ask a Librarian
+            </a>
+          </h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Backend success Corriere Fiorentino renders correctly 1`] = `
 <DocumentFragment>
   <div
@@ -781,6 +964,373 @@ exports[`Backend success Corriere Fiorentino renders correctly 1`] = `
                   target="_blank"
                 >
                   PressReader
+                </a>
+              </h6>
+              <small />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-md-4"
+      >
+        <div
+          class="ask-librarian"
+        >
+          <h5>
+            Need help?
+          </h5>
+          <h6>
+            <a
+              href="https://library.nyu.edu/ask/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Ask a Librarian
+            </a>
+          </h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Backend success Design of LED light therapy device based on free-form lens. renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="jumbotron"
+  >
+    <div
+      class="container text-center"
+    >
+      <p>
+        Displaying search results...
+      </p>
+      <p>
+        Note: Alternate titles might have matched your search terms
+      </p>
+    </div>
+  </div>
+  <div
+    class="container"
+  >
+    <div
+      class="row row-cols-md-12"
+    >
+      <div
+        class="col-md-8"
+      >
+        <div
+          class="list-group"
+        >
+          <div
+            class="list-group-item list-group-item-action flex-column border-0"
+          >
+            <div>
+              <p
+                class="resource-type"
+              >
+                article
+              </p>
+              <h2
+                class="title"
+              >
+                Informed consent and the geriatric dental patient
+              </h2>
+              <p>
+                Odom, John G 
+                <span>
+                  •
+                </span>
+                 1992
+              </p>
+              <p
+                style="margin: 0px 0px 10px;"
+              >
+                <span
+                  style="box-sizing: border-box;"
+                >
+                  Published in Journal
+                </span>
+                <span
+                  style="font-style: italic;"
+                >
+                  Special Care in Dentistry.
+                </span>
+                Volume 12.Issue 5.Page 202-206.
+              </p>
+              <dl
+                class="citation-info"
+              >
+                <dt>
+                  ISSN:
+                </dt>
+                <dd>
+                  0275-1879
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <div
+            class="list-group-item list-group-item-action flex-column border-0"
+          >
+            <div
+              class="row"
+            >
+              <h6>
+                <a
+                  href="http://proxy.library.nyu.edu/login?url=https://www.spiedigitallibrary.org/conference-proceedings-of-spie"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  SPIE Digital Library (Proceedings Series)
+                </a>
+              </h6>
+              <small>
+                Available from 1963/01/01
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-md-4"
+      >
+        <div
+          class="ask-librarian"
+        >
+          <h5>
+            Need help?
+          </h5>
+          <h6>
+            <a
+              href="https://library.nyu.edu/ask/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Ask a Librarian
+            </a>
+          </h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Backend success Modelling Modular Living: Furniture and Life Magazine and Interior Design in 1980s China renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="jumbotron"
+  >
+    <div
+      class="container text-center"
+    >
+      <p>
+        Displaying search results...
+      </p>
+      <p>
+        Note: Alternate titles might have matched your search terms
+      </p>
+    </div>
+  </div>
+  <div
+    class="container"
+  >
+    <div
+      class="row row-cols-md-12"
+    >
+      <div
+        class="col-md-8"
+      >
+        <div
+          class="list-group"
+        >
+          <div
+            class="list-group-item list-group-item-action flex-column border-0"
+          >
+            <div>
+              <p
+                class="resource-type"
+              >
+                article
+              </p>
+              <h2
+                class="title"
+              >
+                Informed consent and the geriatric dental patient
+              </h2>
+              <p>
+                Odom, John G 
+                <span>
+                  •
+                </span>
+                 1992
+              </p>
+              <p
+                style="margin: 0px 0px 10px;"
+              >
+                <span
+                  style="box-sizing: border-box;"
+                >
+                  Published in Journal
+                </span>
+                <span
+                  style="font-style: italic;"
+                >
+                  Special Care in Dentistry.
+                </span>
+                Volume 12.Issue 5.Page 202-206.
+              </p>
+              <dl
+                class="citation-info"
+              >
+                <dt>
+                  ISSN:
+                </dt>
+                <dd>
+                  0275-1879
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <div
+            class="list-group-item list-group-item-action flex-column border-0"
+          >
+            <div
+              class="row"
+            >
+              <h6>
+                <a
+                  href="http://proxy.library.nyu.edu/login?url=https://academic.oup.com/jdh/article/35/2/151/article"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Oxford University Press Journals Current
+                </a>
+              </h6>
+              <small>
+                Available from 1988/01/01
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-md-4"
+      >
+        <div
+          class="ask-librarian"
+        >
+          <h5>
+            Need help?
+          </h5>
+          <h6>
+            <a
+              href="https://library.nyu.edu/ask/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Ask a Librarian
+            </a>
+          </h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Backend success Our Lady of everyday life : la Virgen de Guadalupe and the Catholic imagination of Mexican American women in America renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="jumbotron"
+  >
+    <div
+      class="container text-center"
+    >
+      <p>
+        Displaying search results...
+      </p>
+      <p>
+        Note: Alternate titles might have matched your search terms
+      </p>
+    </div>
+  </div>
+  <div
+    class="container"
+  >
+    <div
+      class="row row-cols-md-12"
+    >
+      <div
+        class="col-md-8"
+      >
+        <div
+          class="list-group"
+        >
+          <div
+            class="list-group-item list-group-item-action flex-column border-0"
+          >
+            <div>
+              <p
+                class="resource-type"
+              >
+                article
+              </p>
+              <h2
+                class="title"
+              >
+                Informed consent and the geriatric dental patient
+              </h2>
+              <p>
+                Odom, John G 
+                <span>
+                  •
+                </span>
+                 1992
+              </p>
+              <p
+                style="margin: 0px 0px 10px;"
+              >
+                <span
+                  style="box-sizing: border-box;"
+                >
+                  Published in Journal
+                </span>
+                <span
+                  style="font-style: italic;"
+                >
+                  Special Care in Dentistry.
+                </span>
+                Volume 12.Issue 5.Page 202-206.
+              </p>
+              <dl
+                class="citation-info"
+              >
+                <dt>
+                  ISSN:
+                </dt>
+                <dd>
+                  0275-1879
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <div
+            class="list-group-item list-group-item-action flex-column border-0"
+          >
+            <div
+              class="row"
+            >
+              <h6>
+                <a
+                  href="http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?sid=DEFAULT%20(Via%20SFX)&genre=bookitem&date=2018&year=2018&title=Our%20Lady%20of%20Everyday%20Life&month=1&isbn=0-19-028039-5&aufirst=Mar%C3%ADa%20Del%20Socorro&aulast=Casta%C3%B1eda-Liles"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Bobst Library  Interlibrary Loan
                 </a>
               </h6>
               <small />
@@ -1127,6 +1677,127 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
               <small>
                 Available from 2002/11/04
               </small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-md-4"
+      >
+        <div
+          class="ask-librarian"
+        >
+          <h5>
+            Need help?
+          </h5>
+          <h6>
+            <a
+              href="https://library.nyu.edu/ask/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Ask a Librarian
+            </a>
+          </h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Backend success The Year's work in modern language studies. renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="jumbotron"
+  >
+    <div
+      class="container text-center"
+    >
+      <p>
+        Displaying search results...
+      </p>
+      <p>
+        Note: Alternate titles might have matched your search terms
+      </p>
+    </div>
+  </div>
+  <div
+    class="container"
+  >
+    <div
+      class="row row-cols-md-12"
+    >
+      <div
+        class="col-md-8"
+      >
+        <div
+          class="list-group"
+        >
+          <div
+            class="list-group-item list-group-item-action flex-column border-0"
+          >
+            <div>
+              <p
+                class="resource-type"
+              >
+                article
+              </p>
+              <h2
+                class="title"
+              >
+                Informed consent and the geriatric dental patient
+              </h2>
+              <p>
+                Odom, John G 
+                <span>
+                  •
+                </span>
+                 1992
+              </p>
+              <p
+                style="margin: 0px 0px 10px;"
+              >
+                <span
+                  style="box-sizing: border-box;"
+                >
+                  Published in Journal
+                </span>
+                <span
+                  style="font-style: italic;"
+                >
+                  Special Care in Dentistry.
+                </span>
+                Volume 12.Issue 5.Page 202-206.
+              </p>
+              <dl
+                class="citation-info"
+              >
+                <dt>
+                  ISSN:
+                </dt>
+                <dd>
+                  0275-1879
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <div
+            class="list-group-item list-group-item-action flex-column border-0"
+          >
+            <div
+              class="row"
+            >
+              <h6>
+                <a
+                  href="http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?title=The%20Year's%20Work%20in%20Modern%20Language%20Studies&issn=0084-4152&genre=article&sid=DEFAULT%20(Via%20SFX)"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Bobst Library  Interlibrary Loan
+                </a>
+              </h6>
+              <small />
             </div>
           </div>
         </div>
