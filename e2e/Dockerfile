@@ -10,6 +10,8 @@ COPY backend/api/testdata/server/golden/* /backend/api/testdata/server/golden/
 
 COPY backend/api/testdata/server/test-cases.json /backend/api/testdata/server/test-cases.json
 
+COPY frontend/src/testutils/index.js /frontend/src/testutils/index.js
+
 # Install dependencies
 RUN yarn install
 
