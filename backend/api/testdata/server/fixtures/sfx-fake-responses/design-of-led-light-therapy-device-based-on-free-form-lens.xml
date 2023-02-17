@@ -1,0 +1,183 @@
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Content-Type: application/xml; charset=ISO-8859-1
+Date: Fri, 17 Feb 2023 00:39:40 GMT
+Server: Apache
+
+1851
+<?xml version="1.0" encoding="utf-8"?>
+
+<ctx_obj_set>
+ <ctx_obj identifier="">
+  <ctx_obj_attributes>&lt;perldata&gt;
+ &lt;hash&gt;
+  &lt;item key="rft.day"&gt;5&lt;/item&gt;
+  &lt;item key="@rft.stitle"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;PROC SPIE INT SOC OPT ENG&lt;/item&gt;
+    &lt;item key="1"&gt;X-RAY AND GAMMA-RAY INSTRUMENTATION FOR ASTRONOMY&lt;/item&gt;
+    &lt;item key="2"&gt;PROC. SPIE&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.language"&gt;eng&lt;/item&gt;
+  &lt;item key="req.session_id"&gt;s90403826-AE5B-11ED-A6D6-7A044131B499&lt;/item&gt;
+  &lt;item key="sfx.sid"&gt;DEFAULT&lt;/item&gt;
+  &lt;item key="rft.place"&gt;Bellingham, WA&lt;/item&gt;
+  &lt;item key="ctx_id"&gt;&lt;/item&gt;
+  &lt;item key="sfx.request_id"&gt;25683430&lt;/item&gt;
+  &lt;item key="_stash"&gt;
+   &lt;hash&gt;
+   &lt;/hash&gt;
+  &lt;/item&gt;
+  &lt;item key="@rft.aulast"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;Feng&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="@rfe_id"&gt;
+   &lt;array&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.date"&gt;20230305&lt;/item&gt;
+  &lt;item key="@rft.au"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;Feng, Zefeng&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.year"&gt;2023&lt;/item&gt;
+  &lt;item key="ctx_ver"&gt;Z39.88-2004&lt;/item&gt;
+  &lt;item key="rft.spage"&gt;1246106&lt;/item&gt;
+  &lt;item key="@rft.auinit1"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;Z&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.object_type"&gt;JOURNAL&lt;/item&gt;
+  &lt;item key="@rft.auinit"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;Z&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.title"&gt;Proceedings of SPIE&lt;/item&gt;
+  &lt;item key="@rft.auinitm"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="sfx.sourcename"&gt;DEFAULT&lt;/item&gt;
+  
+  &lt;item key="rft.issn"&gt;0277-786X&lt;/item&gt;
+  &lt;item key="sfx.response_type"&gt;multi_obj_xml&lt;/item&gt;
+  &lt;item key="@rft_id"&gt;
+   &lt;array&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft_val_fmt"&gt;article&lt;/item&gt;
+  &lt;item key="@sfx.subcategory"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;Optics &amp;amp; Opto Electronics&lt;/item&gt;
+    &lt;item key="1"&gt;Cables &amp;amp; Optical Fibres&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.pub"&gt;SPIE, The International Society for Optical Engineering&lt;/item&gt;
+  &lt;item key="@rft.aufirst"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;Zefeng&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.volume_start"&gt;12461&lt;/item&gt;
+  &lt;item key="existing_ts_ids"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;20430000000000002&lt;/item&gt;
+    &lt;item key="1"&gt;111027614344001&lt;/item&gt;
+    &lt;item key="2"&gt;3800000000000337&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.atitle"&gt;Design of LED light therapy device based on free-form lens.&lt;/item&gt;
+  &lt;item key="rft.object_id"&gt;958480284260&lt;/item&gt;
+  &lt;item key="sfx.ignore_char_set"&gt;1&lt;/item&gt;
+  &lt;item key="rft.coden"&gt;PSISDG&lt;/item&gt;
+  &lt;item key="@sfx.category"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;Physics&lt;/item&gt;
+    &lt;item key="1"&gt;Telecommunications Technology&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="sfx.has_full_text"&gt;yes&lt;/item&gt;
+  &lt;item key="fetchid"&gt;0277786X&lt;/item&gt;
+  &lt;item key="rft.genre"&gt;article&lt;/item&gt;
+  &lt;item key="rft.jtitle"&gt;Proceedings of SPIE&lt;/item&gt;
+  &lt;item key="rft.volume"&gt;12461&lt;/item&gt;
+  &lt;item key="rft.eissn"&gt;1996-756X&lt;/item&gt;
+  &lt;item key="rft.month"&gt;3&lt;/item&gt;
+ &lt;/hash&gt;
+&lt;/perldata&gt;
+</ctx_obj_attributes>
+  <ctx_obj_targets>
+   <target>
+    <target_name>SPIE_DIGITAL_LIBRARY_PROCEEDINGS_SERIES</target_name>
+    <target_public_name>SPIE Digital Library (Proceedings Series)</target_public_name>
+    <object_portfolio_id>3800000000944424</object_portfolio_id>
+    <target_id>3800000000000378</target_id>
+    <interface_id>111074031720000</interface_id>
+    <interface_name>SPIE_DIGITAL_LIBRARY</interface_name>
+    <target_service_id>3800000000000337</target_service_id>
+    <service_type>getFullTxt</service_type>
+    <parser>Bulk::BULK</parser>
+    <parse_param>jkey=https://www.spiedigitallibrary.org/conference-proceedings-of-spie</parse_param>
+    <proxy>yes</proxy>
+    <crossref>yes</crossref>
+    <note></note>
+    <authentication></authentication>
+    <char_set>iso-8859-1</char_set>
+    <displayer></displayer>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://www.spiedigitallibrary.org/conference-proceedings-of-spie</target_url>
+    <is_related>no</is_related>
+    <coverage>
+     <coverage_text>
+      <threshold_text>
+       <coverage_statement>Available from 1963/01/01</coverage_statement>
+      </threshold_text>
+      <embargo_text></embargo_text>
+     </coverage_text>
+     <from>
+      <year>1963</year>
+      <month>01</month>
+      <day>01</day>
+     </from>
+     <embargo></embargo>
+    </coverage>
+   </target>
+   <target>
+    <target_name>ASK_A_LIBRARIAN_LCL</target_name>
+    <target_public_name>Ask a Librarian</target_public_name>
+    <object_portfolio_id></object_portfolio_id>
+    <target_id>20430000000000002</target_id>
+    <interface_id>20430000000000002</interface_id>
+    <interface_name>ASK_A_LIBRARIAN</interface_name>
+    <target_service_id>20430000000000002</target_service_id>
+    <service_type>getWebService</service_type>
+    <parser>Generic</parser>
+    <parse_param>IF () "http://library.nyu.edu/ask/"</parse_param>
+    <proxy>no</proxy>
+    <crossref>no</crossref>
+    <note></note>
+    <authentication></authentication>
+    <char_set>iso-8859-1</char_set>
+    <displayer></displayer>
+    <target_url>http://library.nyu.edu/ask/</target_url>
+    <is_related>no</is_related>
+    <coverage>
+     <coverage_text>
+      <threshold_text></threshold_text>
+      <embargo_text></embargo_text>
+     </coverage_text>
+     <embargo></embargo>
+    </coverage>
+   </target>
+  </ctx_obj_targets>
+ </ctx_obj>
+</ctx_obj_set>
+0
+
+
