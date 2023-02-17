@@ -1,8 +1,9 @@
-import { execSync } from 'child_process';
 import * as fs from 'node:fs';
 
-import { getTestCasesBackendSuccess } from '../../frontend/src/testutils';
 import { removeSourceMappingUrlComments, updateGoldenFiles } from '../testutils';
+
+import { execSync } from 'child_process';
+import { getTestCasesBackendSuccess } from '../../frontend/src/testutils';
 
 const { test, expect } = require('@playwright/test');
 const beautifyHtml = require('js-beautify').html;
@@ -42,11 +43,11 @@ for (let i = 0; i < testCasesBackendSuccess.length; i++) {
       const actualFile = `tests/actual/${testCase.key}.html`;
       try {
         fs.unlinkSync(actualFile);
-      } catch (error) {}
+      } catch (error) { }
       const diffFile = `tests/diffs/${testCase.key}.txt`;
       try {
         fs.unlinkSync(diffFile);
-      } catch (error) {}
+      } catch (error) { }
 
       await page.waitForSelector('h6');
 

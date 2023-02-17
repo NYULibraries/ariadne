@@ -33,7 +33,7 @@ exports[`renders correctly 1`] = `
             <img
               alt="NYU Libraries logo"
               class="image"
-              height="30"
+              height="60"
               src="https://cdn.library.nyu.edu/images/nyulibraries-logo.svg"
               width="220"
             />
