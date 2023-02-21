@@ -3,9 +3,9 @@ function getCoverageStatement(link) {
   return link.coverage[0].coverage_text[0].threshold_text[0].coverage_statement?.join('. ');
 }
 
-function getInstitutionQueryParameter(parameterName) {
+function getInstitutionQueryParameter() {
   const queryString = window.location.search;
-  return getParameterFromQueryString(queryString, parameterName);
+  return getParameterFromQueryString(queryString, 'institution');
 }
 
 //  Helper functions for useApi hook
