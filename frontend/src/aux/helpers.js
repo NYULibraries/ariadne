@@ -1,3 +1,20 @@
+// Source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze
+function deepFreeze(object) {
+  // Retrieve the property names defined on object
+  const propNames = Reflect.ownKeys(object);
+
+  // Freeze properties before freezing self
+  for (const name of propNames) {
+    const value = object[name];
+
+    if ((value && typeof value === "object") || typeof value === "function") {
+      deepFreeze(value);
+    }
+  }
+
+  return Object.freeze(object);
+}
+
 // Helper function for List.js component
 function getCoverageStatement(link) {
   return link.coverage[0].coverage_text[0].threshold_text[0].coverage_statement?.join('. ');
@@ -20,6 +37,7 @@ function getParameterFromQueryString(queryString, parameterName) {
 }
 
 export {
+  deepFreeze,
   getCoverageStatement,
   getInstitutionQueryParameter,
   getLinks,

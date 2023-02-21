@@ -1,4 +1,6 @@
-const bannerInstitutionInfo = Object.freeze( {
+import { deepFreeze } from './helpers';
+
+const bannerInstitutionInfo = deepFreeze({
     nyu: {
         logo: 'https://cdn.library.nyu.edu/images/nyulibraries-logo.svg',
         link: 'http://library.nyu.edu',
