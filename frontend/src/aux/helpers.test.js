@@ -1,6 +1,8 @@
 import { getParameterFromQueryString } from './helpers';
+import { bannerInstitutionInfo } from './institutionConstants';
 
-describe.each(['NYU', 'NYUAD', 'NYUSH'])(
+const institutionNamesUpperCase = Object.keys(bannerInstitutionInfo).map(institutionName => institutionName.toUpperCase());
+describe.each(institutionNamesUpperCase)(
     'Institution name: %s', (institutionName) => {
       test(`returns the correct value for "institution=${institutionName}" query parameter`, () => {
           const queryString = `?institution=${institutionName}`;
