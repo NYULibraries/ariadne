@@ -33,7 +33,7 @@ function getLinks(jsonData) {
 // Helper functions for Banner.js component
 function getParameterFromQueryString(queryString, parameterName) {
   const urlParams = new URLSearchParams(queryString.toLowerCase());
-  return urlParams.get(parameterName);
+  return urlParams.get(parameterName.toLowerCase());
 }
 
 export {
