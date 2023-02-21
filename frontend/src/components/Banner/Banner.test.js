@@ -2,7 +2,7 @@ import { render, screen, waitFor } from '@testing-library/react';
 
 import Banner from './Banner';
 
-import { bannerInstitutionInfo } from '../../aux/institutionConstants';
+import { bannerInstitutionInfo } from '../../aux/institutionInfo';
 
 const institutionNamesUpperCase = Object.keys(bannerInstitutionInfo).map(institutionName => institutionName.toUpperCase());
 
