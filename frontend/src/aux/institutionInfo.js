@@ -19,4 +19,3 @@ const bannerInstitutionInfo = deepFreeze({
 });
 
 export { bannerInstitutionInfo };
-
