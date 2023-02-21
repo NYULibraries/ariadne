@@ -3,35 +3,35 @@ import { bannerInstitutionInfo } from './institutionConstants';
 
 const institutionNamesUpperCase = Object.keys(bannerInstitutionInfo).map(institutionName => institutionName.toUpperCase());
 describe.each(institutionNamesUpperCase)(
-    'Institution name: %s', (institutionName) => {
-      test(`returns the correct value for "institution=${institutionName}" query parameter`, () => {
-          const queryString = `?institution=${institutionName}`;
+    'Institution name: %s', (institutionNameUpperCase) => {
+      test(`returns the correct value for "institution=${institutionNameUpperCase}" query parameter`, () => {
+          const queryString = `?institution=${institutionNameUpperCase}`;
           const parameterName = 'institution';
-          const expectedValue = institutionName.toLowerCase();
+          const expectedValue = institutionNameUpperCase.toLowerCase();
           const returnedValue = getParameterFromQueryString(queryString, parameterName);
           expect(returnedValue).toBe(expectedValue);
       });
 
-      test(`returns the correct value for "institution=${institutionName.toLowerCase()}" query parameter`, () => {
-        const queryString = `?institution=${institutionName.toLowerCase()}`;
+      test(`returns the correct value for "institution=${institutionNameUpperCase.toLowerCase()}" query parameter`, () => {
+        const queryString = `?institution=${institutionNameUpperCase.toLowerCase()}`;
         const parameterName = 'institution';
-        const expectedValue = institutionName.toLowerCase();
+        const expectedValue = institutionNameUpperCase.toLowerCase();
         const returnedValue = getParameterFromQueryString(queryString, parameterName);
         expect(returnedValue).toBe(expectedValue);
       });
 
-      test(`returns the correct value for "INSTITUTION=${institutionName}" query parameter`, () => {
-          const queryString = `?INSTITUTION=${institutionName}`;
+      test(`returns the correct value for "INSTITUTION=${institutionNameUpperCase}" query parameter`, () => {
+          const queryString = `?INSTITUTION=${institutionNameUpperCase}`;
           const parameterName = 'INSTITUTION';
-          const expectedValue = institutionName.toLowerCase();
+          const expectedValue = institutionNameUpperCase.toLowerCase();
           const returnedValue = getParameterFromQueryString(queryString, parameterName);
           expect(returnedValue).toBe(expectedValue);
       });
 
-      test(`returns the correct value for "INSTITUTION=${institutionName.toLowerCase()}" query parameter`, () => {
-        const queryString = `?INSTITUTION=${institutionName.toLowerCase()}`;
+      test(`returns the correct value for "INSTITUTION=${institutionNameUpperCase.toLowerCase()}" query parameter`, () => {
+        const queryString = `?INSTITUTION=${institutionNameUpperCase.toLowerCase()}`;
         const parameterName = 'INSTITUTION';
-        const expectedValue = institutionName.toLowerCase();
+        const expectedValue = institutionNameUpperCase.toLowerCase();
         const returnedValue = getParameterFromQueryString(queryString, parameterName);
         expect(returnedValue).toBe(expectedValue);
       });
