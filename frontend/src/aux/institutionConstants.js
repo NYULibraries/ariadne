@@ -1,4 +1,4 @@
-const institutions = Object.freeze({
+const bannerInstitutionInfo = Object.freeze( {
     nyu: {
         logo: 'https://cdn.library.nyu.edu/images/nyulibraries-logo.svg',
         link: 'http://library.nyu.edu',
@@ -16,5 +16,5 @@ const institutions = Object.freeze({
     }
 });
 
-export { institutions };
+export { bannerInstitutionInfo };
 

@@ -2,13 +2,11 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { getInstitutionQueryParameter } from '../../aux/helpers';
-import { institutions } from '../../aux/institutionConstants';
+import { bannerInstitutionInfo } from '../../aux/institutionConstants';
 
 const Banner = () => {
   const institutionName = getInstitutionQueryParameter();
-  const bannerInstitutionInfo = institutions[institutionName] || institutions.nyu;
-
-  const { logo, link, imgClass } = bannerInstitutionInfo;
+  const { logo, link, imgClass } = bannerInstitutionInfo[institutionName] || bannerInstitutionInfo.nyu;
   return (
     <Navbar className="color-nav" expand="lg">
       <Container>
