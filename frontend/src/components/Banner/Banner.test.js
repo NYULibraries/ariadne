@@ -9,7 +9,14 @@ const institutionNamesUpperCase = Object.keys(bannerInstitutionInfo).map(institu
 describe.each(institutionNamesUpperCase)(
   'Institution name: %s', (institutionNameUpperCase) => {
     beforeEach( () => {
-      window.history.pushState({}, null, `/?institution=${institutionNameUpperCase}`);
+      delete window.location;
+      window.location = new URL(`${process.env.REACT_APP_API_URL}?institution=${institutionNameUpperCase}`);
+    });
+
+    afterEach(() => {
+      delete window.location;
+      window.location = new URL(process.env.REACT_APP_API_URL);
+      jest.clearAllMocks();
     });
 
     test(`renders ${institutionNameUpperCase} page correctly`, () => {
