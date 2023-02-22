@@ -78,6 +78,26 @@ func NewMultipleObjectsRequest(queryStringValues url.Values) (*MultipleObjectsRe
 	return multipleObjectsRequest, nil
 }
 
+func escapeAmpersandsForXML(values []string) []string {
+	var escapedValues []string
+
+	for _, value := range values {
+		// Chose "&#x26;" over "&amp;", "&#038;", and others because it seems
+		// likely it might be less brittle, as suggested by this Stack Overflow page:
+		//
+		//     "How do I escape ampersands in XML so they are rendered as entities in HTML?"
+		//     https://stackoverflow.com/questions/1328538/how-do-i-escape-ampersands-in-xml-so-they-are-rendered-as-entities-in-html
+		//
+		// Also, hex code 26 might be more recognizable than HTML entity reference
+		// "&#038".  We are also dealing with values that come from URL query strings,
+		// which hopefully might have ampersands encoded as "%26", making debugging
+		// that much easier.
+		escapedValues = append(escapedValues, strings.Replace(value, "&", "&#x26;", -1))
+	}
+
+	return escapedValues
+}
+
 func newMultipleObjectsHTTPRequest(requestXML string) (*http.Request, error) {
 	params := url.Values{}
 	params.Add("url_ctx_fmt", "info:ofi/fmt:xml:xsd:ctx")
@@ -107,6 +127,11 @@ func parseMultipleObjectsRequestParams(queryStringValues url.Values) (multipleOb
 	rfts := &map[string][]string{}
 
 	for k, v := range queryStringValues {
+		// Deal with encoded ampersands in param values.
+		// Example: title=Journal%20of%20the%20Gilded%20Age%20%26%20Progressive%20Era
+		// If the ampersands are not escaped, the construction of the XML for the
+		// SFX request body will fail.
+		v = escapeAmpersandsForXML(v)
 		// Strip the "rft." prefix from the param name and map to valid OpenURL fields
 		if strings.HasPrefix(k, "rft.") {
 			// E.g. "rft.book" becomes "book"
