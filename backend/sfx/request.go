@@ -3,6 +3,7 @@ package sfx
 import (
 	"bytes"
 	_ "embed"
+	"encoding/xml"
 	"fmt"
 	"net/http"
 	"net/http/httputil"
@@ -78,24 +79,29 @@ func NewMultipleObjectsRequest(queryStringValues url.Values) (*MultipleObjectsRe
 	return multipleObjectsRequest, nil
 }
 
-func escapeAmpersandsForXML(values []string) []string {
+func escapeQueryParamValuesForXML(values []string) ([]string, error) {
 	var escapedValues []string
+	var err error
 
 	for _, value := range values {
-		// Chose "&#x26;" over "&amp;", "&#038;", and others because it seems
-		// likely it might be less brittle, as suggested by this Stack Overflow page:
+		// For a query string containing this:
 		//
-		//     "How do I escape ampersands in XML so they are rendered as entities in HTML?"
-		//     https://stackoverflow.com/questions/1328538/how-do-i-escape-ampersands-in-xml-so-they-are-rendered-as-entities-in-html
+		//    title=Journal%20of%20the%20Gilded%20Age%20%26%20Progressive%20Era
 		//
-		// Also, hex code 26 might be more recognizable than HTML entity reference
-		// "&#038".  We are also dealing with values that come from URL query strings,
-		// which hopefully might have ampersands encoded as "%26", making debugging
-		// that much easier.
-		escapedValues = append(escapedValues, strings.Replace(value, "&", "&#x26;", -1))
+		// ...the construction of the SFX request body will fail due to this element:
+		//
+		//     <rft:title>Journal of the Gilded Age & Progressive Era</rft:title>
+		//
+		// ...which is illegal due to the unescaped ampersand.
+		buf := bytes.NewBuffer(make([]byte, 0))
+		err = xml.EscapeText(buf, []byte(value))
+		if err != nil {
+			return escapedValues, err
+		}
+		escapedValues = append(escapedValues, buf.String())
 	}
 
-	return escapedValues
+	return escapedValues, err
 }
 
 func newMultipleObjectsHTTPRequest(requestXML string) (*http.Request, error) {
@@ -131,15 +137,18 @@ func parseMultipleObjectsRequestParams(queryStringValues url.Values) (multipleOb
 		// Example: title=Journal%20of%20the%20Gilded%20Age%20%26%20Progressive%20Era
 		// If the ampersands are not escaped, the construction of the XML for the
 		// SFX request body will fail.
-		v = escapeAmpersandsForXML(v)
+		escapedValue, err := escapeQueryParamValuesForXML(v)
+		if err != nil {
+			return params, fmt.Errorf("unable to XML escape value for query string param %s: %v", k, err)
+		}
 		// Strip the "rft." prefix from the param name and map to valid OpenURL fields
 		if strings.HasPrefix(k, "rft.") {
 			// E.g. "rft.book" becomes "book"
 			newKey := strings.Split(k, ".")[1]
-			(*rfts)[newKey] = v
+			(*rfts)[newKey] = escapedValue
 			// Without "rft." prefix, use the whole param name
 		} else {
-			(*rfts)[k] = v
+			(*rfts)[k] = escapedValue
 		}
 	}
 
