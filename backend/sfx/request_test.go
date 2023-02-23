@@ -18,7 +18,10 @@ func TestNewMultipleObjectsRequest(t *testing.T) {
 	}{
 		{map[string][]string{}, errors.New("could not parse required request body params from querystring: no valid querystring values to parse")},
 		{map[string][]string{"rft.genre": {"podcast"}}, errors.New("could not parse required request body params from querystring: genre is not valid: genre not in list of allowed genres: [podcast]")},
-		{map[string][]string{"rft.genre": {"book"}, "rft.aulast": {"<rft:"}}, errors.New("could not convert multiple objects request to XML: request multiple objects XML is not valid XML: <nil>")},
+		// "<" should be XML escaped properly
+		{map[string][]string{"rft.genre": {"book"}, "rft.aulast": {"<rft:"}}, nil},
+		// "&" should be XML escaped properly
+		{map[string][]string{"rft.genre": {"journal"}, "title": {"Journal of the Gilded Age & Progressive Era"}}, nil},
 		{map[string][]string{"rft.genre": {"book"}, "rft.btitle": {"dune"}}, nil},
 	}
 
