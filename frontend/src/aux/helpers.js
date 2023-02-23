@@ -1,32 +1,46 @@
+// Source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze
+function deepFreeze(object) {
+  // Retrieve the property names defined on object
+  const propNames = Reflect.ownKeys(object);
 
-//  Helper functions for useApi hook
-const getLinks = (jsonData) => {
-  return jsonData.ctx_obj[0].ctx_obj_targets[0].target;
-};
+  // Freeze properties before freezing self
+  for (const name of propNames) {
+    const value = object[name];
+
+    if ((value && typeof value === "object") || typeof value === "function") {
+      deepFreeze(value);
+    }
+  }
+
+  return Object.freeze(object);
+}
 
 // Helper function for List.js component
-const getCoverageStatement = (link) => {
+function getCoverageStatement(link) {
   return link.coverage[0].coverage_text[0].threshold_text[0].coverage_statement?.join('. ');
-};
+}
+
+function getInstitutionQueryParameter() {
+  const queryString = window.location.search;
+  return getParameterFromQueryString(queryString, 'institution');
+}
+
+//  Helper functions for useApi hook
+function getLinks(jsonData) {
+  return jsonData.ctx_obj[0].ctx_obj_targets[0].target;
+}
 
 // Helper functions for Banner.js component
-const getParameterFromQueryString = (queryString, parameterName) => {
+function getParameterFromQueryString(queryString, parameterName) {
   const urlParams = new URLSearchParams(queryString.toLowerCase());
-  let parameter = urlParams.get(parameterName);
-
-  return parameter;
-};
-
-
-const getInstitutionQueryParameter = (parameterName) => {
-  const queryString = window.location.search;
-  return getParameterFromQueryString(queryString, parameterName);
-};
+  return urlParams.get(parameterName.toLowerCase());
+}
 
 export {
+  deepFreeze,
   getCoverageStatement,
+  getInstitutionQueryParameter,
   getLinks,
   getParameterFromQueryString,
-  getInstitutionQueryParameter
 };
 
