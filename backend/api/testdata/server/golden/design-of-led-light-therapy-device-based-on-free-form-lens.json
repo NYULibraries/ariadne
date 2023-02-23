@@ -1,0 +1,48 @@
+{
+    "errors": [],
+    "records": {
+        "ctx_obj": [
+            {
+                "ctx_obj_targets": [
+                    {
+                        "target": [
+                            {
+                                "target_name": "SPIE_DIGITAL_LIBRARY_PROCEEDINGS_SERIES",
+                                "target_public_name": "SPIE Digital Library (Proceedings Series)",
+                                "target_url": "http://proxy.library.nyu.edu/login?url=https://www.spiedigitallibrary.org/conference-proceedings-of-spie",
+                                "authentication": "",
+                                "proxy": "yes",
+                                "coverage": [
+                                    {
+                                        "coverage_text": [
+                                            {
+                                                "threshold_text": [
+                                                    {
+                                                        "coverage_statement": [
+                                                            "Available from 1963/01/01"
+                                                        ]
+                                                    }
+                                                ],
+                                                "embargo_text": [
+                                                    {}
+                                                ]
+                                            }
+                                        ],
+                                        "from": [
+                                            {
+                                                "year": "1963",
+                                                "month": "01",
+                                                "day": "01"
+                                            }
+                                        ],
+                                        "embargo": {}
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

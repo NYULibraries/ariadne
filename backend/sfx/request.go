@@ -3,6 +3,7 @@ package sfx
 import (
 	"bytes"
 	_ "embed"
+	"encoding/xml"
 	"fmt"
 	"net/http"
 	"net/http/httputil"
@@ -78,11 +79,36 @@ func NewMultipleObjectsRequest(queryStringValues url.Values) (*MultipleObjectsRe
 	return multipleObjectsRequest, nil
 }
 
+func escapeQueryParamValuesForXML(values []string) ([]string, error) {
+	var escapedValues []string
+	var err error
+
+	for _, value := range values {
+		// For a query string containing this:
+		//
+		//    title=Journal%20of%20the%20Gilded%20Age%20%26%20Progressive%20Era
+		//
+		// ...the construction of the SFX request body will fail due to this element:
+		//
+		//     <rft:title>Journal of the Gilded Age & Progressive Era</rft:title>
+		//
+		// ...which is illegal due to the unescaped ampersand.
+		buf := bytes.NewBuffer(make([]byte, 0))
+		err = xml.EscapeText(buf, []byte(value))
+		if err != nil {
+			return escapedValues, err
+		}
+		escapedValues = append(escapedValues, buf.String())
+	}
+
+	return escapedValues, err
+}
+
 func newMultipleObjectsHTTPRequest(requestXML string) (*http.Request, error) {
 	params := url.Values{}
 	params.Add("url_ctx_fmt", "info:ofi/fmt:xml:xsd:ctx")
 	params.Add("sfx.response_type", "multi_obj_xml")
-	// Do we always need these parameters? Umlaut adds them only in certain conditions: https://github.com/team-umlaut/umlaut/blob/master/app/service_adaptors/sfx.rb#L145-L153
+	// Do we always need these parameters? Umlaut adds them only in certain conditions: https://github.com/team-umlaut/umlaut/blob/b954895e0aa0a7cd0a9ec6bb716c1886c813601e/app/service_adaptors/sfx.rb#L145-L153
 	params.Add("sfx.show_availability", "1")
 	params.Add("sfx.ignore_date_threshold", "1")
 	params.Add("sfx.doi_url", "http://dx.doi.org")
@@ -107,11 +133,22 @@ func parseMultipleObjectsRequestParams(queryStringValues url.Values) (multipleOb
 	rfts := &map[string][]string{}
 
 	for k, v := range queryStringValues {
+		// Deal with encoded ampersands in param values.
+		// Example: title=Journal%20of%20the%20Gilded%20Age%20%26%20Progressive%20Era
+		// If the ampersands are not escaped, the construction of the XML for the
+		// SFX request body will fail.
+		escapedValue, err := escapeQueryParamValuesForXML(v)
+		if err != nil {
+			return params, fmt.Errorf("unable to XML escape value for query string param %s: %v", k, err)
+		}
 		// Strip the "rft." prefix from the param name and map to valid OpenURL fields
 		if strings.HasPrefix(k, "rft.") {
 			// E.g. "rft.book" becomes "book"
 			newKey := strings.Split(k, ".")[1]
-			(*rfts)[newKey] = v
+			(*rfts)[newKey] = escapedValue
+			// Without "rft." prefix, use the whole param name
+		} else {
+			(*rfts)[k] = escapedValue
 		}
 	}
 

@@ -1,0 +1,37 @@
+{
+    "errors": [],
+    "records": {
+        "ctx_obj": [
+            {
+                "ctx_obj_targets": [
+                    {
+                        "target": [
+                            {
+                                "target_name": "DOCDEL_ILLIAD",
+                                "target_public_name": "Bobst Library  Interlibrary Loan",
+                                "target_url": "http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?title=The%20Year's%20Work%20in%20Modern%20Language%20Studies\u0026issn=0084-4152\u0026genre=article\u0026sid=DEFAULT%20(Via%20SFX)",
+                                "authentication": "",
+                                "proxy": "yes",
+                                "coverage": [
+                                    {
+                                        "coverage_text": [
+                                            {
+                                                "threshold_text": [
+                                                    {}
+                                                ],
+                                                "embargo_text": [
+                                                    {}
+                                                ]
+                                            }
+                                        ],
+                                        "embargo": {}
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

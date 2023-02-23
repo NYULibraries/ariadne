@@ -1,0 +1,297 @@
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Content-Type: application/xml; charset=ISO-8859-1
+Date: Fri, 17 Feb 2023 00:39:39 GMT
+Server: Apache
+
+2eaa
+<?xml version="1.0" encoding="utf-8"?>
+
+<ctx_obj_set>
+ <ctx_obj identifier="">
+  <ctx_obj_attributes>&lt;perldata&gt;
+ &lt;hash&gt;
+  &lt;item key="rft.lccn"&gt;   29012891 &lt;/item&gt;
+  &lt;item key="@rft.auinit"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;M A&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.title"&gt;The Art Bulletin&lt;/item&gt;
+  &lt;item key="@rft.auinitm"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;A&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="sfx.sourcename"&gt;DEFAULT&lt;/item&gt;
+  &lt;item key="rft.issn"&gt;0004-3079&lt;/item&gt;
+  
+  &lt;item key="sfx.response_type"&gt;multi_obj_xml&lt;/item&gt;
+  &lt;item key="rft.issue"&gt;4&lt;/item&gt;
+  &lt;item key="@rft_id"&gt;
+   &lt;array&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.year"&gt;2021&lt;/item&gt;
+  &lt;item key="ctx_ver"&gt;Z39.88-2004&lt;/item&gt;
+  &lt;item key="rft.spage"&gt;144&lt;/item&gt;
+  &lt;item key="rft.object_type"&gt;JOURNAL&lt;/item&gt;
+  &lt;item key="@rft.auinit1"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;M&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="_stash"&gt;
+   &lt;hash&gt;
+   &lt;/hash&gt;
+  &lt;/item&gt;
+  &lt;item key="@rfe_id"&gt;
+   &lt;array&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="@rft.aulast"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;Berger&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.issue_start"&gt;4&lt;/item&gt;
+  &lt;item key="rft.date"&gt;20211201&lt;/item&gt;
+  &lt;item key="@rft.au"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;Berger, Martin A&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.day"&gt;1&lt;/item&gt;
+  &lt;item key="@rft.stitle"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;ART BULLETIN&lt;/item&gt;
+    &lt;item key="1"&gt;ART BULL&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="req.session_id"&gt;s8FF30132-AE5B-11ED-8381-79044131B499&lt;/item&gt;
+  &lt;item key="rft.language"&gt;eng&lt;/item&gt;
+  &lt;item key="sfx.sid"&gt;DEFAULT&lt;/item&gt;
+  &lt;item key="rft.place"&gt;[New York]&lt;/item&gt;
+  &lt;item key="ctx_id"&gt;&lt;/item&gt;
+  &lt;item key="sfx.request_id"&gt;25683429&lt;/item&gt;
+  &lt;item key="rft.month"&gt;12&lt;/item&gt;
+  &lt;item key="@sfx.category"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;Arts and Humanities&lt;/item&gt;
+    &lt;item key="1"&gt;Arts and Humanities&lt;/item&gt;
+    &lt;item key="2"&gt;Arts and Humanities&lt;/item&gt;
+    &lt;item key="3"&gt;Law&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="fetchid"&gt;00043079&lt;/item&gt;
+  &lt;item key="rft.genre"&gt;article&lt;/item&gt;
+  &lt;item key="sfx.has_full_text"&gt;yes&lt;/item&gt;
+  &lt;item key="rft.jtitle"&gt;The Art Bulletin&lt;/item&gt;
+  &lt;item key="rft.volume"&gt;103&lt;/item&gt;
+  &lt;item key="rft.eissn"&gt;1559-6478&lt;/item&gt;
+  &lt;item key="existing_ts_ids"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;20430000000000002&lt;/item&gt;
+    &lt;item key="1"&gt;111027614344001&lt;/item&gt;
+    &lt;item key="2"&gt;3450000000000055&lt;/item&gt;
+    &lt;item key="3"&gt;4920000000002467&lt;/item&gt;
+    &lt;item key="4"&gt;1000000000002159&lt;/item&gt;
+    &lt;item key="5"&gt;3450000000000151&lt;/item&gt;
+    &lt;item key="6"&gt;3450000000000033&lt;/item&gt;
+    &lt;item key="7"&gt;3580000000000012&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.atitle"&gt;&amp;quot;Life&amp;quot; Magazine and the Power of Photography, edited by Katherine A. Bussard and Kristen Gresh: New Haven, CT: Yale University Press, 2020. 336 pp.; 250 color and b/w ills. $60.00.&lt;/item&gt;
+  &lt;item key="rft.object_id"&gt;954925382040&lt;/item&gt;
+  &lt;item key="sfx.ignore_char_set"&gt;1&lt;/item&gt;
+  &lt;item key="rft_val_fmt"&gt;article&lt;/item&gt;
+  &lt;item key="@sfx.subcategory"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;Architecture, Fine and Decorative Arts&lt;/item&gt;
+    &lt;item key="1"&gt;General and Others&lt;/item&gt;
+    &lt;item key="2"&gt;Performing Arts, Travel and Leisure&lt;/item&gt;
+    &lt;item key="3"&gt;General and Others&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.pub"&gt;CAA&lt;/item&gt;
+  &lt;item key="@rft.aufirst"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;Martin&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.volume_start"&gt;103&lt;/item&gt;
+ &lt;/hash&gt;
+&lt;/perldata&gt;
+</ctx_obj_attributes>
+  <ctx_obj_targets>
+   <target>
+    <target_name>EBSCOHOST_ACADEMIC_SEARCH_COMPLETE</target_name>
+    <target_public_name>EBSCOhost Academic Search Complete</target_public_name>
+    <object_portfolio_id>1000000000667315</object_portfolio_id>
+    <target_id>1000000000001505</target_id>
+    <interface_id>111080144282000</interface_id>
+    <interface_name>EBSCOHOST</interface_name>
+    <target_service_id>1000000000002159</target_service_id>
+    <service_type>getFullTxt</service_type>
+    <parser>EBSCO_HOST::Journals</parser>
+    <parse_param>db_host=a9h &amp; url=https://search.ebscohost.com &amp; url1=https://openurl.ebscohost.com/linksvc/linking.aspx &amp; url2=https://openurl.ebsco.com &amp; shib= &amp; customer_id= &amp; sso= &amp; ipauth= &amp; opid=&amp;jkey=ARB</parse_param>
+    <proxy>yes</proxy>
+    <crossref>no</crossref>
+    <note></note>
+    <authentication></authentication>
+    <char_set>utf8</char_set>
+    <displayer></displayer>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?issue=4&amp;sid=Primo&amp;atitle=%22life%22+magazine+and+the+power+of+photography&amp;spage=144&amp;date=20211201&amp;issn=0004-3079&amp;title=The+Art+Bulletin&amp;genre=article&amp;volume=103</target_url>
+    <is_related>no</is_related>
+    <coverage>
+     <coverage_text>
+      <threshold_text>
+       <coverage_statement>Available from 1975/03/01</coverage_statement>
+      </threshold_text>
+      <embargo_text></embargo_text>
+     </coverage_text>
+     <from>
+      <year>1975</year>
+      <month>03</month>
+      <day>01</day>
+     </from>
+     <embargo></embargo>
+    </coverage>
+   </target>
+   <target>
+    <target_name>EBSCOHOST_HUMANITIES_FULL_TEXT_WILSON</target_name>
+    <target_public_name>EBSCOhost Humanities Full Text</target_public_name>
+    <object_portfolio_id>3450000000022220</object_portfolio_id>
+    <target_id>3450000000000046</target_id>
+    <interface_id>111080144282000</interface_id>
+    <interface_name>EBSCOHOST</interface_name>
+    <target_service_id>3450000000000055</target_service_id>
+    <service_type>getFullTxt</service_type>
+    <parser>EBSCO_HOST::Journals</parser>
+    <parse_param>db_host=hft &amp; url=https://search.ebscohost.com &amp; url1=https://openurl.ebscohost.com/linksvc/linking.aspx &amp; url2=https://openurl.ebsco.com &amp; shib= &amp; customer_id= &amp; u_shib=$$U_SHIBBOLETH &amp; sso= &amp; ipauth= &amp; opid=&amp;jkey=ARB</parse_param>
+    <proxy>yes</proxy>
+    <crossref>no</crossref>
+    <note></note>
+    <authentication></authentication>
+    <char_set>iso-8859-1</char_set>
+    <displayer></displayer>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?issn=0004-3079&amp;title=The+Art+Bulletin&amp;genre=article&amp;volume=103&amp;issue=4&amp;sid=Primo&amp;atitle=%22life%22+magazine+and+the+power+of+photography&amp;spage=144&amp;date=20211201</target_url>
+    <is_related>no</is_related>
+    <coverage>
+     <coverage_text>
+      <threshold_text>
+       <coverage_statement>Available from 1987/12/01</coverage_statement>
+      </threshold_text>
+      <embargo_text></embargo_text>
+     </coverage_text>
+     <from>
+      <year>1987</year>
+      <month>12</month>
+      <day>01</day>
+     </from>
+     <embargo></embargo>
+    </coverage>
+   </target>
+   <target>
+    <target_name>EBSCOHOST_OMNIFILE_FULL_TEXT_MEGA_WILSON</target_name>
+    <target_public_name>EBSCOhost OmniFile Full Text Mega</target_public_name>
+    <object_portfolio_id>3450000000017015</object_portfolio_id>
+    <target_id>3450000000000034</target_id>
+    <interface_id>111080144282000</interface_id>
+    <interface_name>EBSCOHOST</interface_name>
+    <target_service_id>3450000000000033</target_service_id>
+    <service_type>getFullTxt</service_type>
+    <parser>EBSCO_HOST::Journals</parser>
+    <parse_param>db_host=ofm &amp; url=https://search.ebscohost.com &amp; url1=https://openurl.ebscohost.com/linksvc/linking.aspx &amp; url2=https://openurl.ebsco.com &amp; shib= &amp; customer_id= &amp; u_shib=$$U_SHIBBOLETH &amp; sso= &amp; ipauth= &amp; opid=&amp;jkey=ARB</parse_param>
+    <proxy>yes</proxy>
+    <crossref>no</crossref>
+    <note></note>
+    <authentication></authentication>
+    <char_set>iso-8859-1</char_set>
+    <displayer></displayer>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?atitle=%22life%22+magazine+and+the+power+of+photography&amp;sid=Primo&amp;issue=4&amp;date=20211201&amp;spage=144&amp;genre=article&amp;title=The+Art+Bulletin&amp;issn=0004-3079&amp;volume=103</target_url>
+    <is_related>no</is_related>
+    <coverage>
+     <coverage_text>
+      <threshold_text>
+       <coverage_statement>Available from 1995/03/01</coverage_statement>
+      </threshold_text>
+      <embargo_text></embargo_text>
+     </coverage_text>
+     <from>
+      <year>1995</year>
+      <month>03</month>
+      <day>01</day>
+     </from>
+     <embargo></embargo>
+    </coverage>
+   </target>
+   <target>
+    <target_name>TAYLOR_AND_FRANCIS_COMPLETE_LIBRARY_DATABASE_MODEL</target_name>
+    <target_public_name>Taylor &amp; Francis Complete Library Database Model</target_public_name>
+    <object_portfolio_id>5470000004493503</object_portfolio_id>
+    <target_id>4920000000002783</target_id>
+    <interface_id>1000000000002375</interface_id>
+    <interface_name>TAYLOR_AND_FRANCIS_ONLINE</interface_name>
+    <target_service_id>4920000000002467</target_service_id>
+    <service_type>getFullTxt</service_type>
+    <parser>TAYFRA::journal</parser>
+    <parse_param>url=https://www.tandfonline.com &amp; shib= &amp; u_shib=&amp;jkey=rcab20</parse_param>
+    <proxy>yes</proxy>
+    <crossref>yes</crossref>
+    <note></note>
+    <authentication></authentication>
+    <char_set>utf8</char_set>
+    <displayer>FT::NO_FILL_IN</displayer>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://www.tandfonline.com/openurl?genre=article&amp;issn=0004-3079&amp;issue=4&amp;volume=103&amp;date=2021&amp;spage=144</target_url>
+    <is_related>no</is_related>
+    <coverage>
+     <coverage_text>
+      <threshold_text>
+       <coverage_statement>Available from 1913/09/01 volume: 1 issue: 1</coverage_statement>
+      </threshold_text>
+      <embargo_text></embargo_text>
+     </coverage_text>
+     <from>
+      <year>1913</year>
+      <month>09</month>
+      <day>01</day>
+      <volume>1</volume>
+      <issue>1</issue>
+     </from>
+     <embargo></embargo>
+    </coverage>
+   </target>
+   <target>
+    <target_name>ASK_A_LIBRARIAN_LCL</target_name>
+    <target_public_name>Ask a Librarian</target_public_name>
+    <object_portfolio_id></object_portfolio_id>
+    <target_id>20430000000000002</target_id>
+    <interface_id>20430000000000002</interface_id>
+    <interface_name>ASK_A_LIBRARIAN</interface_name>
+    <target_service_id>20430000000000002</target_service_id>
+    <service_type>getWebService</service_type>
+    <parser>Generic</parser>
+    <parse_param>IF () "http://library.nyu.edu/ask/"</parse_param>
+    <proxy>no</proxy>
+    <crossref>no</crossref>
+    <note></note>
+    <authentication></authentication>
+    <char_set>iso-8859-1</char_set>
+    <displayer></displayer>
+    <target_url>http://library.nyu.edu/ask/</target_url>
+    <is_related>no</is_related>
+    <coverage>
+     <coverage_text>
+      <threshold_text></threshold_text>
+      <embargo_text></embargo_text>
+     </coverage_text>
+     <embargo></embargo>
+    </coverage>
+   </target>
+  </ctx_obj_targets>
+ </ctx_obj>
+</ctx_obj_set>
+0
+
+
