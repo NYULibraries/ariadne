@@ -49,7 +49,7 @@ for (let i = 0; i < testCasesBackendSuccess.length; i++) {
         fs.unlinkSync(diffFile);
       } catch (error) { }
 
-      await page.waitForSelector('h6');
+      await page.waitForSelector('h5');
 
       const actual = beautifyHtml(removeSourceMappingUrlComments(await page.content()));
 
@@ -107,7 +107,7 @@ ${e.stderr.toString()}`;
     test('screenshot matches expected', async ({ page }) => {
       // Wait for the response to be returned and the page to render
       await page.waitForSelector('.image');
-      await page.waitForSelector('h6');
+      await page.waitForSelector('h5');
 
       // Take a screenshot to verify that the page was rendered correctly
       await expect(page).toHaveScreenshot(`${testCase.key}.png`);
@@ -118,7 +118,7 @@ ${e.stderr.toString()}`;
     });
 
     test('returns search results', async ({ page }) => {
-      expect(await page.textContent('p')).toBe('Displaying search results...');
+      expect(await page.textContent('h1')).toBe('Displaying search results...');
     });
   });
 }
