@@ -52,6 +52,14 @@ describe('Citation', () => {
     expect(queryByText('1234-5678')).toBeInTheDocument();
   });
 
+  it('renders the ISBN when present', () => {
+    window.history.pushState({}, null, '?rft.isbn=9780080552903');
+    const { queryByText } = render(<Citation />);
+
+    expect(queryByText('ISBN:')).toBeInTheDocument();
+    expect(queryByText('9780080552903')).toBeInTheDocument();
+  });
+
   it('should not display any empty values in the rendered output', () => {
 
     window.history.pushState({}, null, '?genre=Article&atitle=Test+Article+Title&date=1992');
