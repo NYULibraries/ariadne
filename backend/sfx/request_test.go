@@ -23,6 +23,8 @@ func TestNewMultipleObjectsRequest(t *testing.T) {
 		// "&" should be XML escaped properly
 		{map[string][]string{"rft.genre": {"journal"}, "title": {"Journal of the Gilded Age & Progressive Era"}}, nil},
 		{map[string][]string{"rft.genre": {"book"}, "rft.btitle": {"dune"}}, nil},
+		// If genre is missing, automatically add genre param with value of "journal"
+		{map[string][]string{"title": {"Journal of the Gilded Age & Progressive Era"}}, nil},
 	}
 
 	for _, testCase := range tests {

@@ -177,6 +177,12 @@ func parseMultipleObjectsRequestParams(queryStringValues url.Values) (multipleOb
 		return params, fmt.Errorf("no valid querystring values to parse")
 	}
 
+	// "Add support for OpenURLs with no genre parameter"
+	// https://nyu-lib.monday.com/boards/765008773/pulses/4036893558
+	if (*rfts)["genre"] == nil {
+		(*rfts)["genre"] = []string{defaultGenre}
+	}
+
 	genre, err := validGenre((*rfts)["genre"])
 	if err != nil {
 		return params, fmt.Errorf("genre is not valid: %v", err)

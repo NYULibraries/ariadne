@@ -43,5 +43,10 @@
         "key": "design-of-led-light-therapy-device-based-on-free-form-lens",
         "name": "Design of LED light therapy device based on free-form lens.",
         "queryString": "genre=article&isbn=&issn=0277786X&title=Proceedings%20of%20SPIE&volume=12461&issue=&date=20230305&atitle=Design%20of%20LED%20light%20therapy%20device%20based%20on%20free-form%20lens.&aulast=Feng,%20Zefeng&spage=1246106&sid=EBSCO:Complementary%20Index&pid=Feng,%20Zefeng15990463220230305Complementary%20Index"
+    },
+    {
+        "key": "moral-psychology-is-relationship-regulation",
+        "name": "Moral psychology is relationship regulation: moral motives for unity, hierarchy, equality, and proportionality.",
+        "queryString": "sid=google&auinit=TS&aulast=Rai&atitle=Moral+psychology+is+relationship+regulation:+moral+motives+for+unity,+hierarchy,+equality,+and+proportionality.&id=doi:10.1037/a0021867&title=Psychological+Review&volume=118&issue=1&date=2011&spage=57&issn=0033-295X"
     }
 ]

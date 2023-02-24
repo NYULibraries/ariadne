@@ -8,6 +8,11 @@ import (
 // SFX service URL
 const DefaultSFXURL = "http://sfx.library.nyu.edu/sfxlcl41"
 
+// "Add support for OpenURLs with no genre parameter"
+// https://nyu-lib.monday.com/boards/765008773/pulses/4036893558
+// If genre unspecified, default genre to 'journal' https://github.com/team-umlaut/umlaut/blob/b954895e0aa0a7cd0a9ec6bb716c1886c813601e/app/service_adaptors/sfx.rb#L642
+const defaultGenre = "journal"
+
 var sfxURL = DefaultSFXURL
 
 func Do(request *MultipleObjectsRequest) (*MultipleObjectsResponse, error) {
