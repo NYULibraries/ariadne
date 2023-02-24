@@ -154,6 +154,14 @@ func parseMultipleObjectsRequestParams(queryStringValues url.Values) (multipleOb
 		if !validQueryParamNameRegexp.MatchString(queryName) {
 			continue
 		}
+
+		// Drop if there is also a query param that has the same name but with "rft."-prefix.
+		// We are allow with and without prefix, but if both exist, we drop the
+		// non-prefixed param.
+		if _, ok := queryStringValues[fmt.Sprintf("rft.%s", queryName)]; ok {
+			continue
+		}
+
 		// Deal with encoded ampersands in param values.
 		// Example: title=Journal%20of%20the%20Gilded%20Age%20%26%20Progressive%20Era
 		// If the ampersands are not escaped, the construction of the XML for the
