@@ -3,10 +3,31 @@ import Citation from './Citation';
 
 describe('Citation', () => {
   it('renders the genre when present', () => {
-    window.history.pushState({}, null, '?genre=Journal');
+    window.history.pushState({}, null, '?genre=journal');
     const { queryByText } = render(<Citation />);
 
     expect(queryByText('Journal')).toBeInTheDocument();
+  });
+
+  it('renders the genre when present with rft prefix', () => {
+    window.history.pushState({}, null, '?rft.genre=article');
+    const { queryByText } = render(<Citation />);
+
+    expect(queryByText('Article')).toBeInTheDocument();
+  });
+
+  it('renders the genre when present for book chapters', () => {
+    window.history.pushState({}, null, '?genre=bookitem');
+    const { queryByText } = render(<Citation />);
+
+    expect(queryByText('Book Chapter')).toBeInTheDocument();
+  });
+
+  it('renders the genre when present and uppercased', () => {
+    window.history.pushState({}, null, '?genre=PrEPrINt');
+    const { queryByText } = render(<Citation />);
+
+    expect(queryByText('Pre-print')).toBeInTheDocument();
   });
 
   it('renders the title when present', () => {

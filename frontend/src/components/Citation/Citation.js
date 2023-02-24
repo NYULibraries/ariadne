@@ -4,6 +4,22 @@ const Citation = () => {
 
   const params = (new URL(document.location)).searchParams;
 
+  // thanks to umlaut: https://github.com/NYULibraries/umlaut/blob/master/config/locales/en.yml#L28-L43
+  const genres = {
+    book: "Book",
+    bookitem: "Book Chapter",
+    conference: "Conference",
+    proceeding: "Proceeding",
+    report: "Report",
+    document: "Document",
+    journal: "Journal",
+    issue: "Issue",
+    article: "Article",
+    preprint: "Pre-print",
+    dissertation: "Dissertation",        
+    unknown: "" 
+  }
+
   const citation = {
     article_title: params.get("rft.atitle") || params.get("atitle"),
     journal_title: params.get("rft.jtitle") || params.get("jtitle"),
@@ -37,7 +53,7 @@ const Citation = () => {
 
   return (
     <div>
-      {citation.genre && <p className="resource-type">{citation.genre}</p>}
+      {citation.genre && <p className="resource-type">{genres[citation.genre.toLowerCase()]}</p>}
       {citation.article_title && <h2 className="title">{citation.article_title}</h2>}
       <p>
         {citation.author}
