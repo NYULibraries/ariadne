@@ -30,11 +30,26 @@ describe('Citation', () => {
     expect(queryByText('Pre-print')).toBeInTheDocument();
   });
 
-  it('renders the title when present', () => {
+  it('renders the title when present for an article', () => {
     window.history.pushState({}, null, '?atitle=Example+Article+Title');
     const { queryByText } = render(<Citation />);
 
     expect(queryByText('Example Article Title')).toBeInTheDocument();
+  });
+
+  it('renders the title when present for a book', () => {
+    window.history.pushState({}, null, '?btitle=Sketching+user+experiences+:+getting+the+design+right+and+the+right+design');
+    const { queryByText } = render(<Citation />);
+
+    expect(queryByText('Sketching user experiences : getting the design right and the right design')).toBeInTheDocument();
+  });
+
+  it('renders the title and container title when present for a book chapter', () => {
+    window.history.pushState({}, null, '?atitle=Theorizing Matriarchy in Africa: Kinship Ideologies and Systems in Africa and Europe.&aulast=Amadiume&aufirst=Ifi&title=Re-inventing Africa: Matriarchy, Religion, and Culture');
+    const { queryByText } = render(<Citation />);
+
+    expect(queryByText('Theorizing Matriarchy in Africa: Kinship Ideologies and Systems in Africa and Europe.')).toBeInTheDocument();
+    expect(queryByText('Published in Re-inventing Africa : matriarchy, religion, and culture')).toBeInTheDocument();
   });
 
   it('renders the author and date when both are present', () => {
@@ -60,6 +75,13 @@ describe('Citation', () => {
     expect(queryByText('9780080552903')).toBeInTheDocument();
   });
 
+  it('does not render ISBN when empty', () => {
+    window.history.pushState({}, null, '?isbn=&title=something');
+    const { queryByText } = render(<Citation />);
+
+    expect(queryByText('ISBN:')).not.toBeInTheDocument();
+  });
+
   it('renders the publisher when present', () => {
     window.history.pushState({}, null, '?rft.pub=Elsevier/Morgan+Kaufmann');
     const { queryByText } = render(<Citation />);
@@ -75,7 +97,7 @@ describe('Citation', () => {
 
     expect(queryByText('Article')).toBeInTheDocument();
     expect(queryByText(/1992/)).toBeInTheDocument();
-    expect(queryByText('Published in Journal')).not.toBeInTheDocument();
+    expect(queryByText('Published in')).not.toBeInTheDocument();
     expect(queryByText('Test Article Title')).toBeInTheDocument();
     expect(queryByText('Volume ')).toBeNull();
     expect(queryByText('Issue ')).toBeNull();

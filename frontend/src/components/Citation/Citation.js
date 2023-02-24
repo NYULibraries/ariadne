@@ -20,14 +20,20 @@ const Citation = () => {
     unknown: "" 
   }
 
+  //const getNonEmptyParam = (paramName) => {
+  //  const value = params.get(paramName);
+  //  //if (!value || value.length === 0)
+  //  //  return null;
+  //  return value;
+  //}
+
   const getOpenUrlParam = (paramName) => {
+    //return getNonEmptyParam("rft." + paramName) || getNonEmptyParam(paramName);
     return params.get("rft." + paramName) || params.get(paramName);
   }
 
   const citation = {
     genre: getOpenUrlParam("genre"),
-    article_title: getOpenUrlParam("atitle"),
-    journal_title: getOpenUrlParam("jtitle"),
     volume: getOpenUrlParam("volume"),
     issue: getOpenUrlParam("issue"),
     start_page: getOpenUrlParam("spage"),
@@ -38,15 +44,22 @@ const Citation = () => {
     date: getOpenUrlParam("date"),
     author: [getOpenUrlParam("aulast"), getOpenUrlParam("aufirst")].join(", "),
   };
-  
-  //const citation = metadataPlaceholders;
 
+  // if we have atitle, assume we need a container title; otherwise, no container needed
+  // logic from: https://github.com/NYULibraries/umlaut/blob/master/app/models/referent.rb#L288-L303
+  if (getOpenUrlParam("atitle")) {
+    citation.item_title = getOpenUrlParam("atitle");
+    citation.container_title = getOpenUrlParam("title") || getOpenUrlParam("btitle") || getOpenUrlParam("jtitle");
+  } else {
+    citation.item_title = getOpenUrlParam("title") || getOpenUrlParam("btitle") || getOpenUrlParam("jtitle");
+  }
+  
   const renderCitation = (citation) => {
-    if (citation.journal_title || citation.volume || citation.issue || citation.start_page || citation.end_page) {
+    if (citation.container_title || citation.volume || citation.issue || citation.start_page || citation.end_page) {
       return (
         <p style={{ margin: '0 0 10px' }}>
-          <span style={{ boxSizing: 'border-box' }}>{citation.journal_title && 'Published in Journal'}</span>
-          <span style={{ fontStyle: 'italic' }}>{citation.journal_title && citation.journal_title + '.'}</span>
+          <span style={{ boxSizing: 'border-box' }}>{citation.container_title && 'Published in '}</span>
+          <span style={{ fontStyle: 'italic' }}>{citation.container_title && citation.container_title + '.'}</span>
           {citation.volume && 'Volume ' + citation.volume + '.'}
           {citation.issue && 'Issue ' + citation.issue + '.'}
           {citation.start_page && 'Page ' + citation.start_page}
@@ -60,7 +73,7 @@ const Citation = () => {
   return (
     <div>
       {citation.genre && <p className="resource-type">{genres[citation.genre.toLowerCase()]}</p>}
-      {citation.article_title && <h2 className="title">{citation.article_title}</h2>}
+      {citation.item_title && <h2 className="title">{citation.item_title}</h2>}
       <p>
         {citation.author}
         {citation.author && citation.date && ( <span>•</span>)}
