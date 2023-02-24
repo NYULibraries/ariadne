@@ -132,23 +132,23 @@ func parseMultipleObjectsRequestParams(queryStringValues url.Values) (multipleOb
 
 	rfts := &map[string][]string{}
 
-	for k, v := range queryStringValues {
+	for queryName, queryValue := range queryStringValues {
 		// Deal with encoded ampersands in param values.
 		// Example: title=Journal%20of%20the%20Gilded%20Age%20%26%20Progressive%20Era
 		// If the ampersands are not escaped, the construction of the XML for the
 		// SFX request body will fail.
-		escapedValue, err := escapeQueryParamValuesForXML(v)
+		escapedValue, err := escapeQueryParamValuesForXML(queryValue)
 		if err != nil {
-			return params, fmt.Errorf("unable to XML escape value for query string param %s: %v", k, err)
+			return params, fmt.Errorf("unable to XML escape value for query string param %s: %v", queryName, err)
 		}
 		// Strip the "rft." prefix from the param name and map to valid OpenURL fields
-		if strings.HasPrefix(k, "rft.") {
+		if strings.HasPrefix(queryName, "rft.") {
 			// E.g. "rft.book" becomes "book"
-			newKey := strings.Split(k, ".")[1]
+			newKey := strings.Split(queryName, ".")[1]
 			(*rfts)[newKey] = escapedValue
 			// Without "rft." prefix, use the whole param name
 		} else {
-			(*rfts)[k] = escapedValue
+			(*rfts)[queryName] = escapedValue
 		}
 	}
 
