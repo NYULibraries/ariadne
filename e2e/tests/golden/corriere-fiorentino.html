@@ -49,6 +49,12 @@
             background-color: #F7EDA3;
         }
 
+        .jumbotron h1 {
+            font-size: 1.8em;
+            font-weight: 400;
+            line-height: 1.2;
+        }
+
         .i-am-centered {
             display: flex;
             margin: 18px 0px 0px 118px;
@@ -77,14 +83,14 @@
             color: #6c07ae;
         }
 
+        .row h3 {
+            font-size: 1.5em;
+            font-weight: 400;
+            line-height: 1.2;
+        }
 
         .ask-librarian {
             margin-top: 11rem;
-        }
-
-
-        h6 {
-            color: #6c07ae;
         }
 
         /* 
@@ -152,9 +158,6 @@
             margin: 0;
             text-transform: capitalize;
         }
-
-
-
 
         /* E2E TEST EDIT: sourceMappingURL comments elided */
     </style>
@@ -12697,49 +12700,54 @@
             <nav class="color-nav navbar navbar-expand-lg navbar-light">
                 <div class="container"><button aria-controls="basic-navbar-nav" type="button" aria-label="Toggle navigation" class="navbar-toggler collapsed"><span class="navbar-toggler-icon"></span></button>
                     <div class="navbar-collapse collapse" id="basic-navbar-nav">
-                        <div class="me-auto navbar-nav"><a href="http://library.nyu.edu" data-rr-ui-event-key="http://library.nyu.edu" class="nav-link"><img class="image" src="https://cdn.library.nyu.edu/images/nyulibraries-logo.svg" alt="NYU Libraries logo" width="220" height="60"></a></div>
+                        <div class="me-auto navbar-nav"><a href="http://library.nyu.edu" data-rr-ui-event-key="http://library.nyu.edu" class="nav-link"><img class="image" src="https://cdn.library.nyu.edu/images/nyulibraries-logo.svg" alt="NYU Libraries logo - click to go to the NYU Libraries main page" width="220" height="60"></a></div>
                     </div>
                 </div>
             </nav>
-            <div class="jumbotron">
-                <div class="container text-center">
-                    <p>Displaying search results...</p>
-                    <p>Note: Alternate titles might have matched your search terms</p>
+            <main>
+                <div class="jumbotron">
+                    <div class="container text-center">
+                        <h1>Displaying search results...</h1>
+                        <p>Note: Alternate titles might have matched your search terms</p>
+                    </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="row row-cols-md-12">
-                    <div class="col-md-8">
-                        <div class="list-group">
-                            <div class="list-group-item list-group-item-action flex-column border-0">
-                                <div>
-                                    <p class="resource-type">article</p>
-                                    <h2 class="title">Informed consent and the geriatric dental patient</h2>
-                                    <p>Odom, John G <span>•</span> 1992</p>
-                                    <p style="margin: 0px 0px 10px;"><span style="box-sizing: border-box;">Published in Journal</span><span style="font-style: italic;">Special Care in Dentistry.</span>Volume 12.Issue 5.Page 202-206.</p>
-                                    <dl class="citation-info">
-                                        <dt>ISSN:</dt>
-                                        <dd>0275-1879</dd>
-                                    </dl>
+                <div class="container">
+                    <div class="row row-cols-md-12">
+                        <div class="col-md-8">
+                            <div class="list-group">
+                                <div class="list-group-item list-group-item-action flex-column border-0">
+                                    <div>
+                                        <p class="resource-type">article</p>
+                                        <h2 class="title">Informed consent and the geriatric dental patient</h2>
+                                        <p>Odom, John G <span>•</span> <span aria-label="Publication date">1992</span></p>
+                                        <p style="margin: 0px 0px 10px;"><span style="box-sizing: border-box;">Published in Journal</span><span style="font-style: italic;">Special Care in Dentistry.</span>Volume 12.Issue 5.Page 202-206.</p>
+                                        <dl class="citation-info">
+                                            <dt>ISSN:</dt>
+                                            <dd title="International Standard Serial Number">0275-1879</dd>
+                                        </dl>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="list-group-item list-group-item-action flex-column border-0">
-                                <div class="row">
-                                    <h6><a href="
+                                <div class="list-group-item list-group-item-action flex-column border-0">
+                                    <div class="row">
+                                        <h3><a href="
                     http://proxy.library.nyu.edu/login?url=https://www.pressreader.com/italy/corriere-fiorentino
-                " target="_blank" rel="noopener noreferrer">PressReader</a></h6><small></small>
+                " target="_blank" rel="noopener noreferrer">PressReader</a></h3>
+                                        <p></p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="ask-librarian">
-                            <h5>Need help?</h5>
-                            <h6><a href="https://library.nyu.edu/ask/" target="_blank" rel="noopener noreferrer">Ask a Librarian</a></h6>
+                        <div class="col-md-4">
+                            <aside>
+                                <div class="ask-librarian">
+                                    <h4>Need help?</h4>
+                                    <h5><a href="https://library.nyu.edu/ask/" target="_blank" rel="noopener noreferrer">Ask a Librarian</a></h5>
+                                </div>
+                            </aside>
                         </div>
                     </div>
                 </div>
-            </div>
+            </main>
         </div>
     </div>
     <!--
