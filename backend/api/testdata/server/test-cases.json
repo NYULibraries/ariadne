@@ -48,5 +48,10 @@
         "key": "moral-psychology-is-relationship-regulation",
         "name": "Moral psychology is relationship regulation: moral motives for unity, hierarchy, equality, and proportionality.",
         "queryString": "sid=google&auinit=TS&aulast=Rai&atitle=Moral+psychology+is+relationship+regulation:+moral+motives+for+unity,+hierarchy,+equality,+and+proportionality.&id=doi:10.1037/a0021867&title=Psychological+Review&volume=118&issue=1&date=2011&spage=57&issn=0033-295X"
+    },
+    {
+        "key": "editorial-cartoon",
+        "name": "Editorial cartoon",
+        "queryString": "url_ver=Z39.88-2004&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&genre=unknown&sid=ProQ:ProQ:midwestnews1&atitle=Editorial+cartoon&title=Detroit+News&issn=10552715&date=2002-12-15&volume=&issue=&spage=A18&au=Payne,+Henry&isbn=&jtitle=Detroit+News&btitle=&rft_id=info:eric/&rft_id=info:doi/"
     }
 ]
