@@ -148,17 +148,6 @@ func getTestdataFileContents(filename string) (string, error) {
 	return string(bytes), nil
 }
 
-func getTestCases() ([]TestCase, error) {
-	testCases := []TestCase{}
-
-	err := json.Unmarshal(testCasesJSON, &testCases)
-	if err != nil {
-		return testCases, err
-	}
-
-	return testCases, nil
-}
-
 func goldenFile(testCase TestCase) string {
 	return "testdata/server/golden/" + testCase.Key + ".json"
 }
