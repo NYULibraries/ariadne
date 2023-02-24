@@ -23,6 +23,8 @@ func TestNewMultipleObjectsRequest(t *testing.T) {
 		// "&" should be XML escaped properly
 		{map[string][]string{"rft.genre": {"journal"}, "title": {"Journal of the Gilded Age & Progressive Era"}}, nil},
 		{map[string][]string{"rft.genre": {"book"}, "rft.btitle": {"dune"}}, nil},
+		// If genre is missing, automatically add genre param with value of "journal"
+		{map[string][]string{"title": {"Journal of the Gilded Age & Progressive Era"}}, nil},
 	}
 
 	for _, testCase := range tests {
@@ -80,10 +82,17 @@ func TestParseMultipleObjectsRequestParams(t *testing.T) {
 		expected      *map[string][]string
 		expectedError error
 	}{
-		{map[string][]string{"genre": {"book"}, "rft.genre": {"book"}}, &map[string][]string{"genre": {"book"}}, nil},
-		{map[string][]string{"genre": {"book"}, "rft.genre": {"journal", "book"}}, &map[string][]string{"genre": {"journal", "book"}}, nil},
-		{map[string][]string{"genre": {"book"}, "rft.genre": {"journal"}}, &map[string][]string{"genre": {"journal"}}, nil},
+		// Even though "rft." prefix is supposed to be required, many past requests
+		// have had non-prefixed equivalent params, so we've decided to allow them.
 		{map[string][]string{"genre": {"book"}}, &map[string][]string{"genre": {"book"}}, nil},
+
+		// "rft."-prefixed query params should always have priority over their non-prefixed equivalents.
+		// When we first made the change from requiring the prefix to not requiring it,
+		// we had a bug where priority was determined by ordering, so we test opposite
+		// orderings to prevent regression.
+		{map[string][]string{"genre": {"book"}, "rft.genre": {"journal", "book"}}, &map[string][]string{"genre": {"journal", "book"}}, nil},
+		{map[string][]string{"rft.genre": {"journal", "book"}, "genre": {"book"}}, &map[string][]string{"genre": {"journal", "book"}}, nil},
+
 		{map[string][]string{"genre": {"podcast"}}, nil, errors.New("error")},
 	}
 
