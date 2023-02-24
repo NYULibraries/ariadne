@@ -60,6 +60,14 @@ describe('Citation', () => {
     expect(queryByText('9780080552903')).toBeInTheDocument();
   });
 
+  it('renders the publisher when present', () => {
+    window.history.pushState({}, null, '?rft.pub=Elsevier/Morgan+Kaufmann');
+    const { queryByText } = render(<Citation />);
+
+    expect(queryByText('Publisher:')).toBeInTheDocument();
+    expect(queryByText('Elsevier/Morgan Kaufmann')).toBeInTheDocument();
+  });
+
   it('should not display any empty values in the rendered output', () => {
 
     window.history.pushState({}, null, '?genre=Article&atitle=Test+Article+Title&date=1992');

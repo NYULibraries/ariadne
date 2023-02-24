@@ -32,6 +32,7 @@ const Citation = () => {
     issue: getOpenUrlParam("issue"),
     start_page: getOpenUrlParam("spage"),
     end_page: getOpenUrlParam("epage"),
+    pub: getOpenUrlParam("pub"),
     issn: getOpenUrlParam("issn"),
     isbn: getOpenUrlParam("isbn"),
     date: getOpenUrlParam("date"),
@@ -71,6 +72,8 @@ const Citation = () => {
           {citation.issn && <dd>{citation.issn}</dd>}
           {citation.isbn && (<dt>ISBN:</dt>)}
           {citation.isbn && <dd>{citation.isbn}</dd>}
+          {citation.pub && (<dt>Publisher:</dt>)}
+          {citation.pub && <dd>{citation.pub}</dd>}
         </dl>
     </div>
   );
