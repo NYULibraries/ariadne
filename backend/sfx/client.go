@@ -27,13 +27,14 @@ func SetSFXURL(dependencyInjectedURL string) {
 // Is this correct? See genres list on NISO spec page 59: https://groups.niso.org/higherlogic/ws/public/download/14833/z39_88_2004_r2010.pdf
 func genresList() (genresList map[string]bool) {
 	genresList = map[string]bool{
-		"journal":    true,
+		"bookitem":   true,
+		"article":    true,
 		"book":       true,
 		"conference": true,
-		"article":    true,
+		"journal":    true,
 		"preprint":   true,
 		"proceeding": true,
-		"bookitem":   true,
+		"unknown":    true,
 	}
 
 	return
