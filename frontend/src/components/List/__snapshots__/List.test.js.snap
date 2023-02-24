@@ -1363,6 +1363,169 @@ exports[`Backend success Our Lady of everyday life : la Virgen de Guadalupe and 
 </DocumentFragment>
 `;
 
+exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the Commercial Apparatus of Life Magazine. [unescaped ampersand in \`title\` query param value] renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="jumbotron"
+  >
+    <div
+      class="container text-center"
+    >
+      <p>
+        Displaying search results...
+      </p>
+      <p>
+        Note: Alternate titles might have matched your search terms
+      </p>
+    </div>
+  </div>
+  <div
+    class="container"
+  >
+    <div
+      class="row row-cols-md-12"
+    >
+      <div
+        class="col-md-8"
+      >
+        <div
+          class="list-group"
+        >
+          <div
+            class="list-group-item list-group-item-action flex-column border-0"
+          >
+            <div>
+              <p
+                class="resource-type"
+              >
+                article
+              </p>
+              <h2
+                class="title"
+              >
+                Informed consent and the geriatric dental patient
+              </h2>
+              <p>
+                Odom, John G 
+                <span>
+                  •
+                </span>
+                 1992
+              </p>
+              <p
+                style="margin: 0px 0px 10px;"
+              >
+                <span
+                  style="box-sizing: border-box;"
+                >
+                  Published in Journal
+                </span>
+                <span
+                  style="font-style: italic;"
+                >
+                  Special Care in Dentistry.
+                </span>
+                Volume 12.Issue 5.Page 202-206.
+              </p>
+              <dl
+                class="citation-info"
+              >
+                <dt>
+                  ISSN:
+                </dt>
+                <dd>
+                  0275-1879
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <div
+            class="list-group-item list-group-item-action flex-column border-0"
+          >
+            <div
+              class="row"
+            >
+              <h6>
+                <a
+                  href="http://proxy.library.nyu.edu/login?url=https://www.cambridge.org/core/product/113A938A653BAE7C42654C34EC40B874"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Cambridge University Press Journals Complete
+                </a>
+              </h6>
+              <small>
+                Available from 2002/01 volume: 1 issue: 1
+              </small>
+            </div>
+          </div>
+          <div
+            class="list-group-item list-group-item-action flex-column border-0"
+          >
+            <div
+              class="row"
+            >
+              <h6>
+                <a
+                  href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?title=JOURNAL+OF+THE+GILDED+AGE+AND+PROGRESSIVE+ERA&genre=article&volume=20&issue=2&sid=Primo&date=20210401&atitle=publish+the+picture+at+your+peril&issn=1537-7814&spage=301"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  EBSCOhost America History and Life with Full Text
+                </a>
+              </h6>
+              <small>
+                Available from 2008/07/01
+              </small>
+            </div>
+          </div>
+          <div
+            class="list-group-item list-group-item-action flex-column border-0"
+          >
+            <div
+              class="row"
+            >
+              <h6>
+                <a
+                  href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?spage=301&issn=1537-7814&res_dat=xri%3Apqm&url_ver=Z39.88-2004&date=2021-04-01&jtitle=JOURNAL%2BOF%2BTHE%2BGILDED%2BAGE%2BAND%2BPROGRESSIVE%2BERA&issue=2&genre=article&volume=20&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Aarticle"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  ProQuest Central
+                </a>
+              </h6>
+              <small>
+                Available from 2011/01/01
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-md-4"
+      >
+        <div
+          class="ask-librarian"
+        >
+          <h5>
+            Need help?
+          </h5>
+          <h6>
+            <a
+              href="https://library.nyu.edu/ask/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Ask a Librarian
+            </a>
+          </h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the Commercial Apparatus of Life Magazine. renders correctly 1`] = `
 <DocumentFragment>
   <div
