@@ -20,17 +20,21 @@ const Citation = () => {
     unknown: "" 
   }
 
+  const getOpenUrlParam = (paramName) => {
+    return params.get("rft." + paramName) || params.get(paramName);
+  }
+
   const citation = {
-    article_title: params.get("rft.atitle") || params.get("atitle"),
-    journal_title: params.get("rft.jtitle") || params.get("jtitle"),
-    volume: params.get("rft.volume") || params.get("volume"),
-    issue: params.get("rft.issue") || params.get("issue"),
-    start_page: params.get("rft.spage") || params.get("spage"),
-    end_page: params.get("rft.epage") || params.get("epage"),
-    genre: params.get("rft.genre") || params.get("genre"),
-    issn: params.get("rft.issn") || params.get("issn"),
-    date: params.get("rft.date") || params.get("date"),
-    author: (params.get("rft.aulast") || params.get("aulast")) + ", " + (params.get("rft.aufirst") || params.get("aufirst"))
+    genre: getOpenUrlParam("genre"),
+    article_title: getOpenUrlParam("atitle"),
+    journal_title: getOpenUrlParam("jtitle"),
+    volume: getOpenUrlParam("volume"),
+    issue: getOpenUrlParam("issue"),
+    start_page: getOpenUrlParam("spage"),
+    end_page: getOpenUrlParam("epage"),
+    issn: getOpenUrlParam("issn"),
+    date: getOpenUrlParam("date"),
+    author: [getOpenUrlParam("aulast"), getOpenUrlParam("aufirst")].join(", "),
   };
   
   //const citation = metadataPlaceholders;
