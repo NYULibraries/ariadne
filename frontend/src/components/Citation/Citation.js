@@ -5,7 +5,7 @@ const Citation = () => {
   const params = (new URL(document.location)).searchParams;
 
   // thanks to umlaut: https://github.com/NYULibraries/umlaut/blob/master/config/locales/en.yml#L28-L43
-  const genres = {
+  const genresDisplayText = {
     book: "Book",
     bookitem: "Book Chapter",
     conference: "Conference",
@@ -72,7 +72,7 @@ const Citation = () => {
 
   return (
     <div>
-      {citation.genre && <p className="resource-type">{genres[citation.genre.toLowerCase()]}</p>}
+      {citation.genre && <p className="resource-type">{genresDisplayText[citation.genre.toLowerCase()]}</p>}
       {citation.item_title && <h2 className="title">{citation.item_title}</h2>}
       <p>
         {citation.author}
