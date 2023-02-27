@@ -42,8 +42,37 @@ const Citation = () => {
     issn: getOpenUrlParam("issn"),
     isbn: getOpenUrlParam("isbn"),
     date: getOpenUrlParam("date"),
-    author: [getOpenUrlParam("aulast"), getOpenUrlParam("aufirst")].join(", "),
   };
+  
+  // author either specified as "au", a series of separate params ("aufirst", "aulast", "auinit", "auinit1", auinitm"), 
+  // or "aucorp"
+  // thanks to umlaut: https://github.com/NYULibraries/umlaut/blob/master/app/models/referent.rb#L320-L340
+  const getAuthorDisplayText = () => {
+    var author;
+    if ((author = getOpenUrlParam("au"))) {
+      return author;
+    } else if ((author = getOpenUrlParam("aulast"))) {
+      var aufirst;
+      if ((aufirst = getOpenUrlParam("aufirst"))) {
+        return author + ", " + aufirst;
+      } else {
+        var auinit;
+        if ((auinit = getOpenUrlParam("auinit"))) {
+          return author + ", " + auinit;
+        } else {
+          if ((auinit = getOpenUrlParam("auinit1")))
+            author += ", " + auinit;
+          if ((auinit = getOpenUrlParam("auinitm")))
+            author += auinit;
+          return author;
+        }
+      }
+    } else if ((author = getOpenUrlParam("aucorp"))) {
+      return author;
+    }
+  }
+
+  citation.author = getAuthorDisplayText();
 
   // if we have atitle, assume we need a container title; otherwise, no container needed
   // logic from: https://github.com/NYULibraries/umlaut/blob/master/app/models/referent.rb#L288-L303

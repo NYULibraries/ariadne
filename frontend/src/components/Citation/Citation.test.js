@@ -61,6 +61,42 @@ describe('Citation', () => {
   //  expect(queryByText('Re-inventing Africa: Matriarchy, Religion, and Culture')).toBeInTheDocument();
   //});
 
+  it('prefers au author to other author parameters', () => {
+    window.history.pushState({}, null, '?au=Doe,+Jane&aulast=Schmoe&aufirst=Joe&auinit=J&auinit1=J&auinitm=E&aucorp=Umbrella+Corp');
+    const { queryByText } = render(<Citation />);
+
+    expect(queryByText(/Doe, Jane/)).toBeInTheDocument();
+    expect(queryByText(/Schmoe/)).not.toBeInTheDocument();
+  });
+
+  it('prefers aufirst to other auinit parameters', () => {
+    window.history.pushState({}, null, '?aulast=Schmoe&aufirst=Joe&auinit=J&auinit1=V&auinitm=E&aucorp=Umbrella+Corp');
+    const { queryByText } = render(<Citation />);
+
+    expect(queryByText(/Schmoe, Joe/)).toBeInTheDocument();
+  });
+
+  it('prefers auinit to auinit1, auinitm parameters', () => {
+    window.history.pushState({}, null, '?aulast=Schmoe&auinit=J&auinit1=V&auinitm=E&aucorp=Umbrella+Corp');
+    const { queryByText } = render(<Citation />);
+
+    expect(queryByText(/Schmoe, J/)).toBeInTheDocument();
+  });
+
+  it('uses both auinit1, auinitm parameters in absence of other au first name params', () => {
+    window.history.pushState({}, null, '?aulast=Schmoe&auinit1=V&auinitm=E&aucorp=Umbrella+Corp');
+    const { queryByText } = render(<Citation />);
+
+    expect(queryByText(/Schmoe, VE/)).toBeInTheDocument();
+  });
+
+  it('uses aucorp in absence of all other author parameters', () => {
+    window.history.pushState({}, null, '?aucorp=Umbrella+Corp');
+    const { queryByText } = render(<Citation />);
+
+    expect(queryByText(/Umbrella Corp/)).toBeInTheDocument();
+  });
+
   it('renders the author and date when both are present', () => {
     window.history.pushState({}, null, '?aulast=Doe&aufirst=John&date=1999');
     const { queryByText } = render(<Citation />);
