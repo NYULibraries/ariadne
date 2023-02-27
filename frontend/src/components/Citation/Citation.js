@@ -59,11 +59,11 @@ const Citation = () => {
       return (
         <p style={{ margin: '0 0 10px' }}>
           <span style={{ boxSizing: 'border-box' }}>{citation.container_title && 'Published in '}</span>
-          <span style={{ fontStyle: 'italic' }}>{citation.container_title && citation.container_title + '.'}</span>
-          {citation.volume && 'Volume ' + citation.volume + '.'}
-          {citation.issue && 'Issue ' + citation.issue + '.'}
+          <span style={{ fontStyle: 'italic' }}>{citation.container_title && citation.container_title + '. '}</span>
+          {citation.volume && 'Volume ' + citation.volume + '. '}
+          {citation.issue && 'Issue ' + citation.issue + '. '}
           {citation.start_page && 'Page ' + citation.start_page}
-          {citation.end_page && '-' + citation.end_page + '.'}
+          {citation.end_page && '-' + citation.end_page + '. '}
         </p>
       );
     }
