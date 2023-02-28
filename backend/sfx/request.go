@@ -183,6 +183,7 @@ func parseMultipleObjectsRequestParams(queryStringValues url.Values) (multipleOb
 		if err != nil {
 			return params, fmt.Errorf("unable to XML escape value for query string param %s: %v", queryName, err)
 		}
+
 		// Strip the "rft." prefix from the param name and map to valid OpenURL fields
 		if strings.HasPrefix(queryName, "rft.") {
 			// E.g. "rft.book" becomes "book"
