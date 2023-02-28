@@ -187,8 +187,8 @@ func parseMultipleObjectsRequestParams(queryStringValues url.Values) (multipleOb
 		// Strip the "rft." prefix from the param name and map to valid OpenURL fields
 		if strings.HasPrefix(queryParamName, "rft.") {
 			// E.g. "rft.book" becomes "book"
-			newKey := strings.Split(queryParamName, ".")[1]
-			(*rfts)[newKey] = escapedValue
+			massagedQueryParamName := strings.Split(queryParamName, ".")[1]
+			(*rfts)[massagedQueryParamName] = escapedValue
 			// Without "rft." prefix, use the whole param name
 		} else {
 			(*rfts)[queryParamName] = escapedValue
