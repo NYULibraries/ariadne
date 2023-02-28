@@ -130,7 +130,7 @@ func isValidQueryParamName(queryParamName string) bool {
 	// string and cause the substrings to be interpreted as query names.
 	// Example: title=Journal%20of%20the%20Gilded%20Age%20%&%20Progressive%20Era
 	// This would lead to a queryName of " Progressive Era" in this loop, which
-	// would then cause construction of the XLM for teh SFX request body to
+	// would then cause construction of the XML for the SFX request body to
 	// fail due to this illegal XML element:
 	//               <rft: progressive era></rft: progressive era>
 	// There may be other edge case query strings which produce bad XML element
