@@ -169,29 +169,29 @@ func parseMultipleObjectsRequestParams(queryStringValues url.Values) (multipleOb
 
 	rfts := &map[string][]string{}
 
-	for queryName, queryValue := range queryStringValues {
-		if !isValidQueryParamName(queryName) {
+	for queryParamName, queryParamValue := range queryStringValues {
+		if !isValidQueryParamName(queryParamName) {
 			continue
 		}
 
 		// Check for "rft."-prefix or non-prefixed version of this query param
-		if isDuplicateQueryParam(queryName, queryStringValues) {
+		if isDuplicateQueryParam(queryParamName, queryStringValues) {
 			continue
 		}
 
-		escapedValue, err := escapeQueryParamValuesForXML(queryValue)
+		escapedValue, err := escapeQueryParamValuesForXML(queryParamValue)
 		if err != nil {
-			return params, fmt.Errorf("unable to XML escape value for query string param %s: %v", queryName, err)
+			return params, fmt.Errorf("unable to XML escape value for query string param %s: %v", queryParamName, err)
 		}
 
 		// Strip the "rft." prefix from the param name and map to valid OpenURL fields
-		if strings.HasPrefix(queryName, "rft.") {
+		if strings.HasPrefix(queryParamName, "rft.") {
 			// E.g. "rft.book" becomes "book"
-			newKey := strings.Split(queryName, ".")[1]
+			newKey := strings.Split(queryParamName, ".")[1]
 			(*rfts)[newKey] = escapedValue
 			// Without "rft." prefix, use the whole param name
 		} else {
-			(*rfts)[queryName] = escapedValue
+			(*rfts)[queryParamName] = escapedValue
 		}
 	}
 
