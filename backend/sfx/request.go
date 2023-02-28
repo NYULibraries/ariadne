@@ -89,6 +89,10 @@ func NewMultipleObjectsRequest(queryStringValues url.Values) (*MultipleObjectsRe
 	return multipleObjectsRequest, nil
 }
 
+// Deal with encoded ampersands in param values.
+// Example: title=Journal%20of%20the%20Gilded%20Age%20%26%20Progressive%20Era
+// If the ampersands are not escaped, the construction of the XML for the
+// SFX request body will fail.
 func escapeQueryParamValuesForXML(values []string) ([]string, error) {
 	var escapedValues []string
 	var err error
@@ -175,10 +179,6 @@ func parseMultipleObjectsRequestParams(queryStringValues url.Values) (multipleOb
 			continue
 		}
 
-		// Deal with encoded ampersands in param values.
-		// Example: title=Journal%20of%20the%20Gilded%20Age%20%26%20Progressive%20Era
-		// If the ampersands are not escaped, the construction of the XML for the
-		// SFX request body will fail.
 		escapedValue, err := escapeQueryParamValuesForXML(queryValue)
 		if err != nil {
 			return params, fmt.Errorf("unable to XML escape value for query string param %s: %v", queryName, err)
