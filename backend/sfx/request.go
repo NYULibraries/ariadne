@@ -114,6 +114,17 @@ func escapeQueryParamValuesForXML(values []string) ([]string, error) {
 	return escapedValues, err
 }
 
+func isDuplicateQueryParam(queryParamName string, urlValues url.Values) bool {
+	// Drop if there is also a query param that has the same name but with "rft."-prefix.
+	// We are allow with and without prefix, but if both exist, we drop the
+	// non-prefixed param.
+	if _, ok := urlValues[fmt.Sprintf("rft.%s", queryParamName)]; ok {
+		return true
+	} else {
+		return false
+	}
+}
+
 func isValidQueryParamName(queryParamName string) bool {
 	// Unescaped "&" characters in query param values can split the value
 	// string and cause the substrings to be interpreted as query names.
@@ -159,10 +170,8 @@ func parseMultipleObjectsRequestParams(queryStringValues url.Values) (multipleOb
 			continue
 		}
 
-		// Drop if there is also a query param that has the same name but with "rft."-prefix.
-		// We are allow with and without prefix, but if both exist, we drop the
-		// non-prefixed param.
-		if _, ok := queryStringValues[fmt.Sprintf("rft.%s", queryName)]; ok {
+		// Check for "rft."-prefix or non-prefixed version of this query param
+		if isDuplicateQueryParam(queryName, queryStringValues) {
 			continue
 		}
 
