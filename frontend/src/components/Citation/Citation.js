@@ -1,4 +1,4 @@
-//import PropTypes from 'prop-types';
+import { useEffect } from 'react';
 
 const Citation = () => {
 
@@ -20,15 +20,8 @@ const Citation = () => {
     unknown: "" 
   }
 
-  //const getNonEmptyParam = (paramName) => {
-  //  const value = params.get(paramName);
-  //  //if (!value || value.length === 0)
-  //  //  return null;
-  //  return value;
-  //}
-
+  // prefer rft prefixed params when we have them
   const getOpenUrlParam = (paramName) => {
-    //return getNonEmptyParam("rft." + paramName) || getNonEmptyParam(paramName);
     return params.get("rft." + paramName) || params.get(paramName);
   }
 
@@ -82,6 +75,11 @@ const Citation = () => {
   } else {
     citation.item_title = getOpenUrlParam("title") || getOpenUrlParam("btitle") || getOpenUrlParam("jtitle");
   }
+
+  // set page title based on item title
+  useEffect(() => {
+    document.title = 'GetIt | ' + citation.item_title;
+  }, [citation.item_title]);
   
   const renderCitation = (citation) => {
     if (citation.container_title || citation.volume || citation.issue || citation.start_page || citation.end_page) {
