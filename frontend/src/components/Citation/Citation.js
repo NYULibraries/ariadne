@@ -78,7 +78,10 @@ const Citation = () => {
 
   // set page title based on item title
   useEffect(() => {
-    document.title = 'GetIt | ' + citation.item_title;
+    if (citation.item_title)
+      document.title = 'GetIt | ' + citation.item_title;
+    else
+      document.title = 'GetIt';
   }, [citation.item_title]);
   
   const renderCitation = (citation) => {
