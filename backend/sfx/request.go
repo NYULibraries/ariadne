@@ -179,7 +179,7 @@ func parseMultipleObjectsRequestParams(queryStringValues url.Values) (multipleOb
 			continue
 		}
 
-		escapedValue, err := escapeQueryParamValuesForXML(queryParamValue)
+		massagedQueryParamValue, err := escapeQueryParamValuesForXML(queryParamValue)
 		if err != nil {
 			return params, fmt.Errorf("unable to XML escape value for query string param %s: %v", queryParamName, err)
 		}
@@ -191,7 +191,7 @@ func parseMultipleObjectsRequestParams(queryStringValues url.Values) (multipleOb
 			massagedQueryParamName = strings.Split(massagedQueryParamName, ".")[1]
 		}
 
-		(*rfts)[massagedQueryParamName] = escapedValue
+		(*rfts)[massagedQueryParamName] = massagedQueryParamValue
 	}
 
 	if reflect.DeepEqual(rfts, &map[string][]string{}) {
