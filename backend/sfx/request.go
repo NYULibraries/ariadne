@@ -114,6 +114,19 @@ func escapeQueryParamValuesForXML(values []string) ([]string, error) {
 	return escapedValues, err
 }
 
+func isValidQueryParamName(queryParamName string) bool {
+	// Unescaped "&" characters in query param values can split the value
+	// string and cause the substrings to be interpreted as query names.
+	// Example: title=Journal%20of%20the%20Gilded%20Age%20%&%20Progressive%20Era
+	// This would lead to a queryName of " Progressive Era" in this loop, which
+	// would then cause construction of the XLM for teh SFX request body to
+	// fail due to this illegal XML element:
+	//               <rft: progressive era></rft: progressive era>
+	// There may be other edge case query strings which produce bad XML element
+	// names.
+	return validQueryParamNameRegexp.MatchString(queryParamName)
+}
+
 func newMultipleObjectsHTTPRequest(requestXML string) (*http.Request, error) {
 	params := url.Values{}
 	params.Add("url_ctx_fmt", "info:ofi/fmt:xml:xsd:ctx")
@@ -142,16 +155,7 @@ func parseMultipleObjectsRequestParams(queryStringValues url.Values) (multipleOb
 	rfts := &map[string][]string{}
 
 	for queryName, queryValue := range queryStringValues {
-		// Unescaped "&" characters in query param values can split the value
-		// string and cause the substrings to be interpreted as query names.
-		// Example: title=Journal%20of%20the%20Gilded%20Age%20%&%20Progressive%20Era
-		// This would lead to a queryName of " Progressive Era" in this loop, which
-		// would then cause construction of the XLM for teh SFX request body to
-		// fail due to this illegal XML element:
-		//               <rft: progressive era></rft: progressive era>
-		// There may be other edge case query strings which produce bad XML element
-		// names.
-		if !validQueryParamNameRegexp.MatchString(queryName) {
+		if !isValidQueryParamName(queryName) {
 			continue
 		}
 
