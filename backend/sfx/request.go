@@ -15,6 +15,10 @@ import (
 	"time"
 )
 
+// For special handling of query strings with `rft.id` or `id` params that identify
+// DOIs
+const doiPrefix = "doi:"
+
 //go:embed templates/context-objects.xml
 var sfxRequestTemplate string
 
@@ -118,6 +122,20 @@ func escapeQueryParamValuesForXML(values []string) ([]string, error) {
 	return escapedValues, err
 }
 
+func existsDOIQueryParam(urlValues url.Values) bool {
+	// Check for non-prefixed param
+	if _, ok := urlValues["doi"]; ok {
+		return true
+	} else {
+		// Check for "rft."-prefixed param
+		if _, ok := urlValues["rft.doi"]; ok {
+			return true
+		}
+	}
+
+	return false
+}
+
 func isDuplicateQueryParam(queryParamName string, urlValues url.Values) bool {
 	// Drop if there is also a query param that has the same name but with "rft."-prefix.
 	// We are allow with and without prefix, but if both exist, we drop the
@@ -140,6 +158,17 @@ func isValidQueryParamName(queryParamName string) bool {
 	// There may be other edge case query strings which produce bad XML element
 	// names.
 	return validQueryParamNameRegexp.MatchString(queryParamName)
+}
+
+func makeDOIQueryParamValueFromIdQueryParamValue(idQueryParamValue []string) []string {
+	var doiValue = idQueryParamValue
+	for i, value := range doiValue {
+		if strings.HasPrefix(value, doiPrefix) {
+			doiValue[i] = strings.TrimPrefix(value, doiPrefix)
+		}
+	}
+
+	return doiValue
 }
 
 func newMultipleObjectsHTTPRequest(requestXML string) (*http.Request, error) {
@@ -189,6 +218,23 @@ func parseMultipleObjectsRequestParams(queryStringValues url.Values) (multipleOb
 		massagedQueryParamName := queryParamName
 		if strings.HasPrefix(massagedQueryParamName, "rft.") {
 			massagedQueryParamName = strings.Split(massagedQueryParamName, ".")[1]
+		}
+
+		// If id param starts with `doiPrefix` and `rft.doi` and `doi` are not
+		// already present in the query string, construct a `doi` query param.
+		if massagedQueryParamName == "id" {
+			if !existsDOIQueryParam(queryStringValues) {
+				makeDOIParam := false
+				for _, value := range massagedQueryParamValue {
+					if strings.HasPrefix(value, doiPrefix) {
+						makeDOIParam = true
+						break
+					}
+				}
+				if makeDOIParam {
+					(*rfts)["doi"] = makeDOIQueryParamValueFromIdQueryParamValue(massagedQueryParamValue)
+				}
+			}
 		}
 
 		(*rfts)[massagedQueryParamName] = massagedQueryParamValue
