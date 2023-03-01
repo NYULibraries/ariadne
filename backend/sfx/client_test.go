@@ -38,6 +38,7 @@ func TestValidGenre(t *testing.T) {
 		{[]string{"book", "book"}, "book", nil},
 		{[]string{"journal", "book"}, "journal", nil},
 		{[]string{"book"}, "book", nil},
+		{[]string{"unknown"}, "unknown", nil},
 		{[]string{"wrong"}, "", errors.New("error")},
 	}
 

@@ -8,6 +8,11 @@ import (
 // SFX service URL
 const DefaultSFXURL = "http://sfx.library.nyu.edu/sfxlcl41"
 
+// "Add support for OpenURLs with no genre parameter"
+// https://nyu-lib.monday.com/boards/765008773/pulses/4036893558
+// If genre unspecified, default genre to 'journal' https://github.com/team-umlaut/umlaut/blob/b954895e0aa0a7cd0a9ec6bb716c1886c813601e/app/service_adaptors/sfx.rb#L642
+const defaultGenre = "journal"
+
 var sfxURL = DefaultSFXURL
 
 func Do(request *MultipleObjectsRequest) (*MultipleObjectsResponse, error) {
@@ -18,17 +23,21 @@ func SetSFXURL(dependencyInjectedURL string) {
 	sfxURL = dependencyInjectedURL
 }
 
-// A list of the valid genres as defined by the OpenURL spec
-// Is this correct? See genres list on NISO spec page 59: https://groups.niso.org/higherlogic/ws/public/download/14833/z39_88_2004_r2010.pdf
+// Source: https://github.com/NYULibraries/umlaut/blob/105593ef5237f5b4b3de76b091c73dfc9e3e722f/config/locales/en.yml#L28-L43
 func genresList() (genresList map[string]bool) {
 	genresList = map[string]bool{
-		"journal":    true,
-		"book":       true,
-		"conference": true,
-		"article":    true,
-		"preprint":   true,
-		"proceeding": true,
-		"bookitem":   true,
+		"article":      true,
+		"book":         true,
+		"bookitem":     true,
+		"conference":   true,
+		"dissertation": true,
+		"document":     true,
+		"issue":        true,
+		"journal":      true,
+		"preprint":     true,
+		"proceeding":   true,
+		"report":       true,
+		"unknown":      true,
 	}
 
 	return

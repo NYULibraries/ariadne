@@ -8,5 +8,50 @@
         "key": "the-new-yorker",
         "name": "The New Yorker",
         "queryString": "url_ver=Z39.88-2004&url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&ctx_ver=Z39.88-2004&ctx_tim=2021-10-22T12%3A29%3A27-04%3A00&ctx_id=&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rft.aulast=Ross&rft.date=2002&rft.eissn=2163-3827&rft.genre=journal&rft.issn=0028-792X&rft.jtitle=New+Yorker&rft.language=eng&rft.lccn=++2011201780&rft.object_id=110975413975944&rft.oclcnum=909782404&rft.place=New+York&rft.private_data=909782404<fssessid>0<%2Ffssessid>&rft.pub=F-R+Pub.+Corp.&rft.stitle=NEW+YORKER&rft.title=New+Yorker&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft_id=info%3Aoclcnum%2F909782404&rft_id=urn%3AISSN%3A0028-792X&req.ip=209.150.44.95&rfr_id=info%3Asid%2FFirstSearch%3AWorldCat"
+    },
+    {
+        "key": "modelling-modular-living",
+        "name": "Modelling Modular Living: Furniture and Life Magazine and Interior Design in 1980s China",
+        "queryString": "genre=article&isbn=&issn=17417279&title=Journal%20of%20Design%20History&volume=35&issue=2&date=20220601&atitle=Modelling%20Modular%20Living%3A%20Furniture%20and%20Life%20Magazine%20and%20Interior%20Design%20in%201980s%20China&aulast=Altehenger,%20J.&spage=151&sid=EBSCO:Scopus%C2%AE&pid=Altehenger,%20J.edselc.2-52.0-8513384126720220601Scopus%C2%AE"
+    },
+    {
+        "key": "publish-the-picture-at-your-peril",
+        "name": "Publish the Picture at Your Peril: Visual Ideas and the Commercial Apparatus of Life Magazine.",
+        "queryString": "genre=article&isbn=&issn=15377814&title=Journal%20of%20the%20Gilded%20Age%20%26%20Progressive%20Era&volume=20&issue=2&date=20210401&atitle=Publish%20the%20Picture%20at%20Your%20Peril%3A%20Visual%20Ideas%20and%20the%20Commercial%20Apparatus%20of%20Life%20Magazine.&aulast=Schwartz,%20Joshua%20S.&spage=301&sid=EBSCO:America%3A%20History%20and%20Life%20with%20Full%20Text&pid=Schwartz,%20Joshua%20S.14996195320210401America%3A%20History%20and%20Life%20with%20Full%20Text"
+    },
+    {
+        "key": "publish-the-picture-at-your-peril_unescaped-ampersand",
+        "name": "Publish the Picture at Your Peril: Visual Ideas and the Commercial Apparatus of Life Magazine. [unescaped ampersand in `title` query param value]",
+        "queryString": "genre=article&isbn=&issn=15377814&title=Journal%20of%20the%20Gilded%20Age%20&%20Progressive%20Era&volume=20&issue=2&date=20210401&atitle=Publish%20the%20Picture%20at%20Your%20Peril%3A%20Visual%20Ideas%20and%20the%20Commercial%20Apparatus%20of%20Life%20Magazine.&aulast=Schwartz,%20Joshua%20S.&spage=301&sid=EBSCO:America%3A%20History%20and%20Life%20with%20Full%20Text&pid=Schwartz,%20Joshua%20S.14996195320210401America%3A%20History%20and%20Life%20with%20Full%20Text"
+    },
+    {
+        "key": "life-magazine-and-the-power-of-photography",
+        "name": "\"Life\" Magazine and the Power of Photography",
+        "queryString": "genre=article&isbn=&issn=00043079&title=Art%20Bulletin&volume=103&issue=4&date=20211201&atitle=%22Life%22%20Magazine%20and%20the%20Power%20of%20Photography%2C%20edited%20by%20Katherine%20A.%20Bussard%20and%20Kristen%20Gresh%3A%20New%20Haven%2C%20CT%3A%20Yale%20University%20Press%2C%202020.%20336%20pp.%3B%20250%20color%20and%20b%2Fw%20ills.%20%2460.00.&aulast=Berger,%20Martin%20A.&spage=144&sid=EBSCO:Academic%20Search%20Complete&pid=Berger,%20Martin%20A.15393498820211201Academic%20Search%20Complete"
+    },
+    {
+        "key": "the-years-work-in-modern-language-studies",
+        "name": "The Year's work in modern language studies.",
+        "queryString": "umlaut.institution=NYU%C2%A8aut.institution%3DNYU&umlaut.referent_id=19185671&url_ver=Z39.88-2004&url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&ctx_ver=Z39.88-2004&ctx_tim=2022-11-10T10%3A42%3A37-05%3A00&ctx_id=&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rft.btitle=The+Year%27s+work+in+modern+language+studies.&rft.eissn=2222-4297&rft.genre=journal&rft.issn=00844152&rft.jtitle=The+Year%27s+work+in+modern+language+studies&rft.language=eng&rft.lccn=+++31032540+&rft.object_id=110978977977146&rft.oclcnum=1770339&rft.place=London+%5Betc.%5D&rft.pub=Modern+Humanities+Research+Association+%5Betc.%5D&rft.stitle=YEARS+WORK+IN+MODERN+LANGUAGE+STUDIES&rft.title=The+Year%27s+work+in+modern+language+studies.&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft_id=info%3Alccn%2F31032540&rfr_id=info%3Asid%2Fsfxit.com%3Acitation"
+    },
+    {
+        "key": "our-lady-of-everyday-life",
+        "name": "Our Lady of everyday life : la Virgen de Guadalupe and the Catholic imagination of Mexican American women in America",
+        "queryString": "genre=bookitem&isbn=9780190280390&issn=&title=Our%20Lady%20of%20everyday%20life:%20la%20Virgen%20de%20Guadalupe%20and%20the%20Catholic%20imagination%20of%20Mexican%20women%20in%20America&volume=&issue=&date=20180101&atitle=&aulast=&spage=&sid=EBSCO:Chicano%20Database&pid=XCHD8493320180101Chicano%20Database"
+    },
+    {
+        "key": "design-of-led-light-therapy-device-based-on-free-form-lens",
+        "name": "Design of LED light therapy device based on free-form lens.",
+        "queryString": "genre=article&isbn=&issn=0277786X&title=Proceedings%20of%20SPIE&volume=12461&issue=&date=20230305&atitle=Design%20of%20LED%20light%20therapy%20device%20based%20on%20free-form%20lens.&aulast=Feng,%20Zefeng&spage=1246106&sid=EBSCO:Complementary%20Index&pid=Feng,%20Zefeng15990463220230305Complementary%20Index"
+    },
+    {
+        "key": "moral-psychology-is-relationship-regulation",
+        "name": "Moral psychology is relationship regulation: moral motives for unity, hierarchy, equality, and proportionality.",
+        "queryString": "sid=google&auinit=TS&aulast=Rai&atitle=Moral+psychology+is+relationship+regulation:+moral+motives+for+unity,+hierarchy,+equality,+and+proportionality.&id=doi:10.1037/a0021867&title=Psychological+Review&volume=118&issue=1&date=2011&spage=57&issn=0033-295X"
+    },
+    {
+        "key": "editorial-cartoon",
+        "name": "Editorial cartoon",
+        "queryString": "url_ver=Z39.88-2004&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&genre=unknown&sid=ProQ:ProQ:midwestnews1&atitle=Editorial+cartoon&title=Detroit+News&issn=10552715&date=2002-12-15&volume=&issue=&spage=A18&au=Payne,+Henry&isbn=&jtitle=Detroit+News&btitle=&rft_id=info:eric/&rft_id=info:doi/"
     }
 ]

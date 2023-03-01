@@ -15,7 +15,7 @@ for (let i = 0; i < testCasesBackendSuccess.length; i++) {
 
   const stubBackendAPIResponse = async (page) => {
     // Define a mock HTTP request handler for the /v0/ URL path to intercept the request and return a mocked response.
-    await page.route('**/v0/*', async (route) => {
+    await page.route('**/v0/**', async (route) => {
       // Return a mock response with a JSON body and a 200 status code
       await route.fulfill({
         status: 200,
@@ -28,7 +28,11 @@ for (let i = 0; i < testCasesBackendSuccess.length; i++) {
   test.describe(`${testCase.name}`, () => {
     test.beforeEach(async ({ page }) => {
       await stubBackendAPIResponse(page);
-      await page.goto(`/${testCase.queryString}`);
+      //await page.goto(`/${testCase.queryString}`);
+      //await page.goto(`/`);
+      await page.goto(`/?${testCase.queryString}`);
+      //await history.pushState({}, null, `?${testCase.queryString}`);
+      //await page.evaluate((queryString) => history.pushState({}, null, `?${queryString}`), testCase.queryString);
     });
 
     test('page HTML matches expected', async ({ page }) => {

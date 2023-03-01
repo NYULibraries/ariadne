@@ -3,11 +3,13 @@ package sfx
 import (
 	"bytes"
 	_ "embed"
+	"encoding/xml"
 	"fmt"
 	"net/http"
 	"net/http/httputil"
 	"net/url"
 	"reflect"
+	"regexp"
 	"strings"
 	"text/template"
 	"time"
@@ -15,6 +17,15 @@ import (
 
 //go:embed templates/context-objects.xml
 var sfxRequestTemplate string
+
+// Source: https://learning.oreilly.com/library/view/regular-expressions-cookbook/9781449327453/ch09s05.html#markup-xmlname-discussion
+// "XML 1.0 names (approximate)"
+// We use the version 1.0 regular expression because the SFX API request is in XML 1.0:
+// https://developers.exlibrisgroup.com/sfx/apis/web_services/openurl/
+// Note that there are edge case strings that could in theory slip through, but
+// for our purposes it wouldn't matter because such strings would not be valid
+// SFX request element names.
+var validQueryParamNameRegexp = regexp.MustCompile("^[:_\\p{Ll}\\p{Lu}\\p{Lt}\\p{Lo}\\p{Nl}][:_\\-.\\p{L}\\p{M}\\p{Nd}\\p{Nl}]*$")
 
 // Object representing everything that's needed to request from SFX
 type MultipleObjectsRequest struct {
@@ -78,11 +89,36 @@ func NewMultipleObjectsRequest(queryStringValues url.Values) (*MultipleObjectsRe
 	return multipleObjectsRequest, nil
 }
 
+func escapeQueryParamValuesForXML(values []string) ([]string, error) {
+	var escapedValues []string
+	var err error
+
+	for _, value := range values {
+		// For a query string containing this:
+		//
+		//    title=Journal%20of%20the%20Gilded%20Age%20%26%20Progressive%20Era
+		//
+		// ...the construction of the SFX request body will fail due to this element:
+		//
+		//     <rft:title>Journal of the Gilded Age & Progressive Era</rft:title>
+		//
+		// ...which is illegal due to the unescaped ampersand.
+		buf := bytes.NewBuffer(make([]byte, 0))
+		err = xml.EscapeText(buf, []byte(value))
+		if err != nil {
+			return escapedValues, err
+		}
+		escapedValues = append(escapedValues, buf.String())
+	}
+
+	return escapedValues, err
+}
+
 func newMultipleObjectsHTTPRequest(requestXML string) (*http.Request, error) {
 	params := url.Values{}
 	params.Add("url_ctx_fmt", "info:ofi/fmt:xml:xsd:ctx")
 	params.Add("sfx.response_type", "multi_obj_xml")
-	// Do we always need these parameters? Umlaut adds them only in certain conditions: https://github.com/team-umlaut/umlaut/blob/master/app/service_adaptors/sfx.rb#L145-L153
+	// Do we always need these parameters? Umlaut adds them only in certain conditions: https://github.com/team-umlaut/umlaut/blob/b954895e0aa0a7cd0a9ec6bb716c1886c813601e/app/service_adaptors/sfx.rb#L145-L153
 	params.Add("sfx.show_availability", "1")
 	params.Add("sfx.ignore_date_threshold", "1")
 	params.Add("sfx.doi_url", "http://dx.doi.org")
@@ -99,24 +135,60 @@ func newMultipleObjectsHTTPRequest(requestXML string) (*http.Request, error) {
 	return request, nil
 }
 
-// Parse SFX request body params from querystring.  For now, we use only fields
-// prefixed with "rft.".
+// Parse SFX request body params from querystring.
 func parseMultipleObjectsRequestParams(queryStringValues url.Values) (multipleObjectsRequestBodyParams, error) {
 	params := multipleObjectsRequestBodyParams{}
 
 	rfts := &map[string][]string{}
 
-	for k, v := range queryStringValues {
+	for queryName, queryValue := range queryStringValues {
+		// Unescaped "&" characters in query param values can split the value
+		// string and cause the substrings to be interpreted as query names.
+		// Example: title=Journal%20of%20the%20Gilded%20Age%20%&%20Progressive%20Era
+		// This would lead to a queryName of " Progressive Era" in this loop, which
+		// would then cause construction of the XLM for teh SFX request body to
+		// fail due to this illegal XML element:
+		//               <rft: progressive era></rft: progressive era>
+		// There may be other edge case query strings which produce bad XML element
+		// names.
+		if !validQueryParamNameRegexp.MatchString(queryName) {
+			continue
+		}
+
+		// Drop if there is also a query param that has the same name but with "rft."-prefix.
+		// We are allow with and without prefix, but if both exist, we drop the
+		// non-prefixed param.
+		if _, ok := queryStringValues[fmt.Sprintf("rft.%s", queryName)]; ok {
+			continue
+		}
+
+		// Deal with encoded ampersands in param values.
+		// Example: title=Journal%20of%20the%20Gilded%20Age%20%26%20Progressive%20Era
+		// If the ampersands are not escaped, the construction of the XML for the
+		// SFX request body will fail.
+		escapedValue, err := escapeQueryParamValuesForXML(queryValue)
+		if err != nil {
+			return params, fmt.Errorf("unable to XML escape value for query string param %s: %v", queryName, err)
+		}
 		// Strip the "rft." prefix from the param name and map to valid OpenURL fields
-		if strings.HasPrefix(k, "rft.") {
+		if strings.HasPrefix(queryName, "rft.") {
 			// E.g. "rft.book" becomes "book"
-			newKey := strings.Split(k, ".")[1]
-			(*rfts)[newKey] = v
+			newKey := strings.Split(queryName, ".")[1]
+			(*rfts)[newKey] = escapedValue
+			// Without "rft." prefix, use the whole param name
+		} else {
+			(*rfts)[queryName] = escapedValue
 		}
 	}
 
 	if reflect.DeepEqual(rfts, &map[string][]string{}) {
 		return params, fmt.Errorf("no valid querystring values to parse")
+	}
+
+	// "Add support for OpenURLs with no genre parameter"
+	// https://nyu-lib.monday.com/boards/765008773/pulses/4036893558
+	if (*rfts)["genre"] == nil {
+		(*rfts)["genre"] = []string{defaultGenre}
 	}
 
 	genre, err := validGenre((*rfts)["genre"])

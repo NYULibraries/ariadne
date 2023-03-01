@@ -16,10 +16,15 @@ func TestNewMultipleObjectsRequest(t *testing.T) {
 		querystring   url.Values
 		expectedError error
 	}{
-		{map[string][]string{"genre": {"book"}}, errors.New("could not parse required request body params from querystring: no valid querystring values to parse")},
+		{map[string][]string{}, errors.New("could not parse required request body params from querystring: no valid querystring values to parse")},
 		{map[string][]string{"rft.genre": {"podcast"}}, errors.New("could not parse required request body params from querystring: genre is not valid: genre not in list of allowed genres: [podcast]")},
-		{map[string][]string{"rft.genre": {"book"}, "rft.aulast": {"<rft:"}}, errors.New("could not convert multiple objects request to XML: request multiple objects XML is not valid XML: <nil>")},
+		// "<" should be XML escaped properly
+		{map[string][]string{"rft.genre": {"book"}, "rft.aulast": {"<rft:"}}, nil},
+		// "&" should be XML escaped properly
+		{map[string][]string{"rft.genre": {"journal"}, "title": {"Journal of the Gilded Age & Progressive Era"}}, nil},
 		{map[string][]string{"rft.genre": {"book"}, "rft.btitle": {"dune"}}, nil},
+		// If genre is missing, automatically add genre param with value of "journal"
+		{map[string][]string{"title": {"Journal of the Gilded Age & Progressive Era"}}, nil},
 	}
 
 	for _, testCase := range tests {
@@ -29,8 +34,7 @@ func TestNewMultipleObjectsRequest(t *testing.T) {
 			if testCase.expectedError != nil {
 				if err == nil {
 					t.Errorf("NewMultipleObjectsRequest returned no error, expecting '%v'", testCase.expectedError)
-				}
-				if err.Error() != testCase.expectedError.Error() {
+				} else if err.Error() != testCase.expectedError.Error() {
 					t.Errorf("NewMultipleObjectsRequest returned error '%v', expecting '%v'", err, testCase.expectedError)
 				}
 			}
@@ -78,10 +82,18 @@ func TestParseMultipleObjectsRequestParams(t *testing.T) {
 		expected      *map[string][]string
 		expectedError error
 	}{
-		{map[string][]string{"genre": {"book"}, "rft.genre": {"book"}}, &map[string][]string{"genre": {"book"}}, nil},
+		// Even though "rft." prefix is supposed to be required, many past requests
+		// have had non-prefixed equivalent params, so we've decided to allow them.
+		{map[string][]string{"genre": {"book"}}, &map[string][]string{"genre": {"book"}}, nil},
+
+		// "rft."-prefixed query params should always have priority over their non-prefixed equivalents.
+		// When we first made the change from requiring the prefix to not requiring it,
+		// we had a bug where priority was determined by ordering, so we test opposite
+		// orderings to prevent regression.
 		{map[string][]string{"genre": {"book"}, "rft.genre": {"journal", "book"}}, &map[string][]string{"genre": {"journal", "book"}}, nil},
-		{map[string][]string{"genre": {"book"}, "rft.genre": {"journal"}}, &map[string][]string{"genre": {"journal"}}, nil},
-		{map[string][]string{"genre": {"book"}}, nil, errors.New("error")},
+		{map[string][]string{"rft.genre": {"journal", "book"}, "genre": {"book"}}, &map[string][]string{"genre": {"journal", "book"}}, nil},
+
+		{map[string][]string{"genre": {"podcast"}}, nil, errors.New("error")},
 	}
 
 	for _, testCase := range testCases {
