@@ -1,11 +1,14 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import { useEffect, useRef } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import linksApi from '../../api/fetchData';
-import { getCoverageStatement } from '../../aux/helpers';
-import useApi from '../../hooks/useApi';
-//import metaData from '../../metadata.json';
+
 import Citation from '../Citation/Citation';
+//import metaData from '../../metadata.json';
+import { getCoverageStatement } from '../../aux/helpers';
+//import metaData from '../../metadata.json';
+import linksApi from '../../api/fetchData';
+import useApi from '../../hooks/useApi';
 
 const List = () => {
   const backendClient = useApi(linksApi.fetchData);
@@ -37,61 +40,63 @@ const List = () => {
   }, []);
 
   return (
-    <>
-      <div className="jumbotron">
-        <div className="container text-center">
-          <p>{RESULTS_HEADER_TEXT}</p>
-          <p>Note: Alternate titles might have matched your search terms</p>
+    <main>
+      <>
+        <div className="jumbotron">
+          <div className="container text-center">
+            <h1>{RESULTS_HEADER_TEXT}</h1>
+            <p>Note: Alternate titles might have matched your search terms</p>
+          </div>
         </div>
-      </div>
-      {/* TODO: we could put a spinner here: */}
-      {backendClient.loading && <div className="loader">{LOADING_TEXT}</div>}
-      {backendClient.error && <div className="i-am-centered">{backendClient.error}</div>}
-      <Container>
-        <Row md={12}>
-          <Col md={8}>
-            <div className="list-group">
-              <div className="list-group-item list-group-item-action flex-column border-0">
-                <Citation />
-              </div>
-              {backendClient.resource?.map((link, idx) => (
-                <div key={idx} className="list-group-item list-group-item-action flex-column border-0">
-                  <div className="row">
-                    <h6>
-                      <a href={link.target_url} target="_blank" rel="noopener noreferrer">
-                        {link.target_public_name}
-                      </a>
-                    </h6>
-                    <small>{getCoverageStatement(link)}</small>
+        {/* TODO: we could put a spinner here: */}
+        {backendClient.loading && <div className="loader" aria-label="Loading...">{LOADING_TEXT}</div>}
+        {backendClient.error && <div className="i-am-centered">{backendClient.error}</div>}
+        <Container>
+          <Row md={12}>
+            <Col md={8}>
+              <div className="list-group">
+                <div className="list-group-item list-group-item-action flex-column border-0">
+                  <Citation />
+                </div>
+                {backendClient.resource?.map((link, idx) => (
+                  <div key={idx} className="list-group-item list-group-item-action flex-column border-0">
+                    <div className="row">
+                      <h3>
+                        <a href={link.target_url} target="_blank" rel="noopener noreferrer">
+                          {link.target_public_name}
+                        </a>
+                      </h3>
+                      <p>{getCoverageStatement(link)}</p>
+                    </div>
                   </div>
                 ))}
-                  {(backendClient.resource?.length === 0 || backendClient.error) && (
-                    <>
-                      <div className="list-group-item list-group-item-action flex-column border-0">
-                        <p>No results found</p>
-                      </div>
-                    </>
-                  )}
-                </div>
+                {(backendClient.resource?.length === 0 || backendClient.error) && (
+                  <>
+                    <div className="list-group-item list-group-item-action flex-column border-0">
+                      <p>No results found</p>
+                    </div>
+                  </>
+                )}
+              </div>
             </Col>
-          <Col md={4}>
-            <aside>
-              {!backendClient.loading && (
-                <div className="ask-librarian">
-                  <h4>Need help?</h4>
-                  <h5>
-                    <a href={ASK_LIBRARIAN_URL} target="_blank" rel="noopener noreferrer">
-                      {ASK_LIBRARIAN_TEXT}
-                    </a>
-                  </h5>
-                </div>
-              )}
-            </aside>
-          </Col>
-        </Row>
-      </Container>
-    </>
-    </main >
+            <Col md={4}>
+              <aside>
+                {!backendClient.loading && (
+                  <div className="ask-librarian">
+                    <h4>Need help?</h4>
+                    <h5>
+                      <a href={ASK_LIBRARIAN_URL} target="_blank" rel="noopener noreferrer">
+                        {ASK_LIBRARIAN_TEXT}
+                      </a>
+                    </h5>
+                  </div>
+                )}
+              </aside>
+            </Col>
+          </Row>
+        </Container>
+      </>
+    </main>
   );
 };
 
