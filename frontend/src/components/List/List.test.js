@@ -54,7 +54,8 @@ describe('Backend success', () => {
   describe.each(getTestCasesBackendSuccess())('$name', (testCase) => {
     beforeEach(() => {
       delete window.location;
-      window.location = new URL(`${process.env.REACT_APP_API_URL}?${testCase.queryString}`);
+      window.location = new URL(`${process.env.REACT_APP_API_URL}`);
+      window.history.pushState({}, null, `?${testCase.queryString}`);
       jest
         .spyOn(apiClient, 'get')
         // Even though theoretically we should only need to intercept `apiClient.get`
