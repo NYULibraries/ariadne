@@ -17,5 +17,7 @@ RUN yarn install
 
 RUN npx playwright install
 
+# entrypoint ensures $PLAYWRIGHT_BASE_URL has started
+ENTRYPOINT [ "./docker-entrypoint.sh" ]
 # RUN playwright tests
 CMD ["yarn", "test:e2e"]
