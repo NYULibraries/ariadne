@@ -28,7 +28,11 @@ for (let i = 0; i < testCasesBackendSuccess.length; i++) {
   test.describe(`${testCase.name}`, () => {
     test.beforeEach(async ({ page }) => {
       await stubBackendAPIResponse(page);
-      await page.goto(`/${testCase.queryString}`);
+      //await page.goto(`/${testCase.queryString}`);
+      //await page.goto(`/`);
+      await page.goto(`/?${testCase.queryString}`);
+      //await history.pushState({}, null, `?${testCase.queryString}`);
+      //await page.evaluate((queryString) => history.pushState({}, null, `?${queryString}`), testCase.queryString);
     });
 
     test('page HTML matches expected', async ({ page }) => {
