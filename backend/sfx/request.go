@@ -120,8 +120,10 @@ func newMultipleObjectsHTTPRequest(requestXML string, queryStringValues url.Valu
 	params.Add("url_ctx_fmt", "info:ofi/fmt:xml:xsd:ctx")
 	params.Add("sfx.response_type", "multi_obj_xml")
 	// Do we always need these parameters? Umlaut adds them only in certain conditions: https://github.com/team-umlaut/umlaut/blob/b954895e0aa0a7cd0a9ec6bb716c1886c813601e/app/service_adaptors/sfx.rb#L145-L153
-	params.Add("sfx.show_availability", "1")
-	params.Add("sfx.ignore_date_threshold", "1")
+	if !(params.Has("date") || params.Has("rft.date") || params.Has("rft.year") || params.Has("year")) {
+		params.Add("sfx.show_availability", "1")
+		params.Add("sfx.ignore_date_threshold", "1")
+	}
 	params.Add("sfx.doi_url", "http://dx.doi.org")
 	//params.Add("url_ctx_val", requestXML)
 
