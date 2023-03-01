@@ -108,14 +108,14 @@ ${e.stderr.toString()}`;
       expect(popup.url()).toBe('https://library.nyu.edu/ask/');
     });
 
-    //test('screenshot matches expected', async ({ page }) => {
-    //  // Wait for the response to be returned and the page to render
-    //  await page.waitForSelector('.image');
-    //  await page.waitForSelector('h6');
+    test('screenshot matches expected', async ({ page }) => {
+      // Wait for the response to be returned and the page to render
+      await page.waitForSelector('.image');
+      await page.waitForSelector('h6');
 
-    //  // Take a screenshot to verify that the page was rendered correctly
-    //  await expect(page).toHaveScreenshot(`${testCase.key}.png`);
-    //});
+      // Take a screenshot to verify that the page was rendered correctly
+      await expect(page).toHaveScreenshot(`${testCase.key}.png`);
+    });
 
     test('renders links with a "list-group" class name', async ({ page }) => {
       expect(await page.$('.list-group')).toBeTruthy();
