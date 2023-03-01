@@ -2,922 +2,951 @@
 
 exports[`Backend HTTP error responses HTTP 400 (Bad Request) error is rendered correctly 1`] = `
 <DocumentFragment>
-  <div
-    class="jumbotron"
-  >
+  <main>
     <div
-      class="container text-center"
-    >
-      <p>
-        Displaying search results...
-      </p>
-      <p>
-        Note: Alternate titles might have matched your search terms
-      </p>
-    </div>
-  </div>
-  <div
-    class="i-am-centered"
-  >
-    The backend API returned an HTTP error response: 400 (Bad Request)
-  </div>
-  <div
-    class="container"
-  >
-    <div
-      class="row row-cols-md-12"
+      class="jumbotron"
     >
       <div
-        class="col-md-8"
+        class="container text-center"
+      >
+        <h1>
+          Displaying search results...
+        </h1>
+        <p>
+          Note: Alternate titles might have matched your search terms
+        </p>
+      </div>
+    </div>
+    <div
+      class="i-am-centered"
+    >
+      The backend API returned an HTTP error response: 400 (Bad Request)
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="row row-cols-md-12"
       >
         <div
-          class="list-group"
+          class="col-md-8"
         >
           <div
-            class="list-group-item list-group-item-action flex-column border-0"
+            class="list-group"
           >
-            <div>
-              <p
-                class="resource-type"
-              />
-              <h2
-                class="title"
-              >
-                Editorial cartoon
-              </h2>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div>
+                <p
+                  class="resource-type"
+                />
+                <h2
+                  class="title"
+                >
+                  Editorial cartoon
+                </h2>
+                <p>
+                  Payne, Henry
+                  <span>
+                    •
+                  </span>
+                  2002-12-15
+                </p>
+                <p
+                  style="margin: 0px 0px 10px;"
+                >
+                  <span
+                    style="box-sizing: border-box;"
+                  >
+                    Published in 
+                  </span>
+                  <span
+                    style="font-style: italic;"
+                  >
+                    Detroit News. 
+                  </span>
+                  Page A18
+                </p>
+                <dl
+                  class="citation-info"
+                >
+                  <dt>
+                    ISSN:
+                  </dt>
+                  <dd>
+                    10552715
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
               <p>
-                Payne, Henry
-                <span>
-                  •
-                </span>
-                2002-12-15
+                No results found
               </p>
-              <p
-                style="margin: 0px 0px 10px;"
-              >
-                <span
-                  style="box-sizing: border-box;"
-                >
-                  Published in 
-                </span>
-                <span
-                  style="font-style: italic;"
-                >
-                  Detroit News. 
-                </span>
-                Page A18
-              </p>
-              <dl
-                class="citation-info"
-              >
-                <dt>
-                  ISSN:
-                </dt>
-                <dd>
-                  10552715
-                </dd>
-              </dl>
             </div>
           </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
-            <p>
-              No results found
-            </p>
-          </div>
         </div>
-      </div>
-      <div
-        class="col-md-4"
-      >
         <div
-          class="ask-librarian"
+          class="col-md-4"
         >
-          <h5>
-            Need help?
-          </h5>
-          <h6>
-            <a
-              href="https://library.nyu.edu/ask/"
-              rel="noopener noreferrer"
-              target="_blank"
+          <aside>
+            <div
+              class="ask-librarian"
             >
-              Ask a Librarian
-            </a>
-          </h6>
+              <h4>
+                Need help?
+              </h4>
+              <h5>
+                <a
+                  href="https://library.nyu.edu/ask/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Ask a Librarian
+                </a>
+              </h5>
+            </div>
+          </aside>
         </div>
       </div>
     </div>
-  </div>
+  </main>
 </DocumentFragment>
 `;
 
 exports[`Backend HTTP error responses HTTP 403 (Forbidden) error is rendered correctly 1`] = `
 <DocumentFragment>
-  <div
-    class="jumbotron"
-  >
+  <main>
     <div
-      class="container text-center"
-    >
-      <p>
-        Displaying search results...
-      </p>
-      <p>
-        Note: Alternate titles might have matched your search terms
-      </p>
-    </div>
-  </div>
-  <div
-    class="i-am-centered"
-  >
-    The backend API returned an HTTP error response: 403 (Forbidden)
-  </div>
-  <div
-    class="container"
-  >
-    <div
-      class="row row-cols-md-12"
+      class="jumbotron"
     >
       <div
-        class="col-md-8"
+        class="container text-center"
+      >
+        <h1>
+          Displaying search results...
+        </h1>
+        <p>
+          Note: Alternate titles might have matched your search terms
+        </p>
+      </div>
+    </div>
+    <div
+      class="i-am-centered"
+    >
+      The backend API returned an HTTP error response: 403 (Forbidden)
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="row row-cols-md-12"
       >
         <div
-          class="list-group"
+          class="col-md-8"
         >
           <div
-            class="list-group-item list-group-item-action flex-column border-0"
+            class="list-group"
           >
-            <div>
-              <p
-                class="resource-type"
-              />
-              <h2
-                class="title"
-              >
-                Editorial cartoon
-              </h2>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div>
+                <p
+                  class="resource-type"
+                />
+                <h2
+                  class="title"
+                >
+                  Editorial cartoon
+                </h2>
+                <p>
+                  Payne, Henry
+                  <span>
+                    •
+                  </span>
+                  2002-12-15
+                </p>
+                <p
+                  style="margin: 0px 0px 10px;"
+                >
+                  <span
+                    style="box-sizing: border-box;"
+                  >
+                    Published in 
+                  </span>
+                  <span
+                    style="font-style: italic;"
+                  >
+                    Detroit News. 
+                  </span>
+                  Page A18
+                </p>
+                <dl
+                  class="citation-info"
+                >
+                  <dt>
+                    ISSN:
+                  </dt>
+                  <dd>
+                    10552715
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
               <p>
-                Payne, Henry
-                <span>
-                  •
-                </span>
-                2002-12-15
+                No results found
               </p>
-              <p
-                style="margin: 0px 0px 10px;"
-              >
-                <span
-                  style="box-sizing: border-box;"
-                >
-                  Published in 
-                </span>
-                <span
-                  style="font-style: italic;"
-                >
-                  Detroit News. 
-                </span>
-                Page A18
-              </p>
-              <dl
-                class="citation-info"
-              >
-                <dt>
-                  ISSN:
-                </dt>
-                <dd>
-                  10552715
-                </dd>
-              </dl>
             </div>
           </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
-            <p>
-              No results found
-            </p>
-          </div>
         </div>
-      </div>
-      <div
-        class="col-md-4"
-      >
         <div
-          class="ask-librarian"
+          class="col-md-4"
         >
-          <h5>
-            Need help?
-          </h5>
-          <h6>
-            <a
-              href="https://library.nyu.edu/ask/"
-              rel="noopener noreferrer"
-              target="_blank"
+          <aside>
+            <div
+              class="ask-librarian"
             >
-              Ask a Librarian
-            </a>
-          </h6>
+              <h4>
+                Need help?
+              </h4>
+              <h5>
+                <a
+                  href="https://library.nyu.edu/ask/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Ask a Librarian
+                </a>
+              </h5>
+            </div>
+          </aside>
         </div>
       </div>
     </div>
-  </div>
+  </main>
 </DocumentFragment>
 `;
 
 exports[`Backend HTTP error responses HTTP 408 (Request Timeout) error is rendered correctly 1`] = `
 <DocumentFragment>
-  <div
-    class="jumbotron"
-  >
+  <main>
     <div
-      class="container text-center"
-    >
-      <p>
-        Displaying search results...
-      </p>
-      <p>
-        Note: Alternate titles might have matched your search terms
-      </p>
-    </div>
-  </div>
-  <div
-    class="i-am-centered"
-  >
-    The backend API returned an HTTP error response: 408 (Request Timeout)
-  </div>
-  <div
-    class="container"
-  >
-    <div
-      class="row row-cols-md-12"
+      class="jumbotron"
     >
       <div
-        class="col-md-8"
+        class="container text-center"
+      >
+        <h1>
+          Displaying search results...
+        </h1>
+        <p>
+          Note: Alternate titles might have matched your search terms
+        </p>
+      </div>
+    </div>
+    <div
+      class="i-am-centered"
+    >
+      The backend API returned an HTTP error response: 408 (Request Timeout)
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="row row-cols-md-12"
       >
         <div
-          class="list-group"
+          class="col-md-8"
         >
           <div
-            class="list-group-item list-group-item-action flex-column border-0"
+            class="list-group"
           >
-            <div>
-              <p
-                class="resource-type"
-              />
-              <h2
-                class="title"
-              >
-                Editorial cartoon
-              </h2>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div>
+                <p
+                  class="resource-type"
+                />
+                <h2
+                  class="title"
+                >
+                  Editorial cartoon
+                </h2>
+                <p>
+                  Payne, Henry
+                  <span>
+                    •
+                  </span>
+                  2002-12-15
+                </p>
+                <p
+                  style="margin: 0px 0px 10px;"
+                >
+                  <span
+                    style="box-sizing: border-box;"
+                  >
+                    Published in 
+                  </span>
+                  <span
+                    style="font-style: italic;"
+                  >
+                    Detroit News. 
+                  </span>
+                  Page A18
+                </p>
+                <dl
+                  class="citation-info"
+                >
+                  <dt>
+                    ISSN:
+                  </dt>
+                  <dd>
+                    10552715
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
               <p>
-                Payne, Henry
-                <span>
-                  •
-                </span>
-                2002-12-15
+                No results found
               </p>
-              <p
-                style="margin: 0px 0px 10px;"
-              >
-                <span
-                  style="box-sizing: border-box;"
-                >
-                  Published in 
-                </span>
-                <span
-                  style="font-style: italic;"
-                >
-                  Detroit News. 
-                </span>
-                Page A18
-              </p>
-              <dl
-                class="citation-info"
-              >
-                <dt>
-                  ISSN:
-                </dt>
-                <dd>
-                  10552715
-                </dd>
-              </dl>
             </div>
           </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
-            <p>
-              No results found
-            </p>
-          </div>
         </div>
-      </div>
-      <div
-        class="col-md-4"
-      >
         <div
-          class="ask-librarian"
+          class="col-md-4"
         >
-          <h5>
-            Need help?
-          </h5>
-          <h6>
-            <a
-              href="https://library.nyu.edu/ask/"
-              rel="noopener noreferrer"
-              target="_blank"
+          <aside>
+            <div
+              class="ask-librarian"
             >
-              Ask a Librarian
-            </a>
-          </h6>
+              <h4>
+                Need help?
+              </h4>
+              <h5>
+                <a
+                  href="https://library.nyu.edu/ask/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Ask a Librarian
+                </a>
+              </h5>
+            </div>
+          </aside>
         </div>
       </div>
     </div>
-  </div>
+  </main>
 </DocumentFragment>
 `;
 
 exports[`Backend HTTP error responses HTTP 500 (Internal Server Error) error is rendered correctly 1`] = `
 <DocumentFragment>
-  <div
-    class="jumbotron"
-  >
+  <main>
     <div
-      class="container text-center"
-    >
-      <p>
-        Displaying search results...
-      </p>
-      <p>
-        Note: Alternate titles might have matched your search terms
-      </p>
-    </div>
-  </div>
-  <div
-    class="i-am-centered"
-  >
-    The backend API returned an HTTP error response: 500 (Internal Server Error)
-  </div>
-  <div
-    class="container"
-  >
-    <div
-      class="row row-cols-md-12"
+      class="jumbotron"
     >
       <div
-        class="col-md-8"
+        class="container text-center"
+      >
+        <h1>
+          Displaying search results...
+        </h1>
+        <p>
+          Note: Alternate titles might have matched your search terms
+        </p>
+      </div>
+    </div>
+    <div
+      class="i-am-centered"
+    >
+      The backend API returned an HTTP error response: 500 (Internal Server Error)
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="row row-cols-md-12"
       >
         <div
-          class="list-group"
+          class="col-md-8"
         >
           <div
-            class="list-group-item list-group-item-action flex-column border-0"
+            class="list-group"
           >
-            <div>
-              <p
-                class="resource-type"
-              />
-              <h2
-                class="title"
-              >
-                Editorial cartoon
-              </h2>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div>
+                <p
+                  class="resource-type"
+                />
+                <h2
+                  class="title"
+                >
+                  Editorial cartoon
+                </h2>
+                <p>
+                  Payne, Henry
+                  <span>
+                    •
+                  </span>
+                  2002-12-15
+                </p>
+                <p
+                  style="margin: 0px 0px 10px;"
+                >
+                  <span
+                    style="box-sizing: border-box;"
+                  >
+                    Published in 
+                  </span>
+                  <span
+                    style="font-style: italic;"
+                  >
+                    Detroit News. 
+                  </span>
+                  Page A18
+                </p>
+                <dl
+                  class="citation-info"
+                >
+                  <dt>
+                    ISSN:
+                  </dt>
+                  <dd>
+                    10552715
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
               <p>
-                Payne, Henry
-                <span>
-                  •
-                </span>
-                2002-12-15
+                No results found
               </p>
-              <p
-                style="margin: 0px 0px 10px;"
-              >
-                <span
-                  style="box-sizing: border-box;"
-                >
-                  Published in 
-                </span>
-                <span
-                  style="font-style: italic;"
-                >
-                  Detroit News. 
-                </span>
-                Page A18
-              </p>
-              <dl
-                class="citation-info"
-              >
-                <dt>
-                  ISSN:
-                </dt>
-                <dd>
-                  10552715
-                </dd>
-              </dl>
             </div>
           </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
-            <p>
-              No results found
-            </p>
-          </div>
         </div>
-      </div>
-      <div
-        class="col-md-4"
-      >
         <div
-          class="ask-librarian"
+          class="col-md-4"
         >
-          <h5>
-            Need help?
-          </h5>
-          <h6>
-            <a
-              href="https://library.nyu.edu/ask/"
-              rel="noopener noreferrer"
-              target="_blank"
+          <aside>
+            <div
+              class="ask-librarian"
             >
-              Ask a Librarian
-            </a>
-          </h6>
+              <h4>
+                Need help?
+              </h4>
+              <h5>
+                <a
+                  href="https://library.nyu.edu/ask/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Ask a Librarian
+                </a>
+              </h5>
+            </div>
+          </aside>
         </div>
       </div>
     </div>
-  </div>
+  </main>
 </DocumentFragment>
 `;
 
 exports[`Backend fetch exceptions TypeError: Failed to fetch renders backend fetch errors correctly 1`] = `
 <DocumentFragment>
-  <div
-    class="jumbotron"
-  >
+  <main>
     <div
-      class="container text-center"
-    >
-      <p>
-        Displaying search results...
-      </p>
-      <p>
-        Note: Alternate titles might have matched your search terms
-      </p>
-    </div>
-  </div>
-  <div
-    class="i-am-centered"
-  >
-    Error fetching data from the Ariadne API: TypeError: Failed to fetch
-  </div>
-  <div
-    class="container"
-  >
-    <div
-      class="row row-cols-md-12"
+      class="jumbotron"
     >
       <div
-        class="col-md-8"
+        class="container text-center"
+      >
+        <h1>
+          Displaying search results...
+        </h1>
+        <p>
+          Note: Alternate titles might have matched your search terms
+        </p>
+      </div>
+    </div>
+    <div
+      class="i-am-centered"
+    >
+      Error fetching data from the Ariadne API: TypeError: Failed to fetch
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="row row-cols-md-12"
       >
         <div
-          class="list-group"
+          class="col-md-8"
         >
           <div
-            class="list-group-item list-group-item-action flex-column border-0"
+            class="list-group"
           >
-            <div>
-              <p
-                class="resource-type"
-              />
-              <h2
-                class="title"
-              >
-                Editorial cartoon
-              </h2>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div>
+                <p
+                  class="resource-type"
+                />
+                <h2
+                  class="title"
+                >
+                  Editorial cartoon
+                </h2>
+                <p>
+                  Payne, Henry
+                  <span>
+                    •
+                  </span>
+                  2002-12-15
+                </p>
+                <p
+                  style="margin: 0px 0px 10px;"
+                >
+                  <span
+                    style="box-sizing: border-box;"
+                  >
+                    Published in 
+                  </span>
+                  <span
+                    style="font-style: italic;"
+                  >
+                    Detroit News. 
+                  </span>
+                  Page A18
+                </p>
+                <dl
+                  class="citation-info"
+                >
+                  <dt>
+                    ISSN:
+                  </dt>
+                  <dd>
+                    10552715
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
               <p>
-                Payne, Henry
-                <span>
-                  •
-                </span>
-                2002-12-15
+                No results found
               </p>
-              <p
-                style="margin: 0px 0px 10px;"
-              >
-                <span
-                  style="box-sizing: border-box;"
-                >
-                  Published in 
-                </span>
-                <span
-                  style="font-style: italic;"
-                >
-                  Detroit News. 
-                </span>
-                Page A18
-              </p>
-              <dl
-                class="citation-info"
-              >
-                <dt>
-                  ISSN:
-                </dt>
-                <dd>
-                  10552715
-                </dd>
-              </dl>
             </div>
           </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
-            <p>
-              No results found
-            </p>
-          </div>
         </div>
-      </div>
-      <div
-        class="col-md-4"
-      >
         <div
-          class="ask-librarian"
+          class="col-md-4"
         >
-          <h5>
-            Need help?
-          </h5>
-          <h6>
-            <a
-              href="https://library.nyu.edu/ask/"
-              rel="noopener noreferrer"
-              target="_blank"
+          <aside>
+            <div
+              class="ask-librarian"
             >
-              Ask a Librarian
-            </a>
-          </h6>
+              <h4>
+                Need help?
+              </h4>
+              <h5>
+                <a
+                  href="https://library.nyu.edu/ask/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Ask a Librarian
+                </a>
+              </h5>
+            </div>
+          </aside>
         </div>
       </div>
     </div>
-  </div>
+  </main>
 </DocumentFragment>
 `;
 
 exports[`Backend response includes errors Response includes 2 errors and an empty SFX response renders errors included in backend response correctly 1`] = `
 <DocumentFragment>
-  <div
-    class="jumbotron"
-  >
+  <main>
     <div
-      class="container text-center"
-    >
-      <p>
-        Displaying search results...
-      </p>
-      <p>
-        Note: Alternate titles might have matched your search terms
-      </p>
-    </div>
-  </div>
-  <div
-    class="i-am-centered"
-  >
-    The backend API returned errors: "[ERROR 1]", "[ERROR 2]"
-  </div>
-  <div
-    class="container"
-  >
-    <div
-      class="row row-cols-md-12"
+      class="jumbotron"
     >
       <div
-        class="col-md-8"
+        class="container text-center"
+      >
+        <h1>
+          Displaying search results...
+        </h1>
+        <p>
+          Note: Alternate titles might have matched your search terms
+        </p>
+      </div>
+    </div>
+    <div
+      class="i-am-centered"
+    >
+      The backend API returned errors: "[ERROR 1]", "[ERROR 2]"
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="row row-cols-md-12"
       >
         <div
-          class="list-group"
+          class="col-md-8"
         >
           <div
-            class="list-group-item list-group-item-action flex-column border-0"
+            class="list-group"
           >
-            <div>
-              <p
-                class="resource-type"
-              />
-              <h2
-                class="title"
-              >
-                Editorial cartoon
-              </h2>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div>
+                <p
+                  class="resource-type"
+                />
+                <h2
+                  class="title"
+                >
+                  Editorial cartoon
+                </h2>
+                <p>
+                  Payne, Henry
+                  <span>
+                    •
+                  </span>
+                  2002-12-15
+                </p>
+                <p
+                  style="margin: 0px 0px 10px;"
+                >
+                  <span
+                    style="box-sizing: border-box;"
+                  >
+                    Published in 
+                  </span>
+                  <span
+                    style="font-style: italic;"
+                  >
+                    Detroit News. 
+                  </span>
+                  Page A18
+                </p>
+                <dl
+                  class="citation-info"
+                >
+                  <dt>
+                    ISSN:
+                  </dt>
+                  <dd>
+                    10552715
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
               <p>
-                Payne, Henry
-                <span>
-                  •
-                </span>
-                2002-12-15
+                No results found
               </p>
-              <p
-                style="margin: 0px 0px 10px;"
-              >
-                <span
-                  style="box-sizing: border-box;"
-                >
-                  Published in 
-                </span>
-                <span
-                  style="font-style: italic;"
-                >
-                  Detroit News. 
-                </span>
-                Page A18
-              </p>
-              <dl
-                class="citation-info"
-              >
-                <dt>
-                  ISSN:
-                </dt>
-                <dd>
-                  10552715
-                </dd>
-              </dl>
             </div>
           </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
-            <p>
-              No results found
-            </p>
-          </div>
         </div>
-      </div>
-      <div
-        class="col-md-4"
-      >
         <div
-          class="ask-librarian"
+          class="col-md-4"
         >
-          <h5>
-            Need help?
-          </h5>
-          <h6>
-            <a
-              href="https://library.nyu.edu/ask/"
-              rel="noopener noreferrer"
-              target="_blank"
+          <aside>
+            <div
+              class="ask-librarian"
             >
-              Ask a Librarian
-            </a>
-          </h6>
+              <h4>
+                Need help?
+              </h4>
+              <h5>
+                <a
+                  href="https://library.nyu.edu/ask/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Ask a Librarian
+                </a>
+              </h5>
+            </div>
+          </aside>
         </div>
       </div>
     </div>
-  </div>
+  </main>
 </DocumentFragment>
 `;
 
 exports[`Backend success "Life" Magazine and the Power of Photography renders correctly 1`] = `
 <DocumentFragment>
-  <div
-    class="jumbotron"
-  >
+  <main>
     <div
-      class="container text-center"
-    >
-      <p>
-        Displaying search results...
-      </p>
-      <p>
-        Note: Alternate titles might have matched your search terms
-      </p>
-    </div>
-  </div>
-  <div
-    class="container"
-  >
-    <div
-      class="row row-cols-md-12"
+      class="jumbotron"
     >
       <div
-        class="col-md-8"
+        class="container text-center"
+      >
+        <h1>
+          Displaying search results...
+        </h1>
+        <p>
+          Note: Alternate titles might have matched your search terms
+        </p>
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="row row-cols-md-12"
       >
         <div
-          class="list-group"
+          class="col-md-8"
         >
           <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
-            <div>
-              <p
-                class="resource-type"
-              >
-                Article
-              </p>
-              <h2
-                class="title"
-              >
-                "Life" Magazine and the Power of Photography, edited by Katherine A. Bussard and Kristen Gresh: New Haven, CT: Yale University Press, 2020. 336 pp.; 250 color and b/w ills. $60.00.
-              </h2>
-              <p>
-                Berger, Martin A.
-                <span>
-                  •
-                </span>
-                20211201
-              </p>
-              <p
-                style="margin: 0px 0px 10px;"
-              >
-                <span
-                  style="box-sizing: border-box;"
-                >
-                  Published in 
-                </span>
-                <span
-                  style="font-style: italic;"
-                >
-                  Art Bulletin. 
-                </span>
-                Volume 103. Issue 4. Page 144
-              </p>
-              <dl
-                class="citation-info"
-              >
-                <dt>
-                  ISSN:
-                </dt>
-                <dd>
-                  00043079
-                </dd>
-              </dl>
-            </div>
-          </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
+            class="list-group"
           >
             <div
-              class="row"
+              class="list-group-item list-group-item-action flex-column border-0"
             >
-              <h6>
-                <a
-                  href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?issue=4&sid=Primo&atitle=%22life%22+magazine+and+the+power+of+photography&spage=144&date=20211201&issn=0004-3079&title=The+Art+Bulletin&genre=article&volume=103"
-                  rel="noopener noreferrer"
-                  target="_blank"
+              <div>
+                <p
+                  class="resource-type"
                 >
-                  EBSCOhost Academic Search Complete
-                </a>
-              </h6>
-              <small>
-                Available from 1975/03/01
-              </small>
+                  Article
+                </p>
+                <h2
+                  class="title"
+                >
+                  "Life" Magazine and the Power of Photography, edited by Katherine A. Bussard and Kristen Gresh: New Haven, CT: Yale University Press, 2020. 336 pp.; 250 color and b/w ills. $60.00.
+                </h2>
+                <p>
+                  Berger, Martin A.
+                  <span>
+                    •
+                  </span>
+                  20211201
+                </p>
+                <p
+                  style="margin: 0px 0px 10px;"
+                >
+                  <span
+                    style="box-sizing: border-box;"
+                  >
+                    Published in 
+                  </span>
+                  <span
+                    style="font-style: italic;"
+                  >
+                    Art Bulletin. 
+                  </span>
+                  Volume 103. Issue 4. Page 144
+                </p>
+                <dl
+                  class="citation-info"
+                >
+                  <dt>
+                    ISSN:
+                  </dt>
+                  <dd>
+                    00043079
+                  </dd>
+                </dl>
+              </div>
             </div>
-          </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
             <div
-              class="row"
+              class="list-group-item list-group-item-action flex-column border-0"
             >
-              <h6>
-                <a
-                  href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?issn=0004-3079&title=The+Art+Bulletin&genre=article&volume=103&issue=4&sid=Primo&atitle=%22life%22+magazine+and+the+power+of+photography&spage=144&date=20211201"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  EBSCOhost Humanities Full Text
-                </a>
-              </h6>
-              <small>
-                Available from 1987/12/01
-              </small>
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?issue=4&sid=Primo&atitle=%22life%22+magazine+and+the+power+of+photography&spage=144&date=20211201&issn=0004-3079&title=The+Art+Bulletin&genre=article&volume=103"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    EBSCOhost Academic Search Complete
+                  </a>
+                </h3>
+                <p>
+                  Available from 1975/03/01
+                </p>
+              </div>
             </div>
-          </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
             <div
-              class="row"
+              class="list-group-item list-group-item-action flex-column border-0"
             >
-              <h6>
-                <a
-                  href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?atitle=%22life%22+magazine+and+the+power+of+photography&sid=Primo&issue=4&date=20211201&spage=144&genre=article&title=The+Art+Bulletin&issn=0004-3079&volume=103"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  EBSCOhost OmniFile Full Text Mega
-                </a>
-              </h6>
-              <small>
-                Available from 1995/03/01
-              </small>
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?issn=0004-3079&title=The+Art+Bulletin&genre=article&volume=103&issue=4&sid=Primo&atitle=%22life%22+magazine+and+the+power+of+photography&spage=144&date=20211201"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    EBSCOhost Humanities Full Text
+                  </a>
+                </h3>
+                <p>
+                  Available from 1987/12/01
+                </p>
+              </div>
             </div>
-          </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
             <div
-              class="row"
+              class="list-group-item list-group-item-action flex-column border-0"
             >
-              <h6>
-                <a
-                  href="http://proxy.library.nyu.edu/login?url=https://www.tandfonline.com/openurl?genre=article&issn=0004-3079&issue=4&volume=103&date=2021&spage=144"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Taylor & Francis Complete Library Database Model
-                </a>
-              </h6>
-              <small>
-                Available from 1913/09/01 volume: 1 issue: 1
-              </small>
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?atitle=%22life%22+magazine+and+the+power+of+photography&sid=Primo&issue=4&date=20211201&spage=144&genre=article&title=The+Art+Bulletin&issn=0004-3079&volume=103"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    EBSCOhost OmniFile Full Text Mega
+                  </a>
+                </h3>
+                <p>
+                  Available from 1995/03/01
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://www.tandfonline.com/openurl?genre=article&issn=0004-3079&issue=4&volume=103&date=2021&spage=144"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Taylor & Francis Complete Library Database Model
+                  </a>
+                </h3>
+                <p>
+                  Available from 1913/09/01 volume: 1 issue: 1
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div
-        class="col-md-4"
-      >
         <div
-          class="ask-librarian"
+          class="col-md-4"
         >
-          <h5>
-            Need help?
-          </h5>
-          <h6>
-            <a
-              href="https://library.nyu.edu/ask/"
-              rel="noopener noreferrer"
-              target="_blank"
+          <aside>
+            <div
+              class="ask-librarian"
             >
-              Ask a Librarian
-            </a>
-          </h6>
+              <h4>
+                Need help?
+              </h4>
+              <h5>
+                <a
+                  href="https://library.nyu.edu/ask/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Ask a Librarian
+                </a>
+              </h5>
+            </div>
+          </aside>
         </div>
       </div>
     </div>
-  </div>
+  </main>
 </DocumentFragment>
 `;
 
 exports[`Backend success Corriere Fiorentino renders correctly 1`] = `
 <DocumentFragment>
-  <div
-    class="jumbotron"
-  >
+  <main>
     <div
-      class="container text-center"
-    >
-      <p>
-        Displaying search results...
-      </p>
-      <p>
-        Note: Alternate titles might have matched your search terms
-      </p>
-    </div>
-  </div>
-  <div
-    class="container"
-  >
-    <div
-      class="row row-cols-md-12"
+      class="jumbotron"
     >
       <div
-        class="col-md-8"
+        class="container text-center"
+      >
+        <h1>
+          Displaying search results...
+        </h1>
+        <p>
+          Note: Alternate titles might have matched your search terms
+        </p>
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="row row-cols-md-12"
       >
         <div
-          class="list-group"
+          class="col-md-8"
         >
           <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
-            <div>
-              <p
-                class="resource-type"
-              >
-                Journal
-              </p>
-              <h2
-                class="title"
-              >
-                Corriere Fiorentino
-              </h2>
-              <p />
-              <dl
-                class="citation-info"
-              />
-            </div>
-          </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
+            class="list-group"
           >
             <div
-              class="row"
+              class="list-group-item list-group-item-action flex-column border-0"
             >
-              <h6>
-                <a
-                  href="
+              <div>
+                <p
+                  class="resource-type"
+                >
+                  Journal
+                </p>
+                <h2
+                  class="title"
+                >
+                  Corriere Fiorentino
+                </h2>
+                <p />
+                <dl
+                  class="citation-info"
+                />
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="
                     http://proxy.library.nyu.edu/login?url=https://www.pressreader.com/italy/corriere-fiorentino
                 "
                     rel="noopener noreferrer"
@@ -961,1353 +990,1389 @@ exports[`Backend success Corriere Fiorentino renders correctly 1`] = `
 
 exports[`Backend success Design of LED light therapy device based on free-form lens. renders correctly 1`] = `
 <DocumentFragment>
-  <div
-    class="jumbotron"
-  >
+  <main>
     <div
-      class="container text-center"
-    >
-      <p>
-        Displaying search results...
-      </p>
-      <p>
-        Note: Alternate titles might have matched your search terms
-      </p>
-    </div>
-  </div>
-  <div
-    class="container"
-  >
-    <div
-      class="row row-cols-md-12"
+      class="jumbotron"
     >
       <div
-        class="col-md-8"
+        class="container text-center"
+      >
+        <h1>
+          Displaying search results...
+        </h1>
+        <p>
+          Note: Alternate titles might have matched your search terms
+        </p>
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="row row-cols-md-12"
       >
         <div
-          class="list-group"
+          class="col-md-8"
         >
           <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
-            <div>
-              <p
-                class="resource-type"
-              >
-                Article
-              </p>
-              <h2
-                class="title"
-              >
-                Design of LED light therapy device based on free-form lens.
-              </h2>
-              <p>
-                Feng, Zefeng
-                <span>
-                  •
-                </span>
-                20230305
-              </p>
-              <p
-                style="margin: 0px 0px 10px;"
-              >
-                <span
-                  style="box-sizing: border-box;"
-                >
-                  Published in 
-                </span>
-                <span
-                  style="font-style: italic;"
-                >
-                  Proceedings of SPIE. 
-                </span>
-                Volume 12461. Page 1246106
-              </p>
-              <dl
-                class="citation-info"
-              >
-                <dt>
-                  ISSN:
-                </dt>
-                <dd>
-                  0277786X
-                </dd>
-              </dl>
-            </div>
-          </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
+            class="list-group"
           >
             <div
-              class="row"
+              class="list-group-item list-group-item-action flex-column border-0"
             >
-              <h6>
+              <div>
+                <p
+                  class="resource-type"
+                >
+                  Article
+                </p>
+                <h2
+                  class="title"
+                >
+                  Design of LED light therapy device based on free-form lens.
+                </h2>
+                <p>
+                  Feng, Zefeng
+                  <span>
+                    •
+                  </span>
+                  20230305
+                </p>
+                <p
+                  style="margin: 0px 0px 10px;"
+                >
+                  <span
+                    style="box-sizing: border-box;"
+                  >
+                    Published in 
+                  </span>
+                  <span
+                    style="font-style: italic;"
+                  >
+                    Proceedings of SPIE. 
+                  </span>
+                  Volume 12461. Page 1246106
+                </p>
+                <dl
+                  class="citation-info"
+                >
+                  <dt>
+                    ISSN:
+                  </dt>
+                  <dd>
+                    0277786X
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://www.spiedigitallibrary.org/conference-proceedings-of-spie"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    SPIE Digital Library (Proceedings Series)
+                  </a>
+                </h3>
+                <p>
+                  Available from 1963/01/01
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-4"
+        >
+          <aside>
+            <div
+              class="ask-librarian"
+            >
+              <h4>
+                Need help?
+              </h4>
+              <h5>
                 <a
-                  href="http://proxy.library.nyu.edu/login?url=https://www.spiedigitallibrary.org/conference-proceedings-of-spie"
+                  href="https://library.nyu.edu/ask/"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  SPIE Digital Library (Proceedings Series)
+                  Ask a Librarian
                 </a>
-              </h6>
-              <small>
-                Available from 1963/01/01
-              </small>
+              </h5>
             </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="col-md-4"
-      >
-        <div
-          class="ask-librarian"
-        >
-          <h5>
-            Need help?
-          </h5>
-          <h6>
-            <a
-              href="https://library.nyu.edu/ask/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Ask a Librarian
-            </a>
-          </h6>
+          </aside>
         </div>
       </div>
     </div>
-  </div>
+  </main>
 </DocumentFragment>
 `;
 
 exports[`Backend success Editorial cartoon renders correctly 1`] = `
 <DocumentFragment>
-  <div
-    class="jumbotron"
-  >
+  <main>
     <div
-      class="container text-center"
-    >
-      <p>
-        Displaying search results...
-      </p>
-      <p>
-        Note: Alternate titles might have matched your search terms
-      </p>
-    </div>
-  </div>
-  <div
-    class="container"
-  >
-    <div
-      class="row row-cols-md-12"
+      class="jumbotron"
     >
       <div
-        class="col-md-8"
+        class="container text-center"
+      >
+        <h1>
+          Displaying search results...
+        </h1>
+        <p>
+          Note: Alternate titles might have matched your search terms
+        </p>
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="row row-cols-md-12"
       >
         <div
-          class="list-group"
+          class="col-md-8"
         >
           <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
-            <div>
-              <p
-                class="resource-type"
-              />
-              <h2
-                class="title"
-              >
-                Editorial cartoon
-              </h2>
-              <p>
-                Payne, Henry
-                <span>
-                  •
-                </span>
-                2002-12-15
-              </p>
-              <p
-                style="margin: 0px 0px 10px;"
-              >
-                <span
-                  style="box-sizing: border-box;"
-                >
-                  Published in 
-                </span>
-                <span
-                  style="font-style: italic;"
-                >
-                  Detroit News. 
-                </span>
-                Page A18
-              </p>
-              <dl
-                class="citation-info"
-              >
-                <dt>
-                  ISSN:
-                </dt>
-                <dd>
-                  10552715
-                </dd>
-              </dl>
-            </div>
-          </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
+            class="list-group"
           >
             <div
-              class="row"
+              class="list-group-item list-group-item-action flex-column border-0"
             >
-              <h6>
+              <div>
+                <p
+                  class="resource-type"
+                />
+                <h2
+                  class="title"
+                >
+                  Editorial cartoon
+                </h2>
+                <p>
+                  Payne, Henry
+                  <span>
+                    •
+                  </span>
+                  2002-12-15
+                </p>
+                <p
+                  style="margin: 0px 0px 10px;"
+                >
+                  <span
+                    style="box-sizing: border-box;"
+                  >
+                    Published in 
+                  </span>
+                  <span
+                    style="font-style: italic;"
+                  >
+                    Detroit News. 
+                  </span>
+                  Page A18
+                </p>
+                <dl
+                  class="citation-info"
+                >
+                  <dt>
+                    ISSN:
+                  </dt>
+                  <dd>
+                    10552715
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=http://infoweb.newsbank.com/?db=DTNB"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Newsbank Access World News Research Collection 2022 Edition
+                  </a>
+                </h3>
+                <p>
+                  Available from 1999/01/01
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-4"
+        >
+          <aside>
+            <div
+              class="ask-librarian"
+            >
+              <h4>
+                Need help?
+              </h4>
+              <h5>
                 <a
-                  href="http://proxy.library.nyu.edu/login?url=http://infoweb.newsbank.com/?db=DTNB"
+                  href="https://library.nyu.edu/ask/"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  Newsbank Access World News Research Collection 2022 Edition
+                  Ask a Librarian
                 </a>
-              </h6>
-              <small>
-                Available from 1999/01/01
-              </small>
+              </h5>
             </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="col-md-4"
-      >
-        <div
-          class="ask-librarian"
-        >
-          <h5>
-            Need help?
-          </h5>
-          <h6>
-            <a
-              href="https://library.nyu.edu/ask/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Ask a Librarian
-            </a>
-          </h6>
+          </aside>
         </div>
       </div>
     </div>
-  </div>
+  </main>
 </DocumentFragment>
 `;
 
 exports[`Backend success Modelling Modular Living: Furniture and Life Magazine and Interior Design in 1980s China renders correctly 1`] = `
 <DocumentFragment>
-  <div
-    class="jumbotron"
-  >
+  <main>
     <div
-      class="container text-center"
-    >
-      <p>
-        Displaying search results...
-      </p>
-      <p>
-        Note: Alternate titles might have matched your search terms
-      </p>
-    </div>
-  </div>
-  <div
-    class="container"
-  >
-    <div
-      class="row row-cols-md-12"
+      class="jumbotron"
     >
       <div
-        class="col-md-8"
+        class="container text-center"
+      >
+        <h1>
+          Displaying search results...
+        </h1>
+        <p>
+          Note: Alternate titles might have matched your search terms
+        </p>
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="row row-cols-md-12"
       >
         <div
-          class="list-group"
+          class="col-md-8"
         >
           <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
-            <div>
-              <p
-                class="resource-type"
-              >
-                Article
-              </p>
-              <h2
-                class="title"
-              >
-                Modelling Modular Living: Furniture and Life Magazine and Interior Design in 1980s China
-              </h2>
-              <p>
-                Altehenger, J.
-                <span>
-                  •
-                </span>
-                20220601
-              </p>
-              <p
-                style="margin: 0px 0px 10px;"
-              >
-                <span
-                  style="box-sizing: border-box;"
-                >
-                  Published in 
-                </span>
-                <span
-                  style="font-style: italic;"
-                >
-                  Journal of Design History. 
-                </span>
-                Volume 35. Issue 2. Page 151
-              </p>
-              <dl
-                class="citation-info"
-              >
-                <dt>
-                  ISSN:
-                </dt>
-                <dd>
-                  17417279
-                </dd>
-              </dl>
-            </div>
-          </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
+            class="list-group"
           >
             <div
-              class="row"
+              class="list-group-item list-group-item-action flex-column border-0"
             >
-              <h6>
+              <div>
+                <p
+                  class="resource-type"
+                >
+                  Article
+                </p>
+                <h2
+                  class="title"
+                >
+                  Modelling Modular Living: Furniture and Life Magazine and Interior Design in 1980s China
+                </h2>
+                <p>
+                  Altehenger, J.
+                  <span>
+                    •
+                  </span>
+                  20220601
+                </p>
+                <p
+                  style="margin: 0px 0px 10px;"
+                >
+                  <span
+                    style="box-sizing: border-box;"
+                  >
+                    Published in 
+                  </span>
+                  <span
+                    style="font-style: italic;"
+                  >
+                    Journal of Design History. 
+                  </span>
+                  Volume 35. Issue 2. Page 151
+                </p>
+                <dl
+                  class="citation-info"
+                >
+                  <dt>
+                    ISSN:
+                  </dt>
+                  <dd>
+                    17417279
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://academic.oup.com/jdh/article/35/2/151/article"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Oxford University Press Journals Current
+                  </a>
+                </h3>
+                <p>
+                  Available from 1988/01/01
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-4"
+        >
+          <aside>
+            <div
+              class="ask-librarian"
+            >
+              <h4>
+                Need help?
+              </h4>
+              <h5>
                 <a
-                  href="http://proxy.library.nyu.edu/login?url=https://academic.oup.com/jdh/article/35/2/151/article"
+                  href="https://library.nyu.edu/ask/"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  Oxford University Press Journals Current
+                  Ask a Librarian
                 </a>
-              </h6>
-              <small>
-                Available from 1988/01/01
-              </small>
+              </h5>
             </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="col-md-4"
-      >
-        <div
-          class="ask-librarian"
-        >
-          <h5>
-            Need help?
-          </h5>
-          <h6>
-            <a
-              href="https://library.nyu.edu/ask/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Ask a Librarian
-            </a>
-          </h6>
+          </aside>
         </div>
       </div>
     </div>
-  </div>
+  </main>
 </DocumentFragment>
 `;
 
 exports[`Backend success Moral psychology is relationship regulation: moral motives for unity, hierarchy, equality, and proportionality. renders correctly 1`] = `
 <DocumentFragment>
-  <div
-    class="jumbotron"
-  >
+  <main>
     <div
-      class="container text-center"
-    >
-      <p>
-        Displaying search results...
-      </p>
-      <p>
-        Note: Alternate titles might have matched your search terms
-      </p>
-    </div>
-  </div>
-  <div
-    class="container"
-  >
-    <div
-      class="row row-cols-md-12"
+      class="jumbotron"
     >
       <div
-        class="col-md-8"
+        class="container text-center"
+      >
+        <h1>
+          Displaying search results...
+        </h1>
+        <p>
+          Note: Alternate titles might have matched your search terms
+        </p>
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="row row-cols-md-12"
       >
         <div
-          class="list-group"
+          class="col-md-8"
         >
           <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
-            <div>
-              <h2
-                class="title"
-              >
-                Moral psychology is relationship regulation: moral motives for unity, hierarchy, equality, and proportionality.
-              </h2>
-              <p>
-                Rai, TS
-                <span>
-                  •
-                </span>
-                2011
-              </p>
-              <p
-                style="margin: 0px 0px 10px;"
-              >
-                <span
-                  style="box-sizing: border-box;"
-                >
-                  Published in 
-                </span>
-                <span
-                  style="font-style: italic;"
-                >
-                  Psychological Review. 
-                </span>
-                Volume 118. Issue 1. Page 57
-              </p>
-              <dl
-                class="citation-info"
-              >
-                <dt>
-                  ISSN:
-                </dt>
-                <dd>
-                  0033-295X
-                </dd>
-              </dl>
-            </div>
-          </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
+            class="list-group"
           >
             <div
-              class="row"
+              class="list-group-item list-group-item-action flex-column border-0"
             >
-              <h6>
+              <div>
+                <h2
+                  class="title"
+                >
+                  Moral psychology is relationship regulation: moral motives for unity, hierarchy, equality, and proportionality.
+                </h2>
+                <p>
+                  Rai, TS
+                  <span>
+                    •
+                  </span>
+                  2011
+                </p>
+                <p
+                  style="margin: 0px 0px 10px;"
+                >
+                  <span
+                    style="box-sizing: border-box;"
+                  >
+                    Published in 
+                  </span>
+                  <span
+                    style="font-style: italic;"
+                  >
+                    Psychological Review. 
+                  </span>
+                  Volume 118. Issue 1. Page 57
+                </p>
+                <dl
+                  class="citation-info"
+                >
+                  <dt>
+                    ISSN:
+                  </dt>
+                  <dd>
+                    0033-295X
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=http://psycnet.apa.org/journals/rev/118/1/57"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    PsycARTICLES
+                  </a>
+                </h3>
+                <p>
+                  Available from 1894 volume: 1 issue: 1
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-4"
+        >
+          <aside>
+            <div
+              class="ask-librarian"
+            >
+              <h4>
+                Need help?
+              </h4>
+              <h5>
                 <a
-                  href="http://proxy.library.nyu.edu/login?url=http://psycnet.apa.org/journals/rev/118/1/57"
+                  href="https://library.nyu.edu/ask/"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  PsycARTICLES
+                  Ask a Librarian
                 </a>
-              </h6>
-              <small>
-                Available from 1894 volume: 1 issue: 1
-              </small>
+              </h5>
             </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="col-md-4"
-      >
-        <div
-          class="ask-librarian"
-        >
-          <h5>
-            Need help?
-          </h5>
-          <h6>
-            <a
-              href="https://library.nyu.edu/ask/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Ask a Librarian
-            </a>
-          </h6>
+          </aside>
         </div>
       </div>
     </div>
-  </div>
+  </main>
 </DocumentFragment>
 `;
 
 exports[`Backend success Our Lady of everyday life : la Virgen de Guadalupe and the Catholic imagination of Mexican American women in America renders correctly 1`] = `
 <DocumentFragment>
-  <div
-    class="jumbotron"
-  >
+  <main>
     <div
-      class="container text-center"
-    >
-      <p>
-        Displaying search results...
-      </p>
-      <p>
-        Note: Alternate titles might have matched your search terms
-      </p>
-    </div>
-  </div>
-  <div
-    class="container"
-  >
-    <div
-      class="row row-cols-md-12"
+      class="jumbotron"
     >
       <div
-        class="col-md-8"
+        class="container text-center"
+      >
+        <h1>
+          Displaying search results...
+        </h1>
+        <p>
+          Note: Alternate titles might have matched your search terms
+        </p>
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="row row-cols-md-12"
       >
         <div
-          class="list-group"
+          class="col-md-8"
         >
           <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
-            <div>
-              <p
-                class="resource-type"
-              >
-                Book Chapter
-              </p>
-              <h2
-                class="title"
-              >
-                Our Lady of everyday life: la Virgen de Guadalupe and the Catholic imagination of Mexican women in America
-              </h2>
-              <p>
-                20180101
-              </p>
-              <dl
-                class="citation-info"
-              >
-                <dt>
-                  ISBN:
-                </dt>
-                <dd>
-                  9780190280390
-                </dd>
-              </dl>
-            </div>
-          </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
+            class="list-group"
           >
             <div
-              class="row"
+              class="list-group-item list-group-item-action flex-column border-0"
             >
-              <h6>
+              <div>
+                <p
+                  class="resource-type"
+                >
+                  Book Chapter
+                </p>
+                <h2
+                  class="title"
+                >
+                  Our Lady of everyday life: la Virgen de Guadalupe and the Catholic imagination of Mexican women in America
+                </h2>
+                <p>
+                  20180101
+                </p>
+                <dl
+                  class="citation-info"
+                >
+                  <dt>
+                    ISBN:
+                  </dt>
+                  <dd>
+                    9780190280390
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?sid=DEFAULT%20(Via%20SFX)&genre=bookitem&date=2018&year=2018&title=Our%20Lady%20of%20Everyday%20Life&month=1&isbn=0-19-028039-5&aufirst=Mar%C3%ADa%20Del%20Socorro&aulast=Casta%C3%B1eda-Liles"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Bobst Library  Interlibrary Loan
+                  </a>
+                </h3>
+                <p />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-4"
+        >
+          <aside>
+            <div
+              class="ask-librarian"
+            >
+              <h4>
+                Need help?
+              </h4>
+              <h5>
                 <a
-                  href="http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?sid=DEFAULT%20(Via%20SFX)&genre=bookitem&date=2018&year=2018&title=Our%20Lady%20of%20Everyday%20Life&month=1&isbn=0-19-028039-5&aufirst=Mar%C3%ADa%20Del%20Socorro&aulast=Casta%C3%B1eda-Liles"
+                  href="https://library.nyu.edu/ask/"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  Bobst Library  Interlibrary Loan
+                  Ask a Librarian
                 </a>
-              </h6>
-              <small />
+              </h5>
             </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="col-md-4"
-      >
-        <div
-          class="ask-librarian"
-        >
-          <h5>
-            Need help?
-          </h5>
-          <h6>
-            <a
-              href="https://library.nyu.edu/ask/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Ask a Librarian
-            </a>
-          </h6>
+          </aside>
         </div>
       </div>
     </div>
-  </div>
+  </main>
 </DocumentFragment>
 `;
 
 exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the Commercial Apparatus of Life Magazine. [unescaped ampersand in \`title\` query param value] renders correctly 1`] = `
 <DocumentFragment>
-  <div
-    class="jumbotron"
-  >
+  <main>
     <div
-      class="container text-center"
-    >
-      <p>
-        Displaying search results...
-      </p>
-      <p>
-        Note: Alternate titles might have matched your search terms
-      </p>
-    </div>
-  </div>
-  <div
-    class="container"
-  >
-    <div
-      class="row row-cols-md-12"
+      class="jumbotron"
     >
       <div
-        class="col-md-8"
+        class="container text-center"
+      >
+        <h1>
+          Displaying search results...
+        </h1>
+        <p>
+          Note: Alternate titles might have matched your search terms
+        </p>
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="row row-cols-md-12"
       >
         <div
-          class="list-group"
+          class="col-md-8"
         >
           <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
-            <div>
-              <p
-                class="resource-type"
-              >
-                Article
-              </p>
-              <h2
-                class="title"
-              >
-                Publish the Picture at Your Peril: Visual Ideas and the Commercial Apparatus of Life Magazine.
-              </h2>
-              <p>
-                Schwartz, Joshua S.
-                <span>
-                  •
-                </span>
-                20210401
-              </p>
-              <p
-                style="margin: 0px 0px 10px;"
-              >
-                <span
-                  style="box-sizing: border-box;"
-                >
-                  Published in 
-                </span>
-                <span
-                  style="font-style: italic;"
-                >
-                  Journal of the Gilded Age . 
-                </span>
-                Volume 20. Issue 2. Page 301
-              </p>
-              <dl
-                class="citation-info"
-              >
-                <dt>
-                  ISSN:
-                </dt>
-                <dd>
-                  15377814
-                </dd>
-              </dl>
-            </div>
-          </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
+            class="list-group"
           >
             <div
-              class="row"
+              class="list-group-item list-group-item-action flex-column border-0"
             >
-              <h6>
-                <a
-                  href="http://proxy.library.nyu.edu/login?url=https://www.cambridge.org/core/product/113A938A653BAE7C42654C34EC40B874"
-                  rel="noopener noreferrer"
-                  target="_blank"
+              <div>
+                <p
+                  class="resource-type"
                 >
-                  Cambridge University Press Journals Complete
-                </a>
-              </h6>
-              <small>
-                Available from 2002/01 volume: 1 issue: 1
-              </small>
+                  Article
+                </p>
+                <h2
+                  class="title"
+                >
+                  Publish the Picture at Your Peril: Visual Ideas and the Commercial Apparatus of Life Magazine.
+                </h2>
+                <p>
+                  Schwartz, Joshua S.
+                  <span>
+                    •
+                  </span>
+                  20210401
+                </p>
+                <p
+                  style="margin: 0px 0px 10px;"
+                >
+                  <span
+                    style="box-sizing: border-box;"
+                  >
+                    Published in 
+                  </span>
+                  <span
+                    style="font-style: italic;"
+                  >
+                    Journal of the Gilded Age . 
+                  </span>
+                  Volume 20. Issue 2. Page 301
+                </p>
+                <dl
+                  class="citation-info"
+                >
+                  <dt>
+                    ISSN:
+                  </dt>
+                  <dd>
+                    15377814
+                  </dd>
+                </dl>
+              </div>
             </div>
-          </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
             <div
-              class="row"
+              class="list-group-item list-group-item-action flex-column border-0"
             >
-              <h6>
-                <a
-                  href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?title=JOURNAL+OF+THE+GILDED+AGE+AND+PROGRESSIVE+ERA&genre=article&volume=20&issue=2&sid=Primo&date=20210401&atitle=publish+the+picture+at+your+peril&issn=1537-7814&spage=301"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  EBSCOhost America History and Life with Full Text
-                </a>
-              </h6>
-              <small>
-                Available from 2008/07/01
-              </small>
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://www.cambridge.org/core/product/113A938A653BAE7C42654C34EC40B874"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Cambridge University Press Journals Complete
+                  </a>
+                </h3>
+                <p>
+                  Available from 2002/01 volume: 1 issue: 1
+                </p>
+              </div>
             </div>
-          </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
             <div
-              class="row"
+              class="list-group-item list-group-item-action flex-column border-0"
             >
-              <h6>
-                <a
-                  href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?spage=301&issn=1537-7814&res_dat=xri%3Apqm&url_ver=Z39.88-2004&date=2021-04-01&jtitle=JOURNAL%2BOF%2BTHE%2BGILDED%2BAGE%2BAND%2BPROGRESSIVE%2BERA&issue=2&genre=article&volume=20&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Aarticle"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  ProQuest Central
-                </a>
-              </h6>
-              <small>
-                Available from 2011/01/01
-              </small>
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?title=JOURNAL+OF+THE+GILDED+AGE+AND+PROGRESSIVE+ERA&genre=article&volume=20&issue=2&sid=Primo&date=20210401&atitle=publish+the+picture+at+your+peril&issn=1537-7814&spage=301"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    EBSCOhost America History and Life with Full Text
+                  </a>
+                </h3>
+                <p>
+                  Available from 2008/07/01
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?spage=301&issn=1537-7814&res_dat=xri%3Apqm&url_ver=Z39.88-2004&date=2021-04-01&jtitle=JOURNAL%2BOF%2BTHE%2BGILDED%2BAGE%2BAND%2BPROGRESSIVE%2BERA&issue=2&genre=article&volume=20&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Aarticle"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    ProQuest Central
+                  </a>
+                </h3>
+                <p>
+                  Available from 2011/01/01
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div
-        class="col-md-4"
-      >
         <div
-          class="ask-librarian"
+          class="col-md-4"
         >
-          <h5>
-            Need help?
-          </h5>
-          <h6>
-            <a
-              href="https://library.nyu.edu/ask/"
-              rel="noopener noreferrer"
-              target="_blank"
+          <aside>
+            <div
+              class="ask-librarian"
             >
-              Ask a Librarian
-            </a>
-          </h6>
+              <h4>
+                Need help?
+              </h4>
+              <h5>
+                <a
+                  href="https://library.nyu.edu/ask/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Ask a Librarian
+                </a>
+              </h5>
+            </div>
+          </aside>
         </div>
       </div>
     </div>
-  </div>
+  </main>
 </DocumentFragment>
 `;
 
 exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the Commercial Apparatus of Life Magazine. renders correctly 1`] = `
 <DocumentFragment>
-  <div
-    class="jumbotron"
-  >
+  <main>
     <div
-      class="container text-center"
-    >
-      <p>
-        Displaying search results...
-      </p>
-      <p>
-        Note: Alternate titles might have matched your search terms
-      </p>
-    </div>
-  </div>
-  <div
-    class="container"
-  >
-    <div
-      class="row row-cols-md-12"
+      class="jumbotron"
     >
       <div
-        class="col-md-8"
+        class="container text-center"
+      >
+        <h1>
+          Displaying search results...
+        </h1>
+        <p>
+          Note: Alternate titles might have matched your search terms
+        </p>
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="row row-cols-md-12"
       >
         <div
-          class="list-group"
+          class="col-md-8"
         >
           <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
-            <div>
-              <p
-                class="resource-type"
-              >
-                Article
-              </p>
-              <h2
-                class="title"
-              >
-                Publish the Picture at Your Peril: Visual Ideas and the Commercial Apparatus of Life Magazine.
-              </h2>
-              <p>
-                Schwartz, Joshua S.
-                <span>
-                  •
-                </span>
-                20210401
-              </p>
-              <p
-                style="margin: 0px 0px 10px;"
-              >
-                <span
-                  style="box-sizing: border-box;"
-                >
-                  Published in 
-                </span>
-                <span
-                  style="font-style: italic;"
-                >
-                  Journal of the Gilded Age & Progressive Era. 
-                </span>
-                Volume 20. Issue 2. Page 301
-              </p>
-              <dl
-                class="citation-info"
-              >
-                <dt>
-                  ISSN:
-                </dt>
-                <dd>
-                  15377814
-                </dd>
-              </dl>
-            </div>
-          </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
+            class="list-group"
           >
             <div
-              class="row"
+              class="list-group-item list-group-item-action flex-column border-0"
             >
-              <h6>
-                <a
-                  href="http://proxy.library.nyu.edu/login?url=https://www.cambridge.org/core/product/113A938A653BAE7C42654C34EC40B874"
-                  rel="noopener noreferrer"
-                  target="_blank"
+              <div>
+                <p
+                  class="resource-type"
                 >
-                  Cambridge University Press Journals Complete
-                </a>
-              </h6>
-              <small>
-                Available from 2002/01 volume: 1 issue: 1
-              </small>
+                  Article
+                </p>
+                <h2
+                  class="title"
+                >
+                  Publish the Picture at Your Peril: Visual Ideas and the Commercial Apparatus of Life Magazine.
+                </h2>
+                <p>
+                  Schwartz, Joshua S.
+                  <span>
+                    •
+                  </span>
+                  20210401
+                </p>
+                <p
+                  style="margin: 0px 0px 10px;"
+                >
+                  <span
+                    style="box-sizing: border-box;"
+                  >
+                    Published in 
+                  </span>
+                  <span
+                    style="font-style: italic;"
+                  >
+                    Journal of the Gilded Age & Progressive Era. 
+                  </span>
+                  Volume 20. Issue 2. Page 301
+                </p>
+                <dl
+                  class="citation-info"
+                >
+                  <dt>
+                    ISSN:
+                  </dt>
+                  <dd>
+                    15377814
+                  </dd>
+                </dl>
+              </div>
             </div>
-          </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
             <div
-              class="row"
+              class="list-group-item list-group-item-action flex-column border-0"
             >
-              <h6>
-                <a
-                  href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?date=20210401&atitle=publish+the+picture+at+your+peril&issn=1537-7814&spage=301&title=JOURNAL+OF+THE+GILDED+AGE+AND+PROGRESSIVE+ERA&volume=20&genre=article&sid=Primo&issue=2"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  EBSCOhost America History and Life with Full Text
-                </a>
-              </h6>
-              <small>
-                Available from 2008/07/01
-              </small>
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://www.cambridge.org/core/product/113A938A653BAE7C42654C34EC40B874"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Cambridge University Press Journals Complete
+                  </a>
+                </h3>
+                <p>
+                  Available from 2002/01 volume: 1 issue: 1
+                </p>
+              </div>
             </div>
-          </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
             <div
-              class="row"
+              class="list-group-item list-group-item-action flex-column border-0"
             >
-              <h6>
-                <a
-                  href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?url_ver=Z39.88-2004&date=2021-04-01&spage=301&issn=1537-7814&res_dat=xri%3Apqm&volume=20&genre=article&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Aarticle&issue=2&jtitle=JOURNAL%2BOF%2BTHE%2BGILDED%2BAGE%2BAND%2BPROGRESSIVE%2BERA"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  ProQuest Central
-                </a>
-              </h6>
-              <small>
-                Available from 2011/01/01
-              </small>
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?date=20210401&atitle=publish+the+picture+at+your+peril&issn=1537-7814&spage=301&title=JOURNAL+OF+THE+GILDED+AGE+AND+PROGRESSIVE+ERA&volume=20&genre=article&sid=Primo&issue=2"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    EBSCOhost America History and Life with Full Text
+                  </a>
+                </h3>
+                <p>
+                  Available from 2008/07/01
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?url_ver=Z39.88-2004&date=2021-04-01&spage=301&issn=1537-7814&res_dat=xri%3Apqm&volume=20&genre=article&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Aarticle&issue=2&jtitle=JOURNAL%2BOF%2BTHE%2BGILDED%2BAGE%2BAND%2BPROGRESSIVE%2BERA"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    ProQuest Central
+                  </a>
+                </h3>
+                <p>
+                  Available from 2011/01/01
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div
-        class="col-md-4"
-      >
         <div
-          class="ask-librarian"
+          class="col-md-4"
         >
-          <h5>
-            Need help?
-          </h5>
-          <h6>
-            <a
-              href="https://library.nyu.edu/ask/"
-              rel="noopener noreferrer"
-              target="_blank"
+          <aside>
+            <div
+              class="ask-librarian"
             >
-              Ask a Librarian
-            </a>
-          </h6>
+              <h4>
+                Need help?
+              </h4>
+              <h5>
+                <a
+                  href="https://library.nyu.edu/ask/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Ask a Librarian
+                </a>
+              </h5>
+            </div>
+          </aside>
         </div>
       </div>
     </div>
-  </div>
+  </main>
 </DocumentFragment>
 `;
 
 exports[`Backend success The New Yorker renders correctly 1`] = `
 <DocumentFragment>
-  <div
-    class="jumbotron"
-  >
+  <main>
     <div
-      class="container text-center"
-    >
-      <p>
-        Displaying search results...
-      </p>
-      <p>
-        Note: Alternate titles might have matched your search terms
-      </p>
-    </div>
-  </div>
-  <div
-    class="container"
-  >
-    <div
-      class="row row-cols-md-12"
+      class="jumbotron"
     >
       <div
-        class="col-md-8"
+        class="container text-center"
+      >
+        <h1>
+          Displaying search results...
+        </h1>
+        <p>
+          Note: Alternate titles might have matched your search terms
+        </p>
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="row row-cols-md-12"
       >
         <div
-          class="list-group"
+          class="col-md-8"
         >
           <div
-            class="list-group-item list-group-item-action flex-column border-0"
+            class="list-group"
           >
-            <div>
-              <p
-                class="resource-type"
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div>
+                <p
+                  class="resource-type"
+                >
+                  Journal
+                </p>
+                <h2
+                  class="title"
+                >
+                  New Yorker
+                </h2>
+                <p>
+                  Ross
+                  <span>
+                    •
+                  </span>
+                  2002
+                </p>
+                <dl
+                  class="citation-info"
+                >
+                  <dt>
+                    ISSN:
+                  </dt>
+                  <dd>
+                    0028-792X
+                  </dd>
+                  <dt>
+                    Publisher:
+                  </dt>
+                  <dd>
+                    F-R Pub. Corp.
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
               >
-                Journal
-              </p>
-              <h2
-                class="title"
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=http://gateway.proquest.com/openurl?rft_id=41130&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&url_ver=Z39.88-2004&res_dat=xri%3Apqm&rfr_id=info%3Axri%2Fsid%3Aprimo&genre=journal"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Art, Design & Architecture Collection
+                  </a>
+                </h3>
+                <p>
+                  Available from 2002/11/04
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
               >
-                New Yorker
-              </h2>
-              <p>
-                Ross
-                <span>
-                  •
-                </span>
-                2002
-              </p>
-              <dl
-                class="citation-info"
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=http://archives.newyorker.com/#folio=C1"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    E Journal Full Text
+                  </a>
+                </h3>
+                <p>
+                  Available from 1925
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
               >
-                <dt>
-                  ISSN:
-                </dt>
-                <dd>
-                  0028-792X
-                </dd>
-                <dt>
-                  Publisher:
-                </dt>
-                <dd>
-                  F-R Pub. Corp.
-                </dd>
-              </dl>
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://global.factiva.com/en/du/headlines.asp?XSID=S001dbr5DEs5DEmN9MpMD6mNDVyMHmnRsIuMcNG1pRRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQQAA&CurrentSourcesDesc=sc_u_gtny%2CNew+Yorker&CurrentSources=U%7Cgtny"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Factiva
+                  </a>
+                </h3>
+                <p>
+                  Available from 1997
+                </p>
+              </div>
             </div>
-          </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
             <div
-              class="row"
+              class="list-group-item list-group-item-action flex-column border-0"
             >
-              <h6>
-                <a
-                  href="http://proxy.library.nyu.edu/login?url=http://gateway.proquest.com/openurl?rft_id=41130&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&url_ver=Z39.88-2004&res_dat=xri%3Apqm&rfr_id=info%3Axri%2Fsid%3Aprimo&genre=journal"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Art, Design & Architecture Collection
-                </a>
-              </h6>
-              <small>
-                Available from 2002/11/04
-              </small>
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=http://find.galegroup.com/openurl/openurl?url_ver=Z39.88-2004&url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&rft.issn=0028-792X&res_id=info%3Asid%2Fgale%3ASHAX&req_dat=info%3Asid%2Fgale%3Augnid%3Anew64731&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&ctx_enc=info%3Aofi%3Aenc%3AUTF-8&rft.date=2002&rft.jtitle=New+Yorker"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Gale Cengage Shakespeare Collection Periodicals
+                  </a>
+                </h3>
+                <p>
+                  Available from 2002
+                </p>
+              </div>
             </div>
-          </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
             <div
-              class="row"
+              class="list-group-item list-group-item-action flex-column border-0"
             >
-              <h6>
-                <a
-                  href="http://proxy.library.nyu.edu/login?url=http://archives.newyorker.com/#folio=C1"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  E Journal Full Text
-                </a>
-              </h6>
-              <small>
-                Available from 1925
-              </small>
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://link.gale.com/apps/pub/1161/ITOF?u=nysl_me_newyorku"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Gale General OneFile
+                  </a>
+                </h3>
+                <p>
+                  Available from 2002/01/14
+                </p>
+              </div>
             </div>
-          </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
             <div
-              class="row"
+              class="list-group-item list-group-item-action flex-column border-0"
             >
-              <h6>
-                <a
-                  href="http://proxy.library.nyu.edu/login?url=https://global.factiva.com/en/du/headlines.asp?XSID=S001dbr5DEs5DEmN9MpMD6mNDVyMHmnRsIuMcNG1pRRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQQAA&CurrentSourcesDesc=sc_u_gtny%2CNew+Yorker&CurrentSources=U%7Cgtny"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Factiva
-                </a>
-              </h6>
-              <small>
-                Available from 1997
-              </small>
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://link.gale.com/apps/pub/1161/LitRC?u=new64731"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Gale Literature Resource Center
+                  </a>
+                </h3>
+                <p>
+                  Available from 1978/01/01  until 1978/12/31. Available from 1982/01/01  until 1982/12/31. Available from 1989/01/01  until 1989/12/31. Available from 1996/01/01  until 1996/12/31. Available from 2002/01/01
+                </p>
+              </div>
             </div>
-          </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
             <div
-              class="row"
+              class="list-group-item list-group-item-action flex-column border-0"
             >
-              <h6>
-                <a
-                  href="http://proxy.library.nyu.edu/login?url=http://find.galegroup.com/openurl/openurl?url_ver=Z39.88-2004&url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&rft.issn=0028-792X&res_id=info%3Asid%2Fgale%3ASHAX&req_dat=info%3Asid%2Fgale%3Augnid%3Anew64731&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&ctx_enc=info%3Aofi%3Aenc%3AUTF-8&rft.date=2002&rft.jtitle=New+Yorker"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Gale Cengage Shakespeare Collection Periodicals
-                </a>
-              </h6>
-              <small>
-                Available from 2002
-              </small>
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://advance.lexis.com/api/search/advanced?source=MTA2OTUwNg&identityprofileid=W4HVBF32601"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Lexis Advance US
+                  </a>
+                </h3>
+                <p>
+                  Available from 1999
+                </p>
+              </div>
             </div>
-          </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
             <div
-              class="row"
+              class="list-group-item list-group-item-action flex-column border-0"
             >
-              <h6>
-                <a
-                  href="http://proxy.library.nyu.edu/login?url=https://link.gale.com/apps/pub/1161/ITOF?u=nysl_me_newyorku"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Gale General OneFile
-                </a>
-              </h6>
-              <small>
-                Available from 2002/01/14
-              </small>
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=http://archives.newyorker.com/#folio=C1"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Miscellaneous Ejournals
+                  </a>
+                </h3>
+                <p>
+                  Available from 1925
+                </p>
+              </div>
             </div>
-          </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
             <div
-              class="row"
+              class="list-group-item list-group-item-action flex-column border-0"
             >
-              <h6>
-                <a
-                  href="http://proxy.library.nyu.edu/login?url=https://link.gale.com/apps/pub/1161/LitRC?u=new64731"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Gale Literature Resource Center
-                </a>
-              </h6>
-              <small>
-                Available from 1978/01/01  until 1978/12/31. Available from 1982/01/01  until 1982/12/31. Available from 1989/01/01  until 1989/12/31. Available from 1996/01/01  until 1996/12/31. Available from 2002/01/01
-              </small>
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_id=41130&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&url_ver=Z39.88-2004&res_dat=xri%3Apqm&rfr_id=info%3Axri%2Fsid%3Aprimo&genre=journal"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Music & Performing Arts Collection
+                  </a>
+                </h3>
+                <p>
+                  Available from 2002/11/04
+                </p>
+              </div>
             </div>
-          </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
             <div
-              class="row"
+              class="list-group-item list-group-item-action flex-column border-0"
             >
-              <h6>
-                <a
-                  href="http://proxy.library.nyu.edu/login?url=https://advance.lexis.com/api/search/advanced?source=MTA2OTUwNg&identityprofileid=W4HVBF32601"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Lexis Advance US
-                </a>
-              </h6>
-              <small>
-                Available from 1999
-              </small>
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_id=16493&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&url_ver=Z39.88-2004&rfr_id=info%3Axri%2Fsid%3Aprimo&res_dat=xri%3Apqm&genre=journal"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Music & Performing Arts Collection
+                  </a>
+                </h3>
+                <p>
+                  Available from 2001/08/20  until 2017/01/02
+                </p>
+              </div>
             </div>
-          </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
             <div
-              class="row"
+              class="list-group-item list-group-item-action flex-column border-0"
             >
-              <h6>
-                <a
-                  href="http://proxy.library.nyu.edu/login?url=http://archives.newyorker.com/#folio=C1"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Miscellaneous Ejournals
-                </a>
-              </h6>
-              <small>
-                Available from 1925
-              </small>
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=http://www.newyorker.com/archive"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    OpinionArchives
+                  </a>
+                </h3>
+                <p>
+                  Available from 1925
+                </p>
+              </div>
             </div>
-          </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
             <div
-              class="row"
+              class="list-group-item list-group-item-action flex-column border-0"
             >
-              <h6>
-                <a
-                  href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_id=41130&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&url_ver=Z39.88-2004&res_dat=xri%3Apqm&rfr_id=info%3Axri%2Fsid%3Aprimo&genre=journal"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Music & Performing Arts Collection
-                </a>
-              </h6>
-              <small>
-                Available from 2002/11/04
-              </small>
-            </div>
-          </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
-            <div
-              class="row"
-            >
-              <h6>
-                <a
-                  href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_id=16493&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&url_ver=Z39.88-2004&rfr_id=info%3Axri%2Fsid%3Aprimo&res_dat=xri%3Apqm&genre=journal"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Music & Performing Arts Collection
-                </a>
-              </h6>
-              <small>
-                Available from 2001/08/20  until 2017/01/02
-              </small>
-            </div>
-          </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
-            <div
-              class="row"
-            >
-              <h6>
-                <a
-                  href="http://proxy.library.nyu.edu/login?url=http://www.newyorker.com/archive"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  OpinionArchives
-                </a>
-              </h6>
-              <small>
-                Available from 1925
-              </small>
-            </div>
-          </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
-            <div
-              class="row"
-            >
-              <h6>
-                <a
-                  href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_id=41130&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&res_dat=xri%3Apqm&rfr_id=info%3Axri%2Fsid%3Aprimo&url_ver=Z39.88-2004&genre=journal"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  ProQuest Central
-                </a>
-              </h6>
-              <small>
-                Available from 2002/11/04
-              </small>
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_id=41130&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&res_dat=xri%3Apqm&rfr_id=info%3Axri%2Fsid%3Aprimo&url_ver=Z39.88-2004&genre=journal"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    ProQuest Central
+                  </a>
+                </h3>
+                <p>
+                  Available from 2002/11/04
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div
-        class="col-md-4"
-      >
         <div
-          class="ask-librarian"
+          class="col-md-4"
         >
-          <h5>
-            Need help?
-          </h5>
-          <h6>
-            <a
-              href="https://library.nyu.edu/ask/"
-              rel="noopener noreferrer"
-              target="_blank"
+          <aside>
+            <div
+              class="ask-librarian"
             >
-              Ask a Librarian
-            </a>
-          </h6>
+              <h4>
+                Need help?
+              </h4>
+              <h5>
+                <a
+                  href="https://library.nyu.edu/ask/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Ask a Librarian
+                </a>
+              </h5>
+            </div>
+          </aside>
         </div>
       </div>
     </div>
-  </div>
+  </main>
 </DocumentFragment>
 `;
 
 exports[`Backend success The Year's work in modern language studies. renders correctly 1`] = `
 <DocumentFragment>
-  <div
-    class="jumbotron"
-  >
+  <main>
     <div
-      class="container text-center"
-    >
-      <p>
-        Displaying search results...
-      </p>
-      <p>
-        Note: Alternate titles might have matched your search terms
-      </p>
-    </div>
-  </div>
-  <div
-    class="container"
-  >
-    <div
-      class="row row-cols-md-12"
+      class="jumbotron"
     >
       <div
-        class="col-md-8"
+        class="container text-center"
+      >
+        <h1>
+          Displaying search results...
+        </h1>
+        <p>
+          Note: Alternate titles might have matched your search terms
+        </p>
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="row row-cols-md-12"
       >
         <div
-          class="list-group"
+          class="col-md-8"
         >
           <div
-            class="list-group-item list-group-item-action flex-column border-0"
-          >
-            <div>
-              <p
-                class="resource-type"
-              >
-                Journal
-              </p>
-              <h2
-                class="title"
-              >
-                The Year's work in modern language studies.
-              </h2>
-              <p />
-              <dl
-                class="citation-info"
-              >
-                <dt>
-                  ISSN:
-                </dt>
-                <dd>
-                  00844152
-                </dd>
-                <dt>
-                  Publisher:
-                </dt>
-                <dd>
-                  Modern Humanities Research Association [etc.]
-                </dd>
-              </dl>
-            </div>
-          </div>
-          <div
-            class="list-group-item list-group-item-action flex-column border-0"
+            class="list-group"
           >
             <div
-              class="row"
+              class="list-group-item list-group-item-action flex-column border-0"
             >
-              <h6>
+              <div>
+                <p
+                  class="resource-type"
+                >
+                  Journal
+                </p>
+                <h2
+                  class="title"
+                >
+                  The Year's work in modern language studies.
+                </h2>
+                <p />
+                <dl
+                  class="citation-info"
+                >
+                  <dt>
+                    ISSN:
+                  </dt>
+                  <dd>
+                    00844152
+                  </dd>
+                  <dt>
+                    Publisher:
+                  </dt>
+                  <dd>
+                    Modern Humanities Research Association [etc.]
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?title=The%20Year's%20Work%20in%20Modern%20Language%20Studies&issn=0084-4152&genre=article&sid=DEFAULT%20(Via%20SFX)"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Bobst Library  Interlibrary Loan
+                  </a>
+                </h3>
+                <p />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-4"
+        >
+          <aside>
+            <div
+              class="ask-librarian"
+            >
+              <h4>
+                Need help?
+              </h4>
+              <h5>
                 <a
-                  href="http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?title=The%20Year's%20Work%20in%20Modern%20Language%20Studies&issn=0084-4152&genre=article&sid=DEFAULT%20(Via%20SFX)"
+                  href="https://library.nyu.edu/ask/"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  Bobst Library  Interlibrary Loan
+                  Ask a Librarian
                 </a>
-              </h6>
-              <small />
+              </h5>
             </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="col-md-4"
-      >
-        <div
-          class="ask-librarian"
-        >
-          <h5>
-            Need help?
-          </h5>
-          <h6>
-            <a
-              href="https://library.nyu.edu/ask/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Ask a Librarian
-            </a>
-          </h6>
+          </aside>
         </div>
       </div>
     </div>
-  </div>
+  </main>
 </DocumentFragment>
 `;
