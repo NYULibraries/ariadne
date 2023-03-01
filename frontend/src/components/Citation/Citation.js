@@ -16,8 +16,8 @@ const Citation = () => {
     issue: "Issue",
     article: "Article",
     preprint: "Pre-print",
-    dissertation: "Dissertation",        
-    unknown: "" 
+    dissertation: "Dissertation",
+    unknown: ""
   }
 
   // prefer rft prefixed params when we have them
@@ -37,12 +37,12 @@ const Citation = () => {
     isbn: getOpenUrlParam("isbn"),
     date: getOpenUrlParam("date"),
   };
-  
+
   // author either specified as "au", a series of separate params ("aufirst", "aulast", "auinit", "auinit1", auinitm"), 
   // or "aucorp"
   // thanks to umlaut: https://github.com/NYULibraries/umlaut/blob/master/app/models/referent.rb#L320-L340
   const getAuthorDisplayText = () => {
-    let author = "";
+    let author;
     const aulast = getOpenUrlParam('aulast');
     const aufirst = getOpenUrlParam('aufirst');
     const auinit = getOpenUrlParam('auinit');
@@ -93,7 +93,7 @@ const Citation = () => {
     else
       document.title = 'GetIt';
   }, [citation.item_title]);
-  
+
   const renderCitation = (citation) => {
     if (citation.container_title || citation.volume || citation.issue || citation.start_page || citation.end_page) {
       return (
@@ -120,14 +120,14 @@ const Citation = () => {
         {citation.date}
       </p>
       {renderCitation(citation)}
-        <dl className="citation-info">
-          {citation.issn && (<dt>ISSN:</dt>)}
-          {citation.issn && <dd>{citation.issn}</dd>}
-          {citation.isbn && (<dt>ISBN:</dt>)}
-          {citation.isbn && <dd>{citation.isbn}</dd>}
-          {citation.pub && (<dt>Publisher:</dt>)}
-          {citation.pub && <dd>{citation.pub}</dd>}
-        </dl>
+      <dl className="citation-info">
+        {citation.issn && (<dt>ISSN:</dt>)}
+        {citation.issn && <dd>{citation.issn}</dd>}
+        {citation.isbn && (<dt>ISBN:</dt>)}
+        {citation.isbn && <dd>{citation.isbn}</dd>}
+        {citation.pub && (<dt>Publisher:</dt>)}
+        {citation.pub && <dd>{citation.pub}</dd>}
+      </dl>
     </div>
   );
 };
