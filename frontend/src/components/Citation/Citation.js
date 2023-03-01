@@ -42,29 +42,38 @@ const Citation = () => {
   // or "aucorp"
   // thanks to umlaut: https://github.com/NYULibraries/umlaut/blob/master/app/models/referent.rb#L320-L340
   const getAuthorDisplayText = () => {
-    let author;
-    if ((author = getOpenUrlParam("au"))) {
-      return author;
-    } else if ((author = getOpenUrlParam("aulast"))) {
-      let aufirst;
-      if ((aufirst = getOpenUrlParam("aufirst"))) {
-        return author + ", " + aufirst;
-      } else {
-        let auinit;
-        if ((auinit = getOpenUrlParam("auinit"))) {
-          return author + ", " + auinit;
-        } else {
-          if ((auinit = getOpenUrlParam("auinit1")))
-            author += ", " + auinit;
-          if ((auinit = getOpenUrlParam("auinitm")))
-            author += auinit;
-          return author;
+    let author = "";
+    const aulast = getOpenUrlParam('aulast');
+    const aufirst = getOpenUrlParam('aufirst');
+    const auinit = getOpenUrlParam('auinit');
+    const auinit1 = getOpenUrlParam('auinit1');
+    const auinitm = getOpenUrlParam('auinitm');
+    const aucorp = getOpenUrlParam('aucorp');
+    const au = getOpenUrlParam('au');
+
+    if (au) {
+      return au;
+    } else if (aulast) {
+      author = aulast;
+      if (aufirst) {
+        author += `, ${aufirst}`;
+      } else if (auinit) {
+        author += `, ${auinit}`;
+      } else if (auinit1) {
+        author += `, ${auinit1}`;
+        if (auinitm) {
+          author += auinitm;
         }
       }
-    } else if ((author = getOpenUrlParam("aucorp"))) {
       return author;
+    } else if (aucorp) {
+      return aucorp;
     }
-  }
+    return author;
+  };
+
+
+
 
   citation.author = getAuthorDisplayText();
 
@@ -107,7 +116,7 @@ const Citation = () => {
       {citation.item_title && <h2 className="title">{citation.item_title}</h2>}
       <p>
         {citation.author}
-        {citation.author && citation.date && ( <span>•</span>)}
+        {citation.author && citation.date && (<span>•</span>)}
         {citation.date}
       </p>
       {renderCitation(citation)}
