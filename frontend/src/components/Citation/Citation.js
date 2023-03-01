@@ -21,6 +21,7 @@ const Citation = () => {
   }
 
   // prefer rft prefixed params when we have them
+  // returns null if param is empty (including empty string)
   const getOpenUrlParam = (paramName) => {
     return params.get("rft." + paramName) || params.get(paramName);
   }
@@ -41,15 +42,15 @@ const Citation = () => {
   // or "aucorp"
   // thanks to umlaut: https://github.com/NYULibraries/umlaut/blob/master/app/models/referent.rb#L320-L340
   const getAuthorDisplayText = () => {
-    var author;
+    let author;
     if ((author = getOpenUrlParam("au"))) {
       return author;
     } else if ((author = getOpenUrlParam("aulast"))) {
-      var aufirst;
+      let aufirst;
       if ((aufirst = getOpenUrlParam("aufirst"))) {
         return author + ", " + aufirst;
       } else {
-        var auinit;
+        let auinit;
         if ((auinit = getOpenUrlParam("auinit"))) {
           return author + ", " + auinit;
         } else {
