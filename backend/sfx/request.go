@@ -70,7 +70,7 @@ func NewMultipleObjectsRequest(queryStringValues url.Values) (*MultipleObjectsRe
 		return multipleObjectsRequest, fmt.Errorf("could not convert multiple objects request to XML: %v", err)
 	}
 
-	httpRequest, err := newMultipleObjectsHTTPRequest(multipleObjectsRequest.RequestXML)
+	httpRequest, err := newMultipleObjectsHTTPRequest(multipleObjectsRequest.RequestXML, queryStringValues)
 	if err != nil {
 		return multipleObjectsRequest, fmt.Errorf("could not create new multiple objects request: %v", err)
 	}
@@ -114,23 +114,26 @@ func escapeQueryParamValuesForXML(values []string) ([]string, error) {
 	return escapedValues, err
 }
 
-func newMultipleObjectsHTTPRequest(requestXML string) (*http.Request, error) {
-	params := url.Values{}
+func newMultipleObjectsHTTPRequest(requestXML string, queryStringValues url.Values) (*http.Request, error) {
+	//params := url.Values{}
+	params := queryStringValues
 	params.Add("url_ctx_fmt", "info:ofi/fmt:xml:xsd:ctx")
 	params.Add("sfx.response_type", "multi_obj_xml")
 	// Do we always need these parameters? Umlaut adds them only in certain conditions: https://github.com/team-umlaut/umlaut/blob/b954895e0aa0a7cd0a9ec6bb716c1886c813601e/app/service_adaptors/sfx.rb#L145-L153
 	params.Add("sfx.show_availability", "1")
 	params.Add("sfx.ignore_date_threshold", "1")
 	params.Add("sfx.doi_url", "http://dx.doi.org")
-	params.Add("url_ctx_val", requestXML)
+	//params.Add("url_ctx_val", requestXML)
 
-	request, err := http.NewRequest("POST", sfxURL, strings.NewReader(params.Encode()))
+	//request, err := http.NewRequest("GET", sfxURL, strings.NewReader(params.Encode()))
+	queryURL := sfxURL + "?" + params.Encode()
+	request, err := http.NewRequest("GET", queryURL, nil)
 	if err != nil {
 		return request, fmt.Errorf("could not initialize request to SFX server: %v", err)
 	}
 
-	request.PostForm = params
-	request.Header.Add("Content-Type", "application/x-www-form-urlencoded")
+	//request.PostForm = params
+	//request.Header.Add("Content-Type", "application/x-www-form-urlencoded")
 
 	return request, nil
 }
