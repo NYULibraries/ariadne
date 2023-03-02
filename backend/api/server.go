@@ -8,7 +8,57 @@ import (
 	"net/http"
 )
 
-func MakeJSONResponseFromSFXResponse(sfxResponse *sfx.MultipleObjectsResponse) []byte {
+// Take an incoming Querystring, convert to context object XML, send a post to SFX
+// and write the response JSON
+func MultipleRecordsHandler(w http.ResponseWriter, r *http.Request) {
+	enableCors(&w)
+
+	w.Header().Add("Content-Type", "application/json")
+
+	sfxRequest, err := sfx.NewMultipleObjectsRequest(r.URL.Query())
+	if err != nil {
+		handleError(err, w, "Invalid OpenURL")
+		return
+	}
+
+	sfxResponse, err := sfx.Do(sfxRequest)
+	if err != nil {
+		handleError(err, w, "Invalid response from SFX")
+		return
+	}
+
+	responseJSON := makeJSONResponseFromSFXResponse(sfxResponse)
+
+	fmt.Fprintln(w, string(responseJSON))
+}
+
+// Setup a new mux router with the appropriate routes for this app
+func NewRouter() *http.ServeMux {
+	router := http.NewServeMux()
+
+	router.HandleFunc("/healthcheck", healthCheck)
+	router.HandleFunc("/v0/", MultipleRecordsHandler)
+
+	return router
+}
+
+func enableCors(w *http.ResponseWriter) {
+	(*w).Header().Set("Access-Control-Allow-Origin", "*")
+}
+
+func handleError(err error, w http.ResponseWriter, message string) {
+	log.Println(err)
+	w.WriteHeader(http.StatusBadRequest)
+	json.NewEncoder(w).Encode(map[string]interface{}{"status": "error", "message": message})
+}
+
+// healthCheck returns a successful response, that's it
+func healthCheck(w http.ResponseWriter, r *http.Request) {
+	w.Header().Add("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(map[string]interface{}{"status": "ok"})
+}
+
+func makeJSONResponseFromSFXResponse(sfxResponse *sfx.MultipleObjectsResponse) []byte {
 	// Remove the Ask a Librarian target -- for details, see:
 	// https://nyu-lib.monday.com/boards/765008773/pulses/3548498827
 	sfxResponse.RemoveTarget("http://library.nyu.edu/ask/")
@@ -44,54 +94,4 @@ func MakeJSONResponseFromSFXResponse(sfxResponse *sfx.MultipleObjectsResponse) [
 	}
 
 	return responseJSON
-}
-
-// Take an incoming Querystring, convert to context object XML, send a post to SFX
-// and write the response JSON
-func MultipleRecordsHandler(w http.ResponseWriter, r *http.Request) {
-	enableCors(&w)
-
-	w.Header().Add("Content-Type", "application/json")
-
-	sfxRequest, err := sfx.NewMultipleObjectsRequest(r.URL.Query())
-	if err != nil {
-		handleError(err, w, "Invalid OpenURL")
-		return
-	}
-
-	sfxResponse, err := sfx.Do(sfxRequest)
-	if err != nil {
-		handleError(err, w, "Invalid response from SFX")
-		return
-	}
-
-	responseJSON := MakeJSONResponseFromSFXResponse(sfxResponse)
-
-	fmt.Fprintln(w, string(responseJSON))
-}
-
-// Setup a new mux router with the appropriate routes for this app
-func NewRouter() *http.ServeMux {
-	router := http.NewServeMux()
-
-	router.HandleFunc("/healthcheck", healthCheck)
-	router.HandleFunc("/v0/", MultipleRecordsHandler)
-
-	return router
-}
-
-func enableCors(w *http.ResponseWriter) {
-	(*w).Header().Set("Access-Control-Allow-Origin", "*")
-}
-
-func handleError(err error, w http.ResponseWriter, message string) {
-	log.Println(err)
-	w.WriteHeader(http.StatusBadRequest)
-	json.NewEncoder(w).Encode(map[string]interface{}{"status": "error", "message": message})
-}
-
-// healthCheck returns a successful response, that's it
-func healthCheck(w http.ResponseWriter, r *http.Request) {
-	w.Header().Add("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(map[string]interface{}{"status": "ok"})
 }
