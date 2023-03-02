@@ -1,9 +1,22 @@
+/*
+  Styles for the Citation component
+
+*/
+
+.citation-container {
+  /* display: flex;
+  justify-content: center;
+  margin-right: 58%;
+  margin-top: 0.8rem */
+}
+
+
 /* 
   Styles for the List component
 */
 
 .jumbotron {
-  background-color: #F7EDA3;
+  margin: 20px 0 20px 0;
 }
 
 .jumbotron h1 {
@@ -12,15 +25,12 @@
   line-height: 1.2;
 }
 
-.i-am-centered {
-  display: flex;
-  margin: 18px 0px 0px 118px;
-}
-
-.loader {
+.loading-container {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
+
 
 .list-group {
   border: 1px solid #ddd;
@@ -32,30 +42,37 @@
 
 .row a:hover {
   text-decoration: underline;
-  color: #6c07ae;
+  color: #2200CC;
 }
 
 .row a {
   text-decoration: none;
-  color: #6c07ae;
+  color: #2200CC;
 }
 
 .row h3 {
   font-size: 1.5em;
-  font-weight: 400;
+  font-weight: bold;
   line-height: 1.2;
 }
 
 .ask-librarian {
-  margin-top: 11rem;
+  margin: 20px 0 20px 0;
 }
+
+.ask-librarian h4,
+.ask-librarian h5 a {
+  font-weight: bold;
+}
+
+
 
 /* 
   Styles for the Banner component
 */
 
 .image {
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .image.white-bg {
@@ -64,7 +81,7 @@
 
 
 .image:hover {
-  opacity: 1;
+  opacity: 0.8;
 }
 
 .color-nav {
@@ -79,9 +96,9 @@
     margin: 2rem 0rem 2rem 0rem;
   }
 
-  .i-am-centered {
+  /* .i-am-centered {
     margin: 18px 0px 0px 38px;
-  }
+  } */
 }
 
 h2.title {
