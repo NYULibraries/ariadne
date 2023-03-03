@@ -78,9 +78,9 @@ func TestRequestXML(t *testing.T) {
 
 func TestFilterOpenURLParams(t *testing.T) {
 	var testCases = []struct {
-    testName      string
-		queryString   url.Values //map[string][]string
-		expected      url.Values //map[string][]string
+		testName    string
+		queryString url.Values //map[string][]string
+		expected    url.Values //map[string][]string
 	}{
 		//{"querystring contains sid", map[string][]string{"sid": {"unicode+garbage"}}, map[string][]string{"rfr_id": {"unicode+garbage"}}},
 		//{"querystring doesn't contain sid", map[string][]string{"id": {"unicode+garbage"}}, map[string][]string{"id": {"unicode+garbage"}}},
@@ -90,7 +90,7 @@ func TestFilterOpenURLParams(t *testing.T) {
 
 	for _, testCase := range testCases {
 		t.Run(testCase.testName, func(t *testing.T) {
-      actual := filterOpenURLParams(testCase.queryString)
+			actual := filterOpenURLParams(testCase.queryString)
 			if !reflect.DeepEqual(actual, testCase.expected) {
 				t.Errorf("filterOpenURLParams returned '%v', expecting '%v'", actual, testCase.expected)
 			}
