@@ -1,3 +1,18 @@
+/* Apply the Gotham font to all elements */
+* {
+  font-family: "Gotham SSm A", "Gotham SSm B", Helvetica, Arial, sans-serif;
+}
+
+/* Apply the Montserrat font to all headings */
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+} */
+
 /*
   Styles for the Citation component
 
@@ -21,7 +36,7 @@
 
 .jumbotron h1 {
   font-size: 1.8em;
-  font-weight: 400;
+  font-weight: bold;
   line-height: 1.2;
 }
 
