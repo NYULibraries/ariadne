@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/spf13/cobra"
 	"net/url"
+	"os"
 )
 
 func init() {
@@ -30,7 +31,14 @@ var dumpParamsCmd = &cobra.Command{
 func dumpParams(queryString string) (string, error) {
 	urlValues, err := url.ParseQuery(queryString)
 	if err != nil {
-		return queryString, err
+		// An error returned by `url.ParseQuery` doesn't necessarily mean that
+		// urlValues doesn't contain valid data.  For example, if `queryString`
+		// contains an unescaped semi-colon, `url.ParseQuery` will drop the param
+		// containing it and continue parsing.
+		// Our API discards errors from the `url.ParseQuery` call and
+		// works with the url.Values returned, so this debug command should do the
+		// same.
+		_, _ = fmt.Fprintf(os.Stderr, "[WARNING] url.ParseQuery returned an error: %s\n", err)
 	}
 
 	bytes, err := json.MarshalIndent(urlValues, "", "  ")
