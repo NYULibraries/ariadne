@@ -1,6 +1,7 @@
 /* Apply the Gotham font to all elements */
 * {
   font-family: "Gotham SSm A", "Gotham SSm B", Helvetica, Arial, sans-serif;
+  color: #1C2127;
 }
 
 /* Apply the Montserrat font to all headings */
@@ -18,12 +19,35 @@ h6 {
 
 */
 
-.citation-container {
-  /* display: flex;
-  justify-content: center;
-  margin-right: 58%;
-  margin-top: 0.8rem */
+.citation-container>p,
+.citation-container>h2,
+.citation-container>.citation-info {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
+
+.citation-container>p+p {
+  margin-top: 0;
+}
+
+.citation-container .citation-info p {
+  margin: 0;
+}
+
+.citation-container>p {
+  margin-top: 0;
+}
+
+.citation-container>p+.citation-info>p:first-of-type {
+  margin-bottom: 10px;
+}
+
+.citation-container .citation-info-label {
+  font-weight: normal;
+  width: 80px;
+  display: inline-block;
+}
+
 
 
 /* 
@@ -39,6 +63,12 @@ h6 {
   font-weight: bold;
   line-height: 1.2;
 }
+
+.jumbotron h2.title {
+  font-weight: bold;
+  font-size: 24px;
+}
+
 
 .loading-container {
   display: flex;
@@ -66,7 +96,7 @@ h6 {
 }
 
 .row h3 {
-  font-size: 1.5em;
+  font-size: 20px;
   font-weight: bold;
   line-height: 1.2;
 }
@@ -110,10 +140,6 @@ h6 {
   .ask-librarian {
     margin: 2rem 0rem 2rem 0rem;
   }
-
-  /* .i-am-centered {
-    margin: 18px 0px 0px 38px;
-  } */
 }
 
 h2.title {
@@ -122,28 +148,4 @@ h2.title {
   line-height: 22px;
   margin-top: 0;
   font-weight: normal;
-}
-
-dl.citation-info {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-dl.citation-info dt {
-  float: left;
-  clear: left;
-  font-weight: normal;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  width: 80px;
-}
-
-dl.citation-info dd {
-  margin-left: 100px;
-}
-
-p.resource-type {
-  margin: 0;
-  text-transform: capitalize;
 }
