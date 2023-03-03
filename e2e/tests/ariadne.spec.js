@@ -8,6 +8,9 @@ import { getTestCasesBackendSuccess } from '../../frontend/src/testutils';
 const { test, expect } = require('@playwright/test');
 const beautifyHtml = require('js-beautify').html;
 
+const ASK_LIBRARIAN_TEXT = "Need help?Ask a LibrarianUse Ask A Librarian or the \"Chat with Us\" icon at the bottom right corner for any question you have about the Libraries' services.Visit our online tutorials for tips on searching the catalog and getting library resources.Additional ResourcesUse EZBorrow or InterLibrary Loan (ILL) for materials unavailable at NYUDiscover subject specific resources using expert curated research guidesExplore the complete list of library servicesReach out to the Libraries on our InstagramSearch WorldCat for items in nearby libraries"
+
+
 const testCasesBackendSuccess = getTestCasesBackendSuccess();
 
 for (let i = 0; i < testCasesBackendSuccess.length; i++) {
@@ -99,12 +102,12 @@ ${e.stderr.toString()}`;
       // Playwright's team recommendation for handling popups: https://playwright.dev/docs/pages#handling-popups
       // Start waiting for popup before clicking. Note no await.
       const popupPromise = page.waitForEvent('popup');
-      await page.getByRole('link', { name: 'Ask a Librarian' }).click();
+      await page.getByRole('link', { name: 'Ask a Librarian' }).first().click();
       const popup = await popupPromise;
       // Wait for the popup to load.
       await popup.waitForLoadState();
 
-      expect(await page.textContent('.ask-librarian')).toBe('Need help?Ask a Librarian');
+      expect(await page.textContent('.ask-librarian')).toBe(ASK_LIBRARIAN_TEXT);
       expect(popup.url()).toBe('https://library.nyu.edu/ask/');
     });
 
@@ -122,7 +125,7 @@ ${e.stderr.toString()}`;
     });
 
     test('returns search results', async ({ page }) => {
-      expect(await page.textContent('h1')).toBe('Displaying search results...');
+      expect(await page.textContent('h1')).toBe('Getit Search Results:');
     });
   });
 }
