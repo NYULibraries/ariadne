@@ -7,7 +7,10 @@ const List = ({ links, error, loading }) => {
     return (
         <>
             {loading && <Loader />}
-            {error && <Error message={error} />}
+            <div role="alert">
+                {error && <Error message={error} />}
+            </div>
+
             <div className="list-group">
                 <div className="list-group-item list-group-item-action flex-column border-0"></div>
                 {links?.map((link, idx) => (
