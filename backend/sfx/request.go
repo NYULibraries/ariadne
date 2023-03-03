@@ -114,9 +114,24 @@ func escapeQueryParamValuesForXML(values []string) ([]string, error) {
 	return escapedValues, err
 }
 
+// transforms sid to rfr_id since the former seems to trigger SFX errors when its value contains certain unicode encodings, while the latter doesn't
+// example of such a request: http://sfx.library.nyu.edu/sfxlcl41?genre=article&isbn=&issn=19447485&title=Community%20Development&volume=49&issue=5&date=20181020&atitle=Can%20community%20task%20groups%20learn%20from%20the%20principles%20of%20group%20therapy?&aulast=Zanbar,%20L.&spage=574&sid=EBSCO:Scopus\\u00ae&pid=Zanbar,%20L.edselc.2-52.0-8505573399120181020Scopus\\u00ae
+func filterOpenURLParams(queryStringValues url.Values) url.Values {
+  // if no sid, we do nothing
+  sid := queryStringValues.Get("sid") 
+  if sid == "" {
+    return queryStringValues
+  }
+
+  // replace sid with rfr_id
+  queryStringValues.Del("sid")
+  queryStringValues.Add("rfr_id", sid)
+  return queryStringValues
+}
+
 func newMultipleObjectsHTTPRequest(requestXML string, queryStringValues url.Values) (*http.Request, error) {
 	//params := url.Values{}
-	params := queryStringValues
+	params := filterOpenURLParams(queryStringValues)
 	params.Add("url_ctx_fmt", "info:ofi/fmt:xml:xsd:ctx")
 	params.Add("sfx.response_type", "multi_obj_xml")
 	// Do we always need these parameters? Umlaut adds them only in certain conditions: https://github.com/team-umlaut/umlaut/blob/b954895e0aa0a7cd0a9ec6bb716c1886c813601e/app/service_adaptors/sfx.rb#L145-L153
