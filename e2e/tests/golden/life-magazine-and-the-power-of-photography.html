@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <link rel="icon" href="https://cdn.library.nyu.edu/images/favicon.ico">
+    <link href="https://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#000000">
     <meta name="description" content="Web site created using create-react-app">
@@ -23,12 +25,18 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>GetIt | "Life" Magazine and the Power of Photography, edited by Katherine A. Bussard and Kristen Gresh: New Haven, CT: Yale University Press, 2020. 336 pp.; 250 color and b/w ills. $60.00.</title>
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/gotham');
+        @import url('https://fonts.cdnfonts.com/css/montserrat');
+    </style>
     <script defer="" src="/static/js/bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.library.nyu.edu/statuspage-embed/index.min.css">
     <style>
         body {
             margin: 0;
             background-color: #f5f7fa;
             font-family: "Google Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #1C2127;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
@@ -41,29 +49,84 @@
         /* E2E TEST EDIT: sourceMappingURL comments elided */
     </style>
     <style>
+        /* Apply the Gotham font to all elements */
+        * {
+            font-family: "Gotham SSm A", "Gotham SSm B", Helvetica, Arial, sans-serif;
+            color: #1C2127;
+        }
+
+        /* Apply the Montserrat font to all headings */
+        /* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+} */
+
+        /*
+  Styles for the Citation component
+
+*/
+
+        .citation-container>p,
+        .citation-container>h2,
+        .citation-container>.citation-info {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .citation-container>p+p {
+            margin-top: 0;
+        }
+
+        .citation-container .citation-info p {
+            margin: 0;
+        }
+
+        .citation-container>p {
+            margin-top: 0;
+        }
+
+        .citation-container>p+.citation-info>p:first-of-type {
+            margin-bottom: 10px;
+        }
+
+        .citation-container .citation-info-label {
+            font-weight: normal;
+            width: 80px;
+            display: inline-block;
+        }
+
+
+
         /* 
   Styles for the List component
 */
 
         .jumbotron {
-            background-color: #F7EDA3;
+            margin: 20px 0 20px 0;
         }
 
         .jumbotron h1 {
             font-size: 1.8em;
-            font-weight: 400;
+            font-weight: bold;
             line-height: 1.2;
         }
 
-        .i-am-centered {
-            display: flex;
-            margin: 18px 0px 0px 118px;
+        .jumbotron h2.title {
+            font-weight: bold;
+            font-size: 24px;
         }
 
-        .loader {
+
+        .loading-container {
             display: flex;
             justify-content: center;
+            align-items: center;
         }
+
 
         .list-group {
             border: 1px solid #ddd;
@@ -75,30 +138,37 @@
 
         .row a:hover {
             text-decoration: underline;
-            color: #6c07ae;
+            color: #2200CC;
         }
 
         .row a {
             text-decoration: none;
-            color: #6c07ae;
+            color: #2200CC;
         }
 
         .row h3 {
-            font-size: 1.5em;
-            font-weight: 400;
+            font-size: 20px;
+            font-weight: bold;
             line-height: 1.2;
         }
 
         .ask-librarian {
-            margin-top: 11rem;
+            margin: 20px 0 20px 0;
         }
+
+        .ask-librarian h4,
+        .ask-librarian h5 a {
+            font-weight: bold;
+        }
+
+
 
         /* 
   Styles for the Banner component
 */
 
         .image {
-            opacity: 0.8;
+            opacity: 1;
         }
 
         .image.white-bg {
@@ -107,7 +177,7 @@
 
 
         .image:hover {
-            opacity: 1;
+            opacity: 0.8;
         }
 
         .color-nav {
@@ -121,10 +191,6 @@
             .ask-librarian {
                 margin: 2rem 0rem 2rem 0rem;
             }
-
-            .i-am-centered {
-                margin: 18px 0px 0px 38px;
-            }
         }
 
         h2.title {
@@ -133,30 +199,6 @@
             line-height: 22px;
             margin-top: 0;
             font-weight: normal;
-        }
-
-        dl.citation-info {
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-
-        dl.citation-info dt {
-            float: left;
-            clear: left;
-            font-weight: normal;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            width: 80px;
-        }
-
-        dl.citation-info dd {
-            margin-left: 100px;
-        }
-
-        p.resource-type {
-            margin: 0;
-            text-transform: capitalize;
         }
 
         /* E2E TEST EDIT: sourceMappingURL comments elided */
@@ -12705,28 +12747,28 @@
                 </div>
             </nav>
             <main>
-                <div class="jumbotron">
-                    <div class="container text-center">
-                        <h1>Displaying search results...</h1>
-                        <p>Note: Alternate titles might have matched your search terms</p>
-                    </div>
-                </div>
                 <div class="container">
                     <div class="row row-cols-md-12">
                         <div class="col-md-8">
-                            <div class="list-group">
-                                <div class="list-group-item list-group-item-action flex-column border-0">
+                            <div class="jumbotron">
+                                <div class="container text-left">
+                                    <h1>Getit Search Results:</h1>
                                     <div>
-                                        <p class="resource-type">Article</p>
-                                        <h2 class="title">"Life" Magazine and the Power of Photography, edited by Katherine A. Bussard and Kristen Gresh: New Haven, CT: Yale University Press, 2020. 336 pp.; 250 color and b/w ills. $60.00.</h2>
-                                        <p>Berger, Martin A.<span>•</span>20211201</p>
-                                        <p style="margin: 0px 0px 10px;"><span style="box-sizing: border-box;">Published in </span><span style="font-style: italic;">Art Bulletin. </span>Volume 103. Issue 4. Page 144</p>
-                                        <dl class="citation-info">
-                                            <dt>ISSN:</dt>
-                                            <dd>00043079</dd>
-                                        </dl>
+                                        <div class="citation-container">
+                                            <p class="resource-type">Article</p>
+                                            <h2 class="title">"Life" Magazine and the Power of Photography, edited by Katherine A. Bussard and Kristen Gresh: New Haven, CT: Yale University Press, 2020. 336 pp.; 250 color and b/w ills. $60.00.</h2>
+                                            <p>Berger, Martin A.<span>.</span>20211201</p>
+                                            <p style="margin: 0px 0px 10px;"><span style="box-sizing: border-box;">Published in </span><span style="font-style: italic;">Art Bulletin. </span>Volume 103. Issue 4. Page 144</p>
+                                            <div class="citation-info">
+                                                <p><span class="citation-info-label">ISSN:</span> 00043079</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div role="alert"></div>
+                            <div class="list-group">
+                                <div class="list-group-item list-group-item-action flex-column border-0"></div>
                                 <div class="list-group-item list-group-item-action flex-column border-0">
                                     <div class="row">
                                         <h3><a href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?issue=4&amp;sid=Primo&amp;atitle=%22life%22+magazine+and+the+power+of+photography&amp;spage=144&amp;date=20211201&amp;issn=0004-3079&amp;title=The+Art+Bulletin&amp;genre=article&amp;volume=103" target="_blank" rel="noopener noreferrer">EBSCOhost Academic Search Complete</a></h3>
@@ -12758,6 +12800,18 @@
                                 <div class="ask-librarian">
                                     <h4>Need help?</h4>
                                     <h5><a href="https://library.nyu.edu/ask/" target="_blank" rel="noopener noreferrer">Ask a Librarian</a></h5>
+                                    <div>
+                                        <p>Use <a href="https://library.nyu.edu/ask/" target="_blank" rel="noreferrer">Ask A Librarian</a> or the "Chat with Us" icon at the bottom right corner for any question you have about the Libraries' services.</p>
+                                        <p>Visit our <a href="https://guides.nyu.edu/online-tutorials/finding-sources" target="_blank" rel="noreferrer">online tutorials</a> for tips on searching the catalog and getting library resources.</p>
+                                        <h3>Additional Resources</h3>
+                                        <ul>
+                                            <li>Use <a href="https://ezborrow.reshare.indexdata.com/" target="_blank" rel="noreferrer">EZBorrow</a> or <a href="https://library.nyu.edu/services/borrowing/from-non-nyu-libraries/interlibrary-loan/" target="_blank" rel="noreferrer">InterLibrary Loan (ILL)</a> for materials unavailable at NYU</li>
+                                            <li>Discover subject specific resources using <a href="http://guides.nyu.edu" target="_blank" rel="noreferrer">expert curated research guides</a></li>
+                                            <li>Explore the <a href="https://library.nyu.edu/services/" target="_blank" rel="noreferrer">complete list of library services</a></li>
+                                            <li>Reach out to the Libraries on <a href="https://www.instagram.com/nyulibraries/" target="_blank" rel="noreferrer">our Instagram</a></li>
+                                            <li>Search <a href="https://www.worldcat.org/search?qt=worldcat_org_all" target="_blank" rel="noreferrer">WorldCat</a> for items in nearby libraries</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </aside>
                         </div>
@@ -12776,6 +12830,8 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script src="https://cdn.library.nyu.edu/statuspage-embed/index.min.js"></script>
+
 
 
 </body>
