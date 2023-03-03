@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 
 const AskLibrarian = ({ loading }) => {
     return (
-        <div className="ask-librarian">
+        <>
             {!loading && (
-                <>
+                <div className="ask-librarian">
                     <h4>Need help?</h4>
                     <h5>
                         <a href={ASK_LIBRARIAN_URL} target="_blank" rel="noopener noreferrer">
@@ -12,8 +12,12 @@ const AskLibrarian = ({ loading }) => {
                         </a>
                     </h5>
                     <div>
-                        <p>Use <a href="https://library.nyu.edu/ask/" target="_blank" rel="noreferrer">Ask A Librarian</a> or the &quot;Chat with Us&quot; icon at the bottom right corner for any question you have about the Libraries&apos; services.</p>
-                        <p>Visit our <a href="https://guides.nyu.edu/online-tutorials/finding-sources" target="_blank" rel="noreferrer">online tutorials</a> for tips on searching the catalog and getting library resources.</p>
+                        <p>
+                            Use <a href="https://library.nyu.edu/ask/" target="_blank" rel="noreferrer">Ask A Librarian</a> or the &quot;Chat with Us&quot; icon at the bottom right corner for any question you have about the Libraries&apos; services.
+                        </p>
+                        <p>
+                            Visit our <a href="https://guides.nyu.edu/online-tutorials/finding-sources" target="_blank" rel="noreferrer">online tutorials</a> for tips on searching the catalog and getting library resources.
+                        </p>
                         <h3>Additional Resources</h3>
                         <ul>
                             <li>Use <a href="https://ezborrow.reshare.indexdata.com/" target="_blank" rel="noreferrer">EZBorrow</a> or <a href="https://library.nyu.edu/services/borrowing/from-non-nyu-libraries/interlibrary-loan/" target="_blank" rel="noreferrer">InterLibrary Loan (ILL)</a> for materials unavailable at NYU</li>
@@ -23,11 +27,13 @@ const AskLibrarian = ({ loading }) => {
                             <li>Search <a href="https://www.worldcat.org/search?qt=worldcat_org_all" target="_blank" rel="noreferrer">WorldCat</a> for items in nearby libraries</li>
                         </ul>
                     </div>
-                </>
+                </div>
             )}
-        </div>
+            {loading && null}
+        </>
     );
 };
+
 
 AskLibrarian.propTypes = {
     loading: PropTypes.bool.isRequired
