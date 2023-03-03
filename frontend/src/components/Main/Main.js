@@ -66,6 +66,6 @@ const Main = () => {
   );
 };
 
-export const RESULTS_HEADER_TEXT = 'Getit Search Results:';
+export const RESULTS_HEADER_TEXT = 'GetIt Search Results:';
 
 export default Main;

@@ -117,7 +117,7 @@ const Citation = () => {
       {citation.item_title && <h2 className="title">{citation.item_title}</h2>}
       <p>
         {citation.author}
-        {citation.author && citation.date && (<span>.</span>)}
+        {citation.author && citation.date && (<span>. </span>)}
         {citation.date}
       </p>
       {renderCitation(citation)}
