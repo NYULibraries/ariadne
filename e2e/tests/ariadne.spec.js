@@ -125,7 +125,7 @@ ${e.stderr.toString()}`;
     });
 
     test('returns search results', async ({ page }) => {
-      expect(await page.textContent('h1')).toBe('Getit Search Results:');
+      expect(await page.textContent('h1')).toBe('GetIt Search Results:');
     });
   });
 }
