@@ -44,7 +44,6 @@ h6 {
 
 .citation-container .citation-info-label {
   font-weight: normal;
-  width: 80px;
   display: inline-block;
 }
 
@@ -87,12 +86,12 @@ h6 {
 
 .row a:hover {
   text-decoration: underline;
-  color: #2200CC;
+  color: #0170B2;
 }
 
 .row a {
   text-decoration: none;
-  color: #2200CC;
+  color: #0170B2;
 }
 
 .row h3 {
