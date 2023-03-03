@@ -22,7 +22,9 @@ exports[`Backend HTTP error responses HTTP 400 (Bad Request) error is rendered c
                 Getit Search Results:
               </h1>
               <div>
-                <div>
+                <div
+                  class="citation-container"
+                >
                   <p
                     class="resource-type"
                   />
@@ -34,7 +36,7 @@ exports[`Backend HTTP error responses HTTP 400 (Bad Request) error is rendered c
                   <p>
                     Payne, Henry
                     <span>
-                      •
+                      .
                     </span>
                     2002-12-15
                   </p>
@@ -53,16 +55,18 @@ exports[`Backend HTTP error responses HTTP 400 (Bad Request) error is rendered c
                     </span>
                     Page A18
                   </p>
-                  <dl
+                  <div
                     class="citation-info"
                   >
-                    <dt>
-                      ISSN:
-                    </dt>
-                    <dd>
-                      10552715
-                    </dd>
-                  </dl>
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       10552715
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -228,7 +232,9 @@ exports[`Backend HTTP error responses HTTP 403 (Forbidden) error is rendered cor
                 Getit Search Results:
               </h1>
               <div>
-                <div>
+                <div
+                  class="citation-container"
+                >
                   <p
                     class="resource-type"
                   />
@@ -240,7 +246,7 @@ exports[`Backend HTTP error responses HTTP 403 (Forbidden) error is rendered cor
                   <p>
                     Payne, Henry
                     <span>
-                      •
+                      .
                     </span>
                     2002-12-15
                   </p>
@@ -259,16 +265,18 @@ exports[`Backend HTTP error responses HTTP 403 (Forbidden) error is rendered cor
                     </span>
                     Page A18
                   </p>
-                  <dl
+                  <div
                     class="citation-info"
                   >
-                    <dt>
-                      ISSN:
-                    </dt>
-                    <dd>
-                      10552715
-                    </dd>
-                  </dl>
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       10552715
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -434,7 +442,9 @@ exports[`Backend HTTP error responses HTTP 408 (Request Timeout) error is render
                 Getit Search Results:
               </h1>
               <div>
-                <div>
+                <div
+                  class="citation-container"
+                >
                   <p
                     class="resource-type"
                   />
@@ -446,7 +456,7 @@ exports[`Backend HTTP error responses HTTP 408 (Request Timeout) error is render
                   <p>
                     Payne, Henry
                     <span>
-                      •
+                      .
                     </span>
                     2002-12-15
                   </p>
@@ -465,16 +475,18 @@ exports[`Backend HTTP error responses HTTP 408 (Request Timeout) error is render
                     </span>
                     Page A18
                   </p>
-                  <dl
+                  <div
                     class="citation-info"
                   >
-                    <dt>
-                      ISSN:
-                    </dt>
-                    <dd>
-                      10552715
-                    </dd>
-                  </dl>
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       10552715
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -640,7 +652,9 @@ exports[`Backend HTTP error responses HTTP 500 (Internal Server Error) error is 
                 Getit Search Results:
               </h1>
               <div>
-                <div>
+                <div
+                  class="citation-container"
+                >
                   <p
                     class="resource-type"
                   />
@@ -652,7 +666,7 @@ exports[`Backend HTTP error responses HTTP 500 (Internal Server Error) error is 
                   <p>
                     Payne, Henry
                     <span>
-                      •
+                      .
                     </span>
                     2002-12-15
                   </p>
@@ -671,16 +685,18 @@ exports[`Backend HTTP error responses HTTP 500 (Internal Server Error) error is 
                     </span>
                     Page A18
                   </p>
-                  <dl
+                  <div
                     class="citation-info"
                   >
-                    <dt>
-                      ISSN:
-                    </dt>
-                    <dd>
-                      10552715
-                    </dd>
-                  </dl>
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       10552715
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -846,7 +862,9 @@ exports[`Backend fetch exceptions TypeError: Failed to fetch renders backend fet
                 Getit Search Results:
               </h1>
               <div>
-                <div>
+                <div
+                  class="citation-container"
+                >
                   <p
                     class="resource-type"
                   />
@@ -858,7 +876,7 @@ exports[`Backend fetch exceptions TypeError: Failed to fetch renders backend fet
                   <p>
                     Payne, Henry
                     <span>
-                      •
+                      .
                     </span>
                     2002-12-15
                   </p>
@@ -877,16 +895,18 @@ exports[`Backend fetch exceptions TypeError: Failed to fetch renders backend fet
                     </span>
                     Page A18
                   </p>
-                  <dl
+                  <div
                     class="citation-info"
                   >
-                    <dt>
-                      ISSN:
-                    </dt>
-                    <dd>
-                      10552715
-                    </dd>
-                  </dl>
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       10552715
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1052,7 +1072,9 @@ exports[`Backend response includes errors Response includes 2 errors and an empt
                 Getit Search Results:
               </h1>
               <div>
-                <div>
+                <div
+                  class="citation-container"
+                >
                   <p
                     class="resource-type"
                   />
@@ -1064,7 +1086,7 @@ exports[`Backend response includes errors Response includes 2 errors and an empt
                   <p>
                     Payne, Henry
                     <span>
-                      •
+                      .
                     </span>
                     2002-12-15
                   </p>
@@ -1083,16 +1105,18 @@ exports[`Backend response includes errors Response includes 2 errors and an empt
                     </span>
                     Page A18
                   </p>
-                  <dl
+                  <div
                     class="citation-info"
                   >
-                    <dt>
-                      ISSN:
-                    </dt>
-                    <dd>
-                      10552715
-                    </dd>
-                  </dl>
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       10552715
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1258,7 +1282,9 @@ exports[`Backend success "Life" Magazine and the Power of Photography renders co
                 Getit Search Results:
               </h1>
               <div>
-                <div>
+                <div
+                  class="citation-container"
+                >
                   <p
                     class="resource-type"
                   >
@@ -1272,7 +1298,7 @@ exports[`Backend success "Life" Magazine and the Power of Photography renders co
                   <p>
                     Berger, Martin A.
                     <span>
-                      •
+                      .
                     </span>
                     20211201
                   </p>
@@ -1291,16 +1317,18 @@ exports[`Backend success "Life" Magazine and the Power of Photography renders co
                     </span>
                     Volume 103. Issue 4. Page 144
                   </p>
-                  <dl
+                  <div
                     class="citation-info"
                   >
-                    <dt>
-                      ISSN:
-                    </dt>
-                    <dd>
-                      00043079
-                    </dd>
-                  </dl>
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       00043079
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1513,7 +1541,196 @@ exports[`Backend success "Life" Magazine and the Power of Photography renders co
 </DocumentFragment>
 `;
 
-exports[`Backend success Corriere Fiorentino renders correctly 1`] = `<DocumentFragment />`;
+exports[`Backend success Corriere Fiorentino renders correctly 1`] = `
+<DocumentFragment>
+  <main>
+    <div
+      class="container"
+    >
+      <div
+        class="row row-cols-md-12"
+      >
+        <div
+          class="col-md-8"
+        >
+          <div
+            class="jumbotron"
+          >
+            <div
+              class="container text-left"
+            >
+              <h1>
+                Getit Search Results:
+              </h1>
+              <div>
+                <div
+                  class="citation-container"
+                >
+                  <p
+                    class="resource-type"
+                  >
+                    Journal
+                  </p>
+                  <h2
+                    class="title"
+                  >
+                    Corriere Fiorentino
+                  </h2>
+                  <p />
+                  <div
+                    class="citation-info"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            role="alert"
+          />
+          <div
+            class="list-group"
+          >
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            />
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="
+                    http://proxy.library.nyu.edu/login?url=https://www.pressreader.com/italy/corriere-fiorentino
+                "
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    PressReader
+                  </a>
+                </h3>
+                <p />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-4"
+        >
+          <aside>
+            <div
+              class="ask-librarian"
+            >
+              <h4>
+                Need help?
+              </h4>
+              <h5>
+                <a
+                  href="https://library.nyu.edu/ask/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Ask a Librarian
+                </a>
+              </h5>
+              <div>
+                <p>
+                  Use 
+                  <a
+                    href="https://library.nyu.edu/ask/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    Ask A Librarian
+                  </a>
+                   or the "Chat with Us" icon at the bottom right corner for any question you have about the Libraries' services.
+                </p>
+                <p>
+                  Visit our 
+                  <a
+                    href="https://guides.nyu.edu/online-tutorials/finding-sources"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    online tutorials
+                  </a>
+                   for tips on searching the catalog and getting library resources.
+                </p>
+                <h3>
+                  Additional Resources
+                </h3>
+                <ul>
+                  <li>
+                    Use 
+                    <a
+                      href="https://ezborrow.reshare.indexdata.com/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      EZBorrow
+                    </a>
+                     or 
+                    <a
+                      href="https://library.nyu.edu/services/borrowing/from-non-nyu-libraries/interlibrary-loan/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      InterLibrary Loan (ILL)
+                    </a>
+                     for materials unavailable at NYU
+                  </li>
+                  <li>
+                    Discover subject specific resources using 
+                    <a
+                      href="http://guides.nyu.edu"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      expert curated research guides
+                    </a>
+                  </li>
+                  <li>
+                    Explore the 
+                    <a
+                      href="https://library.nyu.edu/services/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      complete list of library services
+                    </a>
+                  </li>
+                  <li>
+                    Reach out to the Libraries on 
+                    <a
+                      href="https://www.instagram.com/nyulibraries/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      our Instagram
+                    </a>
+                  </li>
+                  <li>
+                    Search 
+                    <a
+                      href="https://www.worldcat.org/search?qt=worldcat_org_all"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      WorldCat
+                    </a>
+                     for items in nearby libraries
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+</DocumentFragment>
+`;
 
 exports[`Backend success Design of LED light therapy device based on free-form lens. renders correctly 1`] = `
 <DocumentFragment>
@@ -1537,7 +1754,9 @@ exports[`Backend success Design of LED light therapy device based on free-form l
                 Getit Search Results:
               </h1>
               <div>
-                <div>
+                <div
+                  class="citation-container"
+                >
                   <p
                     class="resource-type"
                   >
@@ -1551,7 +1770,7 @@ exports[`Backend success Design of LED light therapy device based on free-form l
                   <p>
                     Feng, Zefeng
                     <span>
-                      •
+                      .
                     </span>
                     20230305
                   </p>
@@ -1570,16 +1789,18 @@ exports[`Backend success Design of LED light therapy device based on free-form l
                     </span>
                     Volume 12461. Page 1246106
                   </p>
-                  <dl
+                  <div
                     class="citation-info"
                   >
-                    <dt>
-                      ISSN:
-                    </dt>
-                    <dd>
-                      0277786X
-                    </dd>
-                  </dl>
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       0277786X
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1754,7 +1975,9 @@ exports[`Backend success Editorial cartoon renders correctly 1`] = `
                 Getit Search Results:
               </h1>
               <div>
-                <div>
+                <div
+                  class="citation-container"
+                >
                   <p
                     class="resource-type"
                   />
@@ -1766,7 +1989,7 @@ exports[`Backend success Editorial cartoon renders correctly 1`] = `
                   <p>
                     Payne, Henry
                     <span>
-                      •
+                      .
                     </span>
                     2002-12-15
                   </p>
@@ -1785,16 +2008,18 @@ exports[`Backend success Editorial cartoon renders correctly 1`] = `
                     </span>
                     Page A18
                   </p>
-                  <dl
+                  <div
                     class="citation-info"
                   >
-                    <dt>
-                      ISSN:
-                    </dt>
-                    <dd>
-                      10552715
-                    </dd>
-                  </dl>
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       10552715
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1969,7 +2194,9 @@ exports[`Backend success Modelling Modular Living: Furniture and Life Magazine a
                 Getit Search Results:
               </h1>
               <div>
-                <div>
+                <div
+                  class="citation-container"
+                >
                   <p
                     class="resource-type"
                   >
@@ -1983,7 +2210,7 @@ exports[`Backend success Modelling Modular Living: Furniture and Life Magazine a
                   <p>
                     Altehenger, J.
                     <span>
-                      •
+                      .
                     </span>
                     20220601
                   </p>
@@ -2002,16 +2229,18 @@ exports[`Backend success Modelling Modular Living: Furniture and Life Magazine a
                     </span>
                     Volume 35. Issue 2. Page 151
                   </p>
-                  <dl
+                  <div
                     class="citation-info"
                   >
-                    <dt>
-                      ISSN:
-                    </dt>
-                    <dd>
-                      17417279
-                    </dd>
-                  </dl>
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       17417279
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2186,7 +2415,9 @@ exports[`Backend success Moral psychology is relationship regulation: moral moti
                 Getit Search Results:
               </h1>
               <div>
-                <div>
+                <div
+                  class="citation-container"
+                >
                   <h2
                     class="title"
                   >
@@ -2195,7 +2426,7 @@ exports[`Backend success Moral psychology is relationship regulation: moral moti
                   <p>
                     Rai, TS
                     <span>
-                      •
+                      .
                     </span>
                     2011
                   </p>
@@ -2214,16 +2445,18 @@ exports[`Backend success Moral psychology is relationship regulation: moral moti
                     </span>
                     Volume 118. Issue 1. Page 57
                   </p>
-                  <dl
+                  <div
                     class="citation-info"
                   >
-                    <dt>
-                      ISSN:
-                    </dt>
-                    <dd>
-                      0033-295X
-                    </dd>
-                  </dl>
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       0033-295X
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2376,7 +2609,205 @@ exports[`Backend success Moral psychology is relationship regulation: moral moti
 </DocumentFragment>
 `;
 
-exports[`Backend success Our Lady of everyday life : la Virgen de Guadalupe and the Catholic imagination of Mexican American women in America renders correctly 1`] = `<DocumentFragment />`;
+exports[`Backend success Our Lady of everyday life : la Virgen de Guadalupe and the Catholic imagination of Mexican American women in America renders correctly 1`] = `
+<DocumentFragment>
+  <main>
+    <div
+      class="container"
+    >
+      <div
+        class="row row-cols-md-12"
+      >
+        <div
+          class="col-md-8"
+        >
+          <div
+            class="jumbotron"
+          >
+            <div
+              class="container text-left"
+            >
+              <h1>
+                Getit Search Results:
+              </h1>
+              <div>
+                <div
+                  class="citation-container"
+                >
+                  <p
+                    class="resource-type"
+                  >
+                    Book Chapter
+                  </p>
+                  <h2
+                    class="title"
+                  >
+                    Our Lady of everyday life: la Virgen de Guadalupe and the Catholic imagination of Mexican women in America
+                  </h2>
+                  <p>
+                    20180101
+                  </p>
+                  <div
+                    class="citation-info"
+                  >
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISBN:
+                      </span>
+                       9780190280390
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            role="alert"
+          />
+          <div
+            class="list-group"
+          >
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            />
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?sid=DEFAULT%20(Via%20SFX)&genre=bookitem&date=2018&year=2018&title=Our%20Lady%20of%20Everyday%20Life&month=1&isbn=0-19-028039-5&aufirst=Mar%C3%ADa%20Del%20Socorro&aulast=Casta%C3%B1eda-Liles"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Bobst Library  Interlibrary Loan
+                  </a>
+                </h3>
+                <p />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-4"
+        >
+          <aside>
+            <div
+              class="ask-librarian"
+            >
+              <h4>
+                Need help?
+              </h4>
+              <h5>
+                <a
+                  href="https://library.nyu.edu/ask/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Ask a Librarian
+                </a>
+              </h5>
+              <div>
+                <p>
+                  Use 
+                  <a
+                    href="https://library.nyu.edu/ask/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    Ask A Librarian
+                  </a>
+                   or the "Chat with Us" icon at the bottom right corner for any question you have about the Libraries' services.
+                </p>
+                <p>
+                  Visit our 
+                  <a
+                    href="https://guides.nyu.edu/online-tutorials/finding-sources"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    online tutorials
+                  </a>
+                   for tips on searching the catalog and getting library resources.
+                </p>
+                <h3>
+                  Additional Resources
+                </h3>
+                <ul>
+                  <li>
+                    Use 
+                    <a
+                      href="https://ezborrow.reshare.indexdata.com/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      EZBorrow
+                    </a>
+                     or 
+                    <a
+                      href="https://library.nyu.edu/services/borrowing/from-non-nyu-libraries/interlibrary-loan/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      InterLibrary Loan (ILL)
+                    </a>
+                     for materials unavailable at NYU
+                  </li>
+                  <li>
+                    Discover subject specific resources using 
+                    <a
+                      href="http://guides.nyu.edu"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      expert curated research guides
+                    </a>
+                  </li>
+                  <li>
+                    Explore the 
+                    <a
+                      href="https://library.nyu.edu/services/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      complete list of library services
+                    </a>
+                  </li>
+                  <li>
+                    Reach out to the Libraries on 
+                    <a
+                      href="https://www.instagram.com/nyulibraries/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      our Instagram
+                    </a>
+                  </li>
+                  <li>
+                    Search 
+                    <a
+                      href="https://www.worldcat.org/search?qt=worldcat_org_all"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      WorldCat
+                    </a>
+                     for items in nearby libraries
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+</DocumentFragment>
+`;
 
 exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the Commercial Apparatus of Life Magazine. [unescaped ampersand in \`title\` query param value] renders correctly 1`] = `
 <DocumentFragment>
@@ -2400,7 +2831,9 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
                 Getit Search Results:
               </h1>
               <div>
-                <div>
+                <div
+                  class="citation-container"
+                >
                   <p
                     class="resource-type"
                   >
@@ -2414,7 +2847,7 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
                   <p>
                     Schwartz, Joshua S.
                     <span>
-                      •
+                      .
                     </span>
                     20210401
                   </p>
@@ -2433,16 +2866,18 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
                     </span>
                     Volume 20. Issue 2. Page 301
                   </p>
-                  <dl
+                  <div
                     class="citation-info"
                   >
-                    <dt>
-                      ISSN:
-                    </dt>
-                    <dd>
-                      15377814
-                    </dd>
-                  </dl>
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       15377814
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2657,7 +3092,9 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
                 Getit Search Results:
               </h1>
               <div>
-                <div>
+                <div
+                  class="citation-container"
+                >
                   <p
                     class="resource-type"
                   >
@@ -2671,7 +3108,7 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
                   <p>
                     Schwartz, Joshua S.
                     <span>
-                      •
+                      .
                     </span>
                     20210401
                   </p>
@@ -2690,16 +3127,18 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
                     </span>
                     Volume 20. Issue 2. Page 301
                   </p>
-                  <dl
+                  <div
                     class="citation-info"
                   >
-                    <dt>
-                      ISSN:
-                    </dt>
-                    <dd>
-                      15377814
-                    </dd>
-                  </dl>
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       15377814
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2914,7 +3353,9 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
                 Getit Search Results:
               </h1>
               <div>
-                <div>
+                <div
+                  class="citation-container"
+                >
                   <p
                     class="resource-type"
                   >
@@ -2928,26 +3369,30 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
                   <p>
                     Ross
                     <span>
-                      •
+                      .
                     </span>
                     2002
                   </p>
-                  <dl
+                  <div
                     class="citation-info"
                   >
-                    <dt>
-                      ISSN:
-                    </dt>
-                    <dd>
-                      0028-792X
-                    </dd>
-                    <dt>
-                      Publisher:
-                    </dt>
-                    <dd>
-                      F-R Pub. Corp.
-                    </dd>
-                  </dl>
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       0028-792X
+                    </p>
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        Publisher:
+                      </span>
+                       F-R Pub. Corp.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -3320,4 +3765,208 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Backend success The Year's work in modern language studies. renders correctly 1`] = `<DocumentFragment />`;
+exports[`Backend success The Year's work in modern language studies. renders correctly 1`] = `
+<DocumentFragment>
+  <main>
+    <div
+      class="container"
+    >
+      <div
+        class="row row-cols-md-12"
+      >
+        <div
+          class="col-md-8"
+        >
+          <div
+            class="jumbotron"
+          >
+            <div
+              class="container text-left"
+            >
+              <h1>
+                Getit Search Results:
+              </h1>
+              <div>
+                <div
+                  class="citation-container"
+                >
+                  <p
+                    class="resource-type"
+                  >
+                    Journal
+                  </p>
+                  <h2
+                    class="title"
+                  >
+                    The Year's work in modern language studies.
+                  </h2>
+                  <p />
+                  <div
+                    class="citation-info"
+                  >
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       00844152
+                    </p>
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        Publisher:
+                      </span>
+                       Modern Humanities Research Association [etc.]
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            role="alert"
+          />
+          <div
+            class="list-group"
+          >
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            />
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?title=The%20Year's%20Work%20in%20Modern%20Language%20Studies&issn=0084-4152&genre=article&sid=DEFAULT%20(Via%20SFX)"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Bobst Library  Interlibrary Loan
+                  </a>
+                </h3>
+                <p />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-4"
+        >
+          <aside>
+            <div
+              class="ask-librarian"
+            >
+              <h4>
+                Need help?
+              </h4>
+              <h5>
+                <a
+                  href="https://library.nyu.edu/ask/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Ask a Librarian
+                </a>
+              </h5>
+              <div>
+                <p>
+                  Use 
+                  <a
+                    href="https://library.nyu.edu/ask/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    Ask A Librarian
+                  </a>
+                   or the "Chat with Us" icon at the bottom right corner for any question you have about the Libraries' services.
+                </p>
+                <p>
+                  Visit our 
+                  <a
+                    href="https://guides.nyu.edu/online-tutorials/finding-sources"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    online tutorials
+                  </a>
+                   for tips on searching the catalog and getting library resources.
+                </p>
+                <h3>
+                  Additional Resources
+                </h3>
+                <ul>
+                  <li>
+                    Use 
+                    <a
+                      href="https://ezborrow.reshare.indexdata.com/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      EZBorrow
+                    </a>
+                     or 
+                    <a
+                      href="https://library.nyu.edu/services/borrowing/from-non-nyu-libraries/interlibrary-loan/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      InterLibrary Loan (ILL)
+                    </a>
+                     for materials unavailable at NYU
+                  </li>
+                  <li>
+                    Discover subject specific resources using 
+                    <a
+                      href="http://guides.nyu.edu"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      expert curated research guides
+                    </a>
+                  </li>
+                  <li>
+                    Explore the 
+                    <a
+                      href="https://library.nyu.edu/services/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      complete list of library services
+                    </a>
+                  </li>
+                  <li>
+                    Reach out to the Libraries on 
+                    <a
+                      href="https://www.instagram.com/nyulibraries/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      our Instagram
+                    </a>
+                  </li>
+                  <li>
+                    Search 
+                    <a
+                      href="https://www.worldcat.org/search?qt=worldcat_org_all"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      WorldCat
+                    </a>
+                     for items in nearby libraries
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+</DocumentFragment>
+`;
