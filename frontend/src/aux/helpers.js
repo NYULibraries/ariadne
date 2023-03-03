@@ -18,7 +18,7 @@ function deepFreeze(object) {
 // Helper function for List.js component
 function getCoverageStatement(link) {
   const coverage = link?.coverage?.[0];
-  return coverage ? coverage.coverage_text[0].threshold_text[0].coverage_statement.join('. ') : '';
+  return coverage ? coverage.coverage_text[0].threshold_text[0].coverage_statement?.join('. ') : '';
 }
 
 
