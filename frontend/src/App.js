@@ -1,12 +1,13 @@
 import './App.css';
-import List from './components/List/List';
+
 import Banner from './components/Banner/Banner';
+import Main from './components/Main/Main';
 
 const App = () => {
   return (
     <div className="App">
       <Banner />
-      <List />
+      <Main />
     </div>
   );
 };
