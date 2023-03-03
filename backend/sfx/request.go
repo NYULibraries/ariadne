@@ -45,7 +45,7 @@ func (c MultipleObjectsRequest) do() (*MultipleObjectsResponse, error) {
 	client := http.Client{}
 	response, err := client.Do(&c.HTTPRequest)
 	if err != nil {
-		return &MultipleObjectsResponse{}, fmt.Errorf("could not do post to SFX server: %v", err)
+		return &MultipleObjectsResponse{}, fmt.Errorf("could not do request to SFX server: %v", err)
 	}
 	defer response.Body.Close()
 
