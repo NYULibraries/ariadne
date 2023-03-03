@@ -19,7 +19,7 @@ exports[`Backend HTTP error responses HTTP 400 (Bad Request) error is rendered c
               class="container text-left"
             >
               <h1>
-                Getit Search Results:
+                GetIt Search Results:
               </h1>
               <div>
                 <div
@@ -36,7 +36,7 @@ exports[`Backend HTTP error responses HTTP 400 (Bad Request) error is rendered c
                   <p>
                     Payne, Henry
                     <span>
-                      .
+                      . 
                     </span>
                     2002-12-15
                   </p>
@@ -229,7 +229,7 @@ exports[`Backend HTTP error responses HTTP 403 (Forbidden) error is rendered cor
               class="container text-left"
             >
               <h1>
-                Getit Search Results:
+                GetIt Search Results:
               </h1>
               <div>
                 <div
@@ -246,7 +246,7 @@ exports[`Backend HTTP error responses HTTP 403 (Forbidden) error is rendered cor
                   <p>
                     Payne, Henry
                     <span>
-                      .
+                      . 
                     </span>
                     2002-12-15
                   </p>
@@ -439,7 +439,7 @@ exports[`Backend HTTP error responses HTTP 408 (Request Timeout) error is render
               class="container text-left"
             >
               <h1>
-                Getit Search Results:
+                GetIt Search Results:
               </h1>
               <div>
                 <div
@@ -456,7 +456,7 @@ exports[`Backend HTTP error responses HTTP 408 (Request Timeout) error is render
                   <p>
                     Payne, Henry
                     <span>
-                      .
+                      . 
                     </span>
                     2002-12-15
                   </p>
@@ -649,7 +649,7 @@ exports[`Backend HTTP error responses HTTP 500 (Internal Server Error) error is 
               class="container text-left"
             >
               <h1>
-                Getit Search Results:
+                GetIt Search Results:
               </h1>
               <div>
                 <div
@@ -666,7 +666,7 @@ exports[`Backend HTTP error responses HTTP 500 (Internal Server Error) error is 
                   <p>
                     Payne, Henry
                     <span>
-                      .
+                      . 
                     </span>
                     2002-12-15
                   </p>
@@ -859,7 +859,7 @@ exports[`Backend fetch exceptions TypeError: Failed to fetch renders backend fet
               class="container text-left"
             >
               <h1>
-                Getit Search Results:
+                GetIt Search Results:
               </h1>
               <div>
                 <div
@@ -876,7 +876,7 @@ exports[`Backend fetch exceptions TypeError: Failed to fetch renders backend fet
                   <p>
                     Payne, Henry
                     <span>
-                      .
+                      . 
                     </span>
                     2002-12-15
                   </p>
@@ -1069,7 +1069,7 @@ exports[`Backend response includes errors Response includes 2 errors and an empt
               class="container text-left"
             >
               <h1>
-                Getit Search Results:
+                GetIt Search Results:
               </h1>
               <div>
                 <div
@@ -1086,7 +1086,7 @@ exports[`Backend response includes errors Response includes 2 errors and an empt
                   <p>
                     Payne, Henry
                     <span>
-                      .
+                      . 
                     </span>
                     2002-12-15
                   </p>
@@ -1279,7 +1279,7 @@ exports[`Backend success "Life" Magazine and the Power of Photography renders co
               class="container text-left"
             >
               <h1>
-                Getit Search Results:
+                GetIt Search Results:
               </h1>
               <div>
                 <div
@@ -1298,7 +1298,7 @@ exports[`Backend success "Life" Magazine and the Power of Photography renders co
                   <p>
                     Berger, Martin A.
                     <span>
-                      .
+                      . 
                     </span>
                     20211201
                   </p>
@@ -1560,7 +1560,7 @@ exports[`Backend success Corriere Fiorentino renders correctly 1`] = `
               class="container text-left"
             >
               <h1>
-                Getit Search Results:
+                GetIt Search Results:
               </h1>
               <div>
                 <div
@@ -1751,7 +1751,7 @@ exports[`Backend success Design of LED light therapy device based on free-form l
               class="container text-left"
             >
               <h1>
-                Getit Search Results:
+                GetIt Search Results:
               </h1>
               <div>
                 <div
@@ -1770,7 +1770,7 @@ exports[`Backend success Design of LED light therapy device based on free-form l
                   <p>
                     Feng, Zefeng
                     <span>
-                      .
+                      . 
                     </span>
                     20230305
                   </p>
@@ -1972,7 +1972,7 @@ exports[`Backend success Editorial cartoon renders correctly 1`] = `
               class="container text-left"
             >
               <h1>
-                Getit Search Results:
+                GetIt Search Results:
               </h1>
               <div>
                 <div
@@ -1989,7 +1989,7 @@ exports[`Backend success Editorial cartoon renders correctly 1`] = `
                   <p>
                     Payne, Henry
                     <span>
-                      .
+                      . 
                     </span>
                     2002-12-15
                   </p>
@@ -2191,7 +2191,7 @@ exports[`Backend success Modelling Modular Living: Furniture and Life Magazine a
               class="container text-left"
             >
               <h1>
-                Getit Search Results:
+                GetIt Search Results:
               </h1>
               <div>
                 <div
@@ -2210,7 +2210,7 @@ exports[`Backend success Modelling Modular Living: Furniture and Life Magazine a
                   <p>
                     Altehenger, J.
                     <span>
-                      .
+                      . 
                     </span>
                     20220601
                   </p>
@@ -2412,7 +2412,7 @@ exports[`Backend success Moral psychology is relationship regulation: moral moti
               class="container text-left"
             >
               <h1>
-                Getit Search Results:
+                GetIt Search Results:
               </h1>
               <div>
                 <div
@@ -2426,7 +2426,7 @@ exports[`Backend success Moral psychology is relationship regulation: moral moti
                   <p>
                     Rai, TS
                     <span>
-                      .
+                      . 
                     </span>
                     2011
                   </p>
@@ -2628,7 +2628,7 @@ exports[`Backend success Our Lady of everyday life : la Virgen de Guadalupe and 
               class="container text-left"
             >
               <h1>
-                Getit Search Results:
+                GetIt Search Results:
               </h1>
               <div>
                 <div
@@ -2828,7 +2828,7 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
               class="container text-left"
             >
               <h1>
-                Getit Search Results:
+                GetIt Search Results:
               </h1>
               <div>
                 <div
@@ -2847,7 +2847,7 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
                   <p>
                     Schwartz, Joshua S.
                     <span>
-                      .
+                      . 
                     </span>
                     20210401
                   </p>
@@ -3089,7 +3089,7 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
               class="container text-left"
             >
               <h1>
-                Getit Search Results:
+                GetIt Search Results:
               </h1>
               <div>
                 <div
@@ -3108,7 +3108,7 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
                   <p>
                     Schwartz, Joshua S.
                     <span>
-                      .
+                      . 
                     </span>
                     20210401
                   </p>
@@ -3350,7 +3350,7 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
               class="container text-left"
             >
               <h1>
-                Getit Search Results:
+                GetIt Search Results:
               </h1>
               <div>
                 <div
@@ -3369,7 +3369,7 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
                   <p>
                     Ross
                     <span>
-                      .
+                      . 
                     </span>
                     2002
                   </p>
@@ -3784,7 +3784,7 @@ exports[`Backend success The Year's work in modern language studies. renders cor
               class="container text-left"
             >
               <h1>
-                Getit Search Results:
+                GetIt Search Results:
               </h1>
               <div>
                 <div
