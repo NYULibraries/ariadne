@@ -71,6 +71,7 @@ commands:
       - setup_remote_docker
       - export-hermes-env-vars:
           environment: << parameters.environment >>
+      - <<: *auth_quay
       - run:
           name: Deploy via Hermes
           command: |
