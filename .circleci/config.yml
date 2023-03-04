@@ -38,6 +38,30 @@ commands:
             docker push quay.io/nyulibraries/<< parameters.image >>:${BRANCH_NO_SLASH}
             docker push quay.io/nyulibraries/<< parameters.image >>:${BRANCH_NO_SLASH}-${CIRCLE_SHA1}
 
+  export-hermes-env-vars:
+    description: Export Hermes env vars
+    parameters:
+        <<: *environment-parameter
+    steps:
+      - when:
+          condition:
+            equal: [ *dev, << parameters.environment >> ]
+          steps:
+            - run:
+                name: Export Hermes env vars
+                command: |
+                  echo 'export HERMES_HOST=https://hermes-dev.library.nyu.edu' >> $BASH_ENV
+                  echo 'export HERMES_SECRET=$HERMES_SECRET_DEV' >> $BASH_ENV
+      - when:
+          condition:
+            equal: [ *prod, << parameters.environment >> ]
+          steps:
+            - run:
+                name: Export Hermes env vars
+                command: |
+                  echo 'export HERMES_HOST=https://hermes.library.nyu.edu' >> $BASH_ENV
+                  echo 'export HERMES_SECRET=$HERMES_SECRET_PROD' >> $BASH_ENV
+
   deploy-application:
     description: Build application, test the build, deploy to S3, and export Hermes env vars
     parameters:
@@ -55,34 +79,6 @@ commands:
             docker run -e HERMES_HOST -e HERMES_SECRET quay.io/nyulibraries/hermesclient:master setImage -deployment=ariadne-react-nginx -tag=$TAG
             docker run -e HERMES_HOST -e HERMES_SECRET -e HERMES_WAIT_PAUSE_MIN=1s -e HERMES_WAIT_PAUSE_MAX=2s quay.io/nyulibraries/hermesclient:master rolloutStatus -deployment=ariadne-backend
             docker run -e HERMES_HOST -e HERMES_SECRET -e HERMES_WAIT_PAUSE_MIN=1s -e HERMES_WAIT_PAUSE_MAX=2s quay.io/nyulibraries/hermesclient:master rolloutStatus -deployment=ariadne-react-nginx
-
-  export-hermes-env-vars:
-    description: Export Hermes env vars
-    parameters:
-        <<: *environment-parameter
-    steps:
-      - when:
-          condition:
-            equal: [ *dev, << parameters.environment >> ]
-          steps:
-            - run:
-                name: Export Hermes env vars
-         environment-parameter: &environment-parameter
-  environment:
-    type: enum
-    enum: [ *dev, *prod ]
-       command: |
-                  echo 'export HERMES_HOST=https://hermes-dev.library.nyu.edu' >> $BASH_ENV
-                  echo 'export HERMES_SECRET=$HERMES_SECRET_DEV' >> $BASH_ENV
-      - when:
-          condition:
-            equal: [ *prod, << parameters.environment >> ]
-          steps:
-            - run:
-                name: Export Hermes env vars
-                command: |
-                  echo 'export HERMES_HOST=https://hermes.library.nyu.edu' >> $BASH_ENV
-                  echo 'export HERMES_SECRET=$HERMES_SECRET_PROD' >> $BASH_ENV
 
 
 jobs:
