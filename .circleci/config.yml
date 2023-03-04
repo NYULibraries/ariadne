@@ -188,7 +188,7 @@ jobs:
 
 workflows:
   version: 2.1
-	build-test-and-deploy:
+  build-test-and-deploy:
     jobs:
       - frontend-test
       - backend-test
