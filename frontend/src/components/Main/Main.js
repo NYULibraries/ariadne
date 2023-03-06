@@ -41,7 +41,7 @@ const Main = () => {
   return (
     <main>
       <>
-        <Container>
+        <Container style={{ "marginBottom": "26px" }}>
           <Row md={12}>
             <Col md={8}>
               <div className="jumbotron">
