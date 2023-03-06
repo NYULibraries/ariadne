@@ -78,8 +78,8 @@ commands:
             export TAG=${CIRCLE_BRANCH//\//_}-${CIRCLE_SHA1}
             docker run -e HERMES_HOST -e HERMES_SECRET quay.io/nyulibraries/hermesclient:master setImage -deployment=ariadne-backend -tag=$TAG
             docker run -e HERMES_HOST -e HERMES_SECRET quay.io/nyulibraries/hermesclient:master setImage -deployment=ariadne-react-nginx -tag=$TAG
-            timeout 3m sh -c 'until docker run -e HERMES_HOST -e HERMES_SECRET quay.io/nyulibraries/hermesclient:master rolloutStatus -deployment=ariadne-backend -wait=false; do sleep 5; done'
-            timeout 3m sh -c 'until docker run -e HERMES_HOST -e HERMES_SECRET quay.io/nyulibraries/hermesclient:master rolloutStatus -deployment=ariadne-react-nginx -wait=false; do sleep 5; done'
+            timeout 3m sh -c 'until docker run -e HERMES_HOST -e HERMES_SECRET quay.io/nyulibraries/hermesclient:master rolloutStatus -deployment=ariadne-backend; do sleep 5; done'
+            timeout 3m sh -c 'until docker run -e HERMES_HOST -e HERMES_SECRET quay.io/nyulibraries/hermesclient:master rolloutStatus -deployment=ariadne-react-nginx; do sleep 5; done'
             #docker run -e HERMES_HOST -e HERMES_SECRET -e HERMES_WAIT_PAUSE_MIN=1s -e HERMES_WAIT_PAUSE_MAX=2s quay.io/nyulibraries/hermesclient:master rolloutStatus -deployment=ariadne-backend
             #docker run -e HERMES_HOST -e HERMES_SECRET -e HERMES_WAIT_PAUSE_MIN=1s -e HERMES_WAIT_PAUSE_MAX=2s quay.io/nyulibraries/hermesclient:master rolloutStatus -deployment=ariadne-react-nginx
 
