@@ -1,6 +1,7 @@
 import './App.css';
 
 import Banner from './components/Banner/Banner';
+import PageFooter from './components/Footer/Footer';
 import Main from './components/Main/Main';
 
 const App = () => {
@@ -8,6 +9,7 @@ const App = () => {
     <div className="App">
       <Banner />
       <Main />
+      <PageFooter />
     </div>
   );
 };
