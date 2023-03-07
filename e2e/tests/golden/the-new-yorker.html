@@ -203,6 +203,267 @@ h6 {
         /* E2E TEST EDIT: sourceMappingURL comments elided */
     </style>
     <style>
+        div {
+            display: block;
+        }
+
+        p {
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        ul {
+            display: block;
+            list-style-type: disc;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 40px;
+        }
+
+        ul.list,
+        .block .s-la-widget ul.list-unstyled {
+            list-style: none;
+        }
+
+
+        li {
+            display: list-item;
+            text-align: -webkit-match-parent;
+        }
+
+        .list a,
+        .list .block .s-la-widget a,
+        .block .s-la-widget .list a,
+        .block .s-la-widget .list-unstyled a {
+            text-decoration: none;
+        }
+
+
+        .list li,
+        .block .s-la-widget .list-unstyled li {
+            border-bottom: 1px dotted #bbbdbf;
+            margin: 0 0 10px 0;
+            padding: 0 0 10px 0;
+        }
+
+        .list:last-child li:last-child,
+        .block .s-la-widget .list-unstyled:last-child li:last-child {
+            border-bottom: 0 none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        ::selection {
+            background: #57068c;
+            color: #fff;
+        }
+
+        .button {
+            appearance: none;
+            border: 0 none;
+            box-shadow: none;
+            background: #57068c;
+            color: #fff;
+            font-weight: 400;
+            font-size: 14px;
+            font-family: "Gotham A", "Gotham B", Helvetica, Arial, sans-serif;
+            text-align: center;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 3px;
+            display: inline-block;
+        }
+
+
+        /* Footer */
+
+        .primary-footer {
+            display: flex;
+            background: #22272d;
+            color: #acb6c2;
+            padding: 45px 0;
+        }
+
+        .footer__social a:not(.ss-navigateright):not(.button) img {
+            background-color: white;
+            border-radius: 10%;
+        }
+
+        .footer__social a:hover img {
+            opacity: 0.7;
+        }
+
+        .wrap {
+            width: 95%;
+            max-width: 1170px;
+            margin: auto;
+            position: relative;
+        }
+
+        .block-container,
+        .block {
+            zoom: 1;
+        }
+
+
+        .primary-footer .block {
+            margin-bottom: 30px;
+        }
+
+        .block {
+            margin: 0 0 45px;
+        }
+
+        .block--25 {
+            width: 25%;
+            float: left;
+            padding: 0 15px;
+        }
+
+        .block--25:first-child {
+            padding-left: 0;
+        }
+
+        .block--25:nth-of-type(4n) {
+            padding-right: 0;
+        }
+
+        .primary-footer .button {
+            color: #fff;
+            font-size: 14px;
+            width: 100%;
+            display: block;
+            padding: 25px 20px;
+        }
+
+        .primary-footer p {
+            margin: 0 0 1em;
+            line-height: 1.5;
+            font-size: 12px;
+            color: #acb6c2;
+        }
+
+        .primary-footer a,
+        .primary-footer .block .s-la-widget a,
+        .block .s-la-widget .primary-footer a {
+            color: #acb6c2;
+        }
+
+        .primary-footer a:hover,
+        .primary-footer .block .s-la-widget a:hover,
+        .block .s-la-widget .primary-footer a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .primary-footer .list li,
+        .primary-footer .block .s-la-widget .list-unstyled li,
+        .block .s-la-widget .primary-footer .list-unstyled li {
+            border-bottom-color: #65686c;
+        }
+
+        .block {
+            margin: 0 0 45px;
+        }
+
+        .block--25 {
+            width: 25%;
+            float: left;
+            padding: 0 15px;
+        }
+
+        .footer__give a:hover {
+            color: white;
+            background-color: #6c07ae;
+            text-decoration: underline;
+        }
+
+        .footer__give a:visited {
+            border: 3px solid #72c5e9;
+        }
+
+
+        .footer__social p {
+            margin: 0 0 1em;
+            line-height: 1.5;
+            font-size: 12px;
+        }
+
+        .footer__social .ss-icon,
+        .footer__social .table__cell--sortable[data-sort]:after {
+            color: #d8dee5;
+            font-size: 20px;
+            display: inline-block;
+            margin-right: 10px;
+            text-decoration: none;
+        }
+
+        .footer__copyright {
+            font-size: 12px;
+            border-top: 1px dotted #65686c;
+            padding-top: 13px;
+            color: #b1b1b1;
+            line-height: 1.4;
+            width: 100%;
+            bottom: 0;
+            position: absolute;
+        }
+
+        .footer__copyright a,
+        .footer__copyright .block .s-la-widget a,
+        .block .s-la-widget .footer__copyright a {
+            color: #b1b1b1;
+            text-decoration: underline;
+        }
+
+        .footer__logo {
+            position: absolute;
+            top: 13px;
+            right: 0;
+            width: 200px;
+            height: 100%;
+            text-align: right;
+            padding: 0 0 0 15px;
+        }
+
+        .footer__logo img:hover {
+            opacity: 0.7;
+        }
+
+        @media only screen and (max-width: 730px) {
+
+            .footer__give,
+            .footer__social {
+                width: 100%;
+                padding: 0;
+            }
+        }
+
+
+        @media only screen and (max-width: 730px) {
+            .block--25 {
+                width: 50%;
+                padding: 0 15px 0 0;
+            }
+        }
+
+        @media only screen and (max-width: 910px) {
+            .footer__logo {
+                float: none;
+                top: auto;
+                margin-top: 5px;
+                display: block;
+            }
+        }
+
+        /* E2E TEST EDIT: sourceMappingURL comments elided */
+    </style>
+    <style>
         @charset "UTF-8";
 
         /*!
@@ -12746,7 +13007,7 @@ h6 {
                 </div>
             </nav>
             <main>
-                <div class="container">
+                <div class="container" style="margin-bottom: 26px;">
                     <div class="row row-cols-md-12">
                         <div class="col-md-8">
                             <div class="jumbotron">
@@ -12865,6 +13126,35 @@ h6 {
                     </div>
                 </div>
             </main>
+            <footer class="primary-footer" data-swiftype-index="false">
+                <div class="wrap">
+                    <div class="block-container">
+                        <div class="block block--25 footer__give"><a class="button" href="https://library.nyu.edu/giving/">Give to the Libraries</a></div>
+                        <div class="block block--25 footer__menu">
+                            <ul class="list" role="menu">
+                                <li class="menu__li menu__li--login-to-nyu-home"><a href="http://home.nyu.edu" class="menu__link menu__link--login-to-nyu-home" target="_blank" rel="noreferrer">Login to NYU Home</a></li>
+                                <li class="menu__li menu__li--departments"><a href="https://library.nyu.edu/departments/" class="menu__link menu__link--departments">Departments</a></li>
+                                <li class="menu__li menu__li--staff-wiki"><a href="https://wiki.library.nyu.edu/" class="menu__link menu__link--staff-wiki" target="_blank" rel="noreferrer">Staff Wiki</a></li>
+                                <li class="menu__li menu__li--staff-directory"><a href="https://library.nyu.edu/people/" class="menu__link menu__link--staff-directory">Staff Directory</a></li>
+                                <li class="menu__li menu__li--status-page"><a href="https://nyulibraries.statuspage.io" class="menu__link menu__link--status-page" target="_blank" rel="noreferrer">Status Page</a></li>
+                            </ul>
+                        </div>
+                        <div class="block block--25 footer__menu">
+                            <ul class="list" role="menu">
+                                <li class="menu__li menu__li--research-guides"><a href="https://guides.nyu.edu/" class="menu__link menu__link--research-guides" target="_blank" rel="noreferrer">Research Guides</a></li>
+                                <li class="menu__li menu__li--faqs"><a href="http://library.answers.nyu.edu" class="menu__link menu__link--faqs" target="_blank" rel="noreferrer">FAQs</a></li>
+                                <li class="menu__li menu__li--career-opportunities"><a href="https://library.nyu.edu/about/who-we-are/career-opportunities/" class="menu__link menu__link--career-opportunities">Career Opportunities</a></li>
+                                <li class="menu__li menu__li--contact-us"><a href="https://library.nyu.edu/contact/" class="menu__link menu__link--contact-us">Contact Us</a></li>
+                                <li class="menu__li menu__li--accessibility"><a href="https://www.nyu.edu/footer/accessibility.html" class="menu__link menu__link--accessibility" target="_blank" rel="noreferrer">Accessibility</a></li>
+                            </ul>
+                        </div>
+                        <div class="block block--25 footer__social">
+                            <p>Find out about upcoming programs, events, and resources.<br><a class="ss-navigateright right" href="https://bit.ly/nyu-liblink">Subscribe to our email list</a></p><a href="https://twitter.com/nyulibraries" class="ss-icon" target="_blank" aria-label="Twitter" rel="noreferrer"><img src="/images/twitter.svg" alt="Twitter logo" height="20"></a><a href="https://www.facebook.com/nyulibraries" class="ss-icon" target="_blank" aria-label="Facebook" rel="noreferrer"><img src="/images/facebook.svg" alt="Facebook logo" height="20"></a><a href="https://www.instagram.com/nyulibraries" class="ss-icon" target="_blank" aria-label="Instagram" rel="noreferrer"><img src="/images/instagram.svg" alt="Instagram logo" height="20" style="text-decoration: none;"></a>
+                        </div>
+                    </div>
+                    <div class="footer__copyright">Unless otherwise noted, all content copyright New York University. All rights reserved.<a href="https://library.nyu.edu/privacy-policy/">Privacy policy</a><a class="footer__logo" href="https://www.nyu.edu"><img src="/images/nyu-footer-logo.svg" alt="New York University logo" height="27"></a></div>
+                </div>
+            </footer>
         </div>
     </div>
     <!--
