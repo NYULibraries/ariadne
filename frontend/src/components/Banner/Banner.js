@@ -6,7 +6,7 @@ import { bannerInstitutionInfo } from '../../aux/institutionInfo';
 
 const Banner = () => {
   const institutionName = getInstitutionQueryParameter();
-  const { logo, link, imgClass } = bannerInstitutionInfo[institutionName] || bannerInstitutionInfo.nyu;
+  const { logo, link, imgClass, altLibraryLogoImageText } = bannerInstitutionInfo[institutionName] || bannerInstitutionInfo.nyu;
   return (
     <Navbar className="color-nav" expand="lg">
       <Container>
@@ -14,7 +14,13 @@ const Banner = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href={link}>
-              <img className={imgClass} src={logo} alt="NYU Libraries logo" width="220" height="60" />
+              <img
+                className={imgClass}
+                src={logo}
+                alt={altLibraryLogoImageText}
+                width="220"
+                height="60"
+              />
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

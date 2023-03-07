@@ -1,55 +1,122 @@
+/* Apply the Gotham font to all elements */
+* {
+  font-family: "Gotham SSm A", "Gotham SSm B", Helvetica, Arial, sans-serif;
+  color: #1C2127;
+}
+
+/* Apply the Montserrat font to all headings */
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+} */
+
+/*
+  Styles for the Citation component
+
+*/
+
+.citation-container>p,
+.citation-container>h2,
+.citation-container>.citation-info {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.citation-container>p+p {
+  margin-top: 0;
+}
+
+.citation-container .citation-info p {
+  margin: 0;
+}
+
+.citation-container>p {
+  margin-top: 0;
+}
+
+.citation-container>p+.citation-info>p:first-of-type {
+  margin-bottom: 10px;
+}
+
+.citation-container .citation-info-label {
+  font-weight: normal;
+  display: inline-block;
+}
+
+
+
 /* 
   Styles for the List component
 */
 
 .jumbotron {
-  background-color: #F7EDA3;
+  margin: 20px 0 20px 0;
 }
 
-.i-am-centered {
-  display: flex;
-  margin: 18px 0px 0px 118px;
+.jumbotron h1 {
+  font-size: 1.8em;
+  font-weight: bold;
+  line-height: 1.2;
 }
 
-.loader {
+.jumbotron h2.title {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+
+.loading-container {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
+
 
 .list-group {
   border: 1px solid #ddd;
-  border-width: 3px; 
-  border-color:#c7c7c7;
+  border-width: 3px;
+  border-color: #c7c7c7;
   border-radius: 10px;
   max-width: 800px;
 }
 
 .row a:hover {
   text-decoration: underline;
-  color: #6c07ae;
+  color: #0170B2;
 }
 
 .row a {
   text-decoration: none;
-  color: #6c07ae ;
+  color: #0170B2;
 }
 
+.row h3 {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.2;
+}
 
 .ask-librarian {
-  margin-top: 11rem;
+  margin: 20px 0 20px 0;
+}
+
+.ask-librarian h4,
+.ask-librarian h5 a {
+  font-weight: bold;
 }
 
 
-h6 {
-  color: #6c07ae;
-}
 
 /* 
   Styles for the Banner component
 */
 
 .image {
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .image.white-bg {
@@ -58,22 +125,19 @@ h6 {
 
 
 .image:hover {
-  opacity: 1;
+  opacity: 0.8;
 }
 
 .color-nav {
   margin-bottom: 0;
   border-radius: 0;
-  background-color:#57068c;
+  background-color: #57068c;
 }
 
 
 @media screen and (max-width: 800px) {
   .ask-librarian {
     margin: 2rem 0rem 2rem 0rem;
-  }
-  .i-am-centered {
-    margin: 18px 0px 0px 38px;
   }
 }
 
@@ -84,30 +148,3 @@ h2.title {
   margin-top: 0;
   font-weight: normal;
 }
-
-dl.citation-info {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-dl.citation-info dt {
-  float: left;
-  clear: left;
-  font-weight: normal;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  width: 80px;
-}
-
-dl.citation-info dd {
-  margin-left: 100px;
-}
-
-p.resource-type {
-  margin: 0;
-  text-transform: capitalize;
-}
-
-
-

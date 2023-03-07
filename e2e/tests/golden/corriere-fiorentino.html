@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <link rel="icon" href="https://cdn.library.nyu.edu/images/favicon.ico">
+    <link href="https://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#000000">
     <meta name="description" content="Web site created using create-react-app">
@@ -23,12 +25,18 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>GetIt | Corriere Fiorentino</title>
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/gotham');
+        @import url('https://fonts.cdnfonts.com/css/montserrat');
+    </style>
     <script defer="" src="/static/js/bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.library.nyu.edu/statuspage-embed/index.min.css">
     <style>
         body {
             margin: 0;
             background-color: #f5f7fa;
             font-family: "Google Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #1C2127;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
@@ -41,23 +49,83 @@
         /* E2E TEST EDIT: sourceMappingURL comments elided */
     </style>
     <style>
+        /* Apply the Gotham font to all elements */
+        * {
+            font-family: "Gotham SSm A", "Gotham SSm B", Helvetica, Arial, sans-serif;
+            color: #1C2127;
+        }
+
+        /* Apply the Montserrat font to all headings */
+        /* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+} */
+
+        /*
+  Styles for the Citation component
+
+*/
+
+        .citation-container>p,
+        .citation-container>h2,
+        .citation-container>.citation-info {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .citation-container>p+p {
+            margin-top: 0;
+        }
+
+        .citation-container .citation-info p {
+            margin: 0;
+        }
+
+        .citation-container>p {
+            margin-top: 0;
+        }
+
+        .citation-container>p+.citation-info>p:first-of-type {
+            margin-bottom: 10px;
+        }
+
+        .citation-container .citation-info-label {
+            font-weight: normal;
+            display: inline-block;
+        }
+
+
+
         /* 
   Styles for the List component
 */
 
         .jumbotron {
-            background-color: #F7EDA3;
+            margin: 20px 0 20px 0;
         }
 
-        .i-am-centered {
-            display: flex;
-            margin: 18px 0px 0px 118px;
+        .jumbotron h1 {
+            font-size: 1.8em;
+            font-weight: bold;
+            line-height: 1.2;
         }
 
-        .loader {
+        .jumbotron h2.title {
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+
+        .loading-container {
             display: flex;
             justify-content: center;
+            align-items: center;
         }
+
 
         .list-group {
             border: 1px solid #ddd;
@@ -69,30 +137,37 @@
 
         .row a:hover {
             text-decoration: underline;
-            color: #6c07ae;
+            color: #0170B2;
         }
 
         .row a {
             text-decoration: none;
-            color: #6c07ae;
+            color: #0170B2;
         }
 
+        .row h3 {
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 1.2;
+        }
 
         .ask-librarian {
-            margin-top: 11rem;
+            margin: 20px 0 20px 0;
+        }
+
+        .ask-librarian h4,
+        .ask-librarian h5 a {
+            font-weight: bold;
         }
 
 
-        h6 {
-            color: #6c07ae;
-        }
 
         /* 
   Styles for the Banner component
 */
 
         .image {
-            opacity: 0.8;
+            opacity: 1;
         }
 
         .image.white-bg {
@@ -101,7 +176,7 @@
 
 
         .image:hover {
-            opacity: 1;
+            opacity: 0.8;
         }
 
         .color-nav {
@@ -115,10 +190,6 @@
             .ask-librarian {
                 margin: 2rem 0rem 2rem 0rem;
             }
-
-            .i-am-centered {
-                margin: 18px 0px 0px 38px;
-            }
         }
 
         h2.title {
@@ -128,33 +199,6 @@
             margin-top: 0;
             font-weight: normal;
         }
-
-        dl.citation-info {
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-
-        dl.citation-info dt {
-            float: left;
-            clear: left;
-            font-weight: normal;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            width: 80px;
-        }
-
-        dl.citation-info dd {
-            margin-left: 100px;
-        }
-
-        p.resource-type {
-            margin: 0;
-            text-transform: capitalize;
-        }
-
-
-
 
         /* E2E TEST EDIT: sourceMappingURL comments elided */
     </style>
@@ -12697,45 +12741,63 @@
             <nav class="color-nav navbar navbar-expand-lg navbar-light">
                 <div class="container"><button aria-controls="basic-navbar-nav" type="button" aria-label="Toggle navigation" class="navbar-toggler collapsed"><span class="navbar-toggler-icon"></span></button>
                     <div class="navbar-collapse collapse" id="basic-navbar-nav">
-                        <div class="me-auto navbar-nav"><a href="http://library.nyu.edu" data-rr-ui-event-key="http://library.nyu.edu" class="nav-link"><img class="image" src="https://cdn.library.nyu.edu/images/nyulibraries-logo.svg" alt="NYU Libraries logo" width="220" height="60"></a></div>
+                        <div class="me-auto navbar-nav"><a href="http://library.nyu.edu" data-rr-ui-event-key="http://library.nyu.edu" class="nav-link"><img class="image" src="https://cdn.library.nyu.edu/images/nyulibraries-logo.svg" alt="NYU Libraries logo - click to go to the NYU Libraries main page" width="220" height="60"></a></div>
                     </div>
                 </div>
             </nav>
-            <div class="jumbotron">
-                <div class="container text-center">
-                    <p>Displaying search results...</p>
-                    <p>Note: Alternate titles might have matched your search terms</p>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row row-cols-md-12">
-                    <div class="col-md-8">
-                        <div class="list-group">
-                            <div class="list-group-item list-group-item-action flex-column border-0">
-                                <div>
-                                    <p class="resource-type">Journal</p>
-                                    <h2 class="title">Corriere Fiorentino</h2>
-                                    <p></p>
-                                    <dl class="citation-info"></dl>
+            <main>
+                <div class="container">
+                    <div class="row row-cols-md-12">
+                        <div class="col-md-8">
+                            <div class="jumbotron">
+                                <div class="container text-left">
+                                    <h1>GetIt Search Results:</h1>
+                                    <div>
+                                        <div class="citation-container">
+                                            <p class="resource-type">Journal</p>
+                                            <h2 class="title">Corriere Fiorentino</h2>
+                                            <p></p>
+                                            <div class="citation-info"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="list-group-item list-group-item-action flex-column border-0">
-                                <div class="row">
-                                    <h6><a href="
+                            <div role="alert"></div>
+                            <div class="list-group">
+                                <div class="list-group-item list-group-item-action flex-column border-0"></div>
+                                <div class="list-group-item list-group-item-action flex-column border-0">
+                                    <div class="row">
+                                        <h3><a href="
                     http://proxy.library.nyu.edu/login?url=https://www.pressreader.com/italy/corriere-fiorentino
-                " target="_blank" rel="noopener noreferrer">PressReader</a></h6><small></small>
+                " target="_blank" rel="noopener noreferrer">PressReader</a></h3>
+                                        <p></p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="ask-librarian">
-                            <h5>Need help?</h5>
-                            <h6><a href="https://library.nyu.edu/ask/" target="_blank" rel="noopener noreferrer">Ask a Librarian</a></h6>
+                        <div class="col-md-4">
+                            <aside>
+                                <div class="ask-librarian">
+                                    <h4>Need help?</h4>
+                                    <h5><a href="https://library.nyu.edu/ask/" target="_blank" rel="noopener noreferrer">Ask a Librarian</a></h5>
+                                    <div>
+                                        <p>Use <a href="https://library.nyu.edu/ask/" target="_blank" rel="noreferrer">Ask A Librarian</a> or the "Chat with Us" icon at the bottom right corner for any question you have about the Libraries' services.</p>
+                                        <p>Visit our <a href="https://guides.nyu.edu/online-tutorials/finding-sources" target="_blank" rel="noreferrer">online tutorials</a> for tips on searching the catalog and getting library resources.</p>
+                                        <h3>Additional Resources</h3>
+                                        <ul>
+                                            <li>Use <a href="https://ezborrow.reshare.indexdata.com/" target="_blank" rel="noreferrer">EZBorrow</a> or <a href="https://library.nyu.edu/services/borrowing/from-non-nyu-libraries/interlibrary-loan/" target="_blank" rel="noreferrer">InterLibrary Loan (ILL)</a> for materials unavailable at NYU</li>
+                                            <li>Discover subject specific resources using <a href="http://guides.nyu.edu" target="_blank" rel="noreferrer">expert curated research guides</a></li>
+                                            <li>Explore the <a href="https://library.nyu.edu/services/" target="_blank" rel="noreferrer">complete list of library services</a></li>
+                                            <li>Reach out to the Libraries on <a href="https://www.instagram.com/nyulibraries/" target="_blank" rel="noreferrer">our Instagram</a></li>
+                                            <li>Search <a href="https://www.worldcat.org/search?qt=worldcat_org_all" target="_blank" rel="noreferrer">WorldCat</a> for items in nearby libraries</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </aside>
                         </div>
                     </div>
                 </div>
-            </div>
+            </main>
         </div>
     </div>
     <!--
@@ -12748,6 +12810,8 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script src="https://cdn.library.nyu.edu/statuspage-embed/index.min.js"></script>
+
 
 
 </body>

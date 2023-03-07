@@ -36,6 +36,7 @@ const Citation = () => {
     issn: getOpenUrlParam("issn"),
     isbn: getOpenUrlParam("isbn"),
     date: getOpenUrlParam("date"),
+    doi: getOpenUrlParam("doi"),
   };
 
   // author either specified as "au", a series of separate params ("aufirst", "aulast", "auinit", "auinit1", auinitm"), 
@@ -111,23 +112,37 @@ const Citation = () => {
   };
 
   return (
-    <div>
+    <div className="citation-container">
       {citation.genre && <p className="resource-type">{genresDisplayText[citation.genre.toLowerCase()]}</p>}
       {citation.item_title && <h2 className="title">{citation.item_title}</h2>}
       <p>
         {citation.author}
-        {citation.author && citation.date && (<span>•</span>)}
+        {citation.author && citation.date && (<span>. </span>)}
         {citation.date}
       </p>
       {renderCitation(citation)}
-      <dl className="citation-info">
-        {citation.issn && (<dt>ISSN:</dt>)}
-        {citation.issn && <dd>{citation.issn}</dd>}
-        {citation.isbn && (<dt>ISBN:</dt>)}
-        {citation.isbn && <dd>{citation.isbn}</dd>}
-        {citation.pub && (<dt>Publisher:</dt>)}
-        {citation.pub && <dd>{citation.pub}</dd>}
-      </dl>
+      <div className="citation-info">
+        {citation.issn && (
+          <p>
+            <span className="citation-info-label">ISSN:</span> {citation.issn}
+          </p>
+        )}
+        {citation.isbn && (
+          <p>
+            <span className="citation-info-label">ISBN:</span> {citation.isbn}
+          </p>
+        )}
+        {citation.doi && (
+          <p>
+            <span className="citation-info-label">DOI:</span> {citation.doi}
+          </p>
+        )}
+        {citation.pub && (
+          <p>
+            <span className="citation-info-label">Publisher:</span> {citation.pub}
+          </p>
+        )}
+      </div>
     </div>
   );
 };

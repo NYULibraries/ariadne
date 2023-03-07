@@ -8,6 +8,9 @@ import { getTestCasesBackendSuccess } from '../../frontend/src/testutils';
 const { test, expect } = require('@playwright/test');
 const beautifyHtml = require('js-beautify').html;
 
+const ASK_LIBRARIAN_TEXT = "Need help?Ask a LibrarianUse Ask A Librarian or the \"Chat with Us\" icon at the bottom right corner for any question you have about the Libraries' services.Visit our online tutorials for tips on searching the catalog and getting library resources.Additional ResourcesUse EZBorrow or InterLibrary Loan (ILL) for materials unavailable at NYUDiscover subject specific resources using expert curated research guidesExplore the complete list of library servicesReach out to the Libraries on our InstagramSearch WorldCat for items in nearby libraries"
+
+
 const testCasesBackendSuccess = getTestCasesBackendSuccess();
 
 for (let i = 0; i < testCasesBackendSuccess.length; i++) {
@@ -53,7 +56,7 @@ for (let i = 0; i < testCasesBackendSuccess.length; i++) {
         fs.unlinkSync(diffFile);
       } catch (error) { }
 
-      await page.waitForSelector('h6');
+      await page.waitForSelector('h5');
 
       const actual = beautifyHtml(removeSourceMappingUrlComments(await page.content()));
 
@@ -99,19 +102,19 @@ ${e.stderr.toString()}`;
       // Playwright's team recommendation for handling popups: https://playwright.dev/docs/pages#handling-popups
       // Start waiting for popup before clicking. Note no await.
       const popupPromise = page.waitForEvent('popup');
-      await page.getByRole('link', { name: 'Ask a Librarian' }).click();
+      await page.getByRole('link', { name: 'Ask a Librarian' }).first().click();
       const popup = await popupPromise;
       // Wait for the popup to load.
       await popup.waitForLoadState();
 
-      expect(await page.textContent('.ask-librarian')).toBe('Need help?Ask a Librarian');
+      expect(await page.textContent('.ask-librarian')).toBe(ASK_LIBRARIAN_TEXT);
       expect(popup.url()).toBe('https://library.nyu.edu/ask/');
     });
 
     test('screenshot matches expected', async ({ page }) => {
       // Wait for the response to be returned and the page to render
       await page.waitForSelector('.image');
-      await page.waitForSelector('h6');
+      await page.waitForSelector('h5');
 
       // Take a screenshot to verify that the page was rendered correctly
       await expect(page).toHaveScreenshot(`${testCase.key}.png`);
@@ -122,7 +125,7 @@ ${e.stderr.toString()}`;
     });
 
     test('returns search results', async ({ page }) => {
-      expect(await page.textContent('p')).toBe('Displaying search results...');
+      expect(await page.textContent('h1')).toBe('GetIt Search Results:');
     });
   });
 }
