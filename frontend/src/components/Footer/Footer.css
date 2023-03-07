@@ -78,6 +78,24 @@ li {
     display: inline-block;
 }
 
+/* input[type="submit"],
+.button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0 none;
+    box-shadow: none;
+    background: #57068c;
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+    font-family: "Gotham A", "Gotham B", Helvetica, Arial, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 3px;
+    display: inline-block;
+} */
 
 /* .ss-icon,
 .table__cell--sortable[data-sort]:after,
@@ -95,7 +113,14 @@ li {
     font-family: "SS NYULibraries";
 } */
 
-
+iframe {
+    overflow-clip-margin: content-box !important;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+    overflow: clip !important;
+}
 
 /* Footer */
 
@@ -212,7 +237,6 @@ li {
     font-size: 12px;
 }
 
-
 .footer__social .ss-icon,
 .footer__social .table__cell--sortable[data-sort]:after {
     color: #d8dee5;
@@ -225,7 +249,7 @@ li {
 .footer__copyright {
     font-size: 12px;
     border-top: 1px dotted #65686c;
-    padding-top: 8px;
+    padding-top: 13px;
     color: #b1b1b1;
     line-height: 1.4;
     width: 100%;
@@ -254,6 +278,42 @@ li {
     opacity: 0.7;
 }
 
+.chat-tab {
+    color: #e0d5e8;
+    padding: 10px 10px 7px;
+    font-size: 14px;
+    border-radius: 3px 3px 0 0;
+}
+
+.chat-tab,
+.chat-frame-wrap {
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    border: 0 none;
+    z-index: 200;
+}
+
+.chat-frame-wrap {
+    width: 300px;
+    display: none;
+    background-color: #F5F5F5;
+    padding: 1em;
+    box-shadow: -5px -5px 20px 5px rgb(0 0 0 / 30%);
+    border-radius: 3px 3px 0 0;
+}
+
+.libraryh3lp {
+    margin: -1em;
+}
+
+.libraryh3lp iframe {
+    width: 300px !important;
+    height: 280px !important;
+    vertical-align: bottom;
+    border-radius: 3px 3px 0 0;
+    border: none !important;
+}
 
 @media only screen and (max-width: 730px) {
 
@@ -278,5 +338,13 @@ li {
         top: auto;
         margin-top: 5px;
         display: block;
+    }
+}
+
+@media only screen and (max-width: 930px) {
+    .chat-tab {
+        width: 100%;
+        right: 0;
+        border-radius: 0;
     }
 }
