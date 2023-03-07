@@ -40,7 +40,7 @@
                             {
                                 "target_name": "ART_DESIGN_AND_ARCHITECTURE_COLLECTION",
                                 "target_public_name": "Art, Design \u0026 Architecture Collection",
-                                "target_url": "http://proxy.library.nyu.edu/login?url=http://gateway.proquest.com/openurl?rft_id=41130\u0026rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal\u0026url_ver=Z39.88-2004\u0026res_dat=xri%3Apqm\u0026rfr_id=info%3Axri%2Fsid%3Aprimo\u0026genre=journal",
+                                "target_url": "http://proxy.library.nyu.edu/login?url=http://gateway.proquest.com/openurl?rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal\u0026genre=journal\u0026res_dat=xri%3Apqm\u0026rft_id=41130\u0026rfr_id=info%3Axri%2Fsid%3Aprimo\u0026url_ver=Z39.88-2004",
                                 "authentication": "",
                                 "proxy": "yes",
                                 "coverage": [
@@ -71,9 +71,9 @@
                                 ]
                             },
                             {
-                                "target_name": "GALEGROUP_DB_SHAKESPEARE_COLLECTION_PERI",
-                                "target_public_name": "Gale Cengage Shakespeare Collection Periodicals",
-                                "target_url": "http://proxy.library.nyu.edu/login?url=http://find.galegroup.com/openurl/openurl?url_ver=Z39.88-2004\u0026url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx\u0026rft.issn=0028-792X\u0026res_id=info%3Asid%2Fgale%3ASHAX\u0026req_dat=info%3Asid%2Fgale%3Augnid%3Anew64731\u0026rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal\u0026ctx_enc=info%3Aofi%3Aenc%3AUTF-8\u0026rft.date=2002\u0026rft.jtitle=New+Yorker",
+                                "target_name": "EBSCOHOST_ACADEMIC_SEARCH_COMPLETE",
+                                "target_public_name": "EBSCOhost Academic Search Complete",
+                                "target_url": "http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?sid=Primo\u0026site=ehost-live\u0026db=a9h\u0026jn=NYK",
                                 "authentication": "",
                                 "proxy": "yes",
                                 "coverage": [
@@ -83,7 +83,7 @@
                                                 "threshold_text": [
                                                     {
                                                         "coverage_statement": [
-                                                            "Available from 2002"
+                                                            "Available from 2004/01/05"
                                                         ]
                                                     }
                                                 ],
@@ -94,7 +94,75 @@
                                         ],
                                         "from": [
                                             {
-                                                "year": "2002"
+                                                "year": "2004",
+                                                "month": "01",
+                                                "day": "05"
+                                            }
+                                        ],
+                                        "embargo": {}
+                                    }
+                                ]
+                            },
+                            {
+                                "target_name": "EBSCOHOST_READERS_GUIDE_FULL_TEXT_MEGA_WILSON",
+                                "target_public_name": "EBSCOhost Reader's Guide Full Text Mega",
+                                "target_url": "http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?site=ehost-live\u0026sid=Primo\u0026db=rgm\u0026jn=NYK",
+                                "authentication": "",
+                                "proxy": "yes",
+                                "coverage": [
+                                    {
+                                        "coverage_text": [
+                                            {
+                                                "threshold_text": [
+                                                    {
+                                                        "coverage_statement": [
+                                                            "Available from 2011/08/01"
+                                                        ]
+                                                    }
+                                                ],
+                                                "embargo_text": [
+                                                    {}
+                                                ]
+                                            }
+                                        ],
+                                        "from": [
+                                            {
+                                                "year": "2011",
+                                                "month": "08",
+                                                "day": "01"
+                                            }
+                                        ],
+                                        "embargo": {}
+                                    }
+                                ]
+                            },
+                            {
+                                "target_name": "FLIPSTER",
+                                "target_public_name": "Flipster",
+                                "target_url": "http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?db=eon\u0026bquery=HJ+NYK\u0026sid=Primo\u0026site=ehost-live",
+                                "authentication": "",
+                                "proxy": "yes",
+                                "coverage": [
+                                    {
+                                        "coverage_text": [
+                                            {
+                                                "threshold_text": [
+                                                    {
+                                                        "coverage_statement": [
+                                                            "Available from 2015/01/26"
+                                                        ]
+                                                    }
+                                                ],
+                                                "embargo_text": [
+                                                    {}
+                                                ]
+                                            }
+                                        ],
+                                        "from": [
+                                            {
+                                                "year": "2015",
+                                                "month": "01",
+                                                "day": "26"
                                             }
                                         ],
                                         "embargo": {}
@@ -278,7 +346,7 @@
                             {
                                 "target_name": "MUSIC_AND_PERFORMING_ARTS_COLLECTION",
                                 "target_public_name": "Music \u0026 Performing Arts Collection",
-                                "target_url": "http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_id=41130\u0026rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal\u0026url_ver=Z39.88-2004\u0026res_dat=xri%3Apqm\u0026rfr_id=info%3Axri%2Fsid%3Aprimo\u0026genre=journal",
+                                "target_url": "http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?genre=journal\u0026res_dat=xri%3Apqm\u0026rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal\u0026rft_id=41130\u0026url_ver=Z39.88-2004\u0026rfr_id=info%3Axri%2Fsid%3Aprimo",
                                 "authentication": "",
                                 "proxy": "yes",
                                 "coverage": [
@@ -311,7 +379,7 @@
                             {
                                 "target_name": "MUSIC_AND_PERFORMING_ARTS_COLLECTION",
                                 "target_public_name": "Music \u0026 Performing Arts Collection",
-                                "target_url": "http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_id=16493\u0026rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal\u0026url_ver=Z39.88-2004\u0026rfr_id=info%3Axri%2Fsid%3Aprimo\u0026res_dat=xri%3Apqm\u0026genre=journal",
+                                "target_url": "http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?url_ver=Z39.88-2004\u0026rfr_id=info%3Axri%2Fsid%3Aprimo\u0026rft_id=16493\u0026res_dat=xri%3Apqm\u0026genre=journal\u0026rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal",
                                 "authentication": "",
                                 "proxy": "yes",
                                 "coverage": [
@@ -382,7 +450,7 @@
                             {
                                 "target_name": "PROQUEST_CENTRAL",
                                 "target_public_name": "ProQuest Central",
-                                "target_url": "http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_id=41130\u0026rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal\u0026res_dat=xri%3Apqm\u0026rfr_id=info%3Axri%2Fsid%3Aprimo\u0026url_ver=Z39.88-2004\u0026genre=journal",
+                                "target_url": "http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?url_ver=Z39.88-2004\u0026rfr_id=info%3Axri%2Fsid%3Aprimo\u0026rft_id=41130\u0026res_dat=xri%3Apqm\u0026genre=journal\u0026rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal",
                                 "authentication": "",
                                 "proxy": "yes",
                                 "coverage": [

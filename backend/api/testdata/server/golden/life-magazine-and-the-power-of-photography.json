@@ -9,7 +9,7 @@
                             {
                                 "target_name": "EBSCOHOST_ACADEMIC_SEARCH_COMPLETE",
                                 "target_public_name": "EBSCOhost Academic Search Complete",
-                                "target_url": "http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?issue=4\u0026sid=Primo\u0026atitle=%22life%22+magazine+and+the+power+of+photography\u0026spage=144\u0026date=20211201\u0026issn=0004-3079\u0026title=The+Art+Bulletin\u0026genre=article\u0026volume=103",
+                                "target_url": "http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?atitle=%22life%22+magazine+and+the+power+of+photography\u0026issue=4\u0026sid=Primo\u0026genre=article\u0026spage=144\u0026title=The+Art+Bulletin\u0026date=20211201\u0026issn=0004-3079\u0026volume=103",
                                 "authentication": "",
                                 "proxy": "yes",
                                 "coverage": [
@@ -42,7 +42,7 @@
                             {
                                 "target_name": "EBSCOHOST_HUMANITIES_FULL_TEXT_WILSON",
                                 "target_public_name": "EBSCOhost Humanities Full Text",
-                                "target_url": "http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?issn=0004-3079\u0026title=The+Art+Bulletin\u0026genre=article\u0026volume=103\u0026issue=4\u0026sid=Primo\u0026atitle=%22life%22+magazine+and+the+power+of+photography\u0026spage=144\u0026date=20211201",
+                                "target_url": "http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?issue=4\u0026atitle=%22life%22+magazine+and+the+power+of+photography\u0026sid=Primo\u0026title=The+Art+Bulletin\u0026genre=article\u0026spage=144\u0026issn=0004-3079\u0026volume=103\u0026date=20211201",
                                 "authentication": "",
                                 "proxy": "yes",
                                 "coverage": [
@@ -75,7 +75,7 @@
                             {
                                 "target_name": "EBSCOHOST_OMNIFILE_FULL_TEXT_MEGA_WILSON",
                                 "target_public_name": "EBSCOhost OmniFile Full Text Mega",
-                                "target_url": "http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?atitle=%22life%22+magazine+and+the+power+of+photography\u0026sid=Primo\u0026issue=4\u0026date=20211201\u0026spage=144\u0026genre=article\u0026title=The+Art+Bulletin\u0026issn=0004-3079\u0026volume=103",
+                                "target_url": "http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?title=The+Art+Bulletin\u0026genre=article\u0026spage=144\u0026issn=0004-3079\u0026volume=103\u0026date=20211201\u0026issue=4\u0026atitle=%22life%22+magazine+and+the+power+of+photography\u0026sid=Primo",
                                 "authentication": "",
                                 "proxy": "yes",
                                 "coverage": [
@@ -108,7 +108,7 @@
                             {
                                 "target_name": "TAYLOR_AND_FRANCIS_COMPLETE_LIBRARY_DATABASE_MODEL",
                                 "target_public_name": "Taylor \u0026 Francis Complete Library Database Model",
-                                "target_url": "http://proxy.library.nyu.edu/login?url=https://www.tandfonline.com/openurl?genre=article\u0026issn=0004-3079\u0026issue=4\u0026volume=103\u0026date=2021\u0026spage=144",
+                                "target_url": "http://proxy.library.nyu.edu/login?url=https://www.tandfonline.com/openurl?issue=4\u0026spage=144\u0026genre=article\u0026volume=103\u0026issn=0004-3079\u0026date=2021",
                                 "authentication": "",
                                 "proxy": "yes",
                                 "coverage": [

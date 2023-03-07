@@ -7,9 +7,9 @@
                     {
                         "target": [
                             {
-                                "target_name": "DOCDEL_ILLIAD",
-                                "target_public_name": "Bobst Library  Interlibrary Loan",
-                                "target_url": "http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?title=The%20Year's%20Work%20in%20Modern%20Language%20Studies\u0026issn=0084-4152\u0026genre=article\u0026sid=DEFAULT%20(Via%20SFX)",
+                                "target_name": "2022_BRILL_JOURNAL_COLLECTION",
+                                "target_public_name": "2022 Brill Journal Collection",
+                                "target_url": "http://proxy.library.nyu.edu/login?url=http://brill.com/view/journals/ywml/ywml-overview.xml",
                                 "authentication": "",
                                 "proxy": "yes",
                                 "coverage": [
@@ -17,11 +17,181 @@
                                         "coverage_text": [
                                             {
                                                 "threshold_text": [
-                                                    {}
+                                                    {
+                                                        "coverage_statement": [
+                                                            "Available from 2000 volume: 61 issue: 1"
+                                                        ]
+                                                    }
                                                 ],
                                                 "embargo_text": [
                                                     {}
                                                 ]
+                                            }
+                                        ],
+                                        "from": [
+                                            {
+                                                "year": "2000",
+                                                "volume": "61",
+                                                "issue": "1"
+                                            }
+                                        ],
+                                        "embargo": {}
+                                    }
+                                ]
+                            },
+                            {
+                                "target_name": "BRILLONLINE_JOURNALS",
+                                "target_public_name": "Brill Online Journals",
+                                "target_url": "http://proxy.library.nyu.edu/login?url=http://brill.com/content/journals/22224297",
+                                "authentication": "",
+                                "proxy": "yes",
+                                "coverage": [
+                                    {
+                                        "coverage_text": [
+                                            {
+                                                "threshold_text": [
+                                                    {
+                                                        "coverage_statement": [
+                                                            "Available from 1931 volume: 1 issue: 1"
+                                                        ]
+                                                    }
+                                                ],
+                                                "embargo_text": [
+                                                    {}
+                                                ]
+                                            }
+                                        ],
+                                        "from": [
+                                            {
+                                                "year": "1931",
+                                                "volume": "1",
+                                                "issue": "1"
+                                            }
+                                        ],
+                                        "embargo": {}
+                                    }
+                                ]
+                            },
+                            {
+                                "target_name": "BRILLONLINE_JOURNALS_LCL",
+                                "target_public_name": "Brill Online Journals",
+                                "target_url": "http://proxy.library.nyu.edu/login?url=http://brill.com/content/journals/22224297",
+                                "authentication": "",
+                                "proxy": "yes",
+                                "coverage": [
+                                    {
+                                        "coverage_text": [
+                                            {
+                                                "threshold_text": [
+                                                    {
+                                                        "coverage_statement": [
+                                                            "Available from 1931 volume: 1 issue: 1"
+                                                        ]
+                                                    }
+                                                ],
+                                                "embargo_text": [
+                                                    {}
+                                                ]
+                                            }
+                                        ],
+                                        "from": [
+                                            {
+                                                "year": "1931",
+                                                "volume": "1",
+                                                "issue": "1"
+                                            }
+                                        ],
+                                        "embargo": {}
+                                    }
+                                ]
+                            },
+                            {
+                                "target_name": "JSTOR_ARTS_AND_SCIENCES_XI",
+                                "target_public_name": "JSTOR Arts \u0026 Sciences XI",
+                                "target_url": "http://proxy.library.nyu.edu/login?url=https://www.jstor.org/action/showPublication?journalCode=yearworkmodlang",
+                                "authentication": "",
+                                "proxy": "yes",
+                                "coverage": [
+                                    {
+                                        "coverage_text": [
+                                            {
+                                                "threshold_text": [
+                                                    {
+                                                        "coverage_statement": [
+                                                            "Available from 1930/06/30 volume: 1  until 2019/01/31 volume: 79"
+                                                        ]
+                                                    }
+                                                ],
+                                                "embargo_text": [
+                                                    {}
+                                                ]
+                                            }
+                                        ],
+                                        "from": [
+                                            {
+                                                "year": "1930",
+                                                "month": "06",
+                                                "day": "30",
+                                                "volume": "1"
+                                            }
+                                        ],
+                                        "to": [
+                                            {
+                                                "year": "2019",
+                                                "month": "01",
+                                                "day": "31",
+                                                "volume": "79"
+                                            }
+                                        ],
+                                        "embargo": {}
+                                    }
+                                ]
+                            },
+                            {
+                                "target_name": "PERIODICALS_ARCHIVE_ONLINE_COLLECTION_2",
+                                "target_public_name": "Periodicals Archive Online Collection 2",
+                                "target_url": "http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?url_ver=Z39.88-2004\u0026rfr_id=info%3Axri%2Fsid%3Aprimo\u0026rft_id=1817653\u0026res_dat=xri%3Apqm\u0026genre=journal\u0026rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal",
+                                "authentication": "",
+                                "proxy": "yes",
+                                "coverage": [
+                                    {
+                                        "coverage_text": [
+                                            {
+                                                "threshold_text": [
+                                                    {
+                                                        "coverage_statement": [
+                                                            "Available from 1930/01/01  until 1940/12/31",
+                                                            "Available from 1950/01/01  until 1994/01/31"
+                                                        ]
+                                                    }
+                                                ],
+                                                "embargo_text": [
+                                                    {}
+                                                ]
+                                            }
+                                        ],
+                                        "from": [
+                                            {
+                                                "year": "1930",
+                                                "month": "01",
+                                                "day": "01"
+                                            },
+                                            {
+                                                "year": "1950",
+                                                "month": "01",
+                                                "day": "01"
+                                            }
+                                        ],
+                                        "to": [
+                                            {
+                                                "year": "1940",
+                                                "month": "12",
+                                                "day": "31"
+                                            },
+                                            {
+                                                "year": "1994",
+                                                "month": "01",
+                                                "day": "31"
                                             }
                                         ],
                                         "embargo": {}

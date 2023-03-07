@@ -43,7 +43,7 @@
                             {
                                 "target_name": "EBSCOHOST_AMERICA_HISTORY_AND_LIFE_WITH_FULL_TEXT",
                                 "target_public_name": "EBSCOhost America History and Life with Full Text",
-                                "target_url": "http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?date=20210401\u0026atitle=publish+the+picture+at+your+peril\u0026issn=1537-7814\u0026spage=301\u0026title=JOURNAL+OF+THE+GILDED+AGE+AND+PROGRESSIVE+ERA\u0026volume=20\u0026genre=article\u0026sid=Primo\u0026issue=2",
+                                "target_url": "http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?date=20210401\u0026issn=1537-7814\u0026volume=20\u0026genre=article\u0026spage=301\u0026title=JOURNAL+OF+THE+GILDED+AGE+AND+PROGRESSIVE+ERA\u0026sid=Primo\u0026atitle=publish+the+picture+at+your+peril\u0026issue=2",
                                 "authentication": "",
                                 "proxy": "yes",
                                 "coverage": [
@@ -81,7 +81,7 @@
                             {
                                 "target_name": "PROQUEST_CENTRAL",
                                 "target_public_name": "ProQuest Central",
-                                "target_url": "http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?url_ver=Z39.88-2004\u0026date=2021-04-01\u0026spage=301\u0026issn=1537-7814\u0026res_dat=xri%3Apqm\u0026volume=20\u0026genre=article\u0026rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Aarticle\u0026issue=2\u0026jtitle=JOURNAL%2BOF%2BTHE%2BGILDED%2BAGE%2BAND%2BPROGRESSIVE%2BERA",
+                                "target_url": "http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?url_ver=Z39.88-2004\u0026jtitle=JOURNAL%2BOF%2BTHE%2BGILDED%2BAGE%2BAND%2BPROGRESSIVE%2BERA\u0026issue=2\u0026genre=article\u0026spage=301\u0026res_dat=xri%3Apqm\u0026rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Aarticle\u0026date=2021-04-01\u0026issn=1537-7814\u0026volume=20",
                                 "authentication": "",
                                 "proxy": "yes",
                                 "coverage": [
