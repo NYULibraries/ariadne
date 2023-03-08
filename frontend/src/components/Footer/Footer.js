@@ -18,7 +18,7 @@ const PageFooter = () => {
                                     </a>
                                 </li>
                                 <li className="menu__li menu__li--departments">
-                                    <a href="https://library.nyu.edu/departments/" className="menu__link menu__link--departments">
+                                    <a href="https://library.nyu.edu/departments/" className="menu__link menu__link--departments" target="_blank" rel="noreferrer">
                                         Departments
                                     </a>
                                 </li>
@@ -28,7 +28,7 @@ const PageFooter = () => {
                                     </a>
                                 </li>
                                 <li className="menu__li menu__li--staff-directory">
-                                    <a href="https://library.nyu.edu/people/" className="menu__link menu__link--staff-directory">
+                                    <a href="https://library.nyu.edu/people/" className="menu__link menu__link--staff-directory" target="_blank" rel="noreferrer">
                                         Staff Directory
                                     </a>
                                 </li>
@@ -52,12 +52,12 @@ const PageFooter = () => {
                                     </a>
                                 </li>
                                 <li className="menu__li menu__li--career-opportunities">
-                                    <a href="https://library.nyu.edu/about/who-we-are/career-opportunities/" className="menu__link menu__link--career-opportunities">
+                                    <a href="https://library.nyu.edu/about/who-we-are/career-opportunities/" className="menu__link menu__link--career-opportunities" target="_blank" rel="noreferrer">
                                         Career Opportunities
                                     </a>
                                 </li>
                                 <li className="menu__li menu__li--contact-us">
-                                    <a href="https://library.nyu.edu/contact/" className="menu__link menu__link--contact-us">
+                                    <a href="https://library.nyu.edu/contact/" className="menu__link menu__link--contact-us" target="_blank" rel="noreferrer">
                                         Contact Us
                                     </a>
                                 </li>
@@ -86,8 +86,8 @@ const PageFooter = () => {
                     </div>
                     <div className="footer__copyright">
                         Unless otherwise noted, all content copyright New York University. All rights reserved.
-                        <a href="https://library.nyu.edu/privacy-policy/">Privacy policy</a>
-                        <a className="footer__logo" href="https://www.nyu.edu">
+                        <a href="https://library.nyu.edu/privacy-policy/" target="_blank" rel="noreferrer">Privacy policy</a>
+                        <a className="footer__logo" href="https://www.nyu.edu" target="_blank" rel="noreferrer">
                             <img src="/images/nyu-footer-logo.svg" alt="New York University logo" height="27" />
                         </a>
                     </div>
