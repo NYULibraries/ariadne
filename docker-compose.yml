@@ -69,6 +69,11 @@ services:
     <<: *x-build-frontend-test
     command: yarn test
     # <<: *x-development-volumes-frontend
+   
+  frontend-update-snapshots:
+    <<: *x-build-frontend-test
+    command: yarn test -u
+    <<: *x-development-volumes-frontend
 
   backend:
     <<: *x-build-backend
