@@ -22,6 +22,18 @@ TODO: architecture and workflows, deployment examples, etc.
 
 ## E2E tests
 
+Run E2E tests in a container:
+
+```
+docker-compose run --rm e2e
+```
+
+Update golden files in a container:
+
+```
+docker-compose run e2e-update-goldenfiles
+```
+
 Run tests:
 
 ```
@@ -37,11 +49,5 @@ UPDATE_GOLDEN_FILES=true yarn test:e2e
 ```
 (Developer note: it's current not possible to use a custom flag like `--update-golden-files`
 with `playwright`: [\[Feature\] Add support for test\.each / describe\.each \#7036](https://github.com/microsoft/playwright/issues/7036))
-
-Run E2E tests in a container:
-
-```
-docker-compose run --rm e2e
-```
 
 
