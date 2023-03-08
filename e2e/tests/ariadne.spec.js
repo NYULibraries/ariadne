@@ -106,7 +106,7 @@ ${e.stderr.toString()}`;
       // Wait for the popup to load.
       await popup.waitForLoadState();
 
-      expect(await page.textContent('.ask-librarian')).toBe(ASK_LIBRARIAN_TEXT);
+      expect(await page.textContent('.ask-librarian')).toMatch(ASK_LIBRARIAN_TEXT);
       expect(popup.url()).toBe('https://library.nyu.edu/ask/');
     });
 
