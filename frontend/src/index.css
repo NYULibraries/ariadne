@@ -2,6 +2,7 @@ body {
   margin: 0;
   background-color: #f5f7fa;
   font-family: "Google Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #1C2127;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

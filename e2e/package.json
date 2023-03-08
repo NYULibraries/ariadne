@@ -7,7 +7,8 @@
   "private": true,
   "scripts": {
     "pretest:e2e": "rm -rf tests/actual/* && rm -rf tests/diffs/*",
-    "test:e2e": "yarn playwright test"
+    "test:e2e": "yarn playwright test",
+    "test:e2e:updatesnapshots": "yarn playwright test --update-snapshots"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
