@@ -6,10 +6,10 @@ exports[`AskLibrarian component matches snapshot when not loading 1`] = `
 <div
   class="ask-librarian"
 >
-  <h4>
-    Need help?
-  </h4>
-  <h5>
+  <h2>
+    Need Help?
+  </h2>
+  <h3>
     <a
       href="https://library.nyu.edu/ask/"
       rel="noopener noreferrer"
@@ -17,7 +17,7 @@ exports[`AskLibrarian component matches snapshot when not loading 1`] = `
     >
       Ask a Librarian
     </a>
-  </h5>
+  </h3>
   <div>
     <p>
       Use 

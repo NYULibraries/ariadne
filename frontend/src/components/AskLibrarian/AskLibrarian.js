@@ -5,12 +5,12 @@ const AskLibrarian = ({ loading }) => {
         <>
             {!loading && (
                 <div className="ask-librarian">
-                    <h4>Need help?</h4>
-                    <h5>
+                    <h2>Need Help?</h2>
+                    <h3>
                         <a href={ASK_LIBRARIAN_URL} target="_blank" rel="noopener noreferrer">
                             {ASK_LIBRARIAN_TEXT}
                         </a>
-                    </h5>
+                    </h3>
                     <div>
                         <p>
                             Use <a href="https://library.nyu.edu/ask/" target="_blank" rel="noreferrer">Ask A Librarian</a> or the &quot;Chat with Us&quot; icon at the bottom right corner for any question you have about the Libraries&apos; services.
