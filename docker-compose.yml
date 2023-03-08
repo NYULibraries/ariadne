@@ -69,6 +69,12 @@ services:
     <<: *x-build-frontend-test
     command: yarn test
     # <<: *x-development-volumes-frontend
+   
+      # this is a wip: it doesn't work because of the way the frontend test dockerfile loads test files from backend into src directory
+      #frontend-update-snapshots:
+      #  <<: *x-build-frontend-test
+      #  command: yarn test -u
+      #  <<: *x-development-volumes-frontend
 
   backend:
     <<: *x-build-backend
@@ -124,6 +130,19 @@ services:
     environment:
       - PLAYWRIGHT_BASE_URL=http://frontend:3000/
     # <<: *x-development-volumes-frontend
+    
+  e2e-update-snapshots:
+    <<: *x-build-e2e
+    depends_on:
+      - frontend
+    command: "yarn test:e2e"
+    networks:
+      - ariadne-net
+    environment:
+      - PLAYWRIGHT_BASE_URL=http://frontend:3000/
+      - UPDATE_GOLDEN_FILES=true
+    volumes:
+      - ./e2e/tests:/e2e/tests
 
 networks:
   ariadne-net:
