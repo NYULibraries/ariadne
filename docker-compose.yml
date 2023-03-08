@@ -70,10 +70,11 @@ services:
     command: yarn test
     # <<: *x-development-volumes-frontend
    
-  frontend-update-snapshots:
-    <<: *x-build-frontend-test
-    command: yarn test -u
-    <<: *x-development-volumes-frontend
+      # this is a wip: it doesn't work because of the way the frontend test dockerfile loads test files from backend into src directory
+      #frontend-update-snapshots:
+      #  <<: *x-build-frontend-test
+      #  command: yarn test -u
+      #  <<: *x-development-volumes-frontend
 
   backend:
     <<: *x-build-backend
