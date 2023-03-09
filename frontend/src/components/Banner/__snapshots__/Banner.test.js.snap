@@ -4,6 +4,7 @@ exports[`Institution name: NYU renders NYU page correctly 1`] = `
 <DocumentFragment>
   <nav
     class="color-nav navbar navbar-expand-lg navbar-light"
+    role="navigation"
   >
     <div
       class="container"
@@ -49,6 +50,7 @@ exports[`Institution name: NYUAD renders NYUAD page correctly 1`] = `
 <DocumentFragment>
   <nav
     class="color-nav navbar navbar-expand-lg navbar-light"
+    role="navigation"
   >
     <div
       class="container"
@@ -94,6 +96,7 @@ exports[`Institution name: NYUSH renders NYUSH page correctly 1`] = `
 <DocumentFragment>
   <nav
     class="color-nav navbar navbar-expand-lg navbar-light"
+    role="navigation"
   >
     <div
       class="container"

@@ -79,19 +79,10 @@ exports[`Backend HTTP error responses HTTP 400 (Bad Request) error is rendered c
               The backend API returned an HTTP error response: 400 (Bad Request)
             </div>
           </div>
-          <div
-            class="list-group"
-          >
-            <div
-              class="list-group-item list-group-item-action flex-column border-0"
-            />
-            <div
-              class="list-group-item list-group-item-action flex-column border-0"
-            >
-              <p>
-                No results found
-              </p>
-            </div>
+          <div>
+            <p>
+              No results found
+            </p>
           </div>
         </div>
         <div
@@ -290,19 +281,10 @@ exports[`Backend HTTP error responses HTTP 403 (Forbidden) error is rendered cor
               The backend API returned an HTTP error response: 403 (Forbidden)
             </div>
           </div>
-          <div
-            class="list-group"
-          >
-            <div
-              class="list-group-item list-group-item-action flex-column border-0"
-            />
-            <div
-              class="list-group-item list-group-item-action flex-column border-0"
-            >
-              <p>
-                No results found
-              </p>
-            </div>
+          <div>
+            <p>
+              No results found
+            </p>
           </div>
         </div>
         <div
@@ -501,19 +483,10 @@ exports[`Backend HTTP error responses HTTP 408 (Request Timeout) error is render
               The backend API returned an HTTP error response: 408 (Request Timeout)
             </div>
           </div>
-          <div
-            class="list-group"
-          >
-            <div
-              class="list-group-item list-group-item-action flex-column border-0"
-            />
-            <div
-              class="list-group-item list-group-item-action flex-column border-0"
-            >
-              <p>
-                No results found
-              </p>
-            </div>
+          <div>
+            <p>
+              No results found
+            </p>
           </div>
         </div>
         <div
@@ -712,19 +685,10 @@ exports[`Backend HTTP error responses HTTP 500 (Internal Server Error) error is 
               The backend API returned an HTTP error response: 500 (Internal Server Error)
             </div>
           </div>
-          <div
-            class="list-group"
-          >
-            <div
-              class="list-group-item list-group-item-action flex-column border-0"
-            />
-            <div
-              class="list-group-item list-group-item-action flex-column border-0"
-            >
-              <p>
-                No results found
-              </p>
-            </div>
+          <div>
+            <p>
+              No results found
+            </p>
           </div>
         </div>
         <div
@@ -923,19 +887,10 @@ exports[`Backend fetch exceptions TypeError: Failed to fetch renders backend fet
               Error fetching data from the Ariadne API: TypeError: Failed to fetch
             </div>
           </div>
-          <div
-            class="list-group"
-          >
-            <div
-              class="list-group-item list-group-item-action flex-column border-0"
-            />
-            <div
-              class="list-group-item list-group-item-action flex-column border-0"
-            >
-              <p>
-                No results found
-              </p>
-            </div>
+          <div>
+            <p>
+              No results found
+            </p>
           </div>
         </div>
         <div
@@ -1134,19 +1089,10 @@ exports[`Backend response includes errors Response includes 2 errors and an empt
               The backend API returned errors: "[ERROR 1]", "[ERROR 2]"
             </div>
           </div>
-          <div
-            class="list-group"
-          >
-            <div
-              class="list-group-item list-group-item-action flex-column border-0"
-            />
-            <div
-              class="list-group-item list-group-item-action flex-column border-0"
-            >
-              <p>
-                No results found
-              </p>
-            </div>
+          <div>
+            <p>
+              No results found
+            </p>
           </div>
         </div>
         <div
@@ -1341,14 +1287,9 @@ exports[`Backend success "Life" Magazine and the Power of Photography renders co
             </div>
           </div>
           <div
-            role="alert"
-          />
-          <div
             class="list-group"
+            style=""
           >
-            <div
-              class="list-group-item list-group-item-action flex-column border-0"
-            />
             <div
               class="list-group-item list-group-item-action flex-column border-0"
             >
@@ -1593,14 +1534,9 @@ exports[`Backend success Corriere Fiorentino renders correctly 1`] = `
             </div>
           </div>
           <div
-            role="alert"
-          />
-          <div
             class="list-group"
+            style=""
           >
-            <div
-              class="list-group-item list-group-item-action flex-column border-0"
-            />
             <div
               class="list-group-item list-group-item-action flex-column border-0"
             >
@@ -1815,14 +1751,9 @@ exports[`Backend success Design of LED light therapy device based on free-form l
             </div>
           </div>
           <div
-            role="alert"
-          />
-          <div
             class="list-group"
+            style=""
           >
-            <div
-              class="list-group-item list-group-item-action flex-column border-0"
-            />
             <div
               class="list-group-item list-group-item-action flex-column border-0"
             >
@@ -2035,14 +1966,9 @@ exports[`Backend success Editorial cartoon renders correctly 1`] = `
             </div>
           </div>
           <div
-            role="alert"
-          />
-          <div
             class="list-group"
+            style=""
           >
-            <div
-              class="list-group-item list-group-item-action flex-column border-0"
-            />
             <div
               class="list-group-item list-group-item-action flex-column border-0"
             >
@@ -2257,14 +2183,9 @@ exports[`Backend success Modelling Modular Living: Furniture and Life Magazine a
             </div>
           </div>
           <div
-            role="alert"
-          />
-          <div
             class="list-group"
+            style=""
           >
-            <div
-              class="list-group-item list-group-item-action flex-column border-0"
-            />
             <div
               class="list-group-item list-group-item-action flex-column border-0"
             >
@@ -2474,14 +2395,9 @@ exports[`Backend success Moral psychology is relationship regulation: moral moti
             </div>
           </div>
           <div
-            role="alert"
-          />
-          <div
             class="list-group"
+            style=""
           >
-            <div
-              class="list-group-item list-group-item-action flex-column border-0"
-            />
             <div
               class="list-group-item list-group-item-action flex-column border-0"
             >
@@ -2677,14 +2593,9 @@ exports[`Backend success Our Lady of everyday life : la Virgen de Guadalupe and 
             </div>
           </div>
           <div
-            role="alert"
-          />
-          <div
             class="list-group"
+            style=""
           >
-            <div
-              class="list-group-item list-group-item-action flex-column border-0"
-            />
             <div
               class="list-group-item list-group-item-action flex-column border-0"
             >
@@ -2897,14 +2808,9 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
             </div>
           </div>
           <div
-            role="alert"
-          />
-          <div
             class="list-group"
+            style=""
           >
-            <div
-              class="list-group-item list-group-item-action flex-column border-0"
-            />
             <div
               class="list-group-item list-group-item-action flex-column border-0"
             >
@@ -3159,14 +3065,9 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
             </div>
           </div>
           <div
-            role="alert"
-          />
-          <div
             class="list-group"
+            style=""
           >
-            <div
-              class="list-group-item list-group-item-action flex-column border-0"
-            />
             <div
               class="list-group-item list-group-item-action flex-column border-0"
             >
@@ -3414,14 +3315,9 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
             </div>
           </div>
           <div
-            role="alert"
-          />
-          <div
             class="list-group"
+            style=""
           >
-            <div
-              class="list-group-item list-group-item-action flex-column border-0"
-            />
             <div
               class="list-group-item list-group-item-action flex-column border-0"
             >
@@ -3843,14 +3739,9 @@ exports[`Backend success The Year's work in modern language studies. renders cor
             </div>
           </div>
           <div
-            role="alert"
-          />
-          <div
             class="list-group"
+            style=""
           >
-            <div
-              class="list-group-item list-group-item-action flex-column border-0"
-            />
             <div
               class="list-group-item list-group-item-action flex-column border-0"
             >
