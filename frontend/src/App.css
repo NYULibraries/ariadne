@@ -4,6 +4,23 @@
   color: #1C2127;
 }
 
+/* global font sizes */
+body div h1, body div h2, body div h3 {
+  font-weight: bold;
+}
+
+body div h1 {
+  font-size: 1.8em;
+}
+
+body div h2 {
+  font-size: 24px;
+}
+
+body div h3 {
+  font-size: 20px;
+}
+
 /* Apply the Montserrat font to all headings */
 /* h1,
 h2,
@@ -58,14 +75,12 @@ h6 {
 }
 
 .jumbotron h1 {
-  font-size: 1.8em;
   font-weight: bold;
   line-height: 1.2;
 }
 
 .jumbotron h2.title {
   font-weight: bold;
-  font-size: 24px;
 }
 
 
@@ -95,8 +110,6 @@ h6 {
 }
 
 .row h3 {
-  font-size: 20px;
-  font-weight: bold;
   line-height: 1.2;
 }
 
@@ -143,7 +156,6 @@ h6 {
 
 h2.title {
   font-style: italic;
-  font-size: 18px;
   line-height: 22px;
   margin-top: 0;
   font-weight: normal;

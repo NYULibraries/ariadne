@@ -92,10 +92,10 @@ exports[`Backend HTTP error responses HTTP 400 (Bad Request) error is rendered c
             <div
               class="ask-librarian"
             >
-              <h4>
-                Need help?
-              </h4>
-              <h5>
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
                 <a
                   href="https://library.nyu.edu/ask/"
                   rel="noopener noreferrer"
@@ -103,7 +103,7 @@ exports[`Backend HTTP error responses HTTP 400 (Bad Request) error is rendered c
                 >
                   Ask a Librarian
                 </a>
-              </h5>
+              </h3>
               <div>
                 <p>
                   Use 
@@ -294,10 +294,10 @@ exports[`Backend HTTP error responses HTTP 403 (Forbidden) error is rendered cor
             <div
               class="ask-librarian"
             >
-              <h4>
-                Need help?
-              </h4>
-              <h5>
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
                 <a
                   href="https://library.nyu.edu/ask/"
                   rel="noopener noreferrer"
@@ -305,7 +305,7 @@ exports[`Backend HTTP error responses HTTP 403 (Forbidden) error is rendered cor
                 >
                   Ask a Librarian
                 </a>
-              </h5>
+              </h3>
               <div>
                 <p>
                   Use 
@@ -496,10 +496,10 @@ exports[`Backend HTTP error responses HTTP 408 (Request Timeout) error is render
             <div
               class="ask-librarian"
             >
-              <h4>
-                Need help?
-              </h4>
-              <h5>
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
                 <a
                   href="https://library.nyu.edu/ask/"
                   rel="noopener noreferrer"
@@ -507,7 +507,7 @@ exports[`Backend HTTP error responses HTTP 408 (Request Timeout) error is render
                 >
                   Ask a Librarian
                 </a>
-              </h5>
+              </h3>
               <div>
                 <p>
                   Use 
@@ -698,10 +698,10 @@ exports[`Backend HTTP error responses HTTP 500 (Internal Server Error) error is 
             <div
               class="ask-librarian"
             >
-              <h4>
-                Need help?
-              </h4>
-              <h5>
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
                 <a
                   href="https://library.nyu.edu/ask/"
                   rel="noopener noreferrer"
@@ -709,7 +709,7 @@ exports[`Backend HTTP error responses HTTP 500 (Internal Server Error) error is 
                 >
                   Ask a Librarian
                 </a>
-              </h5>
+              </h3>
               <div>
                 <p>
                   Use 
@@ -900,10 +900,10 @@ exports[`Backend fetch exceptions TypeError: Failed to fetch renders backend fet
             <div
               class="ask-librarian"
             >
-              <h4>
-                Need help?
-              </h4>
-              <h5>
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
                 <a
                   href="https://library.nyu.edu/ask/"
                   rel="noopener noreferrer"
@@ -911,7 +911,7 @@ exports[`Backend fetch exceptions TypeError: Failed to fetch renders backend fet
                 >
                   Ask a Librarian
                 </a>
-              </h5>
+              </h3>
               <div>
                 <p>
                   Use 
@@ -1102,10 +1102,10 @@ exports[`Backend response includes errors Response includes 2 errors and an empt
             <div
               class="ask-librarian"
             >
-              <h4>
-                Need help?
-              </h4>
-              <h5>
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
                 <a
                   href="https://library.nyu.edu/ask/"
                   rel="noopener noreferrer"
@@ -1113,7 +1113,7 @@ exports[`Backend response includes errors Response includes 2 errors and an empt
                 >
                   Ask a Librarian
                 </a>
-              </h5>
+              </h3>
               <div>
                 <p>
                   Use 
@@ -1379,10 +1379,10 @@ exports[`Backend success "Life" Magazine and the Power of Photography renders co
             <div
               class="ask-librarian"
             >
-              <h4>
-                Need help?
-              </h4>
-              <h5>
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
                 <a
                   href="https://library.nyu.edu/ask/"
                   rel="noopener noreferrer"
@@ -1390,7 +1390,7 @@ exports[`Backend success "Life" Magazine and the Power of Photography renders co
                 >
                   Ask a Librarian
                 </a>
-              </h5>
+              </h3>
               <div>
                 <p>
                   Use 
@@ -1566,10 +1566,10 @@ exports[`Backend success Corriere Fiorentino renders correctly 1`] = `
             <div
               class="ask-librarian"
             >
-              <h4>
-                Need help?
-              </h4>
-              <h5>
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
                 <a
                   href="https://library.nyu.edu/ask/"
                   rel="noopener noreferrer"
@@ -1577,7 +1577,7 @@ exports[`Backend success Corriere Fiorentino renders correctly 1`] = `
                 >
                   Ask a Librarian
                 </a>
-              </h5>
+              </h3>
               <div>
                 <p>
                   Use 
@@ -1783,10 +1783,10 @@ exports[`Backend success Design of LED light therapy device based on free-form l
             <div
               class="ask-librarian"
             >
-              <h4>
-                Need help?
-              </h4>
-              <h5>
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
                 <a
                   href="https://library.nyu.edu/ask/"
                   rel="noopener noreferrer"
@@ -1794,7 +1794,7 @@ exports[`Backend success Design of LED light therapy device based on free-form l
                 >
                   Ask a Librarian
                 </a>
-              </h5>
+              </h3>
               <div>
                 <p>
                   Use 
@@ -1998,10 +1998,10 @@ exports[`Backend success Editorial cartoon renders correctly 1`] = `
             <div
               class="ask-librarian"
             >
-              <h4>
-                Need help?
-              </h4>
-              <h5>
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
                 <a
                   href="https://library.nyu.edu/ask/"
                   rel="noopener noreferrer"
@@ -2009,7 +2009,7 @@ exports[`Backend success Editorial cartoon renders correctly 1`] = `
                 >
                   Ask a Librarian
                 </a>
-              </h5>
+              </h3>
               <div>
                 <p>
                   Use 
@@ -2215,10 +2215,10 @@ exports[`Backend success Modelling Modular Living: Furniture and Life Magazine a
             <div
               class="ask-librarian"
             >
-              <h4>
-                Need help?
-              </h4>
-              <h5>
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
                 <a
                   href="https://library.nyu.edu/ask/"
                   rel="noopener noreferrer"
@@ -2226,7 +2226,7 @@ exports[`Backend success Modelling Modular Living: Furniture and Life Magazine a
                 >
                   Ask a Librarian
                 </a>
-              </h5>
+              </h3>
               <div>
                 <p>
                   Use 
@@ -2427,10 +2427,10 @@ exports[`Backend success Moral psychology is relationship regulation: moral moti
             <div
               class="ask-librarian"
             >
-              <h4>
-                Need help?
-              </h4>
-              <h5>
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
                 <a
                   href="https://library.nyu.edu/ask/"
                   rel="noopener noreferrer"
@@ -2438,7 +2438,7 @@ exports[`Backend success Moral psychology is relationship regulation: moral moti
                 >
                   Ask a Librarian
                 </a>
-              </h5>
+              </h3>
               <div>
                 <p>
                   Use 
@@ -2623,10 +2623,10 @@ exports[`Backend success Our Lady of everyday life : la Virgen de Guadalupe and 
             <div
               class="ask-librarian"
             >
-              <h4>
-                Need help?
-              </h4>
-              <h5>
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
                 <a
                   href="https://library.nyu.edu/ask/"
                   rel="noopener noreferrer"
@@ -2634,7 +2634,7 @@ exports[`Backend success Our Lady of everyday life : la Virgen de Guadalupe and 
                 >
                   Ask a Librarian
                 </a>
-              </h5>
+              </h3>
               <div>
                 <p>
                   Use 
@@ -2880,10 +2880,10 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
             <div
               class="ask-librarian"
             >
-              <h4>
-                Need help?
-              </h4>
-              <h5>
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
                 <a
                   href="https://library.nyu.edu/ask/"
                   rel="noopener noreferrer"
@@ -2891,7 +2891,7 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
                 >
                   Ask a Librarian
                 </a>
-              </h5>
+              </h3>
               <div>
                 <p>
                   Use 
@@ -3137,10 +3137,10 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
             <div
               class="ask-librarian"
             >
-              <h4>
-                Need help?
-              </h4>
-              <h5>
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
                 <a
                   href="https://library.nyu.edu/ask/"
                   rel="noopener noreferrer"
@@ -3148,7 +3148,7 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
                 >
                   Ask a Librarian
                 </a>
-              </h5>
+              </h3>
               <div>
                 <p>
                   Use 
@@ -3567,10 +3567,10 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
             <div
               class="ask-librarian"
             >
-              <h4>
-                Need help?
-              </h4>
-              <h5>
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
                 <a
                   href="https://library.nyu.edu/ask/"
                   rel="noopener noreferrer"
@@ -3578,7 +3578,7 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
                 >
                   Ask a Librarian
                 </a>
-              </h5>
+              </h3>
               <div>
                 <p>
                   Use 
@@ -3769,10 +3769,10 @@ exports[`Backend success The Year's work in modern language studies. renders cor
             <div
               class="ask-librarian"
             >
-              <h4>
-                Need help?
-              </h4>
-              <h5>
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
                 <a
                   href="https://library.nyu.edu/ask/"
                   rel="noopener noreferrer"
@@ -3780,7 +3780,7 @@ exports[`Backend success The Year's work in modern language studies. renders cor
                 >
                   Ask a Librarian
                 </a>
-              </h5>
+              </h3>
               <div>
                 <p>
                   Use 

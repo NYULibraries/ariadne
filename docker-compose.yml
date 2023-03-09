@@ -16,16 +16,6 @@ x-build-frontend: &x-build-frontend
   depends_on:
     - backend
 
-x-build-frontend-e2e: &x-build-frontend-e2e
-  image: ariadne_frontend_e2e
-  build:
-    context: ./
-    cache_from:
-      - ariadne_frontend_e2e
-    dockerfile: frontend/Dockerfile
-  networks:
-    - ariadne-net
-
 x-build-frontend-test: &x-build-frontend-test
   image: ariadne_frontend_test
   build:
@@ -63,7 +53,8 @@ x-build-e2e: &x-build-e2e
 
 x-development-volumes-frontend: &x-development-volumes-frontend
   volumes:
-    - ./frontend:/app
+    - ./frontend/src:/app/src
+    - ./frontend/public:/app/public
 
 services:
   frontend:
@@ -74,16 +65,16 @@ services:
       - "3000:3000"
     # <<: *x-development-volumes-frontend
 
-  frontend-e2e:
-    <<: *x-build-frontend-e2e
-    ports:
-      - "3000:3000"
-    # <<: *x-development-volumes-frontend
-
   frontend-test:
     <<: *x-build-frontend-test
     command: yarn test
     # <<: *x-development-volumes-frontend
+   
+      # this is a wip: it doesn't work because of the way the frontend test dockerfile loads test files from backend into src directory
+      #frontend-update-snapshots:
+      #  <<: *x-build-frontend-test
+      #  command: yarn test -u
+      #  <<: *x-development-volumes-frontend
 
   backend:
     <<: *x-build-backend
@@ -132,13 +123,26 @@ services:
   e2e:
     <<: *x-build-e2e
     depends_on:
-      - frontend-e2e
+      - frontend
     command: yarn test:e2e
     networks:
       - ariadne-net
     environment:
-      - PLAYWRIGHT_BASE_URL=http://frontend-e2e:3000/
+      - PLAYWRIGHT_BASE_URL=http://frontend:3000/
     # <<: *x-development-volumes-frontend
+    
+  e2e-update-snapshots:
+    <<: *x-build-e2e
+    depends_on:
+      - frontend
+    command: "yarn test:e2e"
+    networks:
+      - ariadne-net
+    environment:
+      - PLAYWRIGHT_BASE_URL=http://frontend:3000/
+      - UPDATE_GOLDEN_FILES=true
+    volumes:
+      - ./e2e/tests:/e2e/tests
 
 networks:
   ariadne-net:

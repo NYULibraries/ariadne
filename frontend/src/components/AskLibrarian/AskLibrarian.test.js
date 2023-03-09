@@ -5,9 +5,9 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 
 describe('AskLibrarian component', () => {
-    it('renders "Need help?" when not loading', () => {
+    it('renders "Need Help?" when not loading', () => {
         const { getByText } = render(<AskLibrarian loading={false} />);
-        expect(getByText('Need help?')).toBeInTheDocument();
+        expect(getByText('Need Help?')).toBeInTheDocument();
     });
 
     it('renders the correct ASK_LIBRARIAN_TEXT and ASK_LIBRARIAN_URL', () => {
