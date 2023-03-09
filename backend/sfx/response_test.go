@@ -22,6 +22,12 @@ const dummyGoodXMLResponse = `
 const dummyBadXMLResponse = `
 <ctx_obj_set`
 
+const dummyErrorXMLResponse = `
+37
+<html><body><p>XSS violation occured.</p></body></html>
+0
+`
+
 const dummyJSONResponse = `{
     "ctx_obj": [
         {
@@ -51,6 +57,7 @@ func TestNewMultipleObjectsResponse(t *testing.T) {
 	}{
 		{"Good SFX response", makeFakeHTTPResponse(dummyGoodXMLResponse), dummyJSONResponse, nil},
 		{"Bad SFX response", makeFakeHTTPResponse(dummyBadXMLResponse), "", errors.New("XML syntax error on line 2: unexpected EOF")},
+		{"Error SFX response", makeFakeHTTPResponse(dummyErrorXMLResponse), "", errors.New("could not identify context object in response")},
 	}
 
 	for _, testCase := range testCases {

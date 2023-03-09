@@ -1,58 +1,17 @@
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Content-Type: application/xml; charset=ISO-8859-1
+Date: Tue, 07 Mar 2023 22:22:27 GMT
+Server: Apache
+
+6bd0
 <?xml version="1.0" encoding="utf-8"?>
 
 <ctx_obj_set>
  <ctx_obj identifier="">
   <ctx_obj_attributes>&lt;perldata&gt;
  &lt;hash&gt;
-  &lt;item key="rft.oclcnum"&gt;909782404&lt;/item&gt;
-  &lt;item key="@sfx.subcategory"&gt;
-   &lt;array&gt;
-    &lt;item key="0"&gt;Current Events &amp;amp; News&lt;/item&gt;
-    &lt;item key="1"&gt;General and Others&lt;/item&gt;
-    &lt;item key="2"&gt;Literature&lt;/item&gt;
-    &lt;item key="3"&gt;Performing Arts, Travel and Leisure&lt;/item&gt;
-    &lt;item key="4"&gt;Conservation&lt;/item&gt;
-    &lt;item key="5"&gt;Journalism, Mass Communication, Media &amp;amp; Publishing&lt;/item&gt;
-   &lt;/array&gt;
-  &lt;/item&gt;
-  &lt;item key="@rft.stitle"&gt;
-   &lt;array&gt;
-    &lt;item key="0"&gt;NEW YORKER&lt;/item&gt;
-    &lt;item key="1"&gt;NEW YORKER&lt;/item&gt;
-    &lt;item key="2"&gt;NEW YORKER, THE&lt;/item&gt;
-    &lt;item key="3"&gt;NEW YORKER (NEW YORK, N.Y.&lt;/item&gt;
-    &lt;item key="4"&gt;NEW - YORKER&lt;/item&gt;
-   &lt;/array&gt;
-  &lt;/item&gt;
-  &lt;item key="_stash"&gt;
-   &lt;hash&gt;
-   &lt;/hash&gt;
-  &lt;/item&gt;
-  &lt;item key="rft.genre"&gt;journal&lt;/item&gt;
-  &lt;item key="rft.language"&gt;eng&lt;/item&gt;
-  &lt;item key="existing_ts_ids"&gt;
-   &lt;array&gt;
-    &lt;item key="0"&gt;111027614344001&lt;/item&gt;
-    &lt;item key="1"&gt;20430000000000002&lt;/item&gt;
-    &lt;item key="2"&gt;1000000000001288&lt;/item&gt;
-    &lt;item key="3"&gt;111021039760001&lt;/item&gt;
-    &lt;item key="4"&gt;1000000000002113&lt;/item&gt;
-    &lt;item key="5"&gt;5470000000000024&lt;/item&gt;
-    &lt;item key="6"&gt;20430000000000018&lt;/item&gt;
-    &lt;item key="7"&gt;111016833201001&lt;/item&gt;
-    &lt;item key="8"&gt;3790000000000769&lt;/item&gt;
-    &lt;item key="9"&gt;111031861479000&lt;/item&gt;
-    &lt;item key="10"&gt;2560000000000075&lt;/item&gt;
-    &lt;item key="11"&gt;3790000000000382&lt;/item&gt;
-    &lt;item key="12"&gt;111037301464002&lt;/item&gt;
-    &lt;item key="13"&gt;3790000000000359&lt;/item&gt;
-    &lt;item key="14"&gt;3790000000000382&lt;/item&gt;
-   &lt;/array&gt;
-  &lt;/item&gt;
-  &lt;item key="sfx.has_full_text"&gt;yes&lt;/item&gt;
-  
-  &lt;item key="sfx.request_id"&gt;25365796&lt;/item&gt;
-  &lt;item key="@rft.aufirst"&gt;
+  &lt;item key="@rft.auinit"&gt;
    &lt;array&gt;
     &lt;item key="0"&gt;&lt;/item&gt;
    &lt;/array&gt;
@@ -67,58 +26,131 @@
     &lt;item key="5"&gt;Social Sciences&lt;/item&gt;
    &lt;/array&gt;
   &lt;/item&gt;
-  &lt;item key="rft.object_id"&gt;110975413975944&lt;/item&gt;
-  &lt;item key="rft.year"&gt;2002&lt;/item&gt;
-  &lt;item key="@rft.aulast"&gt;
+  &lt;item key="sfx.request_id"&gt;25747328&lt;/item&gt;
+  &lt;item key="rft.language"&gt;eng&lt;/item&gt;
+  &lt;item key="@rfr_id"&gt;
    &lt;array&gt;
-    &lt;item key="0"&gt;Ross&lt;/item&gt;
+    &lt;item key="0"&gt;info:sid/FirstSearch:WorldCat&lt;/item&gt;
    &lt;/array&gt;
   &lt;/item&gt;
-  &lt;item key="rft.date"&gt;2002&lt;/item&gt;
-  &lt;item key="@rft_id"&gt;
-   &lt;array&gt;
-   &lt;/array&gt;
-  &lt;/item&gt;
-  &lt;item key="rft.place"&gt;New York&lt;/item&gt;
-  &lt;item key="@rft.au"&gt;
-   &lt;array&gt;
-    &lt;item key="0"&gt;Ross,&lt;/item&gt;
-   &lt;/array&gt;
-  &lt;/item&gt;
-  &lt;item key="rft.pub"&gt;Conde Nast Publications, Inc.&lt;/item&gt;
+  &lt;item key="rft.title"&gt;New Yorker&lt;/item&gt;
   &lt;item key="ctx_ver"&gt;Z39.88-2004&lt;/item&gt;
+  &lt;item key="rft.issn"&gt;0028-792X&lt;/item&gt;
+  &lt;item key="rft.place"&gt;New York&lt;/item&gt;
+  &lt;item key="sfx.has_full_text"&gt;yes&lt;/item&gt;
+  &lt;item key="existing_ts_ids"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;111027614344001&lt;/item&gt;
+    &lt;item key="1"&gt;20430000000000002&lt;/item&gt;
+    &lt;item key="2"&gt;3790000000000769&lt;/item&gt;
+    &lt;item key="3"&gt;111021039760001&lt;/item&gt;
+    &lt;item key="4"&gt;3790000000000382&lt;/item&gt;
+    &lt;item key="5"&gt;20430000000000018&lt;/item&gt;
+    &lt;item key="6"&gt;1000000000002159&lt;/item&gt;
+    &lt;item key="7"&gt;3790000000001487&lt;/item&gt;
+    &lt;item key="8"&gt;3790000000000359&lt;/item&gt;
+    &lt;item key="9"&gt;2560000000000075&lt;/item&gt;
+    &lt;item key="10"&gt;111031861479000&lt;/item&gt;
+    &lt;item key="11"&gt;3450000000000063&lt;/item&gt;
+    &lt;item key="12"&gt;111016833201001&lt;/item&gt;
+    &lt;item key="13"&gt;3790000000000382&lt;/item&gt;
+    &lt;item key="14"&gt;111037301464002&lt;/item&gt;
+    &lt;item key="15"&gt;5470000000000024&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.object_type"&gt;JOURNAL&lt;/item&gt;
+  &lt;item key="sfx.response_type"&gt;multi_obj_xml&lt;/item&gt;
   &lt;item key="@rft.auinitm"&gt;
    &lt;array&gt;
     &lt;item key="0"&gt;&lt;/item&gt;
    &lt;/array&gt;
   &lt;/item&gt;
-  &lt;item key="req.session_id"&gt;sC6856EA8-2344-11ED-BBE2-CFD64031B499&lt;/item&gt;
-  &lt;item key="sfx.sid"&gt;DEFAULT&lt;/item&gt;
-  &lt;item key="rft.jtitle"&gt;New Yorker&lt;/item&gt;
-  &lt;item key="sfx.sourcename"&gt;DEFAULT&lt;/item&gt;
-  &lt;item key="rft.lccn"&gt;  2011201780&lt;/item&gt;
-  &lt;item key="rft.eissn"&gt;2163-3827&lt;/item&gt;
-  &lt;item key="sfx.ignore_char_set"&gt;1&lt;/item&gt;
-  &lt;item key="rft_val_fmt"&gt;journal&lt;/item&gt;
-  &lt;item key="@rft.auinit"&gt;
-   &lt;array&gt;
-    &lt;item key="0"&gt;&lt;/item&gt;
-   &lt;/array&gt;
-  &lt;/item&gt;
-  &lt;item key="@rfe_id"&gt;
-   &lt;array&gt;
-   &lt;/array&gt;
-  &lt;/item&gt;
-  &lt;item key="rft.issn"&gt;0028-792X&lt;/item&gt;
-  &lt;item key="rft.object_type"&gt;JOURNAL&lt;/item&gt;
-  &lt;item key="ctx_id"&gt;&lt;/item&gt;
-  &lt;item key="rft.title"&gt;New Yorker&lt;/item&gt;
-  &lt;item key="sfx.response_type"&gt;multi_obj_xml&lt;/item&gt;
+  &lt;item key="rft.pub"&gt;Conde Nast Publications, Inc.&lt;/item&gt;
   &lt;item key="@rft.auinit1"&gt;
    &lt;array&gt;
     &lt;item key="0"&gt;&lt;/item&gt;
    &lt;/array&gt;
   &lt;/item&gt;
+  &lt;item key="rft.genre"&gt;journal&lt;/item&gt;
+  &lt;item key="@rft.au"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;Ross,&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="fetchid"&gt;0028792X&lt;/item&gt;
+  &lt;item key="@sfx.subcategory"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;Current Events &amp;amp; News&lt;/item&gt;
+    &lt;item key="1"&gt;General and Others&lt;/item&gt;
+    &lt;item key="2"&gt;Literature&lt;/item&gt;
+    &lt;item key="3"&gt;Performing Arts, Travel and Leisure&lt;/item&gt;
+    &lt;item key="4"&gt;Conservation&lt;/item&gt;
+    &lt;item key="5"&gt;Journalism, Mass Communication, Media &amp;amp; Publishing&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.jtitle"&gt;New Yorker&lt;/item&gt;
+  &lt;item key="rft.oclcnum"&gt;909782404&lt;/item&gt;
+  &lt;item key="sfx.sid"&gt;FirstSearch:WorldCat&lt;/item&gt;
+  &lt;item key="sfx.doi_url"&gt;http://dx.doi.org&lt;/item&gt;
+  &lt;item key="ctx_enc"&gt;UTF-8&lt;/item&gt;
+  &lt;item key="ctx_tim"&gt;2021-10-22T12:29:27-04:00&lt;/item&gt;
+  &lt;item key="@rft.aufirst"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="url_ctx_fmt"&gt;info:ofi/fmt:xml:xsd:ctx&lt;/item&gt;
+  &lt;item key="rft.object_id"&gt;110975413975944&lt;/item&gt;
+  &lt;item key="rft.lccn"&gt;  2011201780&lt;/item&gt;
+  &lt;item key="sfx.ignore_date_threshold"&gt;1&lt;/item&gt;
+  &lt;item key="@rft.stitle"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;NEW YORKER&lt;/item&gt;
+    &lt;item key="1"&gt;NEW YORKER&lt;/item&gt;
+    &lt;item key="2"&gt;NEW YORKER, THE&lt;/item&gt;
+    &lt;item key="3"&gt;NEW YORKER (NEW YORK, N.Y.&lt;/item&gt;
+    &lt;item key="4"&gt;NEW - YORKER&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rfr.rfr"&gt;FirstSearch:WorldCat&lt;/item&gt;
+  &lt;item key="@rfe_id"&gt;
+   &lt;array&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft_val_fmt"&gt;journal&lt;/item&gt;
+  &lt;item key="req.session_id"&gt;s8B0E6B36-BD36-11ED-A611-42C74031B499&lt;/item&gt;
+  &lt;item key="req.ip"&gt;209.150.44.95&lt;/item&gt;
+  &lt;item key="@rft.aulast"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;Ross&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  
+  &lt;item key="@rft_id"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;info:oclcnum/909782404&lt;/item&gt;
+    &lt;item key="1"&gt;urn:ISSN:0028-792X&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="_stash"&gt;
+   &lt;hash&gt;
+    &lt;item key="@rft_id"&gt;
+     &lt;array&gt;
+      &lt;item key="0"&gt;info:oclcnum/909782404&lt;/item&gt;
+      &lt;item key="1"&gt;urn:ISSN:0028-792X&lt;/item&gt;
+     &lt;/array&gt;
+    &lt;/item&gt;
+    &lt;item key="@rfr_id"&gt;
+     &lt;array&gt;
+      &lt;item key="0"&gt;info:sid/FirstSearch:WorldCat&lt;/item&gt;
+     &lt;/array&gt;
+    &lt;/item&gt;
+   &lt;/hash&gt;
+  &lt;/item&gt;
+  &lt;item key="url_ver"&gt;Z39.88-2004&lt;/item&gt;
+  &lt;item key="rft.eissn"&gt;2163-3827&lt;/item&gt;
+  &lt;item key="sfx.ignore_char_set"&gt;1&lt;/item&gt;
+  &lt;item key="sfx.sourcename"&gt;FIRSTSEARCH&lt;/item&gt;
  &lt;/hash&gt;
 &lt;/perldata&gt;
 </ctx_obj_attributes>
@@ -172,7 +204,7 @@
     <authentication></authentication>
     <char_set>utf8</char_set>
     <displayer></displayer>
-    <target_url>http://proxy.library.nyu.edu/login?url=http://gateway.proquest.com/openurl?rft_id=41130&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;url_ver=Z39.88-2004&amp;res_dat=xri%3Apqm&amp;rfr_id=info%3Axri%2Fsid%3Aprimo&amp;genre=journal</target_url>
+    <target_url>http://proxy.library.nyu.edu/login?url=http://gateway.proquest.com/openurl?rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;genre=journal&amp;res_dat=xri%3Apqm&amp;rft_id=41130&amp;rfr_id=info%3Axri%2Fsid%3Aprimo&amp;url_ver=Z39.88-2004</target_url>
     <is_related>no</is_related>
     <coverage>
      <coverage_text>
@@ -190,33 +222,103 @@
     </coverage>
    </target>
    <target>
-    <target_name>GALEGROUP_DB_SHAKESPEARE_COLLECTION_PERI</target_name>
-    <target_public_name>Gale Cengage Shakespeare Collection Periodicals</target_public_name>
-    <object_portfolio_id>1000000000211453</object_portfolio_id>
-    <target_id>1000000000000669</target_id>
-    <interface_id>111021040432000</interface_id>
-    <interface_name>GALEGROUP</interface_name>
-    <target_service_id>1000000000001288</target_service_id>
+    <target_name>EBSCOHOST_ACADEMIC_SEARCH_COMPLETE</target_name>
+    <target_public_name>EBSCOhost Academic Search Complete</target_public_name>
+    <object_portfolio_id>4560000000003326</object_portfolio_id>
+    <target_id>1000000000001505</target_id>
+    <interface_id>111080144282000</interface_id>
+    <interface_name>EBSCOHOST</interface_name>
+    <target_service_id>1000000000002159</target_service_id>
     <service_type>getFullTxt</service_type>
-    <parser>Gale::OpenURL </parser>
-    <parse_param>url=http://find.galegroup.com/openurl/openurl &amp;dbase=SHAX &amp;loc_id=new64731 &amp; exception=shakespeare &amp; url2=http://link.galegroup.com/apps &amp;ltitle=New+Yorker</parse_param>
+    <parser>EBSCO_HOST::Journals</parser>
+    <parse_param>db_host=a9h &amp; url=https://search.ebscohost.com &amp; url1=https://openurl.ebscohost.com/linksvc/linking.aspx &amp; url2=https://openurl.ebsco.com &amp; shib= &amp; customer_id= &amp; sso= &amp; ipauth= &amp; opid=&amp;jkey=NYK</parse_param>
     <proxy>yes</proxy>
     <crossref>no</crossref>
     <note></note>
     <authentication></authentication>
-    <char_set></char_set>
+    <char_set>utf8</char_set>
     <displayer></displayer>
-    <target_url>http://proxy.library.nyu.edu/login?url=http://find.galegroup.com/openurl/openurl?url_ver=Z39.88-2004&amp;url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&amp;rft.issn=0028-792X&amp;res_id=info%3Asid%2Fgale%3ASHAX&amp;req_dat=info%3Asid%2Fgale%3Augnid%3Anew64731&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;ctx_enc=info%3Aofi%3Aenc%3AUTF-8&amp;rft.date=2002&amp;rft.jtitle=New+Yorker</target_url>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?sid=Primo&amp;site=ehost-live&amp;db=a9h&amp;jn=NYK</target_url>
     <is_related>no</is_related>
     <coverage>
      <coverage_text>
       <threshold_text>
-       <coverage_statement>Available from 2002</coverage_statement>
+       <coverage_statement>Available from 2004/01/05</coverage_statement>
       </threshold_text>
       <embargo_text></embargo_text>
      </coverage_text>
      <from>
-      <year>2002</year>
+      <year>2004</year>
+      <month>01</month>
+      <day>05</day>
+     </from>
+     <embargo></embargo>
+    </coverage>
+   </target>
+   <target>
+    <target_name>EBSCOHOST_READERS_GUIDE_FULL_TEXT_MEGA_WILSON</target_name>
+    <target_public_name>EBSCOhost Reader's Guide Full Text Mega</target_public_name>
+    <object_portfolio_id>2670000000679922</object_portfolio_id>
+    <target_id>3450000000000050</target_id>
+    <interface_id>111080144282000</interface_id>
+    <interface_name>EBSCOHOST</interface_name>
+    <target_service_id>3450000000000063</target_service_id>
+    <service_type>getFullTxt</service_type>
+    <parser>EBSCO_HOST::Journals</parser>
+    <parse_param>db_host=rgm&amp;url=https://search.ebscohost.com &amp; url1=https://openurl.ebscohost.com/linksvc/linking.aspx &amp; url2=https://openurl.ebsco.com &amp; shib= &amp; customer_id= &amp; sso= &amp; ipauth= &amp; opid=&amp;jkey=NYK</parse_param>
+    <proxy>yes</proxy>
+    <crossref>no</crossref>
+    <note></note>
+    <authentication></authentication>
+    <char_set>iso-8859-1</char_set>
+    <displayer></displayer>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?site=ehost-live&amp;sid=Primo&amp;db=rgm&amp;jn=NYK</target_url>
+    <is_related>no</is_related>
+    <coverage>
+     <coverage_text>
+      <threshold_text>
+       <coverage_statement>Available from 2011/08/01</coverage_statement>
+      </threshold_text>
+      <embargo_text></embargo_text>
+     </coverage_text>
+     <from>
+      <year>2011</year>
+      <month>08</month>
+      <day>01</day>
+     </from>
+     <embargo></embargo>
+    </coverage>
+   </target>
+   <target>
+    <target_name>FLIPSTER</target_name>
+    <target_public_name>Flipster</target_public_name>
+    <object_portfolio_id>3790000002776391</object_portfolio_id>
+    <target_id>3790000000001663</target_id>
+    <interface_id>111080144282000</interface_id>
+    <interface_name>EBSCOHOST</interface_name>
+    <target_service_id>3790000000001487</target_service_id>
+    <service_type>getFullTxt</service_type>
+    <parser>EBSCO_HOST::Journals</parser>
+    <parse_param>db_host=eon &amp; url=https://search.ebscohost.com &amp; url1=https://openurl.ebscohost.com/linksvc/linking.aspx &amp; url2=https://openurl.ebsco.com &amp; shib= &amp; customer_id= &amp; sso= &amp; ipauth= &amp; opid= &amp; exception=bquery&amp;jkey=NYK</parse_param>
+    <proxy>yes</proxy>
+    <crossref>no</crossref>
+    <note></note>
+    <authentication></authentication>
+    <char_set>iso-8859-1</char_set>
+    <displayer></displayer>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?db=eon&amp;bquery=HJ+NYK&amp;sid=Primo&amp;site=ehost-live</target_url>
+    <is_related>no</is_related>
+    <coverage>
+     <coverage_text>
+      <threshold_text>
+       <coverage_statement>Available from 2015/01/26</coverage_statement>
+      </threshold_text>
+      <embargo_text></embargo_text>
+     </coverage_text>
+     <from>
+      <year>2015</year>
+      <month>01</month>
+      <day>26</day>
      </from>
      <embargo></embargo>
     </coverage>
@@ -414,7 +516,7 @@
     <authentication></authentication>
     <char_set>iso-8859-1</char_set>
     <displayer></displayer>
-    <target_url>http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_id=41130&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;url_ver=Z39.88-2004&amp;res_dat=xri%3Apqm&amp;rfr_id=info%3Axri%2Fsid%3Aprimo&amp;genre=journal</target_url>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?genre=journal&amp;res_dat=xri%3Apqm&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft_id=41130&amp;url_ver=Z39.88-2004&amp;rfr_id=info%3Axri%2Fsid%3Aprimo</target_url>
     <is_related>no</is_related>
     <coverage>
      <coverage_text>
@@ -448,7 +550,7 @@
     <authentication></authentication>
     <char_set>iso-8859-1</char_set>
     <displayer></displayer>
-    <target_url>http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_id=16493&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;url_ver=Z39.88-2004&amp;rfr_id=info%3Axri%2Fsid%3Aprimo&amp;res_dat=xri%3Apqm&amp;genre=journal</target_url>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?url_ver=Z39.88-2004&amp;rfr_id=info%3Axri%2Fsid%3Aprimo&amp;rft_id=16493&amp;res_dat=xri%3Apqm&amp;genre=journal&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal</target_url>
     <is_related>no</is_related>
     <coverage>
      <coverage_text>
@@ -519,7 +621,7 @@
     <authentication></authentication>
     <char_set>iso-8859-1</char_set>
     <displayer></displayer>
-    <target_url>http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_id=41130&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;res_dat=xri%3Apqm&amp;rfr_id=info%3Axri%2Fsid%3Aprimo&amp;url_ver=Z39.88-2004&amp;genre=journal</target_url>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?url_ver=Z39.88-2004&amp;rfr_id=info%3Axri%2Fsid%3Aprimo&amp;rft_id=41130&amp;res_dat=xri%3Apqm&amp;genre=journal&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal</target_url>
     <is_related>no</is_related>
     <coverage>
      <coverage_text>
@@ -598,3 +700,6 @@
   </ctx_obj_targets>
  </ctx_obj>
 </ctx_obj_set>
+0
+
+

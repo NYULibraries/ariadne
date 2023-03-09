@@ -1357,7 +1357,7 @@ exports[`Backend success "Life" Magazine and the Power of Photography renders co
               >
                 <h3>
                   <a
-                    href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?issue=4&sid=Primo&atitle=%22life%22+magazine+and+the+power+of+photography&spage=144&date=20211201&issn=0004-3079&title=The+Art+Bulletin&genre=article&volume=103"
+                    href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?atitle=%22life%22+magazine+and+the+power+of+photography&issue=4&sid=Primo&genre=article&spage=144&title=The+Art+Bulletin&date=20211201&issn=0004-3079&volume=103"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
@@ -1377,7 +1377,7 @@ exports[`Backend success "Life" Magazine and the Power of Photography renders co
               >
                 <h3>
                   <a
-                    href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?issn=0004-3079&title=The+Art+Bulletin&genre=article&volume=103&issue=4&sid=Primo&atitle=%22life%22+magazine+and+the+power+of+photography&spage=144&date=20211201"
+                    href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?issue=4&atitle=%22life%22+magazine+and+the+power+of+photography&sid=Primo&title=The+Art+Bulletin&genre=article&spage=144&issn=0004-3079&volume=103&date=20211201"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
@@ -1397,7 +1397,7 @@ exports[`Backend success "Life" Magazine and the Power of Photography renders co
               >
                 <h3>
                   <a
-                    href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?atitle=%22life%22+magazine+and+the+power+of+photography&sid=Primo&issue=4&date=20211201&spage=144&genre=article&title=The+Art+Bulletin&issn=0004-3079&volume=103"
+                    href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?title=The+Art+Bulletin&genre=article&spage=144&issn=0004-3079&volume=103&date=20211201&issue=4&atitle=%22life%22+magazine+and+the+power+of+photography&sid=Primo"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
@@ -1417,7 +1417,7 @@ exports[`Backend success "Life" Magazine and the Power of Photography renders co
               >
                 <h3>
                   <a
-                    href="http://proxy.library.nyu.edu/login?url=https://www.tandfonline.com/openurl?genre=article&issn=0004-3079&issue=4&volume=103&date=2021&spage=144"
+                    href="http://proxy.library.nyu.edu/login?url=https://www.tandfonline.com/openurl?issue=4&spage=144&genre=article&volume=103&issn=0004-3079&date=2021"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
@@ -1609,9 +1609,7 @@ exports[`Backend success Corriere Fiorentino renders correctly 1`] = `
               >
                 <h3>
                   <a
-                    href="
-                    http://proxy.library.nyu.edu/login?url=https://www.pressreader.com/italy/corriere-fiorentino
-                "
+                    href="http://proxy.library.nyu.edu/login?url=https://www.pressreader.com/italy/corriere-fiorentino"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
@@ -2490,7 +2488,7 @@ exports[`Backend success Moral psychology is relationship regulation: moral moti
               >
                 <h3>
                   <a
-                    href="http://proxy.library.nyu.edu/login?url=http://psycnet.apa.org/journals/rev/118/1/57"
+                    href="http://proxy.library.nyu.edu/login?url=http://doi.apa.org/getdoi.cfm?doi=10.1037%2Fa0021867"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
@@ -2693,7 +2691,7 @@ exports[`Backend success Our Lady of everyday life : la Virgen de Guadalupe and 
               >
                 <h3>
                   <a
-                    href="http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?sid=DEFAULT%20(Via%20SFX)&genre=bookitem&date=2018&year=2018&title=Our%20Lady%20of%20Everyday%20Life&month=1&isbn=0-19-028039-5&aufirst=Mar%C3%ADa%20Del%20Socorro&aulast=Casta%C3%B1eda-Liles"
+                    href="http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?sid=DEFAULT%20(Via%20SFX)&year=2018&isbn=0-19-028039-5&month=1&date=2018&aulast=Casta%C3%B1eda-Liles&aufirst=Mar%C3%ADa%20Del%20Socorro&genre=bookitem&title=Our%20Lady%20of%20Everyday%20Life"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
@@ -2933,7 +2931,7 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
               >
                 <h3>
                   <a
-                    href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?title=JOURNAL+OF+THE+GILDED+AGE+AND+PROGRESSIVE+ERA&genre=article&volume=20&issue=2&sid=Primo&date=20210401&atitle=publish+the+picture+at+your+peril&issn=1537-7814&spage=301"
+                    href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?sid=Primo&issue=2&atitle=publish+the+picture+at+your+peril&issn=1537-7814&volume=20&date=20210401&title=JOURNAL+OF+THE+GILDED+AGE+AND+PROGRESSIVE+ERA&genre=article&spage=301"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
@@ -2953,7 +2951,7 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
               >
                 <h3>
                   <a
-                    href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?spage=301&issn=1537-7814&res_dat=xri%3Apqm&url_ver=Z39.88-2004&date=2021-04-01&jtitle=JOURNAL%2BOF%2BTHE%2BGILDED%2BAGE%2BAND%2BPROGRESSIVE%2BERA&issue=2&genre=article&volume=20&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Aarticle"
+                    href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Aarticle&res_dat=xri%3Apqm&spage=301&genre=article&volume=20&issn=1537-7814&date=2021-04-01&issue=2&jtitle=JOURNAL%2BOF%2BTHE%2BGILDED%2BAGE%2BAND%2BPROGRESSIVE%2BERA&url_ver=Z39.88-2004"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
@@ -3195,7 +3193,7 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
               >
                 <h3>
                   <a
-                    href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?date=20210401&atitle=publish+the+picture+at+your+peril&issn=1537-7814&spage=301&title=JOURNAL+OF+THE+GILDED+AGE+AND+PROGRESSIVE+ERA&volume=20&genre=article&sid=Primo&issue=2"
+                    href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?date=20210401&issn=1537-7814&volume=20&genre=article&spage=301&title=JOURNAL+OF+THE+GILDED+AGE+AND+PROGRESSIVE+ERA&sid=Primo&atitle=publish+the+picture+at+your+peril&issue=2"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
@@ -3215,7 +3213,7 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
               >
                 <h3>
                   <a
-                    href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?url_ver=Z39.88-2004&date=2021-04-01&spage=301&issn=1537-7814&res_dat=xri%3Apqm&volume=20&genre=article&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Aarticle&issue=2&jtitle=JOURNAL%2BOF%2BTHE%2BGILDED%2BAGE%2BAND%2BPROGRESSIVE%2BERA"
+                    href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?url_ver=Z39.88-2004&jtitle=JOURNAL%2BOF%2BTHE%2BGILDED%2BAGE%2BAND%2BPROGRESSIVE%2BERA&issue=2&genre=article&spage=301&res_dat=xri%3Apqm&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Aarticle&date=2021-04-01&issn=1537-7814&volume=20"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
@@ -3430,7 +3428,7 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
               >
                 <h3>
                   <a
-                    href="http://proxy.library.nyu.edu/login?url=http://gateway.proquest.com/openurl?rft_id=41130&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&url_ver=Z39.88-2004&res_dat=xri%3Apqm&rfr_id=info%3Axri%2Fsid%3Aprimo&genre=journal"
+                    href="http://proxy.library.nyu.edu/login?url=http://gateway.proquest.com/openurl?rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&genre=journal&res_dat=xri%3Apqm&rft_id=41130&rfr_id=info%3Axri%2Fsid%3Aprimo&url_ver=Z39.88-2004"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
@@ -3470,6 +3468,46 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
               >
                 <h3>
                   <a
+                    href="http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?sid=Primo&site=ehost-live&db=a9h&jn=NYK"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    EBSCOhost Academic Search Complete
+                  </a>
+                </h3>
+                <p>
+                  Available from 2004/01/05
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?site=ehost-live&sid=Primo&db=rgm&jn=NYK"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    EBSCOhost Reader's Guide Full Text Mega
+                  </a>
+                </h3>
+                <p>
+                  Available from 2011/08/01
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
                     href="http://proxy.library.nyu.edu/login?url=https://global.factiva.com/en/du/headlines.asp?XSID=S001dbr5DEs5DEmN9MpMD6mNDVyMHmnRsIuMcNG1pRRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQQAA&CurrentSourcesDesc=sc_u_gtny%2CNew+Yorker&CurrentSources=U%7Cgtny"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -3490,15 +3528,15 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
               >
                 <h3>
                   <a
-                    href="http://proxy.library.nyu.edu/login?url=http://find.galegroup.com/openurl/openurl?url_ver=Z39.88-2004&url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&rft.issn=0028-792X&res_id=info%3Asid%2Fgale%3ASHAX&req_dat=info%3Asid%2Fgale%3Augnid%3Anew64731&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&ctx_enc=info%3Aofi%3Aenc%3AUTF-8&rft.date=2002&rft.jtitle=New+Yorker"
+                    href="http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?db=eon&bquery=HJ+NYK&sid=Primo&site=ehost-live"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    Gale Cengage Shakespeare Collection Periodicals
+                    Flipster
                   </a>
                 </h3>
                 <p>
-                  Available from 2002
+                  Available from 2015/01/26
                 </p>
               </div>
             </div>
@@ -3590,7 +3628,7 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
               >
                 <h3>
                   <a
-                    href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_id=41130&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&url_ver=Z39.88-2004&res_dat=xri%3Apqm&rfr_id=info%3Axri%2Fsid%3Aprimo&genre=journal"
+                    href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?genre=journal&res_dat=xri%3Apqm&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft_id=41130&url_ver=Z39.88-2004&rfr_id=info%3Axri%2Fsid%3Aprimo"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
@@ -3610,7 +3648,7 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
               >
                 <h3>
                   <a
-                    href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_id=16493&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&url_ver=Z39.88-2004&rfr_id=info%3Axri%2Fsid%3Aprimo&res_dat=xri%3Apqm&genre=journal"
+                    href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?url_ver=Z39.88-2004&rfr_id=info%3Axri%2Fsid%3Aprimo&rft_id=16493&res_dat=xri%3Apqm&genre=journal&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
@@ -3650,7 +3688,7 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
               >
                 <h3>
                   <a
-                    href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_id=41130&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&res_dat=xri%3Apqm&rfr_id=info%3Axri%2Fsid%3Aprimo&url_ver=Z39.88-2004&genre=journal"
+                    href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?url_ver=Z39.88-2004&rfr_id=info%3Axri%2Fsid%3Aprimo&rft_id=41130&res_dat=xri%3Apqm&genre=journal&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
@@ -3859,14 +3897,96 @@ exports[`Backend success The Year's work in modern language studies. renders cor
               >
                 <h3>
                   <a
-                    href="http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?title=The%20Year's%20Work%20in%20Modern%20Language%20Studies&issn=0084-4152&genre=article&sid=DEFAULT%20(Via%20SFX)"
+                    href="http://proxy.library.nyu.edu/login?url=http://brill.com/view/journals/ywml/ywml-overview.xml"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    Bobst Library  Interlibrary Loan
+                    2022 Brill Journal Collection
                   </a>
                 </h3>
-                <p />
+                <p>
+                  Available from 2000 volume: 61 issue: 1
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=http://brill.com/content/journals/22224297"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Brill Online Journals
+                  </a>
+                </h3>
+                <p>
+                  Available from 1931 volume: 1 issue: 1
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=http://brill.com/content/journals/22224297"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Brill Online Journals
+                  </a>
+                </h3>
+                <p>
+                  Available from 1931 volume: 1 issue: 1
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://www.jstor.org/action/showPublication?journalCode=yearworkmodlang"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    JSTOR Arts & Sciences XI
+                  </a>
+                </h3>
+                <p>
+                  Available from 1930/06/30 volume: 1  until 2019/01/31 volume: 79
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?url_ver=Z39.88-2004&rfr_id=info%3Axri%2Fsid%3Aprimo&rft_id=1817653&res_dat=xri%3Apqm&genre=journal&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Periodicals Archive Online Collection 2
+                  </a>
+                </h3>
+                <p>
+                  Available from 1930/01/01  until 1940/12/31. Available from 1950/01/01  until 1994/01/31
+                </p>
               </div>
             </div>
           </div>
