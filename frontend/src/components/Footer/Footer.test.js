@@ -1,7 +1,7 @@
 import { cleanup, render, screen, waitFor } from '@testing-library/react';
 
 import userEvent from '@testing-library/user-event';
-import links from '../../testutils/footerLinks';
+import links from '../../testutils/';
 import PageFooter from './Footer';
 
 describe('PageFooter', () => {
