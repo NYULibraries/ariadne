@@ -7,7 +7,9 @@ import linksApi from '../../api/fetchData';
 import useApi from '../../hooks/useApi';
 import AskLibrarian from '../AskLibrarian/AskLibrarian';
 import Citation from '../Citation/Citation';
+import Error from '../Error/Error';
 import List from '../List/List';
+import Loader from '../Loader/Loader';
 
 const Main = () => {
   const backendClient = useApi(linksApi.fetchData);
@@ -52,7 +54,18 @@ const Main = () => {
                   </div>
                 </div>
               </div>
-              <List links={backendClient.resource} error={backendClient.error} loading={backendClient.loading} />
+              {backendClient.loading && <Loader />}
+              {(backendClient.resource?.length === 0 || backendClient.error) ?
+                (
+                  <>
+                    <div role="alert">
+                      {backendClient.error && <Error message={backendClient.error} />}
+                    </div>
+                    <div>
+                      <p>No results found</p>
+                    </div>
+                  </>) :
+                <List links={backendClient.resource} loading={backendClient.loading} />}
             </Col>
             <Col md={4}>
               <aside>
