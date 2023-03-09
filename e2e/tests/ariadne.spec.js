@@ -1,11 +1,14 @@
 import * as fs from 'node:fs';
 
+import links, { getTestCasesBackendSuccess } from '../../frontend/src/testutils';
 import { removeSourceMappingUrlComments, updateGoldenFiles } from '../testutils';
 
 import { execSync } from 'child_process';
-import { getTestCasesBackendSuccess } from '../../frontend/src/testutils';
 
 const { test, expect } = require('@playwright/test');
+
+
+const AxeBuilder = require('@axe-core/playwright').default; // 1
 const beautifyHtml = require('js-beautify').html;
 
 const ASK_LIBRARIAN_TEXT = "Need help?Ask a LibrarianUse Ask A Librarian or the \"Chat with Us\" icon at the bottom right corner for any question you have about the Libraries' services.Visit our online tutorials for tips on searching the catalog and getting library resources.Additional ResourcesUse EZBorrow or InterLibrary Loan (ILL) for materials unavailable at NYUDiscover subject specific resources using expert curated research guidesExplore the complete list of library servicesReach out to the Libraries on our InstagramSearch WorldCat for items in nearby libraries"
@@ -121,11 +124,37 @@ ${e.stderr.toString()}`;
     });
 
     test('renders links with a "list-group" class name', async ({ page }) => {
+      await page.waitForTimeout(5000)
       expect(await page.$('.list-group')).toBeTruthy();
     });
 
     test('returns search results', async ({ page }) => {
       expect(await page.textContent('h1')).toBe('GetIt Search Results:');
     });
+
+    for (const link of links) {
+      test(`Click "${link.name}"`, async ({ page }) => {
+        if (link.target && link.name !== 'Login to NYU Home' && link.name !== 'Staff Wiki' && link.name !== 'Research Guides') {
+          const popupPromise = page.waitForEvent('popup');
+          await page.getByText(link.name).click();
+          const newPage = await popupPromise;
+          await newPage.waitForLoadState();
+          expect(newPage.url()).toBe(link.href);
+        } else if (!link.target) {
+          await page.getByText(link.name).click();
+          await page.waitForLoadState();
+          expect(page.url()).toBe(link.href);
+          await page.goBack();
+        }
+      });
+    }
+
+    test('should not have any automatically detectable accessibility issues', async ({ page }) => {
+
+      const accessibilityScanResults = await new AxeBuilder({ page }).exclude('ul').analyze();
+      expect(accessibilityScanResults.violations).toEqual([]);
+    });
   });
 }
+
+
