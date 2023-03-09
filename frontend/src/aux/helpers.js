@@ -17,8 +17,10 @@ function deepFreeze(object) {
 
 // Helper function for List.js component
 function getCoverageStatement(link) {
-  return link.coverage[0].coverage_text[0].threshold_text[0].coverage_statement?.join('. ');
+  const coverage = link?.coverage?.[0];
+  return coverage ? coverage.coverage_text[0].threshold_text[0].coverage_statement?.join('. ') : '';
 }
+
 
 function getInstitutionQueryParameter() {
   const queryString = window.location.search;

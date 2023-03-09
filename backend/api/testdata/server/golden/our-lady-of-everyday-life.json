@@ -9,7 +9,7 @@
                             {
                                 "target_name": "DOCDEL_ILLIAD",
                                 "target_public_name": "Bobst Library  Interlibrary Loan",
-                                "target_url": "http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?sid=DEFAULT%20(Via%20SFX)\u0026genre=bookitem\u0026date=2018\u0026year=2018\u0026title=Our%20Lady%20of%20Everyday%20Life\u0026month=1\u0026isbn=0-19-028039-5\u0026aufirst=Mar%C3%ADa%20Del%20Socorro\u0026aulast=Casta%C3%B1eda-Liles",
+                                "target_url": "http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?sid=DEFAULT%20(Via%20SFX)\u0026year=2018\u0026isbn=0-19-028039-5\u0026month=1\u0026date=2018\u0026aulast=Casta%C3%B1eda-Liles\u0026aufirst=Mar%C3%ADa%20Del%20Socorro\u0026genre=bookitem\u0026title=Our%20Lady%20of%20Everyday%20Life",
                                 "authentication": "",
                                 "proxy": "yes",
                                 "coverage": [

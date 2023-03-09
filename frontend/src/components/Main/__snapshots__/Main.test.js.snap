@@ -1,0 +1,4109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Backend HTTP error responses HTTP 400 (Bad Request) error is rendered correctly 1`] = `
+<DocumentFragment>
+  <main>
+    <div
+      class="container"
+      style="margin-bottom: 26px;"
+    >
+      <div
+        class="row row-cols-md-12"
+      >
+        <div
+          class="col-md-8"
+        >
+          <div
+            class="jumbotron"
+          >
+            <div
+              class="container text-left"
+            >
+              <h1>
+                GetIt Search Results:
+              </h1>
+              <div>
+                <div
+                  class="citation-container"
+                >
+                  <p
+                    class="resource-type"
+                  />
+                  <h2
+                    class="title"
+                  >
+                    Editorial cartoon
+                  </h2>
+                  <p>
+                    Payne, Henry
+                    <span>
+                      . 
+                    </span>
+                    2002-12-15
+                  </p>
+                  <p
+                    style="margin: 0px 0px 10px;"
+                  >
+                    <span
+                      style="box-sizing: border-box;"
+                    >
+                      Published in 
+                    </span>
+                    <span
+                      style="font-style: italic;"
+                    >
+                      Detroit News. 
+                    </span>
+                    Page A18
+                  </p>
+                  <div
+                    class="citation-info"
+                  >
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       10552715
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            role="alert"
+          >
+            <div>
+              The backend API returned an HTTP error response: 400 (Bad Request)
+            </div>
+          </div>
+          <div
+            class="list-group"
+          >
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            />
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <p>
+                No results found
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-4"
+        >
+          <aside>
+            <div
+              class="ask-librarian"
+            >
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
+                <a
+                  href="https://library.nyu.edu/ask/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Ask a Librarian
+                </a>
+              </h3>
+              <div>
+                <p>
+                  Use 
+                  <a
+                    href="https://library.nyu.edu/ask/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    Ask A Librarian
+                  </a>
+                   or the "Chat with Us" icon at the bottom right corner for any question you have about the Libraries' services.
+                </p>
+                <p>
+                  Visit our 
+                  <a
+                    href="https://guides.nyu.edu/online-tutorials/finding-sources"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    online tutorials
+                  </a>
+                   for tips on searching the catalog and getting library resources.
+                </p>
+                <h3>
+                  Additional Resources
+                </h3>
+                <ul>
+                  <li>
+                    Use 
+                    <a
+                      href="https://ezborrow.reshare.indexdata.com/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      EZBorrow
+                    </a>
+                     or 
+                    <a
+                      href="https://library.nyu.edu/services/borrowing/from-non-nyu-libraries/interlibrary-loan/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      InterLibrary Loan (ILL)
+                    </a>
+                     for materials unavailable at NYU
+                  </li>
+                  <li>
+                    Discover subject specific resources using 
+                    <a
+                      href="http://guides.nyu.edu"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      expert curated research guides
+                    </a>
+                  </li>
+                  <li>
+                    Explore the 
+                    <a
+                      href="https://library.nyu.edu/services/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      complete list of library services
+                    </a>
+                  </li>
+                  <li>
+                    Reach out to the Libraries on 
+                    <a
+                      href="https://www.instagram.com/nyulibraries/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      our Instagram
+                    </a>
+                  </li>
+                  <li>
+                    Search 
+                    <a
+                      href="https://www.worldcat.org/search?qt=worldcat_org_all"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      WorldCat
+                    </a>
+                     for items in nearby libraries
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Backend HTTP error responses HTTP 403 (Forbidden) error is rendered correctly 1`] = `
+<DocumentFragment>
+  <main>
+    <div
+      class="container"
+      style="margin-bottom: 26px;"
+    >
+      <div
+        class="row row-cols-md-12"
+      >
+        <div
+          class="col-md-8"
+        >
+          <div
+            class="jumbotron"
+          >
+            <div
+              class="container text-left"
+            >
+              <h1>
+                GetIt Search Results:
+              </h1>
+              <div>
+                <div
+                  class="citation-container"
+                >
+                  <p
+                    class="resource-type"
+                  />
+                  <h2
+                    class="title"
+                  >
+                    Editorial cartoon
+                  </h2>
+                  <p>
+                    Payne, Henry
+                    <span>
+                      . 
+                    </span>
+                    2002-12-15
+                  </p>
+                  <p
+                    style="margin: 0px 0px 10px;"
+                  >
+                    <span
+                      style="box-sizing: border-box;"
+                    >
+                      Published in 
+                    </span>
+                    <span
+                      style="font-style: italic;"
+                    >
+                      Detroit News. 
+                    </span>
+                    Page A18
+                  </p>
+                  <div
+                    class="citation-info"
+                  >
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       10552715
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            role="alert"
+          >
+            <div>
+              The backend API returned an HTTP error response: 403 (Forbidden)
+            </div>
+          </div>
+          <div
+            class="list-group"
+          >
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            />
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <p>
+                No results found
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-4"
+        >
+          <aside>
+            <div
+              class="ask-librarian"
+            >
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
+                <a
+                  href="https://library.nyu.edu/ask/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Ask a Librarian
+                </a>
+              </h3>
+              <div>
+                <p>
+                  Use 
+                  <a
+                    href="https://library.nyu.edu/ask/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    Ask A Librarian
+                  </a>
+                   or the "Chat with Us" icon at the bottom right corner for any question you have about the Libraries' services.
+                </p>
+                <p>
+                  Visit our 
+                  <a
+                    href="https://guides.nyu.edu/online-tutorials/finding-sources"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    online tutorials
+                  </a>
+                   for tips on searching the catalog and getting library resources.
+                </p>
+                <h3>
+                  Additional Resources
+                </h3>
+                <ul>
+                  <li>
+                    Use 
+                    <a
+                      href="https://ezborrow.reshare.indexdata.com/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      EZBorrow
+                    </a>
+                     or 
+                    <a
+                      href="https://library.nyu.edu/services/borrowing/from-non-nyu-libraries/interlibrary-loan/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      InterLibrary Loan (ILL)
+                    </a>
+                     for materials unavailable at NYU
+                  </li>
+                  <li>
+                    Discover subject specific resources using 
+                    <a
+                      href="http://guides.nyu.edu"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      expert curated research guides
+                    </a>
+                  </li>
+                  <li>
+                    Explore the 
+                    <a
+                      href="https://library.nyu.edu/services/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      complete list of library services
+                    </a>
+                  </li>
+                  <li>
+                    Reach out to the Libraries on 
+                    <a
+                      href="https://www.instagram.com/nyulibraries/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      our Instagram
+                    </a>
+                  </li>
+                  <li>
+                    Search 
+                    <a
+                      href="https://www.worldcat.org/search?qt=worldcat_org_all"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      WorldCat
+                    </a>
+                     for items in nearby libraries
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Backend HTTP error responses HTTP 408 (Request Timeout) error is rendered correctly 1`] = `
+<DocumentFragment>
+  <main>
+    <div
+      class="container"
+      style="margin-bottom: 26px;"
+    >
+      <div
+        class="row row-cols-md-12"
+      >
+        <div
+          class="col-md-8"
+        >
+          <div
+            class="jumbotron"
+          >
+            <div
+              class="container text-left"
+            >
+              <h1>
+                GetIt Search Results:
+              </h1>
+              <div>
+                <div
+                  class="citation-container"
+                >
+                  <p
+                    class="resource-type"
+                  />
+                  <h2
+                    class="title"
+                  >
+                    Editorial cartoon
+                  </h2>
+                  <p>
+                    Payne, Henry
+                    <span>
+                      . 
+                    </span>
+                    2002-12-15
+                  </p>
+                  <p
+                    style="margin: 0px 0px 10px;"
+                  >
+                    <span
+                      style="box-sizing: border-box;"
+                    >
+                      Published in 
+                    </span>
+                    <span
+                      style="font-style: italic;"
+                    >
+                      Detroit News. 
+                    </span>
+                    Page A18
+                  </p>
+                  <div
+                    class="citation-info"
+                  >
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       10552715
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            role="alert"
+          >
+            <div>
+              The backend API returned an HTTP error response: 408 (Request Timeout)
+            </div>
+          </div>
+          <div
+            class="list-group"
+          >
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            />
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <p>
+                No results found
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-4"
+        >
+          <aside>
+            <div
+              class="ask-librarian"
+            >
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
+                <a
+                  href="https://library.nyu.edu/ask/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Ask a Librarian
+                </a>
+              </h3>
+              <div>
+                <p>
+                  Use 
+                  <a
+                    href="https://library.nyu.edu/ask/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    Ask A Librarian
+                  </a>
+                   or the "Chat with Us" icon at the bottom right corner for any question you have about the Libraries' services.
+                </p>
+                <p>
+                  Visit our 
+                  <a
+                    href="https://guides.nyu.edu/online-tutorials/finding-sources"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    online tutorials
+                  </a>
+                   for tips on searching the catalog and getting library resources.
+                </p>
+                <h3>
+                  Additional Resources
+                </h3>
+                <ul>
+                  <li>
+                    Use 
+                    <a
+                      href="https://ezborrow.reshare.indexdata.com/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      EZBorrow
+                    </a>
+                     or 
+                    <a
+                      href="https://library.nyu.edu/services/borrowing/from-non-nyu-libraries/interlibrary-loan/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      InterLibrary Loan (ILL)
+                    </a>
+                     for materials unavailable at NYU
+                  </li>
+                  <li>
+                    Discover subject specific resources using 
+                    <a
+                      href="http://guides.nyu.edu"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      expert curated research guides
+                    </a>
+                  </li>
+                  <li>
+                    Explore the 
+                    <a
+                      href="https://library.nyu.edu/services/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      complete list of library services
+                    </a>
+                  </li>
+                  <li>
+                    Reach out to the Libraries on 
+                    <a
+                      href="https://www.instagram.com/nyulibraries/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      our Instagram
+                    </a>
+                  </li>
+                  <li>
+                    Search 
+                    <a
+                      href="https://www.worldcat.org/search?qt=worldcat_org_all"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      WorldCat
+                    </a>
+                     for items in nearby libraries
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Backend HTTP error responses HTTP 500 (Internal Server Error) error is rendered correctly 1`] = `
+<DocumentFragment>
+  <main>
+    <div
+      class="container"
+      style="margin-bottom: 26px;"
+    >
+      <div
+        class="row row-cols-md-12"
+      >
+        <div
+          class="col-md-8"
+        >
+          <div
+            class="jumbotron"
+          >
+            <div
+              class="container text-left"
+            >
+              <h1>
+                GetIt Search Results:
+              </h1>
+              <div>
+                <div
+                  class="citation-container"
+                >
+                  <p
+                    class="resource-type"
+                  />
+                  <h2
+                    class="title"
+                  >
+                    Editorial cartoon
+                  </h2>
+                  <p>
+                    Payne, Henry
+                    <span>
+                      . 
+                    </span>
+                    2002-12-15
+                  </p>
+                  <p
+                    style="margin: 0px 0px 10px;"
+                  >
+                    <span
+                      style="box-sizing: border-box;"
+                    >
+                      Published in 
+                    </span>
+                    <span
+                      style="font-style: italic;"
+                    >
+                      Detroit News. 
+                    </span>
+                    Page A18
+                  </p>
+                  <div
+                    class="citation-info"
+                  >
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       10552715
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            role="alert"
+          >
+            <div>
+              The backend API returned an HTTP error response: 500 (Internal Server Error)
+            </div>
+          </div>
+          <div
+            class="list-group"
+          >
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            />
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <p>
+                No results found
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-4"
+        >
+          <aside>
+            <div
+              class="ask-librarian"
+            >
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
+                <a
+                  href="https://library.nyu.edu/ask/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Ask a Librarian
+                </a>
+              </h3>
+              <div>
+                <p>
+                  Use 
+                  <a
+                    href="https://library.nyu.edu/ask/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    Ask A Librarian
+                  </a>
+                   or the "Chat with Us" icon at the bottom right corner for any question you have about the Libraries' services.
+                </p>
+                <p>
+                  Visit our 
+                  <a
+                    href="https://guides.nyu.edu/online-tutorials/finding-sources"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    online tutorials
+                  </a>
+                   for tips on searching the catalog and getting library resources.
+                </p>
+                <h3>
+                  Additional Resources
+                </h3>
+                <ul>
+                  <li>
+                    Use 
+                    <a
+                      href="https://ezborrow.reshare.indexdata.com/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      EZBorrow
+                    </a>
+                     or 
+                    <a
+                      href="https://library.nyu.edu/services/borrowing/from-non-nyu-libraries/interlibrary-loan/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      InterLibrary Loan (ILL)
+                    </a>
+                     for materials unavailable at NYU
+                  </li>
+                  <li>
+                    Discover subject specific resources using 
+                    <a
+                      href="http://guides.nyu.edu"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      expert curated research guides
+                    </a>
+                  </li>
+                  <li>
+                    Explore the 
+                    <a
+                      href="https://library.nyu.edu/services/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      complete list of library services
+                    </a>
+                  </li>
+                  <li>
+                    Reach out to the Libraries on 
+                    <a
+                      href="https://www.instagram.com/nyulibraries/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      our Instagram
+                    </a>
+                  </li>
+                  <li>
+                    Search 
+                    <a
+                      href="https://www.worldcat.org/search?qt=worldcat_org_all"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      WorldCat
+                    </a>
+                     for items in nearby libraries
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Backend fetch exceptions TypeError: Failed to fetch renders backend fetch errors correctly 1`] = `
+<DocumentFragment>
+  <main>
+    <div
+      class="container"
+      style="margin-bottom: 26px;"
+    >
+      <div
+        class="row row-cols-md-12"
+      >
+        <div
+          class="col-md-8"
+        >
+          <div
+            class="jumbotron"
+          >
+            <div
+              class="container text-left"
+            >
+              <h1>
+                GetIt Search Results:
+              </h1>
+              <div>
+                <div
+                  class="citation-container"
+                >
+                  <p
+                    class="resource-type"
+                  />
+                  <h2
+                    class="title"
+                  >
+                    Editorial cartoon
+                  </h2>
+                  <p>
+                    Payne, Henry
+                    <span>
+                      . 
+                    </span>
+                    2002-12-15
+                  </p>
+                  <p
+                    style="margin: 0px 0px 10px;"
+                  >
+                    <span
+                      style="box-sizing: border-box;"
+                    >
+                      Published in 
+                    </span>
+                    <span
+                      style="font-style: italic;"
+                    >
+                      Detroit News. 
+                    </span>
+                    Page A18
+                  </p>
+                  <div
+                    class="citation-info"
+                  >
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       10552715
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            role="alert"
+          >
+            <div>
+              Error fetching data from the Ariadne API: TypeError: Failed to fetch
+            </div>
+          </div>
+          <div
+            class="list-group"
+          >
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            />
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <p>
+                No results found
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-4"
+        >
+          <aside>
+            <div
+              class="ask-librarian"
+            >
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
+                <a
+                  href="https://library.nyu.edu/ask/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Ask a Librarian
+                </a>
+              </h3>
+              <div>
+                <p>
+                  Use 
+                  <a
+                    href="https://library.nyu.edu/ask/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    Ask A Librarian
+                  </a>
+                   or the "Chat with Us" icon at the bottom right corner for any question you have about the Libraries' services.
+                </p>
+                <p>
+                  Visit our 
+                  <a
+                    href="https://guides.nyu.edu/online-tutorials/finding-sources"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    online tutorials
+                  </a>
+                   for tips on searching the catalog and getting library resources.
+                </p>
+                <h3>
+                  Additional Resources
+                </h3>
+                <ul>
+                  <li>
+                    Use 
+                    <a
+                      href="https://ezborrow.reshare.indexdata.com/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      EZBorrow
+                    </a>
+                     or 
+                    <a
+                      href="https://library.nyu.edu/services/borrowing/from-non-nyu-libraries/interlibrary-loan/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      InterLibrary Loan (ILL)
+                    </a>
+                     for materials unavailable at NYU
+                  </li>
+                  <li>
+                    Discover subject specific resources using 
+                    <a
+                      href="http://guides.nyu.edu"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      expert curated research guides
+                    </a>
+                  </li>
+                  <li>
+                    Explore the 
+                    <a
+                      href="https://library.nyu.edu/services/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      complete list of library services
+                    </a>
+                  </li>
+                  <li>
+                    Reach out to the Libraries on 
+                    <a
+                      href="https://www.instagram.com/nyulibraries/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      our Instagram
+                    </a>
+                  </li>
+                  <li>
+                    Search 
+                    <a
+                      href="https://www.worldcat.org/search?qt=worldcat_org_all"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      WorldCat
+                    </a>
+                     for items in nearby libraries
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Backend response includes errors Response includes 2 errors and an empty SFX response renders errors included in backend response correctly 1`] = `
+<DocumentFragment>
+  <main>
+    <div
+      class="container"
+      style="margin-bottom: 26px;"
+    >
+      <div
+        class="row row-cols-md-12"
+      >
+        <div
+          class="col-md-8"
+        >
+          <div
+            class="jumbotron"
+          >
+            <div
+              class="container text-left"
+            >
+              <h1>
+                GetIt Search Results:
+              </h1>
+              <div>
+                <div
+                  class="citation-container"
+                >
+                  <p
+                    class="resource-type"
+                  />
+                  <h2
+                    class="title"
+                  >
+                    Editorial cartoon
+                  </h2>
+                  <p>
+                    Payne, Henry
+                    <span>
+                      . 
+                    </span>
+                    2002-12-15
+                  </p>
+                  <p
+                    style="margin: 0px 0px 10px;"
+                  >
+                    <span
+                      style="box-sizing: border-box;"
+                    >
+                      Published in 
+                    </span>
+                    <span
+                      style="font-style: italic;"
+                    >
+                      Detroit News. 
+                    </span>
+                    Page A18
+                  </p>
+                  <div
+                    class="citation-info"
+                  >
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       10552715
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            role="alert"
+          >
+            <div>
+              The backend API returned errors: "[ERROR 1]", "[ERROR 2]"
+            </div>
+          </div>
+          <div
+            class="list-group"
+          >
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            />
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <p>
+                No results found
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-4"
+        >
+          <aside>
+            <div
+              class="ask-librarian"
+            >
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
+                <a
+                  href="https://library.nyu.edu/ask/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Ask a Librarian
+                </a>
+              </h3>
+              <div>
+                <p>
+                  Use 
+                  <a
+                    href="https://library.nyu.edu/ask/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    Ask A Librarian
+                  </a>
+                   or the "Chat with Us" icon at the bottom right corner for any question you have about the Libraries' services.
+                </p>
+                <p>
+                  Visit our 
+                  <a
+                    href="https://guides.nyu.edu/online-tutorials/finding-sources"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    online tutorials
+                  </a>
+                   for tips on searching the catalog and getting library resources.
+                </p>
+                <h3>
+                  Additional Resources
+                </h3>
+                <ul>
+                  <li>
+                    Use 
+                    <a
+                      href="https://ezborrow.reshare.indexdata.com/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      EZBorrow
+                    </a>
+                     or 
+                    <a
+                      href="https://library.nyu.edu/services/borrowing/from-non-nyu-libraries/interlibrary-loan/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      InterLibrary Loan (ILL)
+                    </a>
+                     for materials unavailable at NYU
+                  </li>
+                  <li>
+                    Discover subject specific resources using 
+                    <a
+                      href="http://guides.nyu.edu"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      expert curated research guides
+                    </a>
+                  </li>
+                  <li>
+                    Explore the 
+                    <a
+                      href="https://library.nyu.edu/services/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      complete list of library services
+                    </a>
+                  </li>
+                  <li>
+                    Reach out to the Libraries on 
+                    <a
+                      href="https://www.instagram.com/nyulibraries/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      our Instagram
+                    </a>
+                  </li>
+                  <li>
+                    Search 
+                    <a
+                      href="https://www.worldcat.org/search?qt=worldcat_org_all"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      WorldCat
+                    </a>
+                     for items in nearby libraries
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Backend success "Life" Magazine and the Power of Photography renders correctly 1`] = `
+<DocumentFragment>
+  <main>
+    <div
+      class="container"
+      style="margin-bottom: 26px;"
+    >
+      <div
+        class="row row-cols-md-12"
+      >
+        <div
+          class="col-md-8"
+        >
+          <div
+            class="jumbotron"
+          >
+            <div
+              class="container text-left"
+            >
+              <h1>
+                GetIt Search Results:
+              </h1>
+              <div>
+                <div
+                  class="citation-container"
+                >
+                  <p
+                    class="resource-type"
+                  >
+                    Article
+                  </p>
+                  <h2
+                    class="title"
+                  >
+                    "Life" Magazine and the Power of Photography, edited by Katherine A. Bussard and Kristen Gresh: New Haven, CT: Yale University Press, 2020. 336 pp.; 250 color and b/w ills. $60.00.
+                  </h2>
+                  <p>
+                    Berger, Martin A.
+                    <span>
+                      . 
+                    </span>
+                    20211201
+                  </p>
+                  <p
+                    style="margin: 0px 0px 10px;"
+                  >
+                    <span
+                      style="box-sizing: border-box;"
+                    >
+                      Published in 
+                    </span>
+                    <span
+                      style="font-style: italic;"
+                    >
+                      Art Bulletin. 
+                    </span>
+                    Volume 103. Issue 4. Page 144
+                  </p>
+                  <div
+                    class="citation-info"
+                  >
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       00043079
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            role="alert"
+          />
+          <div
+            class="list-group"
+          >
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            />
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?atitle=%22life%22+magazine+and+the+power+of+photography&issue=4&sid=Primo&genre=article&spage=144&title=The+Art+Bulletin&date=20211201&issn=0004-3079&volume=103"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    EBSCOhost Academic Search Complete
+                  </a>
+                </h3>
+                <p>
+                  Available from 1975/03/01
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?issue=4&atitle=%22life%22+magazine+and+the+power+of+photography&sid=Primo&title=The+Art+Bulletin&genre=article&spage=144&issn=0004-3079&volume=103&date=20211201"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    EBSCOhost Humanities Full Text
+                  </a>
+                </h3>
+                <p>
+                  Available from 1987/12/01
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?title=The+Art+Bulletin&genre=article&spage=144&issn=0004-3079&volume=103&date=20211201&issue=4&atitle=%22life%22+magazine+and+the+power+of+photography&sid=Primo"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    EBSCOhost OmniFile Full Text Mega
+                  </a>
+                </h3>
+                <p>
+                  Available from 1995/03/01
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://www.tandfonline.com/openurl?issue=4&spage=144&genre=article&volume=103&issn=0004-3079&date=2021"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Taylor & Francis Complete Library Database Model
+                  </a>
+                </h3>
+                <p>
+                  Available from 1913/09/01 volume: 1 issue: 1
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-4"
+        >
+          <aside>
+            <div
+              class="ask-librarian"
+            >
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
+                <a
+                  href="https://library.nyu.edu/ask/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Ask a Librarian
+                </a>
+              </h3>
+              <div>
+                <p>
+                  Use 
+                  <a
+                    href="https://library.nyu.edu/ask/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    Ask A Librarian
+                  </a>
+                   or the "Chat with Us" icon at the bottom right corner for any question you have about the Libraries' services.
+                </p>
+                <p>
+                  Visit our 
+                  <a
+                    href="https://guides.nyu.edu/online-tutorials/finding-sources"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    online tutorials
+                  </a>
+                   for tips on searching the catalog and getting library resources.
+                </p>
+                <h3>
+                  Additional Resources
+                </h3>
+                <ul>
+                  <li>
+                    Use 
+                    <a
+                      href="https://ezborrow.reshare.indexdata.com/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      EZBorrow
+                    </a>
+                     or 
+                    <a
+                      href="https://library.nyu.edu/services/borrowing/from-non-nyu-libraries/interlibrary-loan/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      InterLibrary Loan (ILL)
+                    </a>
+                     for materials unavailable at NYU
+                  </li>
+                  <li>
+                    Discover subject specific resources using 
+                    <a
+                      href="http://guides.nyu.edu"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      expert curated research guides
+                    </a>
+                  </li>
+                  <li>
+                    Explore the 
+                    <a
+                      href="https://library.nyu.edu/services/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      complete list of library services
+                    </a>
+                  </li>
+                  <li>
+                    Reach out to the Libraries on 
+                    <a
+                      href="https://www.instagram.com/nyulibraries/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      our Instagram
+                    </a>
+                  </li>
+                  <li>
+                    Search 
+                    <a
+                      href="https://www.worldcat.org/search?qt=worldcat_org_all"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      WorldCat
+                    </a>
+                     for items in nearby libraries
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Backend success Corriere Fiorentino renders correctly 1`] = `
+<DocumentFragment>
+  <main>
+    <div
+      class="container"
+      style="margin-bottom: 26px;"
+    >
+      <div
+        class="row row-cols-md-12"
+      >
+        <div
+          class="col-md-8"
+        >
+          <div
+            class="jumbotron"
+          >
+            <div
+              class="container text-left"
+            >
+              <h1>
+                GetIt Search Results:
+              </h1>
+              <div>
+                <div
+                  class="citation-container"
+                >
+                  <p
+                    class="resource-type"
+                  >
+                    Journal
+                  </p>
+                  <h2
+                    class="title"
+                  >
+                    Corriere Fiorentino
+                  </h2>
+                  <p />
+                  <div
+                    class="citation-info"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            role="alert"
+          />
+          <div
+            class="list-group"
+          >
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            />
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://www.pressreader.com/italy/corriere-fiorentino"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    PressReader
+                  </a>
+                </h3>
+                <p />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-4"
+        >
+          <aside>
+            <div
+              class="ask-librarian"
+            >
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
+                <a
+                  href="https://library.nyu.edu/ask/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Ask a Librarian
+                </a>
+              </h3>
+              <div>
+                <p>
+                  Use 
+                  <a
+                    href="https://library.nyu.edu/ask/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    Ask A Librarian
+                  </a>
+                   or the "Chat with Us" icon at the bottom right corner for any question you have about the Libraries' services.
+                </p>
+                <p>
+                  Visit our 
+                  <a
+                    href="https://guides.nyu.edu/online-tutorials/finding-sources"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    online tutorials
+                  </a>
+                   for tips on searching the catalog and getting library resources.
+                </p>
+                <h3>
+                  Additional Resources
+                </h3>
+                <ul>
+                  <li>
+                    Use 
+                    <a
+                      href="https://ezborrow.reshare.indexdata.com/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      EZBorrow
+                    </a>
+                     or 
+                    <a
+                      href="https://library.nyu.edu/services/borrowing/from-non-nyu-libraries/interlibrary-loan/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      InterLibrary Loan (ILL)
+                    </a>
+                     for materials unavailable at NYU
+                  </li>
+                  <li>
+                    Discover subject specific resources using 
+                    <a
+                      href="http://guides.nyu.edu"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      expert curated research guides
+                    </a>
+                  </li>
+                  <li>
+                    Explore the 
+                    <a
+                      href="https://library.nyu.edu/services/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      complete list of library services
+                    </a>
+                  </li>
+                  <li>
+                    Reach out to the Libraries on 
+                    <a
+                      href="https://www.instagram.com/nyulibraries/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      our Instagram
+                    </a>
+                  </li>
+                  <li>
+                    Search 
+                    <a
+                      href="https://www.worldcat.org/search?qt=worldcat_org_all"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      WorldCat
+                    </a>
+                     for items in nearby libraries
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Backend success Design of LED light therapy device based on free-form lens. renders correctly 1`] = `
+<DocumentFragment>
+  <main>
+    <div
+      class="container"
+      style="margin-bottom: 26px;"
+    >
+      <div
+        class="row row-cols-md-12"
+      >
+        <div
+          class="col-md-8"
+        >
+          <div
+            class="jumbotron"
+          >
+            <div
+              class="container text-left"
+            >
+              <h1>
+                GetIt Search Results:
+              </h1>
+              <div>
+                <div
+                  class="citation-container"
+                >
+                  <p
+                    class="resource-type"
+                  >
+                    Article
+                  </p>
+                  <h2
+                    class="title"
+                  >
+                    Design of LED light therapy device based on free-form lens.
+                  </h2>
+                  <p>
+                    Feng, Zefeng
+                    <span>
+                      . 
+                    </span>
+                    20230305
+                  </p>
+                  <p
+                    style="margin: 0px 0px 10px;"
+                  >
+                    <span
+                      style="box-sizing: border-box;"
+                    >
+                      Published in 
+                    </span>
+                    <span
+                      style="font-style: italic;"
+                    >
+                      Proceedings of SPIE. 
+                    </span>
+                    Volume 12461. Page 1246106
+                  </p>
+                  <div
+                    class="citation-info"
+                  >
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       0277786X
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            role="alert"
+          />
+          <div
+            class="list-group"
+          >
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            />
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://www.spiedigitallibrary.org/conference-proceedings-of-spie"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    SPIE Digital Library (Proceedings Series)
+                  </a>
+                </h3>
+                <p>
+                  Available from 1963/01/01
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-4"
+        >
+          <aside>
+            <div
+              class="ask-librarian"
+            >
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
+                <a
+                  href="https://library.nyu.edu/ask/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Ask a Librarian
+                </a>
+              </h3>
+              <div>
+                <p>
+                  Use 
+                  <a
+                    href="https://library.nyu.edu/ask/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    Ask A Librarian
+                  </a>
+                   or the "Chat with Us" icon at the bottom right corner for any question you have about the Libraries' services.
+                </p>
+                <p>
+                  Visit our 
+                  <a
+                    href="https://guides.nyu.edu/online-tutorials/finding-sources"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    online tutorials
+                  </a>
+                   for tips on searching the catalog and getting library resources.
+                </p>
+                <h3>
+                  Additional Resources
+                </h3>
+                <ul>
+                  <li>
+                    Use 
+                    <a
+                      href="https://ezborrow.reshare.indexdata.com/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      EZBorrow
+                    </a>
+                     or 
+                    <a
+                      href="https://library.nyu.edu/services/borrowing/from-non-nyu-libraries/interlibrary-loan/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      InterLibrary Loan (ILL)
+                    </a>
+                     for materials unavailable at NYU
+                  </li>
+                  <li>
+                    Discover subject specific resources using 
+                    <a
+                      href="http://guides.nyu.edu"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      expert curated research guides
+                    </a>
+                  </li>
+                  <li>
+                    Explore the 
+                    <a
+                      href="https://library.nyu.edu/services/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      complete list of library services
+                    </a>
+                  </li>
+                  <li>
+                    Reach out to the Libraries on 
+                    <a
+                      href="https://www.instagram.com/nyulibraries/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      our Instagram
+                    </a>
+                  </li>
+                  <li>
+                    Search 
+                    <a
+                      href="https://www.worldcat.org/search?qt=worldcat_org_all"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      WorldCat
+                    </a>
+                     for items in nearby libraries
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Backend success Editorial cartoon renders correctly 1`] = `
+<DocumentFragment>
+  <main>
+    <div
+      class="container"
+      style="margin-bottom: 26px;"
+    >
+      <div
+        class="row row-cols-md-12"
+      >
+        <div
+          class="col-md-8"
+        >
+          <div
+            class="jumbotron"
+          >
+            <div
+              class="container text-left"
+            >
+              <h1>
+                GetIt Search Results:
+              </h1>
+              <div>
+                <div
+                  class="citation-container"
+                >
+                  <p
+                    class="resource-type"
+                  />
+                  <h2
+                    class="title"
+                  >
+                    Editorial cartoon
+                  </h2>
+                  <p>
+                    Payne, Henry
+                    <span>
+                      . 
+                    </span>
+                    2002-12-15
+                  </p>
+                  <p
+                    style="margin: 0px 0px 10px;"
+                  >
+                    <span
+                      style="box-sizing: border-box;"
+                    >
+                      Published in 
+                    </span>
+                    <span
+                      style="font-style: italic;"
+                    >
+                      Detroit News. 
+                    </span>
+                    Page A18
+                  </p>
+                  <div
+                    class="citation-info"
+                  >
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       10552715
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            role="alert"
+          />
+          <div
+            class="list-group"
+          >
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            />
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=http://infoweb.newsbank.com/?db=DTNB"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Newsbank Access World News Research Collection 2022 Edition
+                  </a>
+                </h3>
+                <p>
+                  Available from 1999/01/01
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-4"
+        >
+          <aside>
+            <div
+              class="ask-librarian"
+            >
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
+                <a
+                  href="https://library.nyu.edu/ask/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Ask a Librarian
+                </a>
+              </h3>
+              <div>
+                <p>
+                  Use 
+                  <a
+                    href="https://library.nyu.edu/ask/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    Ask A Librarian
+                  </a>
+                   or the "Chat with Us" icon at the bottom right corner for any question you have about the Libraries' services.
+                </p>
+                <p>
+                  Visit our 
+                  <a
+                    href="https://guides.nyu.edu/online-tutorials/finding-sources"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    online tutorials
+                  </a>
+                   for tips on searching the catalog and getting library resources.
+                </p>
+                <h3>
+                  Additional Resources
+                </h3>
+                <ul>
+                  <li>
+                    Use 
+                    <a
+                      href="https://ezborrow.reshare.indexdata.com/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      EZBorrow
+                    </a>
+                     or 
+                    <a
+                      href="https://library.nyu.edu/services/borrowing/from-non-nyu-libraries/interlibrary-loan/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      InterLibrary Loan (ILL)
+                    </a>
+                     for materials unavailable at NYU
+                  </li>
+                  <li>
+                    Discover subject specific resources using 
+                    <a
+                      href="http://guides.nyu.edu"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      expert curated research guides
+                    </a>
+                  </li>
+                  <li>
+                    Explore the 
+                    <a
+                      href="https://library.nyu.edu/services/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      complete list of library services
+                    </a>
+                  </li>
+                  <li>
+                    Reach out to the Libraries on 
+                    <a
+                      href="https://www.instagram.com/nyulibraries/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      our Instagram
+                    </a>
+                  </li>
+                  <li>
+                    Search 
+                    <a
+                      href="https://www.worldcat.org/search?qt=worldcat_org_all"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      WorldCat
+                    </a>
+                     for items in nearby libraries
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Backend success Modelling Modular Living: Furniture and Life Magazine and Interior Design in 1980s China renders correctly 1`] = `
+<DocumentFragment>
+  <main>
+    <div
+      class="container"
+      style="margin-bottom: 26px;"
+    >
+      <div
+        class="row row-cols-md-12"
+      >
+        <div
+          class="col-md-8"
+        >
+          <div
+            class="jumbotron"
+          >
+            <div
+              class="container text-left"
+            >
+              <h1>
+                GetIt Search Results:
+              </h1>
+              <div>
+                <div
+                  class="citation-container"
+                >
+                  <p
+                    class="resource-type"
+                  >
+                    Article
+                  </p>
+                  <h2
+                    class="title"
+                  >
+                    Modelling Modular Living: Furniture and Life Magazine and Interior Design in 1980s China
+                  </h2>
+                  <p>
+                    Altehenger, J.
+                    <span>
+                      . 
+                    </span>
+                    20220601
+                  </p>
+                  <p
+                    style="margin: 0px 0px 10px;"
+                  >
+                    <span
+                      style="box-sizing: border-box;"
+                    >
+                      Published in 
+                    </span>
+                    <span
+                      style="font-style: italic;"
+                    >
+                      Journal of Design History. 
+                    </span>
+                    Volume 35. Issue 2. Page 151
+                  </p>
+                  <div
+                    class="citation-info"
+                  >
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       17417279
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            role="alert"
+          />
+          <div
+            class="list-group"
+          >
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            />
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://academic.oup.com/jdh/article/35/2/151/article"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Oxford University Press Journals Current
+                  </a>
+                </h3>
+                <p>
+                  Available from 1988/01/01
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-4"
+        >
+          <aside>
+            <div
+              class="ask-librarian"
+            >
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
+                <a
+                  href="https://library.nyu.edu/ask/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Ask a Librarian
+                </a>
+              </h3>
+              <div>
+                <p>
+                  Use 
+                  <a
+                    href="https://library.nyu.edu/ask/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    Ask A Librarian
+                  </a>
+                   or the "Chat with Us" icon at the bottom right corner for any question you have about the Libraries' services.
+                </p>
+                <p>
+                  Visit our 
+                  <a
+                    href="https://guides.nyu.edu/online-tutorials/finding-sources"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    online tutorials
+                  </a>
+                   for tips on searching the catalog and getting library resources.
+                </p>
+                <h3>
+                  Additional Resources
+                </h3>
+                <ul>
+                  <li>
+                    Use 
+                    <a
+                      href="https://ezborrow.reshare.indexdata.com/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      EZBorrow
+                    </a>
+                     or 
+                    <a
+                      href="https://library.nyu.edu/services/borrowing/from-non-nyu-libraries/interlibrary-loan/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      InterLibrary Loan (ILL)
+                    </a>
+                     for materials unavailable at NYU
+                  </li>
+                  <li>
+                    Discover subject specific resources using 
+                    <a
+                      href="http://guides.nyu.edu"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      expert curated research guides
+                    </a>
+                  </li>
+                  <li>
+                    Explore the 
+                    <a
+                      href="https://library.nyu.edu/services/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      complete list of library services
+                    </a>
+                  </li>
+                  <li>
+                    Reach out to the Libraries on 
+                    <a
+                      href="https://www.instagram.com/nyulibraries/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      our Instagram
+                    </a>
+                  </li>
+                  <li>
+                    Search 
+                    <a
+                      href="https://www.worldcat.org/search?qt=worldcat_org_all"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      WorldCat
+                    </a>
+                     for items in nearby libraries
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Backend success Moral psychology is relationship regulation: moral motives for unity, hierarchy, equality, and proportionality. renders correctly 1`] = `
+<DocumentFragment>
+  <main>
+    <div
+      class="container"
+      style="margin-bottom: 26px;"
+    >
+      <div
+        class="row row-cols-md-12"
+      >
+        <div
+          class="col-md-8"
+        >
+          <div
+            class="jumbotron"
+          >
+            <div
+              class="container text-left"
+            >
+              <h1>
+                GetIt Search Results:
+              </h1>
+              <div>
+                <div
+                  class="citation-container"
+                >
+                  <h2
+                    class="title"
+                  >
+                    Moral psychology is relationship regulation: moral motives for unity, hierarchy, equality, and proportionality.
+                  </h2>
+                  <p>
+                    Rai, TS
+                    <span>
+                      . 
+                    </span>
+                    2011
+                  </p>
+                  <p
+                    style="margin: 0px 0px 10px;"
+                  >
+                    <span
+                      style="box-sizing: border-box;"
+                    >
+                      Published in 
+                    </span>
+                    <span
+                      style="font-style: italic;"
+                    >
+                      Psychological Review. 
+                    </span>
+                    Volume 118. Issue 1. Page 57
+                  </p>
+                  <div
+                    class="citation-info"
+                  >
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       0033-295X
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            role="alert"
+          />
+          <div
+            class="list-group"
+          >
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            />
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=http://doi.apa.org/getdoi.cfm?doi=10.1037%2Fa0021867"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    PsycARTICLES
+                  </a>
+                </h3>
+                <p>
+                  Available from 1894 volume: 1 issue: 1
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-4"
+        >
+          <aside>
+            <div
+              class="ask-librarian"
+            >
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
+                <a
+                  href="https://library.nyu.edu/ask/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Ask a Librarian
+                </a>
+              </h3>
+              <div>
+                <p>
+                  Use 
+                  <a
+                    href="https://library.nyu.edu/ask/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    Ask A Librarian
+                  </a>
+                   or the "Chat with Us" icon at the bottom right corner for any question you have about the Libraries' services.
+                </p>
+                <p>
+                  Visit our 
+                  <a
+                    href="https://guides.nyu.edu/online-tutorials/finding-sources"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    online tutorials
+                  </a>
+                   for tips on searching the catalog and getting library resources.
+                </p>
+                <h3>
+                  Additional Resources
+                </h3>
+                <ul>
+                  <li>
+                    Use 
+                    <a
+                      href="https://ezborrow.reshare.indexdata.com/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      EZBorrow
+                    </a>
+                     or 
+                    <a
+                      href="https://library.nyu.edu/services/borrowing/from-non-nyu-libraries/interlibrary-loan/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      InterLibrary Loan (ILL)
+                    </a>
+                     for materials unavailable at NYU
+                  </li>
+                  <li>
+                    Discover subject specific resources using 
+                    <a
+                      href="http://guides.nyu.edu"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      expert curated research guides
+                    </a>
+                  </li>
+                  <li>
+                    Explore the 
+                    <a
+                      href="https://library.nyu.edu/services/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      complete list of library services
+                    </a>
+                  </li>
+                  <li>
+                    Reach out to the Libraries on 
+                    <a
+                      href="https://www.instagram.com/nyulibraries/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      our Instagram
+                    </a>
+                  </li>
+                  <li>
+                    Search 
+                    <a
+                      href="https://www.worldcat.org/search?qt=worldcat_org_all"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      WorldCat
+                    </a>
+                     for items in nearby libraries
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Backend success Our Lady of everyday life : la Virgen de Guadalupe and the Catholic imagination of Mexican American women in America renders correctly 1`] = `
+<DocumentFragment>
+  <main>
+    <div
+      class="container"
+      style="margin-bottom: 26px;"
+    >
+      <div
+        class="row row-cols-md-12"
+      >
+        <div
+          class="col-md-8"
+        >
+          <div
+            class="jumbotron"
+          >
+            <div
+              class="container text-left"
+            >
+              <h1>
+                GetIt Search Results:
+              </h1>
+              <div>
+                <div
+                  class="citation-container"
+                >
+                  <p
+                    class="resource-type"
+                  >
+                    Book Chapter
+                  </p>
+                  <h2
+                    class="title"
+                  >
+                    Our Lady of everyday life: la Virgen de Guadalupe and the Catholic imagination of Mexican women in America
+                  </h2>
+                  <p>
+                    20180101
+                  </p>
+                  <div
+                    class="citation-info"
+                  >
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISBN:
+                      </span>
+                       9780190280390
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            role="alert"
+          />
+          <div
+            class="list-group"
+          >
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            />
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?sid=DEFAULT%20(Via%20SFX)&year=2018&isbn=0-19-028039-5&month=1&date=2018&aulast=Casta%C3%B1eda-Liles&aufirst=Mar%C3%ADa%20Del%20Socorro&genre=bookitem&title=Our%20Lady%20of%20Everyday%20Life"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Bobst Library  Interlibrary Loan
+                  </a>
+                </h3>
+                <p />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-4"
+        >
+          <aside>
+            <div
+              class="ask-librarian"
+            >
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
+                <a
+                  href="https://library.nyu.edu/ask/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Ask a Librarian
+                </a>
+              </h3>
+              <div>
+                <p>
+                  Use 
+                  <a
+                    href="https://library.nyu.edu/ask/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    Ask A Librarian
+                  </a>
+                   or the "Chat with Us" icon at the bottom right corner for any question you have about the Libraries' services.
+                </p>
+                <p>
+                  Visit our 
+                  <a
+                    href="https://guides.nyu.edu/online-tutorials/finding-sources"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    online tutorials
+                  </a>
+                   for tips on searching the catalog and getting library resources.
+                </p>
+                <h3>
+                  Additional Resources
+                </h3>
+                <ul>
+                  <li>
+                    Use 
+                    <a
+                      href="https://ezborrow.reshare.indexdata.com/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      EZBorrow
+                    </a>
+                     or 
+                    <a
+                      href="https://library.nyu.edu/services/borrowing/from-non-nyu-libraries/interlibrary-loan/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      InterLibrary Loan (ILL)
+                    </a>
+                     for materials unavailable at NYU
+                  </li>
+                  <li>
+                    Discover subject specific resources using 
+                    <a
+                      href="http://guides.nyu.edu"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      expert curated research guides
+                    </a>
+                  </li>
+                  <li>
+                    Explore the 
+                    <a
+                      href="https://library.nyu.edu/services/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      complete list of library services
+                    </a>
+                  </li>
+                  <li>
+                    Reach out to the Libraries on 
+                    <a
+                      href="https://www.instagram.com/nyulibraries/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      our Instagram
+                    </a>
+                  </li>
+                  <li>
+                    Search 
+                    <a
+                      href="https://www.worldcat.org/search?qt=worldcat_org_all"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      WorldCat
+                    </a>
+                     for items in nearby libraries
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the Commercial Apparatus of Life Magazine. [unescaped ampersand in \`title\` query param value] renders correctly 1`] = `
+<DocumentFragment>
+  <main>
+    <div
+      class="container"
+      style="margin-bottom: 26px;"
+    >
+      <div
+        class="row row-cols-md-12"
+      >
+        <div
+          class="col-md-8"
+        >
+          <div
+            class="jumbotron"
+          >
+            <div
+              class="container text-left"
+            >
+              <h1>
+                GetIt Search Results:
+              </h1>
+              <div>
+                <div
+                  class="citation-container"
+                >
+                  <p
+                    class="resource-type"
+                  >
+                    Article
+                  </p>
+                  <h2
+                    class="title"
+                  >
+                    Publish the Picture at Your Peril: Visual Ideas and the Commercial Apparatus of Life Magazine.
+                  </h2>
+                  <p>
+                    Schwartz, Joshua S.
+                    <span>
+                      . 
+                    </span>
+                    20210401
+                  </p>
+                  <p
+                    style="margin: 0px 0px 10px;"
+                  >
+                    <span
+                      style="box-sizing: border-box;"
+                    >
+                      Published in 
+                    </span>
+                    <span
+                      style="font-style: italic;"
+                    >
+                      Journal of the Gilded Age . 
+                    </span>
+                    Volume 20. Issue 2. Page 301
+                  </p>
+                  <div
+                    class="citation-info"
+                  >
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       15377814
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            role="alert"
+          />
+          <div
+            class="list-group"
+          >
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            />
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://www.cambridge.org/core/product/113A938A653BAE7C42654C34EC40B874"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Cambridge University Press Journals Complete
+                  </a>
+                </h3>
+                <p>
+                  Available from 2002/01 volume: 1 issue: 1
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?sid=Primo&issue=2&atitle=publish+the+picture+at+your+peril&issn=1537-7814&volume=20&date=20210401&title=JOURNAL+OF+THE+GILDED+AGE+AND+PROGRESSIVE+ERA&genre=article&spage=301"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    EBSCOhost America History and Life with Full Text
+                  </a>
+                </h3>
+                <p>
+                  Available from 2008/07/01
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Aarticle&res_dat=xri%3Apqm&spage=301&genre=article&volume=20&issn=1537-7814&date=2021-04-01&issue=2&jtitle=JOURNAL%2BOF%2BTHE%2BGILDED%2BAGE%2BAND%2BPROGRESSIVE%2BERA&url_ver=Z39.88-2004"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    ProQuest Central
+                  </a>
+                </h3>
+                <p>
+                  Available from 2011/01/01
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-4"
+        >
+          <aside>
+            <div
+              class="ask-librarian"
+            >
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
+                <a
+                  href="https://library.nyu.edu/ask/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Ask a Librarian
+                </a>
+              </h3>
+              <div>
+                <p>
+                  Use 
+                  <a
+                    href="https://library.nyu.edu/ask/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    Ask A Librarian
+                  </a>
+                   or the "Chat with Us" icon at the bottom right corner for any question you have about the Libraries' services.
+                </p>
+                <p>
+                  Visit our 
+                  <a
+                    href="https://guides.nyu.edu/online-tutorials/finding-sources"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    online tutorials
+                  </a>
+                   for tips on searching the catalog and getting library resources.
+                </p>
+                <h3>
+                  Additional Resources
+                </h3>
+                <ul>
+                  <li>
+                    Use 
+                    <a
+                      href="https://ezborrow.reshare.indexdata.com/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      EZBorrow
+                    </a>
+                     or 
+                    <a
+                      href="https://library.nyu.edu/services/borrowing/from-non-nyu-libraries/interlibrary-loan/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      InterLibrary Loan (ILL)
+                    </a>
+                     for materials unavailable at NYU
+                  </li>
+                  <li>
+                    Discover subject specific resources using 
+                    <a
+                      href="http://guides.nyu.edu"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      expert curated research guides
+                    </a>
+                  </li>
+                  <li>
+                    Explore the 
+                    <a
+                      href="https://library.nyu.edu/services/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      complete list of library services
+                    </a>
+                  </li>
+                  <li>
+                    Reach out to the Libraries on 
+                    <a
+                      href="https://www.instagram.com/nyulibraries/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      our Instagram
+                    </a>
+                  </li>
+                  <li>
+                    Search 
+                    <a
+                      href="https://www.worldcat.org/search?qt=worldcat_org_all"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      WorldCat
+                    </a>
+                     for items in nearby libraries
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the Commercial Apparatus of Life Magazine. renders correctly 1`] = `
+<DocumentFragment>
+  <main>
+    <div
+      class="container"
+      style="margin-bottom: 26px;"
+    >
+      <div
+        class="row row-cols-md-12"
+      >
+        <div
+          class="col-md-8"
+        >
+          <div
+            class="jumbotron"
+          >
+            <div
+              class="container text-left"
+            >
+              <h1>
+                GetIt Search Results:
+              </h1>
+              <div>
+                <div
+                  class="citation-container"
+                >
+                  <p
+                    class="resource-type"
+                  >
+                    Article
+                  </p>
+                  <h2
+                    class="title"
+                  >
+                    Publish the Picture at Your Peril: Visual Ideas and the Commercial Apparatus of Life Magazine.
+                  </h2>
+                  <p>
+                    Schwartz, Joshua S.
+                    <span>
+                      . 
+                    </span>
+                    20210401
+                  </p>
+                  <p
+                    style="margin: 0px 0px 10px;"
+                  >
+                    <span
+                      style="box-sizing: border-box;"
+                    >
+                      Published in 
+                    </span>
+                    <span
+                      style="font-style: italic;"
+                    >
+                      Journal of the Gilded Age & Progressive Era. 
+                    </span>
+                    Volume 20. Issue 2. Page 301
+                  </p>
+                  <div
+                    class="citation-info"
+                  >
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       15377814
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            role="alert"
+          />
+          <div
+            class="list-group"
+          >
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            />
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://www.cambridge.org/core/product/113A938A653BAE7C42654C34EC40B874"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Cambridge University Press Journals Complete
+                  </a>
+                </h3>
+                <p>
+                  Available from 2002/01 volume: 1 issue: 1
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?date=20210401&issn=1537-7814&volume=20&genre=article&spage=301&title=JOURNAL+OF+THE+GILDED+AGE+AND+PROGRESSIVE+ERA&sid=Primo&atitle=publish+the+picture+at+your+peril&issue=2"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    EBSCOhost America History and Life with Full Text
+                  </a>
+                </h3>
+                <p>
+                  Available from 2008/07/01
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?url_ver=Z39.88-2004&jtitle=JOURNAL%2BOF%2BTHE%2BGILDED%2BAGE%2BAND%2BPROGRESSIVE%2BERA&issue=2&genre=article&spage=301&res_dat=xri%3Apqm&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Aarticle&date=2021-04-01&issn=1537-7814&volume=20"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    ProQuest Central
+                  </a>
+                </h3>
+                <p>
+                  Available from 2011/01/01
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-4"
+        >
+          <aside>
+            <div
+              class="ask-librarian"
+            >
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
+                <a
+                  href="https://library.nyu.edu/ask/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Ask a Librarian
+                </a>
+              </h3>
+              <div>
+                <p>
+                  Use 
+                  <a
+                    href="https://library.nyu.edu/ask/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    Ask A Librarian
+                  </a>
+                   or the "Chat with Us" icon at the bottom right corner for any question you have about the Libraries' services.
+                </p>
+                <p>
+                  Visit our 
+                  <a
+                    href="https://guides.nyu.edu/online-tutorials/finding-sources"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    online tutorials
+                  </a>
+                   for tips on searching the catalog and getting library resources.
+                </p>
+                <h3>
+                  Additional Resources
+                </h3>
+                <ul>
+                  <li>
+                    Use 
+                    <a
+                      href="https://ezborrow.reshare.indexdata.com/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      EZBorrow
+                    </a>
+                     or 
+                    <a
+                      href="https://library.nyu.edu/services/borrowing/from-non-nyu-libraries/interlibrary-loan/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      InterLibrary Loan (ILL)
+                    </a>
+                     for materials unavailable at NYU
+                  </li>
+                  <li>
+                    Discover subject specific resources using 
+                    <a
+                      href="http://guides.nyu.edu"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      expert curated research guides
+                    </a>
+                  </li>
+                  <li>
+                    Explore the 
+                    <a
+                      href="https://library.nyu.edu/services/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      complete list of library services
+                    </a>
+                  </li>
+                  <li>
+                    Reach out to the Libraries on 
+                    <a
+                      href="https://www.instagram.com/nyulibraries/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      our Instagram
+                    </a>
+                  </li>
+                  <li>
+                    Search 
+                    <a
+                      href="https://www.worldcat.org/search?qt=worldcat_org_all"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      WorldCat
+                    </a>
+                     for items in nearby libraries
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Backend success The New Yorker renders correctly 1`] = `
+<DocumentFragment>
+  <main>
+    <div
+      class="container"
+      style="margin-bottom: 26px;"
+    >
+      <div
+        class="row row-cols-md-12"
+      >
+        <div
+          class="col-md-8"
+        >
+          <div
+            class="jumbotron"
+          >
+            <div
+              class="container text-left"
+            >
+              <h1>
+                GetIt Search Results:
+              </h1>
+              <div>
+                <div
+                  class="citation-container"
+                >
+                  <p
+                    class="resource-type"
+                  >
+                    Journal
+                  </p>
+                  <h2
+                    class="title"
+                  >
+                    New Yorker
+                  </h2>
+                  <p>
+                    Ross
+                    <span>
+                      . 
+                    </span>
+                    2002
+                  </p>
+                  <div
+                    class="citation-info"
+                  >
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       0028-792X
+                    </p>
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        Publisher:
+                      </span>
+                       F-R Pub. Corp.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            role="alert"
+          />
+          <div
+            class="list-group"
+          >
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            />
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=http://gateway.proquest.com/openurl?rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&genre=journal&res_dat=xri%3Apqm&rft_id=41130&rfr_id=info%3Axri%2Fsid%3Aprimo&url_ver=Z39.88-2004"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Art, Design & Architecture Collection
+                  </a>
+                </h3>
+                <p>
+                  Available from 2002/11/04
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=http://archives.newyorker.com/#folio=C1"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    E Journal Full Text
+                  </a>
+                </h3>
+                <p>
+                  Available from 1925
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?sid=Primo&site=ehost-live&db=a9h&jn=NYK"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    EBSCOhost Academic Search Complete
+                  </a>
+                </h3>
+                <p>
+                  Available from 2004/01/05
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?site=ehost-live&sid=Primo&db=rgm&jn=NYK"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    EBSCOhost Reader's Guide Full Text Mega
+                  </a>
+                </h3>
+                <p>
+                  Available from 2011/08/01
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://global.factiva.com/en/du/headlines.asp?XSID=S001dbr5DEs5DEmN9MpMD6mNDVyMHmnRsIuMcNG1pRRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQQAA&CurrentSourcesDesc=sc_u_gtny%2CNew+Yorker&CurrentSources=U%7Cgtny"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Factiva
+                  </a>
+                </h3>
+                <p>
+                  Available from 1997
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?db=eon&bquery=HJ+NYK&sid=Primo&site=ehost-live"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Flipster
+                  </a>
+                </h3>
+                <p>
+                  Available from 2015/01/26
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://link.gale.com/apps/pub/1161/ITOF?u=nysl_me_newyorku"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Gale General OneFile
+                  </a>
+                </h3>
+                <p>
+                  Available from 2002/01/14
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://link.gale.com/apps/pub/1161/LitRC?u=new64731"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Gale Literature Resource Center
+                  </a>
+                </h3>
+                <p>
+                  Available from 1978/01/01  until 1978/12/31. Available from 1982/01/01  until 1982/12/31. Available from 1989/01/01  until 1989/12/31. Available from 1996/01/01  until 1996/12/31. Available from 2002/01/01
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://advance.lexis.com/api/search/advanced?source=MTA2OTUwNg&identityprofileid=W4HVBF32601"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Lexis Advance US
+                  </a>
+                </h3>
+                <p>
+                  Available from 1999
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=http://archives.newyorker.com/#folio=C1"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Miscellaneous Ejournals
+                  </a>
+                </h3>
+                <p>
+                  Available from 1925
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?genre=journal&res_dat=xri%3Apqm&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft_id=41130&url_ver=Z39.88-2004&rfr_id=info%3Axri%2Fsid%3Aprimo"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Music & Performing Arts Collection
+                  </a>
+                </h3>
+                <p>
+                  Available from 2002/11/04
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?url_ver=Z39.88-2004&rfr_id=info%3Axri%2Fsid%3Aprimo&rft_id=16493&res_dat=xri%3Apqm&genre=journal&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Music & Performing Arts Collection
+                  </a>
+                </h3>
+                <p>
+                  Available from 2001/08/20  until 2017/01/02
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=http://www.newyorker.com/archive"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    OpinionArchives
+                  </a>
+                </h3>
+                <p>
+                  Available from 1925
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?url_ver=Z39.88-2004&rfr_id=info%3Axri%2Fsid%3Aprimo&rft_id=41130&res_dat=xri%3Apqm&genre=journal&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    ProQuest Central
+                  </a>
+                </h3>
+                <p>
+                  Available from 2002/11/04
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-4"
+        >
+          <aside>
+            <div
+              class="ask-librarian"
+            >
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
+                <a
+                  href="https://library.nyu.edu/ask/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Ask a Librarian
+                </a>
+              </h3>
+              <div>
+                <p>
+                  Use 
+                  <a
+                    href="https://library.nyu.edu/ask/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    Ask A Librarian
+                  </a>
+                   or the "Chat with Us" icon at the bottom right corner for any question you have about the Libraries' services.
+                </p>
+                <p>
+                  Visit our 
+                  <a
+                    href="https://guides.nyu.edu/online-tutorials/finding-sources"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    online tutorials
+                  </a>
+                   for tips on searching the catalog and getting library resources.
+                </p>
+                <h3>
+                  Additional Resources
+                </h3>
+                <ul>
+                  <li>
+                    Use 
+                    <a
+                      href="https://ezborrow.reshare.indexdata.com/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      EZBorrow
+                    </a>
+                     or 
+                    <a
+                      href="https://library.nyu.edu/services/borrowing/from-non-nyu-libraries/interlibrary-loan/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      InterLibrary Loan (ILL)
+                    </a>
+                     for materials unavailable at NYU
+                  </li>
+                  <li>
+                    Discover subject specific resources using 
+                    <a
+                      href="http://guides.nyu.edu"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      expert curated research guides
+                    </a>
+                  </li>
+                  <li>
+                    Explore the 
+                    <a
+                      href="https://library.nyu.edu/services/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      complete list of library services
+                    </a>
+                  </li>
+                  <li>
+                    Reach out to the Libraries on 
+                    <a
+                      href="https://www.instagram.com/nyulibraries/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      our Instagram
+                    </a>
+                  </li>
+                  <li>
+                    Search 
+                    <a
+                      href="https://www.worldcat.org/search?qt=worldcat_org_all"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      WorldCat
+                    </a>
+                     for items in nearby libraries
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Backend success The Year's work in modern language studies. renders correctly 1`] = `
+<DocumentFragment>
+  <main>
+    <div
+      class="container"
+      style="margin-bottom: 26px;"
+    >
+      <div
+        class="row row-cols-md-12"
+      >
+        <div
+          class="col-md-8"
+        >
+          <div
+            class="jumbotron"
+          >
+            <div
+              class="container text-left"
+            >
+              <h1>
+                GetIt Search Results:
+              </h1>
+              <div>
+                <div
+                  class="citation-container"
+                >
+                  <p
+                    class="resource-type"
+                  >
+                    Journal
+                  </p>
+                  <h2
+                    class="title"
+                  >
+                    The Year's work in modern language studies.
+                  </h2>
+                  <p />
+                  <div
+                    class="citation-info"
+                  >
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       00844152
+                    </p>
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        Publisher:
+                      </span>
+                       Modern Humanities Research Association [etc.]
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            role="alert"
+          />
+          <div
+            class="list-group"
+          >
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            />
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=http://brill.com/view/journals/ywml/ywml-overview.xml"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    2022 Brill Journal Collection
+                  </a>
+                </h3>
+                <p>
+                  Available from 2000 volume: 61 issue: 1
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=http://brill.com/content/journals/22224297"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Brill Online Journals
+                  </a>
+                </h3>
+                <p>
+                  Available from 1931 volume: 1 issue: 1
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=http://brill.com/content/journals/22224297"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Brill Online Journals
+                  </a>
+                </h3>
+                <p>
+                  Available from 1931 volume: 1 issue: 1
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://www.jstor.org/action/showPublication?journalCode=yearworkmodlang"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    JSTOR Arts & Sciences XI
+                  </a>
+                </h3>
+                <p>
+                  Available from 1930/06/30 volume: 1  until 2019/01/31 volume: 79
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?url_ver=Z39.88-2004&rfr_id=info%3Axri%2Fsid%3Aprimo&rft_id=1817653&res_dat=xri%3Apqm&genre=journal&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Periodicals Archive Online Collection 2
+                  </a>
+                </h3>
+                <p>
+                  Available from 1930/01/01  until 1940/12/31. Available from 1950/01/01  until 1994/01/31
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-4"
+        >
+          <aside>
+            <div
+              class="ask-librarian"
+            >
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
+                <a
+                  href="https://library.nyu.edu/ask/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Ask a Librarian
+                </a>
+              </h3>
+              <div>
+                <p>
+                  Use 
+                  <a
+                    href="https://library.nyu.edu/ask/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    Ask A Librarian
+                  </a>
+                   or the "Chat with Us" icon at the bottom right corner for any question you have about the Libraries' services.
+                </p>
+                <p>
+                  Visit our 
+                  <a
+                    href="https://guides.nyu.edu/online-tutorials/finding-sources"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    online tutorials
+                  </a>
+                   for tips on searching the catalog and getting library resources.
+                </p>
+                <h3>
+                  Additional Resources
+                </h3>
+                <ul>
+                  <li>
+                    Use 
+                    <a
+                      href="https://ezborrow.reshare.indexdata.com/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      EZBorrow
+                    </a>
+                     or 
+                    <a
+                      href="https://library.nyu.edu/services/borrowing/from-non-nyu-libraries/interlibrary-loan/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      InterLibrary Loan (ILL)
+                    </a>
+                     for materials unavailable at NYU
+                  </li>
+                  <li>
+                    Discover subject specific resources using 
+                    <a
+                      href="http://guides.nyu.edu"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      expert curated research guides
+                    </a>
+                  </li>
+                  <li>
+                    Explore the 
+                    <a
+                      href="https://library.nyu.edu/services/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      complete list of library services
+                    </a>
+                  </li>
+                  <li>
+                    Reach out to the Libraries on 
+                    <a
+                      href="https://www.instagram.com/nyulibraries/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      our Instagram
+                    </a>
+                  </li>
+                  <li>
+                    Search 
+                    <a
+                      href="https://www.worldcat.org/search?qt=worldcat_org_all"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      WorldCat
+                    </a>
+                     for items in nearby libraries
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+</DocumentFragment>
+`;

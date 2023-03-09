@@ -26,7 +26,8 @@ describe.each(institutionNamesUpperCase)(
 
     test(`renders the correct ${institutionNameUpperCase} logo and link based on institution query parameter`, async () => {
       render(<Banner />);
-      const linkElement = await waitFor(() => screen.getByAltText(/NYU Libraries logo/i).closest('a'));
+      const { altLibraryLogoImageText } = bannerInstitutionInfo[institutionNameUpperCase.toLowerCase()]
+      const linkElement = await waitFor(() => screen.getByAltText(altLibraryLogoImageText).closest('a'));
       const { logo, link } = bannerInstitutionInfo[institutionNameUpperCase.toLowerCase()]
       expect(linkElement).toHaveAttribute('href', link);
       const imgElement = linkElement.querySelector('img');
@@ -37,7 +38,8 @@ describe.each(institutionNamesUpperCase)(
       render(<Banner />, {
                            route: `?institution=${institutionNameUpperCase}`,
                          });
-      const linkElement = await waitFor(() => screen.getByAltText(/NYU Libraries logo/i));
+      const { altLibraryLogoImageText } = bannerInstitutionInfo[institutionNameUpperCase.toLowerCase()]
+      const linkElement = await waitFor(() => screen.getByAltText(altLibraryLogoImageText));
       const { imgClass } = bannerInstitutionInfo[institutionNameUpperCase.toLowerCase()]
       expect(linkElement).toHaveClass(imgClass);
     });
@@ -51,7 +53,7 @@ describe('No `institution` parameter in query string', () => {
 
   test('renders the NYU Libraries logo', async () => {
     render(<Banner />);
-    const linkElement = await waitFor(() => screen.getByAltText(/NYU Libraries logo/i));
+    const linkElement = await waitFor(() => screen.getByAltText('NYU Libraries logo - click to go to the NYU Libraries main page').closest('a'));
     expect(linkElement).toBeInTheDocument();
   });
 });

@@ -1,79 +1,52 @@
 HTTP/1.1 200 OK
 Transfer-Encoding: chunked
 Content-Type: application/xml; charset=ISO-8859-1
-Date: Fri, 17 Feb 2023 00:39:42 GMT
+Date: Tue, 07 Mar 2023 22:22:30 GMT
 Server: Apache
 
-17c0
+191e
 <?xml version="1.0" encoding="utf-8"?>
 
 <ctx_obj_set>
  <ctx_obj identifier="">
   <ctx_obj_attributes>&lt;perldata&gt;
  &lt;hash&gt;
-  &lt;item key="_stash"&gt;
-   &lt;hash&gt;
-   &lt;/hash&gt;
-  &lt;/item&gt;
-  &lt;item key="@rft.aulast"&gt;
+  &lt;item key="rft.day"&gt;1&lt;/item&gt;
+  &lt;item key="rft.eisbn"&gt;0-19-028042-5&lt;/item&gt;
+  &lt;item key="@rft.aufirst"&gt;
    &lt;array&gt;
-    &lt;item key="0"&gt;Castañeda-Liles&lt;/item&gt;
+    &lt;item key="0"&gt;María Del Socorro&lt;/item&gt;
    &lt;/array&gt;
   &lt;/item&gt;
-  &lt;item key="rft.eisbn_13"&gt;978-0-19-028042-0&lt;/item&gt;
+  &lt;item key="rft.object_id"&gt;3840000000331267&lt;/item&gt;
+  &lt;item key="url_ctx_fmt"&gt;info:ofi/fmt:xml:xsd:ctx&lt;/item&gt;
+  &lt;item key="rft.isbn_10"&gt;0-19-028039-5&lt;/item&gt;
+  &lt;item key="rft.isbn_13"&gt;978-0-19-028039-0&lt;/item&gt;
   &lt;item key="@rfe_id"&gt;
    &lt;array&gt;
    &lt;/array&gt;
   &lt;/item&gt;
   &lt;item key="rft.date"&gt;20180101&lt;/item&gt;
-  &lt;item key="@rft.au"&gt;
-   &lt;array&gt;
-    &lt;item key="0"&gt;Castañeda-Liles, María Del Socorro&lt;/item&gt;
-   &lt;/array&gt;
-  &lt;/item&gt;
-  &lt;item key="rft.day"&gt;1&lt;/item&gt;
-  &lt;item key="rft.language"&gt;eng&lt;/item&gt;
-  &lt;item key="req.session_id"&gt;s916E2686-AE5B-11ED-B2FC-12074131B499&lt;/item&gt;
-  &lt;item key="rft.isbn_10"&gt;0-19-028039-5&lt;/item&gt;
-  &lt;item key="sfx.sid"&gt;DEFAULT&lt;/item&gt;
-  &lt;item key="rft.isbn_13"&gt;978-0-19-028039-0&lt;/item&gt;
-  &lt;item key="ctx_id"&gt;&lt;/item&gt;
-  &lt;item key="sfx.request_id"&gt;25683432&lt;/item&gt;
-  &lt;item key="rft.title"&gt;Our Lady of Everyday Life&lt;/item&gt;
-  &lt;item key="@rft.auinit"&gt;
-   &lt;array&gt;
-    &lt;item key="0"&gt;&lt;/item&gt;
-   &lt;/array&gt;
-  &lt;/item&gt;
-  &lt;item key="@rft.auinitm"&gt;
-   &lt;array&gt;
-    &lt;item key="0"&gt;&lt;/item&gt;
-   &lt;/array&gt;
-  &lt;/item&gt;
-  &lt;item key="sfx.sourcename"&gt;DEFAULT&lt;/item&gt;
-  
-  &lt;item key="sfx.response_type"&gt;multi_obj_xml&lt;/item&gt;
+  &lt;item key="req.session_id"&gt;s8C822FC0-BD36-11ED-A82B-F2DC4031B499&lt;/item&gt;
   &lt;item key="@rft_id"&gt;
    &lt;array&gt;
    &lt;/array&gt;
   &lt;/item&gt;
-  &lt;item key="rft.btitle"&gt;Our Lady of Everyday Life&lt;/item&gt;
-  &lt;item key="rft.year"&gt;2018&lt;/item&gt;
-  &lt;item key="ctx_ver"&gt;Z39.88-2004&lt;/item&gt;
-  &lt;item key="@rft.auinit1"&gt;
+  &lt;item key="_stash"&gt;
+   &lt;hash&gt;
+    &lt;item key="@rfr_id"&gt;
+     &lt;array&gt;
+      &lt;item key="0"&gt;EBSCO:Chicano Database&lt;/item&gt;
+     &lt;/array&gt;
+    &lt;/item&gt;
+   &lt;/hash&gt;
+  &lt;/item&gt;
+  
+  &lt;item key="@rft.aulast"&gt;
    &lt;array&gt;
-    &lt;item key="0"&gt;&lt;/item&gt;
+    &lt;item key="0"&gt;Castañeda-Liles&lt;/item&gt;
    &lt;/array&gt;
   &lt;/item&gt;
-  &lt;item key="rft.object_type"&gt;BOOK&lt;/item&gt;
-  &lt;item key="existing_ts_ids"&gt;
-   &lt;array&gt;
-    &lt;item key="0"&gt;20430000000000002&lt;/item&gt;
-    &lt;item key="1"&gt;111027614344001&lt;/item&gt;
-   &lt;/array&gt;
-  &lt;/item&gt;
-  &lt;item key="rft.object_id"&gt;3840000000331267&lt;/item&gt;
-  &lt;item key="rft.eisbn_10"&gt;0-19-028042-5&lt;/item&gt;
   &lt;item key="@sfx.searched_by_identifier"&gt;
    &lt;array&gt;
     &lt;item key="0"&gt;
@@ -89,30 +62,67 @@ Server: Apache
     &lt;/item&gt;
    &lt;/array&gt;
   &lt;/item&gt;
+  &lt;item key="rft.eisbn_13"&gt;978-0-19-028042-0&lt;/item&gt;
+  &lt;item key="rft_dat"&gt;XCHD8493320180101Chicano Database&lt;/item&gt;
+  &lt;item key="sfx.sourcename"&gt;DEFAULT&lt;/item&gt;
   &lt;item key="sfx.ignore_char_set"&gt;1&lt;/item&gt;
-  &lt;item key="rft_val_fmt"&gt;bookitem&lt;/item&gt;
-  &lt;item key="rft.pub"&gt;Oxford University Press&lt;/item&gt;
-  &lt;item key="@rft.aufirst"&gt;
+  &lt;item key="rft.year"&gt;2018&lt;/item&gt;
+  &lt;item key="@rft.auinit"&gt;
    &lt;array&gt;
-    &lt;item key="0"&gt;María Del Socorro&lt;/item&gt;
+    &lt;item key="0"&gt;&lt;/item&gt;
    &lt;/array&gt;
   &lt;/item&gt;
-  &lt;item key="rft.isbn"&gt;0-19-028039-5&lt;/item&gt;
   &lt;item key="rft.month"&gt;1&lt;/item&gt;
-  &lt;item key="rft.eisbn"&gt;0-19-028042-5&lt;/item&gt;
-  &lt;item key="@rft.isbn_additional"&gt;
+  &lt;item key="sfx.request_id"&gt;25747334&lt;/item&gt;
+  &lt;item key="rft.language"&gt;eng&lt;/item&gt;
+  &lt;item key="rft.title"&gt;Our Lady of Everyday Life&lt;/item&gt;
+  &lt;item key="@rfr_id"&gt;
    &lt;array&gt;
-    &lt;item key="0"&gt;978-0-19-028040-6&lt;/item&gt;
+    &lt;item key="0"&gt;EBSCO:Chicano Database&lt;/item&gt;
    &lt;/array&gt;
   &lt;/item&gt;
+  &lt;item key="@rft.auinitm"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.eisbn_10"&gt;0-19-028042-5&lt;/item&gt;
+  &lt;item key="rft.object_type"&gt;BOOK&lt;/item&gt;
+  &lt;item key="sfx.response_type"&gt;multi_obj_xml&lt;/item&gt;
+  &lt;item key="existing_ts_ids"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;20430000000000002&lt;/item&gt;
+    &lt;item key="1"&gt;111027614344001&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.btitle"&gt;Our Lady of Everyday Life&lt;/item&gt;
+  &lt;item key="rft.pub"&gt;Oxford University Press&lt;/item&gt;
   &lt;item key="@rft.eisbn_additional"&gt;
    &lt;array&gt;
     &lt;item key="0"&gt;978-0-19-028043-7&lt;/item&gt;
     &lt;item key="1"&gt;978-0-19-028041-3&lt;/item&gt;
    &lt;/array&gt;
   &lt;/item&gt;
+  &lt;item key="@rft.auinit1"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
   &lt;item key="fetchid"&gt;0190280395&lt;/item&gt;
   &lt;item key="rft.genre"&gt;bookitem&lt;/item&gt;
+  &lt;item key="@rft.au"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;Castañeda-Liles, María Del Socorro&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="sfx.sid"&gt;DEFAULT&lt;/item&gt;
+  &lt;item key="sfx.doi_url"&gt;http://dx.doi.org&lt;/item&gt;
+  &lt;item key="rft.isbn"&gt;0-19-028039-5&lt;/item&gt;
+  &lt;item key="@rft.isbn_additional"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;978-0-19-028040-6&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
  &lt;/hash&gt;
 &lt;/perldata&gt;
 </ctx_obj_attributes>
@@ -134,7 +144,7 @@ Server: Apache
     <authentication></authentication>
     <char_set>utf8</char_set>
     <displayer></displayer>
-    <target_url>http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?sid=DEFAULT%20(Via%20SFX)&amp;genre=bookitem&amp;date=2018&amp;year=2018&amp;title=Our%20Lady%20of%20Everyday%20Life&amp;month=1&amp;isbn=0-19-028039-5&amp;aufirst=Mar%C3%ADa%20Del%20Socorro&amp;aulast=Casta%C3%B1eda-Liles</target_url>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?sid=DEFAULT%20(Via%20SFX)&amp;year=2018&amp;isbn=0-19-028039-5&amp;month=1&amp;date=2018&amp;aulast=Casta%C3%B1eda-Liles&amp;aufirst=Mar%C3%ADa%20Del%20Socorro&amp;genre=bookitem&amp;title=Our%20Lady%20of%20Everyday%20Life</target_url>
     <is_related>no</is_related>
     <coverage>
      <coverage_text>

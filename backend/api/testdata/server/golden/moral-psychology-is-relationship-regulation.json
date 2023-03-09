@@ -9,7 +9,7 @@
                             {
                                 "target_name": "APA_PSYCARTICLES",
                                 "target_public_name": "PsycARTICLES",
-                                "target_url": "http://proxy.library.nyu.edu/login?url=http://psycnet.apa.org/journals/rev/118/1/57",
+                                "target_url": "http://proxy.library.nyu.edu/login?url=http://doi.apa.org/getdoi.cfm?doi=10.1037%2Fa0021867",
                                 "authentication": "",
                                 "proxy": "yes",
                                 "coverage": [

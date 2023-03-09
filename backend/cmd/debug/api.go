@@ -2,12 +2,10 @@ package debug
 
 import (
 	"ariadne/api"
-	"encoding/json"
 	"fmt"
 	"github.com/spf13/cobra"
-	"net/url"
-
-	"ariadne/sfx"
+	"io"
+	"net/http/httptest"
 )
 
 func init() {
@@ -21,43 +19,18 @@ var dumpJSONCmd = &cobra.Command{
 	Args:    cobra.MinimumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		var queryString = args[0]
-		dump, err := dumpJSON(queryString)
-		if err != nil {
-			fmt.Println(err)
-		}
-
+		dump := dumpJSON(queryString)
 		fmt.Println(dump)
 	},
 }
 
-func dumpJSON(queryString string) (string, error) {
-	urlValues, err := url.ParseQuery(queryString)
-	if err != nil {
-		return queryString, err
-	}
+func dumpJSON(queryString string) string {
+	request := httptest.NewRequest("GET",
+		fmt.Sprintf("http://localhost/does-no-matter/?%s", queryString), nil)
+	responseWriter := httptest.NewRecorder()
+	api.MultipleRecordsHandler(responseWriter, request)
+	response := responseWriter.Result()
+	responseJSON, _ := io.ReadAll(response.Body)
 
-	sfxRequest, err := sfx.NewMultipleObjectsRequest(urlValues)
-	if err != nil {
-		return queryString, err
-	}
-
-	sfxResponse, err := sfx.Do(sfxRequest)
-	if err != nil {
-		return queryString, err
-	}
-
-	ariadneResponse := api.Response{
-		Errors:  []string{},
-		Records: sfxResponse.MultiObjXMLResponseBody,
-	}
-
-	responseJSON, err := json.MarshalIndent(ariadneResponse, "", "    ")
-	if err != nil {
-		ariadneResponse = api.Response{
-			Errors:  []string{fmt.Sprintf("could not marshal ariadne response to JSON: %v", err)},
-			Records: sfx.MultiObjXMLResponseBody{},
-		}
-	}
-
-	return string(responseJSON), nil
+	return string(responseJSON)
 }
