@@ -8,9 +8,8 @@ import (
 	"net/http"
 )
 
-// Take an incoming Querystring, convert to context object XML, send a post to SFX
-// and write the response JSON
-func MultipleRecordsHandler(w http.ResponseWriter, r *http.Request) {
+// Handler for the endpoint used by the frontend
+func ResolverHandler(w http.ResponseWriter, r *http.Request) {
 	enableCors(&w)
 
 	w.Header().Add("Content-Type", "application/json")
@@ -37,7 +36,7 @@ func NewRouter() *http.ServeMux {
 	router := http.NewServeMux()
 
 	router.HandleFunc("/healthcheck", healthCheck)
-	router.HandleFunc("/v0/", MultipleRecordsHandler)
+	router.HandleFunc("/v0/", ResolverHandler)
 
 	return router
 }
