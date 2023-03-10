@@ -132,6 +132,10 @@ func newMultipleObjectsResponse(httpResponse *http.Response) (*MultipleObjectsRe
 		return multipleObjectsResponse, err
 	}
 
+	if multiObjXMLResponseBody.ContextObject == nil {
+		return multipleObjectsResponse, fmt.Errorf("could not identify context object in response")
+	}
+
 	multipleObjectsResponse.MultiObjXMLResponseBody = multiObjXMLResponseBody
 
 	json, err := json.MarshalIndent(multiObjXMLResponseBody, "", "    ")

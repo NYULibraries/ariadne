@@ -9,7 +9,7 @@
                             {
                                 "target_name": "PRESSREADER",
                                 "target_public_name": "PressReader",
-                                "target_url": "\n                    http://proxy.library.nyu.edu/login?url=https://www.pressreader.com/italy/corriere-fiorentino\n                ",
+                                "target_url": "http://proxy.library.nyu.edu/login?url=https://www.pressreader.com/italy/corriere-fiorentino",
                                 "authentication": "",
                                 "proxy": "yes",
                                 "coverage": [
@@ -21,7 +21,7 @@
                                                 ],
                                                 "embargo_text": [
                                                     {
-                                                        "embargo_statement": "Most recent 3 month(s)\n                                available\n                            "
+                                                        "embargo_statement": "Most recent 3 month(s) available"
                                                     }
                                                 ]
                                             }
