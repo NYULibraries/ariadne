@@ -131,7 +131,7 @@ services:
       - PLAYWRIGHT_BASE_URL=http://frontend:3000/
     # <<: *x-development-volumes-frontend
     
-  e2e-update-snapshots:
+  e2e-update-screenshots:
     <<: *x-build-e2e
     depends_on:
       - frontend

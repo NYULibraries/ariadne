@@ -28,15 +28,15 @@ Run E2E tests in a container:
 docker-compose run --rm e2e
 ```
 
-Update golden files in a container:
+Update golden files and PNG screenshots in a container:
 
 ```
-docker-compose run e2e-update-goldenfiles
+docker-compose run e2e-update-screenshots
 ```
 
 Run tests:
 
-```
+snapshots```
 cd e2e/
 yarn install
 yarn test:e2e
