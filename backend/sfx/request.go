@@ -65,6 +65,7 @@ func filterOpenURLParams(queryStringValues url.Values) url.Values {
 	// Replace `sid` with `rfr_id`
 	queryStringValues.Del("sid")
 	queryStringValues.Add("rfr_id", sid)
+
 	return queryStringValues
 }
 
