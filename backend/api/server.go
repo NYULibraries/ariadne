@@ -8,6 +8,16 @@ import (
 	"net/http"
 )
 
+// Setup a new mux router with the appropriate routes for this app
+func NewRouter() *http.ServeMux {
+	router := http.NewServeMux()
+
+	router.HandleFunc("/healthcheck", healthCheck)
+	router.HandleFunc("/v0/", ResolverHandler)
+
+	return router
+}
+
 // Handler for the endpoint used by the frontend
 func ResolverHandler(w http.ResponseWriter, r *http.Request) {
 	setCORS(&w)
@@ -29,16 +39,6 @@ func ResolverHandler(w http.ResponseWriter, r *http.Request) {
 	responseJSON := makeJSONResponseFromSFXResponse(sfxResponse)
 
 	fmt.Fprintln(w, string(responseJSON))
-}
-
-// Setup a new mux router with the appropriate routes for this app
-func NewRouter() *http.ServeMux {
-	router := http.NewServeMux()
-
-	router.HandleFunc("/healthcheck", healthCheck)
-	router.HandleFunc("/v0/", ResolverHandler)
-
-	return router
 }
 
 func setCORS(w *http.ResponseWriter) {
