@@ -10,7 +10,7 @@ import (
 
 // Handler for the endpoint used by the frontend
 func ResolverHandler(w http.ResponseWriter, r *http.Request) {
-	enableCors(&w)
+	setCORS(&w)
 
 	w.Header().Add("Content-Type", "application/json")
 
@@ -41,7 +41,7 @@ func NewRouter() *http.ServeMux {
 	return router
 }
 
-func enableCors(w *http.ResponseWriter) {
+func setCORS(w *http.ResponseWriter) {
 	(*w).Header().Set("Access-Control-Allow-Origin", "*")
 }
 
