@@ -30,16 +30,16 @@ func TestNewMultipleObjectsRequest(t *testing.T) {
 	for _, testCase := range tests {
 		testName := fmt.Sprintf("%s", testCase.querystring)
 		t.Run(testName, func(t *testing.T) {
-			ans, err := NewMultipleObjectsRequest(testCase.querystring)
+			ans, err := NewSFXRequest(testCase.querystring)
 			if testCase.expectedError != nil {
 				if err == nil {
-					t.Errorf("NewMultipleObjectsRequest returned no error, expecting '%v'", testCase.expectedError)
+					t.Errorf("NewSFXRequest returned no error, expecting '%v'", testCase.expectedError)
 				} else if err.Error() != testCase.expectedError.Error() {
-					t.Errorf("NewMultipleObjectsRequest returned error '%v', expecting '%v'", err, testCase.expectedError)
+					t.Errorf("NewSFXRequest returned error '%v', expecting '%v'", err, testCase.expectedError)
 				}
 			}
 			if err != nil && testCase.expectedError == nil {
-				t.Errorf("NewMultipleObjectsRequest returned error '%v', expecting no errors", err)
+				t.Errorf("NewSFXRequest returned error '%v', expecting no errors", err)
 			}
 			if err == nil {
 				if !strings.HasPrefix(ans.RequestXML, `<?xml version="1.0" encoding="UTF-8"?>`) {

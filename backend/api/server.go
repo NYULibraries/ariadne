@@ -14,7 +14,7 @@ func ResolverHandler(w http.ResponseWriter, r *http.Request) {
 
 	w.Header().Add("Content-Type", "application/json")
 
-	sfxRequest, err := sfx.NewMultipleObjectsRequest(r.URL.Query())
+	sfxRequest, err := sfx.NewSFXRequest(r.URL.Query())
 	if err != nil {
 		handleError(err, w, "Invalid OpenURL")
 		return

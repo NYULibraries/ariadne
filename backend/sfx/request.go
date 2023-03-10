@@ -57,7 +57,7 @@ func (c MultipleObjectsRequest) do() (*MultipleObjectsResponse, error) {
 	return multipleObjectsResponse, nil
 }
 
-func NewMultipleObjectsRequest(queryStringValues url.Values) (*MultipleObjectsRequest, error) {
+func NewSFXRequest(queryStringValues url.Values) (*MultipleObjectsRequest, error) {
 	multipleObjectsRequest := &MultipleObjectsRequest{}
 
 	multipleObjectsRequestBodyParams, err := parseMultipleObjectsRequestParams(queryStringValues)

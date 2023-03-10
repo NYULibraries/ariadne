@@ -51,7 +51,7 @@ func dumpSFXHTTPRequest(queryString string) (string, error) {
 		return queryString, err
 	}
 
-	sfxRequest, err := sfx.NewMultipleObjectsRequest(urlValues)
+	sfxRequest, err := sfx.NewSFXRequest(urlValues)
 	if err != nil {
 		return queryString, err
 	}
@@ -65,7 +65,7 @@ func dumpSFXHTTPResponse(queryString string) (string, error) {
 		return queryString, err
 	}
 
-	sfxRequest, err := sfx.NewMultipleObjectsRequest(urlValues)
+	sfxRequest, err := sfx.NewSFXRequest(urlValues)
 	if err != nil {
 		return queryString, err
 	}
