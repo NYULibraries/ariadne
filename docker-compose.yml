@@ -135,14 +135,15 @@ services:
     <<: *x-build-e2e
     depends_on:
       - frontend
-    command: "yarn test:e2e"
+    command: "yarn test:e2e --update-snapshots"
     networks:
       - ariadne-net
     environment:
       - PLAYWRIGHT_BASE_URL=http://frontend:3000/
       - UPDATE_GOLDEN_FILES=true
     volumes:
-      - ./e2e/tests:/e2e/tests
+      - ./e2e/tests/ariadne.spec.js-snapshots/:/e2e/tests/ariadne.spec.js-snapshots/
+      - ./e2e/tests/golden/:/e2e/tests/golden/
 
 networks:
   ariadne-net:
