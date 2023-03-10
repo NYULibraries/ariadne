@@ -53,12 +53,12 @@ func TestNewMultipleObjectsRequest(t *testing.T) {
 func TestRequestXML(t *testing.T) {
 	var tests = []struct {
 		name        string
-		tpl         multipleObjectsRequestBodyParams
+		tpl         sfxRequestBodyParams
 		expectedErr error
 	}{
-		{"genre=\"book\"; btitle=\"a book\"", multipleObjectsRequestBodyParams{RftValues: &map[string][]string{"genre": {"book"}, "btitle": {"a book"}}, Timestamp: mockTimestamp, Genre: "book"}, nil},
-		{"[empty request body]", multipleObjectsRequestBodyParams{}, errors.New("error")},
-		{"genre=\"<rft:\"", multipleObjectsRequestBodyParams{RftValues: &map[string][]string{"genre": {"<rft:"}}, Timestamp: mockTimestamp, Genre: "book"}, errors.New("error")},
+		{"genre=\"book\"; btitle=\"a book\"", sfxRequestBodyParams{RftValues: &map[string][]string{"genre": {"book"}, "btitle": {"a book"}}, Timestamp: mockTimestamp, Genre: "book"}, nil},
+		{"[empty request body]", sfxRequestBodyParams{}, errors.New("error")},
+		{"genre=\"<rft:\"", sfxRequestBodyParams{RftValues: &map[string][]string{"genre": {"<rft:"}}, Timestamp: mockTimestamp, Genre: "book"}, errors.New("error")},
 	}
 
 	for _, testCase := range tests {
@@ -122,19 +122,19 @@ func TestParseMultipleObjectsRequestParams(t *testing.T) {
 		testname := fmt.Sprintf("%s", testCase.queryString)
 
 		t.Run(testname, func(t *testing.T) {
-			params, err := parseMultipleObjectsRequestParams(testCase.queryString)
+			params, err := parseRequestParams(testCase.queryString)
 			actual := params.RftValues
 			if !reflect.DeepEqual(actual, testCase.expected) {
-				t.Errorf("parseMultipleObjectsRequestParams returned '%v', expecting '%v'", actual, testCase.expected)
+				t.Errorf("parseRequestParams returned '%v', expecting '%v'", actual, testCase.expected)
 			}
 			if testCase.expectedError != nil {
 				if err == nil {
-					t.Errorf("parseMultipleObjectsRequestParams err was '%v', expecting '%v'", err, testCase.expectedError)
+					t.Errorf("parseRequestParams err was '%v', expecting '%v'", err, testCase.expectedError)
 				}
 			}
 		})
 	}
 }
 
-// func (c MultipleObjectsRequest) Do() (body string, err error) {
-// func Init(qs url.Values) (MultipleObjectsRequest *MultipleObjectsRequest, err error) {
+// func (c SFXRequest) Do() (body string, err error) {
+// func Init(qs url.Values) (SFXRequest *SFXRequest, err error) {

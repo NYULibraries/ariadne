@@ -15,7 +15,7 @@ const defaultGenre = "journal"
 
 var sfxURL = DefaultSFXURL
 
-func Do(request *MultipleObjectsRequest) (*MultipleObjectsResponse, error) {
+func Do(request *SFXRequest) (*SFXResponse, error) {
 	return request.do()
 }
 

@@ -57,14 +57,14 @@ func healthCheck(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(map[string]interface{}{"status": "ok"})
 }
 
-func makeJSONResponseFromSFXResponse(sfxResponse *sfx.MultipleObjectsResponse) []byte {
+func makeJSONResponseFromSFXResponse(sfxResponse *sfx.SFXResponse) []byte {
 	// Remove the Ask a Librarian target -- for details, see:
 	// https://nyu-lib.monday.com/boards/765008773/pulses/3548498827
 	sfxResponse.RemoveTarget("http://library.nyu.edu/ask/")
 
 	ariadneResponse := Response{
 		Errors:  []string{},
-		Records: sfxResponse.MultiObjXMLResponseBody,
+		Records: sfxResponse.XMLResponseBody,
 	}
 
 	responseJSON, err := json.MarshalIndent(ariadneResponse, "", "    ")
@@ -83,7 +83,7 @@ func makeJSONResponseFromSFXResponse(sfxResponse *sfx.MultipleObjectsResponse) [
 	if err != nil {
 		ariadneResponse = Response{
 			Errors:  []string{fmt.Sprintf("Could not marshal ariadne response to JSON: %v", err)},
-			Records: sfx.MultiObjXMLResponseBody{},
+			Records: sfx.XMLResponseBody{},
 		}
 
 		// Even more unlikely that this marshalling will error out, but if it does

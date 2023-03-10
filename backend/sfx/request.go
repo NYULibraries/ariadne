@@ -28,65 +28,65 @@ var sfxRequestTemplate string
 var validQueryParamNameRegexp = regexp.MustCompile("^[:_\\p{Ll}\\p{Lu}\\p{Lt}\\p{Lo}\\p{Nl}][:_\\-.\\p{L}\\p{M}\\p{Nd}\\p{Nl}]*$")
 
 // Object representing everything that's needed to request from SFX
-type MultipleObjectsRequest struct {
+type SFXRequest struct {
 	DumpedHTTPRequest string
 	HTTPRequest       http.Request
 	RequestXML        string
 }
 
 // Values needed for templating an SFX request are parsed
-type multipleObjectsRequestBodyParams struct {
+type sfxRequestBodyParams struct {
 	RftValues *map[string][]string
 	Timestamp string
 	Genre     string
 }
 
-func (c MultipleObjectsRequest) do() (*MultipleObjectsResponse, error) {
+func (c SFXRequest) do() (*SFXResponse, error) {
 	client := http.Client{}
 	response, err := client.Do(&c.HTTPRequest)
 	if err != nil {
-		return &MultipleObjectsResponse{}, fmt.Errorf("could not do request to SFX server: %v", err)
+		return &SFXResponse{}, fmt.Errorf("could not do request to SFX server: %v", err)
 	}
 	defer response.Body.Close()
 
-	multipleObjectsResponse, err := newMultipleObjectsResponse(response)
+	sfxResponse, err := newSFXResponse(response)
 	if err != nil {
-		return multipleObjectsResponse, err
+		return sfxResponse, err
 	}
 
-	return multipleObjectsResponse, nil
+	return sfxResponse, nil
 }
 
-func NewSFXRequest(queryStringValues url.Values) (*MultipleObjectsRequest, error) {
-	multipleObjectsRequest := &MultipleObjectsRequest{}
+func NewSFXRequest(queryStringValues url.Values) (*SFXRequest, error) {
+	sfxRequest := &SFXRequest{}
 
-	multipleObjectsRequestBodyParams, err := parseMultipleObjectsRequestParams(queryStringValues)
+	requestBodyParams, err := parseRequestParams(queryStringValues)
 	if err != nil {
-		return multipleObjectsRequest, fmt.Errorf("could not parse required request body params from querystring: %v", err)
+		return sfxRequest, fmt.Errorf("could not parse required request body params from querystring: %v", err)
 	}
 
-	multipleObjectsRequest.RequestXML, err = requestXML(multipleObjectsRequestBodyParams)
+	sfxRequest.RequestXML, err = requestXML(requestBodyParams)
 	if err != nil {
-		return multipleObjectsRequest, fmt.Errorf("could not convert multiple objects request to XML: %v", err)
+		return sfxRequest, fmt.Errorf("could not convert multiple objects request to XML: %v", err)
 	}
 
-	httpRequest, err := newMultipleObjectsHTTPRequest(multipleObjectsRequest.RequestXML, queryStringValues)
+	httpRequest, err := newSFXHTTPRequest(sfxRequest.RequestXML, queryStringValues)
 	if err != nil {
-		return multipleObjectsRequest, fmt.Errorf("could not create new multiple objects request: %v", err)
+		return sfxRequest, fmt.Errorf("could not create new multiple objects request: %v", err)
 	}
 	// NOTE: This appears to drain httpRequest.Body, so when getting the dumped
-	// HTTP request later, make sure to get it from multipleObjectsRequest.HTTPRequest
+	// HTTP request later, make sure to get it from sfxRequest.HTTPRequest
 	// and not httpRequest.
-	multipleObjectsRequest.HTTPRequest = (*httpRequest)
+	sfxRequest.HTTPRequest = (*httpRequest)
 
-	dumpedHTTPRequest, err := httputil.DumpRequest(&multipleObjectsRequest.HTTPRequest, true)
+	dumpedHTTPRequest, err := httputil.DumpRequest(&sfxRequest.HTTPRequest, true)
 	if err != nil {
-		// TODO: Log this.  MultipleObjectsRequest.DumpedHTTPRequest field is for
+		// TODO: Log this.  SFXRequest.DumpedHTTPRequest field is for
 		// debugging only - it should not block the user request.
 	}
-	multipleObjectsRequest.DumpedHTTPRequest = string(dumpedHTTPRequest)
+	sfxRequest.DumpedHTTPRequest = string(dumpedHTTPRequest)
 
-	return multipleObjectsRequest, nil
+	return sfxRequest, nil
 }
 
 func escapeQueryParamValuesForXML(values []string) ([]string, error) {
@@ -129,7 +129,7 @@ func filterOpenURLParams(queryStringValues url.Values) url.Values {
 	return queryStringValues
 }
 
-func newMultipleObjectsHTTPRequest(requestXML string, queryStringValues url.Values) (*http.Request, error) {
+func newSFXHTTPRequest(requestXML string, queryStringValues url.Values) (*http.Request, error) {
 	//params := url.Values{}
 	params := filterOpenURLParams(queryStringValues)
 	params.Add("url_ctx_fmt", "info:ofi/fmt:xml:xsd:ctx")
@@ -156,8 +156,8 @@ func newMultipleObjectsHTTPRequest(requestXML string, queryStringValues url.Valu
 }
 
 // Parse SFX request body params from querystring.
-func parseMultipleObjectsRequestParams(queryStringValues url.Values) (multipleObjectsRequestBodyParams, error) {
-	params := multipleObjectsRequestBodyParams{}
+func parseRequestParams(queryStringValues url.Values) (sfxRequestBodyParams, error) {
+	params := sfxRequestBodyParams{}
 
 	rfts := &map[string][]string{}
 
@@ -224,7 +224,7 @@ func parseMultipleObjectsRequestParams(queryStringValues url.Values) (multipleOb
 	return params, nil
 }
 
-func requestXML(templateValues multipleObjectsRequestBodyParams) (string, error) {
+func requestXML(templateValues sfxRequestBodyParams) (string, error) {
 	t := template.New("sfx-request.xml").Funcs(template.FuncMap{"ToLower": strings.ToLower})
 
 	t, err := t.Parse(sfxRequestTemplate)
