@@ -1,8 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AskLibrarian component matches snapshot when loading 1`] = `null`;
-
-exports[`AskLibrarian component matches snapshot when not loading 1`] = `
+exports[`AskLibrarian component matches snapshot 1`] = `
 <div
   class="ask-librarian"
 >
