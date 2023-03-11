@@ -71,6 +71,8 @@ func filterOpenURLParams(queryStringValues url.Values) url.Values {
 
 func newSFXHTTPRequest(queryStringValues url.Values) (*http.Request, error) {
 	params := filterOpenURLParams(queryStringValues)
+
+	// Add SFX query params
 	params.Add("url_ctx_fmt", "info:ofi/fmt:xml:xsd:ctx")
 	params.Add("sfx.response_type", "multi_obj_xml")
 	// Do we always need these parameters? Umlaut adds them only in certain conditions: https://github.com/team-umlaut/umlaut/blob/b954895e0aa0a7cd0a9ec6bb716c1886c813601e/app/service_adaptors/sfx.rb#L145-L153
