@@ -127,18 +127,18 @@ func newSFXResponse(httpResponse *http.Response) (*SFXResponse, error) {
 
 	sfxResponse.XML = string(body)
 
-	var multiObjXMLResponseBody XMLResponseBody
-	if err = xml.Unmarshal(body, &multiObjXMLResponseBody); err != nil {
+	var xmlResponseBody XMLResponseBody
+	if err = xml.Unmarshal(body, &xmlResponseBody); err != nil {
 		return sfxResponse, err
 	}
 
-	if multiObjXMLResponseBody.ContextObject == nil {
+	if xmlResponseBody.ContextObject == nil {
 		return sfxResponse, fmt.Errorf("could not identify context object in response")
 	}
 
-	sfxResponse.XMLResponseBody = multiObjXMLResponseBody
+	sfxResponse.XMLResponseBody = xmlResponseBody
 
-	json, err := json.MarshalIndent(multiObjXMLResponseBody, "", "    ")
+	json, err := json.MarshalIndent(xmlResponseBody, "", "    ")
 	if err != nil {
 		return sfxResponse, fmt.Errorf("could not marshal SFX response body to JSON: %v", err)
 	}
