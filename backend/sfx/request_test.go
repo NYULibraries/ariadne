@@ -39,8 +39,8 @@ func TestNewSFXRequest(t *testing.T) {
 func TestFilterOpenURLParams(t *testing.T) {
 	var testCases = []struct {
 		testName    string
-		queryString url.Values //map[string][]string
-		expected    url.Values //map[string][]string
+		queryString url.Values
+		expected    url.Values
 	}{
 		{"query string contains sid", map[string][]string{"sid": {"unicode+garbage+EBSCO:Scopus\\u00ae"}}, map[string][]string{"rfr_id": {"unicode+garbage+EBSCO:Scopus\\u00ae"}}},
 		{"query string doesn't contain sid", map[string][]string{"id": {"unicode+garbage+EBSCO:Scopus\\u00ae"}}, map[string][]string{"id": {"unicode+garbage+EBSCO:Scopus\\u00ae"}}},
