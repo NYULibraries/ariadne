@@ -8,14 +8,23 @@ import (
 	"net/http"
 )
 
-// Take an incoming Querystring, convert to context object XML, send a post to SFX
-// and write the response JSON
-func MultipleRecordsHandler(w http.ResponseWriter, r *http.Request) {
-	enableCors(&w)
+// Setup a new mux router with the appropriate routes for this app
+func NewRouter() *http.ServeMux {
+	router := http.NewServeMux()
+
+	router.HandleFunc("/healthcheck", healthCheck)
+	router.HandleFunc("/v0/", ResolverHandler)
+
+	return router
+}
+
+// Handler for the endpoint used by the frontend
+func ResolverHandler(w http.ResponseWriter, r *http.Request) {
+	setCORS(&w)
 
 	w.Header().Add("Content-Type", "application/json")
 
-	sfxRequest, err := sfx.NewMultipleObjectsRequest(r.URL.Query())
+	sfxRequest, err := sfx.NewSFXRequest(r.URL.Query())
 	if err != nil {
 		handleError(err, w, "Invalid OpenURL")
 		return
@@ -32,17 +41,7 @@ func MultipleRecordsHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintln(w, string(responseJSON))
 }
 
-// Setup a new mux router with the appropriate routes for this app
-func NewRouter() *http.ServeMux {
-	router := http.NewServeMux()
-
-	router.HandleFunc("/healthcheck", healthCheck)
-	router.HandleFunc("/v0/", MultipleRecordsHandler)
-
-	return router
-}
-
-func enableCors(w *http.ResponseWriter) {
+func setCORS(w *http.ResponseWriter) {
 	(*w).Header().Set("Access-Control-Allow-Origin", "*")
 }
 
@@ -58,14 +57,14 @@ func healthCheck(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(map[string]interface{}{"status": "ok"})
 }
 
-func makeJSONResponseFromSFXResponse(sfxResponse *sfx.MultipleObjectsResponse) []byte {
+func makeJSONResponseFromSFXResponse(sfxResponse *sfx.SFXResponse) []byte {
 	// Remove the Ask a Librarian target -- for details, see:
 	// https://nyu-lib.monday.com/boards/765008773/pulses/3548498827
 	sfxResponse.RemoveTarget("http://library.nyu.edu/ask/")
 
 	ariadneResponse := Response{
 		Errors:  []string{},
-		Records: sfxResponse.MultiObjXMLResponseBody,
+		Records: sfxResponse.XMLResponseBody,
 	}
 
 	responseJSON, err := json.MarshalIndent(ariadneResponse, "", "    ")
@@ -84,7 +83,7 @@ func makeJSONResponseFromSFXResponse(sfxResponse *sfx.MultipleObjectsResponse) [
 	if err != nil {
 		ariadneResponse = Response{
 			Errors:  []string{fmt.Sprintf("Could not marshal ariadne response to JSON: %v", err)},
-			Records: sfx.MultiObjXMLResponseBody{},
+			Records: sfx.XMLResponseBody{},
 		}
 
 		// Even more unlikely that this marshalling will error out, but if it does

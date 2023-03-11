@@ -28,7 +28,7 @@ func dumpJSON(queryString string) string {
 	request := httptest.NewRequest("GET",
 		fmt.Sprintf("http://localhost/does-no-matter/?%s", queryString), nil)
 	responseWriter := httptest.NewRecorder()
-	api.MultipleRecordsHandler(responseWriter, request)
+	api.ResolverHandler(responseWriter, request)
 	response := responseWriter.Result()
 	responseJSON, _ := io.ReadAll(response.Body)
 

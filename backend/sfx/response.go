@@ -9,18 +9,18 @@ import (
 	"net/http/httputil"
 )
 
-type MultipleObjectsResponse struct {
-	DumpedHTTPResponse      string
-	HTTPResponse            *http.Response
-	JSON                    string
-	MultiObjXMLResponseBody MultiObjXMLResponseBody
-	XML                     string
+type SFXResponse struct {
+	DumpedHTTPResponse string
+	HTTPResponse       *http.Response
+	JSON               string
+	XMLResponseBody    XMLResponseBody
+	XML                string
 }
 
 // Mapped out the entire Context Object responses possible from SFX as defined here:
 // https://developers.exlibrisgroup.com/sfx/apis/web_services/openurl/
 // But most of it is likely not useful for pulling out links of interest to us
-type MultiObjXMLResponseBody struct {
+type XMLResponseBody struct {
 	ContextObject *[]ContextObject `xml:"ctx_obj" json:"ctx_obj"`
 }
 
@@ -95,55 +95,55 @@ type ThresholdText struct {
 	CoverageStatement []string `xml:"coverage_statement" json:"coverage_statement,omitempty"`
 }
 
-func (multipleObjectsResponse *MultipleObjectsResponse) RemoveTarget(targetURL string) {
-	currentTargets := (*(*multipleObjectsResponse.MultiObjXMLResponseBody.ContextObject)[0].SFXContextObjectTargets)[0].Targets
+func (multipleObjectsResponse *SFXResponse) RemoveTarget(targetURL string) {
+	currentTargets := (*(*multipleObjectsResponse.XMLResponseBody.ContextObject)[0].SFXContextObjectTargets)[0].Targets
 	var newTargets []Target
 	for _, target := range *currentTargets {
 		if target.TargetUrl != targetURL {
 			newTargets = append(newTargets, target)
 		}
 	}
-	(*(*multipleObjectsResponse.MultiObjXMLResponseBody.ContextObject)[0].SFXContextObjectTargets)[0].Targets = &newTargets
+	(*(*multipleObjectsResponse.XMLResponseBody.ContextObject)[0].SFXContextObjectTargets)[0].Targets = &newTargets
 }
 
-func newMultipleObjectsResponse(httpResponse *http.Response) (*MultipleObjectsResponse, error) {
+func newSFXResponse(httpResponse *http.Response) (*SFXResponse, error) {
 	// NOTE: `defer httpResponse.Body.Close()` should have already been called by the client
 	// before passing to this function.
 
-	multipleObjectsResponse := &MultipleObjectsResponse{
+	sfxResponse := &SFXResponse{
 		HTTPResponse: httpResponse,
 	}
 
 	dumpedHTTPResponse, err := httputil.DumpResponse(httpResponse, true)
 	if err != nil {
-		return multipleObjectsResponse, fmt.Errorf("could not dump HTTP response")
+		return sfxResponse, fmt.Errorf("could not dump HTTP response")
 	}
-	multipleObjectsResponse.DumpedHTTPResponse = string(dumpedHTTPResponse)
+	sfxResponse.DumpedHTTPResponse = string(dumpedHTTPResponse)
 
 	body, err := ioutil.ReadAll(httpResponse.Body)
 	if err != nil {
-		return multipleObjectsResponse, fmt.Errorf("could not read response from SFX server: %v", err)
+		return sfxResponse, fmt.Errorf("could not read response from SFX server: %v", err)
 	}
 
-	multipleObjectsResponse.XML = string(body)
+	sfxResponse.XML = string(body)
 
-	var multiObjXMLResponseBody MultiObjXMLResponseBody
-	if err = xml.Unmarshal(body, &multiObjXMLResponseBody); err != nil {
-		return multipleObjectsResponse, err
+	var xmlResponseBody XMLResponseBody
+	if err = xml.Unmarshal(body, &xmlResponseBody); err != nil {
+		return sfxResponse, err
 	}
 
-	if multiObjXMLResponseBody.ContextObject == nil {
-		return multipleObjectsResponse, fmt.Errorf("could not identify context object in response")
+	if xmlResponseBody.ContextObject == nil {
+		return sfxResponse, fmt.Errorf("could not identify context object in response")
 	}
 
-	multipleObjectsResponse.MultiObjXMLResponseBody = multiObjXMLResponseBody
+	sfxResponse.XMLResponseBody = xmlResponseBody
 
-	json, err := json.MarshalIndent(multiObjXMLResponseBody, "", "    ")
+	json, err := json.MarshalIndent(xmlResponseBody, "", "    ")
 	if err != nil {
-		return multipleObjectsResponse, fmt.Errorf("could not marshal SFX response body to JSON: %v", err)
+		return sfxResponse, fmt.Errorf("could not marshal SFX response body to JSON: %v", err)
 	}
 
-	multipleObjectsResponse.JSON = string(json)
+	sfxResponse.JSON = string(json)
 
-	return multipleObjectsResponse, nil
+	return sfxResponse, nil
 }
