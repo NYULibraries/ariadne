@@ -9,8 +9,8 @@ import (
 
 func TestNewSFXRequest(t *testing.T) {
 	var tests = []struct {
-		queryString   url.Values
-		expectedError error
+		queryStringValues url.Values
+		expectedError     error
 	}{
 		{map[string][]string{"sid": {"genre=article&isbn=&issn=19447485&title=Community%20Development&volume=49&issue=5&date=20181020&atitle=Can%20community%20task%20groups%20learn%20from%20the%20principles%20of%20group%20therapy?&aulast=Zanbar,%20L.&spage=574&sid=EBSCO:Scopus\\\\u00ae&pid=Zanbar,%20L.edselc.2-52.0-8505573399120181020Scopus\\\\u00ae"}}, nil},
 		// TODO: Are we able to generate an error to test?
@@ -18,10 +18,10 @@ func TestNewSFXRequest(t *testing.T) {
 	}
 
 	for _, testCase := range tests {
-		testName := fmt.Sprintf("%s", testCase.queryString)
+		testName := fmt.Sprintf("%s", testCase.queryStringValues)
 		t.Run(testName, func(t *testing.T) {
 			// TODO: Test sfxRequest
-			_, err := NewSFXRequest(testCase.queryString)
+			_, err := NewSFXRequest(testCase.queryStringValues)
 			if testCase.expectedError != nil {
 				if err == nil {
 					t.Errorf("NewSFXRequest returned no error, expecting '%v'", testCase.expectedError)
