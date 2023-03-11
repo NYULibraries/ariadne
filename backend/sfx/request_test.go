@@ -23,8 +23,20 @@ Host: sfx.library.nyu.edu`,
 			expectedError:     nil,
 			queryStringValues: map[string][]string{"sid": {"genre=article&isbn=&issn=19447485&title=Community%20Development&volume=49&issue=5&date=20181020&atitle=Can%20community%20task%20groups%20learn%20from%20the%20principles%20of%20group%20therapy?&aulast=Zanbar,%20L.&spage=574&sid=EBSCO:Scopus\\\\u00ae&pid=Zanbar,%20L.edselc.2-52.0-8505573399120181020Scopus\\\\u00ae"}},
 		},
-		// TODO: Are we able to generate an error to test?
-		// {map[string][]string{}, errors.New("TODO")},
+		// These unit tests were originally written when Ariadne was making POST
+		// requests to the SFX API, with complicated query string params validation
+		// and massaging and a somewhat brittle XML request body.  There were plenty
+		// of error conditions to test for.
+		// It is extremely difficult and perhaps impossible to cause the current
+		// `NewSFXRequest` code to return an error.  Should we need to write unit
+		// tests to check for errors, we would use test cases with this structure:
+		//
+		// {
+		//   name:              "",
+		//	 dumpedHTTPRequest: "",
+		//	 expectedError:     errors.New(""),
+		//	 queryStringValues: map[string][]string{},
+		// },
 	}
 
 	for _, testCase := range tests {
