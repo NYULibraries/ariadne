@@ -210,13 +210,13 @@ workflows:
           filters:
             branches:
               ignore: main
-              #- deploy-prod:
-              #    requires:
-              #        - frontend-build
-              #        - backend-build
-              #        - e2e
-              #    filters:
-              #      branches:
-              #        only: main
+      - deploy-prod:
+          requires:
+              - frontend-build
+              - backend-build
+              - e2e
+          filters:
+            branches:
+              only: main
 
 
