@@ -83,7 +83,8 @@ li {
     display: flex;
     background: #22272d;
     color: #acb6c2;
-    padding: 45px 0;
+    padding-top: 45px;
+    padding-bottom: 70px
 }
 
 .footer__social a:not(.ss-navigateright):not(.button) img {
