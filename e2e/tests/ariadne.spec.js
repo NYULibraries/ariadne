@@ -150,10 +150,24 @@ ${e.stderr.toString()}`;
 
     test('should not have any automatically detectable accessibility issues', async ({ page }) => {
 
-      const accessibilityScanResults = await new AxeBuilder({ page }).exclude('ul').analyze();
+      const accessibilityScanResults = await new AxeBuilder({ page })
+        .exclude('ul')
+        .analyze();
+      expect(accessibilityScanResults.violations).toEqual([]);
+    });
+
+    test('should not have any automatically detectable WCAG A or AA violations', async ({ page }) => {
+      //Guideline 2.1 – Keyboard Accessible: https://www.w3.org/WAI/WCAG21/quickref/#keyboard-accessible 
+      const accessibilityScanResults = await new AxeBuilder({ page })
+        .exclude('ul')
+        .withTags(['wcag2a', 'wcag21a'])
+        .analyze();
+
       expect(accessibilityScanResults.violations).toEqual([]);
     });
   });
 }
+
+
 
 
