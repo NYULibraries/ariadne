@@ -28,7 +28,7 @@ Run E2E tests in a container:
 docker-compose run --rm e2e
 ```
 
-Update golden files and PNG screenshots in a container:
+Update golden files and *-linux.png screenshots in a container (won't update *-darwin.png screenshots):
 
 ```
 docker-compose run e2e-update-screenshots
@@ -36,7 +36,7 @@ docker-compose run e2e-update-screenshots
 
 Run tests:
 
-snapshots```
+```
 cd e2e/
 yarn install
 yarn test:e2e
@@ -47,7 +47,7 @@ Update golden files for E2E tests (run in _e2e/_):
 ```
 UPDATE_GOLDEN_FILES=true yarn test:e2e
 ```
-(Developer note: it's current not possible to use a custom flag like `--update-golden-files`
+(Developer note: it's currently not possible to use a custom flag like `--update-golden-files`
 with `playwright`: [\[Feature\] Add support for test\.each / describe\.each \#7036](https://github.com/microsoft/playwright/issues/7036))
 
 
