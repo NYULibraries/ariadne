@@ -28,7 +28,7 @@ Run E2E tests in a container:
 docker-compose run --rm e2e
 ```
 
-Update golden files and PNG screenshots in a container:
+Update golden files and *-linux.png screenshots in a container (won't update *-darwin.png screenshots):
 
 ```
 docker-compose run e2e-update-screenshots
