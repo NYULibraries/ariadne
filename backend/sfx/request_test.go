@@ -21,6 +21,8 @@ func TestNewSFXRequest(t *testing.T) {
 			// error.  Ariadne currently remediates by replacing `sid` with `rfr_id` (set to `sid` value).
 			// We do not know exactly how/why this appears to eliminate the error,
 			// but somehow it does.
+			// NOTE: This is the can-community-task-groups-learn-from-the-principles-of-group-therapy
+			// test case from backend/api/testdata/server/test-cases.json.
 			name: "Trouble-causing `sid`",
 			dumpedHTTPRequest: `GET /sfxlcl41?atitle=Can+community+task+groups+learn+from+the+principles+of+group+therapy%3F&aulast=Zanbar%2C+L.&date=20181020&genre=article&isbn=&issn=19447485&issue=5&pid=Zanbar%2C+L.edselc.2-52.0-8505573399120181020Scopus%5C%5Cu00ae&rfr_id=EBSCO%3AScopus%5C%5Cu00ae&sfx.doi_url=http%3A%2F%2Fdx.doi.org&sfx.response_type=multi_obj_xml&spage=574&title=Community+Development&url_ctx_fmt=info%3Aofi%2Ffmt%3Axml%3Axsd%3Actx&volume=49 HTTP/1.1
 Host: sfx.library.nyu.edu`,

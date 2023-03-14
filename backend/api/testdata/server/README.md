@@ -2,6 +2,8 @@
 
 ## Chosen by the dev team
 
+* **can-community-task-groups-learn-from-the-principles-of-group-therapy**: requires
+  query string `sid` -> `rfr_id` to prevent SFX error "XSS violation occured [sic]."
 * **corriere-fiorentino**: a simple, basic test case with a short response 
 * **the-new-yorker**: *The New Yorker*, which has a fairly long list of links
 * **moral-psychology-is-relationship-regulation**: query string does not have `rft.genre`

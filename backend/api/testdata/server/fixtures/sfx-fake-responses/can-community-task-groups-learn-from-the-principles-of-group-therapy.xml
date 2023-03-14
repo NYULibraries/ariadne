@@ -1,0 +1,194 @@
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Content-Type: application/xml; charset=ISO-8859-1
+Date: Tue, 14 Mar 2023 19:30:51 GMT
+Server: Apache
+
+19bd
+<?xml version="1.0" encoding="utf-8"?>
+
+<ctx_obj_set>
+ <ctx_obj identifier="">
+  <ctx_obj_attributes>&lt;perldata&gt;
+ &lt;hash&gt;
+  &lt;item key="url_ctx_fmt"&gt;info:ofi/fmt:xml:xsd:ctx&lt;/item&gt;
+  &lt;item key="@sfx.category"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;Social Sciences&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="@rft.auinitm"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.issue"&gt;5&lt;/item&gt;
+  &lt;item key="rft.month"&gt;10&lt;/item&gt;
+  &lt;item key="@rft.aufirst"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.issue_start"&gt;5&lt;/item&gt;
+  &lt;item key="rft.issn"&gt;1557-5330&lt;/item&gt;
+  &lt;item key="@rft_id"&gt;
+   &lt;array&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="sfx.sid"&gt;DEFAULT&lt;/item&gt;
+  &lt;item key="@rfr_id"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;EBSCO:Scopus\®&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="@rft.stitle"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;COMMUNITY DEVELOPMENT&lt;/item&gt;
+    &lt;item key="1"&gt;COMMUNITY DEV (COLUMB)&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.spage"&gt;574&lt;/item&gt;
+  &lt;item key="sfx.has_full_text"&gt;yes&lt;/item&gt;
+  &lt;item key="fetchid"&gt;15575330&lt;/item&gt;
+  &lt;item key="@rft.auinit"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;L&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="@rfe_id"&gt;
+   &lt;array&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="@rft.auinit1"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;L&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="sfx.doi_url"&gt;http://dx.doi.org&lt;/item&gt;
+  &lt;item key="sfx.ignore_char_set"&gt;1&lt;/item&gt;
+  &lt;item key="rft.object_id"&gt;1000000000238152&lt;/item&gt;
+  &lt;item key="rft.day"&gt;20&lt;/item&gt;
+  &lt;item key="rft.object_type"&gt;JOURNAL&lt;/item&gt;
+  &lt;item key="rft.pub"&gt;Routledge&lt;/item&gt;
+  &lt;item key="rft.lccn"&gt;  2005212844&lt;/item&gt;
+  &lt;item key="rft.genre"&gt;article&lt;/item&gt;
+  &lt;item key="rft.volume"&gt;49&lt;/item&gt;
+  &lt;item key="rft.language"&gt;eng&lt;/item&gt;
+  
+  &lt;item key="existing_ts_ids"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;20430000000000002&lt;/item&gt;
+    &lt;item key="1"&gt;111027614344001&lt;/item&gt;
+    &lt;item key="2"&gt;1000000000002899&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.jtitle"&gt;Community Development&lt;/item&gt;
+  &lt;item key="rft.eissn"&gt;1944-7485&lt;/item&gt;
+  &lt;item key="req.session_id"&gt;sBB0B4B98-C29E-11ED-B73D-F3FD4031B499&lt;/item&gt;
+  &lt;item key="rft.title"&gt;Community Development&lt;/item&gt;
+  &lt;item key="rft.year"&gt;2018&lt;/item&gt;
+  &lt;item key="@rft.aulast"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;Zanbar&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="@rft.au"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;Zanbar, L&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.place"&gt;Columbus, OH&lt;/item&gt;
+  &lt;item key="rft.volume_start"&gt;49&lt;/item&gt;
+  &lt;item key="rft.atitle"&gt;Can community task groups learn from the principles of group therapy?&lt;/item&gt;
+  &lt;item key="@sfx.subcategory"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;Developmental Issues &amp;amp; Socioeconomic Studies&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="_stash"&gt;
+   &lt;hash&gt;
+    &lt;item key="@rfr_id"&gt;
+     &lt;array&gt;
+      &lt;item key="0"&gt;EBSCO:Scopus\®&lt;/item&gt;
+     &lt;/array&gt;
+    &lt;/item&gt;
+   &lt;/hash&gt;
+  &lt;/item&gt;
+  &lt;item key="rft_dat"&gt;Zanbar, L.edselc.2-52.0-8505573399120181020Scopus\®&lt;/item&gt;
+  &lt;item key="sfx.request_id"&gt;25760840&lt;/item&gt;
+  &lt;item key="rft.date"&gt;20181020&lt;/item&gt;
+  &lt;item key="sfx.response_type"&gt;multi_obj_xml&lt;/item&gt;
+  &lt;item key="sfx.sourcename"&gt;DEFAULT&lt;/item&gt;
+ &lt;/hash&gt;
+&lt;/perldata&gt;
+</ctx_obj_attributes>
+  <ctx_obj_targets>
+   <target>
+    <target_name>TAYLOR_FRANCIS_CURRENT_CONTENT_ACCESS</target_name>
+    <target_public_name>Taylor &amp; Francis Current Content Access</target_public_name>
+    <object_portfolio_id>3360000000373396</object_portfolio_id>
+    <target_id>1000000000002216</target_id>
+    <interface_id>1000000000002375</interface_id>
+    <interface_name>TAYLOR_AND_FRANCIS_ONLINE</interface_name>
+    <target_service_id>1000000000002899</target_service_id>
+    <service_type>getFullTxt</service_type>
+    <parser>TAYFRA::journal</parser>
+    <parse_param>url=https://www.tandfonline.com &amp; shib= &amp; u_shib=&amp;jkey=rcod20</parse_param>
+    <proxy>yes</proxy>
+    <crossref>yes</crossref>
+    <note></note>
+    <authentication></authentication>
+    <char_set>iso-8859-1</char_set>
+    <displayer></displayer>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://www.tandfonline.com/openurl?spage=574&amp;date=2018&amp;genre=article&amp;volume=49&amp;issue=5&amp;issn=1557-5330</target_url>
+    <is_related>no</is_related>
+    <coverage>
+     <coverage_text>
+      <threshold_text>
+       <coverage_statement>Available from 2005/03/01 volume: 36 issue: 1</coverage_statement>
+      </threshold_text>
+      <embargo_text></embargo_text>
+     </coverage_text>
+     <from>
+      <year>2005</year>
+      <month>03</month>
+      <day>01</day>
+      <volume>36</volume>
+      <issue>1</issue>
+     </from>
+     <embargo></embargo>
+    </coverage>
+   </target>
+   <target>
+    <target_name>ASK_A_LIBRARIAN_LCL</target_name>
+    <target_public_name>Ask a Librarian</target_public_name>
+    <object_portfolio_id></object_portfolio_id>
+    <target_id>20430000000000002</target_id>
+    <interface_id>20430000000000002</interface_id>
+    <interface_name>ASK_A_LIBRARIAN</interface_name>
+    <target_service_id>20430000000000002</target_service_id>
+    <service_type>getWebService</service_type>
+    <parser>Generic</parser>
+    <parse_param>IF () "http://library.nyu.edu/ask/"</parse_param>
+    <proxy>no</proxy>
+    <crossref>no</crossref>
+    <note></note>
+    <authentication></authentication>
+    <char_set>iso-8859-1</char_set>
+    <displayer></displayer>
+    <target_url>http://library.nyu.edu/ask/</target_url>
+    <is_related>no</is_related>
+    <coverage>
+     <coverage_text>
+      <threshold_text></threshold_text>
+      <embargo_text></embargo_text>
+     </coverage_text>
+     <embargo></embargo>
+    </coverage>
+   </target>
+  </ctx_obj_targets>
+ </ctx_obj>
+</ctx_obj_set>
+0
+
+
