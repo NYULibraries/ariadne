@@ -36,7 +36,7 @@ docker-compose run e2e-update-screenshots
 
 Run tests:
 
-snapshots```
+```
 cd e2e/
 yarn install
 yarn test:e2e
