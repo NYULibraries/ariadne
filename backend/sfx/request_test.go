@@ -17,11 +17,52 @@ func TestNewSFXRequest(t *testing.T) {
 		queryStringValues url.Values
 	}{
 		{
+			// This request as-is was causing SFX to return a "XSS violation occured [sic]."
+			// error.  Ariadne currently remediates by replacing `sid` with `rfr_id` (set to `sid` value).
+			// We do not know exactly how/why this appears to eliminate the error,
+			// but somehow it does.
 			name: "Trouble-causing `sid`",
-			dumpedHTTPRequest: `GET /sfxlcl41?rfr_id=genre%3Darticle%26isbn%3D%26issn%3D19447485%26title%3DCommunity%2520Development%26volume%3D49%26issue%3D5%26date%3D20181020%26atitle%3DCan%2520community%2520task%2520groups%2520learn%2520from%2520the%2520principles%2520of%2520group%2520therapy%3F%26aulast%3DZanbar%2C%2520L.%26spage%3D574%26sid%3DEBSCO%3AScopus%5C%5Cu00ae%26pid%3DZanbar%2C%2520L.edselc.2-52.0-8505573399120181020Scopus%5C%5Cu00ae&sfx.doi_url=http%3A%2F%2Fdx.doi.org&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info%3Aofi%2Ffmt%3Axml%3Axsd%3Actx HTTP/1.1
+			dumpedHTTPRequest: `GET /sfxlcl41?atitle=Can+community+task+groups+learn+from+the+principles+of+group+therapy%3F&aulast=Zanbar%2C+L.&date=20181020&genre=article&isbn=&issn=19447485&issue=5&pid=Zanbar%2C+L.edselc.2-52.0-8505573399120181020Scopus%5C%5Cu00ae&rfr_id=EBSCO%3AScopus%5C%5Cu00ae&sfx.doi_url=http%3A%2F%2Fdx.doi.org&sfx.response_type=multi_obj_xml&spage=574&title=Community+Development&url_ctx_fmt=info%3Aofi%2Ffmt%3Axml%3Axsd%3Actx&volume=49 HTTP/1.1
 Host: sfx.library.nyu.edu`,
-			expectedError:     nil,
-			queryStringValues: map[string][]string{"sid": {"genre=article&isbn=&issn=19447485&title=Community%20Development&volume=49&issue=5&date=20181020&atitle=Can%20community%20task%20groups%20learn%20from%20the%20principles%20of%20group%20therapy?&aulast=Zanbar,%20L.&spage=574&sid=EBSCO:Scopus\\\\u00ae&pid=Zanbar,%20L.edselc.2-52.0-8505573399120181020Scopus\\\\u00ae"}},
+			expectedError: nil,
+			queryStringValues: map[string][]string{
+				"atitle": {
+					"Can community task groups learn from the principles of group therapy?",
+				},
+				"aulast": {
+					"Zanbar, L.",
+				},
+				"date": {
+					"20181020",
+				},
+				"genre": {
+					"article",
+				},
+				"isbn": {
+					"",
+				},
+				"issn": {
+					"19447485",
+				},
+				"issue": {
+					"5",
+				},
+				"pid": {
+					"Zanbar, L.edselc.2-52.0-8505573399120181020Scopus\\\\u00ae",
+				},
+				"sid": {
+					"EBSCO:Scopus\\\\u00ae",
+				},
+				"spage": {
+					"574",
+				},
+				"title": {
+					"Community Development",
+				},
+				"volume": {
+					"49",
+				},
+			},
 		},
 		// These unit tests were originally written when Ariadne was making POST
 		// requests to the SFX API, with complicated query string params validation
