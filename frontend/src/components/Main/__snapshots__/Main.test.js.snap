@@ -90,7 +90,9 @@ exports[`Backend HTTP error responses HTTP 400 (Bad Request) error is rendered c
         <div
           class="col-md-4"
         >
-          <aside>
+          <aside
+            title="ask-librarian"
+          >
             <div
               class="ask-librarian"
             >
@@ -294,7 +296,9 @@ exports[`Backend HTTP error responses HTTP 403 (Forbidden) error is rendered cor
         <div
           class="col-md-4"
         >
-          <aside>
+          <aside
+            title="ask-librarian"
+          >
             <div
               class="ask-librarian"
             >
@@ -498,7 +502,9 @@ exports[`Backend HTTP error responses HTTP 408 (Request Timeout) error is render
         <div
           class="col-md-4"
         >
-          <aside>
+          <aside
+            title="ask-librarian"
+          >
             <div
               class="ask-librarian"
             >
@@ -702,7 +708,9 @@ exports[`Backend HTTP error responses HTTP 500 (Internal Server Error) error is 
         <div
           class="col-md-4"
         >
-          <aside>
+          <aside
+            title="ask-librarian"
+          >
             <div
               class="ask-librarian"
             >
@@ -906,7 +914,9 @@ exports[`Backend fetch exceptions TypeError: Failed to fetch renders backend fet
         <div
           class="col-md-4"
         >
-          <aside>
+          <aside
+            title="ask-librarian"
+          >
             <div
               class="ask-librarian"
             >
@@ -1110,7 +1120,9 @@ exports[`Backend response includes errors Response includes 2 errors and an empt
         <div
           class="col-md-4"
         >
-          <aside>
+          <aside
+            title="ask-librarian"
+          >
             <div
               class="ask-librarian"
             >
@@ -1387,7 +1399,9 @@ exports[`Backend success "Life" Magazine and the Power of Photography renders co
         <div
           class="col-md-4"
         >
-          <aside>
+          <aside
+            title="ask-librarian"
+          >
             <div
               class="ask-librarian"
             >
@@ -1576,14 +1590,9 @@ exports[`Backend success Can community task groups learn from the principles of 
             </div>
           </div>
           <div
-            role="alert"
-          />
-          <div
             class="list-group"
+            style=""
           >
-            <div
-              class="list-group-item list-group-item-action flex-column border-0"
-            />
             <div
               class="list-group-item list-group-item-action flex-column border-0"
             >
@@ -1609,7 +1618,9 @@ exports[`Backend success Can community task groups learn from the principles of 
         <div
           class="col-md-4"
         >
-          <aside>
+          <aside
+            title="ask-librarian"
+          >
             <div
               class="ask-librarian"
             >
@@ -1794,7 +1805,9 @@ exports[`Backend success Corriere Fiorentino renders correctly 1`] = `
         <div
           class="col-md-4"
         >
-          <aside>
+          <aside
+            title="ask-librarian"
+          >
             <div
               class="ask-librarian"
             >
@@ -2011,7 +2024,9 @@ exports[`Backend success Design of LED light therapy device based on free-form l
         <div
           class="col-md-4"
         >
-          <aside>
+          <aside
+            title="ask-librarian"
+          >
             <div
               class="ask-librarian"
             >
@@ -2226,7 +2241,9 @@ exports[`Backend success Editorial cartoon renders correctly 1`] = `
         <div
           class="col-md-4"
         >
-          <aside>
+          <aside
+            title="ask-librarian"
+          >
             <div
               class="ask-librarian"
             >
@@ -2443,7 +2460,9 @@ exports[`Backend success Modelling Modular Living: Furniture and Life Magazine a
         <div
           class="col-md-4"
         >
-          <aside>
+          <aside
+            title="ask-librarian"
+          >
             <div
               class="ask-librarian"
             >
@@ -2655,7 +2674,9 @@ exports[`Backend success Moral psychology is relationship regulation: moral moti
         <div
           class="col-md-4"
         >
-          <aside>
+          <aside
+            title="ask-librarian"
+          >
             <div
               class="ask-librarian"
             >
@@ -2851,7 +2872,9 @@ exports[`Backend success Our Lady of everyday life : la Virgen de Guadalupe and 
         <div
           class="col-md-4"
         >
-          <aside>
+          <aside
+            title="ask-librarian"
+          >
             <div
               class="ask-librarian"
             >
@@ -3108,7 +3131,9 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
         <div
           class="col-md-4"
         >
-          <aside>
+          <aside
+            title="ask-librarian"
+          >
             <div
               class="ask-librarian"
             >
@@ -3365,7 +3390,9 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
         <div
           class="col-md-4"
         >
-          <aside>
+          <aside
+            title="ask-librarian"
+          >
             <div
               class="ask-librarian"
             >
@@ -3835,7 +3862,9 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
         <div
           class="col-md-4"
         >
-          <aside>
+          <aside
+            title="ask-librarian"
+          >
             <div
               class="ask-librarian"
             >
@@ -4119,7 +4148,9 @@ exports[`Backend success The Year's work in modern language studies. renders cor
         <div
           class="col-md-4"
         >
-          <aside>
+          <aside
+            title="ask-librarian"
+          >
             <div
               class="ask-librarian"
             >
