@@ -56,7 +56,7 @@ const Main = () => {
             </Col>
             <Col md={4}>
               <aside>
-                <AskLibrarian loading={backendClient.loading} />
+                <AskLibrarian />
               </aside>
             </Col>
           </Row>
