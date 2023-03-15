@@ -95,9 +95,7 @@ const PageFooter = () => {
                         </a>
                     </div>
                 </div>
-                <div className="needs-js">Chat loading...
-                    <ChatWidget />
-                </div>
+                <ChatWidget />
             </footer>
         </>
     );
