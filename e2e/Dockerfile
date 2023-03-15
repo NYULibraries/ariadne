@@ -12,9 +12,9 @@ RUN npx playwright install
 # copy over remaining e2e files
 COPY e2e/. .
 
-COPY backend/api/testdata/server/golden/* /backend/api/testdata/server/golden/
+COPY backend/testutils/testdata/golden/* /backend/testutils/testdata/golden/
 
-COPY backend/api/testdata/server/test-cases.json /backend/api/testdata/server/test-cases.json
+COPY backend/testutils/testdata/test-cases.json /backend/testutils/testdata/test-cases.json
 
 COPY frontend/src/testutils/index.js /frontend/src/testutils/index.js
 
