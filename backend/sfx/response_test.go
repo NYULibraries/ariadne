@@ -1,8 +1,11 @@
 package sfx
 
 import (
+	"ariadne/testutils"
 	"bytes"
+	"encoding/json"
 	"errors"
+	"fmt"
 	"io/ioutil"
 	"net/http"
 	"testing"
@@ -81,8 +84,28 @@ func TestNewMultipleObjectsResponse(t *testing.T) {
 	}
 }
 
+func TestRemoveTarget(t *testing.T) {
+	var testCases []testutils.TestCase
+	err := json.Unmarshal(testutils.TestCasesJSON, &testCases)
+	if err != nil {
+		panic(fmt.Sprintf("Error reading test cases file: %s", err))
+	}
+
+	//for _, testCase := range testCases {
+	//	fakeHTTPResponse := makeFakeHTTPResponse("")
+	//	fakeSFXResponse := makeFakeSFXResponse(fakeHTTPResponse)
+	//	fakeSFXResponse.RemoveTarget("http://library.nyu.edu/ask/")
+	//}
+}
+
 func makeFakeHTTPResponse(body string) *http.Response {
 	return &http.Response{
 		Body: ioutil.NopCloser(bytes.NewBufferString(body)),
 	}
+}
+
+func makeFakeSFXResponse(httpResponse *http.Response) *SFXResponse {
+	fakeSFXResponse, _ := newSFXResponse(httpResponse)
+
+	return fakeSFXResponse
 }
