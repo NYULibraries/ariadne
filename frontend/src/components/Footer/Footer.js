@@ -1,7 +1,5 @@
 import './Footer.css';
 
-import ChatWidget from '../ChatWidget/ChatWidget';
-
 const PageFooter = () => {
 
     return (
@@ -95,7 +93,6 @@ const PageFooter = () => {
                         </a>
                     </div>
                 </div>
-                <ChatWidget />
             </footer>
         </>
     );
