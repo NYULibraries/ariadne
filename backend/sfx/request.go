@@ -29,8 +29,13 @@ func (c SFXRequest) do() (*SFXResponse, error) {
 	return sfxResponse, nil
 }
 
-func NewSFXRequest(queryStringValues url.Values) (*SFXRequest, error) {
+func NewSFXRequest(queryString string) (*SFXRequest, error) {
 	sfxRequest := &SFXRequest{}
+
+	queryStringValues, err := url.ParseQuery(queryString)
+	if err != nil {
+		return sfxRequest, err
+	}
 
 	httpRequest, err := newSFXHTTPRequest(queryStringValues)
 	if err != nil {
