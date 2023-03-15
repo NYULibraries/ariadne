@@ -1,15 +1,15 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { useEffect, useRef } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import { useEffect, useRef } from 'react';
 
-import linksApi from '../../api/fetchData';
-import useApi from '../../hooks/useApi';
 import AskLibrarian from '../AskLibrarian/AskLibrarian';
 import Citation from '../Citation/Citation';
 import Error from '../Error/Error';
 import List from '../List/List';
 import Loader from '../Loader/Loader';
+import linksApi from '../../api/fetchData';
+import useApi from '../../hooks/useApi';
 
 const Main = () => {
   const backendClient = useApi(linksApi.fetchData);
