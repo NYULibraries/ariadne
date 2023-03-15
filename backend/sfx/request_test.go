@@ -41,7 +41,7 @@ Host: sfx.library.nyu.edu`,
 		//   name:              "",
 		//	 dumpedHTTPRequest: "",
 		//	 expectedError:     errors.New(""),
-		//	 queryStringValues: map[string][]string{},
+		//	 queryString: string,
 		// },
 	}
 
