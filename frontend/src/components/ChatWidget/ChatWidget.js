@@ -17,9 +17,9 @@ const ChatWidget = () => {
     return (
         <>
             <aside id="chat_widget" tabIndex="-1">
-                <button className="button chat-tab ss-chat" onClick={handleChatToggle}>
+                {!showChat && (<button className="button chat-tab ss-chat" onClick={handleChatToggle}>
                     Chat with us
-                </button>
+                </button>)}
                 <div className="chat-frame-wrap">
                     {showChat && (
                         <>
