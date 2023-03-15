@@ -3,7 +3,6 @@ package debug
 import (
 	"fmt"
 	"github.com/spf13/cobra"
-	"net/url"
 
 	"ariadne/sfx"
 )
@@ -46,12 +45,7 @@ var dumpSFXHTTPResponseCmd = &cobra.Command{
 }
 
 func dumpSFXHTTPRequest(queryString string) (string, error) {
-	urlValues, err := url.ParseQuery(queryString)
-	if err != nil {
-		return queryString, err
-	}
-
-	sfxRequest, err := sfx.NewMultipleObjectsRequest(urlValues)
+	sfxRequest, err := sfx.NewSFXRequest(queryString)
 	if err != nil {
 		return queryString, err
 	}
@@ -60,12 +54,7 @@ func dumpSFXHTTPRequest(queryString string) (string, error) {
 }
 
 func dumpSFXHTTPResponse(queryString string) (string, error) {
-	urlValues, err := url.ParseQuery(queryString)
-	if err != nil {
-		return queryString, err
-	}
-
-	sfxRequest, err := sfx.NewMultipleObjectsRequest(urlValues)
+	sfxRequest, err := sfx.NewSFXRequest(queryString)
 	if err != nil {
 		return queryString, err
 	}

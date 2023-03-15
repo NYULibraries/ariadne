@@ -62,17 +62,17 @@ func TestNewMultipleObjectsResponse(t *testing.T) {
 
 	for _, testCase := range testCases {
 		t.Run(testCase.name, func(t *testing.T) {
-			multipleObjectsResponse, err := newMultipleObjectsResponse(testCase.httpResponse)
+			multipleObjectsResponse, err := newSFXResponse(testCase.httpResponse)
 			if testCase.expectedError != nil {
 				if err == nil {
-					t.Errorf("newMultipleObjectsResponse returned no error, expecting '%v'", testCase.expectedError)
+					t.Errorf("newSFXResponse returned no error, expecting '%v'", testCase.expectedError)
 				}
 				if err.Error() != testCase.expectedError.Error() {
-					t.Errorf("newMultipleObjectsResponse returned error '%v', expecting '%v'", err, testCase.expectedError)
+					t.Errorf("newSFXResponse returned error '%v', expecting '%v'", err, testCase.expectedError)
 				}
 			}
 			if err != nil && testCase.expectedError == nil {
-				t.Errorf("newMultipleObjectsResponse returned error '%v', expecting no errors", err)
+				t.Errorf("newSFXResponse returned error '%v', expecting no errors", err)
 			}
 			if multipleObjectsResponse.JSON != testCase.expected {
 				t.Errorf("multipleObjectsResponse.JSON was '%v', expecting '%v'", multipleObjectsResponse.JSON, testCase.expected)
