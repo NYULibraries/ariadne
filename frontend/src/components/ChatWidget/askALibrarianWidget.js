@@ -16,6 +16,7 @@ function accessibleSelect(event) {
 }
 
 export default class AskALibrarianWidget {
+    //TODO: Check out the classes
     constructor() {
         this.selector = document.querySelectorAll('.js-toggle-chat, .js-toggle-chat-from-link');
         this.triggerOnEvents = [CLICK_EVENT, KEYDOWN_EVENT];
