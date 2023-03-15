@@ -68,7 +68,7 @@ const Main = () => {
                 <List links={backendClient.resource} loading={backendClient.loading} />}
             </Col>
             <Col md={4}>
-              <aside>
+              <aside title="ask-librarian">
                 <AskLibrarian loading={backendClient.loading} />
               </aside>
             </Col>
