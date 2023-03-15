@@ -148,6 +148,23 @@ ${e.stderr.toString()}`;
       });
     }
 
+    test('Chat widget should toggle chat window', async ({ page }) => {
+      // Click the "Chat with us" button
+      await page.click('button.chat-tab');
+
+      // Verify that the chat window is visible
+      const chatFrame = await page.waitForSelector('.chat-frame-wrap');
+      const isVisible = await chatFrame.isVisible();
+      expect(isVisible).toBeTruthy();
+
+      // Click the "Close chat window" button
+      await page.click('.chat-close');
+
+      // Verify that the chat window is hidden
+      const isHidden = await chatFrame.isHidden();
+      expect(isHidden).toBeTruthy();
+    });
+
     test('should not have any automatically detectable accessibility issues', async ({ page }) => {
 
       const accessibilityScanResults = await new AxeBuilder({ page })
