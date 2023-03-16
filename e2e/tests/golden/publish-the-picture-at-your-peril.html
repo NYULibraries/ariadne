@@ -30,7 +30,6 @@
         @import url('https://fonts.cdnfonts.com/css/montserrat');
     </style>
     <script defer="" src="/static/js/bundle.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.library.nyu.edu/statuspage-embed/index.min.css">
     <style>
         body {
             margin: 0;
@@ -13127,7 +13126,17 @@ h6 {
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <script src="https://cdn.library.nyu.edu/statuspage-embed/index.min.js"></script>
+    <script>
+        (function() {
+            if (window.IS_DEV_ENV) {
+                var script = document.createElement('script');
+                script.src = 'https://cdn.library.nyu.edu/statuspage-embed/index.min.js';
+                script.async = true;
+                document.body.appendChild(script);
+            }
+        })();
+    </script>
+
 
 
 
