@@ -9,9 +9,8 @@ const BACKEND_API_TESTDATA_DIR_IN_REPO = path.join(
   '..',
   '..',
   'backend',
-  'api',
+  'testutils',
   'testdata',
-  'server',
 );
 // If in a container, the backend/api/testdata/ files will have been copied into this directory.
 const BACKEND_API_TESTDATA_DIR_IN_CONTAINER = path.join(

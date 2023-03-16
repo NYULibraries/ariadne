@@ -1,10 +1,14 @@
 package sfx
 
 import (
+	"ariadne/testutils"
 	"bytes"
 	"errors"
+	"fmt"
 	"io/ioutil"
 	"net/http"
+	"regexp"
+	"strings"
 	"testing"
 )
 
@@ -81,8 +85,69 @@ func TestNewMultipleObjectsResponse(t *testing.T) {
 	}
 }
 
+func TestRemoveTarget(t *testing.T) {
+	targetURLsToRemove := []string{
+		"http://library.nyu.edu/ask/",
+		"http://proxy.library.nyu.edu/login\\\\?url=http://www.newyorker.com/archive",
+	}
+
+	for _, testCase := range testutils.TestCases {
+		for _, targetURLToRemove := range targetURLsToRemove {
+			sfxFakeResponseFixture, err := testutils.GetSFXFakeResponse(testCase)
+			if err != nil {
+				t.Fatal(err)
+			}
+
+			fakeSFXResponse := makeFakeSFXResponse(makeFakeHTTPResponse(sfxFakeResponseFixture))
+
+			// Generate stringified expected targets slice
+			originalTargetsStringified := fmt.Sprintf("%v", (*(*fakeSFXResponse.XMLResponseBody.ContextObject)[0].SFXContextObjectTargets)[0].Targets)
+			expectedTargetsStringified := getExpectedTargetsStringified(originalTargetsStringified, targetURLToRemove)
+			fakeSFXResponse.RemoveTarget(targetURLToRemove)
+
+			// Generate stringified targets slice that should now have `targetURLToRemove` removed
+			newTargetsStringified := fmt.Sprintf("%v", (*(*fakeSFXResponse.XMLResponseBody.ContextObject)[0].SFXContextObjectTargets)[0].Targets)
+
+			if newTargetsStringified != expectedTargetsStringified {
+				t.Errorf(
+					fmt.Sprintf(
+						"%s: expected %s; got %s",
+						testCase.Name,
+						expectedTargetsStringified,
+						newTargetsStringified,
+					),
+				)
+			}
+		}
+	}
+}
+
+func getExpectedTargetsStringified(targetsStringified string, targetURLToRemove string) string {
+	// Example string matched by this regexp: {ASK_A_LIBRARIAN_LCL Ask a Librarian http://library.nyu.edu/ask/  no 0xc00000ed50}
+	targetURLRegexp := regexp.MustCompile("{[^}]*" + targetURLToRemove + "[^}]*}")
+	expectedTargetsStringified := targetURLRegexp.ReplaceAllString(targetsStringified, "")
+
+	// Clean up whitespace
+	// ...when removed target came after another target
+	expectedTargetsStringified = strings.ReplaceAll(expectedTargetsStringified, "}  ", "} ")
+	// ...when removed target came before another target
+	expectedTargetsStringified = strings.ReplaceAll(expectedTargetsStringified, "  {", " {")
+	// ...when removed target was at the end of the slice
+	expectedTargetsStringified = strings.ReplaceAll(expectedTargetsStringified, " ]", "]")
+	// ...when removed target was at the beginning of the slice
+	expectedTargetsStringified = strings.ReplaceAll(expectedTargetsStringified, "[ ", "[")
+
+	return expectedTargetsStringified
+}
+
 func makeFakeHTTPResponse(body string) *http.Response {
 	return &http.Response{
 		Body: ioutil.NopCloser(bytes.NewBufferString(body)),
 	}
+}
+
+func makeFakeSFXResponse(httpResponse *http.Response) *SFXResponse {
+	fakeSFXResponse, _ := newSFXResponse(httpResponse)
+
+	return fakeSFXResponse
 }
