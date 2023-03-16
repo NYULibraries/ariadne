@@ -3,7 +3,6 @@ package sfx
 import (
 	"ariadne/testutils"
 	"bytes"
-	"encoding/json"
 	"errors"
 	"fmt"
 	"io/ioutil"

@@ -4,7 +4,6 @@ import (
 	"ariadne/sfx"
 	"ariadne/testutils"
 	"ariadne/util"
-	"encoding/json"
 	"flag"
 	"fmt"
 	"io"
@@ -30,11 +29,6 @@ var updateGoldenFiles = flag.Bool("update-golden-files", false, "update the gold
 
 func TestMain(m *testing.M) {
 	flag.Parse()
-
-	err := json.Unmarshal(testutils.TestCasesJSON, &testutils.TestCases)
-	if err != nil {
-		panic(fmt.Sprintf("Error reading test cases file: %s", err))
-	}
 
 	os.Exit(m.Run())
 }

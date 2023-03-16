@@ -2,6 +2,8 @@ package testutils
 
 import (
 	_ "embed"
+	"encoding/json"
+	"fmt"
 	"os"
 	"path/filepath"
 	"runtime"
@@ -33,6 +35,12 @@ func init() {
 	// We need this absolute path to this current directory to allow callers
 	// from other packages to be able to retrieve the stuff in testdata/.
 	testutilsPath = filepath.Dir(filename)
+
+	err := json.Unmarshal(TestCasesJSON, &TestCases)
+	if err != nil {
+		panic(fmt.Sprintf("Error reading test cases file: %s", err))
+	}
+
 }
 
 func GetGoldenValue(testCase TestCase) (string, error) {
