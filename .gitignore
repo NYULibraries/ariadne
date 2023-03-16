@@ -4,13 +4,13 @@ coverage.out
 .vscode
 .DS_store
 
-// Temporary files for diff'ing of actual values against golden files.
-backend/testutils/testdata/tmp/*
-!backend/testutils/testdata/tmp/actual/
-backend/testutils/testdata/tmp/actual/*
-!backend/testutils/testdata/tmp/actual/.gitkeep
-Makefile
+# Temporary files for diff'ing of actual values against golden files.
+backend/api/testdata/server/tmp/*
+!backend/api/testdata/server/tmp/actual/
+backend/api/testdata/server/tmp/actual/*
+!backend/api/testdata/server/tmp/actual/.gitkeep
 
-//for Vlad's dev environment
-go.work
+# For Vlad's dev environment
 c.out
+go.work
+Makefile
