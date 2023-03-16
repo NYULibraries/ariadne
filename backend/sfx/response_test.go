@@ -52,7 +52,7 @@ const dummyJSONResponse = `{
     ]
 }`
 
-func TestNewMultipleObjectsResponse(t *testing.T) {
+func TestNewSFXResponse(t *testing.T) {
 	testCases := []struct {
 		name          string
 		httpResponse  *http.Response
@@ -66,7 +66,7 @@ func TestNewMultipleObjectsResponse(t *testing.T) {
 
 	for _, testCase := range testCases {
 		t.Run(testCase.name, func(t *testing.T) {
-			multipleObjectsResponse, err := newSFXResponse(testCase.httpResponse)
+			sfxResponse, err := newSFXResponse(testCase.httpResponse)
 			if testCase.expectedError != nil {
 				if err == nil {
 					t.Errorf("newSFXResponse returned no error, expecting '%v'", testCase.expectedError)
@@ -78,8 +78,8 @@ func TestNewMultipleObjectsResponse(t *testing.T) {
 			if err != nil && testCase.expectedError == nil {
 				t.Errorf("newSFXResponse returned error '%v', expecting no errors", err)
 			}
-			if multipleObjectsResponse.JSON != testCase.expected {
-				t.Errorf("multipleObjectsResponse.JSON was '%v', expecting '%v'", multipleObjectsResponse.JSON, testCase.expected)
+			if sfxResponse.JSON != testCase.expected {
+				t.Errorf("sfxResponse.JSON was '%v', expecting '%v'", sfxResponse.JSON, testCase.expected)
 			}
 		})
 	}
@@ -103,6 +103,7 @@ func TestRemoveTarget(t *testing.T) {
 			// Generate stringified expected targets slice
 			originalTargetsStringified := fmt.Sprintf("%v", (*(*fakeSFXResponse.XMLResponseBody.ContextObject)[0].SFXContextObjectTargets)[0].Targets)
 			expectedTargetsStringified := getExpectedTargetsStringified(originalTargetsStringified, targetURLToRemove)
+
 			fakeSFXResponse.RemoveTarget(targetURLToRemove)
 
 			// Generate stringified targets slice that should now have `targetURLToRemove` removed
