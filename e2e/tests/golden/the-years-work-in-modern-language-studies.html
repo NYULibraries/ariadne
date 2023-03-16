@@ -13140,7 +13140,8 @@ h6 {
     -->
     <script>
         (function() {
-            if (window.IS_PROD_ENV) {
+            var env = '%REACT_APP_ENV%';
+            if (env === 'production') {
                 var script = document.createElement('script');
                 script.src = 'https://cdn.library.nyu.edu/statuspage-embed/index.min.js';
                 script.async = true;
