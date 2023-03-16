@@ -46,16 +46,17 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  <script>
-     (function () {
-        if (window.IS_PROD_ENV) {
+    <script>
+      (function () {
+        var env = '%REACT_APP_ENV%';
+        if (env === 'production') {
           var script = document.createElement('script');
           script.src = 'https://cdn.library.nyu.edu/statuspage-embed/index.min.js';
           script.async = true;
           document.body.appendChild(script);
         }
       })();
-  </script>
+    </script>
 </body>
 
 </html>
