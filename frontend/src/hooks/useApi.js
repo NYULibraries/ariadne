@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { getLinks } from '../aux/helpers';
 
 export default (apiFunc) => {
   const [resource, setResource] = useState(null);
@@ -13,8 +12,10 @@ export default (apiFunc) => {
       if (response.ok) {
         const responseBody = await response.json();
         if (responseBody.errors.length === 0) {
-          const arrOfLinks = getLinks(responseBody.records);
-          arrOfLinks.sort((a, b) => a.target_public_name.localeCompare(b.target_public_name));
+          // Currently the backend only returns single-record responses.
+          // That may change in the future.
+          const arrOfLinks = responseBody.records[0].links;
+          arrOfLinks.sort((a, b) => a.display_name.localeCompare(b.display_name));
           setResource(arrOfLinks);
         } else {
           setError(`The backend API returned errors: ${responseBody.errors.map((error) => `"${error}"`).join(', ')}`);

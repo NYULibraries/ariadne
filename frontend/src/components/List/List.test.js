@@ -6,12 +6,12 @@ import List from './List';
 
 const mockLinks = [
   {
-    target_url: 'https://www.example.com',
-    target_public_name: 'Example Website'
+    display_name: 'Example Website',
+    url: 'https://www.example.com',
   },
   {
-    target_url: 'https://www.example.org',
-    target_public_name: 'Example Organization'
+    display_name: 'Example Organization',
+    url: 'https://www.example.org',
   }
 ];
 
