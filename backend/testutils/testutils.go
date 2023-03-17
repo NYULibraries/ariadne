@@ -25,15 +25,22 @@ var TestCases []TestCase
 
 var testutilsPath string
 
+// We need to get the absolute path to this package in order to enable the function
+// for golden file and fixture file retrieval to be called from other packages
+// which would not be able to resolve the hardcoded relative paths used here.
 func init() {
-	// Get parent directory for this source file
+	// The `filename` string is the absolute path to this source file, which should
+	// be located at the root of the package directory.
 	_, filename, _, ok := runtime.Caller(0)
 	if !ok {
 		panic("ERROR: `runtime.Caller(0)` failed")
 	}
 
-	// We need this absolute path to this current directory to allow callers
-	// from other packages to be able to retrieve the stuff in testdata/.
+	// Get the path to the parent directory of this file.  Again, this is assuming
+	// that this `init()` function is defined in a package top level file -- or
+	// more precisely, that this file is in the same directory at the `testdata/`
+	// directory that is referenced in the relative paths used in the functions
+	// defined in this file.
 	testutilsPath = filepath.Dir(filename)
 
 	err := json.Unmarshal(TestCasesJSON, &TestCases)
