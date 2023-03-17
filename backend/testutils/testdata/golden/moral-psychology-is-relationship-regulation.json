@@ -1,48 +1,16 @@
 {
     "errors": [],
-    "records": {
-        "ctx_obj": [
-            {
-                "ctx_obj_targets": [
-                    {
-                        "target": [
-                            {
-                                "target_name": "APA_PSYCARTICLES",
-                                "target_public_name": "PsycARTICLES",
-                                "target_url": "http://proxy.library.nyu.edu/login?url=http://doi.apa.org/getdoi.cfm?doi=10.1037%2Fa0021867",
-                                "authentication": "",
-                                "proxy": "yes",
-                                "coverage": [
-                                    {
-                                        "coverage_text": [
-                                            {
-                                                "threshold_text": [
-                                                    {
-                                                        "coverage_statement": [
-                                                            "Available from 1894 volume: 1 issue: 1"
-                                                        ]
-                                                    }
-                                                ],
-                                                "embargo_text": [
-                                                    {}
-                                                ]
-                                            }
-                                        ],
-                                        "from": [
-                                            {
-                                                "year": "1894",
-                                                "volume": "1",
-                                                "issue": "1"
-                                            }
-                                        ],
-                                        "embargo": {}
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    }
+    "found": false,
+    "records": [
+        {
+            "citation_supplemental": {},
+            "links": [
+                {
+                    "display_name": "PsycARTICLES",
+                    "url": "http://proxy.library.nyu.edu/login?url=http://doi.apa.org/getdoi.cfm?doi=10.1037%2Fa0021867",
+                    "coverage_text": "Available from 1894 volume: 1 issue: 1"
+                }
+            ]
+        }
+    ]
 }

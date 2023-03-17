@@ -15,21 +15,9 @@ function deepFreeze(object) {
   return Object.freeze(object);
 }
 
-// Helper function for List.js component
-function getCoverageStatement(link) {
-  const coverage = link?.coverage?.[0];
-  return coverage ? coverage.coverage_text[0].threshold_text[0].coverage_statement?.join('. ') : '';
-}
-
-
 function getInstitutionQueryParameter() {
   const queryString = window.location.search;
   return getParameterFromQueryString(queryString, 'institution');
-}
-
-//  Helper functions for useApi hook
-function getLinks(jsonData) {
-  return jsonData.ctx_obj[0].ctx_obj_targets[0].target;
 }
 
 // Helper functions for Banner.js component
@@ -40,9 +28,7 @@ function getParameterFromQueryString(queryString, parameterName) {
 
 export {
   deepFreeze,
-  getCoverageStatement,
   getInstitutionQueryParameter,
-  getLinks,
   getParameterFromQueryString,
 };
 
