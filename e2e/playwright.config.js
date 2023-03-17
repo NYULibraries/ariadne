@@ -23,7 +23,6 @@ const config = {
      * For example in `await expect(locator).toHaveText();`
      */
     timeout: 10000,
-    toHaveScreenshot: { maxDiffPixels: 400 },
   },
   /* Run tests in files in parallel */
   fullyParallel: true,
