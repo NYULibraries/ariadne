@@ -2,10 +2,10 @@ import AskLibrarian, { ASK_LIBRARIAN_TEXT, ASK_LIBRARIAN_URL } from './AskLibrar
 
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import React from 'react';
+
 
 describe('AskLibrarian component', () => {
-    it('renders "Need Help?" when not loading', () => {
+    it('renders "Need Help?', () => {
         const { getByText } = render(<AskLibrarian />);
         expect(getByText('Need Help?')).toBeInTheDocument();
     });
@@ -17,7 +17,7 @@ describe('AskLibrarian component', () => {
         expect(link.getAttribute('href')).toBe(ASK_LIBRARIAN_URL);
     });
 
-    it('renders additional resources when not loading', () => {
+    it('renders additional resources', () => {
         const { queryAllByText } = render(<AskLibrarian />);
         expect(queryAllByText(/Additional Resources/).length).toBeGreaterThan(0);
     });

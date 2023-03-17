@@ -95,15 +95,15 @@ type ThresholdText struct {
 	CoverageStatement []string `xml:"coverage_statement" json:"coverage_statement,omitempty"`
 }
 
-func (multipleObjectsResponse *SFXResponse) RemoveTarget(targetURL string) {
-	currentTargets := (*(*multipleObjectsResponse.XMLResponseBody.ContextObject)[0].SFXContextObjectTargets)[0].Targets
+func (sfxResponse *SFXResponse) RemoveTarget(targetURL string) {
+	currentTargets := (*(*sfxResponse.XMLResponseBody.ContextObject)[0].SFXContextObjectTargets)[0].Targets
 	var newTargets []Target
 	for _, target := range *currentTargets {
 		if target.TargetUrl != targetURL {
 			newTargets = append(newTargets, target)
 		}
 	}
-	(*(*multipleObjectsResponse.XMLResponseBody.ContextObject)[0].SFXContextObjectTargets)[0].Targets = &newTargets
+	(*(*sfxResponse.XMLResponseBody.ContextObject)[0].SFXContextObjectTargets)[0].Targets = &newTargets
 }
 
 func newSFXResponse(httpResponse *http.Response) (*SFXResponse, error) {

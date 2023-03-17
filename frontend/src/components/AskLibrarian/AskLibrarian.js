@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types';
-
 const AskLibrarian = () => {
     return (
         <div className="ask-librarian">
@@ -27,11 +25,6 @@ const AskLibrarian = () => {
             </div>
         </div>
     );
-};
-
-
-AskLibrarian.propTypes = {
-    loading: PropTypes.bool.isRequired
 };
 
 export const ASK_LIBRARIAN_TEXT = 'Ask a Librarian';

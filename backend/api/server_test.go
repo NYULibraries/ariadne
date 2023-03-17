@@ -2,9 +2,8 @@ package api
 
 import (
 	"ariadne/sfx"
+	"ariadne/testutils"
 	"ariadne/util"
-	_ "embed"
-	"encoding/json"
 	"flag"
 	"fmt"
 	"io"
@@ -14,19 +13,6 @@ import (
 	"testing"
 )
 
-//go:embed testdata/server/test-cases.json
-var testCasesJSON []byte
-
-type TestCase struct {
-	// Identifier used for fixture and golden file basename.
-	Key string
-	// Human-readable name/description of test case
-	Name string
-	// OpenURL querystring
-	QueryString string
-}
-
-var testCases []TestCase
 var updateGoldenFiles = flag.Bool("update-golden-files", false, "update the golden files")
 
 // --update-sfx-fake-responses flag?
@@ -44,20 +30,15 @@ var updateGoldenFiles = flag.Bool("update-golden-files", false, "update the gold
 func TestMain(m *testing.M) {
 	flag.Parse()
 
-	err := json.Unmarshal(testCasesJSON, &testCases)
-	if err != nil {
-		panic(fmt.Sprintf("Error reading test cases file: %s", err))
-	}
-
 	os.Exit(m.Run())
 }
 
 func TestResponseJSONRoute(t *testing.T) {
-	var currentTestCase TestCase
+	var currentTestCase testutils.TestCase
 
 	fakeSFXServer := httptest.NewServer(
 		http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-			sfxFakeResponse, err := getSFXFakeResponse(currentTestCase)
+			sfxFakeResponse, err := testutils.GetSFXFakeResponse(currentTestCase)
 			if err != nil {
 				t.Fatal(err)
 			}
@@ -74,7 +55,7 @@ func TestResponseJSONRoute(t *testing.T) {
 
 	router := NewRouter()
 
-	for _, testCase := range testCases {
+	for _, testCase := range testutils.TestCases {
 		t.Run(testCase.Name, func(t *testing.T) {
 			currentTestCase = testCase
 
@@ -100,7 +81,7 @@ func TestResponseJSONRoute(t *testing.T) {
 				}
 			}
 
-			goldenValue, err := getGoldenValue(testCase)
+			goldenValue, err := testutils.GetGoldenValue(testCase)
 			if err != nil {
 				t.Fatalf("Error retrieving golden value for test case \"%s\": %s",
 					testCase.Name, err)
@@ -114,7 +95,7 @@ func TestResponseJSONRoute(t *testing.T) {
 						testCase.Name, err)
 				}
 
-				goldenFile := goldenFile(testCase)
+				goldenFile := testutils.GoldenFile(testCase)
 				actualFile := tmpFile(testCase)
 				diff, err := util.Diff(goldenFile, actualFile)
 				if err != nil {
@@ -130,40 +111,14 @@ func TestResponseJSONRoute(t *testing.T) {
 	}
 }
 
-func getGoldenValue(testCase TestCase) (string, error) {
-	return getTestdataFileContents(goldenFile(testCase))
-}
-
-func getSFXFakeResponse(testCase TestCase) (string, error) {
-	return getTestdataFileContents(sfxFakeResponseFile(testCase))
-}
-
-func getTestdataFileContents(filename string) (string, error) {
-	bytes, err := os.ReadFile(filename)
-
-	if err != nil {
-		return filename, err
-	}
-
-	return string(bytes), nil
-}
-
-func goldenFile(testCase TestCase) string {
-	return "testdata/server/golden/" + testCase.Key + ".json"
-}
-
-func sfxFakeResponseFile(testCase TestCase) string {
-	return "testdata/server/fixtures/sfx-fake-responses/" + testCase.Key + ".xml"
-}
-
-func tmpFile(testCase TestCase) string {
+func tmpFile(testCase testutils.TestCase) string {
 	return "testdata/server/tmp/actual/" + testCase.Key + ".json"
 }
 
-func updateGoldenFile(testCase TestCase, bytes []byte) error {
-	return os.WriteFile(goldenFile(testCase), bytes, 0644)
+func updateGoldenFile(testCase testutils.TestCase, bytes []byte) error {
+	return os.WriteFile(testutils.GoldenFile(testCase), bytes, 0644)
 }
 
-func writeActualToTmp(testCase TestCase, actual string) error {
+func writeActualToTmp(testCase testutils.TestCase, actual string) error {
 	return os.WriteFile(tmpFile(testCase), []byte(actual), 0644)
 }

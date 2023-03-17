@@ -201,7 +201,7 @@ For `zsh`, use the commands above and replace `bash` with `zsh`.
 ## Testing
 
 For documentation on the test cases used by both the backend and the frontend,
-see _[backend/api/testdata/server/README.md](backend/api/testdata/server/README.md)_.
+see _[backend/testutils/testdata/README.md](backend/testutils/testdata/README.md)_.
 
 Run all tests:
 
