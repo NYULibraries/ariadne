@@ -1,125 +1,26 @@
 {
     "errors": [],
-    "records": {
-        "ctx_obj": [
-            {
-                "ctx_obj_targets": [
-                    {
-                        "target": [
-                            {
-                                "target_name": "CAMBRIDGE_UNIVERSITY_PRESS_JOURNALS_COMPLETE",
-                                "target_public_name": "Cambridge University Press Journals Complete",
-                                "target_url": "http://proxy.library.nyu.edu/login?url=https://www.cambridge.org/core/product/113A938A653BAE7C42654C34EC40B874",
-                                "authentication": "",
-                                "proxy": "yes",
-                                "coverage": [
-                                    {
-                                        "coverage_text": [
-                                            {
-                                                "threshold_text": [
-                                                    {
-                                                        "coverage_statement": [
-                                                            "Available from 2002/01 volume: 1 issue: 1"
-                                                        ]
-                                                    }
-                                                ],
-                                                "embargo_text": [
-                                                    {}
-                                                ]
-                                            }
-                                        ],
-                                        "from": [
-                                            {
-                                                "year": "2002",
-                                                "month": "01",
-                                                "volume": "1",
-                                                "issue": "1"
-                                            }
-                                        ],
-                                        "embargo": {}
-                                    }
-                                ]
-                            },
-                            {
-                                "target_name": "EBSCOHOST_AMERICA_HISTORY_AND_LIFE_WITH_FULL_TEXT",
-                                "target_public_name": "EBSCOhost America History and Life with Full Text",
-                                "target_url": "http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?sid=Primo\u0026issue=2\u0026atitle=publish+the+picture+at+your+peril\u0026issn=1537-7814\u0026volume=20\u0026date=20210401\u0026title=JOURNAL+OF+THE+GILDED+AGE+AND+PROGRESSIVE+ERA\u0026genre=article\u0026spage=301",
-                                "authentication": "",
-                                "proxy": "yes",
-                                "coverage": [
-                                    {
-                                        "coverage_text": [
-                                            {
-                                                "threshold_text": [
-                                                    {
-                                                        "coverage_statement": [
-                                                            "Available from 2008/07/01"
-                                                        ]
-                                                    }
-                                                ],
-                                                "embargo_text": [
-                                                    {
-                                                        "embargo_statement": "Most recent 1 year(s) not available"
-                                                    }
-                                                ]
-                                            }
-                                        ],
-                                        "from": [
-                                            {
-                                                "year": "2008",
-                                                "month": "07",
-                                                "day": "01"
-                                            }
-                                        ],
-                                        "embargo": {
-                                            "availability": "not_available",
-                                            "days": "365"
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "target_name": "PROQUEST_CENTRAL",
-                                "target_public_name": "ProQuest Central",
-                                "target_url": "http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Aarticle\u0026res_dat=xri%3Apqm\u0026spage=301\u0026genre=article\u0026volume=20\u0026issn=1537-7814\u0026date=2021-04-01\u0026issue=2\u0026jtitle=JOURNAL%2BOF%2BTHE%2BGILDED%2BAGE%2BAND%2BPROGRESSIVE%2BERA\u0026url_ver=Z39.88-2004",
-                                "authentication": "",
-                                "proxy": "yes",
-                                "coverage": [
-                                    {
-                                        "coverage_text": [
-                                            {
-                                                "threshold_text": [
-                                                    {
-                                                        "coverage_statement": [
-                                                            "Available from 2011/01/01"
-                                                        ]
-                                                    }
-                                                ],
-                                                "embargo_text": [
-                                                    {
-                                                        "embargo_statement": "Most recent 1 year(s) not available"
-                                                    }
-                                                ]
-                                            }
-                                        ],
-                                        "from": [
-                                            {
-                                                "year": "2011",
-                                                "month": "01",
-                                                "day": "01"
-                                            }
-                                        ],
-                                        "embargo": {
-                                            "availability": "not_available",
-                                            "days": "365"
-                                        }
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    }
+    "found": false,
+    "records": [
+        {
+            "citation_supplemental": {},
+            "links": [
+                {
+                    "display_name": "Cambridge University Press Journals Complete",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://www.cambridge.org/core/product/113A938A653BAE7C42654C34EC40B874",
+                    "coverage_text": "Available from 2002/01 volume: 1 issue: 1"
+                },
+                {
+                    "display_name": "EBSCOhost America History and Life with Full Text",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?sid=Primo\u0026issue=2\u0026atitle=publish+the+picture+at+your+peril\u0026issn=1537-7814\u0026volume=20\u0026date=20210401\u0026title=JOURNAL+OF+THE+GILDED+AGE+AND+PROGRESSIVE+ERA\u0026genre=article\u0026spage=301",
+                    "coverage_text": "Available from 2008/07/01"
+                },
+                {
+                    "display_name": "ProQuest Central",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Aarticle\u0026res_dat=xri%3Apqm\u0026spage=301\u0026genre=article\u0026volume=20\u0026issn=1537-7814\u0026date=2021-04-01\u0026issue=2\u0026jtitle=JOURNAL%2BOF%2BTHE%2BGILDED%2BAGE%2BAND%2BPROGRESSIVE%2BERA\u0026url_ver=Z39.88-2004",
+                    "coverage_text": "Available from 2011/01/01"
+                }
+            ]
+        }
+    ]
 }
