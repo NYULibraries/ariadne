@@ -3,19 +3,30 @@
 exports[`List matches snapshot when error prop is passed 1`] = `
 <div
   class="list-group"
-/>
+>
+  <div
+    class="list-group-item list-group-item-action flex-column border-0"
+  />
+</div>
 `;
 
 exports[`List matches snapshot when links prop is empty 1`] = `
 <div
   class="list-group"
-/>
+>
+  <div
+    class="list-group-item list-group-item-action flex-column border-0"
+  />
+</div>
 `;
 
 exports[`List matches snapshot when links prop is passed 1`] = `
 <div
   class="list-group"
 >
+  <div
+    class="list-group-item list-group-item-action flex-column border-0"
+  />
   <div
     class="list-group-item list-group-item-action flex-column border-0"
   >
