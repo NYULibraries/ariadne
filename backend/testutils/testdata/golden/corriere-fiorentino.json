@@ -1,43 +1,16 @@
 {
     "errors": [],
-    "records": {
-        "ctx_obj": [
-            {
-                "ctx_obj_targets": [
-                    {
-                        "target": [
-                            {
-                                "target_name": "PRESSREADER",
-                                "target_public_name": "PressReader",
-                                "target_url": "http://proxy.library.nyu.edu/login?url=https://www.pressreader.com/italy/corriere-fiorentino",
-                                "authentication": "",
-                                "proxy": "yes",
-                                "coverage": [
-                                    {
-                                        "coverage_text": [
-                                            {
-                                                "threshold_text": [
-                                                    {}
-                                                ],
-                                                "embargo_text": [
-                                                    {
-                                                        "embargo_statement": "Most recent 3 month(s) available"
-                                                    }
-                                                ]
-                                            }
-                                        ],
-                                        "embargo": {
-                                            "availability": "available",
-                                            "month": "3",
-                                            "days": "90"
-                                        }
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    }
+    "found": false,
+    "records": [
+        {
+            "citation_supplemental": {},
+            "links": [
+                {
+                    "display_name": "PressReader",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://www.pressreader.com/italy/corriere-fiorentino",
+                    "coverage_text": ""
+                }
+            ]
+        }
+    ]
 }

@@ -1,149 +1,31 @@
 {
     "errors": [],
-    "records": {
-        "ctx_obj": [
-            {
-                "ctx_obj_targets": [
-                    {
-                        "target": [
-                            {
-                                "target_name": "EBSCOHOST_ACADEMIC_SEARCH_COMPLETE",
-                                "target_public_name": "EBSCOhost Academic Search Complete",
-                                "target_url": "http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?atitle=%22life%22+magazine+and+the+power+of+photography\u0026issue=4\u0026sid=Primo\u0026genre=article\u0026spage=144\u0026title=The+Art+Bulletin\u0026date=20211201\u0026issn=0004-3079\u0026volume=103",
-                                "authentication": "",
-                                "proxy": "yes",
-                                "coverage": [
-                                    {
-                                        "coverage_text": [
-                                            {
-                                                "threshold_text": [
-                                                    {
-                                                        "coverage_statement": [
-                                                            "Available from 1975/03/01"
-                                                        ]
-                                                    }
-                                                ],
-                                                "embargo_text": [
-                                                    {}
-                                                ]
-                                            }
-                                        ],
-                                        "from": [
-                                            {
-                                                "year": "1975",
-                                                "month": "03",
-                                                "day": "01"
-                                            }
-                                        ],
-                                        "embargo": {}
-                                    }
-                                ]
-                            },
-                            {
-                                "target_name": "EBSCOHOST_HUMANITIES_FULL_TEXT_WILSON",
-                                "target_public_name": "EBSCOhost Humanities Full Text",
-                                "target_url": "http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?issue=4\u0026atitle=%22life%22+magazine+and+the+power+of+photography\u0026sid=Primo\u0026title=The+Art+Bulletin\u0026genre=article\u0026spage=144\u0026issn=0004-3079\u0026volume=103\u0026date=20211201",
-                                "authentication": "",
-                                "proxy": "yes",
-                                "coverage": [
-                                    {
-                                        "coverage_text": [
-                                            {
-                                                "threshold_text": [
-                                                    {
-                                                        "coverage_statement": [
-                                                            "Available from 1987/12/01"
-                                                        ]
-                                                    }
-                                                ],
-                                                "embargo_text": [
-                                                    {}
-                                                ]
-                                            }
-                                        ],
-                                        "from": [
-                                            {
-                                                "year": "1987",
-                                                "month": "12",
-                                                "day": "01"
-                                            }
-                                        ],
-                                        "embargo": {}
-                                    }
-                                ]
-                            },
-                            {
-                                "target_name": "EBSCOHOST_OMNIFILE_FULL_TEXT_MEGA_WILSON",
-                                "target_public_name": "EBSCOhost OmniFile Full Text Mega",
-                                "target_url": "http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?title=The+Art+Bulletin\u0026genre=article\u0026spage=144\u0026issn=0004-3079\u0026volume=103\u0026date=20211201\u0026issue=4\u0026atitle=%22life%22+magazine+and+the+power+of+photography\u0026sid=Primo",
-                                "authentication": "",
-                                "proxy": "yes",
-                                "coverage": [
-                                    {
-                                        "coverage_text": [
-                                            {
-                                                "threshold_text": [
-                                                    {
-                                                        "coverage_statement": [
-                                                            "Available from 1995/03/01"
-                                                        ]
-                                                    }
-                                                ],
-                                                "embargo_text": [
-                                                    {}
-                                                ]
-                                            }
-                                        ],
-                                        "from": [
-                                            {
-                                                "year": "1995",
-                                                "month": "03",
-                                                "day": "01"
-                                            }
-                                        ],
-                                        "embargo": {}
-                                    }
-                                ]
-                            },
-                            {
-                                "target_name": "TAYLOR_AND_FRANCIS_COMPLETE_LIBRARY_DATABASE_MODEL",
-                                "target_public_name": "Taylor \u0026 Francis Complete Library Database Model",
-                                "target_url": "http://proxy.library.nyu.edu/login?url=https://www.tandfonline.com/openurl?issue=4\u0026spage=144\u0026genre=article\u0026volume=103\u0026issn=0004-3079\u0026date=2021",
-                                "authentication": "",
-                                "proxy": "yes",
-                                "coverage": [
-                                    {
-                                        "coverage_text": [
-                                            {
-                                                "threshold_text": [
-                                                    {
-                                                        "coverage_statement": [
-                                                            "Available from 1913/09/01 volume: 1 issue: 1"
-                                                        ]
-                                                    }
-                                                ],
-                                                "embargo_text": [
-                                                    {}
-                                                ]
-                                            }
-                                        ],
-                                        "from": [
-                                            {
-                                                "year": "1913",
-                                                "month": "09",
-                                                "day": "01",
-                                                "volume": "1",
-                                                "issue": "1"
-                                            }
-                                        ],
-                                        "embargo": {}
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    }
+    "found": false,
+    "records": [
+        {
+            "citation_supplemental": {},
+            "links": [
+                {
+                    "display_name": "EBSCOhost Academic Search Complete",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?atitle=%22life%22+magazine+and+the+power+of+photography\u0026issue=4\u0026sid=Primo\u0026genre=article\u0026spage=144\u0026title=The+Art+Bulletin\u0026date=20211201\u0026issn=0004-3079\u0026volume=103",
+                    "coverage_text": "Available from 1975/03/01"
+                },
+                {
+                    "display_name": "EBSCOhost Humanities Full Text",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?issue=4\u0026atitle=%22life%22+magazine+and+the+power+of+photography\u0026sid=Primo\u0026title=The+Art+Bulletin\u0026genre=article\u0026spage=144\u0026issn=0004-3079\u0026volume=103\u0026date=20211201",
+                    "coverage_text": "Available from 1987/12/01"
+                },
+                {
+                    "display_name": "EBSCOhost OmniFile Full Text Mega",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?title=The+Art+Bulletin\u0026genre=article\u0026spage=144\u0026issn=0004-3079\u0026volume=103\u0026date=20211201\u0026issue=4\u0026atitle=%22life%22+magazine+and+the+power+of+photography\u0026sid=Primo",
+                    "coverage_text": "Available from 1995/03/01"
+                },
+                {
+                    "display_name": "Taylor \u0026 Francis Complete Library Database Model",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://www.tandfonline.com/openurl?issue=4\u0026spage=144\u0026genre=article\u0026volume=103\u0026issn=0004-3079\u0026date=2021",
+                    "coverage_text": "Available from 1913/09/01 volume: 1 issue: 1"
+                }
+            ]
+        }
+    ]
 }
