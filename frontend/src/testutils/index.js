@@ -109,3 +109,69 @@ export {
   getTestCasesBackendResponsesIncludeErrors,
   getTestCasesBackendSuccess,
 };
+
+export default [
+  {
+    name: 'Give to the Libraries',
+    href: 'https://library.nyu.edu/giving/'
+  },
+  {
+    name: 'Login to NYU Home',
+    href: 'http://home.nyu.edu',
+    target: '_blank',
+    rel: 'noreferrer'
+  },
+  {
+    name: 'Departments',
+    href: 'https://library.nyu.edu/departments/'
+  },
+  {
+    name: 'Staff Wiki',
+    href: 'https://wiki.library.nyu.edu/',
+    target: '_blank',
+    rel: 'noreferrer'
+  },
+  {
+    name: 'Staff Directory',
+    href: 'https://library.nyu.edu/people/'
+  },
+  {
+    name: 'Status Page',
+    href: 'https://nyulibraries.statuspage.io/',
+    target: '_blank',
+    rel: 'noreferrer'
+  },
+  {
+    name: 'Research Guides',
+    href: 'https://guides.nyu.edu/',
+    target: '_blank'
+  },
+  {
+    name: 'FAQs',
+    href: 'https://library.answers.nyu.edu/',
+    target: '_blank',
+    rel: 'noreferrer'
+  },
+  {
+    name: 'Career Opportunities',
+    href: 'https://library.nyu.edu/about/who-we-are/career-opportunities/'
+  },
+  {
+    name: 'Contact Us',
+    href: 'https://library.nyu.edu/contact/'
+  },
+  {
+    name: 'Accessibility',
+    href: 'https://www.nyu.edu/footer/accessibility.html',
+    target: '_blank',
+    rel: 'noreferrer'
+  },
+  {
+    name: 'Subscribe to our email list',
+    href: 'https://signup.e2ma.net/signup/1934378/1922970/'
+  },
+  {
+    name: 'Privacy policy',
+    href: 'https://library.nyu.edu/privacy-policy/'
+  }
+];
