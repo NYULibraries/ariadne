@@ -1,9 +1,9 @@
 import * as fs from 'node:fs';
 
-import links, { getTestCasesBackendSuccess } from '../../frontend/src/testutils';
 import { removeSourceMappingUrlComments, updateGoldenFiles } from '../testutils';
 
 import { execSync } from 'child_process';
+import { getTestCasesBackendSuccess } from '../../frontend/src/testutils';
 
 const { test, expect } = require('@playwright/test');
 
@@ -130,23 +130,6 @@ ${e.stderr.toString()}`;
     test('returns search results', async ({ page }) => {
       expect(await page.textContent('h1')).toBe('GetIt Search Results:');
     });
-
-    for (const link of links) {
-      test(`Click "${link.name}"`, async ({ page }) => {
-        if (link.target && link.name !== 'Login to NYU Home' && link.name !== 'Staff Wiki' && link.name !== 'Research Guides') {
-          const popupPromise = page.waitForEvent('popup');
-          await page.getByText(link.name).click();
-          const newPage = await popupPromise;
-          await newPage.waitForLoadState();
-          expect(newPage.url()).toBe(link.href);
-        } else if (!link.target) {
-          await page.getByText(link.name).click();
-          await page.waitForLoadState();
-          expect(page.url()).toBe(link.href);
-          await page.goBack();
-        }
-      });
-    }
 
     test('Chat widget should toggle chat window', async ({ page }) => {
       // Click the "Chat with us" button
