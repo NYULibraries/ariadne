@@ -1,0 +1,353 @@
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Content-Type: application/xml; charset=ISO-8859-1
+Date: Mon, 20 Mar 2023 17:35:52 GMT
+Server: Apache
+
+335a
+<?xml version="1.0" encoding="utf-8"?>
+
+<ctx_obj_set>
+ <ctx_obj identifier="">
+  <ctx_obj_attributes>&lt;perldata&gt;
+ &lt;hash&gt;
+  &lt;item key="@rft.au"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;Yue-Hashimoto, Anne O&lt;/item&gt;
+    &lt;item key="1"&gt;LaPolla, Randy J.; Thurgood, Graham&lt;/item&gt;
+    &lt;item key="2"&gt;LaPolla, Randy J.&lt;/item&gt;
+    &lt;item key="3"&gt;Thurgood, Graham&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.btitle"&gt;Sino-Tibetan languages&lt;/item&gt;
+  &lt;item key="sfx.doi_url"&gt;http://dx.doi.org&lt;/item&gt;
+  &lt;item key="rft.object_id"&gt;1000000000351406&lt;/item&gt;
+  &lt;item key="rft.eisbn_10"&gt;1-299-14013-0&lt;/item&gt;
+  &lt;item key="@rft.aulast"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;YUE-HASHIMOTO&lt;/item&gt;
+    &lt;item key="1"&gt;LaPolla&lt;/item&gt;
+    &lt;item key="2"&gt;LaPolla&lt;/item&gt;
+    &lt;item key="3"&gt;Thurgood&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="@rft.isbn_additional"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;978-0-415-77295-2&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="@rft.auinit"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;A O&lt;/item&gt;
+    &lt;item key="1"&gt;&lt;/item&gt;
+    &lt;item key="2"&gt;R J&lt;/item&gt;
+    &lt;item key="3"&gt;G&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.pub"&gt;Routledge&lt;/item&gt;
+  &lt;item key="rft.language"&gt;eng&lt;/item&gt;
+  &lt;item key="rft.date"&gt;2003&lt;/item&gt;
+  &lt;item key="rft.title"&gt;Sino-Tibetan languages&lt;/item&gt;
+  &lt;item key="sfx.sourcename"&gt;DEFAULT&lt;/item&gt;
+  &lt;item key="contains_portfolios"&gt;0&lt;/item&gt;
+  &lt;item key="@rfe_id"&gt;
+   &lt;array&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="sfx.response_type"&gt;multi_obj_xml&lt;/item&gt;
+  &lt;item key="sfx.sid"&gt;DEFAULT&lt;/item&gt;
+  &lt;item key="existing_ts_ids"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;20430000000000002&lt;/item&gt;
+    &lt;item key="1"&gt;111027614344001&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.isbn_10"&gt;0-7007-1129-5&lt;/item&gt;
+  &lt;item key="rft.year"&gt;2003&lt;/item&gt;
+  
+  &lt;item key="rft.genre"&gt;book&lt;/item&gt;
+  &lt;item key="@rft.aufirst"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;Anne&lt;/item&gt;
+    &lt;item key="1"&gt;Randy J.; Thurgood&lt;/item&gt;
+    &lt;item key="2"&gt;Randy J.&lt;/item&gt;
+    &lt;item key="3"&gt;Graham&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.eisbn_13"&gt;978-1-299-14013-4&lt;/item&gt;
+  &lt;item key="@rft.stitle"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;SINO-TIBETAN LANGUAGES : ROUTLEDGE LANGUAGE FAMILY SERIES&lt;/item&gt;
+    &lt;item key="1"&gt;THE SINO-TIBETAN LANGUAGES&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.object_type"&gt;BOOK&lt;/item&gt;
+  &lt;item key="@rft_id"&gt;
+   &lt;array&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="@rft.eisbn_additional"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;9786610450749&lt;/item&gt;
+    &lt;item key="1"&gt;978-1-135-79718-8&lt;/item&gt;
+    &lt;item key="2"&gt;978-1-280-45074-7&lt;/item&gt;
+    &lt;item key="3"&gt;978-0-203-22105-1&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="sfx.ignore_char_set"&gt;1&lt;/item&gt;
+  &lt;item key="@rft.auinitm"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;O&lt;/item&gt;
+    &lt;item key="1"&gt;&lt;/item&gt;
+    &lt;item key="2"&gt;J&lt;/item&gt;
+    &lt;item key="3"&gt;&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.isbn"&gt;0-7007-1129-5&lt;/item&gt;
+  &lt;item key="@rft.auinit1"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;A&lt;/item&gt;
+    &lt;item key="1"&gt;&lt;/item&gt;
+    &lt;item key="2"&gt;R&lt;/item&gt;
+    &lt;item key="3"&gt;G&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="req.session_id"&gt;sA9194F42-C745-11ED-A23B-650F4131B499&lt;/item&gt;
+  &lt;item key="sfx.request_id"&gt;25770424&lt;/item&gt;
+  &lt;item key="rft.place"&gt;London&lt;/item&gt;
+  &lt;item key="_stash"&gt;
+   &lt;hash&gt;
+   &lt;/hash&gt;
+  &lt;/item&gt;
+  &lt;item key="fetchid"&gt;0700711295&lt;/item&gt;
+  &lt;item key="url_ctx_fmt"&gt;info:ofi/fmt:xml:xsd:ctx&lt;/item&gt;
+  &lt;item key="sfx.search_by_title"&gt;1&lt;/item&gt;
+  &lt;item key="rft.isbn_13"&gt;978-0-7007-1129-1&lt;/item&gt;
+  &lt;item key="rft.eisbn"&gt;1-299-14013-0&lt;/item&gt;
+ &lt;/hash&gt;
+&lt;/perldata&gt;
+</ctx_obj_attributes>
+  <ctx_obj_targets>
+   <target>
+    <target_name>DOCDEL_ILLIAD</target_name>
+    <target_public_name>Bobst Library  Interlibrary Loan</target_public_name>
+    <object_portfolio_id></object_portfolio_id>
+    <target_id>111027614344000</target_id>
+    <interface_id>111027614344000</interface_id>
+    <interface_name>DOCDEL_ILLIAD</interface_name>
+    <target_service_id>111027614344001</target_service_id>
+    <service_type>getDocumentDelivery</service_type>
+    <parser>ILLiad::DDL</parser>
+    <parse_param>url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL &amp; id_type=</parse_param>
+    <proxy>yes</proxy>
+    <crossref>yes</crossref>
+    <note></note>
+    <authentication></authentication>
+    <char_set>utf8</char_set>
+    <displayer></displayer>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?date=2003&amp;sid=DEFAULT%20(Via%20SFX)&amp;title=Sino-Tibetan%20languages&amp;aufirst=Anne&amp;year=2003&amp;isbn=0-7007-1129-5&amp;genre=book&amp;aulast=YUE-HASHIMOTO</target_url>
+    <is_related>no</is_related>
+    <coverage>
+     <coverage_text>
+      <threshold_text></threshold_text>
+      <embargo_text></embargo_text>
+     </coverage_text>
+     <embargo></embargo>
+    </coverage>
+   </target>
+   <target>
+    <target_name>ASK_A_LIBRARIAN_LCL</target_name>
+    <target_public_name>Ask a Librarian</target_public_name>
+    <object_portfolio_id></object_portfolio_id>
+    <target_id>20430000000000002</target_id>
+    <interface_id>20430000000000002</interface_id>
+    <interface_name>ASK_A_LIBRARIAN</interface_name>
+    <target_service_id>20430000000000002</target_service_id>
+    <service_type>getWebService</service_type>
+    <parser>Generic</parser>
+    <parse_param>IF () "http://library.nyu.edu/ask/"</parse_param>
+    <proxy>no</proxy>
+    <crossref>no</crossref>
+    <note></note>
+    <authentication></authentication>
+    <char_set>iso-8859-1</char_set>
+    <displayer></displayer>
+    <target_url>http://library.nyu.edu/ask/</target_url>
+    <is_related>no</is_related>
+    <coverage>
+     <coverage_text>
+      <threshold_text></threshold_text>
+      <embargo_text></embargo_text>
+     </coverage_text>
+     <embargo></embargo>
+    </coverage>
+   </target>
+  </ctx_obj_targets>
+ </ctx_obj>
+ <ctx_obj identifier="">
+  <ctx_obj_attributes>&lt;perldata&gt;
+ &lt;hash&gt;
+  &lt;item key="req.session_id"&gt;sA9194F42-C745-11ED-A23B-650F4131B499&lt;/item&gt;
+  &lt;item key="rft.isbn"&gt;1-138-78332-3&lt;/item&gt;
+  &lt;item key="@rft.auinitm"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;O&lt;/item&gt;
+    &lt;item key="1"&gt;&lt;/item&gt;
+    &lt;item key="2"&gt;J&lt;/item&gt;
+    &lt;item key="3"&gt;&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="@rft.auinit1"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;A&lt;/item&gt;
+    &lt;item key="1"&gt;&lt;/item&gt;
+    &lt;item key="2"&gt;R&lt;/item&gt;
+    &lt;item key="3"&gt;G&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.isbn_13"&gt;978-1-138-78332-4&lt;/item&gt;
+  &lt;item key="sfx.search_by_title"&gt;1&lt;/item&gt;
+  &lt;item key="rft.eisbn"&gt;1-315-39948-2&lt;/item&gt;
+  &lt;item key="fetchid"&gt;1138783323&lt;/item&gt;
+  &lt;item key="sfx.request_id"&gt;25770424&lt;/item&gt;
+  &lt;item key="url_ctx_fmt"&gt;info:ofi/fmt:xml:xsd:ctx&lt;/item&gt;
+  &lt;item key="@rft.aufirst"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;Anne&lt;/item&gt;
+    &lt;item key="1"&gt;Randy J.; Thurgood&lt;/item&gt;
+    &lt;item key="2"&gt;Randy J.&lt;/item&gt;
+    &lt;item key="3"&gt;Graham&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.eisbn_13"&gt;978-1-315-39948-5&lt;/item&gt;
+  &lt;item key="@rft.eisbn_additional"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;978-1-315-39950-8&lt;/item&gt;
+    &lt;item key="1"&gt;978-1-315-39949-2&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.object_type"&gt;BOOK&lt;/item&gt;
+  &lt;item key="@rft_id"&gt;
+   &lt;array&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.genre"&gt;book&lt;/item&gt;
+  &lt;item key="sfx.ignore_char_set"&gt;1&lt;/item&gt;
+  &lt;item key="sfx.sourcename"&gt;DEFAULT&lt;/item&gt;
+  &lt;item key="@rft.aucorp"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;LaPolla, Randy J.; Thurgood, Graham&lt;/item&gt;
+    &lt;item key="1"&gt;LaPolla, Randy J.&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.year"&gt;2003&lt;/item&gt;
+  
+  &lt;item key="@rfe_id"&gt;
+   &lt;array&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="existing_ts_ids"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;20430000000000002&lt;/item&gt;
+    &lt;item key="1"&gt;111027614344001&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.isbn_10"&gt;1-138-78332-3&lt;/item&gt;
+  &lt;item key="sfx.sid"&gt;DEFAULT&lt;/item&gt;
+  &lt;item key="sfx.response_type"&gt;multi_obj_xml&lt;/item&gt;
+  &lt;item key="sfx.doi_url"&gt;http://dx.doi.org&lt;/item&gt;
+  &lt;item key="rft.eisbn_10"&gt;1-315-39948-2&lt;/item&gt;
+  &lt;item key="rft.object_id"&gt;4340000000023977&lt;/item&gt;
+  &lt;item key="@rft.au"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;Yue-Hashimoto, Anne O&lt;/item&gt;
+    &lt;item key="1"&gt;LaPolla, Randy J.; Thurgood, Graham&lt;/item&gt;
+    &lt;item key="2"&gt;LaPolla, Randy J.&lt;/item&gt;
+    &lt;item key="3"&gt;Thurgood, Graham&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.btitle"&gt;Routledge Language Family Series : The Sino-Tibetan Languages (2)&lt;/item&gt;
+  &lt;item key="rft.title"&gt;Routledge Language Family Series : The Sino-Tibetan Languages (2)&lt;/item&gt;
+  &lt;item key="rft.date"&gt;2003&lt;/item&gt;
+  &lt;item key="@rft.auinit"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;A O&lt;/item&gt;
+    &lt;item key="1"&gt;&lt;/item&gt;
+    &lt;item key="2"&gt;R J&lt;/item&gt;
+    &lt;item key="3"&gt;G&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="@rft.aulast"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;YUE-HASHIMOTO&lt;/item&gt;
+    &lt;item key="1"&gt;LaPolla&lt;/item&gt;
+    &lt;item key="2"&gt;LaPolla&lt;/item&gt;
+    &lt;item key="3"&gt;Thurgood&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.pub"&gt;Routledge&lt;/item&gt;
+  &lt;item key="rft.language"&gt;eng&lt;/item&gt;
+ &lt;/hash&gt;
+&lt;/perldata&gt;
+</ctx_obj_attributes>
+  <ctx_obj_targets>
+   <target>
+    <target_name>DOCDEL_ILLIAD</target_name>
+    <target_public_name>Bobst Library  Interlibrary Loan</target_public_name>
+    <object_portfolio_id></object_portfolio_id>
+    <target_id>111027614344000</target_id>
+    <interface_id>111027614344000</interface_id>
+    <interface_name>DOCDEL_ILLIAD</interface_name>
+    <target_service_id>111027614344001</target_service_id>
+    <service_type>getDocumentDelivery</service_type>
+    <parser>ILLiad::DDL</parser>
+    <parse_param>url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL &amp; id_type=</parse_param>
+    <proxy>yes</proxy>
+    <crossref>yes</crossref>
+    <note></note>
+    <authentication></authentication>
+    <char_set>utf8</char_set>
+    <displayer></displayer>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?title=Routledge%20Language%20Family%20Series%20%3A%20The%20Sino-Tibetan%20Languages%20(2)&amp;date=2003&amp;sid=DEFAULT%20(Via%20SFX)&amp;isbn=1-138-78332-3&amp;genre=book&amp;aulast=YUE-HASHIMOTO&amp;year=2003&amp;aufirst=Anne</target_url>
+    <is_related>no</is_related>
+    <coverage>
+     <coverage_text>
+      <threshold_text></threshold_text>
+      <embargo_text></embargo_text>
+     </coverage_text>
+     <embargo></embargo>
+    </coverage>
+   </target>
+   <target>
+    <target_name>ASK_A_LIBRARIAN_LCL</target_name>
+    <target_public_name>Ask a Librarian</target_public_name>
+    <object_portfolio_id></object_portfolio_id>
+    <target_id>20430000000000002</target_id>
+    <interface_id>20430000000000002</interface_id>
+    <interface_name>ASK_A_LIBRARIAN</interface_name>
+    <target_service_id>20430000000000002</target_service_id>
+    <service_type>getWebService</service_type>
+    <parser>Generic</parser>
+    <parse_param>IF () "http://library.nyu.edu/ask/"</parse_param>
+    <proxy>no</proxy>
+    <crossref>no</crossref>
+    <note></note>
+    <authentication></authentication>
+    <char_set>iso-8859-1</char_set>
+    <displayer></displayer>
+    <target_url>http://library.nyu.edu/ask/</target_url>
+    <is_related>no</is_related>
+    <coverage>
+     <coverage_text>
+      <threshold_text></threshold_text>
+      <embargo_text></embargo_text>
+     </coverage_text>
+     <embargo></embargo>
+    </coverage>
+   </target>
+  </ctx_obj_targets>
+ </ctx_obj>
+</ctx_obj_set>
+0
+
+
