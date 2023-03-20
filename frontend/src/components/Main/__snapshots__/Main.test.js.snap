@@ -1400,6 +1400,9 @@ exports[`Backend success "Life" Magazine and the Power of Photography renders co
           >
             <div
               class="list-group-item list-group-item-action flex-column border-0"
+            />
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
             >
               <div
                 class="row"
@@ -1691,6 +1694,9 @@ exports[`Backend success Can community task groups learn from the principles of 
           >
             <div
               class="list-group-item list-group-item-action flex-column border-0"
+            />
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
             >
               <div
                 class="row"
@@ -1890,6 +1896,9 @@ exports[`Backend success Corriere Fiorentino renders correctly 1`] = `
             class="list-group"
             style=""
           >
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            />
             <div
               class="list-group-item list-group-item-action flex-column border-0"
             >
@@ -2121,6 +2130,9 @@ exports[`Backend success Design of LED light therapy device based on free-form l
           >
             <div
               class="list-group-item list-group-item-action flex-column border-0"
+            />
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
             >
               <div
                 class="row"
@@ -2348,6 +2360,9 @@ exports[`Backend success Editorial cartoon renders correctly 1`] = `
             class="list-group"
             style=""
           >
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            />
             <div
               class="list-group-item list-group-item-action flex-column border-0"
             >
@@ -2581,6 +2596,9 @@ exports[`Backend success Modelling Modular Living: Furniture and Life Magazine a
           >
             <div
               class="list-group-item list-group-item-action flex-column border-0"
+            />
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
             >
               <div
                 class="row"
@@ -2807,6 +2825,9 @@ exports[`Backend success Moral psychology is relationship regulation: moral moti
           >
             <div
               class="list-group-item list-group-item-action flex-column border-0"
+            />
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
             >
               <div
                 class="row"
@@ -3017,6 +3038,9 @@ exports[`Backend success Our Lady of everyday life : la Virgen de Guadalupe and 
             class="list-group"
             style=""
           >
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            />
             <div
               class="list-group-item list-group-item-action flex-column border-0"
             >
@@ -3246,6 +3270,9 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
             class="list-group"
             style=""
           >
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            />
             <div
               class="list-group-item list-group-item-action flex-column border-0"
             >
@@ -3519,6 +3546,9 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
           >
             <div
               class="list-group-item list-group-item-action flex-column border-0"
+            />
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
             >
               <div
                 class="row"
@@ -3781,6 +3811,9 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
             class="list-group"
             style=""
           >
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            />
             <div
               class="list-group-item list-group-item-action flex-column border-0"
             >
@@ -4259,6 +4292,9 @@ exports[`Backend success The Year's work in modern language studies. renders cor
             class="list-group"
             style=""
           >
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            />
             <div
               class="list-group-item list-group-item-action flex-column border-0"
             >
