@@ -21,9 +21,7 @@ func NewRouter() *http.ServeMux {
 
 // Handler for the endpoint used by the frontend
 func ResolverHandler(w http.ResponseWriter, r *http.Request) {
-	setCORS(&w)
-
-	w.Header().Add("Content-Type", "application/json")
+	setHeaders(&w)
 
 	sfxRequest, err := sfx.NewSFXRequest(r.URL.RawQuery)
 	if err != nil {
@@ -42,8 +40,9 @@ func ResolverHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintln(w, string(responseJSON))
 }
 
-func setCORS(w *http.ResponseWriter) {
+func setHeaders(w *http.ResponseWriter) {
 	(*w).Header().Set("Access-Control-Allow-Origin", "*")
+	(*w).Header().Set("Content-Type", "application/json")
 }
 
 func handleError(err error, w http.ResponseWriter, message string) {

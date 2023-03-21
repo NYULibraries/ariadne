@@ -1,0 +1,16 @@
+{
+    "errors": [],
+    "found": false,
+    "records": [
+        {
+            "citation_supplemental": {},
+            "links": [
+                {
+                    "display_name": "Bobst Library  Interlibrary Loan",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?sid=DEFAULT%20(Via%20SFX)\u0026issn=0018-2753\u0026title=History%20Today\u0026genre=article",
+                    "coverage_text": ""
+                }
+            ]
+        }
+    ]
+}
