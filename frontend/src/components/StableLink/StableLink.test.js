@@ -4,16 +4,15 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 import StableLink from './StableLink';
 
-beforeAll(() => {
-    Object.defineProperty(navigator, 'clipboard', {
-        value: {
-            writeText: jest.fn().mockResolvedValue(),
-        },
-    });
-});
-
-
 describe('StableLink', () => {
+    beforeAll(() => {
+        Object.defineProperty(navigator, 'clipboard', {
+            value: {
+                writeText: jest.fn().mockResolvedValue(),
+            },
+        });
+    });
+
     test('renders the main button', () => {
         render(<StableLink />);
         const mainButton = screen.getByText('🔗 Create a stable link to this page');
