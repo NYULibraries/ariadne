@@ -123,26 +123,36 @@ jobs:
           command: |
             docker-compose build backend-test
       - run:
-          name: Check formatting
-          command: |
-            gofmt_result="$( docker-compose run backend-test /bin/bash -c 'export APP_PATH=/app/; if [[ ! -z $( find $APP_PATH -name "*.go\
-            " ) ]]; then gofmt -l $APP_PATH; else echo >&2 "No *.go files found in path: $APP_PATH"; fi' )"
-
-            # Even if `gofmt -l $APP_PATH` returns no paths, there still seem to
-            # be some non-printing characters in `gofmt_result` (in CircleCI output,
-            # they appear as "^@" characters), so instead of doing a `test -z` test,
-            # simply check for the presence of alphanumeric characters, which
-            # would only be present in the output if `gofmt` returned paths or
-            # if an error occurred.
-            if [[ "$gofmt_result" =~ [[:alnum:]] ]]
-            then
-                echo -e "\n\ngofmt check fail:\n$gofmt_result"
-                exit_status=1
-            else
-                exit_status=0
-            fi
-
-            exit $exit_status
+#          Disabling `gofmt` checks for now, as `gofmt` in CircleCI is yielding different
+#          results than `gofmt` on local, and also appears to be erroneously
+#          reporting non-existent differences.  NOTE: The "^@" issue referred to
+#          in the command comments has already been resolved.  The examples below
+#          are due to different causes.
+#
+#          Examples:
+#             * Commit that fixes false positive: https://github.com/NYULibraries/ariadne/commit/bc07fb2b9cac82916d83c39506d30868b1f244a3
+#             * Most recent failed CircleCI job due to another apparent false positive (local `gofmt` yields no output):
+#               https://app.circleci.com/pipelines/github/NYULibraries/ariadne/581/workflows/25cd608c-686d-45ed-ade1-3730ccf058e9/jobs/2377
+#          name: Check formatting
+#          command: |
+#            gofmt_result="$( docker-compose run backend-test /bin/bash -c 'export APP_PATH=/app/; if [[ ! -z $( find $APP_PATH -name "*.go\
+#            " ) ]]; then gofmt -l $APP_PATH; else echo >&2 "No *.go files found in path: $APP_PATH"; fi' )"
+#
+#            # Even if `gofmt -l $APP_PATH` returns no paths, there still seem to
+#            # be some non-printing characters in `gofmt_result` (in CircleCI output,
+#            # they appear as "^@" characters), so instead of doing a `test -z` test,
+#            # simply check for the presence of alphanumeric characters, which
+#            # would only be present in the output if `gofmt` returned paths or
+#            # if an error occurred.
+#            if [[ "$gofmt_result" =~ [[:alnum:]] ]]
+#            then
+#                echo -e "\n\ngofmt check fail:\n$gofmt_result"
+#                exit_status=1
+#            else
+#                exit_status=0
+#            fi
+#
+#            exit $exit_status
       - run:
           name: Run tests
           command: |
