@@ -122,7 +122,6 @@ jobs:
           name: Build backend-test service
           command: |
             docker-compose build backend-test
-      - run:
 #          Disabling `gofmt` checks for now, as `gofmt` in CircleCI is yielding different
 #          results than `gofmt` on local, and also appears to be erroneously
 #          reporting non-existent differences.  NOTE: The "^@" issue referred to
@@ -133,6 +132,8 @@ jobs:
 #             * Commit that fixes false positive: https://github.com/NYULibraries/ariadne/commit/bc07fb2b9cac82916d83c39506d30868b1f244a3
 #             * Most recent failed CircleCI job due to another apparent false positive (local `gofmt` yields no output):
 #               https://app.circleci.com/pipelines/github/NYULibraries/ariadne/581/workflows/25cd608c-686d-45ed-ade1-3730ccf058e9/jobs/2377
+#
+#      - run:
 #          name: Check formatting
 #          command: |
 #            gofmt_result="$( docker-compose run backend-test /bin/bash -c 'export APP_PATH=/app/; if [[ ! -z $( find $APP_PATH -name "*.go\
