@@ -15,8 +15,6 @@
 * **our-lady-of-everyday-life**: also a targeted test case (see next section).
 ISBN-based search handled by Primo.  SFX returns no links.  Primo returns two eBook links.
 * **history-today**: ISSN-based search handled by Primo.  SFX returns no links.  Primo returns 5 links.
-* **history-today-with-accidental-isbn**: ISSN-based search handled by Primo, with ISBN accidentally added to query string.
-SFX returns no links.  Primo returns 5 links.
 * **the-sino-tibetan-languages**: neither SFX nor Primo return links.
 
 ## Test case groups used by the [sampler](https://github.com/NYULibraries/openurl-link-resolver-sampler)
