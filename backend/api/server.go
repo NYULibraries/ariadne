@@ -3,6 +3,7 @@ package api
 import (
 	"ariadne/sfx"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"log"
 	"net/http"
@@ -23,21 +24,27 @@ func NewRouter() *http.ServeMux {
 func ResolverHandler(w http.ResponseWriter, r *http.Request) {
 	setHeaders(&w)
 
-	sfxRequest, err := sfx.NewSFXRequest(r.URL.RawQuery)
-	if err != nil {
-		handleError(err, w, "Invalid OpenURL")
-		return
-	}
 
-	sfxResponse, err := sfx.Do(sfxRequest)
+	sfxResponse, err := getSFXResponse(r.URL.RawQuery)
 	if err != nil {
-		handleError(err, w, "Invalid response from SFX")
+		handleError(err, w, err.Error())
 		return
 	}
 
 	responseJSON := makeJSONResponseFromSFXResponse(sfxResponse)
 
 	fmt.Fprintln(w, string(responseJSON))
+}
+
+func getSFXResponse(queryString string) (*sfx.SFXResponse, error) {
+	sfxResponse := sfx.SFXResponse{}
+
+	sfxRequest, err := sfx.NewSFXRequest(queryString)
+	if err != nil {
+		return &sfxResponse, errors.New("Invalid OpenURL")
+	}
+
+	return sfx.Do(sfxRequest)
 }
 
 func setHeaders(w *http.ResponseWriter) {
