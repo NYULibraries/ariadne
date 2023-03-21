@@ -2340,14 +2340,216 @@ exports[`Backend success History Today renders correctly 1`] = `
               >
                 <h3>
                   <a
-                    href="http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?sid=DEFAULT%20(Via%20SFX)&issn=0018-2753&title=History%20Today&genre=article"
+                    href="http://proxy.library.nyu.edu/login?url=http://gateway.proquest.com/openurl?rfr_id=info%3Axri%2Fsid%3Aprimo&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&res_dat=xri%3Apqm&genre=journal&rft_id=42454&url_ver=Z39.88-2004"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    Bobst Library  Interlibrary Loan
+                    Art, Design & Architecture Collection
                   </a>
                 </h3>
-                <p />
+                <p>
+                  Available from 1992/01/01  until 2010/12/31
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?sid=Primo&issn=0018-2753&title=History+Today&genre=article"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    EBSCOhost Academic Search Complete
+                  </a>
+                </h3>
+                <p>
+                  Available from 1975
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?title=History+Today&genre=article&sid=Primo&issn=0018-2753"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    EBSCOhost America History and Life with Full Text
+                  </a>
+                </h3>
+                <p>
+                  Available from 1951/01/01
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?title=History+Today&genre=article&sid=Primo&issn=0018-2753"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    EBSCOhost History Reference Center
+                  </a>
+                </h3>
+                <p>
+                  Available from 1975/01/01
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?title=History+Today&genre=article&sid=Primo&issn=0018-2753"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    EBSCOhost Humanities Full Text
+                  </a>
+                </h3>
+                <p>
+                  Available from 1983/02/01  until 2011/12/31
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?genre=article&title=History+Today&issn=0018-2753&sid=Primo"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    EBSCOhost Humanities Source
+                  </a>
+                </h3>
+                <p>
+                  Available from 1983/02/01
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?genre=article&title=History+Today&issn=0018-2753&sid=Primo"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    EBSCOhost OmniFile Full Text Mega
+                  </a>
+                </h3>
+                <p>
+                  Available from 2000/01/01  until 2010/01/31
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?sid=Primo&issn=0018-2753&title=History+Today&genre=article"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    EBSCOhost Reader's Guide Full Text Mega
+                  </a>
+                </h3>
+                <p>
+                  Available from 1983/02/01  until 2011/12/01
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://link.gale.com/apps/pub/1373/ITOF?u=nysl_me_newyorku"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Gale General OneFile
+                  </a>
+                </h3>
+                <p>
+                  Available from 1992/11/01  until 2011/04/30
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rfr_id=info%3Axri%2Fsid%3Aprimo&res_dat=xri%3Apqm&genre=journal&rft_id=1821543&url_ver=Z39.88-2004"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Periodicals Archive Online Collection 1
+                  </a>
+                </h3>
+                <p>
+                  Available from 1951/01/01  until 2000/12/31
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rfr_id=info%3Axri%2Fsid%3Aprimo&res_dat=xri%3Apqm&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&url_ver=Z39.88-2004&rft_id=42454&genre=journal"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    ProQuest Central
+                  </a>
+                </h3>
+                <p>
+                  Available from 1992/01/01  until 2010/12/31
+                </p>
               </div>
             </div>
           </div>
