@@ -114,20 +114,24 @@ func (sfxResponse *SFXResponse) RemoveTarget(targetURL string) {
 func (sfxResponse *SFXResponse) IsFound() bool {
 	targets := (*(*sfxResponse.XMLResponseBody.ContextObject)[0].SFXContextObjectTargets)[0].Targets
 
+	// The only way to flip this to true is if a target is found that is neither
+	// the Ask A Librarian link nor the ILL link.
+	result := false
 	if len(*targets) == 0 {
 		// Theoretically this should never happen, as there is supposed to be a pre-built ILL
 		// link included if no meaningful results were found.
-		return false
-	} else if len(*targets) == 1 {
-		// Return false if the only result is the ILL link
+		result = false
+	} else {
 		for _, target := range *targets {
-			if strings.Contains(target.TargetUrl, ILLLink) {
-				return false
+			if !(strings.Contains(target.TargetUrl, ILLLink) ||
+				target.TargetUrl == AskALibrarianLink) {
+				result = true
+				break
 			}
 		}
 	}
 
-	return true
+	return result
 }
 
 func newSFXResponse(httpResponse *http.Response) (*SFXResponse, error) {
