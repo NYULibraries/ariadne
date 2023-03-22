@@ -66,7 +66,7 @@ func healthCheck(w http.ResponseWriter, r *http.Request) {
 func makeJSONResponseFromSFXResponse(sfxResponse *sfx.SFXResponse) []byte {
 	// Remove the Ask a Librarian target -- for details, see:
 	// https://nyu-lib.monday.com/boards/765008773/pulses/3548498827
-	sfxResponse.RemoveTarget("http://library.nyu.edu/ask/")
+	sfxResponse.RemoveTarget(sfx.AskALibrarianLink)
 
 	links := []Link{}
 	targets := (*(*sfxResponse.XMLResponseBody.ContextObject)[0].SFXContextObjectTargets)[0].Targets

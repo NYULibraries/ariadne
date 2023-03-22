@@ -96,6 +96,7 @@ type ThresholdText struct {
 	CoverageStatement []string `xml:"coverage_statement" json:"coverage_statement,omitempty"`
 }
 
+const AskALibrarianLink = "http://library.nyu.edu/ask/"
 const ILLLink = "ill.library.nyu.edu"
 
 func (sfxResponse *SFXResponse) RemoveTarget(targetURL string) {
