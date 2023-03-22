@@ -24,7 +24,6 @@ func NewRouter() *http.ServeMux {
 func ResolverHandler(w http.ResponseWriter, r *http.Request) {
 	setHeaders(&w)
 
-
 	sfxResponse, err := getSFXResponse(r.URL.RawQuery)
 	if err != nil {
 		handleError(err, w, err.Error())
