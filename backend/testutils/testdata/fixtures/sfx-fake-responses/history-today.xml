@@ -1,31 +1,47 @@
 HTTP/1.1 200 OK
 Transfer-Encoding: chunked
 Content-Type: application/xml; charset=ISO-8859-1
-Date: Mon, 20 Mar 2023 17:34:40 GMT
+Date: Tue, 21 Mar 2023 22:08:22 GMT
 Server: Apache
 
-1382
+55f6
 <?xml version="1.0" encoding="utf-8"?>
 
 <ctx_obj_set>
  <ctx_obj identifier="">
   <ctx_obj_attributes>&lt;perldata&gt;
  &lt;hash&gt;
-  &lt;item key="sfx.ignore_char_set"&gt;1&lt;/item&gt;
-  &lt;item key="rft_dat"&gt;Academic Search Complete -- Publications&lt;/item&gt;
-  &lt;item key="rft.title"&gt;History Today&lt;/item&gt;
-  &lt;item key="rft.pub"&gt;History Today Ltd.&lt;/item&gt;
-  &lt;item key="rft.language"&gt;eng&lt;/item&gt;
-  &lt;item key="sfx.doi_url"&gt;http://dx.doi.org&lt;/item&gt;
+  &lt;item key="@sfx.category"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;Arts and Humanities&lt;/item&gt;
+    &lt;item key="1"&gt;Arts and Humanities&lt;/item&gt;
+    &lt;item key="2"&gt;Arts and Humanities&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="sfx.show_availability"&gt;1&lt;/item&gt;
+  &lt;item key="req.session_id"&gt;sE4F6646A-C834-11ED-B8C7-97024131B499&lt;/item&gt;
+  &lt;item key="sfx.request_id"&gt;25773786&lt;/item&gt;
+  &lt;item key="rft.place"&gt;[London,]&lt;/item&gt;
+  &lt;item key="_stash"&gt;
+   &lt;hash&gt;
+    &lt;item key="@rfr_id"&gt;
+     &lt;array&gt;
+      &lt;item key="0"&gt;EBSCO:Academic Search Complete -- Publications&lt;/item&gt;
+     &lt;/array&gt;
+    &lt;/item&gt;
+   &lt;/hash&gt;
+  &lt;/item&gt;
+  &lt;item key="fetchid"&gt;00182753&lt;/item&gt;
+  &lt;item key="@rfr_id"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;EBSCO:Academic Search Complete -- Publications&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="url_ctx_fmt"&gt;info:ofi/fmt:xml:xsd:ctx&lt;/item&gt;
+  &lt;item key="rft.genre"&gt;article&lt;/item&gt;
   &lt;item key="@rft.stitle"&gt;
    &lt;array&gt;
     &lt;item key="0"&gt;HIST TODAY&lt;/item&gt;
-   &lt;/array&gt;
-  &lt;/item&gt;
-  &lt;item key="rft.lccn"&gt;   53039027 &lt;/item&gt;
-  &lt;item key="rft.object_id"&gt;954925404652&lt;/item&gt;
-  &lt;item key="@rft_id"&gt;
-   &lt;array&gt;
    &lt;/array&gt;
   &lt;/item&gt;
   &lt;item key="@sfx.subcategory"&gt;
@@ -36,77 +52,456 @@ Server: Apache
    &lt;/array&gt;
   &lt;/item&gt;
   &lt;item key="rft.object_type"&gt;JOURNAL&lt;/item&gt;
-  &lt;item key="rft.jtitle"&gt;History Today&lt;/item&gt;
-  &lt;item key="rft.genre"&gt;article&lt;/item&gt;
-  
+  &lt;item key="@rft_id"&gt;
+   &lt;array&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="sfx.has_full_text"&gt;yes&lt;/item&gt;
+  &lt;item key="sfx.ignore_char_set"&gt;1&lt;/item&gt;
+  &lt;item key="sfx.ignore_date_threshold"&gt;1&lt;/item&gt;
+  &lt;item key="sfx.sourcename"&gt;DEFAULT&lt;/item&gt;
+  &lt;item key="rft.issn"&gt;0018-2753&lt;/item&gt;
   &lt;item key="@rfe_id"&gt;
    &lt;array&gt;
    &lt;/array&gt;
   &lt;/item&gt;
-  &lt;item key="fetchid"&gt;00182753&lt;/item&gt;
-  &lt;item key="_stash"&gt;
-   &lt;hash&gt;
-    &lt;item key="@rfr_id"&gt;
-     &lt;array&gt;
-      &lt;item key="0"&gt;EBSCO:Academic Search Complete -- Publications&lt;/item&gt;
-     &lt;/array&gt;
-    &lt;/item&gt;
-   &lt;/hash&gt;
-  &lt;/item&gt;
-  &lt;item key="rft.place"&gt;[London,]&lt;/item&gt;
-  &lt;item key="sfx.request_id"&gt;25770416&lt;/item&gt;
+  &lt;item key="sfx.response_type"&gt;multi_obj_xml&lt;/item&gt;
+  &lt;item key="sfx.sid"&gt;DEFAULT&lt;/item&gt;
   &lt;item key="existing_ts_ids"&gt;
    &lt;array&gt;
-    &lt;item key="0"&gt;20430000000000002&lt;/item&gt;
-    &lt;item key="1"&gt;111027614344001&lt;/item&gt;
+    &lt;item key="0"&gt;111027614344001&lt;/item&gt;
+    &lt;item key="1"&gt;20430000000000002&lt;/item&gt;
+    &lt;item key="2"&gt;3450000000000033&lt;/item&gt;
+    &lt;item key="3"&gt;3790000000000359&lt;/item&gt;
+    &lt;item key="4"&gt;3410000000000028&lt;/item&gt;
+    &lt;item key="5"&gt;3170000000000073&lt;/item&gt;
+    &lt;item key="6"&gt;1000000000002159&lt;/item&gt;
+    &lt;item key="7"&gt;111021039760001&lt;/item&gt;
+    &lt;item key="8"&gt;3450000000000063&lt;/item&gt;
+    &lt;item key="9"&gt;3450000000000055&lt;/item&gt;
+    &lt;item key="10"&gt;111080144102002&lt;/item&gt;
+    &lt;item key="11"&gt;3580000000000012&lt;/item&gt;
+    &lt;item key="12"&gt;2560000000000075&lt;/item&gt;
+    &lt;item key="13"&gt;2470000000000017&lt;/item&gt;
    &lt;/array&gt;
   &lt;/item&gt;
-  &lt;item key="sfx.response_type"&gt;multi_obj_xml&lt;/item&gt;
-  &lt;item key="@rfr_id"&gt;
-   &lt;array&gt;
-    &lt;item key="0"&gt;EBSCO:Academic Search Complete -- Publications&lt;/item&gt;
-   &lt;/array&gt;
-  &lt;/item&gt;
-  &lt;item key="url_ctx_fmt"&gt;info:ofi/fmt:xml:xsd:ctx&lt;/item&gt;
-  &lt;item key="sfx.sid"&gt;DEFAULT&lt;/item&gt;
-  &lt;item key="rft.issn"&gt;0018-2753&lt;/item&gt;
-  &lt;item key="sfx.sourcename"&gt;DEFAULT&lt;/item&gt;
-  &lt;item key="req.session_id"&gt;s7E3DF822-C745-11ED-A3A3-650F4131B499&lt;/item&gt;
-  &lt;item key="@sfx.category"&gt;
-   &lt;array&gt;
-    &lt;item key="0"&gt;Arts and Humanities&lt;/item&gt;
-    &lt;item key="1"&gt;Arts and Humanities&lt;/item&gt;
-    &lt;item key="2"&gt;Arts and Humanities&lt;/item&gt;
-   &lt;/array&gt;
-  &lt;/item&gt;
+  
+  &lt;item key="rft.jtitle"&gt;History Today&lt;/item&gt;
+  &lt;item key="rft.lccn"&gt;   53039027 &lt;/item&gt;
+  &lt;item key="sfx.doi_url"&gt;http://dx.doi.org&lt;/item&gt;
+  &lt;item key="rft.object_id"&gt;954925404652&lt;/item&gt;
+  &lt;item key="rft.language"&gt;eng&lt;/item&gt;
+  &lt;item key="rft.pub"&gt;History Today Ltd.&lt;/item&gt;
+  &lt;item key="rft_dat"&gt;Academic Search Complete -- Publications&lt;/item&gt;
+  &lt;item key="rft.title"&gt;History Today&lt;/item&gt;
  &lt;/hash&gt;
 &lt;/perldata&gt;
 </ctx_obj_attributes>
   <ctx_obj_targets>
    <target>
-    <target_name>DOCDEL_ILLIAD</target_name>
-    <target_public_name>Bobst Library  Interlibrary Loan</target_public_name>
-    <object_portfolio_id></object_portfolio_id>
-    <target_id>111027614344000</target_id>
-    <interface_id>111027614344000</interface_id>
-    <interface_name>DOCDEL_ILLIAD</interface_name>
-    <target_service_id>111027614344001</target_service_id>
-    <service_type>getDocumentDelivery</service_type>
-    <parser>ILLiad::DDL</parser>
-    <parse_param>url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL &amp; id_type=</parse_param>
+    <target_name>ART_DESIGN_AND_ARCHITECTURE_COLLECTION</target_name>
+    <target_public_name>Art, Design &amp; Architecture Collection</target_public_name>
+    <object_portfolio_id>2560000001234537</object_portfolio_id>
+    <target_id>2560000000000118</target_id>
+    <interface_id>2400000000000006</interface_id>
+    <interface_name>PROQUEST</interface_name>
+    <target_service_id>2560000000000075</target_service_id>
+    <service_type>getFullTxt</service_type>
+    <parser>PROQUEST::open</parser>
+    <parse_param>url=http://gateway.proquest.com/openurl &amp; /embedded/7R15WSCM8WWLZ92Y &amp; url2=https://search.proquest.com&amp;jkey=42454</parse_param>
     <proxy>yes</proxy>
-    <crossref>yes</crossref>
+    <crossref>no</crossref>
     <note></note>
     <authentication></authentication>
     <char_set>utf8</char_set>
     <displayer></displayer>
-    <target_url>http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?sid=DEFAULT%20(Via%20SFX)&amp;issn=0018-2753&amp;title=History%20Today&amp;genre=article</target_url>
+    <target_url>http://proxy.library.nyu.edu/login?url=http://gateway.proquest.com/openurl?rfr_id=info%3Axri%2Fsid%3Aprimo&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;res_dat=xri%3Apqm&amp;genre=journal&amp;rft_id=42454&amp;url_ver=Z39.88-2004</target_url>
     <is_related>no</is_related>
     <coverage>
      <coverage_text>
-      <threshold_text></threshold_text>
+      <threshold_text>
+       <coverage_statement>Available from 1992/01/01  until 2010/12/31</coverage_statement>
+      </threshold_text>
       <embargo_text></embargo_text>
      </coverage_text>
+     <from>
+      <year>1992</year>
+      <month>01</month>
+      <day>01</day>
+     </from>
+     <to>
+      <year>2010</year>
+      <month>12</month>
+      <day>31</day>
+     </to>
+     <embargo></embargo>
+    </coverage>
+   </target>
+   <target>
+    <target_name>EBSCOHOST_ACADEMIC_SEARCH_COMPLETE</target_name>
+    <target_public_name>EBSCOhost Academic Search Complete</target_public_name>
+    <object_portfolio_id>1000000000668896</object_portfolio_id>
+    <target_id>1000000000001505</target_id>
+    <interface_id>111080144282000</interface_id>
+    <interface_name>EBSCOHOST</interface_name>
+    <target_service_id>1000000000002159</target_service_id>
+    <service_type>getFullTxt</service_type>
+    <parser>EBSCO_HOST::Journals</parser>
+    <parse_param>db_host=a9h &amp; url=https://search.ebscohost.com &amp; url1=https://openurl.ebscohost.com/linksvc/linking.aspx &amp; url2=https://openurl.ebsco.com &amp; shib= &amp; customer_id= &amp; sso= &amp; ipauth= &amp; opid=&amp;jkey=HIT &amp; exception3=no_spage</parse_param>
+    <proxy>yes</proxy>
+    <crossref>no</crossref>
+    <note></note>
+    <authentication></authentication>
+    <char_set>utf8</char_set>
+    <displayer></displayer>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?sid=Primo&amp;issn=0018-2753&amp;title=History+Today&amp;genre=article</target_url>
+    <is_related>no</is_related>
+    <coverage>
+     <coverage_text>
+      <threshold_text>
+       <coverage_statement>Available from 1975</coverage_statement>
+      </threshold_text>
+      <embargo_text></embargo_text>
+     </coverage_text>
+     <from>
+      <year>1975</year>
+     </from>
+     <embargo></embargo>
+    </coverage>
+   </target>
+   <target>
+    <target_name>EBSCOHOST_AMERICA_HISTORY_AND_LIFE_WITH_FULL_TEXT</target_name>
+    <target_public_name>EBSCOhost America History and Life with Full Text</target_public_name>
+    <object_portfolio_id>2470000000026593</object_portfolio_id>
+    <target_id>2470000000000017</target_id>
+    <interface_id>111080144282000</interface_id>
+    <interface_name>EBSCOHOST</interface_name>
+    <target_service_id>2470000000000017</target_service_id>
+    <service_type>getFullTxt</service_type>
+    <parser>EBSCO_HOST::Journals</parser>
+    <parse_param>db_host=31h &amp; url=https://search.ebscohost.com &amp; url1=https://openurl.ebscohost.com/linksvc/linking.aspx &amp; url2=https://openurl.ebsco.com &amp; shib= &amp; customer_id= &amp; sso= &amp; ipauth= &amp; opid=&amp;jkey=HIT &amp; exception2=atitle</parse_param>
+    <proxy>yes</proxy>
+    <crossref>no</crossref>
+    <note></note>
+    <authentication></authentication>
+    <char_set>utf8</char_set>
+    <displayer></displayer>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?title=History+Today&amp;genre=article&amp;sid=Primo&amp;issn=0018-2753</target_url>
+    <is_related>no</is_related>
+    <coverage>
+     <coverage_text>
+      <threshold_text>
+       <coverage_statement>Available from 1951/01/01</coverage_statement>
+      </threshold_text>
+      <embargo_text></embargo_text>
+     </coverage_text>
+     <from>
+      <year>1951</year>
+      <month>01</month>
+      <day>01</day>
+     </from>
+     <embargo></embargo>
+    </coverage>
+   </target>
+   <target>
+    <target_name>EBSCOHOST_HISTORY_REFERENCE_CENTER</target_name>
+    <target_public_name>EBSCOhost History Reference Center</target_public_name>
+    <object_portfolio_id>111080186270013</object_portfolio_id>
+    <target_id>111080144102000</target_id>
+    <interface_id>111080144282000</interface_id>
+    <interface_name>EBSCOHOST</interface_name>
+    <target_service_id>111080144102002</target_service_id>
+    <service_type>getFullTxt</service_type>
+    <parser>EBSCO_HOST::Journals</parser>
+    <parse_param>db_host=khh&amp;url=https://search.ebscohost.com &amp; url1=https://openurl.ebscohost.com/linksvc/linking.aspx &amp; url2=https://openurl.ebsco.com &amp; shib= &amp; customer_id= &amp; sso= &amp; ipauth= &amp; opid=&amp;jkey=HIT</parse_param>
+    <proxy>yes</proxy>
+    <crossref>no</crossref>
+    <note></note>
+    <authentication></authentication>
+    <char_set></char_set>
+    <displayer></displayer>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?title=History+Today&amp;genre=article&amp;sid=Primo&amp;issn=0018-2753</target_url>
+    <is_related>no</is_related>
+    <coverage>
+     <coverage_text>
+      <threshold_text>
+       <coverage_statement>Available from 1975/01/01</coverage_statement>
+      </threshold_text>
+      <embargo_text></embargo_text>
+     </coverage_text>
+     <from>
+      <year>1975</year>
+      <month>01</month>
+      <day>01</day>
+     </from>
+     <embargo></embargo>
+    </coverage>
+   </target>
+   <target>
+    <target_name>EBSCOHOST_HUMANITIES_FULL_TEXT_WILSON</target_name>
+    <target_public_name>EBSCOhost Humanities Full Text</target_public_name>
+    <object_portfolio_id>3450000000022318</object_portfolio_id>
+    <target_id>3450000000000046</target_id>
+    <interface_id>111080144282000</interface_id>
+    <interface_name>EBSCOHOST</interface_name>
+    <target_service_id>3450000000000055</target_service_id>
+    <service_type>getFullTxt</service_type>
+    <parser>EBSCO_HOST::Journals</parser>
+    <parse_param>db_host=hft &amp; url=https://search.ebscohost.com &amp; url1=https://openurl.ebscohost.com/linksvc/linking.aspx &amp; url2=https://openurl.ebsco.com &amp; shib= &amp; customer_id= &amp; u_shib=$$U_SHIBBOLETH &amp; sso= &amp; ipauth= &amp; opid=&amp;jkey=HIT</parse_param>
+    <proxy>yes</proxy>
+    <crossref>no</crossref>
+    <note></note>
+    <authentication></authentication>
+    <char_set>iso-8859-1</char_set>
+    <displayer></displayer>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?title=History+Today&amp;genre=article&amp;sid=Primo&amp;issn=0018-2753</target_url>
+    <is_related>no</is_related>
+    <coverage>
+     <coverage_text>
+      <threshold_text>
+       <coverage_statement>Available from 1983/02/01  until 2011/12/31</coverage_statement>
+      </threshold_text>
+      <embargo_text></embargo_text>
+     </coverage_text>
+     <from>
+      <year>1983</year>
+      <month>02</month>
+      <day>01</day>
+     </from>
+     <to>
+      <year>2011</year>
+      <month>12</month>
+      <day>31</day>
+     </to>
+     <embargo></embargo>
+    </coverage>
+   </target>
+   <target>
+    <target_name>EBSCOHOST_HUMANITIES_SOURCE</target_name>
+    <target_public_name>EBSCOhost Humanities Source</target_public_name>
+    <object_portfolio_id>3580000000005788</object_portfolio_id>
+    <target_id>3580000000000011</target_id>
+    <interface_id>111080144282000</interface_id>
+    <interface_name>EBSCOHOST</interface_name>
+    <target_service_id>3580000000000012</target_service_id>
+    <service_type>getFullTxt</service_type>
+    <parser>EBSCO_HOST::Journals</parser>
+    <parse_param>db_host=HUS &amp; url=https://search.ebscohost.com &amp; url1=https://openurl.ebscohost.com/linksvc/linking.aspx &amp; url2=https://openurl.ebsco.com &amp; shib= &amp; customer_id= &amp; u_shib=$$U_SHIBBOLETH &amp; sso= &amp; ipauth= &amp; opid=&amp;jkey=HIT</parse_param>
+    <proxy>yes</proxy>
+    <crossref>no</crossref>
+    <note></note>
+    <authentication></authentication>
+    <char_set>iso-8859-1</char_set>
+    <displayer></displayer>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?genre=article&amp;title=History+Today&amp;issn=0018-2753&amp;sid=Primo</target_url>
+    <is_related>no</is_related>
+    <coverage>
+     <coverage_text>
+      <threshold_text>
+       <coverage_statement>Available from 1983/02/01</coverage_statement>
+      </threshold_text>
+      <embargo_text></embargo_text>
+     </coverage_text>
+     <from>
+      <year>1983</year>
+      <month>02</month>
+      <day>01</day>
+     </from>
+     <embargo></embargo>
+    </coverage>
+   </target>
+   <target>
+    <target_name>EBSCOHOST_OMNIFILE_FULL_TEXT_MEGA_WILSON</target_name>
+    <target_public_name>EBSCOhost OmniFile Full Text Mega</target_public_name>
+    <object_portfolio_id>3450000000017884</object_portfolio_id>
+    <target_id>3450000000000034</target_id>
+    <interface_id>111080144282000</interface_id>
+    <interface_name>EBSCOHOST</interface_name>
+    <target_service_id>3450000000000033</target_service_id>
+    <service_type>getFullTxt</service_type>
+    <parser>EBSCO_HOST::Journals</parser>
+    <parse_param>db_host=ofm &amp; url=https://search.ebscohost.com &amp; url1=https://openurl.ebscohost.com/linksvc/linking.aspx &amp; url2=https://openurl.ebsco.com &amp; shib= &amp; customer_id= &amp; u_shib=$$U_SHIBBOLETH &amp; sso= &amp; ipauth= &amp; opid=&amp;jkey=HIT</parse_param>
+    <proxy>yes</proxy>
+    <crossref>no</crossref>
+    <note></note>
+    <authentication></authentication>
+    <char_set>iso-8859-1</char_set>
+    <displayer></displayer>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?genre=article&amp;title=History+Today&amp;issn=0018-2753&amp;sid=Primo</target_url>
+    <is_related>no</is_related>
+    <coverage>
+     <coverage_text>
+      <threshold_text>
+       <coverage_statement>Available from 2000/01/01  until 2010/01/31</coverage_statement>
+      </threshold_text>
+      <embargo_text></embargo_text>
+     </coverage_text>
+     <from>
+      <year>2000</year>
+      <month>01</month>
+      <day>01</day>
+     </from>
+     <to>
+      <year>2010</year>
+      <month>01</month>
+      <day>31</day>
+     </to>
+     <embargo></embargo>
+    </coverage>
+   </target>
+   <target>
+    <target_name>EBSCOHOST_READERS_GUIDE_FULL_TEXT_MEGA_WILSON</target_name>
+    <target_public_name>EBSCOhost Reader's Guide Full Text Mega</target_public_name>
+    <object_portfolio_id>3450000000029545</object_portfolio_id>
+    <target_id>3450000000000050</target_id>
+    <interface_id>111080144282000</interface_id>
+    <interface_name>EBSCOHOST</interface_name>
+    <target_service_id>3450000000000063</target_service_id>
+    <service_type>getFullTxt</service_type>
+    <parser>EBSCO_HOST::Journals</parser>
+    <parse_param>db_host=rgm&amp;url=https://search.ebscohost.com &amp; url1=https://openurl.ebscohost.com/linksvc/linking.aspx &amp; url2=https://openurl.ebsco.com &amp; shib= &amp; customer_id= &amp; sso= &amp; ipauth= &amp; opid=&amp;jkey=HIT</parse_param>
+    <proxy>yes</proxy>
+    <crossref>no</crossref>
+    <note></note>
+    <authentication></authentication>
+    <char_set>iso-8859-1</char_set>
+    <displayer></displayer>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?sid=Primo&amp;issn=0018-2753&amp;title=History+Today&amp;genre=article</target_url>
+    <is_related>no</is_related>
+    <coverage>
+     <coverage_text>
+      <threshold_text>
+       <coverage_statement>Available from 1983/02/01  until 2011/12/01</coverage_statement>
+      </threshold_text>
+      <embargo_text></embargo_text>
+     </coverage_text>
+     <from>
+      <year>1983</year>
+      <month>02</month>
+      <day>01</day>
+     </from>
+     <to>
+      <year>2011</year>
+      <month>12</month>
+      <day>01</day>
+     </to>
+     <embargo></embargo>
+    </coverage>
+   </target>
+   <target>
+    <target_name>GALE_GENERAL_ONEFILE</target_name>
+    <target_public_name>Gale General OneFile</target_public_name>
+    <object_portfolio_id>1000000000711055</object_portfolio_id>
+    <target_id>111021039760000</target_id>
+    <interface_id>111021040432000</interface_id>
+    <interface_name>GALEGROUP</interface_name>
+    <target_service_id>111021039760001</target_service_id>
+    <service_type>getFullTxt</service_type>
+    <parser>Gale::OpenURL</parser>
+    <parse_param>url=https://find.gale.com/openurl/openurl &amp; url2=https://link.gale.com/apps &amp;dbase=ITOF &amp;loc_id=nysl_me_newyorku  &amp;art=yes &amp;ltitle=History+Today &amp; jkey2=1373</parse_param>
+    <proxy>yes</proxy>
+    <crossref>no</crossref>
+    <note></note>
+    <authentication>NovelNY: Only available to users within the NYUNY network.</authentication>
+    <char_set>iso-8859-1</char_set>
+    <displayer></displayer>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://link.gale.com/apps/pub/1373/ITOF?u=nysl_me_newyorku</target_url>
+    <is_related>no</is_related>
+    <coverage>
+     <coverage_text>
+      <threshold_text>
+       <coverage_statement>Available from 1992/11/01  until 2011/04/30</coverage_statement>
+      </threshold_text>
+      <embargo_text></embargo_text>
+     </coverage_text>
+     <from>
+      <year>1992</year>
+      <month>11</month>
+      <day>01</day>
+     </from>
+     <to>
+      <year>2011</year>
+      <month>04</month>
+      <day>30</day>
+     </to>
+     <embargo></embargo>
+    </coverage>
+   </target>
+   <target>
+    <target_name>PERIODICALS_ARCHIVE_ONLINE_COLLECTION_1</target_name>
+    <target_public_name>Periodicals Archive Online Collection 1</target_public_name>
+    <object_portfolio_id>3410000000008741</object_portfolio_id>
+    <target_id>3410000000000027</target_id>
+    <interface_id>2400000000000006</interface_id>
+    <interface_name>PROQUEST</interface_name>
+    <target_service_id>3410000000000028</target_service_id>
+    <service_type>getFullTxt</service_type>
+    <parser>PROQUEST::open</parser>
+    <parse_param>url=https://gateway.proquest.com/openurl &amp; clientid= &amp; url2=https://www.proquest.com&amp;jkey=1821543</parse_param>
+    <proxy>yes</proxy>
+    <crossref>no</crossref>
+    <note></note>
+    <authentication></authentication>
+    <char_set>iso-8859-1</char_set>
+    <displayer></displayer>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rfr_id=info%3Axri%2Fsid%3Aprimo&amp;res_dat=xri%3Apqm&amp;genre=journal&amp;rft_id=1821543&amp;url_ver=Z39.88-2004</target_url>
+    <is_related>no</is_related>
+    <coverage>
+     <coverage_text>
+      <threshold_text>
+       <coverage_statement>Available from 1951/01/01  until 2000/12/31</coverage_statement>
+      </threshold_text>
+      <embargo_text></embargo_text>
+     </coverage_text>
+     <from>
+      <year>1951</year>
+      <month>01</month>
+      <day>01</day>
+     </from>
+     <to>
+      <year>2000</year>
+      <month>12</month>
+      <day>31</day>
+     </to>
+     <embargo></embargo>
+    </coverage>
+   </target>
+   <target>
+    <target_name>PROQUEST_CENTRAL</target_name>
+    <target_public_name>ProQuest Central</target_public_name>
+    <object_portfolio_id>4340000000050086</object_portfolio_id>
+    <target_id>3790000000000466</target_id>
+    <interface_id>2400000000000006</interface_id>
+    <interface_name>PROQUEST</interface_name>
+    <target_service_id>3790000000000359</target_service_id>
+    <service_type>getFullTxt</service_type>
+    <parser>PROQUEST::open</parser>
+    <parse_param>url=https://gateway.proquest.com/openurl &amp; clientid= &amp; url2=https://www.proquest.com &amp;jkey=42454</parse_param>
+    <proxy>yes</proxy>
+    <crossref>no</crossref>
+    <note></note>
+    <authentication></authentication>
+    <char_set>iso-8859-1</char_set>
+    <displayer></displayer>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rfr_id=info%3Axri%2Fsid%3Aprimo&amp;res_dat=xri%3Apqm&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;url_ver=Z39.88-2004&amp;rft_id=42454&amp;genre=journal</target_url>
+    <is_related>no</is_related>
+    <coverage>
+     <coverage_text>
+      <threshold_text>
+       <coverage_statement>Available from 1992/01/01  until 2010/12/31</coverage_statement>
+      </threshold_text>
+      <embargo_text></embargo_text>
+     </coverage_text>
+     <from>
+      <year>1992</year>
+      <month>01</month>
+      <day>01</day>
+     </from>
+     <to>
+      <year>2010</year>
+      <month>12</month>
+      <day>31</day>
+     </to>
      <embargo></embargo>
     </coverage>
    </target>

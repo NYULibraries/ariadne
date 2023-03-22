@@ -5,6 +5,9 @@
 * **can-community-task-groups-learn-from-the-principles-of-group-therapy**: requires
   query string `sid` -> `rfr_id` to prevent SFX error "XSS violation occured [sic]."
 * **corriere-fiorentino**: a simple, basic test case with a short response 
+* **history-today**: ISSN-based search for which Ariadne was originally incorrectly
+constructing the SFX query due to testing only for the absence of `date` query param
+and not testing for the existence of the `date` param with an empty value.
 * **the-new-yorker**: *The New Yorker*, which has a fairly long list of links
 * **moral-psychology-is-relationship-regulation**: query string does not have `rft.genre`
   or `genre` in the query string
@@ -14,7 +17,6 @@
 
 * **our-lady-of-everyday-life**: also a targeted test case (see next section).
 ISBN-based search handled by Primo.  SFX returns no links.  Primo returns two eBook links.
-* **history-today**: ISSN-based search handled by Primo.  SFX returns no links.  Primo returns 5 links.
 * **the-sino-tibetan-languages**: neither SFX nor Primo return links.
 
 ## Test case groups used by the [sampler](https://github.com/NYULibraries/openurl-link-resolver-sampler)
