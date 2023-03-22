@@ -68,5 +68,10 @@
         "key": "the-sino-tibetan-languages",
         "name": "The Sino-Tibetan Languages",
         "queryString": "?=&genre=book&title=The%20Sino-Tibetan%20Languages&date=2003&aulast=YUE(-HASHIMOTO)&aufirst=Anne%20O."
+    },
+    {
+        "key": "hamlet",
+        "name": "Hamlet",
+        "queryString": "?sid=&aulast=Shakespeare&aufirst=William&genre=book&title=The%20Oxford%20Shakespeare:%20Hamlet&date=1987&isbn=9780198129103"
     }
 ]

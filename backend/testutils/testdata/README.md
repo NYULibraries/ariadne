@@ -15,6 +15,8 @@ and not testing for the existence of the `date` param with an empty value.
 
 ## Test case group for fallback to Primo
 
+* **hamlet**: ISBN-based search handled by Primo which has a FRBR type of "5",
+  requiring extra processing including a second call the Primo API.
 * **our-lady-of-everyday-life**: also a targeted test case (see next section).
 ISBN-based search handled by Primo.  SFX returns no links.  Primo returns two eBook links.
 * **the-sino-tibetan-languages**: neither SFX nor Primo return links.

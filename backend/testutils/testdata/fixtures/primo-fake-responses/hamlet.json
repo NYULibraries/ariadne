@@ -1,0 +1,2618 @@
+{
+    "rtaResultsLink": "https://bobcat.library.nyu.edu/primo_library/libweb/webservices/rest/v1/rta/NYU?recordInformation=$$V003768009$$Onyu_aleph003768009|$$V002824464$$Onyu_aleph002824464|,|$$Vnyu_aleph$$Onyu_aleph003768009|$$Vnyu_aleph$$Onyu_aleph002824464|,|$$VNYU01$$Onyu_aleph003768009|$$VNYU01$$Onyu_aleph002824464|,|$$VAleph$$Onyu_aleph003768009|$$VAleph$$Onyu_aleph002824464|,|dedupmrg1084510589|,|$$INYU$$LBOBST$$1Main Collection$$2(PR2807.A2 H5 1987 )$$Savailable$$32$$40$$5N$$622$$XNYU50$$YBOBST$$ZMAIN$$Onyu_aleph002824464|$$INYU$$LBOBST$$1Main Collection - Non-Circulating$$2(PR2807.A2 H5 1987 )$$Savailable$$31$$40$$5N$$61$$XNYU50$$YBOBST$$ZMAIN4$$Onyu_aleph002824464|,|$$INYU$$Savailable|,|Online Resource|Physical Item|,|$$VCU$$Onyu_aleph003768009|$$VNS$$Onyu_aleph003768009|$$VNYU$$Onyu_aleph003768009|$$VNYUAD$$Onyu_aleph003768009|$$VNYUSH$$Onyu_aleph003768009|$$VNYU$$Onyu_aleph002824464|,|__NO_VALUE__|,|$$V$$Taleph_holdings$$Onyu_aleph003768009|$$V$$Taleph_holdings$$Onyu_aleph002824464|,|$$VNYU01003768009$$Onyu_aleph003768009|$$VNYU01002824464$$Onyu_aleph002824464|,|__NO_VALUE__|,|$$VCURD$$Onyu_aleph003768009|$$VNSRD$$Onyu_aleph003768009|$$VNYURD$$Onyu_aleph003768009|;|",
+    "highlights": {},
+    "docs": [
+        {
+            "enrichment": {
+                "virtualBrowseObject": {
+                    "callNumber": "PR2807.A2 H5 1987 Electronic access",
+                    "isVirtualBrowseEnabled": true,
+                    "callNumberBrowseField": "browse_callnumber.0"
+                }
+            },
+            "delivery": {
+                "availabilityLinks": [
+                    "detailsGetit1",
+                    "detailsGetit1"
+                ],
+                "physicalItemTextCodes": "delivery.code.alsophysical",
+                "displayLocation": true,
+                "availabilityLinksUrl": [
+                    "",
+                    ""
+                ],
+                "link": [
+                    {
+                        "displayLabel": "linktoprice",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "https://getit.library.nyu.edu/resolve?umlaut.institution=NYU&ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2023-03-21T20%3A55%3A42IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo-dedupmrg1084510589&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.btitle=Hamlet&rft.aulast=Shakespeare&rft.aufirst=William,&rft.au=Shakespeare,%20William&rft.pub=Clarendon%20Press%20;%20Oxford%20University%20Press&rft.place=Oxford%20:%20New%20York&rft.isbn=9780191732355&rft_id=info:doi/&rft.primo=dedupmrg1084510589&rft_dat=%3Cnyu_aleph%3E003768009%3C/nyu_aleph%3E%3Cgrp_id%3E1144834403%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft_id=info:oai/&req.language=eng",
+                        "linkType": "http://purl.org/pnx/linkType/linktoprice",
+                        "@id": "_:0"
+                    },
+                    {
+                        "displayLabel": "lln42",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll?Action=10&Form=23&PhotoJournalTitle=Hamlet&PhotoItemAuthor=William%20%20Shakespeare%20%201564-1616.&PhotoJournalYear=1987&ESPNumber=568502064&ISSN=9780191732355&AcceptNonEnglish=Yes&ShippingOptions=Scan%20Request&Notes=recordid-dedupmrg1084510589",
+                        "linkType": "http://purl.org/pnx/linkType/lln42",
+                        "@id": "_:1"
+                    },
+                    {
+                        "displayLabel": "lln42",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll?Action=10&Form=23&PhotoJournalTitle=Hamlet&PhotoItemAuthor=William%20%20Shakespeare%20%201564-1616.&PhotoJournalYear=1987&ESPNumber=568502064&ISSN=9780191732355&AcceptNonEnglish=Yes&ShippingOptions=Scan%20Request&Notes=recordid-dedupmrg1084510589",
+                        "linkType": "http://purl.org/pnx/linkType/lln42",
+                        "@id": "_:2"
+                    },
+                    {
+                        "displayLabel": "lln43",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "https://ares.library.nyu.edu/remoteauth/testweb/ares.dll?Action=10&Form=2&Value=IRFVideo&title=Hamlet&Author=G.%20R%20Hibbard%20(George%20Richard),%201915-&PubDate=1987&CallNumber=PR2807.A2%20H5%201987&ItemFormatAudioVideo=book&CitedIn=dedupmrg1084510589",
+                        "linkType": "http://purl.org/pnx/linkType/lln43",
+                        "@id": "_:3"
+                    },
+                    {
+                        "displayLabel": "lln43",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "https://ares.library.nyu.edu/remoteauth/testweb/ares.dll?Action=10&Form=2&Value=IRFVideo&title=Hamlet&Author=G.%20R%20Hibbard%20(George%20Richard),%201915-&PubDate=1987&CallNumber=PR2807.A2%20H5%201987&ItemFormatAudioVideo=book&CitedIn=dedupmrg1084510589",
+                        "linkType": "http://purl.org/pnx/linkType/lln43",
+                        "@id": "_:4"
+                    },
+                    {
+                        "displayLabel": "lln44",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "",
+                        "linkType": "http://purl.org/pnx/linkType/lln44",
+                        "@id": "_:5"
+                    },
+                    {
+                        "displayLabel": "lln44",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "",
+                        "linkType": "http://purl.org/pnx/linkType/lln44",
+                        "@id": "_:6"
+                    },
+                    {
+                        "displayLabel": "openurlfulltext",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "https://getit.library.nyu.edu/search/journal_search?ctx_ver=Z39.88-2004&sfx.ignore_date_threshold=1&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2023-03-21T20%3A55%3A42IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo-dedupmrg1084510589&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.btitle=Hamlet&rft.aulast=Shakespeare&rft.aufirst=William,&rft.au=Shakespeare,%20William&rft.pub=Clarendon%20Press%20;%20Oxford%20University%20Press&rft.place=Oxford%20:%20New%20York&rft.isbn=9780191732355&rft.isbn_list=0191732354&rft.isbn_list=0198129106&rft.isbn_list=9780198129103&rft_id=info:doi/&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=%3Cnyu_aleph%3E003768009%3C/nyu_aleph%3E%3Cgrp_id%3E1144834403%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft_id=info:oai/&req.language=eng&rft_id=info:pmid/",
+                        "linkType": "http://purl.org/pnx/linkType/openurlfulltext",
+                        "@id": "_:7"
+                    },
+                    {
+                        "displayLabel": "openurlfulltext",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "https://getit.library.nyu.edu/search/journal_search?ctx_ver=Z39.88-2004&sfx.ignore_date_threshold=1&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2023-03-21T20%3A55%3A42IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo-dedupmrg1084510589&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.btitle=Hamlet&rft.aulast=Shakespeare&rft.aufirst=William,&rft.au=Shakespeare,%20William&rft.pub=Clarendon%20Press%20;%20Oxford%20University%20Press&rft.place=Oxford%20:%20New%20York&rft.isbn=9780191732355&rft.isbn_list=0191732354&rft.isbn_list=0198129106&rft.isbn_list=9780198129103&rft_id=info:doi/&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=%3Cnyu_aleph%3E002824464%3C/nyu_aleph%3E%3Cgrp_id%3E1144834403%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft_id=info:oai/&req.language=eng&rft_id=info:pmid/",
+                        "linkType": "http://purl.org/pnx/linkType/openurlfulltext",
+                        "@id": "_:8"
+                    },
+                    {
+                        "displayLabel": "lln40",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?LoanTitle=Hamlet&LoanAuthor=Shakespeare,%20William&LoanPlace=Oxford%20:%20New%20York&LoanPublisher=Clarendon%20Press%20;%20Oxford%20University%20Press&LoanDate=1987&ISSN=9780191732355&AcceptNonEnglish=Yes&AcceptAlternateEdition=No&Notes=recordid-003768009",
+                        "linkType": "http://purl.org/pnx/linkType/lln40",
+                        "@id": "_:9"
+                    },
+                    {
+                        "displayLabel": "lln40",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?LoanTitle=Hamlet&LoanAuthor=Shakespeare,%20William&LoanPlace=Oxford%20:%20New%20York&LoanPublisher=Clarendon%20Press%20;%20Oxford%20University%20Press&LoanDate=1987&ISSN=9780191732355&AcceptNonEnglish=Yes&AcceptAlternateEdition=No&Notes=recordid-002824464",
+                        "linkType": "http://purl.org/pnx/linkType/lln40",
+                        "@id": "_:10"
+                    },
+                    {
+                        "displayLabel": "lln41",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "https://ares.library.nyu.edu/remoteauth/ares.dll?Action=10&Form=30&linktype=openurl&rfr_id=info:sid/primo.exlibrisgroup.com:primo-dedupmrg1084510589&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.btitle=Hamlet&rft.aulast=Shakespeare&rft.aufirst=William,&rft.au=Shakespeare,%20William&rft.pub=Clarendon%20Press%20;%20Oxford%20University%20Press&rft.place=Oxford%20:%20New%20York&rft.isbn=9780191732355&rft.primo=dedupmrg1084510589",
+                        "linkType": "http://purl.org/pnx/linkType/lln41",
+                        "@id": "_:11"
+                    },
+                    {
+                        "displayLabel": "lln41",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "https://ares.library.nyu.edu/remoteauth/ares.dll?Action=10&Form=30&linktype=openurl&rfr_id=info:sid/primo.exlibrisgroup.com:primo-dedupmrg1084510589&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.btitle=Hamlet&rft.aulast=Shakespeare&rft.aufirst=William,&rft.au=Shakespeare,%20William&rft.pub=Clarendon%20Press%20;%20Oxford%20University%20Press&rft.place=Oxford%20:%20New%20York&rft.isbn=9780191732355&rft.primo=dedupmrg1084510589",
+                        "linkType": "http://purl.org/pnx/linkType/lln41",
+                        "@id": "_:12"
+                    },
+                    {
+                        "displayLabel": "openurl",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "https://getit.library.nyu.edu/search/journal_search?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2023-03-21T20%3A55%3A42IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo-dedupmrg1084510589&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.btitle=Hamlet&rft.aulast=Shakespeare&rft.aufirst=William,&rft.au=Shakespeare,%20William&rft.pub=Clarendon%20Press%20;%20Oxford%20University%20Press&rft.place=Oxford%20:%20New%20York&rft.isbn=9780191732355&rft.isbn_list=0191732354&rft.isbn_list=0198129106&rft.isbn_list=9780198129103&rft_id=info:doi/&rft.primo=dedupmrg1084510589&rft_dat=%3Cnyu_aleph%3E003768009%3C/nyu_aleph%3E%3Cgrp_id%3E1144834403%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft_id=info:oai/&req.language=eng&rft_id=info:pmid/",
+                        "linkType": "http://purl.org/pnx/linkType/openurl",
+                        "@id": "_:13"
+                    },
+                    {
+                        "displayLabel": "openurl",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "https://getit.library.nyu.edu/search/journal_search?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2023-03-21T20%3A55%3A42IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo-dedupmrg1084510589&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.btitle=Hamlet&rft.aulast=Shakespeare&rft.aufirst=William,&rft.au=Shakespeare,%20William&rft.pub=Clarendon%20Press%20;%20Oxford%20University%20Press&rft.place=Oxford%20:%20New%20York&rft.isbn=9780191732355&rft.isbn_list=0191732354&rft.isbn_list=0198129106&rft.isbn_list=9780198129103&rft_id=info:doi/&rft.primo=dedupmrg1084510589&rft_dat=%3Cnyu_aleph%3E002824464%3C/nyu_aleph%3E%3Cgrp_id%3E1144834403%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft_id=info:oai/&req.language=eng&rft_id=info:pmid/",
+                        "linkType": "http://purl.org/pnx/linkType/openurl",
+                        "@id": "_:14"
+                    },
+                    {
+                        "displayLabel": "Ebook Central (Cooper Union Access)",
+                        "hyperlinkText": "Ebook Central (Cooper Union Access)",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "https://cooperunion.idm.oclc.org/login?url=https://ebookcentral.proquest.com/lib/cooper/detail.action?docID=3055132",
+                        "linkType": "http://purl.org/pnx/linkType/lln28",
+                        "@id": "_:15"
+                    },
+                    {
+                        "displayLabel": "For All Users: Check other Libraries using WorldCat®",
+                        "hyperlinkText": "For All Users: Check other Libraries using WorldCat®",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "http://www.worldcat.org/search?q=isbn%3A9780191732355",
+                        "linkType": "http://purl.org/pnx/linkType/lln08",
+                        "@id": "_:16"
+                    },
+                    {
+                        "displayLabel": "For All Users: Check other Libraries using WorldCat®",
+                        "hyperlinkText": "For All Users: Check other Libraries using WorldCat®",
+                        "inst4opac": "NYU",
+                        "linkURL": "http://www.worldcat.org/search?q=isbn%3A9780191732355",
+                        "linkType": "http://purl.org/pnx/linkType/lln08",
+                        "@id": "_:17"
+                    },
+                    {
+                        "displayLabel": "For Staff: View source record (system no.003768009",
+                        "hyperlinkText": "For Staff: View source record (system no.003768009",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "http://aleph.library.nyu.edu/F?func=direct&local_base=PRIMOCOMMON&doc_number=003768009",
+                        "linkType": "http://purl.org/pnx/linkType/lln09",
+                        "@id": "_:18"
+                    },
+                    {
+                        "displayLabel": "For Staff: View source record (system no.002824464",
+                        "hyperlinkText": "For Staff: View source record (system no.002824464",
+                        "inst4opac": "NYU",
+                        "linkURL": "http://aleph.library.nyu.edu/F?func=direct&local_base=PRIMOCOMMON&doc_number=002824464",
+                        "linkType": "http://purl.org/pnx/linkType/lln09",
+                        "@id": "_:19"
+                    },
+                    {
+                        "displayLabel": "More bibliographic information",
+                        "hyperlinkText": "More bibliographic information",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "http://aleph.library.nyu.edu/F?func=direct&local_base=PRIMOCOMMON&doc_number=003768009",
+                        "linkType": "http://purl.org/pnx/linkType/backlink",
+                        "@id": "_:20"
+                    },
+                    {
+                        "displayLabel": "More bibliographic information",
+                        "hyperlinkText": "More bibliographic information",
+                        "inst4opac": "NYU",
+                        "linkURL": "http://aleph.library.nyu.edu/F?func=direct&local_base=PRIMOCOMMON&doc_number=002824464",
+                        "linkType": "http://purl.org/pnx/linkType/backlink",
+                        "@id": "_:21"
+                    },
+                    {
+                        "displayLabel": "lln46",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "",
+                        "linkType": "http://purl.org/pnx/linkType/lln46",
+                        "@id": "_:22"
+                    },
+                    {
+                        "displayLabel": "lln46",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "",
+                        "linkType": "http://purl.org/pnx/linkType/lln46",
+                        "@id": "_:23"
+                    },
+                    {
+                        "displayLabel": "lln47",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "",
+                        "linkType": "http://purl.org/pnx/linkType/lln47",
+                        "@id": "_:24"
+                    },
+                    {
+                        "displayLabel": "lln47",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "",
+                        "linkType": "http://purl.org/pnx/linkType/lln47",
+                        "@id": "_:25"
+                    },
+                    {
+                        "displayLabel": "Ebook Central (NYU Access)",
+                        "hyperlinkText": "Ebook Central (NYU Access)",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "https://ebookcentral.proquest.com/lib/nyulibrary-ebooks/detail.action?docID=3055132",
+                        "linkType": "http://purl.org/pnx/linkType/lln26",
+                        "@id": "_:26"
+                    },
+                    {
+                        "displayLabel": "Oxford Scholarly Editions Online (OSEO) (NYU Access)",
+                        "hyperlinkText": "Oxford Scholarly Editions Online (OSEO) (NYU Access)",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "http://proxy.library.nyu.edu/login?url=https://www.oxfordscholarlyeditions.com/view/10.1093/actrade/9780198129103.book.1/actrade-9780198129103-book-1",
+                        "linkType": "http://purl.org/pnx/linkType/lln26",
+                        "@id": "_:27"
+                    },
+                    {
+                        "displayLabel": "lln48",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "",
+                        "linkType": "http://purl.org/pnx/linkType/lln48",
+                        "@id": "_:28"
+                    },
+                    {
+                        "displayLabel": "lln48",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "",
+                        "linkType": "http://purl.org/pnx/linkType/lln48",
+                        "@id": "_:29"
+                    },
+                    {
+                        "displayLabel": "Ebook Central (New School Access)",
+                        "hyperlinkText": "Ebook Central (New School Access)",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "https://login.libproxy.newschool.edu/login?url=https://ebookcentral.proquest.com/lib/newschool/detail.action?docID=3055132",
+                        "linkType": "http://purl.org/pnx/linkType/lln27",
+                        "@id": "_:30"
+                    },
+                    {
+                        "displayLabel": "Copy item link",
+                        "hyperlinkText": "Copy item link",
+                        "inst4opac": "NYU",
+                        "linkURL": "https://library.nyu.edu/persistent/lcn/dedupmrg1084510589?institution=NYU&persistent",
+                        "linkType": "http://purl.org/pnx/linkType/linktoreview",
+                        "@id": "_:31"
+                    },
+                    {
+                        "displayLabel": "thumbnail",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "https://syndetics.com/index.aspx?isbn=9780191732355/SC.JPG&client=primo",
+                        "linkType": "http://purl.org/pnx/linkType/thumbnail",
+                        "@id": "_:32"
+                    },
+                    {
+                        "displayLabel": "$$Eilliad_book_label",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?LoanTitle=Hamlet&LoanAuthor=Shakespeare,%20William&LoanPlace=Oxford%20:%20New%20York&LoanPublisher=Clarendon%20Press%20;%20Oxford%20University%20Press&LoanDate=1987&ISSN=9780191732355&AcceptNonEnglish=Yes&AcceptAlternateEdition=No&Notes=recordid-003768009",
+                        "linkType": "http://purl.org/pnx/linkType/lln31",
+                        "@id": "_:33"
+                    },
+                    {
+                        "displayLabel": "$$Eilliad_book_label",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?LoanTitle=Hamlet&LoanAuthor=Shakespeare,%20William&LoanPlace=Oxford%20:%20New%20York&LoanPublisher=Clarendon%20Press%20;%20Oxford%20University%20Press&LoanDate=1987&ISSN=9780191732355&AcceptNonEnglish=Yes&AcceptAlternateEdition=No&Notes=recordid-002824464",
+                        "linkType": "http://purl.org/pnx/linkType/lln31",
+                        "@id": "_:34"
+                    },
+                    {
+                        "displayLabel": "lln10",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "https://getit.library.nyu.edu/resolve?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2023-03-21T20%3A55%3A42IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo-dedupmrg1084510589&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.btitle=Hamlet&rft.aulast=Shakespeare&rft.aufirst=William,&rft.au=Shakespeare,%20William&rft.pub=Clarendon%20Press%20;%20Oxford%20University%20Press&rft.place=Oxford%20:%20New%20York&rft.isbn=9780191732355&rft_id=info:doi/&rft.primo=dedupmrg1084510589&rft_dat=%3Cnyu_aleph%3E003768009%3C/nyu_aleph%3E%3Cgrp_id%3E1144834403%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft_id=info:oai/&req.language=eng",
+                        "linkType": "http://purl.org/pnx/linkType/lln10",
+                        "@id": "_:35"
+                    },
+                    {
+                        "displayLabel": "lln10",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "https://getit.library.nyu.edu/resolve?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2023-03-21T20%3A55%3A42IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo-dedupmrg1084510589&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.btitle=Hamlet&rft.aulast=Shakespeare&rft.aufirst=William,&rft.au=Shakespeare,%20William&rft.pub=Clarendon%20Press%20;%20Oxford%20University%20Press&rft.place=Oxford%20:%20New%20York&rft.isbn=9780191732355&rft_id=info:doi/&rft.primo=dedupmrg1084510589&rft_dat=%3Cnyu_aleph%3E002824464%3C/nyu_aleph%3E%3Cgrp_id%3E1144834403%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft_id=info:oai/&req.language=eng",
+                        "linkType": "http://purl.org/pnx/linkType/lln10",
+                        "@id": "_:36"
+                    },
+                    {
+                        "displayLabel": "$$Eilliad_book_chapter_label",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll?Action=10&Form=23&PhotoJournalTitle=Hamlet&PhotoItemAuthor=William%20%20Shakespeare%20%201564-1616.&PhotoJournalYear=1987&ESPNumber=568502064&ISSN=9780191732355&AcceptNonEnglish=Yes&ShippingOptions=Scan%20Request&Notes=recordid-dedupmrg1084510589",
+                        "linkType": "http://purl.org/pnx/linkType/lln32",
+                        "@id": "_:37"
+                    },
+                    {
+                        "displayLabel": "$$Eilliad_book_chapter_label",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll?Action=10&Form=23&PhotoJournalTitle=Hamlet&PhotoItemAuthor=William%20%20Shakespeare%20%201564-1616.&PhotoJournalYear=1987&ESPNumber=568502064&ISSN=9780191732355&AcceptNonEnglish=Yes&ShippingOptions=Scan%20Request&Notes=recordid-dedupmrg1084510589",
+                        "linkType": "http://purl.org/pnx/linkType/lln32",
+                        "@id": "_:38"
+                    },
+                    {
+                        "displayLabel": "Ebook Central",
+                        "hyperlinkText": "Ebook Central",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "https://ebookcentral.proquest.com/lib/nyulibrary-ebooks/detail.action?docID=3055132",
+                        "linkType": "http://purl.org/pnx/linkType/linktorsrc",
+                        "@id": "_:39"
+                    },
+                    {
+                        "displayLabel": "Oxford Scholarly Editions Online (OSEO)",
+                        "hyperlinkText": "Oxford Scholarly Editions Online (OSEO)",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "http://proxy.library.nyu.edu/login?url=https://www.oxfordscholarlyeditions.com/view/10.1093/actrade/9780198129103.book.1/actrade-9780198129103-book-1",
+                        "linkType": "http://purl.org/pnx/linkType/linktorsrc",
+                        "@id": "_:40"
+                    },
+                    {
+                        "displayLabel": "lln11",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "https://getit.library.nyu.edu/resolve?umlaut.institution=NYUAD&ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2023-03-21T20%3A55%3A42IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo-dedupmrg1084510589&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.btitle=Hamlet&rft.aulast=Shakespeare&rft.aufirst=William,&rft.au=Shakespeare,%20William&rft.pub=Clarendon%20Press%20;%20Oxford%20University%20Press&rft.place=Oxford%20:%20New%20York&rft.isbn=9780191732355&rft_id=info:doi/&rft.primo=dedupmrg1084510589&rft_dat=%3Cnyu_aleph%3E003768009%3C/nyu_aleph%3E%3Cgrp_id%3E1144834403%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft_id=info:oai/&req.language=eng",
+                        "linkType": "http://purl.org/pnx/linkType/lln11",
+                        "@id": "_:41"
+                    },
+                    {
+                        "displayLabel": "lln11",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "https://getit.library.nyu.edu/resolve?umlaut.institution=NYUAD&ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2023-03-21T20%3A55%3A42IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo-dedupmrg1084510589&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.btitle=Hamlet&rft.aulast=Shakespeare&rft.aufirst=William,&rft.au=Shakespeare,%20William&rft.pub=Clarendon%20Press%20;%20Oxford%20University%20Press&rft.place=Oxford%20:%20New%20York&rft.isbn=9780191732355&rft_id=info:doi/&rft.primo=dedupmrg1084510589&rft_dat=%3Cnyu_aleph%3E002824464%3C/nyu_aleph%3E%3Cgrp_id%3E1144834403%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft_id=info:oai/&req.language=eng",
+                        "linkType": "http://purl.org/pnx/linkType/lln11",
+                        "@id": "_:42"
+                    },
+                    {
+                        "displayLabel": "lln12",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "https://getit.library.nyu.edu/resolve?umlaut.institution=NYUSH&ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2023-03-21T20%3A55%3A42IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo-dedupmrg1084510589&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.btitle=Hamlet&rft.aulast=Shakespeare&rft.aufirst=William,&rft.au=Shakespeare,%20William&rft.pub=Clarendon%20Press%20;%20Oxford%20University%20Press&rft.place=Oxford%20:%20New%20York&rft.isbn=9780191732355&rft_id=info:doi/&rft.primo=dedupmrg1084510589&rft_dat=%3Cnyu_aleph%3E003768009%3C/nyu_aleph%3E%3Cgrp_id%3E1144834403%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft_id=info:oai/&req.language=eng",
+                        "linkType": "http://purl.org/pnx/linkType/lln12",
+                        "@id": "_:43"
+                    },
+                    {
+                        "displayLabel": "lln12",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "https://getit.library.nyu.edu/resolve?umlaut.institution=NYUSH&ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2023-03-21T20%3A55%3A42IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo-dedupmrg1084510589&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.btitle=Hamlet&rft.aulast=Shakespeare&rft.aufirst=William,&rft.au=Shakespeare,%20William&rft.pub=Clarendon%20Press%20;%20Oxford%20University%20Press&rft.place=Oxford%20:%20New%20York&rft.isbn=9780191732355&rft_id=info:doi/&rft.primo=dedupmrg1084510589&rft_dat=%3Cnyu_aleph%3E002824464%3C/nyu_aleph%3E%3Cgrp_id%3E1144834403%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft_id=info:oai/&req.language=eng",
+                        "linkType": "http://purl.org/pnx/linkType/lln12",
+                        "@id": "_:44"
+                    },
+                    {
+                        "displayLabel": "$$Eezborrow_label",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "https://ezborrow.reshare.indexdata.com/Search/Results?join=AND&lookfor0%5B%5D=Hamlet&type0%5B%5D=Title&lookfor0%5B%5D=Shakespeare+OR+Hibbard&type0%5B%5D=Author&bool0%5B%5D=AND&illustration=-1&daterange%5B%5D=publishDate",
+                        "linkType": "http://purl.org/pnx/linkType/lln30",
+                        "@id": "_:45"
+                    },
+                    {
+                        "displayLabel": "Ebook Central",
+                        "hyperlinkText": "Ebook Central",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "https://login.libproxy.newschool.edu/login?url=https://ebookcentral.proquest.com/lib/newschool/detail.action?docID=3055132",
+                        "linkType": "http://purl.org/pnx/linkType/lln17",
+                        "@id": "_:46"
+                    },
+                    {
+                        "displayLabel": "Ebook Central",
+                        "hyperlinkText": "Ebook Central",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "https://cooperunion.idm.oclc.org/login?url=https://ebookcentral.proquest.com/lib/cooper/detail.action?docID=3055132",
+                        "linkType": "http://purl.org/pnx/linkType/lln18",
+                        "@id": "_:47"
+                    },
+                    {
+                        "displayLabel": "linktorequest",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "",
+                        "linkType": "http://purl.org/pnx/linkType/linktorequest",
+                        "@id": "_:48"
+                    },
+                    {
+                        "displayLabel": "linktorequest",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "",
+                        "linkType": "http://purl.org/pnx/linkType/linktorequest",
+                        "@id": "_:49"
+                    },
+                    {
+                        "displayLabel": "lln13",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "https://getit.library.nyu.edu/resolve?umlaut.institution=CU&ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2023-03-21T20%3A55%3A42IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo-dedupmrg1084510589&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.btitle=Hamlet&rft.aulast=Shakespeare&rft.aufirst=William,&rft.au=Shakespeare,%20William&rft.pub=Clarendon%20Press%20;%20Oxford%20University%20Press&rft.place=Oxford%20:%20New%20York&rft.isbn=9780191732355&rft_id=info:doi/&rft.primo=dedupmrg1084510589&rft_dat=%3Cnyu_aleph%3E003768009%3C/nyu_aleph%3E%3Cgrp_id%3E1144834403%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft_id=info:oai/&req.language=eng",
+                        "linkType": "http://purl.org/pnx/linkType/lln13",
+                        "@id": "_:50"
+                    },
+                    {
+                        "displayLabel": "lln13",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "https://getit.library.nyu.edu/resolve?umlaut.institution=CU&ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2023-03-21T20%3A55%3A42IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo-dedupmrg1084510589&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.btitle=Hamlet&rft.aulast=Shakespeare&rft.aufirst=William,&rft.au=Shakespeare,%20William&rft.pub=Clarendon%20Press%20;%20Oxford%20University%20Press&rft.place=Oxford%20:%20New%20York&rft.isbn=9780191732355&rft_id=info:doi/&rft.primo=dedupmrg1084510589&rft_dat=%3Cnyu_aleph%3E002824464%3C/nyu_aleph%3E%3Cgrp_id%3E1144834403%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft_id=info:oai/&req.language=eng",
+                        "linkType": "http://purl.org/pnx/linkType/lln13",
+                        "@id": "_:51"
+                    },
+                    {
+                        "displayLabel": "Check Availability:NYU Bobst  Main Collection  (PR2807.A2 H5 1987 )  ",
+                        "hyperlinkText": "Check Availability:NYU Bobst  Main Collection  (PR2807.A2 H5 1987 )  ",
+                        "inst4opac": "NYU",
+                        "linkURL": "http://aleph.library.nyu.edu/F?func=item-global&doc_library=NYU01&local_base=PRIMOCOMMON&doc_number=002824464&sub_library=BOBST  &collection=MAIN",
+                        "linkType": "http://purl.org/pnx/linkType/lln15",
+                        "@id": "_:52"
+                    },
+                    {
+                        "displayLabel": "Check Availability:NYU Bobst  Main Collection - Non-Circulating  (PR2807.A2 H5 1987 )  ",
+                        "hyperlinkText": "Check Availability:NYU Bobst  Main Collection - Non-Circulating  (PR2807.A2 H5 1987 )  ",
+                        "inst4opac": "NYU",
+                        "linkURL": "http://aleph.library.nyu.edu/F?func=item-global&doc_library=NYU01&local_base=PRIMOCOMMON&doc_number=002824464&sub_library=BOBST  &collection=MAIN4",
+                        "linkType": "http://purl.org/pnx/linkType/lln15",
+                        "@id": "_:53"
+                    },
+                    {
+                        "displayLabel": "Ebook Central",
+                        "hyperlinkText": "Ebook Central",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "https://ebookcentral.proquest.com/lib/nyulibrary-ebooks/detail.action?docID=3055132",
+                        "linkType": "http://purl.org/pnx/linkType/lln16",
+                        "@id": "_:54"
+                    },
+                    {
+                        "displayLabel": "Oxford Scholarly Editions Online (OSEO)",
+                        "hyperlinkText": "Oxford Scholarly Editions Online (OSEO)",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "http://proxy.library.nyu.edu/login?url=https://www.oxfordscholarlyeditions.com/view/10.1093/actrade/9780198129103.book.1/actrade-9780198129103-book-1",
+                        "linkType": "http://purl.org/pnx/linkType/lln16",
+                        "@id": "_:55"
+                    },
+                    {
+                        "displayLabel": "linktoholdings",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "http://aleph.library.nyu.edu/F?func=item-global&doc_library=NYU01&local_base=PRIMOCOMMON&doc_number=003768009",
+                        "linkType": "http://purl.org/pnx/linkType/linktoholdings",
+                        "@id": "_:56"
+                    },
+                    {
+                        "displayLabel": "linktoholdings",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "http://aleph.library.nyu.edu/F?func=item-global&doc_library=NYU01&local_base=PRIMOCOMMON&doc_number=002824464",
+                        "linkType": "http://purl.org/pnx/linkType/linktoholdings",
+                        "@id": "_:57"
+                    },
+                    {
+                        "displayLabel": "Check other libraries (WorldCat®)",
+                        "hyperlinkText": "Check other libraries (WorldCat®)",
+                        "inst4opac": "NYU",
+                        "linkURL": "http://www.worldcat.org/search?q=isbn%3A9780191732355",
+                        "linkType": "http://purl.org/pnx/linkType/linktouc",
+                        "@id": "_:58"
+                    },
+                    {
+                        "displayLabel": "thumbnail",
+                        "linkURL": "https://syndetics.com/index.aspx?isbn=9780191732355/SC.JPG&client=primo",
+                        "linkType": "http://purl.org/pnx/linkType/thumbnail",
+                        "@id": "_:59"
+                    }
+                ],
+                "availability": [
+                    "not_restricted",
+                    "available_in_my_institution"
+                ],
+                "additionalLocations": false,
+                "displayedAvailability": "not_restricted",
+                "holding": [
+                    {
+                        "matchForHoldings": [
+                            {
+                                "holdingRecord": "852##b",
+                                "matchOn": "MainLocation"
+                            },
+                            {
+                                "holdingRecord": "852##c",
+                                "matchOn": "SecondaryLocation"
+                            }
+                        ],
+                        "subLocationCode": "MAIN",
+                        "ilsApiId": "NYU01002824464",
+                        "libraryCode": "BOBST",
+                        "isValidUser": true,
+                        "mainLocation": "BOBST",
+                        "callNumber": "(PR2807.A2 H5 1987 )",
+                        "adaptorid": "ALEPH_22",
+                        "organization": "NYU",
+                        "holdingURL": "OVP",
+                        "@id": "_:0",
+                        "availabilityStatus": "available",
+                        "subLocation": "Main Collection",
+                        "holdId": ""
+                    },
+                    {
+                        "matchForHoldings": [
+                            {
+                                "holdingRecord": "852##b",
+                                "matchOn": "MainLocation"
+                            },
+                            {
+                                "holdingRecord": "852##c",
+                                "matchOn": "SecondaryLocation"
+                            }
+                        ],
+                        "subLocationCode": "MAIN4",
+                        "ilsApiId": "NYU01002824464",
+                        "libraryCode": "BOBST",
+                        "isValidUser": true,
+                        "mainLocation": "BOBST",
+                        "callNumber": "(PR2807.A2 H5 1987 )",
+                        "adaptorid": "ALEPH_22",
+                        "organization": "NYU",
+                        "holdingURL": "OVP",
+                        "@id": "_:1",
+                        "availabilityStatus": "available",
+                        "subLocation": "Main Collection - Non-Circulating",
+                        "holdId": ""
+                    }
+                ],
+                "bestlocation": {
+                    "matchForHoldings": [
+                        {
+                            "holdingRecord": "852##b",
+                            "matchOn": "MainLocation"
+                        },
+                        {
+                            "holdingRecord": "852##c",
+                            "matchOn": "SecondaryLocation"
+                        }
+                    ],
+                    "mainLocation": "BOBST",
+                    "subLocationCode": "MAIN",
+                    "callNumber": "(PR2807.A2 H5 1987 )",
+                    "organization": "NYU",
+                    "libraryCode": "BOBST",
+                    "@id": "_:0",
+                    "availabilityStatus": "available",
+                    "subLocation": "Main Collection",
+                    "holdId": "",
+                    "isValidUser": true
+                },
+                "deliveryCategory": [
+                    "Online Resource",
+                    "Physical Item"
+                ],
+                "serviceMode": [
+                    "display",
+                    "ovp"
+                ],
+                "feDisplayOtherLocations": false,
+                "GetIt2": {
+                    "isLinktoOnline": false,
+                    "displayText": "openurl",
+                    "hyperlinkText": "",
+                    "getItTabText": "tab2_onl_norestrict",
+                    "link": "https://getit.library.nyu.edu/search/journal_search?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2023-03-21T20%3A55%3A42IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo-dedupmrg1084510589&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.btitle=Hamlet&rft.aulast=Shakespeare&rft.aufirst=William,&rft.au=Shakespeare,%20William&rft.pub=Clarendon%20Press%20;%20Oxford%20University%20Press&rft.place=Oxford%20:%20New%20York&rft.isbn=9780191732355&rft.isbn_list=0191732354&rft.isbn_list=0198129106&rft.isbn_list=9780198129103&rft_id=info:doi/&rft.primo=dedupmrg1084510589&rft_dat=%3Cnyu_aleph%3E003768009%3C/nyu_aleph%3E%3Cgrp_id%3E1144834403%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft_id=info:oai/&req.language=eng&rft_id=info:pmid/",
+                    "@id": "_:0",
+                    "serviceModeGetit2": "display"
+                },
+                "GetIt1": [
+                    {
+                        "links": [
+                            {
+                                "isLinktoOnline": true,
+                                "displayText": "Ebook Central",
+                                "hyperlinkText": "Ebook Central",
+                                "getItTabText": "tab1_onl_norestrict",
+                                "link": "https://ebookcentral.proquest.com/lib/nyulibrary-ebooks/detail.action?docID=3055132",
+                                "@id": "_:0"
+                            },
+                            {
+                                "isLinktoOnline": true,
+                                "displayText": "Oxford Scholarly Editions Online (OSEO)",
+                                "hyperlinkText": "Oxford Scholarly Editions Online (OSEO)",
+                                "getItTabText": "tab1_onl_norestrict",
+                                "link": "http://proxy.library.nyu.edu/login?url=https://www.oxfordscholarlyeditions.com/view/10.1093/actrade/9780198129103.book.1/actrade-9780198129103-book-1",
+                                "@id": "_:1"
+                            }
+                        ],
+                        "category": "Online Resource"
+                    },
+                    {
+                        "links": [
+                            {
+                                "isLinktoOnline": false,
+                                "displayText": "linktoholdings",
+                                "inst4opac": "NYU",
+                                "hyperlinkText": "tab1_avail",
+                                "getItTabText": "tab1_avail",
+                                "adaptorid": "ALEPH_22",
+                                "ilsApiId": "NYU01002824464",
+                                "link": "OVP",
+                                "@id": "_:0"
+                            }
+                        ],
+                        "category": "Physical Item"
+                    }
+                ]
+            },
+            "@rta_link": "https://bobcat.library.nyu.edu/primo_library/libweb/webservices/rest/v1/rta/NYU?recordInformation=$$V003768009$$Onyu_aleph003768009|$$V002824464$$Onyu_aleph002824464|,|$$Vnyu_aleph$$Onyu_aleph003768009|$$Vnyu_aleph$$Onyu_aleph002824464|,|$$VNYU01$$Onyu_aleph003768009|$$VNYU01$$Onyu_aleph002824464|,|$$VAleph$$Onyu_aleph003768009|$$VAleph$$Onyu_aleph002824464|,|dedupmrg1084510589|,|$$INYU$$LBOBST$$1Main Collection$$2(PR2807.A2 H5 1987 )$$Savailable$$32$$40$$5N$$622$$XNYU50$$YBOBST$$ZMAIN$$Onyu_aleph002824464|$$INYU$$LBOBST$$1Main Collection - Non-Circulating$$2(PR2807.A2 H5 1987 )$$Savailable$$31$$40$$5N$$61$$XNYU50$$YBOBST$$ZMAIN4$$Onyu_aleph002824464|,|$$INYU$$Savailable|,|Online Resource|Physical Item|,|$$VCU$$Onyu_aleph003768009|$$VNS$$Onyu_aleph003768009|$$VNYU$$Onyu_aleph003768009|$$VNYUAD$$Onyu_aleph003768009|$$VNYUSH$$Onyu_aleph003768009|$$VNYU$$Onyu_aleph002824464|,|__NO_VALUE__|,|$$V$$Taleph_holdings$$Onyu_aleph003768009|$$V$$Taleph_holdings$$Onyu_aleph002824464|,|$$VNYU01003768009$$Onyu_aleph003768009|$$VNYU01002824464$$Onyu_aleph002824464|,|__NO_VALUE__|,|$$VCURD$$Onyu_aleph003768009|$$VNSRD$$Onyu_aleph003768009|$$VNYURD$$Onyu_aleph003768009",
+            "context": "L",
+            "adaptor": "Local Search Engine",
+            "pnx": {
+                "delivery": {
+                    "institution": [
+                        "$$VCU$$Onyu_aleph003768009",
+                        "$$VNS$$Onyu_aleph003768009",
+                        "$$VNYU$$Onyu_aleph003768009",
+                        "$$VNYUAD$$Onyu_aleph003768009",
+                        "$$VNYUSH$$Onyu_aleph003768009",
+                        "$$VNYU$$Onyu_aleph002824464"
+                    ],
+                    "resdelscope": [
+                        "$$VCURD$$Onyu_aleph003768009",
+                        "$$VNSRD$$Onyu_aleph003768009",
+                        "$$VNYURD$$Onyu_aleph003768009"
+                    ],
+                    "delcategory": [
+                        "$$VOnline Resource$$ICU$$Onyu_aleph003768009",
+                        "$$VOnline Resource$$INS$$Onyu_aleph003768009",
+                        "$$VOnline Resource$$INYU$$Onyu_aleph003768009",
+                        "$$VOnline Resource$$INYUAD$$Onyu_aleph003768009",
+                        "$$VOnline Resource$$INYUSH$$Onyu_aleph003768009",
+                        "$$VOnline Resource$$IHSL$$Onyu_aleph003768009",
+                        "$$VOnline Resource$$INYSID$$Onyu_aleph003768009",
+                        "$$VOnline Resource$$INYHS$$Onyu_aleph003768009",
+                        "$$VOnline Resource$$IBHS$$Onyu_aleph003768009",
+                        "$$VPhysical Item$$INYU$$Onyu_aleph002824464",
+                        "$$VPhysical Item$$INYUAD$$Onyu_aleph002824464",
+                        "$$VPhysical Item$$INYUSH$$Onyu_aleph002824464",
+                        "$$VPhysical Item$$IHSL$$Onyu_aleph002824464",
+                        "$$VPhysical Item$$INS$$Onyu_aleph002824464",
+                        "$$VPhysical Item$$ICU$$Onyu_aleph002824464",
+                        "$$VPhysical Item$$INYSID$$Onyu_aleph002824464",
+                        "$$VPhysical Item$$INYHS$$Onyu_aleph002824464",
+                        "$$VPhysical Item$$IBHS$$Onyu_aleph002824464"
+                    ]
+                },
+                "display": {
+                    "creationdate": [
+                        "1987"
+                    ],
+                    "subject": [
+                        "Hamlet (Legendary character)",
+                        "Denmark -- Drama",
+                        "Denmark",
+                        "Drama",
+                        "Tragedies",
+                        "Hamlet (Legendary character) -- Drama",
+                        "Kings and rulers -- Succession -- Drama",
+                        "Murder victims' families -- Drama",
+                        "Fathers -- Death -- Drama",
+                        "Revenge -- Drama",
+                        "Princes -- Drama",
+                        "Fathers -- Death",
+                        "Kings and rulers -- Succession",
+                        "Murder victims' families",
+                        "Princes",
+                        "Revenge",
+                        "Drama in English Shakespeare, William - Texts"
+                    ],
+                    "description": [
+                        "$$Csummary$$VIn his introduction Professor Hibbard explains the process by which variant texts were fused in the 18th century to create the most commonly used text of today. Drawing on critical and theatrical history, he shows how this fusion makes 'Hamlet' seem a much more 'problematic' play than it was when it originally appeared in 1623."
+                    ],
+                    "language": [
+                        "eng"
+                    ],
+                    "source": [
+                        "$$Vnyu_aleph$$Onyu_aleph003768009",
+                        "$$Vnyu_aleph$$Onyu_aleph002824464"
+                    ],
+                    "title": [
+                        "Hamlet"
+                    ],
+                    "type": [
+                        "book"
+                    ],
+                    "relation": [
+                        "$$Cseries $$VShakespeare, William, 1564-1616. Works. 1982."
+                    ],
+                    "contributor": [
+                        "G. R Hibbard (George Richard), 1915-"
+                    ],
+                    "lds20": [
+                        "Hamlet (Legendary character) -- Drama",
+                        "Kings and rulers -- Succession -- Drama",
+                        "Murder victims' families -- Drama",
+                        "Fathers -- Death -- Drama",
+                        "Revenge -- Drama",
+                        "Princes -- Drama",
+                        "Fathers -- Death",
+                        "Kings and rulers -- Succession",
+                        "Murder victims' families",
+                        "Princes",
+                        "Revenge"
+                    ],
+                    "availpnx": [
+                        "available"
+                    ],
+                    "lds22": [
+                        "Drama in English Shakespeare, William - Texts"
+                    ],
+                    "lds21": [
+                        "Hamlet (Legendary character) -- Drama",
+                        "Kings and rulers -- Succession -- Drama",
+                        "Murder victims' families -- Drama",
+                        "Fathers -- Death -- Drama",
+                        "Revenge -- Drama",
+                        "Princes -- Drama",
+                        "Fathers -- Death",
+                        "Kings and rulers -- Succession",
+                        "Murder victims' families",
+                        "Princes",
+                        "Revenge"
+                    ],
+                    "lds02": [
+                        "nyu_aleph003768009",
+                        "nyu_aleph002824464"
+                    ],
+                    "lds01": [
+                        "CU",
+                        "NS",
+                        "NYU",
+                        "NYUAD",
+                        "NYUSH"
+                    ],
+                    "lds23": [
+                        "Drama in English Shakespeare, William - Texts"
+                    ],
+                    "lds04": [
+                        "Shakespeare, William"
+                    ],
+                    "lds06": [
+                        "Shakespeare, William",
+                        "Hibbard, G. R. (George Richard)"
+                    ],
+                    "identifier": [
+                        "$$Cisbn$$V9780191732355; $$Cisbn$$V0191732354"
+                    ],
+                    "lds05": [
+                        "Hibbard, G. R. (George Richard)"
+                    ],
+                    "creator": [
+                        "William  Shakespeare  1564-1616."
+                    ],
+                    "lds08": [
+                        "Shakespeare, William ; Hibbard, G. R. (George Richard)"
+                    ],
+                    "availinstitution": [
+                        "$$INYU$$Savailable"
+                    ],
+                    "lds07": [
+                        "Clarendon Press ; Oxford University Press"
+                    ],
+                    "lds29": [
+                        "NYU_AVAILONLINE"
+                    ],
+                    "lds09": [
+                        "1 online resource (ix, 406 pages) :",
+                        "ix, 406 p. :"
+                    ],
+                    "format": [
+                        "1 online resource (ix, 406 pages) : illustrations"
+                    ],
+                    "availlibrary": [
+                        "$$INYU$$LBOBST$$1Main Collection$$2(PR2807.A2 H5 1987 )$$Savailable$$32$$40$$5N$$622$$XNYU50$$YBOBST$$ZMAIN$$Onyu_aleph002824464",
+                        "$$INYU$$LBOBST$$1Main Collection - Non-Circulating$$2(PR2807.A2 H5 1987 )$$Savailable$$31$$40$$5N$$61$$XNYU50$$YBOBST$$ZMAIN4$$Onyu_aleph002824464"
+                    ],
+                    "version": [
+                        "120"
+                    ],
+                    "lds130": [
+                        "0198129106+OR+9780198129103"
+                    ],
+                    "lds131": [
+                        "Shakespeare+OR+Hibbard"
+                    ],
+                    "publisher": [
+                        "Oxford : Clarendon Press ; New York : Oxford University Press"
+                    ],
+                    "lds15": [
+                        "Hamlet (Legendary character)",
+                        "Denmark -- Drama",
+                        "Denmark",
+                        "Drama",
+                        "Tragedies"
+                    ]
+                },
+                "control": {
+                    "recordid": [
+                        "dedupmrg1084510589"
+                    ],
+                    "sourceid": [
+                        "$$Vnyu_aleph$$Onyu_aleph003768009",
+                        "$$Vnyu_aleph$$Onyu_aleph002824464"
+                    ],
+                    "ilsapiid": [
+                        "$$VNYU01003768009$$Onyu_aleph003768009",
+                        "$$VNYU01002824464$$Onyu_aleph002824464"
+                    ],
+                    "originalsourceid": [
+                        "$$VNYU01$$Onyu_aleph003768009",
+                        "$$VNYU01$$Onyu_aleph002824464"
+                    ],
+                    "sourceformat": [
+                        "$$VMARC21$$Onyu_aleph003768009",
+                        "$$VMARC21$$Onyu_aleph002824464"
+                    ],
+                    "sourcerecordid": [
+                        "$$V003768009$$Onyu_aleph003768009",
+                        "$$V002824464$$Onyu_aleph002824464"
+                    ],
+                    "sourcesystem": [
+                        "$$VAleph$$Onyu_aleph003768009",
+                        "$$VAleph$$Onyu_aleph002824464"
+                    ]
+                },
+                "sort": {
+                    "creationdate": [
+                        "1987"
+                    ],
+                    "author": [
+                        "Shakespeare, William, 1564-1616."
+                    ],
+                    "title": [
+                        "Hamlet /"
+                    ],
+                    "lso01": [
+                        "1987"
+                    ]
+                },
+                "frbr": {
+                    "t": [
+                        1
+                    ],
+                    "k1": [
+                        "$$Kshakespeare william 1564 1616$$AA"
+                    ],
+                    "k3": [
+                        "$$Kbookhamlet$$AT"
+                    ]
+                },
+                "dedup": {
+                    "f10": [
+                        "clarendon press"
+                    ],
+                    "f11": [
+                        "shakespeare william 1564 1616"
+                    ],
+                    "f1": [
+                        "86005446"
+                    ],
+                    "f3": [
+                        "9780191732355;0191732354"
+                    ],
+                    "c1": [
+                        "86005446"
+                    ],
+                    "f4": [
+                        "0198129106;9780198129103;0192814486;9780192814487"
+                    ],
+                    "c2": [
+                        "9780191732355;0191732354;0198129106;9780198129103;0192814486;9780192814487"
+                    ],
+                    "f5": [
+                        "hamlet"
+                    ],
+                    "c3": [
+                        "hamlet"
+                    ],
+                    "f6": [
+                        "1987"
+                    ],
+                    "c4": [
+                        "1987"
+                    ],
+                    "f7": [
+                        "hamlet"
+                    ],
+                    "f8": [
+                        "enk"
+                    ],
+                    "f9": [
+                        "(ix, 406 pages) :"
+                    ],
+                    "t": [
+                        1
+                    ]
+                },
+                "facets": {
+                    "frbrtype": [
+                        "5"
+                    ],
+                    "creatorcontrib": [
+                        "Shakespeare, W",
+                        "Hibbard, G"
+                    ],
+                    "creationdate": [
+                        "1987"
+                    ],
+                    "newrecords": [
+                        "20130619_664",
+                        "20111231_44"
+                    ],
+                    "rsrctype": [
+                        "books"
+                    ],
+                    "classificationlcc": [
+                        "P - Language and literature.–English literature"
+                    ],
+                    "language": [
+                        "eng"
+                    ],
+                    "collection": [
+                        "CU",
+                        "TWEB"
+                    ],
+                    "lfc01": [
+                        "Internet Resources",
+                        "Main Collection",
+                        "Main Collection - Non-Circulating"
+                    ],
+                    "lfc15": [
+                        "The Oxford Shakespeare"
+                    ],
+                    "lfc17": [
+                        "Hamlet (Legendary character)–Drama",
+                        "Kings and rulers–Succession–Drama",
+                        "Murder victims' families–Drama",
+                        "Fathers–Death–Drama",
+                        "Revenge–Drama",
+                        "Princes–Drama",
+                        "Fathers–Death",
+                        "Kings and rulers–Succession",
+                        "Murder victims' families",
+                        "Princes",
+                        "Revenge",
+                        "Drama in English Shakespeare, William - Texts"
+                    ],
+                    "prefilter": [
+                        "books"
+                    ],
+                    "lfc16": [
+                        "Hamlet (Legendary character)–Drama",
+                        "Kings and rulers–Succession–Drama",
+                        "Murder victims' families–Drama",
+                        "Fathers–Death–Drama",
+                        "Revenge–Drama",
+                        "Princes–Drama",
+                        "Fathers–Death",
+                        "Kings and rulers–Succession",
+                        "Murder victims' families",
+                        "Princes",
+                        "Revenge",
+                        "Drama in English Shakespeare, William - Texts"
+                    ],
+                    "toplevel": [
+                        "online_resources",
+                        "available"
+                    ],
+                    "library": [
+                        "CWEB",
+                        "TWEB",
+                        "BOBST",
+                        "IFA",
+                        "IFAC",
+                        "ISAW",
+                        "COUR",
+                        "REI"
+                    ],
+                    "lfc09": [
+                        "leased; unlimited user",
+                        "owned; unlimited user"
+                    ],
+                    "frbrgroupid": [
+                        "1144834403"
+                    ],
+                    "genre": [
+                        "Drama",
+                        "Tragedies"
+                    ],
+                    "topic": [
+                        "Hamlet (Legendary character)",
+                        "Denmark–Drama",
+                        "Denmark",
+                        "Hamlet (Legendary character)–Drama",
+                        "Kings and rulers–Succession–Drama",
+                        "Murder victims' families–Drama",
+                        "Fathers–Death–Drama",
+                        "Revenge–Drama",
+                        "Princes–Drama",
+                        "Fathers–Death",
+                        "Kings and rulers–Succession",
+                        "Murder victims' families",
+                        "Princes",
+                        "Revenge",
+                        "Drama in English Shakespeare, William - Texts"
+                    ]
+                },
+                "enrichment": {
+                    "classificationlcc": [
+                        "PR2807.A2"
+                    ]
+                },
+                "search": {
+                    "sourceid": [
+                        "nyu_aleph"
+                    ],
+                    "creatorcontrib": [
+                        "William,  Shakespeare  1564-1616.",
+                        "שעקספיר, װיליאם,  1564-1616",
+                        "שעקספיער, וויליאם,  1564-1616",
+                        "שעקספיר, ווילליאם,  1564-1616",
+                        "שעקספיער, ווילליאם,  1564-1616",
+                        "שקספיר, וויליאם,  1564-1616",
+                        "שקספיר, ווילים,  1564-1616",
+                        "שקספיר, וילאם,  1564-1616",
+                        "שקספיר, ויליים,  1564-1616",
+                        "שקספיר, וילים,  1564-1616",
+                        "שייקספיר, וו.,  1564-1616",
+                        "שכספיר, ו׳,  1564-1616",
+                        "שעקספיער, וו,  1564-1616",
+                        "שקספיר, וו,  1564-1616",
+                        "שעקספיר,  1564-1616",
+                        "שעקספיר, וו,  1564-1616",
+                        "שעקספער,  1564-1616",
+                        "שעקספער, וויליאמ,  1564-1616",
+                        "שקספיר,  1564-1616",
+                        "شاكسبير، وليم,  1564-1616",
+                        "شاكسپير، وليم,  1564-1616",
+                        "شكسبير، وليام,  1564-1616",
+                        "شكسبير، وليم,  1564-1616",
+                        "شكسبير، و.,  1564-1616",
+                        "شكسپير، وليم,  1564-1616",
+                        "شكسپير، ويليام,  1564-1616",
+                        "شيكسبير، وليام,  1564-1616",
+                        "شيكسبير، وليم,  1564-1616",
+                        "شيکسپيئر، وليم,  1564-1616",
+                        "وليم شکسبير,  1564-1616",
+                        "وليم شيکسپيئر,  1564-1616",
+                        "沙士北亞威廉姆,  1564-1616",
+                        "沙士比亞威廉姆,  1564-1616",
+                        "莎士比亞威廉姆,  1564-1616",
+                        "莎士比亞威廉,  1564-1616",
+                        "莎士比亞,  1564-1616",
+                        "Wiremu,  Hākipia  1564-1616",
+                        "William,  Shakespear  1564-1616",
+                        "William,  Shakspeare  1564-1616",
+                        "Uiliam,  Šekʻspiri  1564-1616",
+                        "Gouilliam,  Saixpēr  1564-1616",
+                        "William,  Shakspere  1564-1616",
+                        "Wilyam,  Shikisbīr  1564-1616",
+                        "Wiliam,  Szekspir  1564-1616",
+                        "Šekspyras,  1564-1616",
+                        "Vilʹi͡am,  Shekspir  1564-1616",
+                        "Viljem,  Šekspir  1564-1616",
+                        "Tsikinya-chaka,  1564-1616",
+                        "Sha-shih-pi-ya,  1564-1616",
+                        "Shashibiya,  1564-1616",
+                        "Ṿilyam,  Sheḳspir  1564-1616",
+                        "Ṿilyam,  Shaḳspir  1564-1616",
+                        "Syeiksŭpʻio,  1564-1616",
+                        "V.  Shekspir  (Vilʹi͡am), 1564-1616",
+                        "William,  Szekspir  1564-1616",
+                        "Guglielmo,  Shakespeare  1564-1616",
+                        "William,  Shake-speare  1564-1616",
+                        "Sha-ō,  1564-1616",
+                        "Şekspir,  1564-1616",
+                        "Uiliam,  Shekspir  1564-1616",
+                        "U.  Shekspir  (Uiliam), 1564-1616",
+                        "Vilijam,  Šekspir  1564-1616",
+                        "Viliyam,  Ṣēkspiyar  1564-1616",
+                        "Shakspir,  1564-1616",
+                        "Vyli͡em,  Shekspyr  1564-1616",
+                        "Velyam,  Şekspir  1564-1616",
+                        "Villiyam,  Ṣēkspiyar  1564-1616",
+                        "Vlilliam,  Shēkʻspʻiyr  1564-1616",
+                        "Ṣēkspiyar,  1564-1616",
+                        "Ṣēkspiyar Mahākavi,  1564-1616",
+                        "Ṣēkspiyar Mahākaviya,  1564-1616",
+                        "Ṿilyam,  Sheḳspier  1564-1616",
+                        "Shēkʻspir,  1564-1616",
+                        "Shakespeare,  1564-1616",
+                        "Śeksper,  1564-1616",
+                        "Viliyam,  Shekspīʼar  1564-1616",
+                        "Uĭlii͡am,  Shekspir  1564-1616",
+                        "Уйлям,  Шекспир  1564-1616",
+                        "Вильям,  Шекспир  1564-1616",
+                        "Уильям,  Шекспир  1564-1616",
+                        "שייקספיר, וויליאם,  1564-1616",
+                        "שיקספיר, ויליאם,  1564-1616",
+                        "שכספיר, ויליאם,  1564-1616",
+                        "שכספיר, וילים,  1564-1616",
+                        "שעפקספיר, וויליאם,  1564-1616",
+                        "Uilyam,  Shekʻspir  1564-1616",
+                        "שקספיר, ויליאם,  1564-1616",
+                        "Shakespeare, William, 1564-1616.",
+                        "Shakespeare, W",
+                        "שעקספיר, װיליאם, 1564-1616",
+                        "שעקספיר",
+                        "שעקספיער, וויליאם, 1564-1616",
+                        "שעקספיער",
+                        "שעקספיר, ווילליאם, 1564-1616",
+                        "שעקספיער, ווילליאם, 1564-1616",
+                        "שקספיר, וויליאם, 1564-1616",
+                        "שקספיר",
+                        "שקספיר, ווילים, 1564-1616",
+                        "שקספיר, וילאם, 1564-1616",
+                        "שקספיר, ויליים, 1564-1616",
+                        "שקספיר, וילים, 1564-1616",
+                        "שייקספיר, וו., 1564-1616",
+                        "שייקספיר",
+                        "שכספיר, ו׳, 1564-1616",
+                        "שכספיר",
+                        "שעקספיער, וו, 1564-1616",
+                        "שקספיר, וו, 1564-1616",
+                        "שעקספיר, 1564-1616",
+                        "שעקספיר, וו, 1564-1616",
+                        "שעקספער, 1564-1616",
+                        "שעקספער",
+                        "שעקספער, וויליאמ, 1564-1616",
+                        "שקספיר, 1564-1616",
+                        "شاكسبير، وليم, 1564-1616",
+                        "شاكسبير، وليم",
+                        "شاكسپير، وليم, 1564-1616",
+                        "شاكسپير، وليم",
+                        "شكسبير، وليام, 1564-1616",
+                        "شكسبير، وليام",
+                        "شكسبير، وليم, 1564-1616",
+                        "شكسبير، وليم",
+                        "شكسبير، و., 1564-1616",
+                        "شكسبير، و.",
+                        "شكسپير، وليم, 1564-1616",
+                        "شكسپير، وليم",
+                        "شكسپير، ويليام, 1564-1616",
+                        "شكسپير، ويليام",
+                        "شيكسبير، وليام, 1564-1616",
+                        "شيكسبير، وليام",
+                        "شيكسبير، وليم, 1564-1616",
+                        "شيكسبير، وليم",
+                        "شيکسپيئر، وليم, 1564-1616",
+                        "شيکسپيئر، وليم",
+                        "وليم شکسبير, 1564-1616",
+                        "وليم شکسبير",
+                        "وليم شيکسپيئر, 1564-1616",
+                        "وليم شيکسپيئر",
+                        "沙士北亞威廉姆, 1564-1616",
+                        "沙士北亞威廉姆",
+                        "沙士比亞威廉姆, 1564-1616",
+                        "沙士比亞威廉姆",
+                        "莎士比亞威廉姆, 1564-1616",
+                        "莎士比亞威廉姆",
+                        "莎士比亞威廉, 1564-1616",
+                        "莎士比亞威廉",
+                        "莎士比亞, 1564-1616",
+                        "莎士比亞",
+                        "Hākipia, Wiremu, 1564-1616",
+                        "Hākipia, W",
+                        "Shakespear, William, 1564-1616",
+                        "Shakespear, W",
+                        "Shakspeare, William, 1564-1616",
+                        "Shakspeare, W",
+                        "Šekʻspiri, Uiliam, 1564-1616",
+                        "Šekʻspiri, U",
+                        "Saixpēr, Gouilliam, 1564-1616",
+                        "Saixpēr, G",
+                        "Shakspere, William, 1564-1616",
+                        "Shakspere, W",
+                        "Shikisbīr, Wilyam, 1564-1616",
+                        "Shikisbīr, W",
+                        "Szekspir, Wiliam, 1564-1616",
+                        "Szekspir, W",
+                        "Šekspyras, 1564-1616",
+                        "Šekspyras",
+                        "Shekspir, Vilʹi͡am, 1564-1616",
+                        "Shekspir, V",
+                        "Šekspir, Viljem, 1564-1616",
+                        "Šekspir, V",
+                        "Tsikinya-chaka, 1564-1616",
+                        "Tsikinya-chaka",
+                        "Sha-shih-pi-ya, 1564-1616",
+                        "Sha-shih-pi-ya",
+                        "Shashibiya, 1564-1616",
+                        "Shashibiya",
+                        "Sheḳspir, Ṿilyam, 1564-1616",
+                        "Sheḳspir, Ṿ",
+                        "Shaḳspir, Ṿilyam, 1564-1616",
+                        "Shaḳspir, Ṿ",
+                        "Syeiksŭpʻio, 1564-1616",
+                        "Syeiksŭpʻio",
+                        "Shekspir, V. (Vilʹi͡am), 1564-1616",
+                        "Szekspir, William, 1564-1616",
+                        "Shakespeare, Guglielmo, 1564-1616",
+                        "Shakespeare, G",
+                        "Shake-speare, William, 1564-1616",
+                        "Shake-speare, W",
+                        "Sha-ō, 1564-1616",
+                        "Sha-ō",
+                        "Şekspir, 1564-1616",
+                        "Şekspir",
+                        "Shekspir, Uiliam, 1564-1616",
+                        "Shekspir, U",
+                        "Shekspir, U. (Uiliam), 1564-1616",
+                        "Šekspir, Vilijam, 1564-1616",
+                        "Ṣēkspiyar, Viliyam, 1564-1616",
+                        "Ṣēkspiyar, V",
+                        "Shakspir, 1564-1616",
+                        "Shakspir",
+                        "Shekspyr, Vyli͡em, 1564-1616",
+                        "Shekspyr, V",
+                        "Şekspir, Velyam, 1564-1616",
+                        "Şekspir, V",
+                        "Ṣēkspiyar, Villiyam, 1564-1616",
+                        "Shēkʻspʻiyr, Vlilliam, 1564-1616",
+                        "Shēkʻspʻiyr, V",
+                        "Ṣēkspiyar, 1564-1616",
+                        "Ṣēkspiyar",
+                        "Ṣēkspiyar Mahākavi, 1564-1616",
+                        "Ṣēkspiyar Mahākavi",
+                        "Ṣēkspiyar Mahākaviya, 1564-1616",
+                        "Ṣēkspiyar Mahākaviya",
+                        "Sheḳspier, Ṿilyam, 1564-1616",
+                        "Sheḳspier, Ṿ",
+                        "Shēkʻspir, 1564-1616",
+                        "Shēkʻspir",
+                        "Shakespeare, 1564-1616",
+                        "Shakespeare",
+                        "Śeksper, 1564-1616",
+                        "Śeksper",
+                        "Shekspīʼar, Viliyam, 1564-1616",
+                        "Shekspīʼar, V",
+                        "Shekspir, Uĭlii͡am, 1564-1616",
+                        "Шекспир, Уйлям, 1564-1616",
+                        "Шекспир, У",
+                        "Шекспир, Вильям, 1564-1616",
+                        "Шекспир, В",
+                        "Шекспир, Уильям, 1564-1616",
+                        "שייקספיר, וויליאם, 1564-1616",
+                        "שיקספיר, ויליאם, 1564-1616",
+                        "שיקספיר",
+                        "שכספיר, ויליאם, 1564-1616",
+                        "שכספיר, וילים, 1564-1616",
+                        "שעפקספיר, וויליאם, 1564-1616",
+                        "שעפקספיר",
+                        "Shekʻspir, Uilyam, 1564-1616",
+                        "Shekʻspir, U",
+                        "שקספיר, ויליאם, 1564-1616",
+                        "edited by G.R. Hibbard.",
+                        "G. R.  Hibbard  (George Richard), 1915-",
+                        "George R.  Hibbard  (George Richard), 1915-",
+                        "George Richard,  Hibbard  1915-",
+                        "Hibbard, G",
+                        "Shakespeare, William, 1564-1616. Oxford Shakespeare. 1982",
+                        "Hibbard, George R. (George Richard), 1915-",
+                        "Hibbard, George Richard, 1915-"
+                    ],
+                    "creationdate": [
+                        "1987"
+                    ],
+                    "subject": [
+                        "Hamlet (Legendary character)",
+                        "Hamlet (Legendary character) Drama.",
+                        "Kings and rulers Succession Drama.",
+                        "Murder victims' families Drama.",
+                        "Fathers Death Drama.",
+                        "Revenge Drama.",
+                        "Princes Drama.",
+                        "Fathers Death.",
+                        "Kings and rulers Succession.",
+                        "Murder victims' families.",
+                        "Princes.",
+                        "Revenge.",
+                        "Denmark Drama.",
+                        "Denmark.",
+                        "Drama in English Shakespeare, William - Texts.",
+                        "Drama.",
+                        "Tragedies.",
+                        "Hamlet (Legendary character) -- Drama",
+                        "Kings and rulers -- Succession -- Drama",
+                        "Murder victims' families -- Drama",
+                        "Fathers -- Death -- Drama",
+                        "Revenge -- Drama",
+                        "Princes -- Drama",
+                        "Fathers -- Death",
+                        "Kings and rulers -- Succession",
+                        "Murder victims' families",
+                        "Princes",
+                        "Revenge",
+                        "Drama in English Shakespeare, William - Texts"
+                    ],
+                    "isbn": [
+                        "9780191732355",
+                        "0191732354",
+                        "0198129106",
+                        "9780198129103",
+                        "0192814486",
+                        "9780192814487"
+                    ],
+                    "rsrctype": [
+                        "book"
+                    ],
+                    "description": [
+                        "In his introduction Professor Hibbard explains the process by which variant texts were fused in the 18th century to create the most commonly used text of today. Drawing on critical and theatrical history, he shows how this fusion makes 'Hamlet' seem a much more 'problematic' play than it was when it originally appeared in 1623."
+                    ],
+                    "lsr14": [
+                        "Z_9ERCeprod"
+                    ],
+                    "lsr02": [
+                        "Clarendon Press ; Oxford University Press,"
+                    ],
+                    "lsr13": [
+                        "Z_9ERIebcacls_3055132",
+                        "Z_9ERIebceb_3055132",
+                        "Z_9ERIoxfoseo_10.1093/actrade/9780198129103.book.1"
+                    ],
+                    "lsr01": [
+                        "PR2807.A2 H5 1987",
+                        "PR2807 .A2 H5 1987"
+                    ],
+                    "title": [
+                        "Hamlet"
+                    ],
+                    "lsr10": [
+                        "9780191732355",
+                        "0191732354",
+                        "0198129106",
+                        "9780198129103"
+                    ],
+                    "addtitle": [
+                        "Works. 1982.",
+                        "The Oxford Shakespeare",
+                        "Hamlet."
+                    ],
+                    "recordid": [
+                        "nyu_aleph003768009",
+                        "nyu_aleph002824464"
+                    ],
+                    "general": [
+                        "Clarendon Press ; Oxford University Press,",
+                        "568502064",
+                        "648126170",
+                        "967255441",
+                        "1008626353",
+                        "1048755706",
+                        "1086543186",
+                        "1109815215",
+                        "1111244748",
+                        "1125396640",
+                        "1228609694",
+                        "Bobst copy 1 has errata slip inserted.",
+                        "13358994",
+                        "13424845",
+                        "880776109",
+                        "973819580",
+                        "1008546829",
+                        "1167050172",
+                        "1172779655"
+                    ],
+                    "lsr09": [
+                        "nyu_aleph",
+                        "CUWEB",
+                        "NSWEB",
+                        "NYUCRE",
+                        "ALL",
+                        "NYU"
+                    ],
+                    "lsr08": [
+                        "Z_9CSC_0A01_0",
+                        "Z_9CSC_0A01_0CU_0",
+                        "Z_9CSC_0A01_0NS_0",
+                        "Z_9CSC_0A01_0NYU_0",
+                        "Z_9CSC_0A01_0CU_0CU_0",
+                        "Z_9CSC_0A01_0NS_0TWEB_0",
+                        "Z_9CSC_0A01_0NYU_0BWEB_0",
+                        "Z_9CSC_0A01_0CU_0CU_0NET_0",
+                        "Z_9CSC_0A01_0NS_0TWEB_0TNSI_0",
+                        "Z_9CSC_0A01_0NYU_0BWEB_0BNYUI_0",
+                        "Z_9CSC_0A09_0CU_0",
+                        "Z_9CSC_0A09_0TWEB_0",
+                        "Z_9CSC_0A09_0NYU_0",
+                        "Z_9CSC_0A09_0NYU_0BWEB_0",
+                        "Z_9CSC_0A01_0NYU_0BOBST_0",
+                        "Z_9CSC_0A01_0NYU_0BOBST_0MAIN_0",
+                        "Z_9CSC_0A01_0NYU_0BOBST_0MAIN4_0"
+                    ],
+                    "scope": [
+                        "nyu_aleph",
+                        "CUWEB",
+                        "NSWEB",
+                        "NYUCRE",
+                        "ALL",
+                        "NYU"
+                    ],
+                    "lsr16": [
+                        "568502064",
+                        "13358994"
+                    ]
+                },
+                "links": {
+                    "linktoprice": [
+                        "$$Taleph_link_to_price_template_01"
+                    ],
+                    "lln42": [
+                        "$$Tilliad_template1$$Onyu_aleph003768009",
+                        "$$Tilliad_template1$$Onyu_aleph002824464"
+                    ],
+                    "lln43": [
+                        "$$Tares_template3$$Onyu_aleph003768009",
+                        "$$Tares_template3$$Onyu_aleph002824464"
+                    ],
+                    "lln44": [
+                        "$$Tares_template4$$Onyu_aleph003768009",
+                        "$$Tares_template4$$Onyu_aleph002824464"
+                    ],
+                    "openurlfulltext": [
+                        "$$V$$Topenurlfull_journal$$Onyu_aleph003768009",
+                        "$$V$$Topenurlfull_journal$$Onyu_aleph002824464"
+                    ],
+                    "lln40": [
+                        "$$Tilliad_ill_nyush$$Onyu_aleph003768009",
+                        "$$Tilliad_ill_nyush$$Onyu_aleph002824464"
+                    ],
+                    "lln41": [
+                        "$$Tares_template1$$Onyu_aleph003768009",
+                        "$$Tares_template1$$Onyu_aleph002824464"
+                    ],
+                    "openurl": [
+                        "$$V$$Topenurl_journal$$Onyu_aleph003768009",
+                        "$$V$$Topenurl_journal$$Onyu_aleph002824464"
+                    ],
+                    "lln28": [
+                        "$$Uhttps://cooperunion.idm.oclc.org/login?url=https://ebookcentral.proquest.com/lib/cooper/detail.action?docID=3055132$$DEbook Central (Cooper Union Access)$$Onyu_aleph003768009"
+                    ],
+                    "linktoexcerpt": [
+                        "$$Tsyndetics_excerpt$$DExcerpt from item"
+                    ],
+                    "lln08": [
+                        "$$Tworldcat_isbn$$DFor All Users: Check other Libraries using WorldCat®$$Onyu_aleph003768009",
+                        "$$Tworldcat_isbn$$DFor All Users: Check other Libraries using WorldCat®$$Onyu_aleph002824464"
+                    ],
+                    "lln09": [
+                        "$$Taleph_backlink$$DFor Staff: View source record (system no.003768009$$Onyu_aleph003768009",
+                        "$$Taleph_backlink$$DFor Staff: View source record (system no.002824464$$Onyu_aleph002824464"
+                    ],
+                    "backlink": [
+                        "$$V$$Taleph_backlink$$DMore bibliographic information$$Onyu_aleph003768009",
+                        "$$V$$Taleph_backlink$$DMore bibliographic information$$Onyu_aleph002824464"
+                    ],
+                    "lln46": [
+                        "$$Tsource_record_template$$Onyu_aleph003768009",
+                        "$$Tsource_record_template$$Onyu_aleph002824464"
+                    ],
+                    "lln47": [
+                        "$$Tpnx_record_template$$Onyu_aleph003768009",
+                        "$$Tpnx_record_template$$Onyu_aleph002824464"
+                    ],
+                    "lln26": [
+                        "$$Uhttps://ebookcentral.proquest.com/lib/nyulibrary-ebooks/detail.action?docID=3055132$$DEbook Central (NYU Access)$$Onyu_aleph003768009",
+                        "$$Uhttp://proxy.library.nyu.edu/login?url=https://www.oxfordscholarlyeditions.com/view/10.1093/actrade/9780198129103.book.1/actrade-9780198129103-book-1$$DOxford Scholarly Editions Online (OSEO) (NYU Access)$$Onyu_aleph003768009"
+                    ],
+                    "lln48": [
+                        "$$Tjson_record_template$$Onyu_aleph003768009",
+                        "$$Tjson_record_template$$Onyu_aleph002824464"
+                    ],
+                    "lln27": [
+                        "$$Uhttps://login.libproxy.newschool.edu/login?url=https://ebookcentral.proquest.com/lib/newschool/detail.action?docID=3055132$$DEbook Central (New School Access)$$Onyu_aleph003768009"
+                    ],
+                    "linktoreview": [
+                        "$$TpersistentUrl$$DCopy item link"
+                    ],
+                    "thumbnail": [
+                        "$$Tsyndetics_thumb"
+                    ],
+                    "lln31": [
+                        "$$Tilliad_book$$Eilliad_book_label$$Onyu_aleph003768009",
+                        "$$Tilliad_book$$Eilliad_book_label$$Onyu_aleph002824464"
+                    ],
+                    "lln10": [
+                        "$$Tnyugetit$$Onyu_aleph003768009",
+                        "$$Tnyugetit$$Onyu_aleph002824464"
+                    ],
+                    "lln32": [
+                        "$$Tilliad_book_chapter$$Eilliad_book_chapter_label$$Onyu_aleph003768009",
+                        "$$Tilliad_book_chapter$$Eilliad_book_chapter_label$$Onyu_aleph002824464"
+                    ],
+                    "linktorsrc": [
+                        "$$V$$Uhttps://ebookcentral.proquest.com/lib/nyulibrary-ebooks/detail.action?docID=3055132$$DEbook Central$$INYU$$Onyu_aleph003768009",
+                        "$$V$$Uhttp://proxy.library.nyu.edu/login?url=https://www.oxfordscholarlyeditions.com/view/10.1093/actrade/9780198129103.book.1/actrade-9780198129103-book-1$$DOxford Scholarly Editions Online (OSEO)$$INYU$$Onyu_aleph003768009",
+                        "$$V$$Uhttps://ebookcentral.proquest.com/lib/nyulibrary-ebooks/detail.action?docID=3055132$$DEbook Central$$INYUAD$$Onyu_aleph003768009",
+                        "$$V$$Uhttp://proxy.library.nyu.edu/login?url=https://www.oxfordscholarlyeditions.com/view/10.1093/actrade/9780198129103.book.1/actrade-9780198129103-book-1$$DOxford Scholarly Editions Online (OSEO)$$INYUAD$$Onyu_aleph003768009",
+                        "$$V$$Uhttps://ebookcentral.proquest.com/lib/nyulibrary-ebooks/detail.action?docID=3055132$$DEbook Central$$INYUSH$$Onyu_aleph003768009",
+                        "$$V$$Uhttp://proxy.library.nyu.edu/login?url=https://www.oxfordscholarlyeditions.com/view/10.1093/actrade/9780198129103.book.1/actrade-9780198129103-book-1$$DOxford Scholarly Editions Online (OSEO)$$INYUSH$$Onyu_aleph003768009",
+                        "$$V$$Uhttps://login.libproxy.newschool.edu/login?url=https://ebookcentral.proquest.com/lib/newschool/detail.action?docID=3055132$$DEbook Central$$INS$$Onyu_aleph003768009",
+                        "$$V$$Uhttps://cooperunion.idm.oclc.org/login?url=https://ebookcentral.proquest.com/lib/cooper/detail.action?docID=3055132$$DEbook Central$$ICU$$Onyu_aleph003768009",
+                        "$$V$$Uhttps://ebookcentral.proquest.com/lib/nyulibrary-ebooks/detail.action?docID=3055132$$DEbook Central (NYU Access)$$IHSL$$Onyu_aleph003768009",
+                        "$$V$$Uhttp://proxy.library.nyu.edu/login?url=https://www.oxfordscholarlyeditions.com/view/10.1093/actrade/9780198129103.book.1/actrade-9780198129103-book-1$$DOxford Scholarly Editions Online (OSEO) (NYU Access)$$IHSL$$Onyu_aleph003768009",
+                        "$$V$$Uhttps://ebookcentral.proquest.com/lib/nyulibrary-ebooks/detail.action?docID=3055132$$DEbook Central (NYU Access)$$INYSID$$Onyu_aleph003768009",
+                        "$$V$$Uhttp://proxy.library.nyu.edu/login?url=https://www.oxfordscholarlyeditions.com/view/10.1093/actrade/9780198129103.book.1/actrade-9780198129103-book-1$$DOxford Scholarly Editions Online (OSEO) (NYU Access)$$INYSID$$Onyu_aleph003768009",
+                        "$$V$$Uhttps://ebookcentral.proquest.com/lib/nyulibrary-ebooks/detail.action?docID=3055132$$DEbook Central (NYU Access)$$INYHS$$Onyu_aleph003768009",
+                        "$$V$$Uhttp://proxy.library.nyu.edu/login?url=https://www.oxfordscholarlyeditions.com/view/10.1093/actrade/9780198129103.book.1/actrade-9780198129103-book-1$$DOxford Scholarly Editions Online (OSEO) (NYU Access)$$INYHS$$Onyu_aleph003768009",
+                        "$$V$$Uhttps://ebookcentral.proquest.com/lib/nyulibrary-ebooks/detail.action?docID=3055132$$DEbook Central (NYU Access)$$IBHS$$Onyu_aleph003768009",
+                        "$$V$$Uhttp://proxy.library.nyu.edu/login?url=https://www.oxfordscholarlyeditions.com/view/10.1093/actrade/9780198129103.book.1/actrade-9780198129103-book-1$$DOxford Scholarly Editions Online (OSEO) (NYU Access)$$IBHS$$Onyu_aleph003768009"
+                    ],
+                    "lln11": [
+                        "$$Tnyuadgetit$$Onyu_aleph003768009",
+                        "$$Tnyuadgetit$$Onyu_aleph002824464"
+                    ],
+                    "lln12": [
+                        "$$Tnyushgetit$$Onyu_aleph003768009",
+                        "$$Tnyushgetit$$Onyu_aleph002824464"
+                    ],
+                    "lln30": [
+                        "$$TEZBorrowAuTitle$$Eezborrow_label$$Onyu_aleph002824464"
+                    ],
+                    "lln17": [
+                        "$$Uhttps://login.libproxy.newschool.edu/login?url=https://ebookcentral.proquest.com/lib/newschool/detail.action?docID=3055132$$DEbook Central$$Onyu_aleph003768009"
+                    ],
+                    "lln18": [
+                        "$$Uhttps://cooperunion.idm.oclc.org/login?url=https://ebookcentral.proquest.com/lib/cooper/detail.action?docID=3055132$$DEbook Central$$Onyu_aleph003768009"
+                    ],
+                    "linktorequest": [
+                        "$$V$$Taleph_link_to_request_template_01$$Onyu_aleph003768009",
+                        "$$V$$Taleph_link_to_request_template_01$$Onyu_aleph002824464"
+                    ],
+                    "lln13": [
+                        "$$Tcugetit$$Onyu_aleph003768009",
+                        "$$Tcugetit$$Onyu_aleph002824464"
+                    ],
+                    "lln15": [
+                        "$$Ttest_aleph_holdings$$DCheck Availability:NYU Bobst  Main Collection  (PR2807.A2 H5 1987 )  $$1BOBST  $$2MAIN$$Onyu_aleph002824464",
+                        "$$Ttest_aleph_holdings$$DCheck Availability:NYU Bobst  Main Collection - Non-Circulating  (PR2807.A2 H5 1987 )  $$1BOBST  $$2MAIN4$$Onyu_aleph002824464"
+                    ],
+                    "lln16": [
+                        "$$Uhttps://ebookcentral.proquest.com/lib/nyulibrary-ebooks/detail.action?docID=3055132$$DEbook Central$$Onyu_aleph003768009",
+                        "$$Uhttp://proxy.library.nyu.edu/login?url=https://www.oxfordscholarlyeditions.com/view/10.1093/actrade/9780198129103.book.1/actrade-9780198129103-book-1$$DOxford Scholarly Editions Online (OSEO)$$Onyu_aleph003768009"
+                    ],
+                    "linktoholdings": [
+                        "$$V$$Taleph_holdings$$Onyu_aleph003768009",
+                        "$$V$$Taleph_holdings$$Onyu_aleph002824464"
+                    ],
+                    "linktouc": [
+                        "$$Tworldcat_isbn$$DCheck other libraries (WorldCat®)",
+                        "$$Tworldcat_isbn$$DCheck other libraries (WorldCat®)"
+                    ]
+                },
+                "ranking": {
+                    "booster2": [
+                        "1"
+                    ],
+                    "booster1": [
+                        "1"
+                    ]
+                },
+                "addata": {
+                    "date": [
+                        "1987"
+                    ],
+                    "notes": [
+                        "Includes bibliographical references and index."
+                    ],
+                    "cop": [
+                        "Oxford : New York",
+                        "Oxford [Oxfordshire] : New York"
+                    ],
+                    "isbn": [
+                        "9780191732355",
+                        "0191732354",
+                        "0198129106",
+                        "9780198129103"
+                    ],
+                    "lad09": [
+                        "Shakespeare, William",
+                        "Hibbard, G. R. (George Richard)"
+                    ],
+                    "lad08": [
+                        "Hibbard, G. R. (George Richard)"
+                    ],
+                    "lad07": [
+                        "Shakespeare, William"
+                    ],
+                    "lad06": [
+                        "Shakespeare"
+                    ],
+                    "lad05": [
+                        "Hamlet"
+                    ],
+                    "lad03": [
+                        "ebcacls_3055132",
+                        "ebceb_3055132",
+                        "oxfoseo_10.1093/actrade/9780198129103.book.1"
+                    ],
+                    "aufirst": [
+                        "William,"
+                    ],
+                    "lad01": [
+                        "CUTWEBBWEB",
+                        "Online Resource$$ICU",
+                        "Online Resource$$INS",
+                        "Online Resource$$INYU",
+                        "Online Resource$$INYUAD",
+                        "Online Resource$$INYUSH",
+                        "Online Resource$$IHSL",
+                        "Online Resource$$INYSID",
+                        "Online Resource$$INYHS",
+                        "Online Resource$$IBHS",
+                        "BOBSTBOBSTBOBST",
+                        "Physical Item$$INYU",
+                        "Physical Item$$INYUAD",
+                        "Physical Item$$INYUSH",
+                        "Physical Item$$IHSL",
+                        "Physical Item$$INS",
+                        "Physical Item$$ICU",
+                        "Physical Item$$INYSID",
+                        "Physical Item$$INYHS",
+                        "Physical Item$$IBHS"
+                    ],
+                    "addau": [
+                        "Hibbard, G. R. (George Richard)"
+                    ],
+                    "lccn": [
+                        "86005446"
+                    ],
+                    "seriesau": [
+                        "Shakespeare, William, 1564-1616"
+                    ],
+                    "genre": [
+                        "book"
+                    ],
+                    "aulast": [
+                        "Shakespeare",
+                        "Hibbard"
+                    ],
+                    "format": [
+                        "book"
+                    ],
+                    "ristype": [
+                        "BOOK"
+                    ],
+                    "oclcid": [
+                        "568502064",
+                        "13358994"
+                    ],
+                    "abstract": [
+                        "In his introduction Professor Hibbard explains the process by which variant texts were fused in the 18th century to create the most commonly used text of today. Drawing on critical and theatrical history, he shows how this fusion makes 'Hamlet' seem a much more 'problematic' play than it was when it originally appeared in 1623."
+                    ],
+                    "seriestitle": [
+                        "Shakespeare, William, 1564-1616. Works. 1982"
+                    ],
+                    "au": [
+                        "Shakespeare, William"
+                    ],
+                    "btitle": [
+                        "Hamlet"
+                    ],
+                    "pub": [
+                        "Clarendon Press ; Oxford University Press"
+                    ],
+                    "risdate": [
+                        "1987"
+                    ]
+                },
+                "browse": {
+                    "institution": [
+                        "CU",
+                        "NS",
+                        "NYU",
+                        "NYUAD",
+                        "NYUSH"
+                    ],
+                    "author": [
+                        "$$DShakespeare, William, 1564-1616$$EShakespeare, William, 1564-1616$$INYU10009690883$$PY$$UCU",
+                        "$$DShakespeare, William, 1564-1616$$EShakespeare, William, 1564-1616$$INYU10009690883$$PY$$UNS",
+                        "$$DShakespeare, William, 1564-1616$$EShakespeare, William, 1564-1616$$INYU10009690883$$PY$$UNYU",
+                        "$$DShakespeare, William, 1564-1616$$EShakespeare, William, 1564-1616$$INYU10009690883$$PY$$UNYUAD",
+                        "$$DShakespeare, William, 1564-1616$$EShakespeare, William, 1564-1616$$INYU10009690883$$PY$$UNYUSH",
+                        "$$Dשעקספיר, װיליאם, 1564-1616$$Eשעקספיר, װיליאם, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dשעקספיר, װיליאם, 1564-1616$$Eשעקספיר, װיליאם, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dשעקספיר, װיליאם, 1564-1616$$Eשעקספיר, װיליאם, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dשעקספיר, װיליאם, 1564-1616$$Eשעקספיר, װיליאם, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dשעקספיר, װיליאם, 1564-1616$$Eשעקספיר, װיליאם, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dשעקספיער, וויליאם, 1564-1616$$Eשעקספיער, וויליאם, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dשעקספיער, וויליאם, 1564-1616$$Eשעקספיער, וויליאם, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dשעקספיער, וויליאם, 1564-1616$$Eשעקספיער, וויליאם, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dשעקספיער, וויליאם, 1564-1616$$Eשעקספיער, וויליאם, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dשעקספיער, וויליאם, 1564-1616$$Eשעקספיער, וויליאם, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dשעקספיר, ווילליאם, 1564-1616$$Eשעקספיר, ווילליאם, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dשעקספיר, ווילליאם, 1564-1616$$Eשעקספיר, ווילליאם, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dשעקספיר, ווילליאם, 1564-1616$$Eשעקספיר, ווילליאם, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dשעקספיר, ווילליאם, 1564-1616$$Eשעקספיר, ווילליאם, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dשעקספיר, ווילליאם, 1564-1616$$Eשעקספיר, ווילליאם, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dשעקספיער, ווילליאם, 1564-1616$$Eשעקספיער, ווילליאם, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dשעקספיער, ווילליאם, 1564-1616$$Eשעקספיער, ווילליאם, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dשעקספיער, ווילליאם, 1564-1616$$Eשעקספיער, ווילליאם, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dשעקספיער, ווילליאם, 1564-1616$$Eשעקספיער, ווילליאם, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dשעקספיער, ווילליאם, 1564-1616$$Eשעקספיער, ווילליאם, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dשקספיר, וויליאם, 1564-1616$$Eשקספיר, וויליאם, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dשקספיר, וויליאם, 1564-1616$$Eשקספיר, וויליאם, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dשקספיר, וויליאם, 1564-1616$$Eשקספיר, וויליאם, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dשקספיר, וויליאם, 1564-1616$$Eשקספיר, וויליאם, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dשקספיר, וויליאם, 1564-1616$$Eשקספיר, וויליאם, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dשקספיר, ווילים, 1564-1616$$Eשקספיר, ווילים, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dשקספיר, ווילים, 1564-1616$$Eשקספיר, ווילים, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dשקספיר, ווילים, 1564-1616$$Eשקספיר, ווילים, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dשקספיר, ווילים, 1564-1616$$Eשקספיר, ווילים, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dשקספיר, ווילים, 1564-1616$$Eשקספיר, ווילים, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dשקספיר, וילאם, 1564-1616$$Eשקספיר, וילאם, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dשקספיר, וילאם, 1564-1616$$Eשקספיר, וילאם, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dשקספיר, וילאם, 1564-1616$$Eשקספיר, וילאם, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dשקספיר, וילאם, 1564-1616$$Eשקספיר, וילאם, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dשקספיר, וילאם, 1564-1616$$Eשקספיר, וילאם, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dשקספיר, ויליים, 1564-1616$$Eשקספיר, ויליים, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dשקספיר, ויליים, 1564-1616$$Eשקספיר, ויליים, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dשקספיר, ויליים, 1564-1616$$Eשקספיר, ויליים, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dשקספיר, ויליים, 1564-1616$$Eשקספיר, ויליים, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dשקספיר, ויליים, 1564-1616$$Eשקספיר, ויליים, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dשקספיר, וילים, 1564-1616$$Eשקספיר, וילים, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dשקספיר, וילים, 1564-1616$$Eשקספיר, וילים, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dשקספיר, וילים, 1564-1616$$Eשקספיר, וילים, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dשקספיר, וילים, 1564-1616$$Eשקספיר, וילים, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dשקספיר, וילים, 1564-1616$$Eשקספיר, וילים, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dשייקספיר, וו., 1564-1616$$Eשייקספיר, וו., 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dשייקספיר, וו., 1564-1616$$Eשייקספיר, וו., 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dשייקספיר, וו., 1564-1616$$Eשייקספיר, וו., 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dשייקספיר, וו., 1564-1616$$Eשייקספיר, וו., 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dשייקספיר, וו., 1564-1616$$Eשייקספיר, וו., 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dשכספיר, ו׳, 1564-1616$$Eשכספיר, ו׳, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dשכספיר, ו׳, 1564-1616$$Eשכספיר, ו׳, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dשכספיר, ו׳, 1564-1616$$Eשכספיר, ו׳, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dשכספיר, ו׳, 1564-1616$$Eשכספיר, ו׳, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dשכספיר, ו׳, 1564-1616$$Eשכספיר, ו׳, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dשעקספיער, וו, 1564-1616$$Eשעקספיער, וו, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dשעקספיער, וו, 1564-1616$$Eשעקספיער, וו, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dשעקספיער, וו, 1564-1616$$Eשעקספיער, וו, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dשעקספיער, וו, 1564-1616$$Eשעקספיער, וו, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dשעקספיער, וו, 1564-1616$$Eשעקספיער, וו, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dשקספיר, וו, 1564-1616$$Eשקספיר, וו, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dשקספיר, וו, 1564-1616$$Eשקספיר, וו, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dשקספיר, וו, 1564-1616$$Eשקספיר, וו, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dשקספיר, וו, 1564-1616$$Eשקספיר, וו, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dשקספיר, וו, 1564-1616$$Eשקספיר, וו, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dשעקספיר, 1564-1616$$Eשעקספיר, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dשעקספיר, 1564-1616$$Eשעקספיר, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dשעקספיר, 1564-1616$$Eשעקספיר, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dשעקספיר, 1564-1616$$Eשעקספיר, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dשעקספיר, 1564-1616$$Eשעקספיר, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dשעקספיר, וו, 1564-1616$$Eשעקספיר, וו, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dשעקספיר, וו, 1564-1616$$Eשעקספיר, וו, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dשעקספיר, וו, 1564-1616$$Eשעקספיר, וו, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dשעקספיר, וו, 1564-1616$$Eשעקספיר, וו, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dשעקספיר, וו, 1564-1616$$Eשעקספיר, וו, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dשעקספער, 1564-1616$$Eשעקספער, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dשעקספער, 1564-1616$$Eשעקספער, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dשעקספער, 1564-1616$$Eשעקספער, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dשעקספער, 1564-1616$$Eשעקספער, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dשעקספער, 1564-1616$$Eשעקספער, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dשעקספער, וויליאמ, 1564-1616$$Eשעקספער, וויליאמ, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dשעקספער, וויליאמ, 1564-1616$$Eשעקספער, וויליאמ, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dשעקספער, וויליאמ, 1564-1616$$Eשעקספער, וויליאמ, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dשעקספער, וויליאמ, 1564-1616$$Eשעקספער, וויליאמ, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dשעקספער, וויליאמ, 1564-1616$$Eשעקספער, וויליאמ, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dשקספיר, 1564-1616$$Eשקספיר, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dשקספיר, 1564-1616$$Eשקספיר, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dשקספיר, 1564-1616$$Eשקספיר, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dשקספיר, 1564-1616$$Eשקספיר, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dשקספיר, 1564-1616$$Eשקספיר, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dشاكسبير، وليم, 1564-1616$$Eشاكسبير، وليم, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dشاكسبير، وليم, 1564-1616$$Eشاكسبير، وليم, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dشاكسبير، وليم, 1564-1616$$Eشاكسبير، وليم, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dشاكسبير، وليم, 1564-1616$$Eشاكسبير، وليم, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dشاكسبير، وليم, 1564-1616$$Eشاكسبير، وليم, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dشاكسپير، وليم, 1564-1616$$Eشاكسپير، وليم, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dشاكسپير، وليم, 1564-1616$$Eشاكسپير، وليم, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dشاكسپير، وليم, 1564-1616$$Eشاكسپير، وليم, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dشاكسپير، وليم, 1564-1616$$Eشاكسپير، وليم, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dشاكسپير، وليم, 1564-1616$$Eشاكسپير، وليم, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dشكسبير، وليام, 1564-1616$$Eشكسبير، وليام, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dشكسبير، وليام, 1564-1616$$Eشكسبير، وليام, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dشكسبير، وليام, 1564-1616$$Eشكسبير، وليام, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dشكسبير، وليام, 1564-1616$$Eشكسبير، وليام, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dشكسبير، وليام, 1564-1616$$Eشكسبير، وليام, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dشكسبير، وليم, 1564-1616$$Eشكسبير، وليم, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dشكسبير، وليم, 1564-1616$$Eشكسبير، وليم, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dشكسبير، وليم, 1564-1616$$Eشكسبير، وليم, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dشكسبير، وليم, 1564-1616$$Eشكسبير، وليم, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dشكسبير، وليم, 1564-1616$$Eشكسبير، وليم, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dشكسبير، و., 1564-1616$$Eشكسبير، و., 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dشكسبير، و., 1564-1616$$Eشكسبير، و., 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dشكسبير، و., 1564-1616$$Eشكسبير، و., 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dشكسبير، و., 1564-1616$$Eشكسبير، و., 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dشكسبير، و., 1564-1616$$Eشكسبير، و., 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dشكسپير، وليم, 1564-1616$$Eشكسپير، وليم, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dشكسپير، وليم, 1564-1616$$Eشكسپير، وليم, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dشكسپير، وليم, 1564-1616$$Eشكسپير، وليم, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dشكسپير، وليم, 1564-1616$$Eشكسپير، وليم, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dشكسپير، وليم, 1564-1616$$Eشكسپير، وليم, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dشكسپير، ويليام, 1564-1616$$Eشكسپير، ويليام, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dشكسپير، ويليام, 1564-1616$$Eشكسپير، ويليام, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dشكسپير، ويليام, 1564-1616$$Eشكسپير، ويليام, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dشكسپير، ويليام, 1564-1616$$Eشكسپير، ويليام, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dشكسپير، ويليام, 1564-1616$$Eشكسپير، ويليام, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dشيكسبير، وليام, 1564-1616$$Eشيكسبير، وليام, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dشيكسبير، وليام, 1564-1616$$Eشيكسبير، وليام, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dشيكسبير، وليام, 1564-1616$$Eشيكسبير، وليام, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dشيكسبير، وليام, 1564-1616$$Eشيكسبير، وليام, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dشيكسبير، وليام, 1564-1616$$Eشيكسبير، وليام, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dشيكسبير، وليم, 1564-1616$$Eشيكسبير، وليم, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dشيكسبير، وليم, 1564-1616$$Eشيكسبير، وليم, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dشيكسبير، وليم, 1564-1616$$Eشيكسبير، وليم, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dشيكسبير، وليم, 1564-1616$$Eشيكسبير، وليم, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dشيكسبير، وليم, 1564-1616$$Eشيكسبير، وليم, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dشيکسپيئر، وليم, 1564-1616$$Eشيکسپيئر، وليم, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dشيکسپيئر، وليم, 1564-1616$$Eشيکسپيئر، وليم, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dشيکسپيئر، وليم, 1564-1616$$Eشيکسپيئر، وليم, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dشيکسپيئر، وليم, 1564-1616$$Eشيکسپيئر، وليم, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dشيکسپيئر، وليم, 1564-1616$$Eشيکسپيئر، وليم, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dوليم شکسبير, 1564-1616$$Eوليم شکسبير, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dوليم شکسبير, 1564-1616$$Eوليم شکسبير, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dوليم شکسبير, 1564-1616$$Eوليم شکسبير, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dوليم شکسبير, 1564-1616$$Eوليم شکسبير, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dوليم شکسبير, 1564-1616$$Eوليم شکسبير, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dوليم شيکسپيئر, 1564-1616$$Eوليم شيکسپيئر, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dوليم شيکسپيئر, 1564-1616$$Eوليم شيکسپيئر, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dوليم شيکسپيئر, 1564-1616$$Eوليم شيکسپيئر, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dوليم شيکسپيئر, 1564-1616$$Eوليم شيکسپيئر, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dوليم شيکسپيئر, 1564-1616$$Eوليم شيکسپيئر, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$D沙士北亞威廉姆, 1564-1616$$E沙士北亞威廉姆, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$D沙士北亞威廉姆, 1564-1616$$E沙士北亞威廉姆, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$D沙士北亞威廉姆, 1564-1616$$E沙士北亞威廉姆, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$D沙士北亞威廉姆, 1564-1616$$E沙士北亞威廉姆, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$D沙士北亞威廉姆, 1564-1616$$E沙士北亞威廉姆, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$D沙士比亞威廉姆, 1564-1616$$E沙士比亞威廉姆, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$D沙士比亞威廉姆, 1564-1616$$E沙士比亞威廉姆, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$D沙士比亞威廉姆, 1564-1616$$E沙士比亞威廉姆, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$D沙士比亞威廉姆, 1564-1616$$E沙士比亞威廉姆, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$D沙士比亞威廉姆, 1564-1616$$E沙士比亞威廉姆, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$D莎士比亞威廉姆, 1564-1616$$E莎士比亞威廉姆, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$D莎士比亞威廉姆, 1564-1616$$E莎士比亞威廉姆, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$D莎士比亞威廉姆, 1564-1616$$E莎士比亞威廉姆, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$D莎士比亞威廉姆, 1564-1616$$E莎士比亞威廉姆, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$D莎士比亞威廉姆, 1564-1616$$E莎士比亞威廉姆, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$D莎士比亞威廉, 1564-1616$$E莎士比亞威廉, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$D莎士比亞威廉, 1564-1616$$E莎士比亞威廉, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$D莎士比亞威廉, 1564-1616$$E莎士比亞威廉, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$D莎士比亞威廉, 1564-1616$$E莎士比亞威廉, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$D莎士比亞威廉, 1564-1616$$E莎士比亞威廉, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$D莎士比亞, 1564-1616$$E莎士比亞, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$D莎士比亞, 1564-1616$$E莎士比亞, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$D莎士比亞, 1564-1616$$E莎士比亞, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$D莎士比亞, 1564-1616$$E莎士比亞, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$D莎士比亞, 1564-1616$$E莎士比亞, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DHākipia, Wiremu, 1564-1616$$EHākipia, Wiremu, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DHākipia, Wiremu, 1564-1616$$EHākipia, Wiremu, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DHākipia, Wiremu, 1564-1616$$EHākipia, Wiremu, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DHākipia, Wiremu, 1564-1616$$EHākipia, Wiremu, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DHākipia, Wiremu, 1564-1616$$EHākipia, Wiremu, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DShakespear, William, 1564-1616$$EShakespear, William, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DShakespear, William, 1564-1616$$EShakespear, William, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DShakespear, William, 1564-1616$$EShakespear, William, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DShakespear, William, 1564-1616$$EShakespear, William, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DShakespear, William, 1564-1616$$EShakespear, William, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DShakspeare, William, 1564-1616$$EShakspeare, William, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DShakspeare, William, 1564-1616$$EShakspeare, William, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DShakspeare, William, 1564-1616$$EShakspeare, William, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DShakspeare, William, 1564-1616$$EShakspeare, William, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DShakspeare, William, 1564-1616$$EShakspeare, William, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DŠekʻspiri, Uiliam, 1564-1616$$EŠekʻspiri, Uiliam, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DŠekʻspiri, Uiliam, 1564-1616$$EŠekʻspiri, Uiliam, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DŠekʻspiri, Uiliam, 1564-1616$$EŠekʻspiri, Uiliam, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DŠekʻspiri, Uiliam, 1564-1616$$EŠekʻspiri, Uiliam, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DŠekʻspiri, Uiliam, 1564-1616$$EŠekʻspiri, Uiliam, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DSaixpēr, Gouilliam, 1564-1616$$ESaixpēr, Gouilliam, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DSaixpēr, Gouilliam, 1564-1616$$ESaixpēr, Gouilliam, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DSaixpēr, Gouilliam, 1564-1616$$ESaixpēr, Gouilliam, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DSaixpēr, Gouilliam, 1564-1616$$ESaixpēr, Gouilliam, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DSaixpēr, Gouilliam, 1564-1616$$ESaixpēr, Gouilliam, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DShakspere, William, 1564-1616$$EShakspere, William, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DShakspere, William, 1564-1616$$EShakspere, William, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DShakspere, William, 1564-1616$$EShakspere, William, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DShakspere, William, 1564-1616$$EShakspere, William, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DShakspere, William, 1564-1616$$EShakspere, William, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DShikisbīr, Wilyam, 1564-1616$$EShikisbīr, Wilyam, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DShikisbīr, Wilyam, 1564-1616$$EShikisbīr, Wilyam, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DShikisbīr, Wilyam, 1564-1616$$EShikisbīr, Wilyam, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DShikisbīr, Wilyam, 1564-1616$$EShikisbīr, Wilyam, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DShikisbīr, Wilyam, 1564-1616$$EShikisbīr, Wilyam, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DSzekspir, Wiliam, 1564-1616$$ESzekspir, Wiliam, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DSzekspir, Wiliam, 1564-1616$$ESzekspir, Wiliam, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DSzekspir, Wiliam, 1564-1616$$ESzekspir, Wiliam, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DSzekspir, Wiliam, 1564-1616$$ESzekspir, Wiliam, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DSzekspir, Wiliam, 1564-1616$$ESzekspir, Wiliam, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DŠekspyras, 1564-1616$$EŠekspyras, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DŠekspyras, 1564-1616$$EŠekspyras, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DŠekspyras, 1564-1616$$EŠekspyras, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DŠekspyras, 1564-1616$$EŠekspyras, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DŠekspyras, 1564-1616$$EŠekspyras, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DShekspir, Vilʹi͡am, 1564-1616$$EShekspir, Vilʹi͡am, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DShekspir, Vilʹi͡am, 1564-1616$$EShekspir, Vilʹi͡am, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DShekspir, Vilʹi͡am, 1564-1616$$EShekspir, Vilʹi͡am, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DShekspir, Vilʹi͡am, 1564-1616$$EShekspir, Vilʹi͡am, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DShekspir, Vilʹi͡am, 1564-1616$$EShekspir, Vilʹi͡am, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DŠekspir, Viljem, 1564-1616$$EŠekspir, Viljem, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DŠekspir, Viljem, 1564-1616$$EŠekspir, Viljem, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DŠekspir, Viljem, 1564-1616$$EŠekspir, Viljem, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DŠekspir, Viljem, 1564-1616$$EŠekspir, Viljem, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DŠekspir, Viljem, 1564-1616$$EŠekspir, Viljem, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DTsikinya-chaka, 1564-1616$$ETsikinya-chaka, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DTsikinya-chaka, 1564-1616$$ETsikinya-chaka, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DTsikinya-chaka, 1564-1616$$ETsikinya-chaka, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DTsikinya-chaka, 1564-1616$$ETsikinya-chaka, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DTsikinya-chaka, 1564-1616$$ETsikinya-chaka, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DSha-shih-pi-ya, 1564-1616$$ESha-shih-pi-ya, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DSha-shih-pi-ya, 1564-1616$$ESha-shih-pi-ya, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DSha-shih-pi-ya, 1564-1616$$ESha-shih-pi-ya, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DSha-shih-pi-ya, 1564-1616$$ESha-shih-pi-ya, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DSha-shih-pi-ya, 1564-1616$$ESha-shih-pi-ya, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DShashibiya, 1564-1616$$EShashibiya, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DShashibiya, 1564-1616$$EShashibiya, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DShashibiya, 1564-1616$$EShashibiya, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DShashibiya, 1564-1616$$EShashibiya, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DShashibiya, 1564-1616$$EShashibiya, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DSheḳspir, Ṿilyam, 1564-1616$$ESheḳspir, Ṿilyam, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DSheḳspir, Ṿilyam, 1564-1616$$ESheḳspir, Ṿilyam, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DSheḳspir, Ṿilyam, 1564-1616$$ESheḳspir, Ṿilyam, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DSheḳspir, Ṿilyam, 1564-1616$$ESheḳspir, Ṿilyam, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DSheḳspir, Ṿilyam, 1564-1616$$ESheḳspir, Ṿilyam, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DShaḳspir, Ṿilyam, 1564-1616$$EShaḳspir, Ṿilyam, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DShaḳspir, Ṿilyam, 1564-1616$$EShaḳspir, Ṿilyam, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DShaḳspir, Ṿilyam, 1564-1616$$EShaḳspir, Ṿilyam, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DShaḳspir, Ṿilyam, 1564-1616$$EShaḳspir, Ṿilyam, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DShaḳspir, Ṿilyam, 1564-1616$$EShaḳspir, Ṿilyam, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DSyeiksŭpʻio, 1564-1616$$ESyeiksŭpʻio, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DSyeiksŭpʻio, 1564-1616$$ESyeiksŭpʻio, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DSyeiksŭpʻio, 1564-1616$$ESyeiksŭpʻio, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DSyeiksŭpʻio, 1564-1616$$ESyeiksŭpʻio, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DSyeiksŭpʻio, 1564-1616$$ESyeiksŭpʻio, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DShekspir, V. (Vilʹi͡am), 1564-1616$$EShekspir, V. (Vilʹi͡am), 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DShekspir, V. (Vilʹi͡am), 1564-1616$$EShekspir, V. (Vilʹi͡am), 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DShekspir, V. (Vilʹi͡am), 1564-1616$$EShekspir, V. (Vilʹi͡am), 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DShekspir, V. (Vilʹi͡am), 1564-1616$$EShekspir, V. (Vilʹi͡am), 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DShekspir, V. (Vilʹi͡am), 1564-1616$$EShekspir, V. (Vilʹi͡am), 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DSzekspir, William, 1564-1616$$ESzekspir, William, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DSzekspir, William, 1564-1616$$ESzekspir, William, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DSzekspir, William, 1564-1616$$ESzekspir, William, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DSzekspir, William, 1564-1616$$ESzekspir, William, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DSzekspir, William, 1564-1616$$ESzekspir, William, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DShakespeare, Guglielmo, 1564-1616$$EShakespeare, Guglielmo, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DShakespeare, Guglielmo, 1564-1616$$EShakespeare, Guglielmo, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DShakespeare, Guglielmo, 1564-1616$$EShakespeare, Guglielmo, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DShakespeare, Guglielmo, 1564-1616$$EShakespeare, Guglielmo, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DShakespeare, Guglielmo, 1564-1616$$EShakespeare, Guglielmo, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DShake-speare, William, 1564-1616$$EShake-speare, William, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DShake-speare, William, 1564-1616$$EShake-speare, William, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DShake-speare, William, 1564-1616$$EShake-speare, William, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DShake-speare, William, 1564-1616$$EShake-speare, William, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DShake-speare, William, 1564-1616$$EShake-speare, William, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DSha-ō, 1564-1616$$ESha-ō, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DSha-ō, 1564-1616$$ESha-ō, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DSha-ō, 1564-1616$$ESha-ō, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DSha-ō, 1564-1616$$ESha-ō, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DSha-ō, 1564-1616$$ESha-ō, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DŞekspir, 1564-1616$$EŞekspir, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DŞekspir, 1564-1616$$EŞekspir, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DŞekspir, 1564-1616$$EŞekspir, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DŞekspir, 1564-1616$$EŞekspir, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DŞekspir, 1564-1616$$EŞekspir, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DShekspir, Uiliam, 1564-1616$$EShekspir, Uiliam, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DShekspir, Uiliam, 1564-1616$$EShekspir, Uiliam, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DShekspir, Uiliam, 1564-1616$$EShekspir, Uiliam, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DShekspir, Uiliam, 1564-1616$$EShekspir, Uiliam, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DShekspir, Uiliam, 1564-1616$$EShekspir, Uiliam, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DShekspir, U. (Uiliam), 1564-1616$$EShekspir, U. (Uiliam), 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DShekspir, U. (Uiliam), 1564-1616$$EShekspir, U. (Uiliam), 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DShekspir, U. (Uiliam), 1564-1616$$EShekspir, U. (Uiliam), 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DShekspir, U. (Uiliam), 1564-1616$$EShekspir, U. (Uiliam), 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DShekspir, U. (Uiliam), 1564-1616$$EShekspir, U. (Uiliam), 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DŠekspir, Vilijam, 1564-1616$$EŠekspir, Vilijam, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DŠekspir, Vilijam, 1564-1616$$EŠekspir, Vilijam, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DŠekspir, Vilijam, 1564-1616$$EŠekspir, Vilijam, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DŠekspir, Vilijam, 1564-1616$$EŠekspir, Vilijam, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DŠekspir, Vilijam, 1564-1616$$EŠekspir, Vilijam, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DṢēkspiyar, Viliyam, 1564-1616$$EṢēkspiyar, Viliyam, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DṢēkspiyar, Viliyam, 1564-1616$$EṢēkspiyar, Viliyam, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DṢēkspiyar, Viliyam, 1564-1616$$EṢēkspiyar, Viliyam, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DṢēkspiyar, Viliyam, 1564-1616$$EṢēkspiyar, Viliyam, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DṢēkspiyar, Viliyam, 1564-1616$$EṢēkspiyar, Viliyam, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DShakspir, 1564-1616$$EShakspir, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DShakspir, 1564-1616$$EShakspir, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DShakspir, 1564-1616$$EShakspir, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DShakspir, 1564-1616$$EShakspir, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DShakspir, 1564-1616$$EShakspir, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DShekspyr, Vyli͡em, 1564-1616$$EShekspyr, Vyli͡em, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DShekspyr, Vyli͡em, 1564-1616$$EShekspyr, Vyli͡em, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DShekspyr, Vyli͡em, 1564-1616$$EShekspyr, Vyli͡em, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DShekspyr, Vyli͡em, 1564-1616$$EShekspyr, Vyli͡em, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DShekspyr, Vyli͡em, 1564-1616$$EShekspyr, Vyli͡em, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DŞekspir, Velyam, 1564-1616$$EŞekspir, Velyam, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DŞekspir, Velyam, 1564-1616$$EŞekspir, Velyam, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DŞekspir, Velyam, 1564-1616$$EŞekspir, Velyam, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DŞekspir, Velyam, 1564-1616$$EŞekspir, Velyam, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DŞekspir, Velyam, 1564-1616$$EŞekspir, Velyam, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DṢēkspiyar, Villiyam, 1564-1616$$EṢēkspiyar, Villiyam, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DṢēkspiyar, Villiyam, 1564-1616$$EṢēkspiyar, Villiyam, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DṢēkspiyar, Villiyam, 1564-1616$$EṢēkspiyar, Villiyam, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DṢēkspiyar, Villiyam, 1564-1616$$EṢēkspiyar, Villiyam, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DṢēkspiyar, Villiyam, 1564-1616$$EṢēkspiyar, Villiyam, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DShēkʻspʻiyr, Vlilliam, 1564-1616$$EShēkʻspʻiyr, Vlilliam, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DShēkʻspʻiyr, Vlilliam, 1564-1616$$EShēkʻspʻiyr, Vlilliam, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DShēkʻspʻiyr, Vlilliam, 1564-1616$$EShēkʻspʻiyr, Vlilliam, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DShēkʻspʻiyr, Vlilliam, 1564-1616$$EShēkʻspʻiyr, Vlilliam, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DShēkʻspʻiyr, Vlilliam, 1564-1616$$EShēkʻspʻiyr, Vlilliam, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DṢēkspiyar, 1564-1616$$EṢēkspiyar, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DṢēkspiyar, 1564-1616$$EṢēkspiyar, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DṢēkspiyar, 1564-1616$$EṢēkspiyar, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DṢēkspiyar, 1564-1616$$EṢēkspiyar, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DṢēkspiyar, 1564-1616$$EṢēkspiyar, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DṢēkspiyar Mahākavi, 1564-1616$$EṢēkspiyar Mahākavi, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DṢēkspiyar Mahākavi, 1564-1616$$EṢēkspiyar Mahākavi, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DṢēkspiyar Mahākavi, 1564-1616$$EṢēkspiyar Mahākavi, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DṢēkspiyar Mahākavi, 1564-1616$$EṢēkspiyar Mahākavi, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DṢēkspiyar Mahākavi, 1564-1616$$EṢēkspiyar Mahākavi, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DṢēkspiyar Mahākaviya, 1564-1616$$EṢēkspiyar Mahākaviya, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DṢēkspiyar Mahākaviya, 1564-1616$$EṢēkspiyar Mahākaviya, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DṢēkspiyar Mahākaviya, 1564-1616$$EṢēkspiyar Mahākaviya, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DṢēkspiyar Mahākaviya, 1564-1616$$EṢēkspiyar Mahākaviya, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DṢēkspiyar Mahākaviya, 1564-1616$$EṢēkspiyar Mahākaviya, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DSheḳspier, Ṿilyam, 1564-1616$$ESheḳspier, Ṿilyam, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DSheḳspier, Ṿilyam, 1564-1616$$ESheḳspier, Ṿilyam, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DSheḳspier, Ṿilyam, 1564-1616$$ESheḳspier, Ṿilyam, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DSheḳspier, Ṿilyam, 1564-1616$$ESheḳspier, Ṿilyam, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DSheḳspier, Ṿilyam, 1564-1616$$ESheḳspier, Ṿilyam, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DShēkʻspir, 1564-1616$$EShēkʻspir, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DShēkʻspir, 1564-1616$$EShēkʻspir, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DShēkʻspir, 1564-1616$$EShēkʻspir, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DShēkʻspir, 1564-1616$$EShēkʻspir, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DShēkʻspir, 1564-1616$$EShēkʻspir, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DShakespeare, 1564-1616$$EShakespeare, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DShakespeare, 1564-1616$$EShakespeare, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DShakespeare, 1564-1616$$EShakespeare, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DShakespeare, 1564-1616$$EShakespeare, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DShakespeare, 1564-1616$$EShakespeare, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DŚeksper, 1564-1616$$EŚeksper, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DŚeksper, 1564-1616$$EŚeksper, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DŚeksper, 1564-1616$$EŚeksper, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DŚeksper, 1564-1616$$EŚeksper, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DŚeksper, 1564-1616$$EŚeksper, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DShekspīʼar, Viliyam, 1564-1616$$EShekspīʼar, Viliyam, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DShekspīʼar, Viliyam, 1564-1616$$EShekspīʼar, Viliyam, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DShekspīʼar, Viliyam, 1564-1616$$EShekspīʼar, Viliyam, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DShekspīʼar, Viliyam, 1564-1616$$EShekspīʼar, Viliyam, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DShekspīʼar, Viliyam, 1564-1616$$EShekspīʼar, Viliyam, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DShekspir, Uĭlii͡am, 1564-1616$$EShekspir, Uĭlii͡am, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DShekspir, Uĭlii͡am, 1564-1616$$EShekspir, Uĭlii͡am, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DShekspir, Uĭlii͡am, 1564-1616$$EShekspir, Uĭlii͡am, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DShekspir, Uĭlii͡am, 1564-1616$$EShekspir, Uĭlii͡am, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DShekspir, Uĭlii͡am, 1564-1616$$EShekspir, Uĭlii͡am, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DШекспир, Уйлям, 1564-1616$$EШекспир, Уйлям, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DШекспир, Уйлям, 1564-1616$$EШекспир, Уйлям, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DШекспир, Уйлям, 1564-1616$$EШекспир, Уйлям, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DШекспир, Уйлям, 1564-1616$$EШекспир, Уйлям, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DШекспир, Уйлям, 1564-1616$$EШекспир, Уйлям, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DШекспир, Вильям, 1564-1616$$EШекспир, Вильям, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DШекспир, Вильям, 1564-1616$$EШекспир, Вильям, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DШекспир, Вильям, 1564-1616$$EШекспир, Вильям, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DШекспир, Вильям, 1564-1616$$EШекспир, Вильям, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DШекспир, Вильям, 1564-1616$$EШекспир, Вильям, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DШекспир, Уильям, 1564-1616$$EШекспир, Уильям, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DШекспир, Уильям, 1564-1616$$EШекспир, Уильям, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DШекспир, Уильям, 1564-1616$$EШекспир, Уильям, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DШекспир, Уильям, 1564-1616$$EШекспир, Уильям, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DШекспир, Уильям, 1564-1616$$EШекспир, Уильям, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dשייקספיר, וויליאם, 1564-1616$$Eשייקספיר, וויליאם, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dשייקספיר, וויליאם, 1564-1616$$Eשייקספיר, וויליאם, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dשייקספיר, וויליאם, 1564-1616$$Eשייקספיר, וויליאם, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dשייקספיר, וויליאם, 1564-1616$$Eשייקספיר, וויליאם, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dשייקספיר, וויליאם, 1564-1616$$Eשייקספיר, וויליאם, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dשיקספיר, ויליאם, 1564-1616$$Eשיקספיר, ויליאם, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dשיקספיר, ויליאם, 1564-1616$$Eשיקספיר, ויליאם, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dשיקספיר, ויליאם, 1564-1616$$Eשיקספיר, ויליאם, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dשיקספיר, ויליאם, 1564-1616$$Eשיקספיר, ויליאם, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dשיקספיר, ויליאם, 1564-1616$$Eשיקספיר, ויליאם, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dשכספיר, ויליאם, 1564-1616$$Eשכספיר, ויליאם, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dשכספיר, ויליאם, 1564-1616$$Eשכספיר, ויליאם, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dשכספיר, ויליאם, 1564-1616$$Eשכספיר, ויליאם, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dשכספיר, ויליאם, 1564-1616$$Eשכספיר, ויליאם, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dשכספיר, ויליאם, 1564-1616$$Eשכספיר, ויליאם, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dשכספיר, וילים, 1564-1616$$Eשכספיר, וילים, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dשכספיר, וילים, 1564-1616$$Eשכספיר, וילים, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dשכספיר, וילים, 1564-1616$$Eשכספיר, וילים, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dשכספיר, וילים, 1564-1616$$Eשכספיר, וילים, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dשכספיר, וילים, 1564-1616$$Eשכספיר, וילים, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dשעפקספיר, וויליאם, 1564-1616$$Eשעפקספיר, וויליאם, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dשעפקספיר, וויליאם, 1564-1616$$Eשעפקספיר, וויליאם, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dשעפקספיר, וויליאם, 1564-1616$$Eשעפקספיר, וויליאם, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dשעפקספיר, וויליאם, 1564-1616$$Eשעפקספיר, וויליאם, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dשעפקספיר, וויליאם, 1564-1616$$Eשעפקספיר, וויליאם, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DShekʻspir, Uilyam, 1564-1616$$EShekʻspir, Uilyam, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$DShekʻspir, Uilyam, 1564-1616$$EShekʻspir, Uilyam, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$DShekʻspir, Uilyam, 1564-1616$$EShekʻspir, Uilyam, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$DShekʻspir, Uilyam, 1564-1616$$EShekʻspir, Uilyam, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$DShekʻspir, Uilyam, 1564-1616$$EShekʻspir, Uilyam, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$Dשקספיר, ויליאם, 1564-1616$$Eשקספיר, ויליאם, 1564-1616$$INYU10009690883$$PN$$UCU",
+                        "$$Dשקספיר, ויליאם, 1564-1616$$Eשקספיר, ויליאם, 1564-1616$$INYU10009690883$$PN$$UNS",
+                        "$$Dשקספיר, ויליאם, 1564-1616$$Eשקספיר, ויליאם, 1564-1616$$INYU10009690883$$PN$$UNYU",
+                        "$$Dשקספיר, ויליאם, 1564-1616$$Eשקספיר, ויליאם, 1564-1616$$INYU10009690883$$PN$$UNYUAD",
+                        "$$Dשקספיר, ויליאם, 1564-1616$$Eשקספיר, ויליאם, 1564-1616$$INYU10009690883$$PN$$UNYUSH",
+                        "$$DHibbard, G. R. (George Richard), 1915-$$EHibbard, G. R. (George Richard), 1915-$$INYU10001024479$$PY$$UCU",
+                        "$$DHibbard, G. R. (George Richard), 1915-$$EHibbard, G. R. (George Richard), 1915-$$INYU10001024479$$PY$$UNS",
+                        "$$DHibbard, G. R. (George Richard), 1915-$$EHibbard, G. R. (George Richard), 1915-$$INYU10001024479$$PY$$UNYU",
+                        "$$DHibbard, G. R. (George Richard), 1915-$$EHibbard, G. R. (George Richard), 1915-$$INYU10001024479$$PY$$UNYUAD",
+                        "$$DHibbard, G. R. (George Richard), 1915-$$EHibbard, G. R. (George Richard), 1915-$$INYU10001024479$$PY$$UNYUSH",
+                        "$$DHibbard, George R. (George Richard), 1915-$$EHibbard, George R. (George Richard), 1915-$$INYU10001024479$$PN$$UCU",
+                        "$$DHibbard, George R. (George Richard), 1915-$$EHibbard, George R. (George Richard), 1915-$$INYU10001024479$$PN$$UNS",
+                        "$$DHibbard, George R. (George Richard), 1915-$$EHibbard, George R. (George Richard), 1915-$$INYU10001024479$$PN$$UNYU",
+                        "$$DHibbard, George R. (George Richard), 1915-$$EHibbard, George R. (George Richard), 1915-$$INYU10001024479$$PN$$UNYUAD",
+                        "$$DHibbard, George R. (George Richard), 1915-$$EHibbard, George R. (George Richard), 1915-$$INYU10001024479$$PN$$UNYUSH",
+                        "$$DHibbard, George Richard, 1915-$$EHibbard, George Richard, 1915-$$INYU10001024479$$PN$$UCU",
+                        "$$DHibbard, George Richard, 1915-$$EHibbard, George Richard, 1915-$$INYU10001024479$$PN$$UNS",
+                        "$$DHibbard, George Richard, 1915-$$EHibbard, George Richard, 1915-$$INYU10001024479$$PN$$UNYU",
+                        "$$DHibbard, George Richard, 1915-$$EHibbard, George Richard, 1915-$$INYU10001024479$$PN$$UNYUAD",
+                        "$$DHibbard, George Richard, 1915-$$EHibbard, George Richard, 1915-$$INYU10001024479$$PN$$UNYUSH",
+                        "$$DShakespeare, William, 1564-1616$$EShakespeare, William, 1564-1616$$UCU",
+                        "$$DShakespeare, William, 1564-1616$$EShakespeare, William, 1564-1616$$UNS",
+                        "$$DShakespeare, William, 1564-1616$$EShakespeare, William, 1564-1616$$UNYU",
+                        "$$DShakespeare, William, 1564-1616$$EShakespeare, William, 1564-1616$$UNYUAD",
+                        "$$DShakespeare, William, 1564-1616$$EShakespeare, William, 1564-1616$$UNYUSH"
+                    ],
+                    "subject": [
+                        "$$DHamlet (Legendary character) -- Drama$$EHamlet (Legendary character) Drama$$UCU",
+                        "$$DHamlet (Legendary character) -- Drama$$EHamlet (Legendary character) Drama$$UNS",
+                        "$$DHamlet (Legendary character) -- Drama$$EHamlet (Legendary character) Drama$$UNYU",
+                        "$$DHamlet (Legendary character) -- Drama$$EHamlet (Legendary character) Drama$$UNYUAD",
+                        "$$DHamlet (Legendary character) -- Drama$$EHamlet (Legendary character) Drama$$UNYUSH",
+                        "$$DKings and rulers -- Succession -- Drama$$EKings and rulers Succession Drama$$INYU10000382510$$PY$$UCU",
+                        "$$DKings and rulers -- Succession -- Drama$$EKings and rulers Succession Drama$$INYU10000382510$$PY$$UNS",
+                        "$$DKings and rulers -- Succession -- Drama$$EKings and rulers Succession Drama$$INYU10000382510$$PY$$UNYU",
+                        "$$DKings and rulers -- Succession -- Drama$$EKings and rulers Succession Drama$$INYU10000382510$$PY$$UNYUAD",
+                        "$$DKings and rulers -- Succession -- Drama$$EKings and rulers Succession Drama$$INYU10000382510$$PY$$UNYUSH",
+                        "$$DMurder victims' families -- Drama$$EMurder victims' families Drama$$INYU10000384259$$PY$$UCU",
+                        "$$DMurder victims' families -- Drama$$EMurder victims' families Drama$$INYU10000384259$$PY$$UNS",
+                        "$$DMurder victims' families -- Drama$$EMurder victims' families Drama$$INYU10000384259$$PY$$UNYU",
+                        "$$DMurder victims' families -- Drama$$EMurder victims' families Drama$$INYU10000384259$$PY$$UNYUAD",
+                        "$$DMurder victims' families -- Drama$$EMurder victims' families Drama$$INYU10000384259$$PY$$UNYUSH",
+                        "$$DFathers -- Death -- Drama$$EFathers Death Drama$$INYU10000379827$$PY$$UCU",
+                        "$$DFathers -- Death -- Drama$$EFathers Death Drama$$INYU10000379827$$PY$$UNS",
+                        "$$DFathers -- Death -- Drama$$EFathers Death Drama$$INYU10000379827$$PY$$UNYU",
+                        "$$DFathers -- Death -- Drama$$EFathers Death Drama$$INYU10000379827$$PY$$UNYUAD",
+                        "$$DFathers -- Death -- Drama$$EFathers Death Drama$$INYU10000379827$$PY$$UNYUSH",
+                        "$$DRevenge -- Drama$$ERevenge Drama$$INYU10000386908$$PY$$UCU",
+                        "$$DRevenge -- Drama$$ERevenge Drama$$INYU10000386908$$PY$$UNS",
+                        "$$DRevenge -- Drama$$ERevenge Drama$$INYU10000386908$$PY$$UNYU",
+                        "$$DRevenge -- Drama$$ERevenge Drama$$INYU10000386908$$PY$$UNYUAD",
+                        "$$DRevenge -- Drama$$ERevenge Drama$$INYU10000386908$$PY$$UNYUSH",
+                        "$$DPrinces -- Drama$$EPrinces Drama$$INYU10000386147$$PY$$UCU",
+                        "$$DPrinces -- Drama$$EPrinces Drama$$INYU10000386147$$PY$$UNS",
+                        "$$DPrinces -- Drama$$EPrinces Drama$$INYU10000386147$$PY$$UNYU",
+                        "$$DPrinces -- Drama$$EPrinces Drama$$INYU10000386147$$PY$$UNYUAD",
+                        "$$DPrinces -- Drama$$EPrinces Drama$$INYU10000386147$$PY$$UNYUSH",
+                        "$$DFathers -- Death$$EFathers Death$$TFAST$$I(OCoLC)fst00921869$$UCU",
+                        "$$DFathers -- Death$$EFathers Death$$TFAST$$I(OCoLC)fst00921869$$UNS",
+                        "$$DFathers -- Death$$EFathers Death$$TFAST$$I(OCoLC)fst00921869$$UNYU",
+                        "$$DFathers -- Death$$EFathers Death$$TFAST$$I(OCoLC)fst00921869$$UNYUAD",
+                        "$$DFathers -- Death$$EFathers Death$$TFAST$$I(OCoLC)fst00921869$$UNYUSH",
+                        "$$DKings and rulers -- Succession$$EKings and rulers Succession$$TFAST$$I(OCoLC)fst00987723$$UCU",
+                        "$$DKings and rulers -- Succession$$EKings and rulers Succession$$TFAST$$I(OCoLC)fst00987723$$UNS",
+                        "$$DKings and rulers -- Succession$$EKings and rulers Succession$$TFAST$$I(OCoLC)fst00987723$$UNYU",
+                        "$$DKings and rulers -- Succession$$EKings and rulers Succession$$TFAST$$I(OCoLC)fst00987723$$UNYUAD",
+                        "$$DKings and rulers -- Succession$$EKings and rulers Succession$$TFAST$$I(OCoLC)fst00987723$$UNYUSH",
+                        "$$DMurder victims' families$$EMurder victims' families$$TFAST$$I(OCoLC)fst01029816$$UCU",
+                        "$$DMurder victims' families$$EMurder victims' families$$TFAST$$I(OCoLC)fst01029816$$UNS",
+                        "$$DMurder victims' families$$EMurder victims' families$$TFAST$$I(OCoLC)fst01029816$$UNYU",
+                        "$$DMurder victims' families$$EMurder victims' families$$TFAST$$I(OCoLC)fst01029816$$UNYUAD",
+                        "$$DMurder victims' families$$EMurder victims' families$$TFAST$$I(OCoLC)fst01029816$$UNYUSH",
+                        "$$DPrinces$$EPrinces$$TFAST$$I(OCoLC)fst01076481$$UCU",
+                        "$$DPrinces$$EPrinces$$TFAST$$I(OCoLC)fst01076481$$UNS",
+                        "$$DPrinces$$EPrinces$$TFAST$$I(OCoLC)fst01076481$$UNYU",
+                        "$$DPrinces$$EPrinces$$TFAST$$I(OCoLC)fst01076481$$UNYUAD",
+                        "$$DPrinces$$EPrinces$$TFAST$$I(OCoLC)fst01076481$$UNYUSH",
+                        "$$DRevenge$$ERevenge$$TFAST$$I(OCoLC)fst01096476$$UCU",
+                        "$$DRevenge$$ERevenge$$TFAST$$I(OCoLC)fst01096476$$UNS",
+                        "$$DRevenge$$ERevenge$$TFAST$$I(OCoLC)fst01096476$$UNYU",
+                        "$$DRevenge$$ERevenge$$TFAST$$I(OCoLC)fst01096476$$UNYUAD",
+                        "$$DRevenge$$ERevenge$$TFAST$$I(OCoLC)fst01096476$$UNYUSH",
+                        "$$DHamlet (Legendary character)$$EHamlet (Legendary character)$$TFAST$$I(OCoLC)fst00950776$$UCU",
+                        "$$DHamlet (Legendary character)$$EHamlet (Legendary character)$$TFAST$$I(OCoLC)fst00950776$$UNS",
+                        "$$DHamlet (Legendary character)$$EHamlet (Legendary character)$$TFAST$$I(OCoLC)fst00950776$$UNYU",
+                        "$$DHamlet (Legendary character)$$EHamlet (Legendary character)$$TFAST$$I(OCoLC)fst00950776$$UNYUAD",
+                        "$$DHamlet (Legendary character)$$EHamlet (Legendary character)$$TFAST$$I(OCoLC)fst00950776$$UNYUSH",
+                        "$$DDenmark -- Drama$$EDenmark Drama$$INYU10000390888$$PY$$UCU",
+                        "$$DDenmark -- Drama$$EDenmark Drama$$INYU10000390888$$PY$$UNS",
+                        "$$DDenmark -- Drama$$EDenmark Drama$$INYU10000390888$$PY$$UNYU",
+                        "$$DDenmark -- Drama$$EDenmark Drama$$INYU10000390888$$PY$$UNYUAD",
+                        "$$DDenmark -- Drama$$EDenmark Drama$$INYU10000390888$$PY$$UNYUSH",
+                        "$$DDenmark$$EDenmark$$TFAST$$I(OCoLC)fst01204558$$UCU",
+                        "$$DDenmark$$EDenmark$$TFAST$$I(OCoLC)fst01204558$$UNS",
+                        "$$DDenmark$$EDenmark$$TFAST$$I(OCoLC)fst01204558$$UNYU",
+                        "$$DDenmark$$EDenmark$$TFAST$$I(OCoLC)fst01204558$$UNYUAD",
+                        "$$DDenmark$$EDenmark$$TFAST$$I(OCoLC)fst01204558$$UNYUSH",
+                        "$$DDrama$$EDrama$$TFAST$$I(OCoLC)fst01423879$$UCU",
+                        "$$DDrama$$EDrama$$TFAST$$I(OCoLC)fst01423879$$UNS",
+                        "$$DDrama$$EDrama$$TFAST$$I(OCoLC)fst01423879$$UNYU",
+                        "$$DDrama$$EDrama$$TFAST$$I(OCoLC)fst01423879$$UNYUAD",
+                        "$$DDrama$$EDrama$$TFAST$$I(OCoLC)fst01423879$$UNYUSH",
+                        "$$DTragedies$$ETragedies$$T$$UCU",
+                        "$$DTragedies$$ETragedies$$T$$UNS",
+                        "$$DTragedies$$ETragedies$$T$$UNYU",
+                        "$$DTragedies$$ETragedies$$T$$UNYUAD",
+                        "$$DTragedies$$ETragedies$$T$$UNYUSH"
+                    ],
+                    "callnumber": [
+                        "$$ICU$$DPR2807.A2 H5 1987 Electronic access$$E0pr   02807.a  20000  h5 1987 electronic access$$T0",
+                        "$$INS$$DPR2807.A2 H5 1987 Electronic access$$E0pr   02807.a  20000  h5 1987 electronic access$$T0",
+                        "$$INYU$$DPR2807.A2 H5 1987 Electronic access$$E0pr   02807.a  20000  h5 1987 electronic access$$T0",
+                        "$$INYU$$DPR2807.A2 H5 1987$$E0pr   02807.a  20000  h5 1987$$T0"
+                    ],
+                    "title": [
+                        "$$DHamlet$$EHamlet$$UCU",
+                        "$$DHamlet$$EHamlet$$UNS",
+                        "$$DHamlet$$EHamlet$$UNYU",
+                        "$$DHamlet$$EHamlet$$UNYUAD",
+                        "$$DHamlet$$EHamlet$$UNYUSH",
+                        "$$DThe Oxford Shakespeare$$EThe Oxford Shakespeare$$UCU",
+                        "$$DThe Oxford Shakespeare$$EThe Oxford Shakespeare$$UNS",
+                        "$$DThe Oxford Shakespeare$$EThe Oxford Shakespeare$$UNYU",
+                        "$$DThe Oxford Shakespeare$$EThe Oxford Shakespeare$$UNYUAD",
+                        "$$DThe Oxford Shakespeare$$EThe Oxford Shakespeare$$UNYUSH",
+                        "$$DWorks. 1982$$EWorks. 1982$$UCU",
+                        "$$DWorks. 1982$$EWorks. 1982$$UNS",
+                        "$$DWorks. 1982$$EWorks. 1982$$UNYU",
+                        "$$DWorks. 1982$$EWorks. 1982$$UNYUAD",
+                        "$$DWorks. 1982$$EWorks. 1982$$UNYUSH"
+                    ]
+                }
+            },
+            "@id": "https://bobcat.library.nyu.edu/primo_library/libweb/webservices/rest/primo-explore/v1/pnxs/L/dedupmrg1084510589"
+        }
+    ],
+    "timelog": {
+        "CalculateRtaLinks1DeltaTime": 207,
+        "BriefSearchDeltaTime": 354,
+        "DoSearchPrimoResultDeltaTime": 146,
+        "StartBriefSearch": 1679446542511,
+        "retrieveHighLightsDeltaTime": 207,
+        "retrieveDidUMeanDeltaTime": 207,
+        "GetSearchStatusDeltaTime": 146,
+        "StartTranslationTime": 1679446542657,
+        "AddSearchStatusDeltaTime": 0,
+        "FullEndDMDataDeltaTime": 207,
+        "retrieveFacetsDeltaTime": 207
+    },
+    "lang3": "eng",
+    "info": {
+        "total": 1,
+        "last": "1",
+        "maxTotal": 0,
+        "first": "1"
+    },
+    "facets": [
+        {
+            "values": [
+                {
+                    "count": 1,
+                    "value": "Shakespeare, W"
+                },
+                {
+                    "count": 1,
+                    "value": "Hibbard, G"
+                }
+            ],
+            "name": "creator"
+        },
+        {
+            "values": [
+                {
+                    "count": 1,
+                    "value": "P - Language and literature."
+                }
+            ],
+            "name": "lcc"
+        },
+        {
+            "values": [
+                {
+                    "count": 1,
+                    "value": "eng"
+                }
+            ],
+            "name": "lang"
+        },
+        {
+            "values": [
+                {
+                    "count": 1,
+                    "value": "books"
+                }
+            ],
+            "name": "rtype"
+        },
+        {
+            "values": [
+                {
+                    "count": 1,
+                    "value": "Hamlet (Legendary character)"
+                },
+                {
+                    "count": 1,
+                    "value": "Murder victims' families"
+                },
+                {
+                    "count": 1,
+                    "value": "Denmark"
+                },
+                {
+                    "count": 1,
+                    "value": "Fathers"
+                },
+                {
+                    "count": 1,
+                    "value": "Drama in English Shakespeare, William - Texts"
+                },
+                {
+                    "count": 1,
+                    "value": "Revenge"
+                },
+                {
+                    "count": 1,
+                    "value": "Princes"
+                },
+                {
+                    "count": 1,
+                    "value": "Kings and rulers"
+                }
+            ],
+            "name": "topic"
+        },
+        {
+            "values": [
+                {
+                    "count": 1,
+                    "value": "available"
+                },
+                {
+                    "count": 1,
+                    "value": "online_resources"
+                }
+            ],
+            "name": "tlevel"
+        },
+        {
+            "values": [
+                {
+                    "count": 1,
+                    "value": "books"
+                }
+            ],
+            "name": "pfilter"
+        },
+        {
+            "values": [
+                {
+                    "count": 1,
+                    "value": "1987"
+                }
+            ],
+            "name": "creationdate"
+        },
+        {
+            "values": [
+                {
+                    "count": 1,
+                    "value": "CU"
+                },
+                {
+                    "count": 1,
+                    "value": "TWEB"
+                }
+            ],
+            "name": "domain"
+        },
+        {
+            "values": [
+                {
+                    "count": 1,
+                    "value": "Drama"
+                },
+                {
+                    "count": 1,
+                    "value": "Tragedies"
+                }
+            ],
+            "name": "genre"
+        },
+        {
+            "values": [
+                {
+                    "count": 1,
+                    "value": "BOBST"
+                },
+                {
+                    "count": 1,
+                    "value": "ISAW"
+                },
+                {
+                    "count": 1,
+                    "value": "IFA"
+                },
+                {
+                    "count": 1,
+                    "value": "COUR"
+                },
+                {
+                    "count": 1,
+                    "value": "TWEB"
+                },
+                {
+                    "count": 1,
+                    "value": "REI"
+                },
+                {
+                    "count": 1,
+                    "value": "IFAC"
+                },
+                {
+                    "count": 1,
+                    "value": "CWEB"
+                }
+            ],
+            "name": "library"
+        },
+        {
+            "values": [
+                {
+                    "count": 1,
+                    "value": "Internet Resources"
+                },
+                {
+                    "count": 1,
+                    "value": "Main Collection - Non-Circulating"
+                },
+                {
+                    "count": 1,
+                    "value": "Main Collection"
+                }
+            ],
+            "name": "local1"
+        },
+        {
+            "values": [
+                {
+                    "count": 1,
+                    "value": "leased; unlimited user"
+                },
+                {
+                    "count": 1,
+                    "value": "owned; unlimited user"
+                }
+            ],
+            "name": "local9"
+        },
+        {
+            "values": [
+                {
+                    "count": 1,
+                    "value": "The Oxford Shakespeare"
+                }
+            ],
+            "name": "local15"
+        },
+        {
+            "values": [
+                {
+                    "count": 1,
+                    "value": "Fathers–Death"
+                },
+                {
+                    "count": 1,
+                    "value": "Murder victims' families–Drama"
+                },
+                {
+                    "count": 1,
+                    "value": "Fathers–Death–Drama"
+                },
+                {
+                    "count": 1,
+                    "value": "Kings and rulers–Succession"
+                },
+                {
+                    "count": 1,
+                    "value": "Murder victims' families"
+                },
+                {
+                    "count": 1,
+                    "value": "Revenge–Drama"
+                },
+                {
+                    "count": 1,
+                    "value": "Princes–Drama"
+                },
+                {
+                    "count": 1,
+                    "value": "Drama in English Shakespeare, William - Texts"
+                },
+                {
+                    "count": 1,
+                    "value": "Revenge"
+                },
+                {
+                    "count": 1,
+                    "value": "Princes"
+                },
+                {
+                    "count": 1,
+                    "value": "Kings and rulers–Succession–Drama"
+                },
+                {
+                    "count": 1,
+                    "value": "Hamlet (Legendary character)–Drama"
+                }
+            ],
+            "name": "local16"
+        },
+        {
+            "values": [
+                {
+                    "count": 1,
+                    "value": "Fathers–Death"
+                },
+                {
+                    "count": 1,
+                    "value": "Murder victims' families–Drama"
+                },
+                {
+                    "count": 1,
+                    "value": "Fathers–Death–Drama"
+                },
+                {
+                    "count": 1,
+                    "value": "Kings and rulers–Succession"
+                },
+                {
+                    "count": 1,
+                    "value": "Murder victims' families"
+                },
+                {
+                    "count": 1,
+                    "value": "Revenge–Drama"
+                },
+                {
+                    "count": 1,
+                    "value": "Princes–Drama"
+                },
+                {
+                    "count": 1,
+                    "value": "Drama in English Shakespeare, William - Texts"
+                },
+                {
+                    "count": 1,
+                    "value": "Revenge"
+                },
+                {
+                    "count": 1,
+                    "value": "Princes"
+                },
+                {
+                    "count": 1,
+                    "value": "Kings and rulers–Succession–Drama"
+                },
+                {
+                    "count": 1,
+                    "value": "Hamlet (Legendary character)–Drama"
+                }
+            ],
+            "name": "local17"
+        }
+    ],
+    "beaconO22": "365"
+}
