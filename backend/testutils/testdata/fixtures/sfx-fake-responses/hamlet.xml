@@ -1,0 +1,171 @@
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Content-Type: application/xml; charset=ISO-8859-1
+Date: Wed, 22 Mar 2023 01:07:24 GMT
+Server: Apache
+
+16b2
+<?xml version="1.0" encoding="utf-8"?>
+
+<ctx_obj_set>
+ <ctx_obj identifier="">
+  <ctx_obj_attributes>&lt;perldata&gt;
+ &lt;hash&gt;
+  &lt;item key="req.session_id"&gt;sE7EB4488-C84D-11ED-A06F-41024131B499&lt;/item&gt;
+  &lt;item key="@rft.auinitm"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;&lt;/item&gt;
+    &lt;item key="1"&gt;R&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="@rft.auinit1"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;W&lt;/item&gt;
+    &lt;item key="1"&gt;G&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.isbn"&gt;0-19-812910-6&lt;/item&gt;
+  &lt;item key="rft.eisbn"&gt;0-19-173235-4&lt;/item&gt;
+  &lt;item key="rft.isbn_13"&gt;978-0-19-812910-3&lt;/item&gt;
+  &lt;item key="url_ctx_fmt"&gt;info:ofi/fmt:xml:xsd:ctx&lt;/item&gt;
+  &lt;item key="fetchid"&gt;0198129106&lt;/item&gt;
+  &lt;item key="_stash"&gt;
+   &lt;hash&gt;
+   &lt;/hash&gt;
+  &lt;/item&gt;
+  &lt;item key="sfx.request_id"&gt;25774056&lt;/item&gt;
+  &lt;item key="@rft_id"&gt;
+   &lt;array&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.object_type"&gt;BOOK&lt;/item&gt;
+  &lt;item key="@rft.aufirst"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;William&lt;/item&gt;
+    &lt;item key="1"&gt;G.R&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.eisbn_13"&gt;978-0-19-173235-5&lt;/item&gt;
+  &lt;item key="rft.genre"&gt;book&lt;/item&gt;
+  &lt;item key="@sfx.searched_by_identifier"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;
+     &lt;hash&gt;
+      &lt;item key="TYPE"&gt;ISBN&lt;/item&gt;
+      &lt;item key="VALUE"&gt;
+       &lt;array&gt;
+        &lt;item key="0"&gt;0-19-812910-6&lt;/item&gt;
+       &lt;/array&gt;
+      &lt;/item&gt;
+      &lt;item key="SUBTYPE"&gt;&lt;/item&gt;
+     &lt;/hash&gt;
+    &lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="sfx.ignore_char_set"&gt;1&lt;/item&gt;
+  &lt;item key="sfx.sourcename"&gt;DEFAULT&lt;/item&gt;
+  
+  &lt;item key="rft.year"&gt;1987&lt;/item&gt;
+  &lt;item key="rft.isbn_10"&gt;0-19-812910-6&lt;/item&gt;
+  &lt;item key="existing_ts_ids"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;111027614344001&lt;/item&gt;
+    &lt;item key="1"&gt;20430000000000002&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="sfx.sid"&gt;DEFAULT&lt;/item&gt;
+  &lt;item key="sfx.response_type"&gt;multi_obj_xml&lt;/item&gt;
+  &lt;item key="@rfe_id"&gt;
+   &lt;array&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.eisbn_10"&gt;0-19-173235-4&lt;/item&gt;
+  &lt;item key="rft.object_id"&gt;2550000001039198&lt;/item&gt;
+  &lt;item key="sfx.doi_url"&gt;http://dx.doi.org&lt;/item&gt;
+  &lt;item key="rft.btitle"&gt;The Oxford Shakespeare: Hamlet&lt;/item&gt;
+  &lt;item key="@rft.au"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;Shakespeare, William&lt;/item&gt;
+    &lt;item key="1"&gt;Hibbard, G.R&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="rft.title"&gt;The Oxford Shakespeare: Hamlet&lt;/item&gt;
+  &lt;item key="rft.date"&gt;1987&lt;/item&gt;
+  &lt;item key="rft.pub"&gt;Oxford University Press&lt;/item&gt;
+  &lt;item key="rft.language"&gt;eng&lt;/item&gt;
+  &lt;item key="@rft.auinit"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;W&lt;/item&gt;
+    &lt;item key="1"&gt;G R&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="@rft.aulast"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;Shakespeare&lt;/item&gt;
+    &lt;item key="1"&gt;Hibbard&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+ &lt;/hash&gt;
+&lt;/perldata&gt;
+</ctx_obj_attributes>
+  <ctx_obj_targets>
+   <target>
+    <target_name>DOCDEL_ILLIAD</target_name>
+    <target_public_name>Request via Interlibrary Loan</target_public_name>
+    <object_portfolio_id></object_portfolio_id>
+    <target_id>111027614344000</target_id>
+    <interface_id>111027614344000</interface_id>
+    <interface_name>DOCDEL_ILLIAD</interface_name>
+    <target_service_id>111027614344001</target_service_id>
+    <service_type>getDocumentDelivery</service_type>
+    <parser>ILLiad::DDL</parser>
+    <parse_param>url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL &amp; id_type=</parse_param>
+    <proxy>yes</proxy>
+    <crossref>yes</crossref>
+    <note></note>
+    <authentication></authentication>
+    <char_set>utf8</char_set>
+    <displayer></displayer>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?year=1987&amp;aulast=Shakespeare&amp;genre=book&amp;isbn=0-19-812910-6&amp;aufirst=William&amp;title=The%20Oxford%20Shakespeare%3A%20Hamlet&amp;sid=DEFAULT%20(Via%20SFX)&amp;date=1987</target_url>
+    <is_related>no</is_related>
+    <coverage>
+     <coverage_text>
+      <threshold_text></threshold_text>
+      <embargo_text></embargo_text>
+     </coverage_text>
+     <embargo></embargo>
+    </coverage>
+   </target>
+   <target>
+    <target_name>ASK_A_LIBRARIAN_LCL</target_name>
+    <target_public_name>Ask a Librarian</target_public_name>
+    <object_portfolio_id></object_portfolio_id>
+    <target_id>20430000000000002</target_id>
+    <interface_id>20430000000000002</interface_id>
+    <interface_name>ASK_A_LIBRARIAN</interface_name>
+    <target_service_id>20430000000000002</target_service_id>
+    <service_type>getWebService</service_type>
+    <parser>Generic</parser>
+    <parse_param>IF () "http://library.nyu.edu/ask/"</parse_param>
+    <proxy>no</proxy>
+    <crossref>no</crossref>
+    <note></note>
+    <authentication></authentication>
+    <char_set>iso-8859-1</char_set>
+    <displayer></displayer>
+    <target_url>http://library.nyu.edu/ask/</target_url>
+    <is_related>no</is_related>
+    <coverage>
+     <coverage_text>
+      <threshold_text></threshold_text>
+      <embargo_text></embargo_text>
+     </coverage_text>
+     <embargo></embargo>
+    </coverage>
+   </target>
+  </ctx_obj_targets>
+ </ctx_obj>
+</ctx_obj_set>
+0
+
+

@@ -54,6 +54,10 @@ func GetGoldenValue(testCase TestCase) (string, error) {
 	return GetTestdataFileContents(GoldenFile(testCase))
 }
 
+func GetPrimoFakeResponse(testCase TestCase) (string, error) {
+	return GetTestdataFileContents(primoFakeResponseFile(testCase))
+}
+
 func GetSFXFakeResponse(testCase TestCase) (string, error) {
 	return GetTestdataFileContents(sfxFakeResponseFile(testCase))
 }
@@ -70,6 +74,10 @@ func GetTestdataFileContents(filename string) (string, error) {
 
 func GoldenFile(testCase TestCase) string {
 	return testutilsPath + "/testdata/golden/" + testCase.Key + ".json"
+}
+
+func primoFakeResponseFile(testCase TestCase) string {
+	return testutilsPath + "/testdata/fixtures/primo-fake-responses/" + testCase.Key + ".xml"
 }
 
 func sfxFakeResponseFile(testCase TestCase) string {
