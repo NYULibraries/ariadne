@@ -1,6 +1,7 @@
 package api
 
 import (
+	"ariadne/primo"
 	"ariadne/sfx"
 	"encoding/json"
 	"errors"
@@ -30,9 +31,38 @@ func ResolverHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	responseJSON := makeJSONResponseFromSFXResponse(sfxResponse)
+	var responseJSON string
 
-	fmt.Fprintln(w, string(responseJSON))
+	if sfxResponse.IsFound() {
+		responseJSON = makeJSONResponseFromSFXResponse(sfxResponse)
+	} else {
+		// TODO: Enable error-checking after `getPrimoResponse` works
+		primoResponse, _ := getPrimoResponse(r.URL.RawQuery)
+		//if err != nil {
+		//	handleError(err, w, err.Error())
+		//	return
+		//}
+
+		if primoResponse.IsFound() {
+			responseJSON = makeJSONResponseFromPrimoResponse(primoResponse)
+		} else {
+			// Back to SFX again, which at least has some "helper" link
+			responseJSON = makeJSONResponseFromSFXResponse(sfxResponse)
+		}
+	}
+
+	fmt.Fprintln(w, responseJSON)
+}
+
+func getPrimoResponse(queryString string) (*primo.PrimoResponse, error) {
+	primoResponse := primo.PrimoResponse{}
+
+	primoRequest, err := primo.NewPrimoRequest(queryString)
+	if err != nil {
+		return &primoResponse, errors.New("Invalid OpenURL")
+	}
+
+	return primo.Do(primoRequest)
 }
 
 func getSFXResponse(queryString string) (*sfx.SFXResponse, error) {
@@ -63,7 +93,42 @@ func healthCheck(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(map[string]interface{}{"status": "ok"})
 }
 
-func makeJSONResponseFromSFXResponse(sfxResponse *sfx.SFXResponse) []byte {
+func makeJSONResponseFromPrimoResponse(primoResponse *primo.PrimoResponse) string {
+	// TODO: Replace this with a real response
+	ariadneResponse := Response{
+		Errors:  []string{},
+		Found:   primoResponse.IsFound(),
+		Records: []Record{},
+	}
+
+	responseJSONBytes, err := json.MarshalIndent(ariadneResponse, "", "    ")
+	// Very unlikely that this will error out.  At the moment, can't even think
+	// of a way to force an error so that can write a test.  Tested this error handling
+	// code during development by setting `err = errors.New("error!")` right after marshalling.
+	// Result:
+	// {
+	// 	   "errors": [
+	//		   "Could not marshal ariadne response to JSON: error!"
+	//	    ],
+	//	    "found": false,
+	//	    "records": []
+	// }
+	if err != nil {
+		ariadneResponse = Response{
+			Errors:  []string{fmt.Sprintf("Could not marshal ariadne response to JSON: %v", err)},
+			Records: []Record{},
+		}
+
+		// Even more unlikely that this marshalling will error out, but if it does
+		// just let the chips fall.  The frontend will report the error to receive
+		// an intelligible response from the backend API.
+		responseJSONBytes, _ = json.MarshalIndent(ariadneResponse, "", "    ")
+	}
+
+	return string(responseJSONBytes)
+}
+
+func makeJSONResponseFromSFXResponse(sfxResponse *sfx.SFXResponse) string {
 	// Remove the Ask a Librarian target -- for details, see:
 	// https://nyu-lib.monday.com/boards/765008773/pulses/3548498827
 	sfxResponse.RemoveTarget(sfx.AskALibrarianLink)
@@ -104,7 +169,7 @@ func makeJSONResponseFromSFXResponse(sfxResponse *sfx.SFXResponse) []byte {
 		Records: records,
 	}
 
-	responseJSON, err := json.MarshalIndent(ariadneResponse, "", "    ")
+	responseJSONBytes, err := json.MarshalIndent(ariadneResponse, "", "    ")
 	// Very unlikely that this will error out.  At the moment, can't even think
 	// of a way to force an error so that can write a test.  Tested this error handling
 	// code during development by setting `err = errors.New("error!")` right after marshalling.
@@ -125,8 +190,8 @@ func makeJSONResponseFromSFXResponse(sfxResponse *sfx.SFXResponse) []byte {
 		// Even more unlikely that this marshalling will error out, but if it does
 		// just let the chips fall.  The frontend will report the error to receive
 		// an intelligible response from the backend API.
-		responseJSON, _ = json.MarshalIndent(ariadneResponse, "", "    ")
+		responseJSONBytes, _ = json.MarshalIndent(ariadneResponse, "", "    ")
 	}
 
-	return responseJSON
+	return string(responseJSONBytes)
 }
