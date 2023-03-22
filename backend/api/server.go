@@ -24,7 +24,6 @@ func NewRouter() *http.ServeMux {
 func ResolverHandler(w http.ResponseWriter, r *http.Request) {
 	setHeaders(&w)
 
-
 	sfxResponse, err := getSFXResponse(r.URL.RawQuery)
 	if err != nil {
 		handleError(err, w, err.Error())
@@ -100,11 +99,8 @@ func makeJSONResponseFromSFXResponse(sfxResponse *sfx.SFXResponse) []byte {
 	}
 
 	ariadneResponse := Response{
-		Errors: []string{},
-		// Hardcoding `false` for now.  This is just a placeholder for the value
-		// that will be calculated according to https://nyu-lib.monday.com/boards/765008773/pulses/4116986234?userId=27226106
-		// acceptance criteria.
-		Found:   false,
+		Errors:  []string{},
+		Found:   sfxResponse.IsFound(),
 		Records: records,
 	}
 
