@@ -55,11 +55,9 @@ func ResolverHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func getPrimoResponse(queryString string) (*primo.PrimoResponse, error) {
-	primoResponse := primo.PrimoResponse{}
-
 	primoRequest, err := primo.NewPrimoRequest(queryString)
 	if err != nil {
-		return &primoResponse, errors.New("Invalid OpenURL")
+		return &primo.PrimoResponse{}, errors.New("Invalid OpenURL")
 	}
 
 	return primo.Do(primoRequest)
