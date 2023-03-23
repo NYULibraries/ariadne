@@ -38,7 +38,7 @@ func (primoRequest PrimoRequest) do() (*PrimoResponse, error) {
 
 	err = primoResponse.addToPrimoResponse(httpResponse)
 	if err != nil {
-		return primoResponse, fmt.Errorf("error added to Primo response: %v", err)
+		return primoResponse, fmt.Errorf("error adding to Primo response: %v", err)
 	}
 
 	isbnSearchResponse := primoResponse.APIResponses[0]
