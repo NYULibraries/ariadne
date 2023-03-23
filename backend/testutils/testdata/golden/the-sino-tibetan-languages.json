@@ -1,0 +1,16 @@
+{
+    "errors": [],
+    "found": false,
+    "records": [
+        {
+            "citation_supplemental": {},
+            "links": [
+                {
+                    "display_name": "Bobst Library  Interlibrary Loan",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?date=2003\u0026sid=DEFAULT%20(Via%20SFX)\u0026title=Sino-Tibetan%20languages\u0026aufirst=Anne\u0026year=2003\u0026isbn=0-7007-1129-5\u0026genre=book\u0026aulast=YUE-HASHIMOTO",
+                    "coverage_text": ""
+                }
+            ]
+        }
+    ]
+}

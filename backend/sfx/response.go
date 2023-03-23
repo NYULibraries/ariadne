@@ -7,6 +7,7 @@ import (
 	"io/ioutil"
 	"net/http"
 	"net/http/httputil"
+	"strings"
 )
 
 type SFXResponse struct {
@@ -95,6 +96,8 @@ type ThresholdText struct {
 	CoverageStatement []string `xml:"coverage_statement" json:"coverage_statement,omitempty"`
 }
 
+const ILLLink = "ill.library.nyu.edu"
+
 func (sfxResponse *SFXResponse) RemoveTarget(targetURL string) {
 	currentTargets := (*(*sfxResponse.XMLResponseBody.ContextObject)[0].SFXContextObjectTargets)[0].Targets
 	var newTargets []Target
@@ -104,6 +107,26 @@ func (sfxResponse *SFXResponse) RemoveTarget(targetURL string) {
 		}
 	}
 	(*(*sfxResponse.XMLResponseBody.ContextObject)[0].SFXContextObjectTargets)[0].Targets = &newTargets
+}
+
+// TODO: Write unit test
+func (sfxResponse *SFXResponse) IsFound() bool {
+	targets := (*(*sfxResponse.XMLResponseBody.ContextObject)[0].SFXContextObjectTargets)[0].Targets
+
+	if len(*targets) == 0 {
+		// Theoretically this should never happen, as there is supposed to be a pre-built ILL
+		// link included if no meaningful results were found.
+		return false
+	} else if len(*targets) == 1 {
+		// Return false if the only result is the ILL link
+		for _, target := range *targets {
+			if strings.Contains(target.TargetUrl, ILLLink) {
+				return false
+			}
+		}
+	}
+
+	return true
 }
 
 func newSFXResponse(httpResponse *http.Response) (*SFXResponse, error) {

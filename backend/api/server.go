@@ -3,6 +3,7 @@ package api
 import (
 	"ariadne/sfx"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"log"
 	"net/http"
@@ -21,19 +22,11 @@ func NewRouter() *http.ServeMux {
 
 // Handler for the endpoint used by the frontend
 func ResolverHandler(w http.ResponseWriter, r *http.Request) {
-	setCORS(&w)
+	setHeaders(&w)
 
-	w.Header().Add("Content-Type", "application/json")
-
-	sfxRequest, err := sfx.NewSFXRequest(r.URL.RawQuery)
+	sfxResponse, err := getSFXResponse(r.URL.RawQuery)
 	if err != nil {
-		handleError(err, w, "Invalid OpenURL")
-		return
-	}
-
-	sfxResponse, err := sfx.Do(sfxRequest)
-	if err != nil {
-		handleError(err, w, "Invalid response from SFX")
+		handleError(err, w, err.Error())
 		return
 	}
 
@@ -42,8 +35,20 @@ func ResolverHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintln(w, string(responseJSON))
 }
 
-func setCORS(w *http.ResponseWriter) {
+func getSFXResponse(queryString string) (*sfx.SFXResponse, error) {
+	sfxResponse := sfx.SFXResponse{}
+
+	sfxRequest, err := sfx.NewSFXRequest(queryString)
+	if err != nil {
+		return &sfxResponse, errors.New("Invalid OpenURL")
+	}
+
+	return sfx.Do(sfxRequest)
+}
+
+func setHeaders(w *http.ResponseWriter) {
 	(*w).Header().Set("Access-Control-Allow-Origin", "*")
+	(*w).Header().Set("Content-Type", "application/json")
 }
 
 func handleError(err error, w http.ResponseWriter, message string) {
@@ -94,11 +99,8 @@ func makeJSONResponseFromSFXResponse(sfxResponse *sfx.SFXResponse) []byte {
 	}
 
 	ariadneResponse := Response{
-		Errors: []string{},
-		// Hardcoding `false` for now.  This is just a placeholder for the value
-		// that will be calculated according to https://nyu-lib.monday.com/boards/765008773/pulses/4116986234?userId=27226106
-		// acceptance criteria.
-		Found:   false,
+		Errors:  []string{},
+		Found:   sfxResponse.IsFound(),
 		Records: records,
 	}
 

@@ -1,0 +1,1583 @@
+{
+    "rtaResultsLink": "https://bobcat.library.nyu.edu/primo_library/libweb/webservices/rest/v1/rta/NYU?recordInformation=$$V006056178$$Onyu_aleph006056178|$$V006062288$$Onyu_aleph006062288|,|$$Vnyu_aleph$$Onyu_aleph006056178|$$Vnyu_aleph$$Onyu_aleph006062288|,|$$VNYU01$$Onyu_aleph006056178|$$VNYU01$$Onyu_aleph006062288|,|$$VAleph$$Onyu_aleph006056178|$$VAleph$$Onyu_aleph006062288|,|dedupmrg1086164771|,|$$INYU$$LBOBST$$1Main Collection$$2(BX1407.M48 C37 2018 )$$Savailable$$31$$40$$5N$$61$$XNYU50$$YBOBST$$ZMAIN$$Onyu_aleph006062288|,|$$INYU$$Savailable|,|Online Resource|Physical Item|,|$$VNYU$$Onyu_aleph006056178|$$VNYUAD$$Onyu_aleph006056178|$$VNYUSH$$Onyu_aleph006056178|$$VNYU$$Onyu_aleph006062288|,|__NO_VALUE__|,|$$V$$Taleph_holdings$$Onyu_aleph006056178|$$V$$Taleph_holdings$$Onyu_aleph006062288|,|$$VNYU01006056178$$Onyu_aleph006056178|$$VNYU01006062288$$Onyu_aleph006062288|,|__NO_VALUE__|,|$$VNYURD$$Onyu_aleph006056178|;|",
+    "highlights": {},
+    "docs": [
+        {
+            "enrichment": {
+                "virtualBrowseObject": {
+                    "callNumber": "BX1407.M48 C37 2018eb Electronic access",
+                    "isVirtualBrowseEnabled": true,
+                    "callNumberBrowseField": "browse_callnumber.0"
+                }
+            },
+            "delivery": {
+                "availabilityLinks": [
+                    "detailsGetit1",
+                    "detailsGetit1"
+                ],
+                "physicalItemTextCodes": "delivery.code.alsophysical",
+                "displayLocation": false,
+                "availabilityLinksUrl": [
+                    "",
+                    ""
+                ],
+                "link": [
+                    {
+                        "displayLabel": "linktoprice",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "https://getit.library.nyu.edu/resolve?umlaut.institution=NYU&ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2023-03-20T17%3A46%3A24IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo-dedupmrg1086164771&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.btitle=Our%20Lady%20of%20everyday%20life%20:%20la%20Virgen%20de%20Guadalupe%20and%20the%20Catholic%20imagination%20of%20Mexican%20American%20women%20in%20America&rft.aulast=Castanedal-Liles&rft.aufirst=Maria%20Del%20Socorro,&rft.au=Castanedal-Liles,%20Maria%20Del%20Socorro&rft.isbn=9780190280413&rft_id=info:doi/&rft.primo=dedupmrg1086164771&rft_dat=%3Cnyu_aleph%3E006056178%3C/nyu_aleph%3E%3Cgrp_id%3E1152900753%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft_id=info:oai/&req.language=eng",
+                        "linkType": "http://purl.org/pnx/linkType/linktoprice",
+                        "@id": "_:0"
+                    },
+                    {
+                        "displayLabel": "lln42",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll?Action=10&Form=23&PhotoJournalTitle=Our%20Lady%20of%20everyday%20life%20:%20la%20Virgen%20de%20Guadalupe%20and%20the%20Catholic%20imagination%20of%20Mexican%20American%20women%20in%20America&PhotoItemAuthor=Maria%20Del%20Socorro%20%20Castanedal-Liles%20%20author.&PhotoJournalYear=2018&ESPNumber=1023575791&ISSN=9780190280413&AcceptNonEnglish=Yes&ShippingOptions=Scan%20Request&Notes=recordid-dedupmrg1086164771",
+                        "linkType": "http://purl.org/pnx/linkType/lln42",
+                        "@id": "_:1"
+                    },
+                    {
+                        "displayLabel": "lln42",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll?Action=10&Form=23&PhotoJournalTitle=Our%20Lady%20of%20everyday%20life%20:%20la%20Virgen%20de%20Guadalupe%20and%20the%20Catholic%20imagination%20of%20Mexican%20American%20women%20in%20America&PhotoItemAuthor=Maria%20Del%20Socorro%20%20Castanedal-Liles%20%20author.&PhotoJournalYear=2018&ESPNumber=1023575791&ISSN=9780190280413&AcceptNonEnglish=Yes&ShippingOptions=Scan%20Request&Notes=recordid-dedupmrg1086164771",
+                        "linkType": "http://purl.org/pnx/linkType/lln42",
+                        "@id": "_:2"
+                    },
+                    {
+                        "displayLabel": "lln43",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "https://ares.library.nyu.edu/remoteauth/testweb/ares.dll?Action=10&Form=2&Value=IRFVideo&title=Our%20Lady%20of%20everyday%20life%20:%20la%20Virgen%20de%20Guadalupe%20and%20the%20Catholic%20imagination%20of%20Mexican%20American%20women%20in%20America&PubDate=2018&CallNumber=BX1407.M48%20C37%202018eb&ItemFormatAudioVideo=book&CitedIn=dedupmrg1086164771",
+                        "linkType": "http://purl.org/pnx/linkType/lln43",
+                        "@id": "_:3"
+                    },
+                    {
+                        "displayLabel": "lln43",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "https://ares.library.nyu.edu/remoteauth/testweb/ares.dll?Action=10&Form=2&Value=IRFVideo&title=Our%20Lady%20of%20everyday%20life%20:%20la%20Virgen%20de%20Guadalupe%20and%20the%20Catholic%20imagination%20of%20Mexican%20American%20women%20in%20America&PubDate=2018&CallNumber=BX1407.M48%20C37%202018eb&ItemFormatAudioVideo=book&CitedIn=dedupmrg1086164771",
+                        "linkType": "http://purl.org/pnx/linkType/lln43",
+                        "@id": "_:4"
+                    },
+                    {
+                        "displayLabel": "lln44",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "",
+                        "linkType": "http://purl.org/pnx/linkType/lln44",
+                        "@id": "_:5"
+                    },
+                    {
+                        "displayLabel": "lln44",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "",
+                        "linkType": "http://purl.org/pnx/linkType/lln44",
+                        "@id": "_:6"
+                    },
+                    {
+                        "displayLabel": "openurlfulltext",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "https://getit.library.nyu.edu/search/journal_search?ctx_ver=Z39.88-2004&sfx.ignore_date_threshold=1&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2023-03-20T17%3A46%3A24IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo-dedupmrg1086164771&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.btitle=Our%20Lady%20of%20everyday%20life%20:%20la%20Virgen%20de%20Guadalupe%20and%20the%20Catholic%20imagination%20of%20Mexican%20American%20women%20in%20America&rft.aulast=Castanedal-Liles&rft.aufirst=Maria%20Del%20Socorro,&rft.au=Castanedal-Liles,%20Maria%20Del%20Socorro&rft.isbn=9780190280413&rft.isbn_list=0190280417&rft.isbn_list=9780190280390&rft.isbn_list=0190280395&rft.isbn_list=9780190280406&rft.isbn_list=0190280409&rft_id=info:doi/&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=%3Cnyu_aleph%3E006056178%3C/nyu_aleph%3E%3Cgrp_id%3E1152900753%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft_id=info:oai/&req.language=eng&rft_id=info:pmid/",
+                        "linkType": "http://purl.org/pnx/linkType/openurlfulltext",
+                        "@id": "_:7"
+                    },
+                    {
+                        "displayLabel": "openurlfulltext",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "https://getit.library.nyu.edu/search/journal_search?ctx_ver=Z39.88-2004&sfx.ignore_date_threshold=1&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2023-03-20T17%3A46%3A24IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo-dedupmrg1086164771&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.btitle=Our%20Lady%20of%20everyday%20life%20:%20la%20Virgen%20de%20Guadalupe%20and%20the%20Catholic%20imagination%20of%20Mexican%20American%20women%20in%20America&rft.aulast=Castanedal-Liles&rft.aufirst=Maria%20Del%20Socorro,&rft.au=Castanedal-Liles,%20Maria%20Del%20Socorro&rft.isbn=9780190280413&rft.isbn_list=0190280417&rft.isbn_list=9780190280390&rft.isbn_list=0190280395&rft.isbn_list=9780190280406&rft.isbn_list=0190280409&rft_id=info:doi/&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=%3Cnyu_aleph%3E006062288%3C/nyu_aleph%3E%3Cgrp_id%3E1152900753%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft_id=info:oai/&req.language=eng&rft_id=info:pmid/",
+                        "linkType": "http://purl.org/pnx/linkType/openurlfulltext",
+                        "@id": "_:8"
+                    },
+                    {
+                        "displayLabel": "lln40",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?LoanTitle=Our%20Lady%20of%20everyday%20life%20:%20la%20Virgen%20de%20Guadalupe%20and%20the%20Catholic%20imagination%20of%20Mexican%20American%20women%20in%20America&LoanAuthor=Castanedal-Liles,%20Maria%20Del%20Socorro&LoanDate=2018&ISSN=9780190280413&AcceptNonEnglish=Yes&AcceptAlternateEdition=No&Notes=recordid-006056178",
+                        "linkType": "http://purl.org/pnx/linkType/lln40",
+                        "@id": "_:9"
+                    },
+                    {
+                        "displayLabel": "lln40",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?LoanTitle=Our%20Lady%20of%20everyday%20life%20:%20la%20Virgen%20de%20Guadalupe%20and%20the%20Catholic%20imagination%20of%20Mexican%20American%20women%20in%20America&LoanAuthor=Castanedal-Liles,%20Maria%20Del%20Socorro&LoanDate=2018&ISSN=9780190280413&AcceptNonEnglish=Yes&AcceptAlternateEdition=No&Notes=recordid-006062288",
+                        "linkType": "http://purl.org/pnx/linkType/lln40",
+                        "@id": "_:10"
+                    },
+                    {
+                        "displayLabel": "lln41",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "https://ares.library.nyu.edu/remoteauth/ares.dll?Action=10&Form=30&linktype=openurl&rfr_id=info:sid/primo.exlibrisgroup.com:primo-dedupmrg1086164771&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.btitle=Our%20Lady%20of%20everyday%20life%20:%20la%20Virgen%20de%20Guadalupe%20and%20the%20Catholic%20imagination%20of%20Mexican%20American%20women%20in%20America&rft.aulast=Castanedal-Liles&rft.aufirst=Maria%20Del%20Socorro,&rft.au=Castanedal-Liles,%20Maria%20Del%20Socorro&rft.isbn=9780190280413&rft.primo=dedupmrg1086164771",
+                        "linkType": "http://purl.org/pnx/linkType/lln41",
+                        "@id": "_:11"
+                    },
+                    {
+                        "displayLabel": "lln41",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "https://ares.library.nyu.edu/remoteauth/ares.dll?Action=10&Form=30&linktype=openurl&rfr_id=info:sid/primo.exlibrisgroup.com:primo-dedupmrg1086164771&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.btitle=Our%20Lady%20of%20everyday%20life%20:%20la%20Virgen%20de%20Guadalupe%20and%20the%20Catholic%20imagination%20of%20Mexican%20American%20women%20in%20America&rft.aulast=Castanedal-Liles&rft.aufirst=Maria%20Del%20Socorro,&rft.au=Castanedal-Liles,%20Maria%20Del%20Socorro&rft.isbn=9780190280413&rft.primo=dedupmrg1086164771",
+                        "linkType": "http://purl.org/pnx/linkType/lln41",
+                        "@id": "_:12"
+                    },
+                    {
+                        "displayLabel": "openurl",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "https://getit.library.nyu.edu/search/journal_search?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2023-03-20T17%3A46%3A24IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo-dedupmrg1086164771&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.btitle=Our%20Lady%20of%20everyday%20life%20:%20la%20Virgen%20de%20Guadalupe%20and%20the%20Catholic%20imagination%20of%20Mexican%20American%20women%20in%20America&rft.aulast=Castanedal-Liles&rft.aufirst=Maria%20Del%20Socorro,&rft.au=Castanedal-Liles,%20Maria%20Del%20Socorro&rft.isbn=9780190280413&rft.isbn_list=0190280417&rft.isbn_list=9780190280390&rft.isbn_list=0190280395&rft.isbn_list=9780190280406&rft.isbn_list=0190280409&rft_id=info:doi/&rft.primo=dedupmrg1086164771&rft_dat=%3Cnyu_aleph%3E006056178%3C/nyu_aleph%3E%3Cgrp_id%3E1152900753%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft_id=info:oai/&req.language=eng&rft_id=info:pmid/",
+                        "linkType": "http://purl.org/pnx/linkType/openurl",
+                        "@id": "_:13"
+                    },
+                    {
+                        "displayLabel": "openurl",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "https://getit.library.nyu.edu/search/journal_search?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2023-03-20T17%3A46%3A24IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo-dedupmrg1086164771&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.btitle=Our%20Lady%20of%20everyday%20life%20:%20la%20Virgen%20de%20Guadalupe%20and%20the%20Catholic%20imagination%20of%20Mexican%20American%20women%20in%20America&rft.aulast=Castanedal-Liles&rft.aufirst=Maria%20Del%20Socorro,&rft.au=Castanedal-Liles,%20Maria%20Del%20Socorro&rft.isbn=9780190280413&rft.isbn_list=0190280417&rft.isbn_list=9780190280390&rft.isbn_list=0190280395&rft.isbn_list=9780190280406&rft.isbn_list=0190280409&rft_id=info:doi/&rft.primo=dedupmrg1086164771&rft_dat=%3Cnyu_aleph%3E006062288%3C/nyu_aleph%3E%3Cgrp_id%3E1152900753%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft_id=info:oai/&req.language=eng&rft_id=info:pmid/",
+                        "linkType": "http://purl.org/pnx/linkType/openurl",
+                        "@id": "_:14"
+                    },
+                    {
+                        "displayLabel": "For All Users: Check other Libraries using WorldCat®",
+                        "hyperlinkText": "For All Users: Check other Libraries using WorldCat®",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "http://www.worldcat.org/search?q=isbn%3A9780190280413",
+                        "linkType": "http://purl.org/pnx/linkType/lln08",
+                        "@id": "_:15"
+                    },
+                    {
+                        "displayLabel": "For All Users: Check other Libraries using WorldCat®",
+                        "hyperlinkText": "For All Users: Check other Libraries using WorldCat®",
+                        "inst4opac": "NYU",
+                        "linkURL": "http://www.worldcat.org/search?q=isbn%3A9780190280413",
+                        "linkType": "http://purl.org/pnx/linkType/lln08",
+                        "@id": "_:16"
+                    },
+                    {
+                        "displayLabel": "For Staff: View source record (system no.006056178",
+                        "hyperlinkText": "For Staff: View source record (system no.006056178",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "http://aleph.library.nyu.edu/F?func=direct&local_base=PRIMOCOMMON&doc_number=006056178",
+                        "linkType": "http://purl.org/pnx/linkType/lln09",
+                        "@id": "_:17"
+                    },
+                    {
+                        "displayLabel": "For Staff: View source record (system no.006062288",
+                        "hyperlinkText": "For Staff: View source record (system no.006062288",
+                        "inst4opac": "NYU",
+                        "linkURL": "http://aleph.library.nyu.edu/F?func=direct&local_base=PRIMOCOMMON&doc_number=006062288",
+                        "linkType": "http://purl.org/pnx/linkType/lln09",
+                        "@id": "_:18"
+                    },
+                    {
+                        "displayLabel": "More bibliographic information",
+                        "hyperlinkText": "More bibliographic information",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "http://aleph.library.nyu.edu/F?func=direct&local_base=PRIMOCOMMON&doc_number=006056178",
+                        "linkType": "http://purl.org/pnx/linkType/backlink",
+                        "@id": "_:19"
+                    },
+                    {
+                        "displayLabel": "More bibliographic information",
+                        "hyperlinkText": "More bibliographic information",
+                        "inst4opac": "NYU",
+                        "linkURL": "http://aleph.library.nyu.edu/F?func=direct&local_base=PRIMOCOMMON&doc_number=006062288",
+                        "linkType": "http://purl.org/pnx/linkType/backlink",
+                        "@id": "_:20"
+                    },
+                    {
+                        "displayLabel": "lln46",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "",
+                        "linkType": "http://purl.org/pnx/linkType/lln46",
+                        "@id": "_:21"
+                    },
+                    {
+                        "displayLabel": "lln46",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "",
+                        "linkType": "http://purl.org/pnx/linkType/lln46",
+                        "@id": "_:22"
+                    },
+                    {
+                        "displayLabel": "lln47",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "",
+                        "linkType": "http://purl.org/pnx/linkType/lln47",
+                        "@id": "_:23"
+                    },
+                    {
+                        "displayLabel": "lln47",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "",
+                        "linkType": "http://purl.org/pnx/linkType/lln47",
+                        "@id": "_:24"
+                    },
+                    {
+                        "displayLabel": "Ebook Central (NYU Access)",
+                        "hyperlinkText": "Ebook Central (NYU Access)",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "https://ebookcentral.proquest.com/lib/nyulibrary-ebooks/detail.action?docID=5294929",
+                        "linkType": "http://purl.org/pnx/linkType/lln26",
+                        "@id": "_:25"
+                    },
+                    {
+                        "displayLabel": "Oxford Academic eBooks (NYU Access)",
+                        "hyperlinkText": "Oxford Academic eBooks (NYU Access)",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "http://proxy.library.nyu.edu/login?url=https://academic.oup.com/book/4545",
+                        "linkType": "http://purl.org/pnx/linkType/lln26",
+                        "@id": "_:26"
+                    },
+                    {
+                        "displayLabel": "lln48",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "",
+                        "linkType": "http://purl.org/pnx/linkType/lln48",
+                        "@id": "_:27"
+                    },
+                    {
+                        "displayLabel": "lln48",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "",
+                        "linkType": "http://purl.org/pnx/linkType/lln48",
+                        "@id": "_:28"
+                    },
+                    {
+                        "displayLabel": "Copy item link",
+                        "hyperlinkText": "Copy item link",
+                        "inst4opac": "NYU",
+                        "linkURL": "https://library.nyu.edu/persistent/lcn/dedupmrg1086164771?institution=NYU&persistent",
+                        "linkType": "http://purl.org/pnx/linkType/linktoreview",
+                        "@id": "_:29"
+                    },
+                    {
+                        "displayLabel": "thumbnail",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "https://syndetics.com/index.aspx?isbn=9780190280413/SC.JPG&client=primo",
+                        "linkType": "http://purl.org/pnx/linkType/thumbnail",
+                        "@id": "_:30"
+                    },
+                    {
+                        "displayLabel": "$$Eilliad_book_label",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?LoanTitle=Our%20Lady%20of%20everyday%20life%20:%20la%20Virgen%20de%20Guadalupe%20and%20the%20Catholic%20imagination%20of%20Mexican%20American%20women%20in%20America&LoanAuthor=Castanedal-Liles,%20Maria%20Del%20Socorro&LoanDate=2018&ISSN=9780190280413&AcceptNonEnglish=Yes&AcceptAlternateEdition=No&Notes=recordid-006056178",
+                        "linkType": "http://purl.org/pnx/linkType/lln31",
+                        "@id": "_:31"
+                    },
+                    {
+                        "displayLabel": "$$Eilliad_book_label",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?LoanTitle=Our%20Lady%20of%20everyday%20life%20:%20la%20Virgen%20de%20Guadalupe%20and%20the%20Catholic%20imagination%20of%20Mexican%20American%20women%20in%20America&LoanAuthor=Castanedal-Liles,%20Maria%20Del%20Socorro&LoanDate=2018&ISSN=9780190280413&AcceptNonEnglish=Yes&AcceptAlternateEdition=No&Notes=recordid-006062288",
+                        "linkType": "http://purl.org/pnx/linkType/lln31",
+                        "@id": "_:32"
+                    },
+                    {
+                        "displayLabel": "lln10",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "https://getit.library.nyu.edu/resolve?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2023-03-20T17%3A46%3A24IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo-dedupmrg1086164771&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.btitle=Our%20Lady%20of%20everyday%20life%20:%20la%20Virgen%20de%20Guadalupe%20and%20the%20Catholic%20imagination%20of%20Mexican%20American%20women%20in%20America&rft.aulast=Castanedal-Liles&rft.aufirst=Maria%20Del%20Socorro,&rft.au=Castanedal-Liles,%20Maria%20Del%20Socorro&rft.isbn=9780190280413&rft_id=info:doi/&rft.primo=dedupmrg1086164771&rft_dat=%3Cnyu_aleph%3E006056178%3C/nyu_aleph%3E%3Cgrp_id%3E1152900753%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft_id=info:oai/&req.language=eng",
+                        "linkType": "http://purl.org/pnx/linkType/lln10",
+                        "@id": "_:33"
+                    },
+                    {
+                        "displayLabel": "lln10",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "https://getit.library.nyu.edu/resolve?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2023-03-20T17%3A46%3A24IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo-dedupmrg1086164771&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.btitle=Our%20Lady%20of%20everyday%20life%20:%20la%20Virgen%20de%20Guadalupe%20and%20the%20Catholic%20imagination%20of%20Mexican%20American%20women%20in%20America&rft.aulast=Castanedal-Liles&rft.aufirst=Maria%20Del%20Socorro,&rft.au=Castanedal-Liles,%20Maria%20Del%20Socorro&rft.isbn=9780190280413&rft_id=info:doi/&rft.primo=dedupmrg1086164771&rft_dat=%3Cnyu_aleph%3E006062288%3C/nyu_aleph%3E%3Cgrp_id%3E1152900753%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft_id=info:oai/&req.language=eng",
+                        "linkType": "http://purl.org/pnx/linkType/lln10",
+                        "@id": "_:34"
+                    },
+                    {
+                        "displayLabel": "$$Eilliad_book_chapter_label",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll?Action=10&Form=23&PhotoJournalTitle=Our%20Lady%20of%20everyday%20life%20:%20la%20Virgen%20de%20Guadalupe%20and%20the%20Catholic%20imagination%20of%20Mexican%20American%20women%20in%20America&PhotoItemAuthor=Maria%20Del%20Socorro%20%20Castanedal-Liles%20%20author.&PhotoJournalYear=2018&ESPNumber=1023575791&ISSN=9780190280413&AcceptNonEnglish=Yes&ShippingOptions=Scan%20Request&Notes=recordid-dedupmrg1086164771",
+                        "linkType": "http://purl.org/pnx/linkType/lln32",
+                        "@id": "_:35"
+                    },
+                    {
+                        "displayLabel": "$$Eilliad_book_chapter_label",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll?Action=10&Form=23&PhotoJournalTitle=Our%20Lady%20of%20everyday%20life%20:%20la%20Virgen%20de%20Guadalupe%20and%20the%20Catholic%20imagination%20of%20Mexican%20American%20women%20in%20America&PhotoItemAuthor=Maria%20Del%20Socorro%20%20Castanedal-Liles%20%20author.&PhotoJournalYear=2018&ESPNumber=1023575791&ISSN=9780190280413&AcceptNonEnglish=Yes&ShippingOptions=Scan%20Request&Notes=recordid-dedupmrg1086164771",
+                        "linkType": "http://purl.org/pnx/linkType/lln32",
+                        "@id": "_:36"
+                    },
+                    {
+                        "displayLabel": "Ebook Central",
+                        "hyperlinkText": "Ebook Central",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "https://ebookcentral.proquest.com/lib/nyulibrary-ebooks/detail.action?docID=5294929",
+                        "linkType": "http://purl.org/pnx/linkType/linktorsrc",
+                        "@id": "_:37"
+                    },
+                    {
+                        "displayLabel": "Oxford Academic eBooks",
+                        "hyperlinkText": "Oxford Academic eBooks",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "http://proxy.library.nyu.edu/login?url=https://academic.oup.com/book/4545",
+                        "linkType": "http://purl.org/pnx/linkType/linktorsrc",
+                        "@id": "_:38"
+                    },
+                    {
+                        "displayLabel": "lln11",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "https://getit.library.nyu.edu/resolve?umlaut.institution=NYUAD&ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2023-03-20T17%3A46%3A24IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo-dedupmrg1086164771&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.btitle=Our%20Lady%20of%20everyday%20life%20:%20la%20Virgen%20de%20Guadalupe%20and%20the%20Catholic%20imagination%20of%20Mexican%20American%20women%20in%20America&rft.aulast=Castanedal-Liles&rft.aufirst=Maria%20Del%20Socorro,&rft.au=Castanedal-Liles,%20Maria%20Del%20Socorro&rft.isbn=9780190280413&rft_id=info:doi/&rft.primo=dedupmrg1086164771&rft_dat=%3Cnyu_aleph%3E006056178%3C/nyu_aleph%3E%3Cgrp_id%3E1152900753%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft_id=info:oai/&req.language=eng",
+                        "linkType": "http://purl.org/pnx/linkType/lln11",
+                        "@id": "_:39"
+                    },
+                    {
+                        "displayLabel": "lln11",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "https://getit.library.nyu.edu/resolve?umlaut.institution=NYUAD&ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2023-03-20T17%3A46%3A24IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo-dedupmrg1086164771&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.btitle=Our%20Lady%20of%20everyday%20life%20:%20la%20Virgen%20de%20Guadalupe%20and%20the%20Catholic%20imagination%20of%20Mexican%20American%20women%20in%20America&rft.aulast=Castanedal-Liles&rft.aufirst=Maria%20Del%20Socorro,&rft.au=Castanedal-Liles,%20Maria%20Del%20Socorro&rft.isbn=9780190280413&rft_id=info:doi/&rft.primo=dedupmrg1086164771&rft_dat=%3Cnyu_aleph%3E006062288%3C/nyu_aleph%3E%3Cgrp_id%3E1152900753%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft_id=info:oai/&req.language=eng",
+                        "linkType": "http://purl.org/pnx/linkType/lln11",
+                        "@id": "_:40"
+                    },
+                    {
+                        "displayLabel": "lln12",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "https://getit.library.nyu.edu/resolve?umlaut.institution=NYUSH&ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2023-03-20T17%3A46%3A24IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo-dedupmrg1086164771&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.btitle=Our%20Lady%20of%20everyday%20life%20:%20la%20Virgen%20de%20Guadalupe%20and%20the%20Catholic%20imagination%20of%20Mexican%20American%20women%20in%20America&rft.aulast=Castanedal-Liles&rft.aufirst=Maria%20Del%20Socorro,&rft.au=Castanedal-Liles,%20Maria%20Del%20Socorro&rft.isbn=9780190280413&rft_id=info:doi/&rft.primo=dedupmrg1086164771&rft_dat=%3Cnyu_aleph%3E006056178%3C/nyu_aleph%3E%3Cgrp_id%3E1152900753%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft_id=info:oai/&req.language=eng",
+                        "linkType": "http://purl.org/pnx/linkType/lln12",
+                        "@id": "_:41"
+                    },
+                    {
+                        "displayLabel": "lln12",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "https://getit.library.nyu.edu/resolve?umlaut.institution=NYUSH&ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2023-03-20T17%3A46%3A24IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo-dedupmrg1086164771&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.btitle=Our%20Lady%20of%20everyday%20life%20:%20la%20Virgen%20de%20Guadalupe%20and%20the%20Catholic%20imagination%20of%20Mexican%20American%20women%20in%20America&rft.aulast=Castanedal-Liles&rft.aufirst=Maria%20Del%20Socorro,&rft.au=Castanedal-Liles,%20Maria%20Del%20Socorro&rft.isbn=9780190280413&rft_id=info:doi/&rft.primo=dedupmrg1086164771&rft_dat=%3Cnyu_aleph%3E006062288%3C/nyu_aleph%3E%3Cgrp_id%3E1152900753%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft_id=info:oai/&req.language=eng",
+                        "linkType": "http://purl.org/pnx/linkType/lln12",
+                        "@id": "_:42"
+                    },
+                    {
+                        "displayLabel": "$$Eezborrow_label",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "https://ezborrow.reshare.indexdata.com/Search/Results?join=AND&lookfor0%5B%5D=9780190280390+OR+0190280395+OR+9780190280406+OR+0190280409&type0%5B%5D=ISN&bool0%5B%5D=AND&illustration=-1&daterange%5B%5D=publishDate",
+                        "linkType": "http://purl.org/pnx/linkType/lln30",
+                        "@id": "_:43"
+                    },
+                    {
+                        "displayLabel": "linktorequest",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "",
+                        "linkType": "http://purl.org/pnx/linkType/linktorequest",
+                        "@id": "_:44"
+                    },
+                    {
+                        "displayLabel": "linktorequest",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "",
+                        "linkType": "http://purl.org/pnx/linkType/linktorequest",
+                        "@id": "_:45"
+                    },
+                    {
+                        "displayLabel": "lln13",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "https://getit.library.nyu.edu/resolve?umlaut.institution=CU&ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2023-03-20T17%3A46%3A24IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo-dedupmrg1086164771&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.btitle=Our%20Lady%20of%20everyday%20life%20:%20la%20Virgen%20de%20Guadalupe%20and%20the%20Catholic%20imagination%20of%20Mexican%20American%20women%20in%20America&rft.aulast=Castanedal-Liles&rft.aufirst=Maria%20Del%20Socorro,&rft.au=Castanedal-Liles,%20Maria%20Del%20Socorro&rft.isbn=9780190280413&rft_id=info:doi/&rft.primo=dedupmrg1086164771&rft_dat=%3Cnyu_aleph%3E006056178%3C/nyu_aleph%3E%3Cgrp_id%3E1152900753%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft_id=info:oai/&req.language=eng",
+                        "linkType": "http://purl.org/pnx/linkType/lln13",
+                        "@id": "_:46"
+                    },
+                    {
+                        "displayLabel": "lln13",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "https://getit.library.nyu.edu/resolve?umlaut.institution=CU&ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2023-03-20T17%3A46%3A24IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo-dedupmrg1086164771&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.btitle=Our%20Lady%20of%20everyday%20life%20:%20la%20Virgen%20de%20Guadalupe%20and%20the%20Catholic%20imagination%20of%20Mexican%20American%20women%20in%20America&rft.aulast=Castanedal-Liles&rft.aufirst=Maria%20Del%20Socorro,&rft.au=Castanedal-Liles,%20Maria%20Del%20Socorro&rft.isbn=9780190280413&rft_id=info:doi/&rft.primo=dedupmrg1086164771&rft_dat=%3Cnyu_aleph%3E006062288%3C/nyu_aleph%3E%3Cgrp_id%3E1152900753%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft_id=info:oai/&req.language=eng",
+                        "linkType": "http://purl.org/pnx/linkType/lln13",
+                        "@id": "_:47"
+                    },
+                    {
+                        "displayLabel": "Check Availability:NYU Bobst  Main Collection  (BX1407.M48 C37 2018 )  ",
+                        "hyperlinkText": "Check Availability:NYU Bobst  Main Collection  (BX1407.M48 C37 2018 )  ",
+                        "inst4opac": "NYU",
+                        "linkURL": "http://aleph.library.nyu.edu/F?func=item-global&doc_library=NYU01&local_base=PRIMOCOMMON&doc_number=006062288&sub_library=BOBST  &collection=MAIN",
+                        "linkType": "http://purl.org/pnx/linkType/lln15",
+                        "@id": "_:48"
+                    },
+                    {
+                        "displayLabel": "Ebook Central",
+                        "hyperlinkText": "Ebook Central",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "https://ebookcentral.proquest.com/lib/nyulibrary-ebooks/detail.action?docID=5294929",
+                        "linkType": "http://purl.org/pnx/linkType/lln16",
+                        "@id": "_:49"
+                    },
+                    {
+                        "displayLabel": "Oxford Academic eBooks",
+                        "hyperlinkText": "Oxford Academic eBooks",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "http://proxy.library.nyu.edu/login?url=https://academic.oup.com/book/4545",
+                        "linkType": "http://purl.org/pnx/linkType/lln16",
+                        "@id": "_:50"
+                    },
+                    {
+                        "displayLabel": "linktoholdings",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYUSH",
+                        "linkURL": "http://aleph.library.nyu.edu/F?func=item-global&doc_library=NYU01&local_base=PRIMOCOMMON&doc_number=006056178",
+                        "linkType": "http://purl.org/pnx/linkType/linktoholdings",
+                        "@id": "_:51"
+                    },
+                    {
+                        "displayLabel": "linktoholdings",
+                        "hyperlinkText": "",
+                        "inst4opac": "NYU",
+                        "linkURL": "http://aleph.library.nyu.edu/F?func=item-global&doc_library=NYU01&local_base=PRIMOCOMMON&doc_number=006062288",
+                        "linkType": "http://purl.org/pnx/linkType/linktoholdings",
+                        "@id": "_:52"
+                    },
+                    {
+                        "displayLabel": "Check other libraries (WorldCat®)",
+                        "hyperlinkText": "Check other libraries (WorldCat®)",
+                        "inst4opac": "NYU",
+                        "linkURL": "http://www.worldcat.org/search?q=isbn%3A9780190280413",
+                        "linkType": "http://purl.org/pnx/linkType/linktouc",
+                        "@id": "_:53"
+                    },
+                    {
+                        "displayLabel": "thumbnail",
+                        "linkURL": "https://syndetics.com/index.aspx?isbn=9780190280413/SC.JPG&client=primo",
+                        "linkType": "http://purl.org/pnx/linkType/thumbnail",
+                        "@id": "_:54"
+                    }
+                ],
+                "availability": [
+                    "not_restricted",
+                    "available_in_my_institution"
+                ],
+                "additionalLocations": false,
+                "displayedAvailability": "not_restricted",
+                "holding": [
+                    {
+                        "matchForHoldings": [
+                            {
+                                "holdingRecord": "852##b",
+                                "matchOn": "MainLocation"
+                            },
+                            {
+                                "holdingRecord": "852##c",
+                                "matchOn": "SecondaryLocation"
+                            }
+                        ],
+                        "subLocationCode": "MAIN",
+                        "ilsApiId": "NYU01006062288",
+                        "libraryCode": "BOBST",
+                        "isValidUser": true,
+                        "mainLocation": "BOBST",
+                        "callNumber": "(BX1407.M48 C37 2018 )",
+                        "adaptorid": "ALEPH_22",
+                        "organization": "NYU",
+                        "holdingURL": "OVP",
+                        "@id": "_:0",
+                        "availabilityStatus": "available",
+                        "subLocation": "Main Collection",
+                        "holdId": ""
+                    }
+                ],
+                "bestlocation": {
+                    "matchForHoldings": [
+                        {
+                            "holdingRecord": "852##b",
+                            "matchOn": "MainLocation"
+                        },
+                        {
+                            "holdingRecord": "852##c",
+                            "matchOn": "SecondaryLocation"
+                        }
+                    ],
+                    "mainLocation": "BOBST",
+                    "subLocationCode": "MAIN",
+                    "callNumber": "(BX1407.M48 C37 2018 )",
+                    "organization": "NYU",
+                    "libraryCode": "BOBST",
+                    "@id": "_:0",
+                    "availabilityStatus": "available",
+                    "subLocation": "Main Collection",
+                    "holdId": "",
+                    "isValidUser": true
+                },
+                "deliveryCategory": [
+                    "Online Resource",
+                    "Physical Item"
+                ],
+                "serviceMode": [
+                    "display",
+                    "ovp"
+                ],
+                "feDisplayOtherLocations": false,
+                "GetIt2": {
+                    "isLinktoOnline": false,
+                    "displayText": "openurl",
+                    "hyperlinkText": "",
+                    "getItTabText": "tab2_onl_norestrict",
+                    "link": "https://getit.library.nyu.edu/search/journal_search?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2023-03-20T17%3A46%3A24IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo-dedupmrg1086164771&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.btitle=Our%20Lady%20of%20everyday%20life%20:%20la%20Virgen%20de%20Guadalupe%20and%20the%20Catholic%20imagination%20of%20Mexican%20American%20women%20in%20America&rft.aulast=Castanedal-Liles&rft.aufirst=Maria%20Del%20Socorro,&rft.au=Castanedal-Liles,%20Maria%20Del%20Socorro&rft.isbn=9780190280413&rft.isbn_list=0190280417&rft.isbn_list=9780190280390&rft.isbn_list=0190280395&rft.isbn_list=9780190280406&rft.isbn_list=0190280409&rft_id=info:doi/&rft.primo=dedupmrg1086164771&rft_dat=%3Cnyu_aleph%3E006056178%3C/nyu_aleph%3E%3Cgrp_id%3E1152900753%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft_id=info:oai/&req.language=eng&rft_id=info:pmid/",
+                    "@id": "_:0",
+                    "serviceModeGetit2": "display"
+                },
+                "GetIt1": [
+                    {
+                        "links": [
+                            {
+                                "isLinktoOnline": true,
+                                "displayText": "Ebook Central",
+                                "hyperlinkText": "Ebook Central",
+                                "getItTabText": "tab1_onl_norestrict",
+                                "link": "https://ebookcentral.proquest.com/lib/nyulibrary-ebooks/detail.action?docID=5294929",
+                                "@id": "_:0"
+                            },
+                            {
+                                "isLinktoOnline": true,
+                                "displayText": "Oxford Academic eBooks",
+                                "hyperlinkText": "Oxford Academic eBooks",
+                                "getItTabText": "tab1_onl_norestrict",
+                                "link": "http://proxy.library.nyu.edu/login?url=https://academic.oup.com/book/4545",
+                                "@id": "_:1"
+                            }
+                        ],
+                        "category": "Online Resource"
+                    },
+                    {
+                        "links": [
+                            {
+                                "isLinktoOnline": false,
+                                "displayText": "linktoholdings",
+                                "inst4opac": "NYU",
+                                "hyperlinkText": "tab1_avail",
+                                "getItTabText": "tab1_avail",
+                                "adaptorid": "ALEPH_22",
+                                "ilsApiId": "NYU01006062288",
+                                "link": "OVP",
+                                "@id": "_:0"
+                            }
+                        ],
+                        "category": "Physical Item"
+                    }
+                ]
+            },
+            "@rta_link": "https://bobcat.library.nyu.edu/primo_library/libweb/webservices/rest/v1/rta/NYU?recordInformation=$$V006056178$$Onyu_aleph006056178|$$V006062288$$Onyu_aleph006062288|,|$$Vnyu_aleph$$Onyu_aleph006056178|$$Vnyu_aleph$$Onyu_aleph006062288|,|$$VNYU01$$Onyu_aleph006056178|$$VNYU01$$Onyu_aleph006062288|,|$$VAleph$$Onyu_aleph006056178|$$VAleph$$Onyu_aleph006062288|,|dedupmrg1086164771|,|$$INYU$$LBOBST$$1Main Collection$$2(BX1407.M48 C37 2018 )$$Savailable$$31$$40$$5N$$61$$XNYU50$$YBOBST$$ZMAIN$$Onyu_aleph006062288|,|$$INYU$$Savailable|,|Online Resource|Physical Item|,|$$VNYU$$Onyu_aleph006056178|$$VNYUAD$$Onyu_aleph006056178|$$VNYUSH$$Onyu_aleph006056178|$$VNYU$$Onyu_aleph006062288|,|__NO_VALUE__|,|$$V$$Taleph_holdings$$Onyu_aleph006056178|$$V$$Taleph_holdings$$Onyu_aleph006062288|,|$$VNYU01006056178$$Onyu_aleph006056178|$$VNYU01006062288$$Onyu_aleph006062288|,|__NO_VALUE__|,|$$VNYURD$$Onyu_aleph006056178",
+            "context": "L",
+            "adaptor": "Local Search Engine",
+            "pnx": {
+                "delivery": {
+                    "institution": [
+                        "$$VNYU$$Onyu_aleph006056178",
+                        "$$VNYUAD$$Onyu_aleph006056178",
+                        "$$VNYUSH$$Onyu_aleph006056178",
+                        "$$VNYU$$Onyu_aleph006062288"
+                    ],
+                    "resdelscope": [
+                        "$$VNYURD$$Onyu_aleph006056178"
+                    ],
+                    "delcategory": [
+                        "$$VOnline Resource$$INYU$$Onyu_aleph006056178",
+                        "$$VOnline Resource$$INYUAD$$Onyu_aleph006056178",
+                        "$$VOnline Resource$$INYUSH$$Onyu_aleph006056178",
+                        "$$VOnline Resource$$IHSL$$Onyu_aleph006056178",
+                        "$$VOnline Resource$$INYSID$$Onyu_aleph006056178",
+                        "$$VOnline Resource$$INYHS$$Onyu_aleph006056178",
+                        "$$VOnline Resource$$IBHS$$Onyu_aleph006056178",
+                        "$$VPhysical Item$$INYU$$Onyu_aleph006062288",
+                        "$$VPhysical Item$$INYUAD$$Onyu_aleph006062288",
+                        "$$VPhysical Item$$INYUSH$$Onyu_aleph006062288",
+                        "$$VPhysical Item$$IHSL$$Onyu_aleph006062288",
+                        "$$VPhysical Item$$INS$$Onyu_aleph006062288",
+                        "$$VPhysical Item$$ICU$$Onyu_aleph006062288",
+                        "$$VPhysical Item$$INYSID$$Onyu_aleph006062288",
+                        "$$VPhysical Item$$INYHS$$Onyu_aleph006062288",
+                        "$$VPhysical Item$$IBHS$$Onyu_aleph006062288"
+                    ]
+                },
+                "display": {
+                    "creationdate": [
+                        "2018"
+                    ],
+                    "subject": [
+                        "Mexican American Catholics -- Religious life",
+                        "Mexican American women -- Religious life",
+                        "Guadalupe, Our Lady of",
+                        "Catholiques américains d'origine mexicaine -- Vie religieuse",
+                        "Américaines d'origine mexicaine -- Vie religieuse",
+                        "Nuestra Señora de Guadalupe",
+                        "RELIGION -- Christianity -- Catholic"
+                    ],
+                    "description": [
+                        "$$Ccontents$$VHere it is told -- Our Lady of café con leche: the social construction of Catholic devotion -- Catholicizing girlhood: socializing girls into institutional Catholicism -- The making of girls in the Mexican Catholic imagination: obedience, respect, and responsibility -- Becoming senoritas: if you can't talk about it in church, you can't talk about it anywhere -- Our Lady of everyday life -- Perceptions of Our Lady of Guadalupe's relationship to feminism: the time is now -- Why do they paint her this way? She is our mother.",
+                        "$$Csummary$$V\"Our Lady of Everyday Life' is an ethnographic study of three generations of Mexican origin women (college students, mothers, and older women) and their experiences growing up Catholic. The work focuses on their relationship with Our Lady of Guadalupe as central to what Castañeda-Liles calls their 'Mexican Catholic imagination.\""
+                    ],
+                    "language": [
+                        "eng"
+                    ],
+                    "source": [
+                        "$$Vnyu_aleph$$Onyu_aleph006056178",
+                        "$$Vnyu_aleph$$Onyu_aleph006062288"
+                    ],
+                    "title": [
+                        "Our Lady of everyday life : la Virgen de Guadalupe and the Catholic imagination of Mexican American women in America"
+                    ],
+                    "type": [
+                        "book"
+                    ],
+                    "lds20": [
+                        "Mexican American Catholics -- Religious life",
+                        "Mexican American women -- Religious life",
+                        "Guadalupe, Our Lady of",
+                        "Catholiques américains d'origine mexicaine -- Vie religieuse",
+                        "Américaines d'origine mexicaine -- Vie religieuse",
+                        "Nuestra Señora de Guadalupe",
+                        "RELIGION -- Christianity -- Catholic"
+                    ],
+                    "availpnx": [
+                        "available"
+                    ],
+                    "lds21": [
+                        "Mexican American Catholics -- Religious life",
+                        "Mexican American women -- Religious life",
+                        "Guadalupe, Our Lady of",
+                        "Catholiques américains d'origine mexicaine -- Vie religieuse",
+                        "Américaines d'origine mexicaine -- Vie religieuse",
+                        "Nuestra Señora de Guadalupe",
+                        "RELIGION -- Christianity -- Catholic"
+                    ],
+                    "lds02": [
+                        "nyu_aleph006056178",
+                        "nyu_aleph006062288"
+                    ],
+                    "lds01": [
+                        "NYU",
+                        "NYUAD",
+                        "NYUSH"
+                    ],
+                    "lds04": [
+                        "Castanedal-Liles, Maria Del Socorro",
+                        "Castañeda-Liles, María Del Socorro"
+                    ],
+                    "lds06": [
+                        "Castanedal-Liles, Maria Del Socorro",
+                        "Castañeda-Liles, María Del Socorro"
+                    ],
+                    "identifier": [
+                        "$$Cisbn$$V9780190280413; $$Cisbn$$V0190280417"
+                    ],
+                    "creator": [
+                        "Maria Del Socorro  Castanedal-Liles  author."
+                    ],
+                    "lds08": [
+                        "Castanedal-Liles, Maria Del Socorro",
+                        "Castañeda-Liles, María Del Socorro"
+                    ],
+                    "availinstitution": [
+                        "$$INYU$$Savailable"
+                    ],
+                    "lds29": [
+                        "NYU_AVAILONLINE"
+                    ],
+                    "lds09": [
+                        "1 online resource",
+                        "xii, 282 pages ;"
+                    ],
+                    "format": [
+                        "1 online resource"
+                    ],
+                    "availlibrary": [
+                        "$$INYU$$LBOBST$$1Main Collection$$2(BX1407.M48 C37 2018 )$$Savailable$$31$$40$$5N$$61$$XNYU50$$YBOBST$$ZMAIN$$Onyu_aleph006062288"
+                    ],
+                    "lds130": [
+                        "9780190280390+OR+0190280395+OR+9780190280406+OR+0190280409"
+                    ],
+                    "lds131": [
+                        "Castanedal-Liles",
+                        "Castañeda-Liles"
+                    ],
+                    "publisher": [
+                        "New York : Oxford University Press"
+                    ]
+                },
+                "control": {
+                    "recordid": [
+                        "dedupmrg1086164771"
+                    ],
+                    "sourceid": [
+                        "$$Vnyu_aleph$$Onyu_aleph006056178",
+                        "$$Vnyu_aleph$$Onyu_aleph006062288"
+                    ],
+                    "ilsapiid": [
+                        "$$VNYU01006056178$$Onyu_aleph006056178",
+                        "$$VNYU01006062288$$Onyu_aleph006062288"
+                    ],
+                    "originalsourceid": [
+                        "$$VNYU01$$Onyu_aleph006056178",
+                        "$$VNYU01$$Onyu_aleph006062288"
+                    ],
+                    "sourceformat": [
+                        "$$VMARC21$$Onyu_aleph006056178",
+                        "$$VMARC21$$Onyu_aleph006062288"
+                    ],
+                    "sourcerecordid": [
+                        "$$V006056178$$Onyu_aleph006056178",
+                        "$$V006062288$$Onyu_aleph006062288"
+                    ],
+                    "sourcesystem": [
+                        "$$VAleph$$Onyu_aleph006056178",
+                        "$$VAleph$$Onyu_aleph006062288"
+                    ]
+                },
+                "sort": {
+                    "creationdate": [
+                        "2018"
+                    ],
+                    "author": [
+                        "Castanedal-Liles, Maria Del Socorro, author."
+                    ],
+                    "title": [
+                        "Our Lady of everyday life : la Virgen de Guadalupe and the Catholic imagination of Mexican American women in America /"
+                    ],
+                    "lso01": [
+                        "2018"
+                    ]
+                },
+                "frbr": {
+                    "t": [
+                        1
+                    ],
+                    "k1": [
+                        "$$Kcastanedal liles maria del socorro$$AA",
+                        "$$Kcastaneda liles maria del socorro$$AA"
+                    ],
+                    "k3": [
+                        "$$Kbookour lady of everyday life la virgen de guadalupe and the catholic imagination of mexican american women in america$$AT"
+                    ]
+                },
+                "dedup": {
+                    "c3": [
+                        "ourladyofeverydaylifninamerica"
+                    ],
+                    "f6": [
+                        "2018"
+                    ],
+                    "c4": [
+                        "2018"
+                    ],
+                    "f7": [
+                        "our lady of everyday life la virgen de guadalupe and the catholic imagination of mexican american women in america"
+                    ],
+                    "f8": [
+                        "nyu"
+                    ],
+                    "t": [
+                        1
+                    ],
+                    "f10": [
+                        "oxford university press"
+                    ],
+                    "f11": [
+                        "castanedal liles maria del socorro"
+                    ],
+                    "f3": [
+                        "9780190280413;0190280417"
+                    ],
+                    "f4": [
+                        "9780190280390;0190280395;9780190280406;0190280409;0190280417;9780190280420;0190280425;9780190280437;0190280433"
+                    ],
+                    "c2": [
+                        "9780190280413;0190280417;9780190280390;0190280395;9780190280406;0190280409;0190280417;9780190280420;0190280425;9780190280437;0190280433"
+                    ],
+                    "f5": [
+                        "ourladyofeverydaylifninamerica"
+                    ]
+                },
+                "facets": {
+                    "frbrtype": [
+                        "6"
+                    ],
+                    "creatorcontrib": [
+                        "Castanedal-Liles, M",
+                        "Castañeda-Liles, M"
+                    ],
+                    "creationdate": [
+                        "2018"
+                    ],
+                    "newrecords": [
+                        "20180411_833",
+                        "20180428_704"
+                    ],
+                    "rsrctype": [
+                        "books"
+                    ],
+                    "classificationlcc": [
+                        "B - Philosophy. Psychology. Religion–Christian Denominations"
+                    ],
+                    "language": [
+                        "eng"
+                    ],
+                    "lfc01": [
+                        "Internet Resources",
+                        "Main Collection"
+                    ],
+                    "lfc17": [
+                        "Mexican American Catholics–Religious life",
+                        "Mexican American women–Religious life",
+                        "Guadalupe, Our Lady of",
+                        "Catholiques américains d'origine mexicaine–Vie religieuse",
+                        "Américaines d'origine mexicaine–Vie religieuse",
+                        "Nuestra Señora de Guadalupe",
+                        "RELIGION–Christianity–Catholic"
+                    ],
+                    "prefilter": [
+                        "books"
+                    ],
+                    "lfc16": [
+                        "Mexican American Catholics–Religious life",
+                        "Mexican American women–Religious life",
+                        "Guadalupe, Our Lady of",
+                        "Catholiques américains d'origine mexicaine–Vie religieuse",
+                        "Américaines d'origine mexicaine–Vie religieuse",
+                        "Nuestra Señora de Guadalupe",
+                        "RELIGION–Christianity–Catholic"
+                    ],
+                    "toplevel": [
+                        "online_resources",
+                        "available"
+                    ],
+                    "library": [
+                        "BOBST",
+                        "IFA",
+                        "IFAC",
+                        "ISAW",
+                        "COUR",
+                        "REI"
+                    ],
+                    "lfc09": [
+                        "owned; unlimited user"
+                    ],
+                    "frbrgroupid": [
+                        "1152900753"
+                    ],
+                    "topic": [
+                        "Mexican American Catholics–Religious life",
+                        "Mexican American women–Religious life",
+                        "Guadalupe, Our Lady of",
+                        "Catholiques américains d'origine mexicaine–Vie religieuse",
+                        "Américaines d'origine mexicaine–Vie religieuse",
+                        "Nuestra Señora de Guadalupe",
+                        "RELIGION–Christianity–Catholic"
+                    ]
+                },
+                "enrichment": {
+                    "classificationlcc": [
+                        "BX1407.M48"
+                    ]
+                },
+                "search": {
+                    "sourceid": [
+                        "nyu_aleph"
+                    ],
+                    "creatorcontrib": [
+                        "Maria Del Socorro,  Castanedal-Liles  author.",
+                        "Maria Del Socorro Castanedal-  Liles",
+                        "Castanedal-Liles, Maria Del Socorro, author.",
+                        "Castanedal-Liles, M",
+                        "Liles, Maria Del Socorro Castanedal-",
+                        "Liles, M",
+                        "Maria Del Socorro Castanedal-Liles.",
+                        "María Del Socorro,  Castañeda-Liles  author.",
+                        "Castañeda-Liles, María Del Socorro, author.",
+                        "Castañeda-Liles, M",
+                        "María Del Socorro Castañeda-Liles."
+                    ],
+                    "creationdate": [
+                        "2018"
+                    ],
+                    "subject": [
+                        "Mexican American Catholics Religious life.",
+                        "Mexican American women Religious life.",
+                        "Guadalupe, Our Lady of.",
+                        "Tepeyac, Virgen del",
+                        "Guadalupe, Nuestra Señora de",
+                        "Morenita, La",
+                        "Nuestra Señora de Guadalupe",
+                        "Our Lady of Guadalupe",
+                        "Virgen del Tepeyac",
+                        "Catholiques américains d'origine mexicaine Vie religieuse.",
+                        "Américaines d'origine mexicaine Vie religieuse.",
+                        "Nuestra Señora de Guadalupe.",
+                        "RELIGION Christianity Catholic.",
+                        "Mexican American Catholics -- Religious life",
+                        "Mexican American women -- Religious life",
+                        "Guadalupe, Our Lady of",
+                        "Catholiques américains d'origine mexicaine -- Vie religieuse",
+                        "Américaines d'origine mexicaine -- Vie religieuse",
+                        "RELIGION -- Christianity -- Catholic"
+                    ],
+                    "isbn": [
+                        "9780190280413",
+                        "0190280417",
+                        "9780190280390",
+                        "0190280395",
+                        "9780190280406",
+                        "0190280409",
+                        "9780190280420",
+                        "0190280425",
+                        "9780190280437",
+                        "0190280433"
+                    ],
+                    "lsr15": [
+                        "ebceb",
+                        "ebceb BWEB",
+                        "oxfacad",
+                        "oxfacad BWEB"
+                    ],
+                    "rsrctype": [
+                        "book"
+                    ],
+                    "description": [
+                        "\"Our Lady of Everyday Life' is an ethnographic study of three generations of Mexican origin women (college students, mothers, and older women) and their experiences growing up Catholic. The work focuses on their relationship with Our Lady of Guadalupe as central to what Castañeda-Liles calls their 'Mexican Catholic imagination.\""
+                    ],
+                    "toc": [
+                        "Here it is told -- Our Lady of café con leche: the social construction of Catholic devotion -- Catholicizing girlhood: socializing girls into institutional Catholicism -- The making of girls in the Mexican Catholic imagination: obedience, respect, and responsibility -- Becoming senoritas: if you can't talk about it in church, you can't talk about it anywhere -- Our Lady of everyday life -- Perceptions of Our Lady of Guadalupe's relationship to feminism: the time is now -- Why do they paint her this way? She is our mother."
+                    ],
+                    "lsr14": [
+                        "Z_9ERCeprod"
+                    ],
+                    "lsr02": [
+                        "Oxford University Press,"
+                    ],
+                    "lsr13": [
+                        "Z_9ERIebceb_5294929",
+                        "Z_9ERIoxfacad_4545",
+                        "Z_9ERIybp13651679"
+                    ],
+                    "lsr01": [
+                        "BX1407.M48 C37 2018eb",
+                        "BX1407 .M48 C37 2018eb",
+                        "BX1407.M48 C37 2018",
+                        "BX1407 .M48 C37 2018"
+                    ],
+                    "title": [
+                        "Our Lady of everyday life",
+                        "Our Lady of everyday life : la Virgen de Guadalupe and the Catholic imagination of Mexican American women in America"
+                    ],
+                    "lsr10": [
+                        "9780190280413",
+                        "0190280417",
+                        "9780190280390",
+                        "0190280395",
+                        "9780190280406",
+                        "0190280409"
+                    ],
+                    "recordid": [
+                        "nyu_aleph006056178",
+                        "nyu_aleph006062288"
+                    ],
+                    "general": [
+                        "Oxford University Press,",
+                        "1023575791",
+                        "1024273343",
+                        "1005107065"
+                    ],
+                    "lsr09": [
+                        "nyu_aleph",
+                        "NYUCRE",
+                        "ALL",
+                        "NYU"
+                    ],
+                    "lsr08": [
+                        "Z_9CSC_0A01_0",
+                        "Z_9CSC_0A01_0NYU_0",
+                        "Z_9CSC_0A01_0NYU_0BWEB_0",
+                        "Z_9CSC_0A01_0NYU_0BWEB_0BNYUI_0",
+                        "Z_9CSC_0A09_0NYU_0",
+                        "Z_9CSC_0A09_0NYU_0BWEB_0",
+                        "Z_9CSC_0A01_0NYU_0BOBST_0",
+                        "Z_9CSC_0A01_0NYU_0BOBST_0MAIN_0"
+                    ],
+                    "lsr19": [
+                        "nyu_aleph006250288 nyu_aleph006441795"
+                    ],
+                    "scope": [
+                        "nyu_aleph",
+                        "NYUCRE",
+                        "ALL",
+                        "NYU"
+                    ],
+                    "lsr16": [
+                        "1023575791",
+                        "1005107065"
+                    ]
+                },
+                "links": {
+                    "linktoprice": [
+                        "$$Taleph_link_to_price_template_01"
+                    ],
+                    "lln42": [
+                        "$$Tilliad_template1$$Onyu_aleph006056178",
+                        "$$Tilliad_template1$$Onyu_aleph006062288"
+                    ],
+                    "lln43": [
+                        "$$Tares_template3$$Onyu_aleph006056178",
+                        "$$Tares_template3$$Onyu_aleph006062288"
+                    ],
+                    "lln44": [
+                        "$$Tares_template4$$Onyu_aleph006056178",
+                        "$$Tares_template4$$Onyu_aleph006062288"
+                    ],
+                    "openurlfulltext": [
+                        "$$V$$Topenurlfull_journal$$Onyu_aleph006056178",
+                        "$$V$$Topenurlfull_journal$$Onyu_aleph006062288"
+                    ],
+                    "lln40": [
+                        "$$Tilliad_ill_nyush$$Onyu_aleph006056178",
+                        "$$Tilliad_ill_nyush$$Onyu_aleph006062288"
+                    ],
+                    "lln41": [
+                        "$$Tares_template1$$Onyu_aleph006056178",
+                        "$$Tares_template1$$Onyu_aleph006062288"
+                    ],
+                    "openurl": [
+                        "$$V$$Topenurl_journal$$Onyu_aleph006056178",
+                        "$$V$$Topenurl_journal$$Onyu_aleph006062288"
+                    ],
+                    "linktoexcerpt": [
+                        "$$Tsyndetics_excerpt$$DExcerpt from item"
+                    ],
+                    "lln08": [
+                        "$$Tworldcat_isbn$$DFor All Users: Check other Libraries using WorldCat®$$Onyu_aleph006056178",
+                        "$$Tworldcat_isbn$$DFor All Users: Check other Libraries using WorldCat®$$Onyu_aleph006062288"
+                    ],
+                    "lln09": [
+                        "$$Taleph_backlink$$DFor Staff: View source record (system no.006056178$$Onyu_aleph006056178",
+                        "$$Taleph_backlink$$DFor Staff: View source record (system no.006062288$$Onyu_aleph006062288"
+                    ],
+                    "backlink": [
+                        "$$V$$Taleph_backlink$$DMore bibliographic information$$Onyu_aleph006056178",
+                        "$$V$$Taleph_backlink$$DMore bibliographic information$$Onyu_aleph006062288"
+                    ],
+                    "lln46": [
+                        "$$Tsource_record_template$$Onyu_aleph006056178",
+                        "$$Tsource_record_template$$Onyu_aleph006062288"
+                    ],
+                    "lln47": [
+                        "$$Tpnx_record_template$$Onyu_aleph006056178",
+                        "$$Tpnx_record_template$$Onyu_aleph006062288"
+                    ],
+                    "lln26": [
+                        "$$Uhttps://ebookcentral.proquest.com/lib/nyulibrary-ebooks/detail.action?docID=5294929$$DEbook Central (NYU Access)$$Onyu_aleph006056178",
+                        "$$Uhttp://proxy.library.nyu.edu/login?url=https://academic.oup.com/book/4545$$DOxford Academic eBooks (NYU Access)$$Onyu_aleph006056178"
+                    ],
+                    "lln48": [
+                        "$$Tjson_record_template$$Onyu_aleph006056178",
+                        "$$Tjson_record_template$$Onyu_aleph006062288"
+                    ],
+                    "linktoreview": [
+                        "$$TpersistentUrl$$DCopy item link"
+                    ],
+                    "thumbnail": [
+                        "$$Tsyndetics_thumb"
+                    ],
+                    "lln31": [
+                        "$$Tilliad_book$$Eilliad_book_label$$Onyu_aleph006056178",
+                        "$$Tilliad_book$$Eilliad_book_label$$Onyu_aleph006062288"
+                    ],
+                    "lln10": [
+                        "$$Tnyugetit$$Onyu_aleph006056178",
+                        "$$Tnyugetit$$Onyu_aleph006062288"
+                    ],
+                    "lln32": [
+                        "$$Tilliad_book_chapter$$Eilliad_book_chapter_label$$Onyu_aleph006056178",
+                        "$$Tilliad_book_chapter$$Eilliad_book_chapter_label$$Onyu_aleph006062288"
+                    ],
+                    "linktorsrc": [
+                        "$$V$$Uhttps://ebookcentral.proquest.com/lib/nyulibrary-ebooks/detail.action?docID=5294929$$DEbook Central$$INYU$$Onyu_aleph006056178",
+                        "$$V$$Uhttp://proxy.library.nyu.edu/login?url=https://academic.oup.com/book/4545$$DOxford Academic eBooks$$INYU$$Onyu_aleph006056178",
+                        "$$V$$Uhttps://ebookcentral.proquest.com/lib/nyulibrary-ebooks/detail.action?docID=5294929$$DEbook Central$$INYUAD$$Onyu_aleph006056178",
+                        "$$V$$Uhttp://proxy.library.nyu.edu/login?url=https://academic.oup.com/book/4545$$DOxford Academic eBooks$$INYUAD$$Onyu_aleph006056178",
+                        "$$V$$Uhttps://ebookcentral.proquest.com/lib/nyulibrary-ebooks/detail.action?docID=5294929$$DEbook Central$$INYUSH$$Onyu_aleph006056178",
+                        "$$V$$Uhttp://proxy.library.nyu.edu/login?url=https://academic.oup.com/book/4545$$DOxford Academic eBooks$$INYUSH$$Onyu_aleph006056178",
+                        "$$V$$Uhttps://ebookcentral.proquest.com/lib/nyulibrary-ebooks/detail.action?docID=5294929$$DEbook Central (NYU Access)$$IHSL$$Onyu_aleph006056178",
+                        "$$V$$Uhttp://proxy.library.nyu.edu/login?url=https://academic.oup.com/book/4545$$DOxford Academic eBooks (NYU Access)$$IHSL$$Onyu_aleph006056178",
+                        "$$V$$Uhttps://ebookcentral.proquest.com/lib/nyulibrary-ebooks/detail.action?docID=5294929$$DEbook Central (NYU Access)$$INYSID$$Onyu_aleph006056178",
+                        "$$V$$Uhttp://proxy.library.nyu.edu/login?url=https://academic.oup.com/book/4545$$DOxford Academic eBooks (NYU Access)$$INYSID$$Onyu_aleph006056178",
+                        "$$V$$Uhttps://ebookcentral.proquest.com/lib/nyulibrary-ebooks/detail.action?docID=5294929$$DEbook Central (NYU Access)$$INYHS$$Onyu_aleph006056178",
+                        "$$V$$Uhttp://proxy.library.nyu.edu/login?url=https://academic.oup.com/book/4545$$DOxford Academic eBooks (NYU Access)$$INYHS$$Onyu_aleph006056178",
+                        "$$V$$Uhttps://ebookcentral.proquest.com/lib/nyulibrary-ebooks/detail.action?docID=5294929$$DEbook Central (NYU Access)$$IBHS$$Onyu_aleph006056178",
+                        "$$V$$Uhttp://proxy.library.nyu.edu/login?url=https://academic.oup.com/book/4545$$DOxford Academic eBooks (NYU Access)$$IBHS$$Onyu_aleph006056178"
+                    ],
+                    "lln11": [
+                        "$$Tnyuadgetit$$Onyu_aleph006056178",
+                        "$$Tnyuadgetit$$Onyu_aleph006062288"
+                    ],
+                    "lln12": [
+                        "$$Tnyushgetit$$Onyu_aleph006056178",
+                        "$$Tnyushgetit$$Onyu_aleph006062288"
+                    ],
+                    "lln30": [
+                        "$$TEZBorrowISBN$$Eezborrow_label$$Onyu_aleph006062288"
+                    ],
+                    "linktorequest": [
+                        "$$V$$Taleph_link_to_request_template_01$$Onyu_aleph006056178",
+                        "$$V$$Taleph_link_to_request_template_01$$Onyu_aleph006062288"
+                    ],
+                    "lln13": [
+                        "$$Tcugetit$$Onyu_aleph006056178",
+                        "$$Tcugetit$$Onyu_aleph006062288"
+                    ],
+                    "lln15": [
+                        "$$Ttest_aleph_holdings$$DCheck Availability:NYU Bobst  Main Collection  (BX1407.M48 C37 2018 )  $$1BOBST  $$2MAIN$$Onyu_aleph006062288"
+                    ],
+                    "lln16": [
+                        "$$Uhttps://ebookcentral.proquest.com/lib/nyulibrary-ebooks/detail.action?docID=5294929$$DEbook Central$$Onyu_aleph006056178",
+                        "$$Uhttp://proxy.library.nyu.edu/login?url=https://academic.oup.com/book/4545$$DOxford Academic eBooks$$Onyu_aleph006056178"
+                    ],
+                    "linktoholdings": [
+                        "$$V$$Taleph_holdings$$Onyu_aleph006056178",
+                        "$$V$$Taleph_holdings$$Onyu_aleph006062288"
+                    ],
+                    "linktouc": [
+                        "$$Tworldcat_isbn$$DCheck other libraries (WorldCat®)",
+                        "$$Tworldcat_isbn$$DCheck other libraries (WorldCat®)"
+                    ]
+                },
+                "ranking": {
+                    "booster2": [
+                        "1"
+                    ],
+                    "booster1": [
+                        "1"
+                    ]
+                },
+                "addata": {
+                    "date": [
+                        "2018"
+                    ],
+                    "aulast": [
+                        "Castanedal-Liles",
+                        "Castañeda-Liles"
+                    ],
+                    "notes": [
+                        "Includes bibliographical references and index."
+                    ],
+                    "isbn": [
+                        "9780190280413",
+                        "0190280417",
+                        "9780190280390",
+                        "0190280395",
+                        "9780190280406",
+                        "0190280409"
+                    ],
+                    "lad09": [
+                        "Castanedal-Liles, Maria Del Socorro",
+                        "Castañeda-Liles, María Del Socorro"
+                    ],
+                    "format": [
+                        "book"
+                    ],
+                    "ristype": [
+                        "BOOK"
+                    ],
+                    "oclcid": [
+                        "1023575791",
+                        "1005107065"
+                    ],
+                    "lad07": [
+                        "Castanedal-Liles, Maria Del Socorro",
+                        "Castañeda-Liles, María Del Socorro"
+                    ],
+                    "lad06": [
+                        "Castanedal-Liles",
+                        "Castañeda-Liles"
+                    ],
+                    "abstract": [
+                        "\"Our Lady of Everyday Life' is an ethnographic study of three generations of Mexican origin women (college students, mothers, and older women) and their experiences growing up Catholic. The work focuses on their relationship with Our Lady of Guadalupe as central to what Castañeda-Liles calls their 'Mexican Catholic imagination.\""
+                    ],
+                    "lad05": [
+                        "Our Lady of everyday life : la Virgen de Guadalupe and the Catholic imagination of Mexican American women in America"
+                    ],
+                    "lad03": [
+                        "ebceb_5294929",
+                        "oxfacad_4545",
+                        "ybp13651679"
+                    ],
+                    "aufirst": [
+                        "Maria Del Socorro,",
+                        "María Del Socorro,"
+                    ],
+                    "lad01": [
+                        "BWEB",
+                        "Online Resource$$INYU",
+                        "Online Resource$$INYUAD",
+                        "Online Resource$$INYUSH",
+                        "Online Resource$$IHSL",
+                        "Online Resource$$INYSID",
+                        "Online Resource$$INYHS",
+                        "Online Resource$$IBHS",
+                        "BOBST",
+                        "Physical Item$$INYU",
+                        "Physical Item$$INYUAD",
+                        "Physical Item$$INYUSH",
+                        "Physical Item$$IHSL",
+                        "Physical Item$$INS",
+                        "Physical Item$$ICU",
+                        "Physical Item$$INYSID",
+                        "Physical Item$$INYHS",
+                        "Physical Item$$IBHS"
+                    ],
+                    "lccn": [
+                        "2017029612"
+                    ],
+                    "au": [
+                        "Castanedal-Liles, Maria Del Socorro",
+                        "Castañeda-Liles, María Del Socorro"
+                    ],
+                    "genre": [
+                        "book"
+                    ],
+                    "btitle": [
+                        "Our Lady of everyday life : la Virgen de Guadalupe and the Catholic imagination of Mexican American women in America"
+                    ],
+                    "risdate": [
+                        "2018"
+                    ]
+                },
+                "browse": {
+                    "institution": [
+                        "NYU",
+                        "NYUAD",
+                        "NYUSH"
+                    ],
+                    "author": [
+                        "$$DCastanedal-Liles, Maria Del Socorro$$ECastanedal-Liles, Maria Del Socorro$$INYU10010254627$$PY$$UNYU",
+                        "$$DCastanedal-Liles, Maria Del Socorro$$ECastanedal-Liles, Maria Del Socorro$$INYU10010254627$$PY$$UNYUAD",
+                        "$$DCastanedal-Liles, Maria Del Socorro$$ECastanedal-Liles, Maria Del Socorro$$INYU10010254627$$PY$$UNYUSH",
+                        "$$DLiles, Maria Del Socorro Castanedal-$$ELiles, Maria Del Socorro Castanedal-$$INYU10010254627$$PN$$UNYU",
+                        "$$DLiles, Maria Del Socorro Castanedal-$$ELiles, Maria Del Socorro Castanedal-$$INYU10010254627$$PN$$UNYUAD",
+                        "$$DLiles, Maria Del Socorro Castanedal-$$ELiles, Maria Del Socorro Castanedal-$$INYU10010254627$$PN$$UNYUSH",
+                        "$$DCastañeda-Liles, María Del Socorro$$ECastañeda-Liles, María Del Socorro$$UNYU"
+                    ],
+                    "subject": [
+                        "$$DMexican American Catholics -- Religious life$$EMexican American Catholics Religious life$$UNYU",
+                        "$$DMexican American Catholics -- Religious life$$EMexican American Catholics Religious life$$UNYUAD",
+                        "$$DMexican American Catholics -- Religious life$$EMexican American Catholics Religious life$$UNYUSH",
+                        "$$DMexican American women -- Religious life$$EMexican American women Religious life$$UNYU",
+                        "$$DMexican American women -- Religious life$$EMexican American women Religious life$$UNYUAD",
+                        "$$DMexican American women -- Religious life$$EMexican American women Religious life$$UNYUSH",
+                        "$$DGuadalupe, Our Lady of$$EGuadalupe, Our Lady of$$INYU10000112633$$PY$$UNYU",
+                        "$$DGuadalupe, Our Lady of$$EGuadalupe, Our Lady of$$INYU10000112633$$PY$$UNYUAD",
+                        "$$DGuadalupe, Our Lady of$$EGuadalupe, Our Lady of$$INYU10000112633$$PY$$UNYUSH",
+                        "$$DTepeyac, Virgen del$$ETepeyac, Virgen del$$INYU10000112633$$PN$$UNYU",
+                        "$$DTepeyac, Virgen del$$ETepeyac, Virgen del$$INYU10000112633$$PN$$UNYUAD",
+                        "$$DTepeyac, Virgen del$$ETepeyac, Virgen del$$INYU10000112633$$PN$$UNYUSH",
+                        "$$DGuadalupe, Nuestra Señora de$$EGuadalupe, Nuestra Señora de$$INYU10000112633$$PN$$UNYU",
+                        "$$DGuadalupe, Nuestra Señora de$$EGuadalupe, Nuestra Señora de$$INYU10000112633$$PN$$UNYUAD",
+                        "$$DGuadalupe, Nuestra Señora de$$EGuadalupe, Nuestra Señora de$$INYU10000112633$$PN$$UNYUSH",
+                        "$$DMorenita, La$$EMorenita, La$$INYU10000112633$$PN$$UNYU",
+                        "$$DMorenita, La$$EMorenita, La$$INYU10000112633$$PN$$UNYUAD",
+                        "$$DMorenita, La$$EMorenita, La$$INYU10000112633$$PN$$UNYUSH",
+                        "$$DNuestra Señora de Guadalupe$$ENuestra Señora de Guadalupe$$INYU10000112633$$PN$$UNYU",
+                        "$$DNuestra Señora de Guadalupe$$ENuestra Señora de Guadalupe$$INYU10000112633$$PN$$UNYUAD",
+                        "$$DNuestra Señora de Guadalupe$$ENuestra Señora de Guadalupe$$INYU10000112633$$PN$$UNYUSH",
+                        "$$DOur Lady of Guadalupe$$EOur Lady of Guadalupe$$INYU10000112633$$PN$$UNYU",
+                        "$$DOur Lady of Guadalupe$$EOur Lady of Guadalupe$$INYU10000112633$$PN$$UNYUAD",
+                        "$$DOur Lady of Guadalupe$$EOur Lady of Guadalupe$$INYU10000112633$$PN$$UNYUSH",
+                        "$$DVirgen del Tepeyac$$EVirgen del Tepeyac$$INYU10000112633$$PN$$UNYU",
+                        "$$DVirgen del Tepeyac$$EVirgen del Tepeyac$$INYU10000112633$$PN$$UNYUAD",
+                        "$$DVirgen del Tepeyac$$EVirgen del Tepeyac$$INYU10000112633$$PN$$UNYUSH",
+                        "$$DCatholiques américains d'origine mexicaine -- Vie religieuse$$ECatholiques américains d'origine mexicaine Vie religieuse$$UNYU",
+                        "$$DCatholiques américains d'origine mexicaine -- Vie religieuse$$ECatholiques américains d'origine mexicaine Vie religieuse$$UNYUAD",
+                        "$$DCatholiques américains d'origine mexicaine -- Vie religieuse$$ECatholiques américains d'origine mexicaine Vie religieuse$$UNYUSH",
+                        "$$DAméricaines d'origine mexicaine -- Vie religieuse$$EAméricaines d'origine mexicaine Vie religieuse$$UNYU",
+                        "$$DAméricaines d'origine mexicaine -- Vie religieuse$$EAméricaines d'origine mexicaine Vie religieuse$$UNYUAD",
+                        "$$DAméricaines d'origine mexicaine -- Vie religieuse$$EAméricaines d'origine mexicaine Vie religieuse$$UNYUSH",
+                        "$$DNuestra Señora de Guadalupe$$ENuestra Señora de Guadalupe$$UNYU",
+                        "$$DNuestra Señora de Guadalupe$$ENuestra Señora de Guadalupe$$UNYUAD",
+                        "$$DNuestra Señora de Guadalupe$$ENuestra Señora de Guadalupe$$UNYUSH",
+                        "$$DRELIGION -- Christianity -- Catholic$$ERELIGION Christianity Catholic$$TBISACSH$$UNYU",
+                        "$$DRELIGION -- Christianity -- Catholic$$ERELIGION Christianity Catholic$$TBISACSH$$UNYUAD",
+                        "$$DRELIGION -- Christianity -- Catholic$$ERELIGION Christianity Catholic$$TBISACSH$$UNYUSH",
+                        "$$DGuadalupe, Our Lady of$$EGuadalupe, Our Lady of$$TFAST$$I(OCoLC)fst00948687$$UNYU",
+                        "$$DGuadalupe, Our Lady of$$EGuadalupe, Our Lady of$$TFAST$$I(OCoLC)fst00948687$$UNYUAD",
+                        "$$DGuadalupe, Our Lady of$$EGuadalupe, Our Lady of$$TFAST$$I(OCoLC)fst00948687$$UNYUSH",
+                        "$$DMexican American Catholics -- Religious life$$EMexican American Catholics Religious life$$TFAST$$I(OCoLC)fst01018923$$UNYU",
+                        "$$DMexican American Catholics -- Religious life$$EMexican American Catholics Religious life$$TFAST$$I(OCoLC)fst01018923$$UNYUAD",
+                        "$$DMexican American Catholics -- Religious life$$EMexican American Catholics Religious life$$TFAST$$I(OCoLC)fst01018923$$UNYUSH",
+                        "$$DMexican American women -- Religious life$$EMexican American women Religious life$$TFAST$$I(OCoLC)fst01019050$$UNYU",
+                        "$$DMexican American women -- Religious life$$EMexican American women Religious life$$TFAST$$I(OCoLC)fst01019050$$UNYUAD",
+                        "$$DMexican American women -- Religious life$$EMexican American women Religious life$$TFAST$$I(OCoLC)fst01019050$$UNYUSH"
+                    ],
+                    "callnumber": [
+                        "$$INYU$$DBX1407.M48 C37 2018eb Electronic access$$E0bx   01407.m  48000  c37 2018eb electronic access$$T0",
+                        "$$INYU$$DBX1407.M48 C37 2018$$E0bx   01407.m  48000  c37 2018$$T0"
+                    ],
+                    "title": [
+                        "$$DOur Lady of everyday life : la Virgen de Guadalupe and the Catholic imagination of Mexican American women in America$$EOur Lady of everyday life : la Virgen de Guadalupe and the Catholic imagination of Mexican American women in America$$UNYU",
+                        "$$DOur Lady of everyday life : la Virgen de Guadalupe and the Catholic imagination of Mexican American women in America$$EOur Lady of everyday life : la Virgen de Guadalupe and the Catholic imagination of Mexican American women in America$$UNYUAD",
+                        "$$DOur Lady of everyday life : la Virgen de Guadalupe and the Catholic imagination of Mexican American women in America$$EOur Lady of everyday life : la Virgen de Guadalupe and the Catholic imagination of Mexican American women in America$$UNYUSH"
+                    ]
+                }
+            },
+            "@id": "https://bobcat.library.nyu.edu/primo_library/libweb/webservices/rest/primo-explore/v1/pnxs/L/dedupmrg1086164771"
+        }
+    ],
+    "timelog": {
+        "CalculateRtaLinks1DeltaTime": 115,
+        "BriefSearchDeltaTime": 211,
+        "DoSearchPrimoResultDeltaTime": 95,
+        "StartBriefSearch": 1679348783923,
+        "retrieveHighLightsDeltaTime": 115,
+        "retrieveDidUMeanDeltaTime": 115,
+        "GetSearchStatusDeltaTime": 95,
+        "StartTranslationTime": 1679348784018,
+        "AddSearchStatusDeltaTime": 0,
+        "FullEndDMDataDeltaTime": 115,
+        "retrieveFacetsDeltaTime": 115
+    },
+    "lang3": "eng",
+    "info": {
+        "total": 1,
+        "last": "1",
+        "maxTotal": 0,
+        "first": "1"
+    },
+    "facets": [
+        {
+            "values": [
+                {
+                    "count": 1,
+                    "value": "Castañeda-Liles, M"
+                },
+                {
+                    "count": 1,
+                    "value": "Castanedal-Liles, M"
+                }
+            ],
+            "name": "creator"
+        },
+        {
+            "values": [
+                {
+                    "count": 1,
+                    "value": "B - Philosophy. Psychology. Religion"
+                }
+            ],
+            "name": "lcc"
+        },
+        {
+            "values": [
+                {
+                    "count": 1,
+                    "value": "eng"
+                }
+            ],
+            "name": "lang"
+        },
+        {
+            "values": [
+                {
+                    "count": 1,
+                    "value": "books"
+                }
+            ],
+            "name": "rtype"
+        },
+        {
+            "values": [
+                {
+                    "count": 1,
+                    "value": "Nuestra Señora de Guadalupe"
+                },
+                {
+                    "count": 1,
+                    "value": "Américaines d'origine mexicaine"
+                },
+                {
+                    "count": 1,
+                    "value": "RELIGION"
+                },
+                {
+                    "count": 1,
+                    "value": "Catholiques américains d'origine mexicaine"
+                },
+                {
+                    "count": 1,
+                    "value": "Guadalupe, Our Lady of"
+                },
+                {
+                    "count": 1,
+                    "value": "Mexican American women"
+                },
+                {
+                    "count": 1,
+                    "value": "Mexican American Catholics"
+                }
+            ],
+            "name": "topic"
+        },
+        {
+            "values": [
+                {
+                    "count": 1,
+                    "value": "available"
+                },
+                {
+                    "count": 1,
+                    "value": "online_resources"
+                }
+            ],
+            "name": "tlevel"
+        },
+        {
+            "values": [
+                {
+                    "count": 1,
+                    "value": "books"
+                }
+            ],
+            "name": "pfilter"
+        },
+        {
+            "values": [
+                {
+                    "count": 1,
+                    "value": "2018"
+                }
+            ],
+            "name": "creationdate"
+        },
+        {
+            "values": [
+                {
+                    "count": 1,
+                    "value": "BOBST"
+                },
+                {
+                    "count": 1,
+                    "value": "ISAW"
+                },
+                {
+                    "count": 1,
+                    "value": "IFA"
+                },
+                {
+                    "count": 1,
+                    "value": "COUR"
+                },
+                {
+                    "count": 1,
+                    "value": "REI"
+                },
+                {
+                    "count": 1,
+                    "value": "IFAC"
+                }
+            ],
+            "name": "library"
+        },
+        {
+            "values": [
+                {
+                    "count": 1,
+                    "value": "Internet Resources"
+                },
+                {
+                    "count": 1,
+                    "value": "Main Collection"
+                }
+            ],
+            "name": "local1"
+        },
+        {
+            "values": [
+                {
+                    "count": 1,
+                    "value": "owned; unlimited user"
+                }
+            ],
+            "name": "local9"
+        },
+        {
+            "values": [
+                {
+                    "count": 1,
+                    "value": "RELIGION–Christianity–Catholic"
+                },
+                {
+                    "count": 1,
+                    "value": "Nuestra Señora de Guadalupe"
+                },
+                {
+                    "count": 1,
+                    "value": "Catholiques américains d'origine mexicaine–Vie religieuse"
+                },
+                {
+                    "count": 1,
+                    "value": "Mexican American Catholics–Religious life"
+                },
+                {
+                    "count": 1,
+                    "value": "Américaines d'origine mexicaine–Vie religieuse"
+                },
+                {
+                    "count": 1,
+                    "value": "Guadalupe, Our Lady of"
+                },
+                {
+                    "count": 1,
+                    "value": "Mexican American women–Religious life"
+                }
+            ],
+            "name": "local16"
+        },
+        {
+            "values": [
+                {
+                    "count": 1,
+                    "value": "RELIGION–Christianity–Catholic"
+                },
+                {
+                    "count": 1,
+                    "value": "Nuestra Señora de Guadalupe"
+                },
+                {
+                    "count": 1,
+                    "value": "Catholiques américains d'origine mexicaine–Vie religieuse"
+                },
+                {
+                    "count": 1,
+                    "value": "Mexican American Catholics–Religious life"
+                },
+                {
+                    "count": 1,
+                    "value": "Américaines d'origine mexicaine–Vie religieuse"
+                },
+                {
+                    "count": 1,
+                    "value": "Guadalupe, Our Lady of"
+                },
+                {
+                    "count": 1,
+                    "value": "Mexican American women–Religious life"
+                }
+            ],
+            "name": "local17"
+        }
+    ],
+    "beaconO22": "219"
+}

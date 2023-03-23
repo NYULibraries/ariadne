@@ -29,34 +29,19 @@ exports[`Backend HTTP error responses HTTP 400 (Bad Request) error is rendered c
                   <p
                     class="resource-type"
                   >
-                    Article
+                    Book
                   </p>
                   <h2
                     class="title"
                   >
-                    Can community task groups learn from the principles of group therapy?
+                    The Oxford Shakespeare: Hamlet
                   </h2>
                   <p>
-                    Zanbar, L.
+                    Shakespeare, William
                     <span>
                       . 
                     </span>
-                    20181020
-                  </p>
-                  <p
-                    style="margin: 0px 0px 10px;"
-                  >
-                    <span
-                      style="box-sizing: border-box;"
-                    >
-                      Published in 
-                    </span>
-                    <span
-                      style="font-style: italic;"
-                    >
-                      Community Development. 
-                    </span>
-                    Volume 49. Issue 5. Page 574
+                    1987
                   </p>
                   <div
                     class="citation-info"
@@ -65,9 +50,9 @@ exports[`Backend HTTP error responses HTTP 400 (Bad Request) error is rendered c
                       <span
                         class="citation-info-label"
                       >
-                        ISSN:
+                        ISBN:
                       </span>
-                       19447485
+                       9780198129103
                     </p>
                   </div>
                 </div>
@@ -247,34 +232,19 @@ exports[`Backend HTTP error responses HTTP 403 (Forbidden) error is rendered cor
                   <p
                     class="resource-type"
                   >
-                    Article
+                    Book
                   </p>
                   <h2
                     class="title"
                   >
-                    Can community task groups learn from the principles of group therapy?
+                    The Oxford Shakespeare: Hamlet
                   </h2>
                   <p>
-                    Zanbar, L.
+                    Shakespeare, William
                     <span>
                       . 
                     </span>
-                    20181020
-                  </p>
-                  <p
-                    style="margin: 0px 0px 10px;"
-                  >
-                    <span
-                      style="box-sizing: border-box;"
-                    >
-                      Published in 
-                    </span>
-                    <span
-                      style="font-style: italic;"
-                    >
-                      Community Development. 
-                    </span>
-                    Volume 49. Issue 5. Page 574
+                    1987
                   </p>
                   <div
                     class="citation-info"
@@ -283,9 +253,9 @@ exports[`Backend HTTP error responses HTTP 403 (Forbidden) error is rendered cor
                       <span
                         class="citation-info-label"
                       >
-                        ISSN:
+                        ISBN:
                       </span>
-                       19447485
+                       9780198129103
                     </p>
                   </div>
                 </div>
@@ -465,34 +435,19 @@ exports[`Backend HTTP error responses HTTP 408 (Request Timeout) error is render
                   <p
                     class="resource-type"
                   >
-                    Article
+                    Book
                   </p>
                   <h2
                     class="title"
                   >
-                    Can community task groups learn from the principles of group therapy?
+                    The Oxford Shakespeare: Hamlet
                   </h2>
                   <p>
-                    Zanbar, L.
+                    Shakespeare, William
                     <span>
                       . 
                     </span>
-                    20181020
-                  </p>
-                  <p
-                    style="margin: 0px 0px 10px;"
-                  >
-                    <span
-                      style="box-sizing: border-box;"
-                    >
-                      Published in 
-                    </span>
-                    <span
-                      style="font-style: italic;"
-                    >
-                      Community Development. 
-                    </span>
-                    Volume 49. Issue 5. Page 574
+                    1987
                   </p>
                   <div
                     class="citation-info"
@@ -501,9 +456,9 @@ exports[`Backend HTTP error responses HTTP 408 (Request Timeout) error is render
                       <span
                         class="citation-info-label"
                       >
-                        ISSN:
+                        ISBN:
                       </span>
-                       19447485
+                       9780198129103
                     </p>
                   </div>
                 </div>
@@ -683,34 +638,19 @@ exports[`Backend HTTP error responses HTTP 500 (Internal Server Error) error is 
                   <p
                     class="resource-type"
                   >
-                    Article
+                    Book
                   </p>
                   <h2
                     class="title"
                   >
-                    Can community task groups learn from the principles of group therapy?
+                    The Oxford Shakespeare: Hamlet
                   </h2>
                   <p>
-                    Zanbar, L.
+                    Shakespeare, William
                     <span>
                       . 
                     </span>
-                    20181020
-                  </p>
-                  <p
-                    style="margin: 0px 0px 10px;"
-                  >
-                    <span
-                      style="box-sizing: border-box;"
-                    >
-                      Published in 
-                    </span>
-                    <span
-                      style="font-style: italic;"
-                    >
-                      Community Development. 
-                    </span>
-                    Volume 49. Issue 5. Page 574
+                    1987
                   </p>
                   <div
                     class="citation-info"
@@ -719,9 +659,9 @@ exports[`Backend HTTP error responses HTTP 500 (Internal Server Error) error is 
                       <span
                         class="citation-info-label"
                       >
-                        ISSN:
+                        ISBN:
                       </span>
-                       19447485
+                       9780198129103
                     </p>
                   </div>
                 </div>
@@ -901,34 +841,19 @@ exports[`Backend fetch exceptions TypeError: Failed to fetch renders backend fet
                   <p
                     class="resource-type"
                   >
-                    Article
+                    Book
                   </p>
                   <h2
                     class="title"
                   >
-                    Can community task groups learn from the principles of group therapy?
+                    The Oxford Shakespeare: Hamlet
                   </h2>
                   <p>
-                    Zanbar, L.
+                    Shakespeare, William
                     <span>
                       . 
                     </span>
-                    20181020
-                  </p>
-                  <p
-                    style="margin: 0px 0px 10px;"
-                  >
-                    <span
-                      style="box-sizing: border-box;"
-                    >
-                      Published in 
-                    </span>
-                    <span
-                      style="font-style: italic;"
-                    >
-                      Community Development. 
-                    </span>
-                    Volume 49. Issue 5. Page 574
+                    1987
                   </p>
                   <div
                     class="citation-info"
@@ -937,9 +862,9 @@ exports[`Backend fetch exceptions TypeError: Failed to fetch renders backend fet
                       <span
                         class="citation-info-label"
                       >
-                        ISSN:
+                        ISBN:
                       </span>
-                       19447485
+                       9780198129103
                     </p>
                   </div>
                 </div>
@@ -1119,34 +1044,19 @@ exports[`Backend response includes errors Response includes 2 errors and an empt
                   <p
                     class="resource-type"
                   >
-                    Article
+                    Book
                   </p>
                   <h2
                     class="title"
                   >
-                    Can community task groups learn from the principles of group therapy?
+                    The Oxford Shakespeare: Hamlet
                   </h2>
                   <p>
-                    Zanbar, L.
+                    Shakespeare, William
                     <span>
                       . 
                     </span>
-                    20181020
-                  </p>
-                  <p
-                    style="margin: 0px 0px 10px;"
-                  >
-                    <span
-                      style="box-sizing: border-box;"
-                    >
-                      Published in 
-                    </span>
-                    <span
-                      style="font-style: italic;"
-                    >
-                      Community Development. 
-                    </span>
-                    Volume 49. Issue 5. Page 574
+                    1987
                   </p>
                   <div
                     class="citation-info"
@@ -1155,9 +1065,9 @@ exports[`Backend response includes errors Response includes 2 errors and an empt
                       <span
                         class="citation-info-label"
                       >
-                        ISSN:
+                        ISBN:
                       </span>
-                       19447485
+                       9780198129103
                     </p>
                   </div>
                 </div>
@@ -2391,6 +2301,612 @@ exports[`Backend success Editorial cartoon renders correctly 1`] = `
           <aside
             title="ask-librarian"
           >
+            <div
+              class="ask-librarian"
+            >
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
+                <a
+                  href="https://library.nyu.edu/ask/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Ask a Librarian
+                </a>
+              </h3>
+              <div>
+                <p>
+                  Use 
+                  <a
+                    href="https://library.nyu.edu/ask/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    Ask A Librarian
+                  </a>
+                   or the "Chat with Us" icon at the bottom right corner for any question you have about the Libraries' services.
+                </p>
+                <p>
+                  Visit our 
+                  <a
+                    href="https://guides.nyu.edu/online-tutorials/finding-sources"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    online tutorials
+                  </a>
+                   for tips on searching the catalog and getting library resources.
+                </p>
+                <h3>
+                  Additional Resources
+                </h3>
+                <ul>
+                  <li>
+                    Use 
+                    <a
+                      href="https://ezborrow.reshare.indexdata.com/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      EZBorrow
+                    </a>
+                     or 
+                    <a
+                      href="https://library.nyu.edu/services/borrowing/from-non-nyu-libraries/interlibrary-loan/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      InterLibrary Loan (ILL)
+                    </a>
+                     for materials unavailable at NYU
+                  </li>
+                  <li>
+                    Discover subject specific resources using 
+                    <a
+                      href="http://guides.nyu.edu"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      expert curated research guides
+                    </a>
+                  </li>
+                  <li>
+                    Explore the 
+                    <a
+                      href="https://library.nyu.edu/services/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      complete list of library services
+                    </a>
+                  </li>
+                  <li>
+                    Reach out to the Libraries on 
+                    <a
+                      href="https://www.instagram.com/nyulibraries/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      our Instagram
+                    </a>
+                  </li>
+                  <li>
+                    Search 
+                    <a
+                      href="https://www.worldcat.org/search?qt=worldcat_org_all"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      WorldCat
+                    </a>
+                     for items in nearby libraries
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Backend success Hamlet renders correctly 1`] = `
+<DocumentFragment>
+  <main>
+    <div
+      class="container"
+      style="margin-bottom: 26px;"
+    >
+      <div
+        class="row row-cols-md-12"
+      >
+        <div
+          class="col-md-8"
+        >
+          <div
+            class="jumbotron"
+          >
+            <div
+              class="container text-left"
+            >
+              <h1>
+                GetIt Search Results:
+              </h1>
+              <div>
+                <div
+                  class="citation-container"
+                >
+                  <p
+                    class="resource-type"
+                  >
+                    Book
+                  </p>
+                  <h2
+                    class="title"
+                  >
+                    The Oxford Shakespeare: Hamlet
+                  </h2>
+                  <p>
+                    Shakespeare, William
+                    <span>
+                      . 
+                    </span>
+                    1987
+                  </p>
+                  <div
+                    class="citation-info"
+                  >
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISBN:
+                      </span>
+                       9780198129103
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            role="alert"
+          />
+          <div
+            class="list-group"
+          >
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            />
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?year=1987&aulast=Shakespeare&genre=book&isbn=0-19-812910-6&aufirst=William&title=The%20Oxford%20Shakespeare%3A%20Hamlet&sid=DEFAULT%20(Via%20SFX)&date=1987"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Request via Interlibrary Loan
+                  </a>
+                </h3>
+                <p />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-4"
+        >
+          <aside>
+            <div
+              class="ask-librarian"
+            >
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
+                <a
+                  href="https://library.nyu.edu/ask/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Ask a Librarian
+                </a>
+              </h3>
+              <div>
+                <p>
+                  Use 
+                  <a
+                    href="https://library.nyu.edu/ask/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    Ask A Librarian
+                  </a>
+                   or the "Chat with Us" icon at the bottom right corner for any question you have about the Libraries' services.
+                </p>
+                <p>
+                  Visit our 
+                  <a
+                    href="https://guides.nyu.edu/online-tutorials/finding-sources"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    online tutorials
+                  </a>
+                   for tips on searching the catalog and getting library resources.
+                </p>
+                <h3>
+                  Additional Resources
+                </h3>
+                <ul>
+                  <li>
+                    Use 
+                    <a
+                      href="https://ezborrow.reshare.indexdata.com/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      EZBorrow
+                    </a>
+                     or 
+                    <a
+                      href="https://library.nyu.edu/services/borrowing/from-non-nyu-libraries/interlibrary-loan/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      InterLibrary Loan (ILL)
+                    </a>
+                     for materials unavailable at NYU
+                  </li>
+                  <li>
+                    Discover subject specific resources using 
+                    <a
+                      href="http://guides.nyu.edu"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      expert curated research guides
+                    </a>
+                  </li>
+                  <li>
+                    Explore the 
+                    <a
+                      href="https://library.nyu.edu/services/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      complete list of library services
+                    </a>
+                  </li>
+                  <li>
+                    Reach out to the Libraries on 
+                    <a
+                      href="https://www.instagram.com/nyulibraries/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      our Instagram
+                    </a>
+                  </li>
+                  <li>
+                    Search 
+                    <a
+                      href="https://www.worldcat.org/search?qt=worldcat_org_all"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      WorldCat
+                    </a>
+                     for items in nearby libraries
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Backend success History Today renders correctly 1`] = `
+<DocumentFragment>
+  <main>
+    <div
+      class="container"
+      style="margin-bottom: 26px;"
+    >
+      <div
+        class="row row-cols-md-12"
+      >
+        <div
+          class="col-md-8"
+        >
+          <div
+            class="jumbotron"
+          >
+            <div
+              class="container text-left"
+            >
+              <h1>
+                GetIt Search Results:
+              </h1>
+              <div>
+                <div
+                  class="citation-container"
+                >
+                  <p
+                    class="resource-type"
+                  >
+                    Article
+                  </p>
+                  <h2
+                    class="title"
+                  >
+                    History Today
+                  </h2>
+                  <p />
+                  <div
+                    class="citation-info"
+                  >
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       00182753
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            role="alert"
+          />
+          <div
+            class="list-group"
+          >
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            />
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=http://gateway.proquest.com/openurl?rfr_id=info%3Axri%2Fsid%3Aprimo&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&res_dat=xri%3Apqm&genre=journal&rft_id=42454&url_ver=Z39.88-2004"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Art, Design & Architecture Collection
+                  </a>
+                </h3>
+                <p>
+                  Available from 1992/01/01  until 2010/12/31
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?sid=Primo&issn=0018-2753&title=History+Today&genre=article"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    EBSCOhost Academic Search Complete
+                  </a>
+                </h3>
+                <p>
+                  Available from 1975
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?title=History+Today&genre=article&sid=Primo&issn=0018-2753"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    EBSCOhost America History and Life with Full Text
+                  </a>
+                </h3>
+                <p>
+                  Available from 1951/01/01
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?title=History+Today&genre=article&sid=Primo&issn=0018-2753"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    EBSCOhost History Reference Center
+                  </a>
+                </h3>
+                <p>
+                  Available from 1975/01/01
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?title=History+Today&genre=article&sid=Primo&issn=0018-2753"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    EBSCOhost Humanities Full Text
+                  </a>
+                </h3>
+                <p>
+                  Available from 1983/02/01  until 2011/12/31
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?genre=article&title=History+Today&issn=0018-2753&sid=Primo"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    EBSCOhost Humanities Source
+                  </a>
+                </h3>
+                <p>
+                  Available from 1983/02/01
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?genre=article&title=History+Today&issn=0018-2753&sid=Primo"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    EBSCOhost OmniFile Full Text Mega
+                  </a>
+                </h3>
+                <p>
+                  Available from 2000/01/01  until 2010/01/31
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?sid=Primo&issn=0018-2753&title=History+Today&genre=article"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    EBSCOhost Reader's Guide Full Text Mega
+                  </a>
+                </h3>
+                <p>
+                  Available from 1983/02/01  until 2011/12/01
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://link.gale.com/apps/pub/1373/ITOF?u=nysl_me_newyorku"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Gale General OneFile
+                  </a>
+                </h3>
+                <p>
+                  Available from 1992/11/01  until 2011/04/30
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rfr_id=info%3Axri%2Fsid%3Aprimo&res_dat=xri%3Apqm&genre=journal&rft_id=1821543&url_ver=Z39.88-2004"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Periodicals Archive Online Collection 1
+                  </a>
+                </h3>
+                <p>
+                  Available from 1951/01/01  until 2000/12/31
+                </p>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rfr_id=info%3Axri%2Fsid%3Aprimo&res_dat=xri%3Apqm&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&url_ver=Z39.88-2004&rft_id=42454&genre=journal"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    ProQuest Central
+                  </a>
+                </h3>
+                <p>
+                  Available from 1992/01/01  until 2010/12/31
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-4"
+        >
+          <aside>
             <div
               class="ask-librarian"
             >
@@ -4102,6 +4618,202 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
           <aside
             title="ask-librarian"
           >
+            <div
+              class="ask-librarian"
+            >
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
+                <a
+                  href="https://library.nyu.edu/ask/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Ask a Librarian
+                </a>
+              </h3>
+              <div>
+                <p>
+                  Use 
+                  <a
+                    href="https://library.nyu.edu/ask/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    Ask A Librarian
+                  </a>
+                   or the "Chat with Us" icon at the bottom right corner for any question you have about the Libraries' services.
+                </p>
+                <p>
+                  Visit our 
+                  <a
+                    href="https://guides.nyu.edu/online-tutorials/finding-sources"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    online tutorials
+                  </a>
+                   for tips on searching the catalog and getting library resources.
+                </p>
+                <h3>
+                  Additional Resources
+                </h3>
+                <ul>
+                  <li>
+                    Use 
+                    <a
+                      href="https://ezborrow.reshare.indexdata.com/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      EZBorrow
+                    </a>
+                     or 
+                    <a
+                      href="https://library.nyu.edu/services/borrowing/from-non-nyu-libraries/interlibrary-loan/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      InterLibrary Loan (ILL)
+                    </a>
+                     for materials unavailable at NYU
+                  </li>
+                  <li>
+                    Discover subject specific resources using 
+                    <a
+                      href="http://guides.nyu.edu"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      expert curated research guides
+                    </a>
+                  </li>
+                  <li>
+                    Explore the 
+                    <a
+                      href="https://library.nyu.edu/services/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      complete list of library services
+                    </a>
+                  </li>
+                  <li>
+                    Reach out to the Libraries on 
+                    <a
+                      href="https://www.instagram.com/nyulibraries/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      our Instagram
+                    </a>
+                  </li>
+                  <li>
+                    Search 
+                    <a
+                      href="https://www.worldcat.org/search?qt=worldcat_org_all"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      WorldCat
+                    </a>
+                     for items in nearby libraries
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Backend success The Sino-Tibetan Languages renders correctly 1`] = `
+<DocumentFragment>
+  <main>
+    <div
+      class="container"
+      style="margin-bottom: 26px;"
+    >
+      <div
+        class="row row-cols-md-12"
+      >
+        <div
+          class="col-md-8"
+        >
+          <div
+            class="jumbotron"
+          >
+            <div
+              class="container text-left"
+            >
+              <h1>
+                GetIt Search Results:
+              </h1>
+              <div>
+                <div
+                  class="citation-container"
+                >
+                  <p
+                    class="resource-type"
+                  >
+                    Book
+                  </p>
+                  <h2
+                    class="title"
+                  >
+                    The Sino-Tibetan Languages
+                  </h2>
+                  <p>
+                    YUE(-HASHIMOTO), Anne O.
+                    <span>
+                      . 
+                    </span>
+                    2003
+                  </p>
+                  <div
+                    class="citation-info"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            role="alert"
+          />
+          <div
+            class="list-group"
+          >
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            />
+            <div
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <h3>
+                  <a
+                    href="http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?date=2003&sid=DEFAULT%20(Via%20SFX)&title=Sino-Tibetan%20languages&aufirst=Anne&year=2003&isbn=0-7007-1129-5&genre=book&aulast=YUE-HASHIMOTO"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Bobst Library  Interlibrary Loan
+                  </a>
+                </h3>
+                <p />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-4"
+        >
+          <aside>
             <div
               class="ask-librarian"
             >
