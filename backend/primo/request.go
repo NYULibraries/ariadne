@@ -44,7 +44,7 @@ func (c PrimoRequest) do() (*PrimoResponse, error) {
 		if isFRBRGroupType(doc) {
 			// TODO: recursively collect links
 		} else {
-			primoResponse.addLinks(isbnSearchResponse)
+			primoResponse.addLinks(doc)
 		}
 	}
 

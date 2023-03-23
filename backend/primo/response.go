@@ -76,12 +76,10 @@ func (primoResponse *PrimoResponse) addToPrimoResponse(httpResponse *http.Respon
 	return nil
 }
 
-func (primoResponse *PrimoResponse) addLinks(primoSearchAPIResponse APIResponse) {
-	for _, doc := range primoSearchAPIResponse.Docs {
-		for _, link := range doc.Delivery.Link {
-			if link.LinkType == linkToSrcType {
-				primoResponse.Links = append(primoResponse.Links, link)
-			}
+func (primoResponse *PrimoResponse) addLinks(doc Doc) {
+	for _, link := range doc.Delivery.Link {
+		if link.LinkType == linkToSrcType {
+			primoResponse.Links = append(primoResponse.Links, link)
 		}
 	}
 }
