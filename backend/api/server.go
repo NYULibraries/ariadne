@@ -91,11 +91,28 @@ func healthCheck(w http.ResponseWriter, r *http.Request) {
 }
 
 func makeJSONResponseFromPrimoResponse(primoResponse *primo.PrimoResponse) string {
-	// TODO: Replace this with a real response
+	links := []Link{}
+	for _, primoLink := range primoResponse.Links {
+		links = append(links, Link{
+			primoLink.HyperlinkText,
+			primoLink.LinkURL,
+			"",
+		})
+	}
+
+	// For now only return one record, but anticipate needing to be able to deliver
+	// multiple records later.
+	records := []Record{
+		{
+			CitationSupplemental{},
+			links,
+		},
+	}
+
 	ariadneResponse := Response{
 		Errors:  []string{},
 		Found:   primoResponse.IsFound(),
-		Records: []Record{},
+		Records: records,
 	}
 
 	responseJSONBytes, err := json.MarshalIndent(ariadneResponse, "", "    ")
