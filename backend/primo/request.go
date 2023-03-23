@@ -44,7 +44,23 @@ func (primoRequest PrimoRequest) do() (*PrimoResponse, error) {
 	isbnSearchResponse := primoResponse.APIResponses[0]
 	for _, doc := range isbnSearchResponse.Docs {
 		if isActiveFRBRGroupType(doc) {
-			// TODO: recursively collect links
+			docsForFRBRGroup, err :=
+				getDocsForFRBRGroup(primoRequest.QueryStringValues, doc.PNX.Facets.FRBRGroupID[0])
+			if err != nil {
+				return primoResponse, fmt.Errorf("error fetching FRBR group links: %v", err)
+			}
+			for _, frbrGroupDoc := range docsForFRBRGroup {
+				isMatch := false
+				for _, isbnToTest := range frbrGroupDoc.PNX.Search.ISBN {
+					if isbnToTest == primoRequest.QueryStringValues.Get(normalizedQueryParamNameISBN) {
+						isMatch = true
+						break
+					}
+				}
+				if isMatch {
+					primoResponse.addLinks(frbrGroupDoc)
+				}
+			}
 		} else {
 			primoResponse.addLinks(doc)
 		}
@@ -53,6 +69,11 @@ func (primoRequest PrimoRequest) do() (*PrimoResponse, error) {
 	primoResponse.dedupeAndSortLinks()
 
 	return primoResponse, nil
+}
+
+// TODO: implement this
+func getDocsForFRBRGroup(queryStringValues url.Values, frbrGroupID string) ([]Doc, error) {
+	return []Doc{}, nil
 }
 
 func NewPrimoRequest(queryString string) (*PrimoRequest, error) {
