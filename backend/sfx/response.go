@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"encoding/xml"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"net/http/httputil"
 	"strings"
@@ -148,7 +148,7 @@ func newSFXResponse(httpResponse *http.Response) (*SFXResponse, error) {
 	}
 	sfxResponse.DumpedHTTPResponse = string(dumpedHTTPResponse)
 
-	body, err := ioutil.ReadAll(httpResponse.Body)
+	body, err := io.ReadAll(httpResponse.Body)
 	if err != nil {
 		return sfxResponse, fmt.Errorf("could not read response from SFX server: %v", err)
 	}
