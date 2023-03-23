@@ -1,7 +1,7 @@
 package primo
 
 // Primo service URL
-const DefaultPrimoURL = "http://primo.library.nyu.edu/primolcl41"
+const DefaultPrimoURL = "https://bobcat.library.nyu.edu/primo_library/libweb/webservices/rest/primo-explore/v1/pnxs"
 
 var primoURL = DefaultPrimoURL
 

@@ -6,7 +6,18 @@ import (
 	"net/http"
 	"net/http/httputil"
 	"net/url"
+	"strings"
 )
+
+const primoRequestQ = "isbn"
+
+var primoDefaultRequestParams = url.Values{
+	"inst":   []string{"NYU"},
+	"limit":  []string{"50"},
+	"offset": []string{"0"},
+	"scope":  []string{"all"},
+	"vid":    []string{"NYU"},
+}
 
 type PrimoRequest struct {
 	DumpedHTTPRequest string
@@ -56,15 +67,33 @@ func NewPrimoRequest(queryString string) (*PrimoRequest, error) {
 	return primoRequest, nil
 }
 
-// Keeping this here even though it currently doesn't do anything in order to be
-// consistent with the SFX request code.
 func filterOpenURLParams(queryStringValues url.Values) url.Values {
+	for queryParamName, queryParamValue := range queryStringValues {
+		normalizedQueryParamName := strings.ToLower(queryParamName)
+		if normalizedQueryParamName == primoRequestQ {
+			queryStringValues.Del(queryParamName)
+			// If primoRequestQ value is a slice, just use the first element
+			queryStringValues.Set(normalizedQueryParamName, queryParamValue[0])
+		}
+	}
+
 	return queryStringValues
 }
 
 func newPrimoHTTPRequest(queryStringValues url.Values) (*http.Request, error) {
 	params := filterOpenURLParams(queryStringValues)
-	queryURL := primoURL + "?" + params.Encode()
+
+	if params.Get(primoRequestQ) == "" {
+		return nil, fmt.Errorf("query string params do not contain required param %s: %v", primoRequestQ, queryStringValues)
+	}
+
+	isbn := params.Get(primoRequestQ)
+	primoRequestParams := primoDefaultRequestParams
+	primoRequestParams.Add("q", fmt.Sprintf(
+		"%s,exact,%s",
+		primoRequestQ, isbn))
+
+	queryURL := fmt.Sprintf("%s?%s", primoURL, primoRequestParams.Encode())
 
 	request, err := http.NewRequest("GET", queryURL, nil)
 	if err != nil {
