@@ -46,7 +46,7 @@ type APIResponse struct {
 const linkToSrcType = "http://purl.org/pnx/linkType/linktorsrc"
 
 func (primoResponse *PrimoResponse) IsFound() bool {
-	return false
+	return len(primoResponse.Links) > 0
 }
 
 func (primoResponse *PrimoResponse) addToPrimoResponse(httpResponse *http.Response) error {
