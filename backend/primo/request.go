@@ -34,7 +34,7 @@ func (c PrimoRequest) do() (*PrimoResponse, error) {
 	}
 	defer httpResponse.Body.Close()
 
-	err = addToPrimoResponse(primoResponse, httpResponse)
+	err = primoResponse.addToPrimoResponse(httpResponse)
 	if err != nil {
 		return primoResponse, fmt.Errorf("error added to Primo response: %v", err)
 	}

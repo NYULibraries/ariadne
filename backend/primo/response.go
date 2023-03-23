@@ -44,7 +44,7 @@ func (primoResponse *PrimoResponse) IsFound() bool {
 	return false
 }
 
-func addToPrimoResponse(primoResponse *PrimoResponse, httpResponse *http.Response) error {
+func (primoResponse *PrimoResponse) addToPrimoResponse(httpResponse *http.Response) error {
 	// NOTE: `defer httpResponse.Body.Close()` should have already been called by the client
 	// before passing to this function.
 
