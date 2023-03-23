@@ -23,6 +23,7 @@ var primoDefaultRequestParams = url.Values{
 type PrimoRequest struct {
 	DumpedHTTPRequest string
 	HTTPRequest       http.Request
+	QueryStringValues url.Values
 }
 
 func (primoRequest PrimoRequest) do() (*PrimoResponse, error) {
@@ -62,6 +63,8 @@ func NewPrimoRequest(queryString string) (*PrimoRequest, error) {
 		return primoRequest, err
 	}
 
+	primoRequest.QueryStringValues = queryStringValues
+
 	httpRequest, err := newPrimoHTTPRequest(queryStringValues)
 	if err != nil {
 		return primoRequest, fmt.Errorf("could not create new Primo request: %v", err)
@@ -81,17 +84,22 @@ func NewPrimoRequest(queryString string) (*PrimoRequest, error) {
 	return primoRequest, nil
 }
 
+// Keep this for now even though it doesn't do anything, because it matches SFX
+// processing and because we might do filtering later.
 func filterOpenURLParams(queryStringValues url.Values) url.Values {
+	return queryStringValues
+}
+
+func getISBN(queryStringValues url.Values) string {
+	isbn := ""
 	for queryParamName, queryParamValue := range queryStringValues {
 		normalizedQueryParamName := strings.ToLower(queryParamName)
 		if normalizedQueryParamName == qType {
-			queryStringValues.Del(queryParamName)
-			// If qType value is a slice, just use the first element
-			queryStringValues.Set(normalizedQueryParamName, queryParamValue[0])
+			isbn = queryParamValue[0]
 		}
 	}
 
-	return queryStringValues
+	return isbn
 }
 
 func isActiveFRBRGroupType(doc Doc) bool {
@@ -114,11 +122,11 @@ func newPrimoHTTPRequest(queryStringValues url.Values) (*http.Request, error) {
 func newPrimoHTTPRequestFRBR(queryStringValues url.Values, frbrGroupId *string) (*http.Request, error) {
 	params := filterOpenURLParams(queryStringValues)
 
-	if params.Get(qType) == "" {
-		return nil, fmt.Errorf("query string params do not contain required param %s: %v", qType, queryStringValues)
+	isbn := getISBN(queryStringValues)
+	if isbn == "" {
+		return nil, fmt.Errorf("query string params do not contain required ISBN param: %v", queryStringValues)
 	}
 
-	isbn := params.Get(qType)
 	primoRequestParams := primoDefaultRequestParams
 	primoRequestParams.Add("q", fmt.Sprintf(
 		"%s,exact,%s",
