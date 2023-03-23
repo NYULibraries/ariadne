@@ -11,7 +11,8 @@ const StableLink = () => {
 
     const buttonStyle = {
         borderRadius: '3px',
-        backgroundColor: 'white',
+        backgroundColor: '#57068c',
+        color: '#fff',
         cursor: 'pointer',
         border: '1px solid #ccc',
         padding: '5px 10px',
@@ -21,6 +22,7 @@ const StableLink = () => {
     const closeButtonStyle = {
         ...buttonStyle,
         fontSize: '0.8rem',
+        color: '#1C2127',
     };
 
     const handleClick = () => {
@@ -35,7 +37,7 @@ const StableLink = () => {
     const copyToClipboard = () => {
         navigator.clipboard.writeText(link);
         inputRef.current.focus();
-        inputRef.current.style.color = '#337ab7';
+        inputRef.current.style.color = '#3dbbdb';
     };
 
     return (
@@ -46,7 +48,7 @@ const StableLink = () => {
                 onMouseLeave={() => setMainButtonHover(false)}
                 style={{
                     ...buttonStyle,
-                    backgroundColor: mainButtonHover ? '#e6e6e6' : 'white',
+                    backgroundColor: mainButtonHover ? '#6c07ae' : buttonStyle.backgroundColor,
                 }}
             >
                 🔗 Create a stable link to this page
@@ -70,6 +72,7 @@ const StableLink = () => {
                         onMouseLeave={() => setCopyButtonHover(false)}
                         style={{
                             ...buttonStyle,
+                            color: '#1C2127',
                             backgroundColor: copyButtonHover ? '#e6e6e6' : 'white',
                         }}
                     >
