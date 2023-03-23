@@ -140,7 +140,7 @@ func newPrimoHTTPRequest(queryStringValues url.Values) (*http.Request, error) {
 	return newPrimoHTTPRequestFRBR(queryStringValues, nil)
 }
 
-func newPrimoHTTPRequestFRBR(queryStringValues url.Values, frbrGroupId *string) (*http.Request, error) {
+func newPrimoHTTPRequestFRBR(queryStringValues url.Values, frbrGroupID *string) (*http.Request, error) {
 	params := filterOpenURLParams(queryStringValues)
 
 	isbn := getISBN(queryStringValues)
@@ -152,8 +152,8 @@ func newPrimoHTTPRequestFRBR(queryStringValues url.Values, frbrGroupId *string) 
 	primoRequestParams.Add("q", fmt.Sprintf(
 		"isbn,exact,%s", isbn))
 
-	if frbrGroupId != nil {
-		params.Add("multiFacets", fmt.Sprintf("facet_frbrgroupid,include%s", *frbrGroupId))
+	if frbrGroupID != nil {
+		params.Add("multiFacets", fmt.Sprintf("facet_frbrgroupid,include%s", *frbrGroupID))
 	}
 
 	queryURL := fmt.Sprintf("%s?%s", primoURL, primoRequestParams.Encode())
