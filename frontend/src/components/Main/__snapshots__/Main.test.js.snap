@@ -65,7 +65,7 @@ exports[`Backend HTTP error responses HTTP 400 (Bad Request) error is rendered c
              
             <div>
               <button
-                style="border-radius: 3px; background-color: white; cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
               >
                 🔗 Create a stable link to this page
               </button>
@@ -268,7 +268,7 @@ exports[`Backend HTTP error responses HTTP 403 (Forbidden) error is rendered cor
              
             <div>
               <button
-                style="border-radius: 3px; background-color: white; cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
               >
                 🔗 Create a stable link to this page
               </button>
@@ -471,7 +471,7 @@ exports[`Backend HTTP error responses HTTP 408 (Request Timeout) error is render
              
             <div>
               <button
-                style="border-radius: 3px; background-color: white; cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
               >
                 🔗 Create a stable link to this page
               </button>
@@ -674,7 +674,7 @@ exports[`Backend HTTP error responses HTTP 500 (Internal Server Error) error is 
              
             <div>
               <button
-                style="border-radius: 3px; background-color: white; cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
               >
                 🔗 Create a stable link to this page
               </button>
@@ -877,7 +877,7 @@ exports[`Backend fetch exceptions TypeError: Failed to fetch renders backend fet
              
             <div>
               <button
-                style="border-radius: 3px; background-color: white; cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
               >
                 🔗 Create a stable link to this page
               </button>
@@ -1080,7 +1080,7 @@ exports[`Backend response includes errors Response includes 2 errors and an empt
              
             <div>
               <button
-                style="border-radius: 3px; background-color: white; cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
               >
                 🔗 Create a stable link to this page
               </button>
@@ -1298,7 +1298,7 @@ exports[`Backend success "Life" Magazine and the Power of Photography renders co
              
             <div>
               <button
-                style="border-radius: 3px; background-color: white; cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
               >
                 🔗 Create a stable link to this page
               </button>
@@ -1592,7 +1592,7 @@ exports[`Backend success Can community task groups learn from the principles of 
              
             <div>
               <button
-                style="border-radius: 3px; background-color: white; cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
               >
                 🔗 Create a stable link to this page
               </button>
@@ -1796,7 +1796,7 @@ exports[`Backend success Corriere Fiorentino renders correctly 1`] = `
              
             <div>
               <button
-                style="border-radius: 3px; background-color: white; cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
               >
                 🔗 Create a stable link to this page
               </button>
@@ -2028,7 +2028,7 @@ exports[`Backend success Design of LED light therapy device based on free-form l
              
             <div>
               <button
-                style="border-radius: 3px; background-color: white; cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
               >
                 🔗 Create a stable link to this page
               </button>
@@ -2260,7 +2260,7 @@ exports[`Backend success Editorial cartoon renders correctly 1`] = `
              
             <div>
               <button
-                style="border-radius: 3px; background-color: white; cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
               >
                 🔗 Create a stable link to this page
               </button>
@@ -2474,10 +2474,20 @@ exports[`Backend success Hamlet renders correctly 1`] = `
             </div>
           </div>
           <div
-            role="alert"
-          />
+            class="mt-3 mb-3"
+          >
+             
+            <div>
+              <button
+                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+              >
+                🔗 Create a stable link to this page
+              </button>
+            </div>
+          </div>
           <div
             class="list-group"
+            style=""
           >
             <div
               class="list-group-item list-group-item-action flex-column border-0"
@@ -2505,7 +2515,9 @@ exports[`Backend success Hamlet renders correctly 1`] = `
         <div
           class="col-md-4"
         >
-          <aside>
+          <aside
+            title="ask-librarian"
+          >
             <div
               class="ask-librarian"
             >
@@ -2673,10 +2685,20 @@ exports[`Backend success History Today renders correctly 1`] = `
             </div>
           </div>
           <div
-            role="alert"
-          />
+            class="mt-3 mb-3"
+          >
+             
+            <div>
+              <button
+                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+              >
+                🔗 Create a stable link to this page
+              </button>
+            </div>
+          </div>
           <div
             class="list-group"
+            style=""
           >
             <div
               class="list-group-item list-group-item-action flex-column border-0"
@@ -2906,7 +2928,9 @@ exports[`Backend success History Today renders correctly 1`] = `
         <div
           class="col-md-4"
         >
-          <aside>
+          <aside
+            title="ask-librarian"
+          >
             <div
               class="ask-librarian"
             >
@@ -3100,7 +3124,7 @@ exports[`Backend success Modelling Modular Living: Furniture and Life Magazine a
              
             <div>
               <button
-                style="border-radius: 3px; background-color: white; cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
               >
                 🔗 Create a stable link to this page
               </button>
@@ -3329,7 +3353,7 @@ exports[`Backend success Moral psychology is relationship regulation: moral moti
              
             <div>
               <button
-                style="border-radius: 3px; background-color: white; cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
               >
                 🔗 Create a stable link to this page
               </button>
@@ -3544,7 +3568,7 @@ exports[`Backend success Our Lady of everyday life : la Virgen de Guadalupe and 
              
             <div>
               <button
-                style="border-radius: 3px; background-color: white; cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
               >
                 🔗 Create a stable link to this page
               </button>
@@ -3776,7 +3800,7 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
              
             <div>
               <button
-                style="border-radius: 3px; background-color: white; cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
               >
                 🔗 Create a stable link to this page
               </button>
@@ -4050,7 +4074,7 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
              
             <div>
               <button
-                style="border-radius: 3px; background-color: white; cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
               >
                 🔗 Create a stable link to this page
               </button>
@@ -4317,7 +4341,7 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
              
             <div>
               <button
-                style="border-radius: 3px; background-color: white; cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
               >
                 🔗 Create a stable link to this page
               </button>
@@ -4782,10 +4806,20 @@ exports[`Backend success The Sino-Tibetan Languages renders correctly 1`] = `
             </div>
           </div>
           <div
-            role="alert"
-          />
+            class="mt-3 mb-3"
+          >
+             
+            <div>
+              <button
+                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+              >
+                🔗 Create a stable link to this page
+              </button>
+            </div>
+          </div>
           <div
             class="list-group"
+            style=""
           >
             <div
               class="list-group-item list-group-item-action flex-column border-0"
@@ -4813,7 +4847,9 @@ exports[`Backend success The Sino-Tibetan Languages renders correctly 1`] = `
         <div
           class="col-md-4"
         >
-          <aside>
+          <aside
+            title="ask-librarian"
+          >
             <div
               class="ask-librarian"
             >
@@ -4994,7 +5030,7 @@ exports[`Backend success The Year's work in modern language studies. renders cor
              
             <div>
               <button
-                style="border-radius: 3px; background-color: white; cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
               >
                 🔗 Create a stable link to this page
               </button>
