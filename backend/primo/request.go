@@ -25,16 +25,28 @@ type PrimoRequest struct {
 }
 
 func (c PrimoRequest) do() (*PrimoResponse, error) {
+	primoResponse := &PrimoResponse{}
+
 	client := http.Client{}
-	response, err := client.Do(&c.HTTPRequest)
+	httpResponse, err := client.Do(&c.HTTPRequest)
 	if err != nil {
 		return &PrimoResponse{}, fmt.Errorf("could not do request to Primo server: %v", err)
 	}
-	defer response.Body.Close()
+	defer httpResponse.Body.Close()
 
-	primoResponse, err := newPrimoResponse(response)
+	err = addToPrimoResponse(primoResponse, httpResponse)
 	if err != nil {
-		return primoResponse, err
+		return primoResponse, fmt.Errorf("error added to Primo response: %v", err)
+	}
+
+	mainPrimoSearchAPIResponse := primoResponse.PrimoSearchAPIResponses[0]
+	for _, doc := range mainPrimoSearchAPIResponse.Docs {
+		if isFRBRGroupType(doc) {
+			// TODO: recursively collect links
+		} else {
+			// TODO: collect links from current Doc
+			primoResponse.Links = append(primoResponse.Links, doc.Delivery.Link...)
+		}
 	}
 
 	return primoResponse, nil
@@ -78,6 +90,11 @@ func filterOpenURLParams(queryStringValues url.Values) url.Values {
 	}
 
 	return queryStringValues
+}
+
+func isFRBRGroupType(doc Doc) bool {
+	// TODO: implement this for real
+	return false
 }
 
 func newPrimoHTTPRequest(queryStringValues url.Values) (*http.Request, error) {

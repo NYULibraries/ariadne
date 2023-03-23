@@ -36,12 +36,11 @@ func ResolverHandler(w http.ResponseWriter, r *http.Request) {
 	if sfxResponse.IsFound() {
 		responseJSON = makeJSONResponseFromSFXResponse(sfxResponse)
 	} else {
-		// TODO: Enable error-checking after `getPrimoResponse` works
 		primoResponse, _ := getPrimoResponse(r.URL.RawQuery)
-		//if err != nil {
-		//	handleError(err, w, err.Error())
-		//	return
-		//}
+		if err != nil {
+			handleError(err, w, err.Error())
+			return
+		}
 
 		if primoResponse.IsFound() {
 			responseJSON = makeJSONResponseFromPrimoResponse(primoResponse)
