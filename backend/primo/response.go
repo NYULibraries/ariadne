@@ -12,16 +12,16 @@ import (
 type Doc struct {
 	Delivery struct {
 		Link []Link `json:"link"`
-		Pnx  struct {
-			Facets struct {
-				Frbrtype    []string `json:"frbrtype"`
-				Frbrgroupid []string `json:"frbrgroupid"`
-			} `json:"facets"`
-			Search struct {
-				Isbn []string `json:"isbn"`
-			} `json:"search"`
-		} `json:"pnx"`
-	}
+	} `json:"delivery"`
+	PNX struct {
+		Facets struct {
+			FRBRType    []string `json:"frbrtype"`
+			FRBRGroupID []string `json:"frbrgroupid"`
+		} `json:"facets"`
+		Search struct {
+			ISBN []string `json:"isbn"`
+		} `json:"search"`
+	} `json:"pnx"`
 }
 
 type Link struct {

@@ -97,7 +97,7 @@ func filterOpenURLParams(queryStringValues url.Values) url.Values {
 func isActiveFRBRGroupType(doc Doc) bool {
 	result := false
 
-	for _, frbrType := range doc.Delivery.Pnx.Facets.Frbrtype {
+	for _, frbrType := range doc.PNX.Facets.FRBRType {
 		if frbrType == activeFRBRGroupType {
 			result = true
 			break
