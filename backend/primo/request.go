@@ -10,7 +10,7 @@ import (
 )
 
 const activeFRBRGroupType = "5"
-const qType = "isbn"
+const normalizedQueryParamNameISBN = "isbn"
 
 var primoDefaultRequestParams = url.Values{
 	"inst":   []string{"NYU"},
@@ -94,7 +94,7 @@ func getISBN(queryStringValues url.Values) string {
 	isbn := ""
 	for queryParamName, queryParamValue := range queryStringValues {
 		normalizedQueryParamName := strings.ToLower(queryParamName)
-		if normalizedQueryParamName == qType {
+		if normalizedQueryParamName == normalizedQueryParamNameISBN {
 			isbn = queryParamValue[0]
 		}
 	}
