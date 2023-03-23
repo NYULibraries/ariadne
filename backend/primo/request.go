@@ -108,6 +108,10 @@ func isActiveFRBRGroupType(doc Doc) bool {
 }
 
 func newPrimoHTTPRequest(queryStringValues url.Values) (*http.Request, error) {
+	return newPrimoHTTPRequestFRBR(queryStringValues, nil)
+}
+
+func newPrimoHTTPRequestFRBR(queryStringValues url.Values, frbrGroupId *string) (*http.Request, error) {
 	params := filterOpenURLParams(queryStringValues)
 
 	if params.Get(qType) == "" {
@@ -119,6 +123,10 @@ func newPrimoHTTPRequest(queryStringValues url.Values) (*http.Request, error) {
 	primoRequestParams.Add("q", fmt.Sprintf(
 		"%s,exact,%s",
 		qType, isbn))
+
+	if frbrGroupId != nil {
+		params.Add("multiFacets", fmt.Sprintf("facet_frbrgroupid,include%s", frbrGroupId))
+	}
 
 	queryURL := fmt.Sprintf("%s?%s", primoURL, primoRequestParams.Encode())
 
