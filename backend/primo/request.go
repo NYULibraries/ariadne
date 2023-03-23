@@ -25,11 +25,11 @@ type PrimoRequest struct {
 	HTTPRequest       http.Request
 }
 
-func (c PrimoRequest) do() (*PrimoResponse, error) {
+func (primoRequest PrimoRequest) do() (*PrimoResponse, error) {
 	primoResponse := &PrimoResponse{}
 
 	client := http.Client{}
-	httpResponse, err := client.Do(&c.HTTPRequest)
+	httpResponse, err := client.Do(&primoRequest.HTTPRequest)
 	if err != nil {
 		return &PrimoResponse{}, fmt.Errorf("could not do request to Primo server: %v", err)
 	}
