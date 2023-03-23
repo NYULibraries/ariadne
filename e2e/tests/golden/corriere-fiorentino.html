@@ -216,6 +216,24 @@ h6 {
         /* E2E TEST EDIT: sourceMappingURL comments elided */
     </style>
     <style>
+        .chat-tab {
+            color: #e0d5e8;
+            padding: 10px 10px 8px;
+            font-size: 14px;
+            border-radius: 3px 3px 0 0;
+        }
+
+
+        .chat-tab:before {
+            color: #fff;
+            margin-right: 5px;
+            font-size: 16px;
+            vertical-align: middle;
+            position: relative;
+            top: -1px;
+            font-weight: normal;
+        }
+
         .ss-chat::before,
         .ss-chat.right::after {
             content: "💬";
@@ -229,6 +247,34 @@ h6 {
 
         /* ChatWidget.css */
 
+        #chat_widget .chat-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        #chat_widget .chat-button {
+            padding: 10px 10px 8px;
+            width: 127.72px;
+            height: 35.38px;
+            color: #e0d5e8;
+            line-height: normal;
+        }
+
+        @media screen and (max-width: 930px) {
+            #chat_widget .chat-button {
+                width: 100%;
+                max-width: none;
+                right: 0;
+                border-radius: 0;
+            }
+        }
+
+        .chat-button:hover {
+            background-color: #6c07ae;
+            color: #fff;
+        }
+
         .chat-frame-wrap {
             position: relative;
         }
@@ -236,22 +282,34 @@ h6 {
         .chat-close {
             position: absolute;
             top: -15px;
-            right: -7px;
+            right: -5px;
             border-radius: 50%;
             width: 24px;
             height: 24px;
             line-height: 24px;
             text-align: center;
-            background-color: white;
-            background: white;
+            background: #f5f7fa;
             border: 1px solid rgb(192, 192, 192);
+            border: 0 none;
             cursor: pointer;
+            font-size: 16px;
         }
 
-        .chat-iframe {
-            width: 186px;
-            height: 250px;
-            border: 2px solid rgb(192, 192, 192);
+
+        .libraryh3lp iframe {
+            width: 300px !important;
+            height: 280px !important;
+            vertical-align: bottom;
+            border-radius: 3px 3px 0 0;
+            border: none !important;
+        }
+
+        @media only screen and (max-width: 930px) {
+            #chat_widget {
+                width: 100%;
+                right: 0;
+                border-radius: 0;
+            }
         }
 
         /* E2E TEST EDIT: sourceMappingURL comments elided */
@@ -13079,7 +13137,7 @@ h6 {
                                 </div>
                             </div>
                             <div class="mt-3 mb-3">
-                                <div><button style="border-radius: 3px; background-color: white; cursor: pointer; border: 1px solid rgb(204, 204, 204); padding: 5px 10px; margin-right: 5px;">🔗 Create a stable link to this page</button></div>
+                                <div><button style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid rgb(204, 204, 204); padding: 5px 10px; margin-right: 5px;">🔗 Create a stable link to this page</button></div>
                             </div>
                             <div class="list-group" style="">
                                 <div class="list-group-item list-group-item-action flex-column border-0"></div>
@@ -13143,8 +13201,10 @@ h6 {
                     <div class="footer__copyright" aria-label="copyright">Unless otherwise noted, all content copyright New York University. All rights reserved.<a href="https://library.nyu.edu/privacy-policy/">Privacy policy</a><a class="footer__logo" href="https://www.nyu.edu"><img src="/images/nyu-footer-logo.svg" alt="New York University logo" height="27"></a></div>
                 </div>
             </footer>
-            <aside id="chat_widget" tabindex="-1"><button class="button chat-tab ss-chat">Chat with us</button>
-                <div class="chat-frame-wrap"></div>
+            <aside id="chat_widget" tabindex="-1">
+                <div class="chat-container"><button class="button chat-tab ss-chat chat-button">Chat with us</button>
+                    <div class="chat-frame-wrap"></div>
+                </div>
             </aside>
         </div>
     </div>
