@@ -129,8 +129,7 @@ func newPrimoHTTPRequestFRBR(queryStringValues url.Values, frbrGroupId *string) 
 
 	primoRequestParams := primoDefaultRequestParams
 	primoRequestParams.Add("q", fmt.Sprintf(
-		"%s,exact,%s",
-		qType, isbn))
+		"isbn,exact,%s", isbn))
 
 	if frbrGroupId != nil {
 		params.Add("multiFacets", fmt.Sprintf("facet_frbrgroupid,include%s", frbrGroupId))
