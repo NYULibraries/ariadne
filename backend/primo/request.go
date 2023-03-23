@@ -49,6 +49,8 @@ func (c PrimoRequest) do() (*PrimoResponse, error) {
 		}
 	}
 
+	primoResponse.dedupeAndSortLinks()
+
 	return primoResponse, nil
 }
 

@@ -6,6 +6,7 @@ import (
 	"io"
 	"net/http"
 	"net/http/httputil"
+	"sort"
 )
 
 type Doc struct {
@@ -24,9 +25,9 @@ type Doc struct {
 }
 
 type Link struct {
-	DisplayLabel string `json:"displayLabel"`
-	LinkURL      string `json:"linkURL"`
-	LinkType     string `json:"linkType"`
+	HyperlinkText string `json:"hyperlinkText"`
+	LinkURL       string `json:"linkURL"`
+	LinkType      string `json:"linkType"`
 }
 
 type PrimoResponse struct {
@@ -71,4 +72,23 @@ func (primoResponse *PrimoResponse) addToPrimoResponse(httpResponse *http.Respon
 		append(primoResponse.PrimoSearchAPIResponses, primoSearchAPIResponse)
 
 	return nil
+}
+
+func (primoResponse *PrimoResponse) dedupeAndSortLinks() []Link {
+	processed := make(map[string]struct{})
+
+	links := []Link{}
+	for _, link := range primoResponse.Links {
+		if _, ok := processed[link.LinkURL]; ok {
+			continue
+		}
+
+		links = append(links, link)
+
+		processed[link.LinkURL] = struct{}{}
+	}
+
+	sort.SliceStable(links, func(i, j int) bool { return links[i].HyperlinkText < links[j].HyperlinkText })
+
+	return links
 }
