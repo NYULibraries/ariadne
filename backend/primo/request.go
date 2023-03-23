@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-const primoRequestQ = "isbn"
+const qType = "isbn"
 
 var primoDefaultRequestParams = url.Values{
 	"inst":   []string{"NYU"},
@@ -83,9 +83,9 @@ func NewPrimoRequest(queryString string) (*PrimoRequest, error) {
 func filterOpenURLParams(queryStringValues url.Values) url.Values {
 	for queryParamName, queryParamValue := range queryStringValues {
 		normalizedQueryParamName := strings.ToLower(queryParamName)
-		if normalizedQueryParamName == primoRequestQ {
+		if normalizedQueryParamName == qType {
 			queryStringValues.Del(queryParamName)
-			// If primoRequestQ value is a slice, just use the first element
+			// If qType value is a slice, just use the first element
 			queryStringValues.Set(normalizedQueryParamName, queryParamValue[0])
 		}
 	}
@@ -101,15 +101,15 @@ func isFRBRGroupType(doc Doc) bool {
 func newPrimoHTTPRequest(queryStringValues url.Values) (*http.Request, error) {
 	params := filterOpenURLParams(queryStringValues)
 
-	if params.Get(primoRequestQ) == "" {
-		return nil, fmt.Errorf("query string params do not contain required param %s: %v", primoRequestQ, queryStringValues)
+	if params.Get(qType) == "" {
+		return nil, fmt.Errorf("query string params do not contain required param %s: %v", qType, queryStringValues)
 	}
 
-	isbn := params.Get(primoRequestQ)
+	isbn := params.Get(qType)
 	primoRequestParams := primoDefaultRequestParams
 	primoRequestParams.Add("q", fmt.Sprintf(
 		"%s,exact,%s",
-		primoRequestQ, isbn))
+		qType, isbn))
 
 	queryURL := fmt.Sprintf("%s?%s", primoURL, primoRequestParams.Encode())
 
