@@ -41,6 +41,8 @@ type PrimoSearchAPIResponse struct {
 	Docs []Doc `json:"docs"`
 }
 
+const linkToSrcType = "http://purl.org/pnx/linkType/linktorsrc"
+
 func (primoResponse *PrimoResponse) IsFound() bool {
 	return false
 }
@@ -72,6 +74,16 @@ func (primoResponse *PrimoResponse) addToPrimoResponse(httpResponse *http.Respon
 		append(primoResponse.PrimoSearchAPIResponses, primoSearchAPIResponse)
 
 	return nil
+}
+
+func (primoResponse *PrimoResponse) addLinks(primoSearchAPIResponse PrimoSearchAPIResponse) {
+	for _, doc := range primoSearchAPIResponse.Docs {
+		for _, link := range doc.Delivery.Link {
+			if link.LinkType == linkToSrcType {
+				primoResponse.Links = append(primoResponse.Links, link)
+			}
+		}
+	}
 }
 
 func (primoResponse *PrimoResponse) dedupeAndSortLinks() []Link {

@@ -44,8 +44,7 @@ func (c PrimoRequest) do() (*PrimoResponse, error) {
 		if isFRBRGroupType(doc) {
 			// TODO: recursively collect links
 		} else {
-			// TODO: collect links from current Doc
-			primoResponse.Links = append(primoResponse.Links, doc.Delivery.Link...)
+			primoResponse.addLinks(mainPrimoSearchAPIResponse)
 		}
 	}
 
