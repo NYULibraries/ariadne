@@ -65,13 +65,13 @@ func (primoResponse *PrimoResponse) addToPrimoResponse(httpResponse *http.Respon
 		return fmt.Errorf("could not read response from Primo server: %v", err)
 	}
 
-	var primoSearchAPIResponse APIResponse
-	if err = json.Unmarshal(body, &primoSearchAPIResponse); err != nil {
+	var apiResponse APIResponse
+	if err = json.Unmarshal(body, &apiResponse); err != nil {
 		return err
 	}
 
 	primoResponse.APIResponses =
-		append(primoResponse.APIResponses, primoSearchAPIResponse)
+		append(primoResponse.APIResponses, apiResponse)
 
 	return nil
 }
