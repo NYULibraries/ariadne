@@ -105,12 +105,6 @@ func NewPrimoRequest(queryString string) (*PrimoRequest, error) {
 	return primoRequest, nil
 }
 
-// Keep this for now even though it doesn't do anything, because it matches SFX
-// processing and because we might do filtering later.
-func filterOpenURLParams(queryStringValues url.Values) url.Values {
-	return queryStringValues
-}
-
 func getISBN(queryStringValues url.Values) string {
 	isbn := ""
 	for queryParamName, queryParamValue := range queryStringValues {
@@ -141,8 +135,6 @@ func newPrimoHTTPRequest(queryStringValues url.Values) (*http.Request, error) {
 }
 
 func newPrimoHTTPRequestFRBR(queryStringValues url.Values, frbrGroupID *string) (*http.Request, error) {
-	params := filterOpenURLParams(queryStringValues)
-
 	isbn := getISBN(queryStringValues)
 	if isbn == "" {
 		return nil, fmt.Errorf("query string params do not contain required ISBN param: %v", queryStringValues)
