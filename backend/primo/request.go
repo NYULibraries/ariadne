@@ -39,12 +39,12 @@ func (c PrimoRequest) do() (*PrimoResponse, error) {
 		return primoResponse, fmt.Errorf("error added to Primo response: %v", err)
 	}
 
-	mainPrimoSearchAPIResponse := primoResponse.PrimoSearchAPIResponses[0]
-	for _, doc := range mainPrimoSearchAPIResponse.Docs {
+	isbnSearchResponse := primoResponse.APIResponses[0]
+	for _, doc := range isbnSearchResponse.Docs {
 		if isFRBRGroupType(doc) {
 			// TODO: recursively collect links
 		} else {
-			primoResponse.addLinks(mainPrimoSearchAPIResponse)
+			primoResponse.addLinks(isbnSearchResponse)
 		}
 	}
 

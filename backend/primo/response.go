@@ -31,13 +31,13 @@ type Link struct {
 }
 
 type PrimoResponse struct {
-	DumpedHTTPResponses     []string
-	HTTPResponses           []http.Response
-	PrimoSearchAPIResponses []PrimoSearchAPIResponse
-	Links                   []Link
+	DumpedHTTPResponses []string
+	HTTPResponses       []http.Response
+	APIResponses        []APIResponse
+	Links               []Link
 }
 
-type PrimoSearchAPIResponse struct {
+type APIResponse struct {
 	Docs []Doc `json:"docs"`
 }
 
@@ -65,18 +65,18 @@ func (primoResponse *PrimoResponse) addToPrimoResponse(httpResponse *http.Respon
 		return fmt.Errorf("could not read response from Primo server: %v", err)
 	}
 
-	var primoSearchAPIResponse PrimoSearchAPIResponse
+	var primoSearchAPIResponse APIResponse
 	if err = json.Unmarshal(body, &primoSearchAPIResponse); err != nil {
 		return err
 	}
 
-	primoResponse.PrimoSearchAPIResponses =
-		append(primoResponse.PrimoSearchAPIResponses, primoSearchAPIResponse)
+	primoResponse.APIResponses =
+		append(primoResponse.APIResponses, primoSearchAPIResponse)
 
 	return nil
 }
 
-func (primoResponse *PrimoResponse) addLinks(primoSearchAPIResponse PrimoSearchAPIResponse) {
+func (primoResponse *PrimoResponse) addLinks(primoSearchAPIResponse APIResponse) {
 	for _, doc := range primoSearchAPIResponse.Docs {
 		for _, link := range doc.Delivery.Link {
 			if link.LinkType == linkToSrcType {
