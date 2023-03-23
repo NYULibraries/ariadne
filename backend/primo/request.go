@@ -9,6 +9,7 @@ import (
 	"strings"
 )
 
+const activeFRBRGroupType = "5"
 const qType = "isbn"
 
 var primoDefaultRequestParams = url.Values{
@@ -41,7 +42,7 @@ func (c PrimoRequest) do() (*PrimoResponse, error) {
 
 	isbnSearchResponse := primoResponse.APIResponses[0]
 	for _, doc := range isbnSearchResponse.Docs {
-		if isFRBRGroupType(doc) {
+		if isActiveFRBRGroupType(doc) {
 			// TODO: recursively collect links
 		} else {
 			primoResponse.addLinks(doc)
@@ -93,9 +94,17 @@ func filterOpenURLParams(queryStringValues url.Values) url.Values {
 	return queryStringValues
 }
 
-func isFRBRGroupType(doc Doc) bool {
-	// TODO: implement this for real
-	return false
+func isActiveFRBRGroupType(doc Doc) bool {
+	result := false
+
+	for _, frbrType := range doc.Delivery.Pnx.Facets.Frbrtype {
+		if frbrType == activeFRBRGroupType {
+			result = true
+			break
+		}
+	}
+
+	return result
 }
 
 func newPrimoHTTPRequest(queryStringValues url.Values) (*http.Request, error) {
