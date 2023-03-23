@@ -31,7 +31,9 @@ type Link struct {
 }
 
 type PrimoResponse struct {
+	DumpedHTTPRequests  []string
 	DumpedHTTPResponses []string
+	HTTPRequests        []http.Request
 	HTTPResponses       []http.Response
 	APIResponses        []APIResponse
 	Links               []Link

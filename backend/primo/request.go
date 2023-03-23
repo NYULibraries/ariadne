@@ -45,7 +45,7 @@ func (primoRequest PrimoRequest) do() (*PrimoResponse, error) {
 	for _, doc := range isbnSearchResponse.Docs {
 		if isActiveFRBRGroupType(doc) {
 			docsForFRBRGroup, err :=
-				getDocsForFRBRGroup(primoRequest.QueryStringValues, doc.PNX.Facets.FRBRGroupID[0])
+				getDocsForFRBRGroup(primoRequest.QueryStringValues, doc.PNX.Facets.FRBRGroupID[0], primoResponse)
 			if err != nil {
 				return primoResponse, fmt.Errorf("error fetching FRBR group links: %v", err)
 			}
@@ -72,8 +72,42 @@ func (primoRequest PrimoRequest) do() (*PrimoResponse, error) {
 }
 
 // TODO: implement this
-func getDocsForFRBRGroup(queryStringValues url.Values, frbrGroupID string) ([]Doc, error) {
-	return []Doc{}, nil
+func getDocsForFRBRGroup(queryStringValues url.Values, frbrGroupID string, primoResponse *PrimoResponse) ([]Doc, error) {
+	docs := []Doc{}
+
+	httpRequest, err := newPrimoHTTPRequestFRBR(queryStringValues, &frbrGroupID)
+	if err != nil {
+		return docs, fmt.Errorf("could not create new FRBR group Primo request: %v", err)
+	}
+
+	// NOTE: This appears to drain httpRequest.Body, but currently these requests
+	// don't have a body, so we should be okay.
+	primoResponse.HTTPRequests = append(primoResponse.HTTPRequests, (*httpRequest))
+
+	dumpedHTTPRequest, err := httputil.DumpRequest(httpRequest, true)
+	if err != nil {
+		// TODO: Log this.  PrimoRequest.DumpedHTTPRequest field is for
+		// debugging only - it should not block the user request.
+	}
+	primoResponse.DumpedHTTPRequests =
+		append(primoResponse.DumpedHTTPRequests, string(dumpedHTTPRequest))
+
+	client := http.Client{}
+	httpResponse, err := client.Do(httpRequest)
+	if err != nil {
+		return docs, fmt.Errorf("could not do FRBR group request to Primo server: %v", err)
+	}
+	defer httpResponse.Body.Close()
+
+	err = primoResponse.addToPrimoResponse(httpResponse)
+	if err != nil {
+		return docs, fmt.Errorf("error adding to Primo response: %v", err)
+	}
+
+	// Get the unmarshalled response that primoResponse.addToPrimoResponse added.
+	apiResponse := primoResponse.APIResponses[len(primoResponse.APIResponses)-1]
+
+	return apiResponse.Docs, nil
 }
 
 func NewPrimoRequest(queryString string) (*PrimoRequest, error) {
@@ -145,7 +179,7 @@ func newPrimoHTTPRequestFRBR(queryStringValues url.Values, frbrGroupID *string) 
 		"isbn,exact,%s", isbn))
 
 	if frbrGroupID != nil {
-		params.Add("multiFacets", fmt.Sprintf("facet_frbrgroupid,include%s", *frbrGroupID))
+		primoRequestParams.Add("multiFacets", fmt.Sprintf("facet_frbrgroupid,include%s", *frbrGroupID))
 	}
 
 	queryURL := fmt.Sprintf("%s?%s", primoURL, primoRequestParams.Encode())
