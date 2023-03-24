@@ -93,8 +93,12 @@ func healthCheck(w http.ResponseWriter, r *http.Request) {
 func makeJSONResponseFromPrimoResponse(primoResponse *primo.PrimoResponse) string {
 	links := []Link{}
 	for _, primoLink := range primoResponse.Links {
+		displayName := primoLink.HyperlinkText
+		if primoLink.HyperlinkText == "" {
+			displayName = "Link to Online Resource"
+		}
 		links = append(links, Link{
-			primoLink.HyperlinkText,
+			displayName,
 			primoLink.LinkURL,
 			"",
 		})
