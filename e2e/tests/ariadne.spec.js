@@ -157,10 +157,10 @@ ${e.stderr.toString()}`;
     });
 
     test('should not have any automatically detectable WCAG A or AA violations', async ({ page }) => {
-      //Guideline 2.1 – Keyboard Accessible: https://www.w3.org/WAI/WCAG21/quickref/#keyboard-accessible 
+      //Currently use WCAG 2.0 AA as a baseline
       const accessibilityScanResults = await new AxeBuilder({ page })
         .exclude('ul')
-        .withTags(['wcag2a', 'wcag21a'])
+        .withTags(['wcag2aa'])
         .analyze();
 
       expect(accessibilityScanResults.violations).toEqual([]);
