@@ -5,7 +5,8 @@ an [OpenURL](https://biblio.ugent.be/publication/760060/file/760063.pdf) submitt
 via query string and returns JSON data containing electronic links from an
 SFX Knowledgebase that represent NYU's e-holdings of the resource identified by
 the OpenURL. It is essentially an API wrapper for the [SFX LinkResolver](https://exlibrisgroup.com/products/primo-discovery-service/sfx-link-resolver/),
-and so is itself an OpenURL Link Resolver.
+and so is itself an OpenURL Link Resolver.  In the event that SFX does not return
+any links, the API server will fall back to the Primo API.
 
 The backend application is a CLI which in addition to providing the REST API server
 functionality also includes useful commands for debugging in the terminal.  
@@ -116,7 +117,7 @@ Get help on a `debug` sub-command (e.g. `params`):
 
 ### Examples
 
-* Get the SFX HTTP POST request for The New Yorker **(make sure to keep the single-quotes
+* Get the SFX HTTP GET request for The New Yorker **(make sure to keep the single-quotes
 around the query string argument!)**:
 
 ```shell
@@ -136,6 +137,38 @@ and then fed to the ariadne command.  This command is exactly the same as the pr
 ./ariadne debug sfx-response $( < the-new-yorker.txt )
 ```
 
+* Get the list of targets returned by SFX as formatted JSON:
+
+```shell
+./ariadne debug sfx-targets $( < the-new-yorker.txt )
+```
+
+* Get the Primo HTTP FRBR member search requests for Hamlet (these secondary requests
+take time to generate because the response from the initial ISBN search query must
+be fetched and analyzed):
+
+```shell
+./ariadne debug primo-request $( < hamlet.txt ) 
+```
+
+* Get the HTTP responses from Primo:
+
+```shell
+./ariadne debug primo-responses $( < hamlet.txt )
+```
+
+* Get the response bodies from the HTTP response from Primo as formatted JSON:
+
+```shell
+./ariadne debug primo-api-responses $( < hamlet.txt )
+```
+
+* Get the Ariadne-filtered list of links from Primo as formatted JSON:
+
+```shell
+./ariadne debug primo-links $( < hamlet.txt )
+```
+
 * Get the API server JSON response:
 
 ```shell
@@ -144,30 +177,30 @@ and then fed to the ariadne command.  This command is exactly the same as the pr
 
 * `debug api-json` output can be piped through
    [jq](https://stedolan.github.io/jq/) or
-   [fx](https://github.com/antonmedv/fx).  Get list of all targets returned by the
-previous command example which contain the string "gale" by piping through `fx`
-with the appropriate reducer:
+   [fx](https://github.com/antonmedv/fx).  Get list of all links returned by the
+previous command example which contain the string "gale" in the `display_name` by
+piping through `fx` with the appropriate reducer (this example also prints
+"[no coverage information available]" if `coverage_text` is empty, which in the
+case of The New Yorker is never the case):
 
 ```shell
-./ariadne debug api-json $( < the-new-yorker.txt ) | fx '.records.ctx_obj[0].ctx_obj_targets[0].target.filter( target => target.target_name.match( new RegExp( "gale", "i" ) ) ).map( target => ( { name: target.target_name, url: target.target_url } ) )'
+./ariadne debug api-json $( < the-new-yorker.txt ) | fx '.records[0].links.filter( link => link.display_name.match( new RegExp( "gale", "i" ) ) ).map( link => ( { name: link.display_name, url: link.url, coverage: link.coverage_text ? link.coverage_text : "[no coverage information available]" } ) )'
 ```
 
 ...which produces a JSON array like this:
 
 ```json
 [
-  {
-    "name": "GALEGROUP_DB_SHAKESPEARE_COLLECTION_PERI",
-    "url": "http://proxy.library.nyu.edu/login?url=http://find.galegroup.com/openurl/openurl?url_ver=Z39.88-2004&url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&rft.issn=0028-792X&ctx_enc=info%3Aofi%3Aenc%3AUTF-8&res_id=info%3Asid%2Fgale%3ASHAX&rft.date=2002&req_dat=info%3Asid%2Fgale%3Augnid%3Anew64731&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.jtitle=New+Yorker"
-  },
-  {
-    "name": "GALE_GENERAL_ONEFILE",
-    "url": "http://proxy.library.nyu.edu/login?url=https://link.gale.com/apps/pub/1161/ITOF?u=nysl_me_newyorku"
-  },
-  {
-    "name": "GALE_LITERATURE_RESOURCE_CENTER",
-    "url": "http://proxy.library.nyu.edu/login?url=https://link.gale.com/apps/pub/1161/LitRC?u=new64731"
-  }
+   {
+      "name": "Gale General OneFile",
+      "url": "http://proxy.library.nyu.edu/login?url=https://link.gale.com/apps/pub/1161/ITOF?u=nysl_me_newyorku",
+      "coverage": "Available from 2002/01/14"
+   },
+   {
+      "name": "Gale Literature Resource Center",
+      "url": "http://proxy.library.nyu.edu/login?url=https://link.gale.com/apps/pub/1161/LitRC?u=new64731",
+      "coverage": "Available from 1978/01/01  until 1978/12/31. Available from 1982/01/01  until 1982/12/31. Available from 1989/01/01  until 1989/12/31. Available from 1996/01/01  until 1996/12/31. Available from 2002/01/01"
+   }
 ]
 ```
 
