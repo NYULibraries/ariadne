@@ -64,7 +64,6 @@ func (primoRequest PrimoRequest) do() (*PrimoResponse, error) {
 	return primoResponse, nil
 }
 
-// TODO: implement this
 func getDocsForFRBRGroup(queryStringValues url.Values, frbrGroupID string, primoResponse *PrimoResponse) ([]Doc, error) {
 	docs := []Doc{}
 

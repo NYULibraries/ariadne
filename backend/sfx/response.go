@@ -110,7 +110,6 @@ func (sfxResponse *SFXResponse) RemoveTarget(targetURL string) {
 	(*(*sfxResponse.XMLResponseBody.ContextObject)[0].SFXContextObjectTargets)[0].Targets = &newTargets
 }
 
-// TODO: Write unit test
 func (sfxResponse *SFXResponse) IsFound() bool {
 	targets := (*(*sfxResponse.XMLResponseBody.ContextObject)[0].SFXContextObjectTargets)[0].Targets
 
