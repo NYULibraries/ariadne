@@ -14,16 +14,16 @@ const FRBRMemberSearchQueryParamName = "multiFacets"
 const normalizedQueryParamNameISBN = "isbn"
 
 type PrimoRequest struct {
-	DumpedHTTPRequest string
-	HTTPRequest       http.Request
-	QueryStringValues url.Values
+	DumpedHTTPRequest     string
+	HTTPRequestISBNSearch http.Request
+	QueryStringValues     url.Values
 }
 
 func (primoRequest PrimoRequest) do() (*PrimoResponse, error) {
 	primoResponse := &PrimoResponse{}
 
 	client := http.Client{}
-	httpResponse, err := client.Do(&primoRequest.HTTPRequest)
+	httpResponse, err := client.Do(&primoRequest.HTTPRequestISBNSearch)
 	if err != nil {
 		return &PrimoResponse{}, fmt.Errorf("could not do request to Primo server: %v", err)
 	}
@@ -74,7 +74,7 @@ func getDocsForFRBRGroup(queryStringValues url.Values, frbrGroupID string, primo
 
 	// NOTE: This appears to drain httpRequest.Body, but currently these requests
 	// don't have a body, so we should be okay.
-	primoResponse.HTTPRequests = append(primoResponse.HTTPRequests, (*httpRequest))
+	primoResponse.HTTPRequestsFRBRMember = append(primoResponse.HTTPRequestsFRBRMember, (*httpRequest))
 
 	dumpedHTTPRequest, err := httputil.DumpRequest(httpRequest, true)
 	if err != nil {
@@ -117,11 +117,11 @@ func NewPrimoRequest(queryString string) (*PrimoRequest, error) {
 		return primoRequest, fmt.Errorf("could not create new Primo request: %v", err)
 	}
 	// NOTE: This appears to drain httpRequest.Body, so when getting the dumped
-	// HTTP request later, make sure to get it from primoRequest.HTTPRequest
+	// HTTP request later, make sure to get it from primoRequest.HTTPRequestISBNSearch
 	// and not httpRequest.
-	primoRequest.HTTPRequest = (*httpRequest)
+	primoRequest.HTTPRequestISBNSearch = (*httpRequest)
 
-	dumpedHTTPRequest, err := httputil.DumpRequest(&primoRequest.HTTPRequest, true)
+	dumpedHTTPRequest, err := httputil.DumpRequest(&primoRequest.HTTPRequestISBNSearch, true)
 	if err != nil {
 		// TODO: Log this.  PrimoRequest.DumpedHTTPRequest field is for
 		// debugging only - it should not block the user request.
