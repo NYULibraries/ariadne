@@ -118,7 +118,8 @@ func NewPrimoRequest(queryString string) (*PrimoRequest, error) {
 	}
 	// NOTE: This appears to drain httpRequest.Body, so when getting the dumped
 	// HTTP request later, make sure to get it from primoRequest.HTTPRequestISBNSearch
-	// and not httpRequest.
+	// and not httpRequest.  If httpRequest is used later accidentally, probably
+	// no harm done since currently these requests don't have a body.
 	primoRequest.HTTPRequestISBNSearch = (*httpRequest)
 
 	dumpedHTTPRequest, err := httputil.DumpRequest(&primoRequest.HTTPRequestISBNSearch, true)

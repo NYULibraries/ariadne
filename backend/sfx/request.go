@@ -43,7 +43,8 @@ func NewSFXRequest(queryString string) (*SFXRequest, error) {
 	}
 	// NOTE: This appears to drain httpRequest.Body, so when getting the dumped
 	// HTTP request later, make sure to get it from sfxRequest.HTTPRequest
-	// and not httpRequest.
+	// and not httpRequest.  If httpRequest is used later accidentally, probably
+	// no harm done since currently these requests don't have a body.
 	sfxRequest.HTTPRequest = (*httpRequest)
 
 	dumpedHTTPRequest, err := httputil.DumpRequest(&sfxRequest.HTTPRequest, true)
