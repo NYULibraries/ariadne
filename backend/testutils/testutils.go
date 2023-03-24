@@ -54,8 +54,12 @@ func GetGoldenValue(testCase TestCase) (string, error) {
 	return GetTestdataFileContents(GoldenFile(testCase))
 }
 
-func GetPrimoFakeResponse(testCase TestCase) (string, error) {
-	return GetTestdataFileContents(primoFakeResponseFile(testCase))
+func GetPrimoFakeResponseISBNSearch(testCase TestCase) (string, error) {
+	return GetTestdataFileContents(primoFakeResponseFileISBNSearch(testCase))
+}
+
+func GetPrimoFakeResponseFRBRMemberSearch(testCase TestCase) (string, error) {
+	return GetTestdataFileContents(primoFakeResponseFileFRBRMemberSearch(testCase))
 }
 
 func GetSFXFakeResponse(testCase TestCase) (string, error) {
@@ -76,8 +80,12 @@ func GoldenFile(testCase TestCase) string {
 	return testutilsPath + "/testdata/golden/" + testCase.Key + ".json"
 }
 
-func primoFakeResponseFile(testCase TestCase) string {
-	return testutilsPath + "/testdata/fixtures/primo-fake-responses/" + testCase.Key + ".xml"
+func primoFakeResponseFileFRBRMemberSearch(testCase TestCase) string {
+	return testutilsPath + "/testdata/fixtures/primo-fake-responses/frbr-member-search-data/" + testCase.Key + ".json"
+}
+
+func primoFakeResponseFileISBNSearch(testCase TestCase) string {
+	return testutilsPath + "/testdata/fixtures/primo-fake-responses/" + testCase.Key + ".json"
 }
 
 func sfxFakeResponseFile(testCase TestCase) string {
