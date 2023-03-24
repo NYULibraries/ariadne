@@ -179,7 +179,7 @@ func newPrimoHTTPRequestFRBR(queryStringValues url.Values, frbrGroupID *string) 
 	}
 
 	if frbrGroupID != nil {
-		primoRequestParams.Add("multiFacets", fmt.Sprintf("facet_frbrgroupid,include%s", *frbrGroupID))
+		primoRequestParams.Add("multiFacets", fmt.Sprintf("facet_frbrgroupid,include,%s", *frbrGroupID))
 	}
 
 	queryURL := fmt.Sprintf("%s?%s", primoURL, primoRequestParams.Encode())
