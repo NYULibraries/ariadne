@@ -143,12 +143,18 @@ and then fed to the ariadne command.  This command is exactly the same as the pr
 ./ariadne debug sfx-targets $( < the-new-yorker.txt )
 ```
 
-* Get the Primo HTTP FRBR member search requests for Hamlet (these secondary requests
+* Get the initial Primo ISBN member search HTTP request for Hamlet:
+
+```shell
+./ariadne debug primo-request $( < hamlet.txt )
+```
+
+* Get the Primo FRBR member search HTTP requests for Hamlet (these secondary requests
 take time to generate because the response from the initial ISBN search query must
 be fetched and analyzed):
 
 ```shell
-./ariadne debug primo-request $( < hamlet.txt ) 
+./ariadne debug primo-frbr-member-requests $( < hamlet.txt )
 ```
 
 * Get the HTTP responses from Primo:
