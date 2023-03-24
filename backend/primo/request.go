@@ -10,6 +10,7 @@ import (
 )
 
 const activeFRBRGroupType = "5"
+const FRBRMemberSearchQueryParamName = "multiFacets"
 const normalizedQueryParamNameISBN = "isbn"
 
 type PrimoRequest struct {
@@ -179,7 +180,7 @@ func newPrimoHTTPRequestFRBR(queryStringValues url.Values, frbrGroupID *string) 
 	}
 
 	if frbrGroupID != nil {
-		primoRequestParams.Add("multiFacets", fmt.Sprintf("facet_frbrgroupid,include,%s", *frbrGroupID))
+		primoRequestParams.Add(FRBRMemberSearchQueryParamName, fmt.Sprintf("facet_frbrgroupid,include,%s", *frbrGroupID))
 	}
 
 	queryURL := fmt.Sprintf("%s?%s", primoURL, primoRequestParams.Encode())
