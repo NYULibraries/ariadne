@@ -12,14 +12,6 @@ import (
 const activeFRBRGroupType = "5"
 const normalizedQueryParamNameISBN = "isbn"
 
-var primoDefaultRequestParams = url.Values{
-	"inst":   []string{"NYU"},
-	"limit":  []string{"50"},
-	"offset": []string{"0"},
-	"scope":  []string{"all"},
-	"vid":    []string{"NYU"},
-}
-
 type PrimoRequest struct {
 	DumpedHTTPRequest string
 	HTTPRequest       http.Request
@@ -174,9 +166,17 @@ func newPrimoHTTPRequestFRBR(queryStringValues url.Values, frbrGroupID *string) 
 		return nil, fmt.Errorf("query string params do not contain required ISBN param: %v", queryStringValues)
 	}
 
-	primoRequestParams := primoDefaultRequestParams
-	primoRequestParams.Add("q", fmt.Sprintf(
-		"isbn,exact,%s", isbn))
+	primoRequestParams := url.Values{
+		// Same for every request
+		"inst":   []string{"NYU"},
+		"limit":  []string{"50"},
+		"offset": []string{"0"},
+		"scope":  []string{"all"},
+		"vid":    []string{"NYU"},
+		// ISBN query
+		"q": []string{fmt.Sprintf(
+			"isbn,exact,%s", isbn)},
+	}
 
 	if frbrGroupID != nil {
 		primoRequestParams.Add("multiFacets", fmt.Sprintf("facet_frbrgroupid,include%s", *frbrGroupID))
