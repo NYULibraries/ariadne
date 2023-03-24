@@ -202,14 +202,17 @@ workflows:
       - backend-build:
           requires:
             - backend-test
-      - deploy-dev:
-          requires:
-              - frontend-build
-              - backend-build
-              - e2e
-          filters:
-            branches:
-              ignore: main
+# TODO: re-enable this before merging into `main` branch.
+#       2023-03-24: Temporarily disabling deployments on this feature branch so as not
+#       to overwrite stuff on dev that need to be reviewed by UX team.
+#      - deploy-dev:
+#          requires:
+#              - frontend-build
+#              - backend-build
+#              - e2e
+#          filters:
+#            branches:
+#              ignore: main
       - deploy-prod:
           requires:
               - frontend-build
