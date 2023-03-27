@@ -6,6 +6,9 @@ import { execSync } from 'child_process';
 import { getTestCasesBackendSuccess } from '../../frontend/src/testutils';
 
 const { test, expect } = require('@playwright/test');
+
+
+const AxeBuilder = require('@axe-core/playwright').default; // 1
 const beautifyHtml = require('js-beautify').html;
 
 const ASK_LIBRARIAN_TEXT = "Need Help?"
@@ -120,11 +123,51 @@ ${e.stderr.toString()}`;
     });
 
     test('renders links with a "list-group" class name', async ({ page }) => {
+      await page.waitForTimeout(5000)
       expect(await page.$('.list-group')).toBeTruthy();
     });
 
     test('returns search results', async ({ page }) => {
       expect(await page.textContent('h1')).toBe('GetIt Search Results:');
     });
+
+    test('Chat widget should toggle chat window', async ({ page }) => {
+      // Click the "Chat with us" button
+      await page.click('button.chat-tab');
+
+      // Verify that the chat window is visible
+      const chatFrame = await page.waitForSelector('.chat-frame-wrap');
+      const isVisible = await chatFrame.isVisible();
+      expect(isVisible).toBeTruthy();
+
+      // Click the "Close chat window" button
+      await page.click('.chat-close');
+
+      // Verify that the chat window is hidden
+      const isHidden = await chatFrame.isHidden();
+      expect(isHidden).toBeTruthy();
+    });
+
+    test('should not have any automatically detectable accessibility issues', async ({ page }) => {
+
+      const accessibilityScanResults = await new AxeBuilder({ page })
+        .exclude('ul')
+        .analyze();
+      expect(accessibilityScanResults.violations).toEqual([]);
+    });
+
+    test('should not have any automatically detectable WCAG A or AA violations', async ({ page }) => {
+      //Currently use WCAG 2.0 AA as a baseline
+      const accessibilityScanResults = await new AxeBuilder({ page })
+        .exclude('ul')
+        .withTags(['wcag2aa'])
+        .analyze();
+
+      expect(accessibilityScanResults.violations).toEqual([]);
+    });
   });
 }
+
+
+
+

@@ -2,34 +2,73 @@
 
 exports[`List matches snapshot when error prop is passed 1`] = `
 <div
-  role="alert"
+  class="list-group"
 >
-  <div>
-    Failed to load links
-  </div>
+  <div
+    class="list-group-item list-group-item-action flex-column border-0"
+  />
 </div>
 `;
 
 exports[`List matches snapshot when links prop is empty 1`] = `
 <div
-  role="alert"
-/>
+  class="list-group"
+>
+  <div
+    class="list-group-item list-group-item-action flex-column border-0"
+  />
+</div>
 `;
 
 exports[`List matches snapshot when links prop is passed 1`] = `
 <div
-  role="alert"
-/>
+  class="list-group"
+>
+  <div
+    class="list-group-item list-group-item-action flex-column border-0"
+  />
+  <div
+    class="list-group-item list-group-item-action flex-column border-0"
+  >
+    <div
+      class="row"
+    >
+      <h3>
+        <a
+          href="https://www.example.com"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Example Website
+        </a>
+      </h3>
+      <p />
+    </div>
+  </div>
+  <div
+    class="list-group-item list-group-item-action flex-column border-0"
+  >
+    <div
+      class="row"
+    >
+      <h3>
+        <a
+          href="https://www.example.org"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Example Organization
+        </a>
+      </h3>
+      <p />
+    </div>
+  </div>
+</div>
 `;
 
 exports[`List matches snapshot when loading prop is true 1`] = `
 <div
-  class="loading-container"
->
-  <div
-    aria-label="Loading..."
-  >
-    Loading...
-  </div>
-</div>
+  class="empty"
+  style="height: calc(100vh - 250px); width: 100%;"
+/>
 `;

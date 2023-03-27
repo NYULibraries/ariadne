@@ -24,25 +24,6 @@ describe('List', () => {
     expect(linkElements[1]).toHaveAttribute('href', 'https://www.example.org');
   });
 
-  it('renders "No results found" message when links prop is empty', () => {
-    render(<List links={[]} />);
-    const noResultsMessage = screen.getByText('No results found');
-    expect(noResultsMessage).toBeInTheDocument();
-  });
-
-  it('renders error message when error prop is passed', () => {
-    const errorMessage = 'Failed to load links';
-    render(<List error={errorMessage} />);
-    const errorElement = screen.getByText(errorMessage);
-    expect(errorElement).toBeInTheDocument();
-  });
-
-  it('renders loading indicator when loading prop is true', () => {
-    render(<List loading={true} />);
-    const loadingElement = screen.getByLabelText('Loading...');
-    expect(loadingElement).toBeInTheDocument();
-  });
-
   it('matches snapshot when links prop is passed', () => {
     const { container } = render(<List links={mockLinks} />);
     expect(container.firstChild).toMatchSnapshot();
@@ -72,17 +53,4 @@ describe('List', () => {
     expect(linkElements[1]).toHaveTextContent('Example Organization');
   });
 
-  it('renders an Error component with the correct message when error prop is passed', () => {
-    const errorMessage = 'Failed to load links';
-    render(<List error={errorMessage} />);
-    const errorComponent = screen.getByRole('alert');
-    expect(errorComponent).toBeInTheDocument();
-    expect(errorComponent).toHaveTextContent(errorMessage);
-  });
-
-  it('renders a Loader component when loading prop is true', () => {
-    render(<List loading={true} />);
-    const loaderComponent = screen.getByLabelText('Loading...');
-    expect(loaderComponent).toBeInTheDocument();
-  });
 });

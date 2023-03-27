@@ -7,7 +7,10 @@ import linksApi from '../../api/fetchData';
 import useApi from '../../hooks/useApi';
 import AskLibrarian from '../AskLibrarian/AskLibrarian';
 import Citation from '../Citation/Citation';
+import Error from '../Error/Error';
 import List from '../List/List';
+import Loader from '../Loader/Loader';
+import StableLink from '../StableLink/StableLink';
 
 const Main = () => {
   const backendClient = useApi(linksApi.fetchData);
@@ -52,11 +55,25 @@ const Main = () => {
                   </div>
                 </div>
               </div>
-              <List links={backendClient.resource} error={backendClient.error} loading={backendClient.loading} />
+              {backendClient.loading && <Loader />}
+              <div className="mt-3 mb-3"> {/* Add Bootstrap margin-top and margin-bottom classes */}
+                <StableLink />
+              </div>
+              {(backendClient.resource?.length === 0 || backendClient.error) ?
+                (
+                  <>
+                    <div role="alert">
+                      {backendClient.error && <Error message={backendClient.error} />}
+                    </div>
+                    <div>
+                      <p>No results found</p>
+                    </div>
+                  </>) :
+                <List links={backendClient.resource} loading={backendClient.loading} />}
             </Col>
             <Col md={4}>
-              <aside>
-                <AskLibrarian />
+              <aside title="ask-librarian">
+                <AskLibrarian loading={backendClient.loading} />
               </aside>
             </Col>
           </Row>

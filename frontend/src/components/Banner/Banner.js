@@ -8,7 +8,7 @@ const Banner = () => {
   const institutionName = getInstitutionQueryParameter();
   const { logo, link, imgClass, altLibraryLogoImageText } = bannerInstitutionInfo[institutionName] || bannerInstitutionInfo.nyu;
   return (
-    <Navbar className="color-nav" expand="lg">
+    <Navbar className="color-nav" expand="lg" role="navigation">
       <Container>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

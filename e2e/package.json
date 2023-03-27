@@ -11,8 +11,9 @@
     "test:e2e:updatesnapshots": "yarn playwright test --update-snapshots"
   },
   "dependencies": {
+    "@axe-core/playwright": "^4.6.0",
+    "@playwright/test": "^1.27.1",
     "dotenv": "^16.0.3",
-    "js-beautify": "^1.14.7",
-    "@playwright/test": "^1.27.1"
+    "js-beautify": "^1.14.7"
   }
 }
