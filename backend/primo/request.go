@@ -32,7 +32,7 @@ func (primoRequest PrimoRequest) do() (*PrimoResponse, error) {
 	// Note that this drains httpResponse.Body and saves it as the first element
 	// of primoResponse.APIResponses as a JSON string, so when we need to parse
 	// the response later we'll need to get it from primoResponse.APIResponses[0]/
-	err = primoResponse.addToPrimoResponse(httpResponse)
+	err = primoResponse.addHTTPResponseData(httpResponse)
 	if err != nil {
 		return primoResponse, fmt.Errorf("error adding to Primo response: %v", err)
 	}
@@ -100,12 +100,12 @@ func getDocsForFRBRGroup(queryStringValues url.Values, frbrGroupID string, primo
 	}
 	defer httpResponse.Body.Close()
 
-	err = primoResponse.addToPrimoResponse(httpResponse)
+	err = primoResponse.addHTTPResponseData(httpResponse)
 	if err != nil {
 		return docs, fmt.Errorf("error adding to Primo response: %v", err)
 	}
 
-	// Get the unmarshalled response that primoResponse.addToPrimoResponse added.
+	// Get the unmarshalled response that primoResponse.addTTPResponseData added.
 	apiResponse := primoResponse.APIResponses[len(primoResponse.APIResponses)-1]
 
 	return apiResponse.Docs, nil

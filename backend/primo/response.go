@@ -49,7 +49,7 @@ func (primoResponse *PrimoResponse) IsFound() bool {
 	return len(primoResponse.Links) > 0
 }
 
-func (primoResponse *PrimoResponse) addToPrimoResponse(httpResponse *http.Response) error {
+func (primoResponse *PrimoResponse) addHTTPResponseData(httpResponse *http.Response) error {
 	// NOTE: `defer httpResponse.Body.Close()` should have already been called by the client
 	// before passing to this function.
 
