@@ -49,7 +49,7 @@ func (primoResponse *PrimoResponse) IsFound() bool {
 	return len(primoResponse.Links) > 0
 }
 
-func (primoResponse *PrimoResponse) addHTTPResponseData(httpResponse *http.Response) error {
+func (primoResponse *PrimoResponse) addHTTPResponseData(httpResponse *http.Response) (APIResponse, error) {
 	// NOTE: `defer httpResponse.Body.Close()` should have already been called by the client
 	// before passing to this function.
 
@@ -57,25 +57,27 @@ func (primoResponse *PrimoResponse) addHTTPResponseData(httpResponse *http.Respo
 
 	dumpedHTTPResponse, err := httputil.DumpResponse(httpResponse, true)
 	if err != nil {
-		return fmt.Errorf("could not dump HTTP response")
+		return APIResponse{}, fmt.Errorf("could not dump HTTP response")
 	}
 
 	primoResponse.DumpedHTTPResponses = append(primoResponse.DumpedHTTPResponses, string(dumpedHTTPResponse))
 
 	body, err := io.ReadAll(httpResponse.Body)
 	if err != nil {
-		return fmt.Errorf("could not read response from Primo server: %v", err)
+		return APIResponse{}, fmt.Errorf("could not read response from Primo server: %v", err)
 	}
 
 	var apiResponse APIResponse
 	if err = json.Unmarshal(body, &apiResponse); err != nil {
-		return err
+		return apiResponse, err
 	}
 
 	primoResponse.APIResponses =
 		append(primoResponse.APIResponses, apiResponse)
 
-	return nil
+	// Returning apiResponse because httpResponse.Body has been drained and so
+	// caller will not be able to get an APIResponse from it.
+	return apiResponse, nil
 }
 
 func (primoResponse *PrimoResponse) addLinks(doc Doc) {
@@ -105,13 +107,48 @@ func (primoResponse *PrimoResponse) dedupeAndSortLinks() []Link {
 	return links
 }
 
+func (primoResponse *PrimoResponse) getDocsForFRBRGroup(isbn, frbrGroupID string) ([]Doc, error) {
+	docs := []Doc{}
+
+	httpRequest, err := newPrimoFRBRMemberHTTPRequest(isbn, &frbrGroupID)
+	if err != nil {
+		return docs, fmt.Errorf("could not create new FRBR group Primo request: %v", err)
+	}
+
+	// NOTE: This appears to drain httpRequest.Body, but currently these requests
+	// don't have a body, so we should be okay.
+	primoResponse.FRBRMemberHTTPRequests = append(primoResponse.FRBRMemberHTTPRequests, (*httpRequest))
+
+	dumpedHTTPRequest, err := httputil.DumpRequest(httpRequest, true)
+	if err != nil {
+		// TODO: Log this.  PrimoRequest.DumpedISBNSearchHTTPRequest field is for
+		// debugging only - it should not block the user request.
+	}
+	primoResponse.DumpedFRBRMemberHTTPRequests =
+		append(primoResponse.DumpedFRBRMemberHTTPRequests, string(dumpedHTTPRequest))
+
+	client := http.Client{}
+	httpResponse, err := client.Do(httpRequest)
+	if err != nil {
+		return docs, fmt.Errorf("could not do FRBR group request to Primo server: %v", err)
+	}
+	defer httpResponse.Body.Close()
+
+	apiResponse, err := primoResponse.addHTTPResponseData(httpResponse)
+	if err != nil {
+		return docs, fmt.Errorf("error adding to Primo response: %v", err)
+	}
+
+	return apiResponse.Docs, nil
+}
+
 func (primoResponse *PrimoResponse) getLinks(isbn string, isbnSearchResponse APIResponse) error {
 	for _, doc := range isbnSearchResponse.Docs {
 		if isActiveFRBRGroupType(doc) {
 			// This makes another HTTP request to Primo and fetches docs for the
 			// active FRBR group.
 			docsForFRBRGroup, err :=
-				getDocsForFRBRGroup(isbn, doc.PNX.Facets.FRBRGroupID[0], primoResponse)
+				primoResponse.getDocsForFRBRGroup(isbn, doc.PNX.Facets.FRBRGroupID[0])
 			if err != nil {
 				return fmt.Errorf("error fetching FRBR group links: %v", err)
 			}

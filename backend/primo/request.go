@@ -29,17 +29,10 @@ func (primoRequest PrimoRequest) do() (*PrimoResponse, error) {
 	}
 	defer httpResponse.Body.Close()
 
-	// Note that this drains httpResponse.Body and saves it as the first element
-	// of primoResponse.APIResponses as a JSON string, so when we need to parse
-	// the response later we'll need to get it from primoResponse.APIResponses[0]/
-	err = primoResponse.addHTTPResponseData(httpResponse)
+	isbnSearchResponse, err := primoResponse.addHTTPResponseData(httpResponse)
 	if err != nil {
 		return primoResponse, fmt.Errorf("error adding to Primo response: %v", err)
 	}
-
-	// As mentioned above, we need to retrieve the JSON from primoResponse.APIResponses[0]
-	// because httpResponse.Body has been drained.
-	isbnSearchResponse := primoResponse.APIResponses[0]
 
 	isbn := getISBN(primoRequest.QueryStringValues)
 
@@ -51,44 +44,6 @@ func (primoRequest PrimoRequest) do() (*PrimoResponse, error) {
 	}
 
 	return primoResponse, nil
-}
-
-func getDocsForFRBRGroup(isbn, frbrGroupID string, primoResponse *PrimoResponse) ([]Doc, error) {
-	docs := []Doc{}
-
-	httpRequest, err := newPrimoFRBRMemberHTTPRequest(isbn, &frbrGroupID)
-	if err != nil {
-		return docs, fmt.Errorf("could not create new FRBR group Primo request: %v", err)
-	}
-
-	// NOTE: This appears to drain httpRequest.Body, but currently these requests
-	// don't have a body, so we should be okay.
-	primoResponse.FRBRMemberHTTPRequests = append(primoResponse.FRBRMemberHTTPRequests, (*httpRequest))
-
-	dumpedHTTPRequest, err := httputil.DumpRequest(httpRequest, true)
-	if err != nil {
-		// TODO: Log this.  PrimoRequest.DumpedISBNSearchHTTPRequest field is for
-		// debugging only - it should not block the user request.
-	}
-	primoResponse.DumpedFRBRMemberHTTPRequests =
-		append(primoResponse.DumpedFRBRMemberHTTPRequests, string(dumpedHTTPRequest))
-
-	client := http.Client{}
-	httpResponse, err := client.Do(httpRequest)
-	if err != nil {
-		return docs, fmt.Errorf("could not do FRBR group request to Primo server: %v", err)
-	}
-	defer httpResponse.Body.Close()
-
-	err = primoResponse.addHTTPResponseData(httpResponse)
-	if err != nil {
-		return docs, fmt.Errorf("error adding to Primo response: %v", err)
-	}
-
-	// Get the unmarshalled response that primoResponse.addTTPResponseData added.
-	apiResponse := primoResponse.APIResponses[len(primoResponse.APIResponses)-1]
-
-	return apiResponse.Docs, nil
 }
 
 func NewPrimoRequest(queryString string) (*PrimoRequest, error) {
