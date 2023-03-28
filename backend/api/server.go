@@ -11,6 +11,9 @@ import (
 	"strings"
 )
 
+const invalidPrimoRequestErrorMessage = "Invalid Primo request"
+const invalidSFXRequestErrorMessage = "Invalid SFX request"
+
 // Setup a new mux router with the appropriate routes for this app
 func NewRouter() *http.ServeMux {
 	router := http.NewServeMux()
@@ -56,7 +59,7 @@ func ResolverHandler(w http.ResponseWriter, r *http.Request) {
 func getPrimoResponse(queryString string) (*primo.PrimoResponse, error) {
 	primoRequest, err := primo.NewPrimoRequest(queryString)
 	if err != nil {
-		return &primo.PrimoResponse{}, errors.New("Invalid OpenURL")
+		return &primo.PrimoResponse{}, errors.New(invalidPrimoRequestErrorMessage)
 	}
 
 	return primo.Do(primoRequest)
@@ -67,7 +70,7 @@ func getSFXResponse(queryString string) (*sfx.SFXResponse, error) {
 
 	sfxRequest, err := sfx.NewSFXRequest(queryString)
 	if err != nil {
-		return &sfxResponse, errors.New("Invalid OpenURL")
+		return &sfxResponse, errors.New(invalidSFXRequestErrorMessage)
 	}
 
 	return sfx.Do(sfxRequest)
