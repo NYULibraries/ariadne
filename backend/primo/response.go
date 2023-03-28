@@ -13,23 +13,25 @@ type Delivery struct {
 	Link []Link `json:"link"`
 }
 
+type Facets struct {
+	FRBRType    []string `json:"frbrtype"`
+	FRBRGroupID []string `json:"frbrgroupid"`
+}
+
 type Doc struct {
 	Delivery Delivery `json:"delivery"`
-	PNX      struct {
-		Facets struct {
-			FRBRType    []string `json:"frbrtype"`
-			FRBRGroupID []string `json:"frbrgroupid"`
-		} `json:"facets"`
-		Search struct {
-			ISBN []string `json:"isbn"`
-		} `json:"search"`
-	} `json:"pnx"`
+	PNX      PNX      `json:"pnx"`
 }
 
 type Link struct {
 	HyperlinkText string `json:"hyperlinkText"`
 	LinkURL       string `json:"linkURL"`
 	LinkType      string `json:"linkType"`
+}
+
+type PNX struct {
+	Facets Facets `json:"facets"`
+	Search Search `json:"search"`
 }
 
 type PrimoResponse struct {
@@ -39,6 +41,10 @@ type PrimoResponse struct {
 	HTTPResponses                []http.Response
 	APIResponses                 []APIResponse
 	Links                        []Link
+}
+
+type Search struct {
+	ISBN []string `json:"isbn"`
 }
 
 type APIResponse struct {
