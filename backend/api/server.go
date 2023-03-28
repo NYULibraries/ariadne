@@ -36,7 +36,7 @@ func ResolverHandler(w http.ResponseWriter, r *http.Request) {
 	if sfxResponse.IsFound() {
 		responseJSON = makeJSONResponseFromSFXResponse(sfxResponse)
 	} else {
-		primoResponse, _ := getPrimoResponse(r.URL.RawQuery)
+		primoResponse, err := getPrimoResponse(r.URL.RawQuery)
 		if err != nil {
 			handleError(err, w, err.Error())
 			return
