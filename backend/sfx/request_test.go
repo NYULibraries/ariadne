@@ -1,11 +1,10 @@
 package sfx
 
 import (
+	"ariadne/testutils"
 	"fmt"
 	"net/url"
 	"reflect"
-	"regexp"
-	"strings"
 	"testing"
 )
 
@@ -57,12 +56,12 @@ Host: sfx.library.nyu.edu`,
 		testName := fmt.Sprintf("%s", testCase.queryString)
 		t.Run(testName, func(t *testing.T) {
 			sfxRequest, err := NewSFXRequest(testCase.queryString)
-			if testCase.dumpedHTTPRequest != "" {
-				expected := normalizeDumpedHTTPRequest(testCase.dumpedHTTPRequest)
-				got := normalizeDumpedHTTPRequest(sfxRequest.DumpedHTTPRequest)
+			if testCase.expectedDumpedHTTPRequest != "" {
+				expected := testutils.NormalizeDumpedHTTPRequest(testCase.expectedDumpedHTTPRequest)
+				got := testutils.NormalizeDumpedHTTPRequest(sfxRequest.DumpedHTTPRequest)
 				if got != expected {
 					t.Errorf(
-						"NewSFXRequest returned an SFXRequest with incorrect DumpedHTTPRequest string for %s: "+
+						"NewSFXRequest returned an SFXRequest with incorrect DumpedHTTPRequest string for '%s': "+
 							"expected '%s', got '%s'",
 						testCase.name,
 						expected,
@@ -102,10 +101,4 @@ func TestFilterOpenURLParams(t *testing.T) {
 			}
 		})
 	}
-}
-
-func normalizeDumpedHTTPRequest(dumpedHTTPRequest string) string {
-	multipleWhitespaceRegexp := regexp.MustCompile(`\s+`)
-
-	return multipleWhitespaceRegexp.ReplaceAllString(strings.TrimSpace(dumpedHTTPRequest), " ")
 }

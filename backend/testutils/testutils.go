@@ -6,7 +6,9 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"regexp"
 	"runtime"
+	"strings"
 )
 
 //go:embed testdata/test-cases.json
@@ -80,6 +82,11 @@ func GoldenFile(testCase TestCase) string {
 	return testutilsPath + "/testdata/golden/" + testCase.Key + ".json"
 }
 
+func NormalizeDumpedHTTPRequest(dumpedHTTPRequest string) string {
+	multipleWhitespaceRegexp := regexp.MustCompile(`\s+`)
+
+	return multipleWhitespaceRegexp.ReplaceAllString(strings.TrimSpace(dumpedHTTPRequest), " ")
+}
 func primoFakeResponseFileFRBRMemberSearch(testCase TestCase) string {
 	return testutilsPath + "/testdata/fixtures/primo-fake-responses/frbr-member-search-data/" + testCase.Key + ".json"
 }
