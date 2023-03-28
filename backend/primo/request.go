@@ -50,8 +50,6 @@ func (primoRequest PrimoRequest) do() (*PrimoResponse, error) {
 		return primoResponse, err
 	}
 
-	primoResponse.dedupeAndSortLinks()
-
 	return primoResponse, nil
 }
 

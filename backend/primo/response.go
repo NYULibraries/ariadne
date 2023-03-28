@@ -134,5 +134,7 @@ func (primoResponse *PrimoResponse) getLinks(isbn string, isbnSearchResponse API
 		}
 	}
 
+	primoResponse.dedupeAndSortLinks()
+
 	return nil
 }
