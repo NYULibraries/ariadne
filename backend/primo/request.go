@@ -66,12 +66,12 @@ func NewPrimoRequest(queryString string) (*PrimoRequest, error) {
 	// no harm done since currently these requests don't have a body.
 	primoRequest.ISBNSearchHTTPRequest = (*httpRequest)
 
-	dumpedHTTPRequest, err := httputil.DumpRequest(&primoRequest.ISBNSearchHTTPRequest, true)
+	dumpedISBNSearchHTTPRequest, err := httputil.DumpRequest(&primoRequest.ISBNSearchHTTPRequest, true)
 	if err != nil {
 		// TODO: Log this.  PrimoRequest.DumpedISBNSearchHTTPRequest field is for
 		// debugging only - it should not block the user request.
 	}
-	primoRequest.DumpedISBNSearchHTTPRequest = string(dumpedHTTPRequest)
+	primoRequest.DumpedISBNSearchHTTPRequest = string(dumpedISBNSearchHTTPRequest)
 
 	return primoRequest, nil
 }
