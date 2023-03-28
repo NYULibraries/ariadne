@@ -41,8 +41,12 @@ func ResolverHandler(w http.ResponseWriter, r *http.Request) {
 	} else {
 		primoResponse, err := getPrimoResponse(r.URL.RawQuery)
 		if err != nil {
-			handleError(err, w, err.Error())
-			return
+			// If we got this far, we already know that Ariadne was able to
+			// successfully query SFX request, so we do not want this Primo request
+			// error to be fatal, since this we still technically have a valid
+			// Ariadne request.  We return the SFX results, which at least will
+			// have "helper" links.
+			responseJSON = makeJSONResponseFromSFXResponse(sfxResponse)
 		}
 
 		if primoResponse.IsFound() {
