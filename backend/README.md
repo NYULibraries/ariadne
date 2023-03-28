@@ -146,7 +146,7 @@ and then fed to the ariadne command.  This command is exactly the same as the pr
 * Get the initial Primo ISBN member search HTTP request for Hamlet:
 
 ```shell
-./ariadne debug primo-request $( < hamlet.txt )
+./ariadne debug primo-isbn-search-request $( < hamlet.txt )
 ```
 
 * Get the Primo FRBR member search HTTP requests for Hamlet (these secondary requests

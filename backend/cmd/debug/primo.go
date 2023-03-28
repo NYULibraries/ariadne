@@ -11,7 +11,7 @@ import (
 func init() {
 	DebugCmd.AddCommand(dumpPrimoAPIResponsesCmd)
 	DebugCmd.AddCommand(dumpPrimoFRBRMemberRequestsCmd)
-	DebugCmd.AddCommand(dumpPrimoHTTPRequestCmd)
+	DebugCmd.AddCommand(dumpPrimoISBNSearchHTTPRequestCmd)
 	DebugCmd.AddCommand(dumpPrimoHTTPResponsesCmd)
 	DebugCmd.AddCommand(primoLinksJSONCmd)
 }
@@ -48,10 +48,10 @@ var dumpPrimoFRBRMemberRequestsCmd = &cobra.Command{
 	},
 }
 
-var dumpPrimoHTTPRequestCmd = &cobra.Command{
-	Use:     "primo-request [query string]",
+var dumpPrimoISBNSearchHTTPRequestCmd = &cobra.Command{
+	Use:     "primo-isbn-search-request [query string]",
 	Short:   "Dump Primo HTTP request for query string: initial ISBN search request only",
-	Example: "ariadne debug primo-request '?sid=&aulast=Shakespeare&aufirst=William&genre=book&title=The%20Oxford%20Shakespeare:%20Hamlet&date=1987&isbn=9780198129103'",
+	Example: "ariadne debug primo-isbn-search-request '?sid=&aulast=Shakespeare&aufirst=William&genre=book&title=The%20Oxford%20Shakespeare:%20Hamlet&date=1987&isbn=9780198129103'",
 	Args:    cobra.MinimumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		var queryString = args[0]
@@ -127,7 +127,7 @@ func dumpPrimoFRBRMemberRequests(queryString string) (string, error) {
 	}
 
 	var output string
-	for i, dumpedHTTPRequest := range primoResponse.DumpedHTTPRequests {
+	for i, dumpedHTTPRequest := range primoResponse.DumpedFRBRMemberHTTPRequests {
 		output += formatDumpedHTTPRequestEntry(dumpedHTTPRequest, i)
 	}
 
@@ -140,7 +140,7 @@ func dumpPrimoHTTPRequest(queryString string) (string, error) {
 		return queryString, err
 	}
 
-	return primoRequest.DumpedHTTPRequest, nil
+	return primoRequest.DumpedISBNSearchHTTPRequest, nil
 }
 
 func dumpPrimoHTTPResponses(queryString string) (string, error) {
@@ -182,7 +182,7 @@ func linksJSON(queryString string) (string, error) {
 }
 
 func formatDumpedHTTPRequestEntry(dumpedHTTPRequest string, i int) string {
-	return formatDumpedEntry("DumpedHTTPRequest", dumpedHTTPRequest, i)
+	return formatDumpedEntry("DumpedISBNSearchHTTPRequest", dumpedHTTPRequest, i)
 }
 
 func formatDumpedHTTPResponseEntry(dumpedHTTPResponse string, i int) string {

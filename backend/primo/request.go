@@ -14,16 +14,16 @@ const FRBRMemberSearchQueryParamName = "multiFacets"
 const normalizedQueryParamNameISBN = "isbn"
 
 type PrimoRequest struct {
-	DumpedHTTPRequest     string
-	HTTPRequestISBNSearch http.Request
-	QueryStringValues     url.Values
+	DumpedISBNSearchHTTPRequest string
+	ISBNSearchHTTPRequest       http.Request
+	QueryStringValues           url.Values
 }
 
 func (primoRequest PrimoRequest) do() (*PrimoResponse, error) {
 	primoResponse := &PrimoResponse{}
 
 	client := http.Client{}
-	httpResponse, err := client.Do(&primoRequest.HTTPRequestISBNSearch)
+	httpResponse, err := client.Do(&primoRequest.ISBNSearchHTTPRequest)
 	if err != nil {
 		return &PrimoResponse{}, fmt.Errorf("could not do request to Primo server: %v", err)
 	}
@@ -76,22 +76,22 @@ func (primoRequest PrimoRequest) do() (*PrimoResponse, error) {
 func getDocsForFRBRGroup(queryStringValues url.Values, frbrGroupID string, primoResponse *PrimoResponse) ([]Doc, error) {
 	docs := []Doc{}
 
-	httpRequest, err := newPrimoHTTPRequestFRBR(queryStringValues, &frbrGroupID)
+	httpRequest, err := newPrimoFRBRMemberHTTPRequest(queryStringValues, &frbrGroupID)
 	if err != nil {
 		return docs, fmt.Errorf("could not create new FRBR group Primo request: %v", err)
 	}
 
 	// NOTE: This appears to drain httpRequest.Body, but currently these requests
 	// don't have a body, so we should be okay.
-	primoResponse.HTTPRequestsFRBRMember = append(primoResponse.HTTPRequestsFRBRMember, (*httpRequest))
+	primoResponse.FRBRMemberHTTPRequests = append(primoResponse.FRBRMemberHTTPRequests, (*httpRequest))
 
 	dumpedHTTPRequest, err := httputil.DumpRequest(httpRequest, true)
 	if err != nil {
-		// TODO: Log this.  PrimoRequest.DumpedHTTPRequest field is for
+		// TODO: Log this.  PrimoRequest.DumpedISBNSearchHTTPRequest field is for
 		// debugging only - it should not block the user request.
 	}
-	primoResponse.DumpedHTTPRequests =
-		append(primoResponse.DumpedHTTPRequests, string(dumpedHTTPRequest))
+	primoResponse.DumpedFRBRMemberHTTPRequests =
+		append(primoResponse.DumpedFRBRMemberHTTPRequests, string(dumpedHTTPRequest))
 
 	client := http.Client{}
 	httpResponse, err := client.Do(httpRequest)
@@ -121,22 +121,22 @@ func NewPrimoRequest(queryString string) (*PrimoRequest, error) {
 
 	primoRequest.QueryStringValues = queryStringValues
 
-	httpRequest, err := newPrimoHTTPRequest(queryStringValues)
+	httpRequest, err := newPrimoISBNSearchHTTPRequest(queryStringValues)
 	if err != nil {
 		return primoRequest, fmt.Errorf("could not create new Primo request: %v", err)
 	}
 	// NOTE: This appears to drain httpRequest.Body, so when getting the dumped
-	// HTTP request later, make sure to get it from primoRequest.HTTPRequestISBNSearch
+	// HTTP request later, make sure to get it from primoRequest.ISBNSearchHTTPRequest
 	// and not httpRequest.  If httpRequest is used later accidentally, probably
 	// no harm done since currently these requests don't have a body.
-	primoRequest.HTTPRequestISBNSearch = (*httpRequest)
+	primoRequest.ISBNSearchHTTPRequest = (*httpRequest)
 
-	dumpedHTTPRequest, err := httputil.DumpRequest(&primoRequest.HTTPRequestISBNSearch, true)
+	dumpedHTTPRequest, err := httputil.DumpRequest(&primoRequest.ISBNSearchHTTPRequest, true)
 	if err != nil {
-		// TODO: Log this.  PrimoRequest.DumpedHTTPRequest field is for
+		// TODO: Log this.  PrimoRequest.DumpedISBNSearchHTTPRequest field is for
 		// debugging only - it should not block the user request.
 	}
-	primoRequest.DumpedHTTPRequest = string(dumpedHTTPRequest)
+	primoRequest.DumpedISBNSearchHTTPRequest = string(dumpedHTTPRequest)
 
 	return primoRequest, nil
 }
@@ -166,11 +166,11 @@ func isActiveFRBRGroupType(doc Doc) bool {
 	return result
 }
 
-func newPrimoHTTPRequest(queryStringValues url.Values) (*http.Request, error) {
-	return newPrimoHTTPRequestFRBR(queryStringValues, nil)
+func newPrimoISBNSearchHTTPRequest(queryStringValues url.Values) (*http.Request, error) {
+	return newPrimoFRBRMemberHTTPRequest(queryStringValues, nil)
 }
 
-func newPrimoHTTPRequestFRBR(queryStringValues url.Values, frbrGroupID *string) (*http.Request, error) {
+func newPrimoFRBRMemberHTTPRequest(queryStringValues url.Values, frbrGroupID *string) (*http.Request, error) {
 	isbn := getISBN(queryStringValues)
 	if isbn == "" {
 		return nil, fmt.Errorf("query string params do not contain required ISBN param: %v", queryStringValues)
