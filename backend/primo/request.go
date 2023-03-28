@@ -12,6 +12,7 @@ import (
 const activeFRBRGroupType = "5"
 const FRBRMemberSearchQueryParamName = "multiFacets"
 const normalizedQueryParamNameISBN = "isbn"
+const normalizedQueryParamNameRFTISBN = "rft.isbn"
 
 type PrimoRequest struct {
 	DumpedISBNSearchHTTPRequest string
@@ -80,8 +81,15 @@ func getISBN(queryStringValues url.Values) string {
 	isbn := ""
 	for queryParamName, queryParamValue := range queryStringValues {
 		normalizedQueryParamName := strings.ToLower(queryParamName)
-		if normalizedQueryParamName == normalizedQueryParamNameISBN {
+		// Prefer rft.* param name over non-rft-prefixed param name.
+		if normalizedQueryParamName == normalizedQueryParamNameRFTISBN &&
+			queryParamValue[0] != "" {
 			isbn = queryParamValue[0]
+			break
+		} else if normalizedQueryParamName == normalizedQueryParamNameISBN &&
+			queryParamValue[0] != "" {
+			isbn = queryParamValue[0]
+			break
 		}
 	}
 
