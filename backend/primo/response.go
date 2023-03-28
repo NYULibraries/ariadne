@@ -104,3 +104,35 @@ func (primoResponse *PrimoResponse) dedupeAndSortLinks() []Link {
 
 	return links
 }
+
+func (primoResponse *PrimoResponse) getLinks(isbn string, isbnSearchResponse APIResponse) error {
+	for _, doc := range isbnSearchResponse.Docs {
+		if isActiveFRBRGroupType(doc) {
+			// This makes another HTTP request to Primo and fetches docs for the
+			// active FRBR group.
+			docsForFRBRGroup, err :=
+				getDocsForFRBRGroup(isbn, doc.PNX.Facets.FRBRGroupID[0], primoResponse)
+			if err != nil {
+				return fmt.Errorf("error fetching FRBR group links: %v", err)
+			}
+			// Only collect links from docs that match the user-specified ISBN.
+			for _, frbrGroupDoc := range docsForFRBRGroup {
+				isMatch := false
+				for _, isbnToTest := range frbrGroupDoc.PNX.Search.ISBN {
+					if isbnToTest == isbn {
+						isMatch = true
+						break
+					}
+				}
+				if isMatch {
+					primoResponse.addLinks(frbrGroupDoc)
+				}
+			}
+		} else {
+			// No FRBR groups involved, just collect the links straight from this doc.
+			primoResponse.addLinks(doc)
+		}
+	}
+
+	return nil
+}

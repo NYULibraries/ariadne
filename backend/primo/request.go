@@ -40,32 +40,14 @@ func (primoRequest PrimoRequest) do() (*PrimoResponse, error) {
 	// As mentioned above, we need to retrieve the JSON from primoResponse.APIResponses[0]
 	// because httpResponse.Body has been drained.
 	isbnSearchResponse := primoResponse.APIResponses[0]
-	for _, doc := range isbnSearchResponse.Docs {
-		if isActiveFRBRGroupType(doc) {
-			// This makes another HTTP request to Primo and fetches docs for the
-			// active FRBR group.
-			docsForFRBRGroup, err :=
-				getDocsForFRBRGroup(primoRequest.QueryStringValues, doc.PNX.Facets.FRBRGroupID[0], primoResponse)
-			if err != nil {
-				return primoResponse, fmt.Errorf("error fetching FRBR group links: %v", err)
-			}
-			// Only collect links from docs that match the user-specified ISBN.
-			for _, frbrGroupDoc := range docsForFRBRGroup {
-				isMatch := false
-				for _, isbnToTest := range frbrGroupDoc.PNX.Search.ISBN {
-					if isbnToTest == primoRequest.QueryStringValues.Get(normalizedQueryParamNameISBN) {
-						isMatch = true
-						break
-					}
-				}
-				if isMatch {
-					primoResponse.addLinks(frbrGroupDoc)
-				}
-			}
-		} else {
-			// No FRBR groups involved, just collect the links straight from this doc.
-			primoResponse.addLinks(doc)
-		}
+
+	isbn := getISBN(primoRequest.QueryStringValues)
+
+	// Getting the links is a slightly complicated process which might require
+	// additional HTTP requests to the Primo server.
+	err = primoResponse.getLinks(isbn, isbnSearchResponse)
+	if err != nil {
+		return primoResponse, err
 	}
 
 	primoResponse.dedupeAndSortLinks()
@@ -73,10 +55,10 @@ func (primoRequest PrimoRequest) do() (*PrimoResponse, error) {
 	return primoResponse, nil
 }
 
-func getDocsForFRBRGroup(queryStringValues url.Values, frbrGroupID string, primoResponse *PrimoResponse) ([]Doc, error) {
+func getDocsForFRBRGroup(isbn, frbrGroupID string, primoResponse *PrimoResponse) ([]Doc, error) {
 	docs := []Doc{}
 
-	httpRequest, err := newPrimoFRBRMemberHTTPRequest(queryStringValues, &frbrGroupID)
+	httpRequest, err := newPrimoFRBRMemberHTTPRequest(isbn, &frbrGroupID)
 	if err != nil {
 		return docs, fmt.Errorf("could not create new FRBR group Primo request: %v", err)
 	}
@@ -167,13 +149,14 @@ func isActiveFRBRGroupType(doc Doc) bool {
 }
 
 func newPrimoISBNSearchHTTPRequest(queryStringValues url.Values) (*http.Request, error) {
-	return newPrimoFRBRMemberHTTPRequest(queryStringValues, nil)
+	isbn := getISBN(queryStringValues)
+
+	return newPrimoFRBRMemberHTTPRequest(isbn, nil)
 }
 
-func newPrimoFRBRMemberHTTPRequest(queryStringValues url.Values, frbrGroupID *string) (*http.Request, error) {
-	isbn := getISBN(queryStringValues)
+func newPrimoFRBRMemberHTTPRequest(isbn string, frbrGroupID *string) (*http.Request, error) {
 	if isbn == "" {
-		return nil, fmt.Errorf("query string params do not contain required ISBN param: %v", queryStringValues)
+		return nil, fmt.Errorf("query string params do not contain required ISBN param")
 	}
 
 	primoRequestParams := url.Values{
