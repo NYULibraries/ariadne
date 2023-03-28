@@ -117,14 +117,7 @@ func (primoResponse *PrimoResponse) getLinks(isbn string, isbnSearchResponse API
 			}
 			// Only collect links from docs that match the user-specified ISBN.
 			for _, frbrGroupDoc := range docsForFRBRGroup {
-				isMatch := false
-				for _, isbnToTest := range frbrGroupDoc.PNX.Search.ISBN {
-					if isbnToTest == isbn {
-						isMatch = true
-						break
-					}
-				}
-				if isMatch {
+				if isMatch(frbrGroupDoc, isbn) {
 					primoResponse.addLinks(frbrGroupDoc)
 				}
 			}
@@ -137,4 +130,16 @@ func (primoResponse *PrimoResponse) getLinks(isbn string, isbnSearchResponse API
 	primoResponse.dedupeAndSortLinks()
 
 	return nil
+}
+
+func isMatch(frbrGroupDoc Doc, isbn string) bool {
+	isMatch := false
+	for _, isbnToTest := range frbrGroupDoc.PNX.Search.ISBN {
+		if isbnToTest == isbn {
+			isMatch = true
+			break
+		}
+	}
+
+	return isMatch
 }
