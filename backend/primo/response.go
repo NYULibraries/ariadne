@@ -110,7 +110,7 @@ func (primoResponse *PrimoResponse) dedupeAndSortLinks() []Link {
 func (primoResponse *PrimoResponse) getDocsForFRBRGroup(isbn, frbrGroupID string) ([]Doc, error) {
 	docs := []Doc{}
 
-	httpRequest, err := newPrimoFRBRMemberHTTPRequest(isbn, &frbrGroupID)
+	httpRequest, err := newPrimoHTTPRequest(isbn, &frbrGroupID)
 	if err != nil {
 		return docs, fmt.Errorf("could not create new FRBR group Primo request: %v", err)
 	}
