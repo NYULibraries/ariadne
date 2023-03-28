@@ -147,13 +147,6 @@ func isActiveFRBRGroupType(doc Doc) bool {
 
 	return result
 }
-
-func newPrimoISBNSearchHTTPRequest(queryStringValues url.Values) (*http.Request, error) {
-	isbn := getISBN(queryStringValues)
-
-	return newPrimoFRBRMemberHTTPRequest(isbn, nil)
-}
-
 func newPrimoFRBRMemberHTTPRequest(isbn string, frbrGroupID *string) (*http.Request, error) {
 	if isbn == "" {
 		return nil, fmt.Errorf("query string params do not contain required ISBN param")
@@ -183,4 +176,10 @@ func newPrimoFRBRMemberHTTPRequest(isbn string, frbrGroupID *string) (*http.Requ
 	}
 
 	return request, nil
+}
+
+func newPrimoISBNSearchHTTPRequest(queryStringValues url.Values) (*http.Request, error) {
+	isbn := getISBN(queryStringValues)
+
+	return newPrimoFRBRMemberHTTPRequest(isbn, nil)
 }
