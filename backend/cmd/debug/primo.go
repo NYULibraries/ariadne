@@ -48,22 +48,6 @@ var dumpPrimoFRBRMemberRequestsCmd = &cobra.Command{
 	},
 }
 
-var dumpPrimoISBNSearchHTTPRequestCmd = &cobra.Command{
-	Use:     "primo-isbn-search-request [query string]",
-	Short:   "Dump Primo HTTP request for query string: initial ISBN search request only",
-	Example: "ariadne debug primo-isbn-search-request '?sid=&aulast=Shakespeare&aufirst=William&genre=book&title=The%20Oxford%20Shakespeare:%20Hamlet&date=1987&isbn=9780198129103'",
-	Args:    cobra.MinimumNArgs(1),
-	Run: func(cmd *cobra.Command, args []string) {
-		var queryString = args[0]
-		dump, err := dumpPrimoHTTPRequest(queryString)
-		if err != nil {
-			fmt.Println(err)
-		}
-
-		fmt.Println(dump)
-	},
-}
-
 var dumpPrimoHTTPResponsesCmd = &cobra.Command{
 	Use:     "primo-responses [query string]",
 	Short:   "Dump Primo HTTP responses for query string",
@@ -72,6 +56,22 @@ var dumpPrimoHTTPResponsesCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		var queryString = args[0]
 		dump, err := dumpPrimoHTTPResponses(queryString)
+		if err != nil {
+			fmt.Println(err)
+		}
+
+		fmt.Println(dump)
+	},
+}
+
+var dumpPrimoISBNSearchHTTPRequestCmd = &cobra.Command{
+	Use:     "primo-isbn-search-request [query string]",
+	Short:   "Dump Primo HTTP request for query string: initial ISBN search request only",
+	Example: "ariadne debug primo-isbn-search-request '?sid=&aulast=Shakespeare&aufirst=William&genre=book&title=The%20Oxford%20Shakespeare:%20Hamlet&date=1987&isbn=9780198129103'",
+	Args:    cobra.MinimumNArgs(1),
+	Run: func(cmd *cobra.Command, args []string) {
+		var queryString = args[0]
+		dump, err := dumpPrimoHTTPRequest(queryString)
 		if err != nil {
 			fmt.Println(err)
 		}
