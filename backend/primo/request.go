@@ -29,19 +29,27 @@ func (primoRequest PrimoRequest) do() (*PrimoResponse, error) {
 	}
 	defer httpResponse.Body.Close()
 
+	// Note that this drains httpResponse.Body and saves it as the first element
+	// of primoResponse.APIResponses as a JSON string, so when we need to parse
+	// the response later we'll need to get it from primoResponse.APIResponses[0]/
 	err = primoResponse.addToPrimoResponse(httpResponse)
 	if err != nil {
 		return primoResponse, fmt.Errorf("error adding to Primo response: %v", err)
 	}
 
+	// As mentioned above, we need to retrieve the JSON from primoResponse.APIResponses[0]
+	// because httpResponse.Body has been drained.
 	isbnSearchResponse := primoResponse.APIResponses[0]
 	for _, doc := range isbnSearchResponse.Docs {
 		if isActiveFRBRGroupType(doc) {
+			// This makes another HTTP request to Primo and fetches docs for the
+			// active FRBR group.
 			docsForFRBRGroup, err :=
 				getDocsForFRBRGroup(primoRequest.QueryStringValues, doc.PNX.Facets.FRBRGroupID[0], primoResponse)
 			if err != nil {
 				return primoResponse, fmt.Errorf("error fetching FRBR group links: %v", err)
 			}
+			// Only collect links from docs that match the user-specified ISBN.
 			for _, frbrGroupDoc := range docsForFRBRGroup {
 				isMatch := false
 				for _, isbnToTest := range frbrGroupDoc.PNX.Search.ISBN {
@@ -55,6 +63,7 @@ func (primoRequest PrimoRequest) do() (*PrimoResponse, error) {
 				}
 			}
 		} else {
+			// No FRBR groups involved, just collect the links straight from this doc.
 			primoResponse.addLinks(doc)
 		}
 	}
