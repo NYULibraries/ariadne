@@ -134,15 +134,6 @@ func dumpPrimoFRBRMemberRequests(queryString string) (string, error) {
 	return output, nil
 }
 
-func dumpPrimoISBNSearchHTTPRequest(queryString string) (string, error) {
-	primoRequest, err := primo.NewPrimoRequest(queryString)
-	if err != nil {
-		return queryString, err
-	}
-
-	return primoRequest.DumpedISBNSearchHTTPRequest, nil
-}
-
 func dumpPrimoHTTPResponses(queryString string) (string, error) {
 	primoRequest, err := primo.NewPrimoRequest(queryString)
 	if err != nil {
@@ -160,6 +151,15 @@ func dumpPrimoHTTPResponses(queryString string) (string, error) {
 	}
 
 	return output, nil
+}
+
+func dumpPrimoISBNSearchHTTPRequest(queryString string) (string, error) {
+	primoRequest, err := primo.NewPrimoRequest(queryString)
+	if err != nil {
+		return queryString, err
+	}
+
+	return primoRequest.DumpedISBNSearchHTTPRequest, nil
 }
 
 func linksJSON(queryString string) (string, error) {
