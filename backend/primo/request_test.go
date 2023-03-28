@@ -14,12 +14,6 @@ const testISBN = "1111111111111"
 // Can't be const because need to generate a pointer to it.
 var testFRBRGroupID = "2222222222"
 
-var genericParams = url.Values{
-	"param1": {"1"},
-	"param2": {"2"},
-	"param3": {"3"},
-}
-
 var sharedTestCases = []struct {
 	name                                string
 	expectedDumpedISBNSearchHTTPRequest string
