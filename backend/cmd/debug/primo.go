@@ -71,7 +71,7 @@ var dumpPrimoISBNSearchHTTPRequestCmd = &cobra.Command{
 	Args:    cobra.MinimumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		var queryString = args[0]
-		dump, err := dumpPrimoHTTPRequest(queryString)
+		dump, err := dumpPrimoISBNSearchHTTPRequest(queryString)
 		if err != nil {
 			fmt.Println(err)
 		}
@@ -134,7 +134,7 @@ func dumpPrimoFRBRMemberRequests(queryString string) (string, error) {
 	return output, nil
 }
 
-func dumpPrimoHTTPRequest(queryString string) (string, error) {
+func dumpPrimoISBNSearchHTTPRequest(queryString string) (string, error) {
 	primoRequest, err := primo.NewPrimoRequest(queryString)
 	if err != nil {
 		return queryString, err
