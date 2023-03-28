@@ -9,11 +9,13 @@ import (
 	"sort"
 )
 
+type Delivery struct {
+	Link []Link `json:"link"`
+}
+
 type Doc struct {
-	Delivery struct {
-		Link []Link `json:"link"`
-	} `json:"delivery"`
-	PNX struct {
+	Delivery Delivery `json:"delivery"`
+	PNX      struct {
 		Facets struct {
 			FRBRType    []string `json:"frbrtype"`
 			FRBRGroupID []string `json:"frbrgroupid"`
