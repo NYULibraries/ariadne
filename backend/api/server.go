@@ -80,11 +80,6 @@ func getSFXResponse(queryString string) (*sfx.SFXResponse, error) {
 	return sfx.Do(sfxRequest)
 }
 
-func setHeaders(w *http.ResponseWriter) {
-	(*w).Header().Set("Access-Control-Allow-Origin", "*")
-	(*w).Header().Set("Content-Type", "application/json")
-}
-
 func handleBadRequestError(err error, w http.ResponseWriter, message string) {
 	log.Println(err)
 
@@ -258,4 +253,9 @@ func recoverWrap(handler http.Handler) http.Handler {
 
 		handler.ServeHTTP(w, r)
 	})
+}
+
+func setHeaders(w *http.ResponseWriter) {
+	(*w).Header().Set("Access-Control-Allow-Origin", "*")
+	(*w).Header().Set("Content-Type", "application/json")
 }
