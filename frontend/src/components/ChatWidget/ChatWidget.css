@@ -18,8 +18,8 @@
 
 .ss-chat::before,
 .ss-chat.right::after {
-    font-family: "Material Icons";
-    content: "\e0cb";
+    font-family: "Material Symbols Sharp";
+    content: "\e0b7";
 }
 
 #chat_widget {
