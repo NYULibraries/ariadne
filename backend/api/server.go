@@ -18,8 +18,8 @@ const invalidSFXRequestErrorMessage = "Invalid SFX request"
 func NewRouter() *http.ServeMux {
 	router := http.NewServeMux()
 
-	router.HandleFunc("/healthcheck", healthCheck)
-	router.HandleFunc("/v0/", ResolverHandler)
+	router.Handle("/healthcheck", http.HandlerFunc(healthCheck))
+	router.Handle("/v0/", recoverWrap(http.HandlerFunc(ResolverHandler)))
 
 	return router
 }
@@ -219,4 +219,36 @@ func makeJSONResponseFromSFXResponse(sfxResponse *sfx.SFXResponse) string {
 	}
 
 	return string(responseJSONBytes)
+}
+
+// Based on accepted answer for:
+//   https://stackoverflow.com/questions/28745648/global-recover-handler-for-golang-http-panic
+func recoverWrap(handler http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		defer func() {
+			recoverValue := recover()
+			if recoverValue != nil {
+				var err error
+				switch recoverValueType := recoverValue.(type) {
+				case string:
+					err = errors.New(recoverValueType)
+				case error:
+					err = recoverValueType
+				default:
+					err = errors.New("Unknown error")
+				}
+
+				response := Response{
+					Errors:  []string{err.Error()},
+					Found:   false,
+					Records: []Record{},
+				}
+				responseJSON, _ := json.MarshalIndent(response, "", "    ")
+
+				http.Error(w, string(responseJSON), http.StatusInternalServerError)
+			}
+		}()
+
+		handler.ServeHTTP(w, r)
+	})
 }
