@@ -233,7 +233,7 @@ func TestNewPrimoRequest(t *testing.T) {
 	}
 }
 
-func TestNewPrimoFRBRMemberHTTPRequest(t *testing.T) {
+func TestNewPrimoHTTPRequest(t *testing.T) {
 	testCases := []struct {
 		isbn                                string
 		frbrGroupID                         *string
