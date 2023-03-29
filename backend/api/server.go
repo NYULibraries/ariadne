@@ -30,7 +30,7 @@ func ResolverHandler(w http.ResponseWriter, r *http.Request) {
 
 	sfxResponse, err := getSFXResponse(r.URL.RawQuery)
 	if err != nil {
-		handleError(err, w, err.Error())
+		handleBadRequestError(err, w, err.Error())
 		return
 	}
 
@@ -85,10 +85,17 @@ func setHeaders(w *http.ResponseWriter) {
 	(*w).Header().Set("Content-Type", "application/json")
 }
 
-func handleError(err error, w http.ResponseWriter, message string) {
+func handleBadRequestError(err error, w http.ResponseWriter, message string) {
 	log.Println(err)
-	w.WriteHeader(http.StatusBadRequest)
-	json.NewEncoder(w).Encode(map[string]interface{}{"status": "error", "message": message})
+
+	response := Response{
+		Errors:  []string{message},
+		Found:   false,
+		Records: []Record{},
+	}
+	responseJSON, _ := json.MarshalIndent(response, "", "    ")
+
+	http.Error(w, string(responseJSON), http.StatusBadRequest)
 }
 
 // healthCheck returns a successful response, that's it
