@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 
-import userEvent from '@testing-library/user-event';
 import React from 'react';
 import StableLink from './StableLink';
+import userEvent from '@testing-library/user-event';
 
 describe('StableLink', () => {
     beforeAll(() => {
@@ -15,13 +15,13 @@ describe('StableLink', () => {
 
     test('renders the main button', () => {
         render(<StableLink />);
-        const mainButton = screen.getByText('🔗 Create a stable link to this page');
+        const mainButton = screen.getByText('Create a stable link to this page');
         expect(mainButton).toBeInTheDocument();
     });
 
     test('clicking the main button shows the input field and copy button', () => {
         render(<StableLink />);
-        const mainButton = screen.getByText('🔗 Create a stable link to this page');
+        const mainButton = screen.getByText('Create a stable link to this page');
         userEvent.click(mainButton);
         const inputField = screen.getByRole('textbox');
         const copyButton = screen.getByText('Copy');
@@ -31,7 +31,7 @@ describe('StableLink', () => {
 
     test('clicking the close button hides the input field and copy button', () => {
         render(<StableLink />);
-        const mainButton = screen.getByText('🔗 Create a stable link to this page');
+        const mainButton = screen.getByText('Create a stable link to this page');
         userEvent.click(mainButton);
         const closeButton = screen.getByText('X');
         userEvent.click(closeButton);
@@ -43,7 +43,7 @@ describe('StableLink', () => {
 
     test('clicking the copy button copies the link to the clipboard', async () => {
         render(<StableLink />);
-        const mainButton = screen.getByText('🔗 Create a stable link to this page');
+        const mainButton = screen.getByText('Create a stable link to this page');
         userEvent.click(mainButton);
         const copyButton = screen.getByText('Copy');
         userEvent.click(copyButton);

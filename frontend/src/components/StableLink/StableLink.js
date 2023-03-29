@@ -41,58 +41,69 @@ const StableLink = () => {
     };
 
     return (
-        <div>
-            <button
-                onClick={handleClick}
-                onMouseEnter={() => setMainButtonHover(true)}
-                onMouseLeave={() => setMainButtonHover(false)}
-                style={{
-                    ...buttonStyle,
-                    backgroundColor: mainButtonHover ? '#6c07ae' : buttonStyle.backgroundColor,
-                }}
-            >
-                🔗 Create a stable link to this page
-            </button>
-            {inputVisible && (
-                <div>
-                    <input
-                        type="text"
-                        readOnly
-                        value={link}
-                        ref={inputRef}
-                        style={{
-                            borderRadius: '3px',
-                            backgroundColor: 'white',
-                            marginRight: '5px',
-                        }}
-                    />
-                    <button
-                        onClick={copyToClipboard}
-                        onMouseEnter={() => setCopyButtonHover(true)}
-                        onMouseLeave={() => setCopyButtonHover(false)}
-                        style={{
-                            ...buttonStyle,
-                            color: '#1C2127',
-                            backgroundColor: copyButtonHover ? '#e6e6e6' : 'white',
-                        }}
-                    >
-                        Copy
-                    </button>
-                    <button
-                        onClick={handleClose}
-                        onMouseEnter={() => setCloseButtonHover(true)}
-                        onMouseLeave={() => setCloseButtonHover(false)}
-                        style={{
-                            ...closeButtonStyle,
-                            backgroundColor: closeButtonHover ? '#e6e6e6' : 'white',
-                            textDecoration: closeButtonHover ? 'underline' : 'none',
-                        }}
-                    >
-                        X
-                    </button>
-                </div>
-            )}
-        </div>
+        <>
+            <style>{`
+                .link-icon::before {
+                    content: "\\e157";
+                    font-family: "Material Symbols Sharp";
+                    color: #fff;
+                    margin-right: 5px;
+                    vertical-align: middle;
+                }
+            `}</style>
+            <div>
+                <button
+                    onClick={handleClick}
+                    onMouseEnter={() => setMainButtonHover(true)}
+                    onMouseLeave={() => setMainButtonHover(false)}
+                    style={{
+                        ...buttonStyle,
+                        backgroundColor: mainButtonHover ? '#6c07ae' : buttonStyle.backgroundColor,
+                    }}
+                >
+                    <span className="link-icon"></span>Create a stable link to this page
+                </button>
+                {inputVisible && (
+                    <div>
+                        <input
+                            type="text"
+                            readOnly
+                            value={link}
+                            ref={inputRef}
+                            style={{
+                                borderRadius: '3px',
+                                backgroundColor: 'white',
+                                marginRight: '5px',
+                            }}
+                        />
+                        <button
+                            onClick={copyToClipboard}
+                            onMouseEnter={() => setCopyButtonHover(true)}
+                            onMouseLeave={() => setCopyButtonHover(false)}
+                            style={{
+                                ...buttonStyle,
+                                color: '#1C2127',
+                                backgroundColor: copyButtonHover ? '#e6e6e6' : 'white',
+                            }}
+                        >
+                            Copy
+                        </button>
+                        <button
+                            onClick={handleClose}
+                            onMouseEnter={() => setCloseButtonHover(true)}
+                            onMouseLeave={() => setCloseButtonHover(false)}
+                            style={{
+                                ...closeButtonStyle,
+                                backgroundColor: closeButtonHover ? '#e6e6e6' : 'white',
+                                textDecoration: closeButtonHover ? 'underline' : 'none',
+                            }}
+                        >
+                            X
+                        </button>
+                    </div>
+                )}
+            </div>
+        </>
     );
 };
 
