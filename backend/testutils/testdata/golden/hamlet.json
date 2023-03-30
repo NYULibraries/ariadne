@@ -1,13 +1,18 @@
 {
     "errors": [],
-    "found": false,
+    "found": true,
     "records": [
         {
             "citation_supplemental": {},
             "links": [
                 {
-                    "display_name": "Request via Interlibrary Loan",
-                    "url": "http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?year=1987\u0026aulast=Shakespeare\u0026genre=book\u0026isbn=0-19-812910-6\u0026aufirst=William\u0026title=The%20Oxford%20Shakespeare%3A%20Hamlet\u0026sid=DEFAULT%20(Via%20SFX)\u0026date=1987",
+                    "display_name": "Ebook Central",
+                    "url": "https://ebookcentral.proquest.com/lib/nyulibrary-ebooks/detail.action?docID=3055132",
+                    "coverage_text": ""
+                },
+                {
+                    "display_name": "Oxford Scholarly Editions Online (OSEO)",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://www.oxfordscholarlyeditions.com/view/10.1093/actrade/9780198129103.book.1/actrade-9780198129103-book-1",
                     "coverage_text": ""
                 }
             ]
