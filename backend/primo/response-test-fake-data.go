@@ -61,6 +61,44 @@ var fakeDumpedPrimoISBNSearchHTTPResponseInvalid = `HTTP/0.0 000 status code 0
 
 <invalid></invalid>`
 
+var fakeLinks = []Link{
+	{
+		HyperlinkText: "4",
+		LinkURL:       "https://fake.com/4/",
+		LinkType:      "http://purl.org/pnx/linkType/linktorsrc",
+	},
+	{
+		HyperlinkText: "1",
+		LinkURL:       "https://fake.com/1/",
+		LinkType:      "http://purl.org/pnx/linkType/linktorsrc",
+	},
+	{
+		HyperlinkText: "3",
+		LinkURL:       "https://fake.com/3/",
+		LinkType:      "http://purl.org/pnx/linkType/linktorsrc",
+	},
+	{
+		HyperlinkText: "2",
+		LinkURL:       "https://fake.com/2/",
+		LinkType:      "http://purl.org/pnx/linkType/linktorsrc",
+	},
+	{
+		HyperlinkText: "Duplicate of 1",
+		LinkURL:       "https://fake.com/1/",
+		LinkType:      "http://purl.org/pnx/linkType/linktorsrc",
+	},
+	{
+		HyperlinkText: "Another duplicate of 1",
+		LinkURL:       "https://fake.com/1/",
+		LinkType:      "http://purl.org/pnx/linkType/linktorsrc",
+	},
+	{
+		HyperlinkText: "Duplicate of 3",
+		LinkURL:       "https://fake.com/1/",
+		LinkType:      "http://purl.org/pnx/linkType/linktorsrc",
+	},
+}
+
 var fakePrimoISBNSearchAPIResponse = APIResponse{
 	Docs: []Doc{
 		{

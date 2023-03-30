@@ -130,6 +130,60 @@ func TestAddLinks(t *testing.T) {
 	}
 }
 
+func TestDedupeAndSortLinks(t *testing.T) {
+	testCases := []struct {
+		links         []Link
+		expectedLinks []Link
+	}{
+		{
+			links: fakeLinks,
+			expectedLinks: []Link{
+				{
+					HyperlinkText: "1",
+					LinkURL:       "https://fake.com/1/",
+					LinkType:      "http://purl.org/pnx/linkType/linktorsrc",
+				},
+				{
+					HyperlinkText: "2",
+					LinkURL:       "https://fake.com/2/",
+					LinkType:      "http://purl.org/pnx/linkType/linktorsrc",
+				},
+				{
+					HyperlinkText: "3",
+					LinkURL:       "https://fake.com/3/",
+					LinkType:      "http://purl.org/pnx/linkType/linktorsrc",
+				},
+				{
+					HyperlinkText: "4",
+					LinkURL:       "https://fake.com/4/",
+					LinkType:      "http://purl.org/pnx/linkType/linktorsrc",
+				},
+			},
+		},
+		// No links
+		{
+			links:         []Link{},
+			expectedLinks: []Link{},
+		},
+	}
+
+	for _, testCase := range testCases {
+		primoResponse := PrimoResponse{
+			Links: testCase.links,
+		}
+
+		dedupedAndSortedLinks := primoResponse.dedupeAndSortLinks()
+
+		expectedStringifiedLinks := stringifyLinks(testCase.expectedLinks)
+		gotStringifiedLinks := stringifyLinks(dedupedAndSortedLinks)
+
+		if gotStringifiedLinks != expectedStringifiedLinks {
+			t.Errorf("dedupeAndSortLinks did not correctly add links: "+
+				"expected \"%s\"; got \"%s\"", expectedStringifiedLinks, gotStringifiedLinks)
+		}
+	}
+}
+
 func TestIsFound(t *testing.T) {
 	testCases := []struct {
 		name           string
