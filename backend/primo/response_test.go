@@ -168,6 +168,12 @@ func TestIsMatch(t *testing.T) {
 	}
 }
 
+func stringifyAnything(thing any) string {
+	return fmt.Sprintf("%v", thing)
+}
+
 func stringifyAPIResponse(apiResponse APIResponse) string {
-	return fmt.Sprintf("%v", apiResponse)
+	return stringifyAnything(apiResponse)
+}
+
 }
