@@ -96,6 +96,40 @@ func TestAddHTTPResponseData(t *testing.T) {
 	}
 }
 
+func TestAddLinks(t *testing.T) {
+	testCases := []struct {
+		doc           Doc
+		expectedLinks []Link
+	}{
+		{
+			doc: fakePrimoISBNSearchAPIResponse.Docs[0],
+			expectedLinks: []Link{
+				{
+					HyperlinkText: "2",
+					LinkURL:       "https://fake.com/2/",
+					LinkType:      "http://purl.org/pnx/linkType/linktorsrc",
+				},
+				{
+					HyperlinkText: "4",
+					LinkURL:       "https://fake.com/4/",
+					LinkType:      "http://purl.org/pnx/linkType/linktorsrc",
+				},
+			},
+		},
+	}
+
+	for _, testCase := range testCases {
+		primoResponse := PrimoResponse{}
+		primoResponse.addLinks(testCase.doc)
+		expectedStringifiedLinks := stringifyLinks(testCase.expectedLinks)
+		gotStringifiedLinks := stringifyLinks(primoResponse.Links)
+		if gotStringifiedLinks != expectedStringifiedLinks {
+			t.Errorf("addLinks did not correctly add links: "+
+				"expected \"%s\"; got \"%s\"", expectedStringifiedLinks, gotStringifiedLinks)
+		}
+	}
+}
+
 func TestIsFound(t *testing.T) {
 	testCases := []struct {
 		name           string
@@ -176,4 +210,6 @@ func stringifyAPIResponse(apiResponse APIResponse) string {
 	return stringifyAnything(apiResponse)
 }
 
+func stringifyLinks(links []Link) string {
+	return stringifyAnything(links)
 }
