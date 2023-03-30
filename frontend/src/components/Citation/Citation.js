@@ -1,3 +1,5 @@
+import "./Citation.css";
+
 import { useEffect } from 'react';
 
 const Citation = () => {
