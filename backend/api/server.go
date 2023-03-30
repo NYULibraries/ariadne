@@ -224,7 +224,8 @@ func makeJSONResponseFromSFXResponse(sfxResponse *sfx.SFXResponse) string {
 }
 
 // Based on accepted answer for:
-//   https://stackoverflow.com/questions/28745648/global-recover-handler-for-golang-http-panic
+//
+//	https://stackoverflow.com/questions/28745648/global-recover-handler-for-golang-http-panic
 func recoverWrap(handler http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		defer func() {
