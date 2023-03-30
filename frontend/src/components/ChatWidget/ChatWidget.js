@@ -19,7 +19,11 @@ const ChatWidget = () => {
             <aside id="chat_widget" tabIndex="-1">
                 <div className="chat-container">
                     {!showChat && (
-                        <button className="button chat-tab ss-chat chat-button" onClick={handleChatToggle}>
+                        <button
+                            className="button ss-chat chat-button"
+                            onClick={handleChatToggle}
+                        >
+                            <img src="/images/chat-icon.svg" alt="Chat-Symbol" className="chat-icon" />
                             Chat with us
                         </button>
                     )}
