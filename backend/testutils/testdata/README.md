@@ -1,6 +1,6 @@
 # Test cases
 
-## Chosen by the dev team
+## Chosen or created by the dev team
 
 * **can-community-task-groups-learn-from-the-principles-of-group-therapy**: requires
   query string `sid` -> `rfr_id` to prevent SFX error "XSS violation occured [sic]."
@@ -12,6 +12,8 @@ and not testing for the existence of the `date` param with an empty value.
 * **moral-psychology-is-relationship-regulation**: query string does not have `rft.genre`
   or `genre` in the query string
 * **editorial-cartoon**: `genre` is "unknown"
+* **contrived-frbr-group-test-case**: contrived test case to thoroughly exercise
+the `primo` package code.  Obviously also a Primo service test case (see next section).
 
 ## Test case group for fallback to Primo
 
@@ -20,6 +22,8 @@ and not testing for the existence of the `date` param with an empty value.
 * **our-lady-of-everyday-life**: also a targeted test case (see next section).
 ISBN-based search handled by Primo.  SFX returns no links.  Primo returns two eBook links.
 * **the-sino-tibetan-languages**: neither SFX nor Primo return links.
+* **contrived-frbr-group-test-case**: contrived test case created by the dev team
+to thoroughly exercise the `primo` package code.
 
 ## Test case groups used by the [sampler](https://github.com/NYULibraries/openurl-link-resolver-sampler)
 

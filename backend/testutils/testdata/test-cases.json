@@ -73,5 +73,10 @@
         "key": "hamlet",
         "name": "Hamlet",
         "queryString": "?sid=&aulast=Shakespeare&aufirst=William&genre=book&title=The%20Oxford%20Shakespeare:%20Hamlet&date=1987&isbn=9780198129103"
+    },
+    {
+        "key": "contrived-frbr-group-test-case",
+        "name": "Contrived FRBR Group Test Case",
+        "queryString": "?title=Contrived%20FRBR%20Group%20Test%20Case&date=1999&isbn=1111111111111"
     }
 ]

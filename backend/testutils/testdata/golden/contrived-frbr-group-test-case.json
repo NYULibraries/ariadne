@@ -1,0 +1,31 @@
+{
+    "errors": [],
+    "found": true,
+    "records": [
+        {
+            "citation_supplemental": {},
+            "links": [
+                {
+                    "display_name": "FRBR member search results doc 1, link 1",
+                    "url": "https://fake-frbr-member-search.com/1/",
+                    "coverage_text": ""
+                },
+                {
+                    "display_name": "FRBR member search results doc 1, link 3",
+                    "url": "https://fake-frbr-member-search.com/3/",
+                    "coverage_text": ""
+                },
+                {
+                    "display_name": "ISBN search results doc 2, link 2",
+                    "url": "https://fake-isbn-search.com/2/",
+                    "coverage_text": ""
+                },
+                {
+                    "display_name": "ISBN search results doc 2, link 4",
+                    "url": "https://fake-isbn-search.com/4/",
+                    "coverage_text": ""
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,76 @@
+{
+    "docs": [
+        {
+            "delivery": {
+                "link": [
+                    {
+                        "hyperlinkText": "[SHOULD NEVER SEE THIS B/C THIS IS AN ACTIVE FRBR GROUP] ISBN search results doc 1, link 1",
+                        "linkURL": "https://fake-isbn-search.com/1/",
+                        "linkType": "http://purl.org/pnx/linkType/linktoprice"
+                    },
+                    {
+                        "hyperlinkText": "[SHOULD NEVER SEE THIS B/C THIS IS AN ACTIVE FRBR GROUP] ISBN search results doc 1, link 2",
+                        "linkURL": "https://fake-isbn-search.com/2/",
+                        "linkType": "http://purl.org/pnx/linkType/linktorsrc"
+                    },
+                    {
+                        "hyperlinkText": "[SHOULD NEVER SEE THIS B/C THIS IS AN ACTIVE FRBR GROUP] ISBN search results doc 1, link 3",
+                        "linkURL": "https://fake-isbn-search.com/3/",
+                        "linkType": "http://purl.org/pnx/linkType/linktoprice"
+                    },
+                    {
+                        "hyperlinkText": "[SHOULD NEVER SEE THIS B/C THIS IS AN ACTIVE FRBR GROUP] ISBN search results doc 1, link 4",
+                        "linkURL": "https://fake-isbn-search.com/4/",
+                        "linkType": "http://purl.org/pnx/linkType/linktorsrc"
+                    }
+                ]
+            },
+            "pnx": {
+                "facets": {
+                    "frbrtype": [
+                        "5"
+                    ],
+                    "frbrgroupid": [
+                        "1234567890"
+                    ]
+                }
+            }
+        },
+        {
+            "delivery": {
+                "link": [
+                    {
+                        "hyperlinkText": "[SHOULD NEVER SEE THIS B/C NOT THE RIGHT LINK TYPE] ISBN search results doc 2, link 1",
+                        "linkURL": "https://fake-isbn-search.com/1/",
+                        "linkType": "http://purl.org/pnx/linkType/linktoprice"
+                    },
+                    {
+                        "hyperlinkText": "ISBN search results doc 2, link 2",
+                        "linkURL": "https://fake-isbn-search.com/2/",
+                        "linkType": "http://purl.org/pnx/linkType/linktorsrc"
+                    },
+                    {
+                        "hyperlinkText": "[SHOULD NEVER SEE THIS B/C NOT THE RIGHT LINK TYPE] ISBN search results doc 2, link 3",
+                        "linkURL": "https://fake-isbn-search.com/3/",
+                        "linkType": "http://purl.org/pnx/linkType/linktoprice"
+                    },
+                    {
+                        "hyperlinkText": "ISBN search results doc 2, link 4",
+                        "linkURL": "https://fake-isbn-search.com/4/",
+                        "linkType": "http://purl.org/pnx/linkType/linktorsrc"
+                    }
+                ]
+            },
+            "pnx": {
+                "facets": {
+                    "frbrtype": [
+                        "6"
+                    ],
+                    "frbrgroupid": [
+                        "1234567890"
+                    ]
+                }
+            }
+        }
+    ]
+}
