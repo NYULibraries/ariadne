@@ -1345,16 +1345,14 @@ exports[`Backend success "Life" Magazine and the Power of Photography renders co
                     </span>
                     20211201
                   </p>
-                  <p
-                    style="margin: 0px 0px 10px;"
-                  >
+                  <p>
                     <span
-                      style="box-sizing: border-box;"
+                      class="published-in"
                     >
                       Published in 
                     </span>
                     <span
-                      style="font-style: italic;"
+                      class="container-title"
                     >
                       Art Bulletin. 
                     </span>
@@ -1653,16 +1651,14 @@ exports[`Backend success Can community task groups learn from the principles of 
                     </span>
                     20181020
                   </p>
-                  <p
-                    style="margin: 0px 0px 10px;"
-                  >
+                  <p>
                     <span
-                      style="box-sizing: border-box;"
+                      class="published-in"
                     >
                       Published in 
                     </span>
                     <span
-                      style="font-style: italic;"
+                      class="container-title"
                     >
                       Community Development. 
                     </span>
@@ -2117,16 +2113,14 @@ exports[`Backend success Design of LED light therapy device based on free-form l
                     </span>
                     20230305
                   </p>
-                  <p
-                    style="margin: 0px 0px 10px;"
-                  >
+                  <p>
                     <span
-                      style="box-sizing: border-box;"
+                      class="published-in"
                     >
                       Published in 
                     </span>
                     <span
-                      style="font-style: italic;"
+                      class="container-title"
                     >
                       Proceedings of SPIE. 
                     </span>
@@ -2363,16 +2357,14 @@ exports[`Backend success Editorial cartoon renders correctly 1`] = `
                     </span>
                     2002-12-15
                   </p>
-                  <p
-                    style="margin: 0px 0px 10px;"
-                  >
+                  <p>
                     <span
-                      style="box-sizing: border-box;"
+                      class="published-in"
                     >
                       Published in 
                     </span>
                     <span
-                      style="font-style: italic;"
+                      class="container-title"
                     >
                       Detroit News. 
                     </span>
@@ -3287,16 +3279,14 @@ exports[`Backend success Modelling Modular Living: Furniture and Life Magazine a
                     </span>
                     20220601
                   </p>
-                  <p
-                    style="margin: 0px 0px 10px;"
-                  >
+                  <p>
                     <span
-                      style="box-sizing: border-box;"
+                      class="published-in"
                     >
                       Published in 
                     </span>
                     <span
-                      style="font-style: italic;"
+                      class="container-title"
                     >
                       Journal of Design History. 
                     </span>
@@ -3530,16 +3520,14 @@ exports[`Backend success Moral psychology is relationship regulation: moral moti
                     </span>
                     2011
                   </p>
-                  <p
-                    style="margin: 0px 0px 10px;"
-                  >
+                  <p>
                     <span
-                      style="box-sizing: border-box;"
+                      class="published-in"
                     >
                       Published in 
                     </span>
                     <span
-                      style="font-style: italic;"
+                      class="container-title"
                     >
                       Psychological Review. 
                     </span>
@@ -4041,16 +4029,14 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
                     </span>
                     20210401
                   </p>
-                  <p
-                    style="margin: 0px 0px 10px;"
-                  >
+                  <p>
                     <span
-                      style="box-sizing: border-box;"
+                      class="published-in"
                     >
                       Published in 
                     </span>
                     <span
-                      style="font-style: italic;"
+                      class="container-title"
                     >
                       Journal of the Gilded Age . 
                     </span>
@@ -4329,16 +4315,14 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
                     </span>
                     20210401
                   </p>
-                  <p
-                    style="margin: 0px 0px 10px;"
-                  >
+                  <p>
                     <span
-                      style="box-sizing: border-box;"
+                      class="published-in"
                     >
                       Published in 
                     </span>
                     <span
-                      style="font-style: italic;"
+                      class="container-title"
                     >
                       Journal of the Gilded Age & Progressive Era. 
                     </span>
