@@ -96,6 +96,94 @@ func TestAddHTTPResponseData(t *testing.T) {
 	}
 }
 
+func TestAddLinks(t *testing.T) {
+	testCases := []struct {
+		doc           Doc
+		expectedLinks []Link
+	}{
+		{
+			doc: fakePrimoISBNSearchAPIResponse.Docs[0],
+			expectedLinks: []Link{
+				{
+					HyperlinkText: "2",
+					LinkURL:       "https://fake.com/2/",
+					LinkType:      "http://purl.org/pnx/linkType/linktorsrc",
+				},
+				{
+					HyperlinkText: "4",
+					LinkURL:       "https://fake.com/4/",
+					LinkType:      "http://purl.org/pnx/linkType/linktorsrc",
+				},
+			},
+		},
+	}
+
+	for _, testCase := range testCases {
+		primoResponse := PrimoResponse{}
+		primoResponse.addLinks(testCase.doc)
+		expectedStringifiedLinks := stringifyLinks(testCase.expectedLinks)
+		gotStringifiedLinks := stringifyLinks(primoResponse.Links)
+		if gotStringifiedLinks != expectedStringifiedLinks {
+			t.Errorf("addLinks did not correctly add links: "+
+				"expected \"%s\"; got \"%s\"", expectedStringifiedLinks, gotStringifiedLinks)
+		}
+	}
+}
+
+func TestDedupeAndSortLinks(t *testing.T) {
+	testCases := []struct {
+		links         []Link
+		expectedLinks []Link
+	}{
+		{
+			links: fakeLinks,
+			expectedLinks: []Link{
+				{
+					HyperlinkText: "1",
+					LinkURL:       "https://fake.com/1/",
+					LinkType:      "http://purl.org/pnx/linkType/linktorsrc",
+				},
+				{
+					HyperlinkText: "2",
+					LinkURL:       "https://fake.com/2/",
+					LinkType:      "http://purl.org/pnx/linkType/linktorsrc",
+				},
+				{
+					HyperlinkText: "3",
+					LinkURL:       "https://fake.com/3/",
+					LinkType:      "http://purl.org/pnx/linkType/linktorsrc",
+				},
+				{
+					HyperlinkText: "4",
+					LinkURL:       "https://fake.com/4/",
+					LinkType:      "http://purl.org/pnx/linkType/linktorsrc",
+				},
+			},
+		},
+		// No links
+		{
+			links:         []Link{},
+			expectedLinks: []Link{},
+		},
+	}
+
+	for _, testCase := range testCases {
+		primoResponse := PrimoResponse{
+			Links: testCase.links,
+		}
+
+		dedupedAndSortedLinks := primoResponse.dedupeAndSortLinks()
+
+		expectedStringifiedLinks := stringifyLinks(testCase.expectedLinks)
+		gotStringifiedLinks := stringifyLinks(dedupedAndSortedLinks)
+
+		if gotStringifiedLinks != expectedStringifiedLinks {
+			t.Errorf("dedupeAndSortLinks did not correctly add links: "+
+				"expected \"%s\"; got \"%s\"", expectedStringifiedLinks, gotStringifiedLinks)
+		}
+	}
+}
+
 func TestIsFound(t *testing.T) {
 	testCases := []struct {
 		name           string
@@ -168,6 +256,14 @@ func TestIsMatch(t *testing.T) {
 	}
 }
 
+func stringifyAnything(thing interface{}) string {
+	return fmt.Sprintf("%v", thing)
+}
+
 func stringifyAPIResponse(apiResponse APIResponse) string {
-	return fmt.Sprintf("%v", apiResponse)
+	return stringifyAnything(apiResponse)
+}
+
+func stringifyLinks(links []Link) string {
+	return stringifyAnything(links)
 }
