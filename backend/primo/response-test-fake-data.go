@@ -6,6 +6,61 @@ import (
 	"net/http"
 )
 
+var fakeDumpedPrimoISBNSearchHTTPResponse = `HTTP/0.0 000 status code 0
+
+{
+  "docs": [
+    {
+      "delivery": {
+        "link": [
+          {
+            "hyperlinkText": "1",
+            "linkURL": "https://fake.com/1/",
+            "linkType": "http://purl.org/pnx/linkType/linktoprice"
+          },
+          {
+            "hyperlinkText": "2",
+            "linkURL": "https://fake.com/2/",
+            "linkType": "http://purl.org/pnx/linkType/linktorsrc"
+          },
+          {
+            "hyperlinkText": "3",
+            "linkURL": "https://fake.com/3/",
+            "linkType": "http://purl.org/pnx/linkType/linktoprice"
+          },
+          {
+            "hyperlinkText": "4",
+            "linkURL": "https://fake.com/4/",
+            "linkType": "http://purl.org/pnx/linkType/linktorsrc"
+          }
+        ]
+      },
+      "pnx": {
+        "facets": {
+          "frbrtype": [
+            "5"
+          ],
+          "frbrgroupid": [
+            "1234567890"
+          ]
+        },
+        "search": {
+          "isbn": [
+            "1111111111111",
+            "2222222222222",
+            "3333333333333",
+            "4444444444444"
+          ]
+        }
+      }
+    }
+  ]
+}`
+
+var fakeDumpedPrimoISBNSearchHTTPResponseInvalid = `HTTP/0.0 000 status code 0
+
+<invalid></invalid>`
+
 var fakePrimoISBNSearchAPIResponse = APIResponse{
 	Docs: []Doc{
 		{
@@ -112,58 +167,3 @@ var fakePrimoISBNSearchHTTPResponse = &http.Response{
 var fakePrimoISBNSearchHTTPResponseInvalid = &http.Response{
 	Body: ioutil.NopCloser(bytes.NewBufferString("<invalid></invalid>")),
 }
-
-var fakeDumpedPrimoISBNSearchHTTPResponse = `HTTP/0.0 000 status code 0
-
-{
-  "docs": [
-    {
-      "delivery": {
-        "link": [
-          {
-            "hyperlinkText": "1",
-            "linkURL": "https://fake.com/1/",
-            "linkType": "http://purl.org/pnx/linkType/linktoprice"
-          },
-          {
-            "hyperlinkText": "2",
-            "linkURL": "https://fake.com/2/",
-            "linkType": "http://purl.org/pnx/linkType/linktorsrc"
-          },
-          {
-            "hyperlinkText": "3",
-            "linkURL": "https://fake.com/3/",
-            "linkType": "http://purl.org/pnx/linkType/linktoprice"
-          },
-          {
-            "hyperlinkText": "4",
-            "linkURL": "https://fake.com/4/",
-            "linkType": "http://purl.org/pnx/linkType/linktorsrc"
-          }
-        ]
-      },
-      "pnx": {
-        "facets": {
-          "frbrtype": [
-            "5"
-          ],
-          "frbrgroupid": [
-            "1234567890"
-          ]
-        },
-        "search": {
-          "isbn": [
-            "1111111111111",
-            "2222222222222",
-            "3333333333333",
-            "4444444444444"
-          ]
-        }
-      }
-    }
-  ]
-}`
-
-var fakeDumpedPrimoISBNSearchHTTPResponseInvalid = `HTTP/0.0 000 status code 0
-
-<invalid></invalid>`
