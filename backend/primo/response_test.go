@@ -133,6 +133,41 @@ func TestIsFound(t *testing.T) {
 	}
 }
 
+func TestIsMatch(t *testing.T) {
+	testCases := []struct {
+		name           string
+		frbrGroupDoc   Doc
+		isbn           string
+		expectedResult bool
+	}{
+		{
+			name:           "ISBN match found",
+			frbrGroupDoc:   fakePrimoISBNSearchAPIResponse.Docs[0],
+			isbn:           "3333333333333",
+			expectedResult: true,
+		},
+		{
+			name:           "ISBN match not found",
+			frbrGroupDoc:   fakePrimoISBNSearchAPIResponse.Docs[0],
+			isbn:           "5555555555555",
+			expectedResult: false,
+		},
+	}
+
+	for _, testCase := range testCases {
+		got := isMatch(testCase.frbrGroupDoc, testCase.isbn)
+		if got != testCase.expectedResult {
+			t.Errorf(
+				"IsMatch returned an incorrect result for test case \"%s\": "+
+					"expected %t, got %t",
+				testCase.name,
+				testCase.expectedResult,
+				got,
+			)
+		}
+	}
+}
+
 func stringifyAPIResponse(apiResponse APIResponse) string {
 	return fmt.Sprintf("%v", apiResponse)
 }
