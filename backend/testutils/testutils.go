@@ -105,6 +105,12 @@ func NormalizeDumpedHTTPRequest(dumpedHTTPRequest string) string {
 	return multipleWhitespaceRegexp.ReplaceAllString(strings.TrimSpace(dumpedHTTPRequest), " ")
 }
 
+func NormalizeDumpedHTTPResponse(dumpedHTTPRequest string) string {
+	multipleWhitespaceRegexp := regexp.MustCompile(`\s+`)
+
+	return multipleWhitespaceRegexp.ReplaceAllString(strings.TrimSpace(dumpedHTTPRequest), " ")
+}
+
 func StringifyURLValues(urlValues url.Values) string {
 	return fmt.Sprintf("%v", urlValues)
 }
