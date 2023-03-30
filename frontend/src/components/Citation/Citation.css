@@ -1,3 +1,32 @@
+.citation-container>p,
+.citation-container>h2,
+.citation-container>.citation-info {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .citation-container {
   margin-left: 10px;
 }
+
+.citation-container>p+p {
+  margin-top: 0;
+}
+
+.citation-container .citation-info p {
+  margin: 0;
+}
+
+.citation-container p {
+  margin: '0 0 10px'
+}
+
+.citation-container>p+.citation-info>p:first-of-type {
+  margin-bottom: 10px;
+}
+
+.citation-container .citation-info-label {
+  font-weight: normal;
+  display: inline-block;
+}
+
