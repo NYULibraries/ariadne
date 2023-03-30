@@ -6,7 +6,9 @@ exports[`List matches snapshot when error prop is passed 1`] = `
 >
   <div
     class="list-group-item list-group-item-action flex-column border-0"
-  />
+  >
+    Resource Not Available Through NYU Libraries
+  </div>
 </div>
 `;
 
@@ -16,7 +18,9 @@ exports[`List matches snapshot when links prop is empty 1`] = `
 >
   <div
     class="list-group-item list-group-item-action flex-column border-0"
-  />
+  >
+    Resource Not Available Through NYU Libraries
+  </div>
 </div>
 `;
 
@@ -26,7 +30,9 @@ exports[`List matches snapshot when links prop is passed 1`] = `
 >
   <div
     class="list-group-item list-group-item-action flex-column border-0"
-  />
+  >
+    Resource Not Available Through NYU Libraries
+  </div>
   <div
     class="list-group-item list-group-item-action flex-column border-0"
   >

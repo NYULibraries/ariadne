@@ -94,7 +94,7 @@ exports[`Backend HTTP error responses HTTP 400 (Bad Request) error is rendered c
           </div>
           <div>
             <p>
-              No results found
+              Something went wrong: no results found
             </p>
           </div>
         </div>
@@ -311,7 +311,7 @@ exports[`Backend HTTP error responses HTTP 403 (Forbidden) error is rendered cor
           </div>
           <div>
             <p>
-              No results found
+              Something went wrong: no results found
             </p>
           </div>
         </div>
@@ -528,7 +528,7 @@ exports[`Backend HTTP error responses HTTP 408 (Request Timeout) error is render
           </div>
           <div>
             <p>
-              No results found
+              Something went wrong: no results found
             </p>
           </div>
         </div>
@@ -745,7 +745,7 @@ exports[`Backend HTTP error responses HTTP 500 (Internal Server Error) error is 
           </div>
           <div>
             <p>
-              No results found
+              Something went wrong: no results found
             </p>
           </div>
         </div>
@@ -962,7 +962,7 @@ exports[`Backend fetch exceptions TypeError: Failed to fetch renders backend fet
           </div>
           <div>
             <p>
-              No results found
+              Something went wrong: no results found
             </p>
           </div>
         </div>
@@ -1179,7 +1179,7 @@ exports[`Backend response includes errors Response includes 2 errors and an empt
           </div>
           <div>
             <p>
-              No results found
+              Something went wrong: no results found
             </p>
           </div>
         </div>
@@ -1406,7 +1406,9 @@ exports[`Backend success "Life" Magazine and the Power of Photography renders co
           >
             <div
               class="list-group-item list-group-item-action flex-column border-0"
-            />
+            >
+              Resource Available Through NYU Libraries
+            </div>
             <div
               class="list-group-item list-group-item-action flex-column border-0"
             >
@@ -1712,7 +1714,9 @@ exports[`Backend success Can community task groups learn from the principles of 
           >
             <div
               class="list-group-item list-group-item-action flex-column border-0"
-            />
+            >
+              Resource Available Through NYU Libraries
+            </div>
             <div
               class="list-group-item list-group-item-action flex-column border-0"
             >
@@ -1930,7 +1934,9 @@ exports[`Backend success Corriere Fiorentino renders correctly 1`] = `
           >
             <div
               class="list-group-item list-group-item-action flex-column border-0"
-            />
+            >
+              Resource Available Through NYU Libraries
+            </div>
             <div
               class="list-group-item list-group-item-action flex-column border-0"
             >
@@ -2174,7 +2180,9 @@ exports[`Backend success Design of LED light therapy device based on free-form l
           >
             <div
               class="list-group-item list-group-item-action flex-column border-0"
-            />
+            >
+              Resource Available Through NYU Libraries
+            </div>
             <div
               class="list-group-item list-group-item-action flex-column border-0"
             >
@@ -2418,7 +2426,9 @@ exports[`Backend success Editorial cartoon renders correctly 1`] = `
           >
             <div
               class="list-group-item list-group-item-action flex-column border-0"
-            />
+            >
+              Resource Available Through NYU Libraries
+            </div>
             <div
               class="list-group-item list-group-item-action flex-column border-0"
             >
@@ -2651,7 +2661,9 @@ exports[`Backend success Hamlet renders correctly 1`] = `
           >
             <div
               class="list-group-item list-group-item-action flex-column border-0"
-            />
+            >
+              Resource Available Through NYU Libraries
+            </div>
             <div
               class="list-group-item list-group-item-action flex-column border-0"
             >
@@ -2894,7 +2906,9 @@ exports[`Backend success History Today renders correctly 1`] = `
           >
             <div
               class="list-group-item list-group-item-action flex-column border-0"
-            />
+            >
+              Resource Available Through NYU Libraries
+            </div>
             <div
               class="list-group-item list-group-item-action flex-column border-0"
             >
@@ -3340,7 +3354,9 @@ exports[`Backend success Modelling Modular Living: Furniture and Life Magazine a
           >
             <div
               class="list-group-item list-group-item-action flex-column border-0"
-            />
+            >
+              Resource Available Through NYU Libraries
+            </div>
             <div
               class="list-group-item list-group-item-action flex-column border-0"
             >
@@ -3581,7 +3597,9 @@ exports[`Backend success Moral psychology is relationship regulation: moral moti
           >
             <div
               class="list-group-item list-group-item-action flex-column border-0"
-            />
+            >
+              Resource Available Through NYU Libraries
+            </div>
             <div
               class="list-group-item list-group-item-action flex-column border-0"
             >
@@ -3810,7 +3828,9 @@ exports[`Backend success Our Lady of everyday life : la Virgen de Guadalupe and 
           >
             <div
               class="list-group-item list-group-item-action flex-column border-0"
-            />
+            >
+              Resource Available Through NYU Libraries
+            </div>
             <div
               class="list-group-item list-group-item-action flex-column border-0"
             >
@@ -4090,7 +4110,9 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
           >
             <div
               class="list-group-item list-group-item-action flex-column border-0"
-            />
+            >
+              Resource Available Through NYU Libraries
+            </div>
             <div
               class="list-group-item list-group-item-action flex-column border-0"
             >
@@ -4376,7 +4398,9 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
           >
             <div
               class="list-group-item list-group-item-action flex-column border-0"
-            />
+            >
+              Resource Available Through NYU Libraries
+            </div>
             <div
               class="list-group-item list-group-item-action flex-column border-0"
             >
@@ -4657,7 +4681,9 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
           >
             <div
               class="list-group-item list-group-item-action flex-column border-0"
-            />
+            >
+              Resource Available Through NYU Libraries
+            </div>
             <div
               class="list-group-item list-group-item-action flex-column border-0"
             >
@@ -5141,7 +5167,9 @@ exports[`Backend success The Sino-Tibetan Languages renders correctly 1`] = `
           >
             <div
               class="list-group-item list-group-item-action flex-column border-0"
-            />
+            >
+              Resource Not Available Through NYU Libraries
+            </div>
             <div
               class="list-group-item list-group-item-action flex-column border-0"
             >
@@ -5374,7 +5402,9 @@ exports[`Backend success The Year's work in modern language studies. renders cor
           >
             <div
               class="list-group-item list-group-item-action flex-column border-0"
-            />
+            >
+              Resource Available Through NYU Libraries
+            </div>
             <div
               class="list-group-item list-group-item-action flex-column border-0"
             >
