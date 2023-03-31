@@ -172,10 +172,10 @@ func TestDedupeAndSortLinks(t *testing.T) {
 			Links: testCase.links,
 		}
 
-		dedupedAndSortedLinks := primoResponse.dedupeAndSortLinks()
+		primoResponse.dedupeAndSortLinks()
 
 		expectedStringifiedLinks := stringifyLinks(testCase.expectedLinks)
-		gotStringifiedLinks := stringifyLinks(dedupedAndSortedLinks)
+		gotStringifiedLinks := stringifyLinks(primoResponse.Links)
 
 		if gotStringifiedLinks != expectedStringifiedLinks {
 			t.Errorf("dedupeAndSortLinks did not correctly add links: "+

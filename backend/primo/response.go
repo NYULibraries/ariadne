@@ -96,7 +96,7 @@ func (primoResponse *PrimoResponse) addLinks(doc Doc) {
 	}
 }
 
-func (primoResponse *PrimoResponse) dedupeAndSortLinks() []Link {
+func (primoResponse *PrimoResponse) dedupeAndSortLinks() {
 	processed := make(map[string]struct{})
 
 	links := []Link{}
@@ -112,7 +112,7 @@ func (primoResponse *PrimoResponse) dedupeAndSortLinks() []Link {
 
 	sort.SliceStable(links, func(i, j int) bool { return links[i].HyperlinkText < links[j].HyperlinkText })
 
-	return links
+	primoResponse.Links = links
 }
 
 func (primoResponse *PrimoResponse) getDocsForFRBRGroup(isbn, frbrGroupID string) ([]Doc, error) {
