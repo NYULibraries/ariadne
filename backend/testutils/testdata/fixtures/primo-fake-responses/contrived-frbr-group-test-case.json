@@ -50,6 +50,11 @@
                         "linkType": "http://purl.org/pnx/linkType/linktorsrc"
                     },
                     {
+                        "hyperlinkText": "ISBN search results doc 2, link 2",
+                        "linkURL": "https://fake-isbn-search.com/2/",
+                        "linkType": "http://purl.org/pnx/linkType/linktorsrc"
+                    },
+                    {
                         "hyperlinkText": "[SHOULD NEVER SEE THIS B/C NOT THE RIGHT LINK TYPE] ISBN search results doc 2, link 3",
                         "linkURL": "https://fake-isbn-search.com/3/",
                         "linkType": "http://purl.org/pnx/linkType/linktoprice"
