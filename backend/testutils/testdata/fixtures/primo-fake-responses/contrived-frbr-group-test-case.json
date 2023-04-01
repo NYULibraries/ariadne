@@ -40,18 +40,8 @@
             "delivery": {
                 "link": [
                     {
-                        "hyperlinkText": "[SHOULD NEVER SEE THIS B/C NOT THE RIGHT LINK TYPE] ISBN search results doc 2, link 1",
-                        "linkURL": "https://fake-isbn-search.com/1/",
-                        "linkType": "http://purl.org/pnx/linkType/linktoprice"
-                    },
-                    {
-                        "hyperlinkText": "ISBN search results doc 2, link 2",
-                        "linkURL": "https://fake-isbn-search.com/2/",
-                        "linkType": "http://purl.org/pnx/linkType/linktorsrc"
-                    },
-                    {
-                        "hyperlinkText": "ISBN search results doc 2, link 2",
-                        "linkURL": "https://fake-isbn-search.com/2/",
+                        "hyperlinkText": "ISBN search results doc 2, link 4",
+                        "linkURL": "https://fake-isbn-search.com/4/",
                         "linkType": "http://purl.org/pnx/linkType/linktorsrc"
                     },
                     {
@@ -60,9 +50,19 @@
                         "linkType": "http://purl.org/pnx/linkType/linktoprice"
                     },
                     {
-                        "hyperlinkText": "ISBN search results doc 2, link 4",
-                        "linkURL": "https://fake-isbn-search.com/4/",
+                        "hyperlinkText": "ISBN search results doc 2, link 2",
+                        "linkURL": "https://fake-isbn-search.com/2/",
                         "linkType": "http://purl.org/pnx/linkType/linktorsrc"
+                    },
+                    {
+                        "hyperlinkText": "ISBN search results doc 2, link 2",
+                        "linkURL": "https://fake-isbn-search.com/2/",
+                        "linkType": "http://purl.org/pnx/linkType/linktorsrc"
+                    },
+                    {
+                        "hyperlinkText": "[SHOULD NEVER SEE THIS B/C NOT THE RIGHT LINK TYPE] ISBN search results doc 2, link 1",
+                        "linkURL": "https://fake-isbn-search.com/1/",
+                        "linkType": "http://purl.org/pnx/linkType/linktoprice"
                     }
                 ]
             },
