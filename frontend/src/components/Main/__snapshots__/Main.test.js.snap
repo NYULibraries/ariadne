@@ -72,11 +72,22 @@ exports[`Backend HTTP error responses HTTP 400 (Bad Request) error is rendered c
                     margin-right: 5px;
                     vertical-align: middle;
                 }
+                .stable-link-focus:focus {
+                    border: 3px solid black;
+                    outline: 3px solid #3DBBDB;
+                    padding: 5px;
+                    border-radius: 0;
+                }
             
             </style>
-            <div>
+            <div
+              aria-labelledby="stable-link-label"
+            >
               <button
-                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                aria-label="Create a stable link to this page"
+                class="stable-link-focus"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 <span
                   class="link-icon"
@@ -289,11 +300,22 @@ exports[`Backend HTTP error responses HTTP 403 (Forbidden) error is rendered cor
                     margin-right: 5px;
                     vertical-align: middle;
                 }
+                .stable-link-focus:focus {
+                    border: 3px solid black;
+                    outline: 3px solid #3DBBDB;
+                    padding: 5px;
+                    border-radius: 0;
+                }
             
             </style>
-            <div>
+            <div
+              aria-labelledby="stable-link-label"
+            >
               <button
-                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                aria-label="Create a stable link to this page"
+                class="stable-link-focus"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 <span
                   class="link-icon"
@@ -506,11 +528,22 @@ exports[`Backend HTTP error responses HTTP 408 (Request Timeout) error is render
                     margin-right: 5px;
                     vertical-align: middle;
                 }
+                .stable-link-focus:focus {
+                    border: 3px solid black;
+                    outline: 3px solid #3DBBDB;
+                    padding: 5px;
+                    border-radius: 0;
+                }
             
             </style>
-            <div>
+            <div
+              aria-labelledby="stable-link-label"
+            >
               <button
-                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                aria-label="Create a stable link to this page"
+                class="stable-link-focus"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 <span
                   class="link-icon"
@@ -723,11 +756,22 @@ exports[`Backend HTTP error responses HTTP 500 (Internal Server Error) error is 
                     margin-right: 5px;
                     vertical-align: middle;
                 }
+                .stable-link-focus:focus {
+                    border: 3px solid black;
+                    outline: 3px solid #3DBBDB;
+                    padding: 5px;
+                    border-radius: 0;
+                }
             
             </style>
-            <div>
+            <div
+              aria-labelledby="stable-link-label"
+            >
               <button
-                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                aria-label="Create a stable link to this page"
+                class="stable-link-focus"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 <span
                   class="link-icon"
@@ -940,11 +984,22 @@ exports[`Backend fetch exceptions TypeError: Failed to fetch renders backend fet
                     margin-right: 5px;
                     vertical-align: middle;
                 }
+                .stable-link-focus:focus {
+                    border: 3px solid black;
+                    outline: 3px solid #3DBBDB;
+                    padding: 5px;
+                    border-radius: 0;
+                }
             
             </style>
-            <div>
+            <div
+              aria-labelledby="stable-link-label"
+            >
               <button
-                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                aria-label="Create a stable link to this page"
+                class="stable-link-focus"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 <span
                   class="link-icon"
@@ -1157,11 +1212,22 @@ exports[`Backend response includes errors Response includes 2 errors and an empt
                     margin-right: 5px;
                     vertical-align: middle;
                 }
+                .stable-link-focus:focus {
+                    border: 3px solid black;
+                    outline: 3px solid #3DBBDB;
+                    padding: 5px;
+                    border-radius: 0;
+                }
             
             </style>
-            <div>
+            <div
+              aria-labelledby="stable-link-label"
+            >
               <button
-                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                aria-label="Create a stable link to this page"
+                class="stable-link-focus"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 <span
                   class="link-icon"
@@ -1387,11 +1453,22 @@ exports[`Backend success "Life" Magazine and the Power of Photography renders co
                     margin-right: 5px;
                     vertical-align: middle;
                 }
+                .stable-link-focus:focus {
+                    border: 3px solid black;
+                    outline: 3px solid #3DBBDB;
+                    padding: 5px;
+                    border-radius: 0;
+                }
             
             </style>
-            <div>
+            <div
+              aria-labelledby="stable-link-label"
+            >
               <button
-                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                aria-label="Create a stable link to this page"
+                class="stable-link-focus"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 <span
                   class="link-icon"
@@ -1695,11 +1772,22 @@ exports[`Backend success Can community task groups learn from the principles of 
                     margin-right: 5px;
                     vertical-align: middle;
                 }
+                .stable-link-focus:focus {
+                    border: 3px solid black;
+                    outline: 3px solid #3DBBDB;
+                    padding: 5px;
+                    border-radius: 0;
+                }
             
             </style>
-            <div>
+            <div
+              aria-labelledby="stable-link-label"
+            >
               <button
-                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                aria-label="Create a stable link to this page"
+                class="stable-link-focus"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 <span
                   class="link-icon"
@@ -1915,11 +2003,22 @@ exports[`Backend success Corriere Fiorentino renders correctly 1`] = `
                     margin-right: 5px;
                     vertical-align: middle;
                 }
+                .stable-link-focus:focus {
+                    border: 3px solid black;
+                    outline: 3px solid #3DBBDB;
+                    padding: 5px;
+                    border-radius: 0;
+                }
             
             </style>
-            <div>
+            <div
+              aria-labelledby="stable-link-label"
+            >
               <button
-                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                aria-label="Create a stable link to this page"
+                class="stable-link-focus"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 <span
                   class="link-icon"
@@ -2161,11 +2260,22 @@ exports[`Backend success Design of LED light therapy device based on free-form l
                     margin-right: 5px;
                     vertical-align: middle;
                 }
+                .stable-link-focus:focus {
+                    border: 3px solid black;
+                    outline: 3px solid #3DBBDB;
+                    padding: 5px;
+                    border-radius: 0;
+                }
             
             </style>
-            <div>
+            <div
+              aria-labelledby="stable-link-label"
+            >
               <button
-                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                aria-label="Create a stable link to this page"
+                class="stable-link-focus"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 <span
                   class="link-icon"
@@ -2407,11 +2517,22 @@ exports[`Backend success Editorial cartoon renders correctly 1`] = `
                     margin-right: 5px;
                     vertical-align: middle;
                 }
+                .stable-link-focus:focus {
+                    border: 3px solid black;
+                    outline: 3px solid #3DBBDB;
+                    padding: 5px;
+                    border-radius: 0;
+                }
             
             </style>
-            <div>
+            <div
+              aria-labelledby="stable-link-label"
+            >
               <button
-                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                aria-label="Create a stable link to this page"
+                class="stable-link-focus"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 <span
                   class="link-icon"
@@ -2642,11 +2763,22 @@ exports[`Backend success Hamlet renders correctly 1`] = `
                     margin-right: 5px;
                     vertical-align: middle;
                 }
+                .stable-link-focus:focus {
+                    border: 3px solid black;
+                    outline: 3px solid #3DBBDB;
+                    padding: 5px;
+                    border-radius: 0;
+                }
             
             </style>
-            <div>
+            <div
+              aria-labelledby="stable-link-label"
+            >
               <button
-                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                aria-label="Create a stable link to this page"
+                class="stable-link-focus"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 <span
                   class="link-icon"
@@ -2887,11 +3019,22 @@ exports[`Backend success History Today renders correctly 1`] = `
                     margin-right: 5px;
                     vertical-align: middle;
                 }
+                .stable-link-focus:focus {
+                    border: 3px solid black;
+                    outline: 3px solid #3DBBDB;
+                    padding: 5px;
+                    border-radius: 0;
+                }
             
             </style>
-            <div>
+            <div
+              aria-labelledby="stable-link-label"
+            >
               <button
-                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                aria-label="Create a stable link to this page"
+                class="stable-link-focus"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 <span
                   class="link-icon"
@@ -3335,11 +3478,22 @@ exports[`Backend success Modelling Modular Living: Furniture and Life Magazine a
                     margin-right: 5px;
                     vertical-align: middle;
                 }
+                .stable-link-focus:focus {
+                    border: 3px solid black;
+                    outline: 3px solid #3DBBDB;
+                    padding: 5px;
+                    border-radius: 0;
+                }
             
             </style>
-            <div>
+            <div
+              aria-labelledby="stable-link-label"
+            >
               <button
-                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                aria-label="Create a stable link to this page"
+                class="stable-link-focus"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 <span
                   class="link-icon"
@@ -3578,11 +3732,22 @@ exports[`Backend success Moral psychology is relationship regulation: moral moti
                     margin-right: 5px;
                     vertical-align: middle;
                 }
+                .stable-link-focus:focus {
+                    border: 3px solid black;
+                    outline: 3px solid #3DBBDB;
+                    padding: 5px;
+                    border-radius: 0;
+                }
             
             </style>
-            <div>
+            <div
+              aria-labelledby="stable-link-label"
+            >
               <button
-                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                aria-label="Create a stable link to this page"
+                class="stable-link-focus"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 <span
                   class="link-icon"
@@ -3809,11 +3974,22 @@ exports[`Backend success Our Lady of everyday life : la Virgen de Guadalupe and 
                     margin-right: 5px;
                     vertical-align: middle;
                 }
+                .stable-link-focus:focus {
+                    border: 3px solid black;
+                    outline: 3px solid #3DBBDB;
+                    padding: 5px;
+                    border-radius: 0;
+                }
             
             </style>
-            <div>
+            <div
+              aria-labelledby="stable-link-label"
+            >
               <button
-                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                aria-label="Create a stable link to this page"
+                class="stable-link-focus"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 <span
                   class="link-icon"
@@ -4091,11 +4267,22 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
                     margin-right: 5px;
                     vertical-align: middle;
                 }
+                .stable-link-focus:focus {
+                    border: 3px solid black;
+                    outline: 3px solid #3DBBDB;
+                    padding: 5px;
+                    border-radius: 0;
+                }
             
             </style>
-            <div>
+            <div
+              aria-labelledby="stable-link-label"
+            >
               <button
-                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                aria-label="Create a stable link to this page"
+                class="stable-link-focus"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 <span
                   class="link-icon"
@@ -4379,11 +4566,22 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
                     margin-right: 5px;
                     vertical-align: middle;
                 }
+                .stable-link-focus:focus {
+                    border: 3px solid black;
+                    outline: 3px solid #3DBBDB;
+                    padding: 5px;
+                    border-radius: 0;
+                }
             
             </style>
-            <div>
+            <div
+              aria-labelledby="stable-link-label"
+            >
               <button
-                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                aria-label="Create a stable link to this page"
+                class="stable-link-focus"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 <span
                   class="link-icon"
@@ -4662,11 +4860,22 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
                     margin-right: 5px;
                     vertical-align: middle;
                 }
+                .stable-link-focus:focus {
+                    border: 3px solid black;
+                    outline: 3px solid #3DBBDB;
+                    padding: 5px;
+                    border-radius: 0;
+                }
             
             </style>
-            <div>
+            <div
+              aria-labelledby="stable-link-label"
+            >
               <button
-                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                aria-label="Create a stable link to this page"
+                class="stable-link-focus"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 <span
                   class="link-icon"
@@ -5148,11 +5357,22 @@ exports[`Backend success The Sino-Tibetan Languages renders correctly 1`] = `
                     margin-right: 5px;
                     vertical-align: middle;
                 }
+                .stable-link-focus:focus {
+                    border: 3px solid black;
+                    outline: 3px solid #3DBBDB;
+                    padding: 5px;
+                    border-radius: 0;
+                }
             
             </style>
-            <div>
+            <div
+              aria-labelledby="stable-link-label"
+            >
               <button
-                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                aria-label="Create a stable link to this page"
+                class="stable-link-focus"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 <span
                   class="link-icon"
@@ -5383,11 +5603,22 @@ exports[`Backend success The Year's work in modern language studies. renders cor
                     margin-right: 5px;
                     vertical-align: middle;
                 }
+                .stable-link-focus:focus {
+                    border: 3px solid black;
+                    outline: 3px solid #3DBBDB;
+                    padding: 5px;
+                    border-radius: 0;
+                }
             
             </style>
-            <div>
+            <div
+              aria-labelledby="stable-link-label"
+            >
               <button
-                style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px;"
+                aria-label="Create a stable link to this page"
+                class="stable-link-focus"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 <span
                   class="link-icon"
