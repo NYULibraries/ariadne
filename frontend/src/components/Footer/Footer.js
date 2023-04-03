@@ -75,13 +75,13 @@ const PageFooter = () => {
                                 <a className="ss-navigateright right" href="https://signup.e2ma.net/signup/1934378/1922970/">Subscribe to our email list</a>
                             </p>
                             <a href="https://twitter.com/nyulibraries" className="ss-icon" target="_blank" rel="noreferrer">
-                                <img src="/images/twitter.svg" alt="NYU Libraries Twitter" height="20" />
+                                <img src="/images/twitter.svg" alt="NYU Libraries Twitter." height="20" />
                             </a>
                             <a href="https://www.facebook.com/nyulibraries" className="ss-icon" target="_blank" rel="noreferrer">
-                                <img src="/images/facebook.svg" alt="NYU Libraries Facebook" height="20" />
+                                <img src="/images/facebook.svg" alt="NYU Libraries Facebook." height="20" />
                             </a>
                             <a href="https://www.instagram.com/nyulibraries" className="ss-icon" target="_blank" rel="noreferrer">
-                                <img src="/images/instagram.svg" alt="NYU Libraries Instagram" height="20" />
+                                <img src="/images/instagram.svg" alt="NYU Libraries Instagram." height="20" />
                             </a>
                         </div>
                     </div>
@@ -89,7 +89,7 @@ const PageFooter = () => {
                         Unless otherwise noted, all content copyright New York University. All rights reserved.
                         <a href="https://library.nyu.edu/privacy-policy/">Privacy policy</a>
                         <a className="footer__logo" href="https://www.nyu.edu">
-                            <img src="/images/nyu-footer-logo.svg" alt="New York University homepage" height="27" />
+                            <img src="/images/nyu-footer-logo.svg" alt="New York University homepage." height="27" />
                         </a>
                     </div>
                 </div>
