@@ -1,6 +1,7 @@
 package api
 
 import (
+	"ariadne/primo"
 	"ariadne/sfx"
 	"ariadne/testutils"
 	"ariadne/util"
@@ -9,6 +10,7 @@ import (
 	"io"
 	"net/http"
 	"net/http/httptest"
+	"net/url"
 	"os"
 	"testing"
 )
@@ -36,6 +38,43 @@ func TestMain(m *testing.M) {
 func TestResponseJSONRoute(t *testing.T) {
 	var currentTestCase testutils.TestCase
 
+	// Set up Primo service fake
+	fakePrimoServer := httptest.NewServer(
+		http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+			params, err := url.ParseQuery(r.URL.RawQuery)
+			if err != nil {
+				t.Fatal(err)
+			}
+
+			// There potentially two kinds of requests:
+			//     - ISBN search request: this is the initial request that is
+			//       always made if Primo is being used at all
+			//     - FRBR member search request: if the response to the initial
+			//       ISBN search request returns docs that indicate an active FRBR
+			//       group, more requests are made with an extra query param added
+			//       to the query string of the ISBN search request.
+			var primoFakeResponse string
+			if params.Get(primo.FRBRMemberSearchQueryParamName) == "" {
+				primoFakeResponse, err = testutils.GetPrimoFakeResponseISBNSearch(currentTestCase)
+			} else {
+				primoFakeResponse, err = testutils.GetPrimoFakeResponseFRBRMemberSearch(currentTestCase)
+			}
+
+			if err != nil {
+				t.Fatal(err)
+			}
+
+			_, err = fmt.Fprint(w, primoFakeResponse)
+			if err != nil {
+				t.Fatal(err)
+			}
+		}),
+	)
+	defer fakePrimoServer.Close()
+
+	primo.SetPrimoURL(fakePrimoServer.URL)
+
+	// Set up SFX service fake
 	fakeSFXServer := httptest.NewServer(
 		http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 			sfxFakeResponse, err := testutils.GetSFXFakeResponse(currentTestCase)

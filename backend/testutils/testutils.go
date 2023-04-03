@@ -4,9 +4,12 @@ import (
 	_ "embed"
 	"encoding/json"
 	"fmt"
+	"net/url"
 	"os"
 	"path/filepath"
+	"regexp"
 	"runtime"
+	"strings"
 )
 
 //go:embed testdata/test-cases.json
@@ -54,8 +57,12 @@ func GetGoldenValue(testCase TestCase) (string, error) {
 	return GetTestdataFileContents(GoldenFile(testCase))
 }
 
-func GetPrimoFakeResponse(testCase TestCase) (string, error) {
-	return GetTestdataFileContents(primoFakeResponseFile(testCase))
+func GetPrimoFakeResponseISBNSearch(testCase TestCase) (string, error) {
+	return GetTestdataFileContents(primoFakeResponseFileISBNSearch(testCase))
+}
+
+func GetPrimoFakeResponseFRBRMemberSearch(testCase TestCase) (string, error) {
+	return GetTestdataFileContents(primoFakeResponseFileFRBRMemberSearch(testCase))
 }
 
 func GetSFXFakeResponse(testCase TestCase) (string, error) {
@@ -76,8 +83,44 @@ func GoldenFile(testCase TestCase) string {
 	return testutilsPath + "/testdata/golden/" + testCase.Key + ".json"
 }
 
-func primoFakeResponseFile(testCase TestCase) string {
-	return testutilsPath + "/testdata/fixtures/primo-fake-responses/" + testCase.Key + ".xml"
+// Returns a url.Values consisting of everything in urlValues1 with everything in
+// urlValues2 added, where collision of keys is handled by urlValues2 values
+// overriding those in urlValues1.
+func MergeURLValues(urlValues1 url.Values, urlValues2 url.Values) url.Values {
+	mergedURLValues := url.Values{}
+	for queryParamName, queryParamValue := range urlValues1 {
+		mergedURLValues[queryParamName] = queryParamValue
+	}
+
+	for queryParamName, queryParamValue := range urlValues2 {
+		mergedURLValues[queryParamName] = queryParamValue
+	}
+
+	return mergedURLValues
+}
+
+func NormalizeDumpedHTTPRequest(dumpedHTTPRequest string) string {
+	multipleWhitespaceRegexp := regexp.MustCompile(`\s+`)
+
+	return multipleWhitespaceRegexp.ReplaceAllString(strings.TrimSpace(dumpedHTTPRequest), " ")
+}
+
+func NormalizeDumpedHTTPResponse(dumpedHTTPRequest string) string {
+	multipleWhitespaceRegexp := regexp.MustCompile(`\s+`)
+
+	return multipleWhitespaceRegexp.ReplaceAllString(strings.TrimSpace(dumpedHTTPRequest), " ")
+}
+
+func StringifyURLValues(urlValues url.Values) string {
+	return fmt.Sprintf("%v", urlValues)
+}
+
+func primoFakeResponseFileFRBRMemberSearch(testCase TestCase) string {
+	return testutilsPath + "/testdata/fixtures/primo-fake-responses/frbr-member-search-data/" + testCase.Key + ".json"
+}
+
+func primoFakeResponseFileISBNSearch(testCase TestCase) string {
+	return testutilsPath + "/testdata/fixtures/primo-fake-responses/" + testCase.Key + ".json"
 }
 
 func sfxFakeResponseFile(testCase TestCase) string {

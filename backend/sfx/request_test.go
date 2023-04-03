@@ -1,20 +1,19 @@
 package sfx
 
 import (
+	"ariadne/testutils"
 	"fmt"
 	"net/url"
 	"reflect"
-	"regexp"
-	"strings"
 	"testing"
 )
 
 func TestNewSFXRequest(t *testing.T) {
 	var tests = []struct {
-		name              string
-		dumpedHTTPRequest string
-		expectedError     error
-		queryString       string
+		name                      string
+		expectedDumpedHTTPRequest string
+		expectedError             error
+		queryString               string
 	}{
 		{
 			// This request as-is was causing SFX to return a "XSS violation occured [sic]."
@@ -24,7 +23,7 @@ func TestNewSFXRequest(t *testing.T) {
 			// NOTE: This is the can-community-task-groups-learn-from-the-principles-of-group-therapy
 			// test case from backend/testutils/testdata/test-cases.json.
 			name: "Trouble-causing `sid`",
-			dumpedHTTPRequest: `GET /sfxlcl41?atitle=Can+community+task+groups+learn+from+the+principles+of+group+therapy%3F&aulast=Zanbar%2C+L.&date=20181020&genre=article&isbn=&issn=19447485&issue=5&pid=Zanbar%2C+L.edselc.2-52.0-8505573399120181020Scopus%5C%C2%AE&rfr_id=EBSCO%3AScopus%5C%C2%AE&sfx.doi_url=http%3A%2F%2Fdx.doi.org&sfx.response_type=multi_obj_xml&spage=574&title=Community+Development&url_ctx_fmt=info%3Aofi%2Ffmt%3Axml%3Axsd%3Actx&volume=49 HTTP/1.1
+			expectedDumpedHTTPRequest: `GET /sfxlcl41?atitle=Can+community+task+groups+learn+from+the+principles+of+group+therapy%3F&aulast=Zanbar%2C+L.&date=20181020&genre=article&isbn=&issn=19447485&issue=5&pid=Zanbar%2C+L.edselc.2-52.0-8505573399120181020Scopus%5C%C2%AE&rfr_id=EBSCO%3AScopus%5C%C2%AE&sfx.doi_url=http%3A%2F%2Fdx.doi.org&sfx.response_type=multi_obj_xml&spage=574&title=Community+Development&url_ctx_fmt=info%3Aofi%2Ffmt%3Axml%3Axsd%3Actx&volume=49 HTTP/1.1
 Host: sfx.library.nyu.edu`,
 			expectedError: nil,
 			queryString:   "genre=article&isbn=&issn=19447485&title=Community%20Development&volume=49&issue=5&date=20181020&atitle=Can%20community%20task%20groups%20learn%20from%20the%20principles%20of%20group%20therapy?&aulast=Zanbar,%20L.&spage=574&sid=EBSCO:Scopus\\®&pid=Zanbar,%20L.edselc.2-52.0-8505573399120181020Scopus\\®",
@@ -32,7 +31,7 @@ Host: sfx.library.nyu.edu`,
 		{
 			// This is the `history-today` test case.
 			name: "`date` query param value is empty",
-			dumpedHTTPRequest: `GET /sfxlcl41?atitle=&aulast=&date=&genre=article&isbn=&issn=00182753&issue=&pid=Academic+Search+Complete+--+Publications&rfr_id=EBSCO%3AAcademic+Search+Complete+--+Publications&sfx.doi_url=http%3A%2F%2Fdx.doi.org&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&spage=&title=History+Today&url_ctx_fmt=info%3Aofi%2Ffmt%3Axml%3Axsd%3Actx&volume= HTTP/1.1
+			expectedDumpedHTTPRequest: `GET /sfxlcl41?atitle=&aulast=&date=&genre=article&isbn=&issn=00182753&issue=&pid=Academic+Search+Complete+--+Publications&rfr_id=EBSCO%3AAcademic+Search+Complete+--+Publications&sfx.doi_url=http%3A%2F%2Fdx.doi.org&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&spage=&title=History+Today&url_ctx_fmt=info%3Aofi%2Ffmt%3Axml%3Axsd%3Actx&volume= HTTP/1.1
 Host: sfx.library.nyu.edu`,
 			expectedError: nil,
 			queryString:   "genre=article&isbn=&issn=00182753&title=History%20Today&volume=&issue=&date=&atitle=&aulast=&spage=&sid=EBSCO:Academic%20Search%20Complete%20--%20Publications&pid=Academic%20Search%20Complete%20--%20Publications",
@@ -47,7 +46,7 @@ Host: sfx.library.nyu.edu`,
 		//
 		// {
 		//   name:              "",
-		//	 dumpedHTTPRequest: "",
+		//	 expectedDumpedHTTPRequest: "",
 		//	 expectedError:     errors.New(""),
 		//	 queryString:       string,
 		// },
@@ -57,12 +56,12 @@ Host: sfx.library.nyu.edu`,
 		testName := fmt.Sprintf("%s", testCase.queryString)
 		t.Run(testName, func(t *testing.T) {
 			sfxRequest, err := NewSFXRequest(testCase.queryString)
-			if testCase.dumpedHTTPRequest != "" {
-				expected := normalizeDumpedHTTPRequest(testCase.dumpedHTTPRequest)
-				got := normalizeDumpedHTTPRequest(sfxRequest.DumpedHTTPRequest)
+			if testCase.expectedDumpedHTTPRequest != "" {
+				expected := testutils.NormalizeDumpedHTTPRequest(testCase.expectedDumpedHTTPRequest)
+				got := testutils.NormalizeDumpedHTTPRequest(sfxRequest.DumpedHTTPRequest)
 				if got != expected {
 					t.Errorf(
-						"NewSFXRequest returned an SFXRequest with incorrect DumpedHTTPRequest string for %s: "+
+						"NewSFXRequest returned an SFXRequest with incorrect DumpedHTTPRequest string for '%s': "+
 							"expected '%s', got '%s'",
 						testCase.name,
 						expected,
@@ -102,10 +101,4 @@ func TestFilterOpenURLParams(t *testing.T) {
 			}
 		})
 	}
-}
-
-func normalizeDumpedHTTPRequest(dumpedHTTPRequest string) string {
-	multipleWhitespaceRegexp := regexp.MustCompile(`\s+`)
-
-	return multipleWhitespaceRegexp.ReplaceAllString(strings.TrimSpace(dumpedHTTPRequest), " ")
 }

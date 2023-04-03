@@ -1,13 +1,23 @@
 {
     "errors": [],
-    "found": false,
+    "found": true,
     "records": [
         {
             "citation_supplemental": {},
             "links": [
                 {
-                    "display_name": "Bobst Library  Interlibrary Loan",
-                    "url": "http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?sid=DEFAULT%20(Via%20SFX)\u0026year=2018\u0026isbn=0-19-028039-5\u0026month=1\u0026date=2018\u0026aulast=Casta%C3%B1eda-Liles\u0026aufirst=Mar%C3%ADa%20Del%20Socorro\u0026genre=bookitem\u0026title=Our%20Lady%20of%20Everyday%20Life",
+                    "display_name": "Ebook Central",
+                    "url": "https://ebookcentral.proquest.com/lib/nyulibrary-ebooks/detail.action?docID=5294929",
+                    "coverage_text": ""
+                },
+                {
+                    "display_name": "Oxford Academic eBooks",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://academic.oup.com/book/4545",
+                    "coverage_text": ""
+                },
+                {
+                    "display_name": "Palace App (read this ebook on your phone or tablet)",
+                    "url": "https://patron-academic.thepalaceproject.org/nyu/book/https%3A%2F%2Fnyu.edu.thepalaceproject.org%2F%2F193900%2Fworks%2FProQuest%2520Doc%2520ID%252F5294929",
                     "coverage_text": ""
                 }
             ]

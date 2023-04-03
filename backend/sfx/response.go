@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"encoding/xml"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"net/http/httputil"
 	"strings"
@@ -96,6 +96,7 @@ type ThresholdText struct {
 	CoverageStatement []string `xml:"coverage_statement" json:"coverage_statement,omitempty"`
 }
 
+const AskALibrarianLink = "http://library.nyu.edu/ask/"
 const ILLLink = "ill.library.nyu.edu"
 
 func (sfxResponse *SFXResponse) RemoveTarget(targetURL string) {
@@ -109,24 +110,27 @@ func (sfxResponse *SFXResponse) RemoveTarget(targetURL string) {
 	(*(*sfxResponse.XMLResponseBody.ContextObject)[0].SFXContextObjectTargets)[0].Targets = &newTargets
 }
 
-// TODO: Write unit test
 func (sfxResponse *SFXResponse) IsFound() bool {
 	targets := (*(*sfxResponse.XMLResponseBody.ContextObject)[0].SFXContextObjectTargets)[0].Targets
 
+	// The only way to flip this to true is if a target is found that is neither
+	// the Ask A Librarian link nor the ILL link.
+	result := false
 	if len(*targets) == 0 {
 		// Theoretically this should never happen, as there is supposed to be a pre-built ILL
 		// link included if no meaningful results were found.
-		return false
-	} else if len(*targets) == 1 {
-		// Return false if the only result is the ILL link
+		result = false
+	} else {
 		for _, target := range *targets {
-			if strings.Contains(target.TargetUrl, ILLLink) {
-				return false
+			if !(strings.Contains(target.TargetUrl, ILLLink) ||
+				target.TargetUrl == AskALibrarianLink) {
+				result = true
+				break
 			}
 		}
 	}
 
-	return true
+	return result
 }
 
 func newSFXResponse(httpResponse *http.Response) (*SFXResponse, error) {
@@ -143,7 +147,7 @@ func newSFXResponse(httpResponse *http.Response) (*SFXResponse, error) {
 	}
 	sfxResponse.DumpedHTTPResponse = string(dumpedHTTPResponse)
 
-	body, err := ioutil.ReadAll(httpResponse.Body)
+	body, err := io.ReadAll(httpResponse.Body)
 	if err != nil {
 		return sfxResponse, fmt.Errorf("could not read response from SFX server: %v", err)
 	}
