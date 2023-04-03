@@ -2,8 +2,8 @@ package server
 
 import (
 	"ariadne/api"
+	"ariadne/log"
 	"github.com/spf13/cobra"
-	"log"
 	"net/http"
 )
 
@@ -27,6 +27,7 @@ func init() {
 func start() {
 	router := api.NewRouter()
 
-	log.Println("Listening on port", port)
+	log.Info("Listening on port " + port)
+
 	log.Fatal(http.ListenAndServe(":"+port, router))
 }
