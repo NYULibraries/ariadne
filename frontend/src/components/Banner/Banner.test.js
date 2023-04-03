@@ -52,7 +52,7 @@ describe('No `institution` parameter in query string', () => {
 
   test('renders the NYU Libraries logo', async () => {
     render(<Banner />);
-    const linkElement = await waitFor(() => screen.getByAltText('NYU Libraries homepage').closest('a'));
+    const linkElement = await waitFor(() => screen.getByAltText('NYU Libraries homepage.').closest('a'));
     expect(linkElement).toBeInTheDocument();
   });
 });

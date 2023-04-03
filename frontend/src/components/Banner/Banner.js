@@ -9,9 +9,9 @@ const Banner = () => {
   const institutionName = getInstitutionQueryParameter();
   const { logo, link, imgClass, altLibraryLogoImageText } = bannerInstitutionInfo[institutionName] || bannerInstitutionInfo.nyu;
   return (
-    <Navbar className="color-nav" expand="lg" role="banner">
+    <Navbar className="color-nav" expand="lg">
       <Container>
-        <Nav className="me-auto" role="navigation">
+        <Nav className="me-auto">
           <Nav.Link href={link} aria-label={`${institutionName} home`}>
             <img
               className={imgClass}

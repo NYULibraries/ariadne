@@ -4,14 +4,12 @@ exports[`Institution name: NYU renders NYU page correctly 1`] = `
 <DocumentFragment>
   <nav
     class="color-nav navbar navbar-expand-lg navbar-light"
-    role="banner"
   >
     <div
       class="container"
     >
       <div
         class="me-auto navbar-nav"
-        role="navigation"
       >
         <a
           aria-label="nyu home"
@@ -20,7 +18,7 @@ exports[`Institution name: NYU renders NYU page correctly 1`] = `
           href="https://library.nyu.edu"
         >
           <img
-            alt="NYU Libraries homepage"
+            alt="NYU Libraries homepage."
             class="image"
             height="60"
             src="https://cdn.library.nyu.edu/images/nyulibraries-logo.svg"
@@ -37,14 +35,12 @@ exports[`Institution name: NYUAD renders NYUAD page correctly 1`] = `
 <DocumentFragment>
   <nav
     class="color-nav navbar navbar-expand-lg navbar-light"
-    role="banner"
   >
     <div
       class="container"
     >
       <div
         class="me-auto navbar-nav"
-        role="navigation"
       >
         <a
           aria-label="nyuad home"
@@ -53,7 +49,7 @@ exports[`Institution name: NYUAD renders NYUAD page correctly 1`] = `
           href="https://nyuad.nyu.edu/en/library.html"
         >
           <img
-            alt="NYU Abu Dhabi Library homepage"
+            alt="NYU Abu Dhabi Library homepage."
             class="image white-bg"
             height="60"
             src="/images/abudhabi-logo-color.svg"
@@ -70,14 +66,12 @@ exports[`Institution name: NYUSH renders NYUSH page correctly 1`] = `
 <DocumentFragment>
   <nav
     class="color-nav navbar navbar-expand-lg navbar-light"
-    role="banner"
   >
     <div
       class="container"
     >
       <div
         class="me-auto navbar-nav"
-        role="navigation"
       >
         <a
           aria-label="nyush home"
@@ -86,7 +80,7 @@ exports[`Institution name: NYUSH renders NYUSH page correctly 1`] = `
           href="https://shanghai.nyu.edu/academics/library"
         >
           <img
-            alt="NYU Shanghai Library homepage"
+            alt="NYU Shanghai Library homepage."
             class="image white-bg"
             height="60"
             src="/images/shanghai-logo-color.svg"
