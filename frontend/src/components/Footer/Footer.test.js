@@ -35,19 +35,19 @@ describe('PageFooter', () => {
     });
 
     test('renders Twitter logo', async () => {
-        const logo = await waitFor(() => screen.getByAltText('Twitter logo').closest('a'));
+        const logo = await waitFor(() => screen.getByAltText('NYU Libraries Twitter').closest('a'));
         expect(logo).toBeInTheDocument();
         expect(logo).toHaveAttribute('href', 'https://twitter.com/nyulibraries');
     });
 
     test('renders Facebook logo', async () => {
-        const logo = await waitFor(() => screen.getByAltText('Facebook logo').closest('a'));
+        const logo = await waitFor(() => screen.getByAltText('NYU Libraries Facebook').closest('a'));
         expect(logo).toBeInTheDocument();
         expect(logo).toHaveAttribute('href', 'https://www.facebook.com/nyulibraries');
     });
 
     test('renders Instagram logo', async () => {
-        const logo = await waitFor(() => screen.getByAltText('Instagram logo').closest('a'));
+        const logo = await waitFor(() => screen.getByAltText('NYU Libraries Instagram').closest('a'));
         expect(logo).toBeInTheDocument();
         expect(logo).toHaveAttribute('href', 'https://www.instagram.com/nyulibraries');
     });
@@ -58,7 +58,7 @@ describe('PageFooter', () => {
     });
 
     test('renders NYU logo', async () => {
-        const logo = await waitFor(() => screen.getByAltText('New York University logo').closest('a'));
+        const logo = await waitFor(() => screen.getByAltText('New York University homepage').closest('a'));
         expect(logo).toBeInTheDocument();
         expect(logo).toHaveAttribute('href', 'https://www.nyu.edu');
     });
