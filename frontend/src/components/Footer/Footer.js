@@ -11,29 +11,29 @@ const PageFooter = () => {
                             <a className="button" href="https://library.nyu.edu/giving/">Give to the Libraries</a>
                         </div>
                         <div className="block block--25 footer__menu">
-                            <ul className="list" role="menu">
+                            <ul className="list">
                                 <li className="menu__li menu__li--login-to-nyu-home">
-                                    <a role="menuitem" href="http://home.nyu.edu" className="menu__link menu__link--login-to-nyu-home" target="_blank" rel="noreferrer">
+                                    <a href="http://home.nyu.edu" className="menu__link menu__link--login-to-nyu-home" target="_blank" rel="noreferrer">
                                         Login to NYU Home
                                     </a>
                                 </li>
                                 <li className="menu__li menu__li--departments">
-                                    <a role="menuitem" href="https://library.nyu.edu/departments/" className="menu__link menu__link--departments">
+                                    <a href="https://library.nyu.edu/departments/" className="menu__link menu__link--departments">
                                         Departments
                                     </a>
                                 </li>
                                 <li className="menu__li menu__li--staff-wiki">
-                                    <a role="menuitem" href="https://wiki.library.nyu.edu/" className="menu__link menu__link--staff-wiki" target="_blank" rel="noreferrer">
+                                    <a href="https://wiki.library.nyu.edu/" className="menu__link menu__link--staff-wiki" target="_blank" rel="noreferrer">
                                         Staff Wiki
                                     </a>
                                 </li>
                                 <li className="menu__li menu__li--staff-directory">
-                                    <a role="menuitem" href="https://library.nyu.edu/people/" className="menu__link menu__link--staff-directory">
+                                    <a href="https://library.nyu.edu/people/" className="menu__link menu__link--staff-directory">
                                         Staff Directory
                                     </a>
                                 </li>
                                 <li className="menu__li menu__li--status-page">
-                                    <a role="menuitem" href="https://nyulibraries.statuspage.io/" className="menu__link menu__link--status-page" target="_blank" rel="noreferrer">
+                                    <a href="https://nyulibraries.statuspage.io/" className="menu__link menu__link--status-page" target="_blank" rel="noreferrer">
                                         Status Page
                                     </a>
                                 </li>
@@ -41,35 +41,35 @@ const PageFooter = () => {
                         </div>
 
                         <div className="block block--25 footer__menu">
-                            <ul className="list" role="menu">
+                            <ul className="list">
                                 <li className="menu__li menu__li--research-guides">
-                                    <a role="menuitem" href="https://guides.nyu.edu/" className="menu__link menu__link--research-guides" target="_blank" rel="noreferrer">
+                                    <a href="https://guides.nyu.edu/" className="menu__link menu__link--research-guides" target="_blank" rel="noreferrer">
                                         Research Guides
                                     </a>
                                 </li>
                                 <li className="menu__li menu__li--faqs">
-                                    <a role="menuitem" href="https://library.answers.nyu.edu/" className="menu__link menu__link--faqs" target="_blank" rel="noreferrer">
+                                    <a href="https://library.answers.nyu.edu/" className="menu__link menu__link--faqs" target="_blank" rel="noreferrer">
                                         FAQs
                                     </a>
                                 </li>
                                 <li className="menu__li menu__li--career-opportunities">
-                                    <a role="menuitem" href="https://library.nyu.edu/about/who-we-are/career-opportunities/" className="menu__link menu__link--career-opportunities">
+                                    <a href="https://library.nyu.edu/about/who-we-are/career-opportunities/" className="menu__link menu__link--career-opportunities">
                                         Career Opportunities
                                     </a>
                                 </li>
                                 <li className="menu__li menu__li--contact-us">
-                                    <a role="menuitem" href="https://library.nyu.edu/contact/" className="menu__link menu__link--contact-us">
+                                    <a href="https://library.nyu.edu/contact/" className="menu__link menu__link--contact-us">
                                         Contact Us
                                     </a>
                                 </li>
                                 <li className="menu__li menu__li--accessibility">
-                                    <a role="menuitem" href="https://www.nyu.edu/footer/accessibility.html" className="menu__link menu__link--accessibility" target="_blank" rel="noreferrer">
+                                    <a href="https://www.nyu.edu/footer/accessibility.html" className="menu__link menu__link--accessibility" target="_blank" rel="noreferrer">
                                         Accessibility
                                     </a>
                                 </li>
                             </ul>
                         </div>
-                        <div className="block block--25 footer__social" role="navigation">
+                        <div className="block block--25 footer__social">
                             <p>
                                 Find out about upcoming programs, events, and resources.<br />
                                 <a className="ss-navigateright right" href="https://signup.e2ma.net/signup/1934378/1922970/">Subscribe to our email list</a>
