@@ -256,7 +256,7 @@ func TestIsMatch(t *testing.T) {
 	}
 }
 
-func stringifyAnything(thing interface{}) string {
+func stringifyAnything(thing any) string {
 	return fmt.Sprintf("%v", thing)
 }
 
