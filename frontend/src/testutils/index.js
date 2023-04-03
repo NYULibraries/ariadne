@@ -88,10 +88,11 @@ function getTestCasesBackendResponsesIncludeErrors() {
 }
 
 function getTestCasesBackendSuccess() {
-  const testCasesFromAriadneBackendApi = require(BACKEND_API_TEST_CASES_INDEX);
+  const testCasesFromAriadneBackendApi = require(BACKEND_API_TEST_CASES_INDEX)
+    .filter( testCase => testCase.frontendTest );
 
   testCasesFromAriadneBackendApi.forEach(testCase => {
-    testCase.response = getResponse(testCase.key);
+      testCase.response = getResponse(testCase.key);
   });
 
   return testCasesFromAriadneBackendApi;
