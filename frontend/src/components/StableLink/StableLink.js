@@ -10,13 +10,13 @@ const StableLink = () => {
     const [closeButtonHover, setCloseButtonHover] = useState(false);
 
     const buttonStyle = {
-        borderRadius: '3px',
         backgroundColor: '#57068c',
         color: '#fff',
         cursor: 'pointer',
         border: '1px solid #ccc',
         padding: '5px 10px',
         marginRight: '5px',
+        marginBottom: '5px',
     };
 
     const closeButtonStyle = {
@@ -24,6 +24,11 @@ const StableLink = () => {
         fontSize: '0.8rem',
         color: '#1C2127',
     };
+
+    const copyButtonStyle = {
+        ...buttonStyle,
+        padding: '2px 10px',
+    }
 
     const handleClick = () => {
         setLink(window.location.href);
@@ -50,16 +55,25 @@ const StableLink = () => {
                     margin-right: 5px;
                     vertical-align: middle;
                 }
+                .stable-link-focus:focus {
+                    border: 3px solid black;
+                    outline: 3px solid #3DBBDB;
+                    padding: 5px;
+                    border-radius: 0;
+                }
             `}</style>
-            <div>
+            <div aria-labelledby="stable-link-label">
                 <button
                     onClick={handleClick}
                     onMouseEnter={() => setMainButtonHover(true)}
                     onMouseLeave={() => setMainButtonHover(false)}
+                    className="stable-link-focus"
+                    id="stable-link-label"
                     style={{
                         ...buttonStyle,
                         backgroundColor: mainButtonHover ? '#6c07ae' : buttonStyle.backgroundColor,
                     }}
+                    aria-label="Create a stable link to this page"
                 >
                     <span className="link-icon"></span>Create a stable link to this page
                 </button>
@@ -70,21 +84,25 @@ const StableLink = () => {
                             readOnly
                             value={link}
                             ref={inputRef}
+                            id="stable-link-input-text"
                             style={{
                                 borderRadius: '3px',
                                 backgroundColor: 'white',
                                 marginRight: '5px',
                             }}
+                            aria-labelledby="stable-link-text"
                         />
                         <button
                             onClick={copyToClipboard}
                             onMouseEnter={() => setCopyButtonHover(true)}
                             onMouseLeave={() => setCopyButtonHover(false)}
+                            id="copy-stable-link"
                             style={{
-                                ...buttonStyle,
+                                ...copyButtonStyle,
                                 color: '#1C2127',
                                 backgroundColor: copyButtonHover ? '#e6e6e6' : 'white',
                             }}
+                            aria-label="Copy stable link"
                         >
                             Copy
                         </button>
@@ -92,11 +110,13 @@ const StableLink = () => {
                             onClick={handleClose}
                             onMouseEnter={() => setCloseButtonHover(true)}
                             onMouseLeave={() => setCloseButtonHover(false)}
+                            id="close-stable-link"
                             style={{
                                 ...closeButtonStyle,
                                 backgroundColor: closeButtonHover ? '#e6e6e6' : 'white',
                                 textDecoration: closeButtonHover ? 'underline' : 'none',
                             }}
+                            aria-label="Close stable link"
                         >
                             X
                         </button>
