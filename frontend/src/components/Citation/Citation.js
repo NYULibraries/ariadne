@@ -1,3 +1,5 @@
+import "./Citation.css";
+
 import { useEffect } from 'react';
 
 const Citation = () => {
@@ -98,9 +100,9 @@ const Citation = () => {
   const renderCitation = (citation) => {
     if (citation.container_title || citation.volume || citation.issue || citation.start_page || citation.end_page) {
       return (
-        <p style={{ margin: '0 0 10px' }}>
-          <span style={{ boxSizing: 'border-box' }}>{citation.container_title && 'Published in '}</span>
-          <span style={{ fontStyle: 'italic' }}>{citation.container_title && citation.container_title + '. '}</span>
+        <p>
+          <span className="published-in">{citation.container_title && 'Published in '}</span>
+          <span className="container-title">{citation.container_title && citation.container_title + '. '}</span>
           {citation.volume && 'Volume ' + citation.volume + '. '}
           {citation.issue && 'Issue ' + citation.issue + '. '}
           {citation.start_page && 'Page ' + citation.start_page}

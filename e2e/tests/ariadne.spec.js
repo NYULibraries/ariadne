@@ -128,7 +128,7 @@ ${e.stderr.toString()}`;
     });
 
     test('returns search results', async ({ page }) => {
-      expect(await page.textContent('h1')).toBe('GetIt Search Results:');
+      expect(await page.textContent('h1')).toBe('NYU GetIt Results:');
     });
 
     test('Chat widget should toggle chat window', async ({ page }) => {

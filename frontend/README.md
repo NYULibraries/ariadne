@@ -34,3 +34,29 @@ Run tests in a container:
 ```
 docker-compose run --rm frontend-test
 ```
+
+### Updating jest snapshots
+
+After stopping all previous frontend-test containers:
+
+```
+docker rm $(docker-compose ps -aq frontend-test )
+```
+
+We can recreate jest snapshots in the frontend-test container:
+
+```
+docker-compose run frontend-test yarn test -u
+```
+
+Now that we only have one frontend-test container, stopped, with the updated snapshot, we can copy the snapshots to our local:
+
+```
+docker cp "$(docker-compose ps -aq frontend-test)":/app/src/components/ frontend/src/
+```
+
+Or just do it all in one line:
+
+```
+docker rm $(docker-compose ps -aq frontend-test) && docker-compose run frontend-test yarn test -u && docker cp "$(docker-compose ps -aq frontend-test)":/app/src/components/ frontend/src/
+```

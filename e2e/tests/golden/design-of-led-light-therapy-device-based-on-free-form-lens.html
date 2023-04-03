@@ -79,41 +79,6 @@ h6 {
   font-family: "Montserrat", sans-serif;
 } */
 
-        /*
-  Styles for the Citation component
-
-*/
-
-        .citation-container>p,
-        .citation-container>h2,
-        .citation-container>.citation-info {
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-
-        .citation-container>p+p {
-            margin-top: 0;
-        }
-
-        .citation-container .citation-info p {
-            margin: 0;
-        }
-
-        .citation-container>p {
-            margin-top: 0;
-        }
-
-        .citation-container>p+.citation-info>p:first-of-type {
-            margin-bottom: 10px;
-        }
-
-        .citation-container .citation-info-label {
-            font-weight: normal;
-            display: inline-block;
-        }
-
-
-
         /* 
   Styles for the List component
 */
@@ -13099,6 +13064,50 @@ h6 {
 
         /* E2E TEST EDIT: sourceMappingURL comments elided */
     </style>
+    <style>
+        .citation-container>p,
+        .citation-container>h2,
+        .citation-container>.citation-info {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .citation-container {
+            margin-left: 10px;
+        }
+
+        .citation-container>p+p {
+            margin-top: 0;
+        }
+
+        .citation-container .citation-info p {
+            margin: 0;
+        }
+
+        .citation-container p {
+            margin: '0 0 10px';
+        }
+
+        .citation-container .published-in {
+            box-sizing: 'border-box';
+        }
+
+        .citation-container .container-title {
+            font-style: italic;
+        }
+
+        .citation-container>p+.citation-info>p:first-of-type {
+            margin-bottom: 10px;
+        }
+
+        .citation-container .citation-info-label {
+            font-weight: normal;
+            display: inline-block;
+        }
+
+
+        /* E2E TEST EDIT: sourceMappingURL comments elided */
+    </style>
 </head>
 
 <body>
@@ -13118,13 +13127,13 @@ h6 {
                         <div class="col-md-8">
                             <div class="jumbotron">
                                 <div class="container text-left">
-                                    <h1>GetIt Search Results:</h1>
+                                    <h1>NYU GetIt Results:</h1>
                                     <div>
                                         <div class="citation-container">
                                             <p class="resource-type">Article</p>
                                             <h2 class="title">Design of LED light therapy device based on free-form lens.</h2>
                                             <p>Feng, Zefeng<span>. </span>20230305</p>
-                                            <p style="margin: 0px 0px 10px;"><span style="box-sizing: border-box;">Published in </span><span style="font-style: italic;">Proceedings of SPIE. </span>Volume 12461. Page 1246106</p>
+                                            <p><span class="published-in">Published in </span><span class="container-title">Proceedings of SPIE. </span>Volume 12461. Page 1246106</p>
                                             <div class="citation-info">
                                                 <p><span class="citation-info-label">ISSN:</span> 0277786X</p>
                                             </div>
@@ -13145,7 +13154,7 @@ h6 {
                                 <div><button style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid rgb(204, 204, 204); padding: 5px 10px; margin-right: 5px;"><span class="link-icon"></span>Create a stable link to this page</button></div>
                             </div>
                             <div class="list-group" style="">
-                                <div class="list-group-item list-group-item-action flex-column border-0"></div>
+                                <div class="list-group-item list-group-item-action flex-column border-0">Resource Available Through NYU Libraries</div>
                                 <div class="list-group-item list-group-item-action flex-column border-0">
                                     <div class="row">
                                         <h3><a href="http://proxy.library.nyu.edu/login?url=https://www.spiedigitallibrary.org/conference-proceedings-of-spie" target="_blank" rel="noopener noreferrer">SPIE Digital Library (Proceedings Series)</a></h3>
