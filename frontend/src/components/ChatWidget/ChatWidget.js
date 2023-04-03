@@ -23,7 +23,7 @@ const ChatWidget = () => {
                             className="button ss-chat chat-button"
                             onClick={handleChatToggle}
                         >
-                            <img src="/images/chat-icon.svg" alt="Chat-Symbol" className="chat-icon" />
+                            <img src="/images/chat-icon.svg" alt="Chat-Symbol." className="chat-icon" />
                             Chat with us
                         </button>
                     )}
