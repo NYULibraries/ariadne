@@ -6,7 +6,6 @@
     <link rel="icon" href="https://cdn.library.nyu.edu/images/favicon.ico">
     <link rel="stylesheet" type="text/css" async="" href="//cloud.typography.com/7436432/789146/css/fonts.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#000000">
 
@@ -79,41 +78,6 @@ h5,
 h6 {
   font-family: "Montserrat", sans-serif;
 } */
-
-        /*
-  Styles for the Citation component
-
-*/
-
-        .citation-container>p,
-        .citation-container>h2,
-        .citation-container>.citation-info {
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-
-        .citation-container>p+p {
-            margin-top: 0;
-        }
-
-        .citation-container .citation-info p {
-            margin: 0;
-        }
-
-        .citation-container>p {
-            margin-top: 0;
-        }
-
-        .citation-container>p+.citation-info>p:first-of-type {
-            margin-bottom: 10px;
-        }
-
-        .citation-container .citation-info-label {
-            font-weight: normal;
-            display: inline-block;
-        }
-
-
 
         /* 
   Styles for the List component
@@ -220,22 +184,15 @@ h6 {
             border-radius: 3px 3px 0 0;
         }
 
-
-        .chat-tab:before {
-            color: #fff;
-            margin-right: 5px;
-            font-size: 16px;
+        .chat-icon {
+            width: 24px;
+            height: 24px;
             vertical-align: middle;
-            position: relative;
-            top: -1px;
-            font-weight: normal;
+            margin-right: 5px;
+            min-width: 24px;
+            min-height: 24px;
         }
 
-        .ss-chat::before,
-        .ss-chat.right::after {
-            font-family: "Material Symbols Sharp";
-            content: "\e0b7";
-        }
 
         #chat_widget {
             position: fixed;
@@ -253,8 +210,8 @@ h6 {
 
         #chat_widget .chat-button {
             padding: 10px 10px 8px;
-            width: 127.72px;
-            height: 35.38px;
+            width: 131.38px;
+            height: 42px;
             color: #e0d5e8;
             line-height: normal;
             white-space: nowrap;
@@ -13107,6 +13064,50 @@ h6 {
 
         /* E2E TEST EDIT: sourceMappingURL comments elided */
     </style>
+    <style>
+        .citation-container>p,
+        .citation-container>h2,
+        .citation-container>.citation-info {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .citation-container {
+            margin-left: 10px;
+        }
+
+        .citation-container>p+p {
+            margin-top: 0;
+        }
+
+        .citation-container .citation-info p {
+            margin: 0;
+        }
+
+        .citation-container p {
+            margin: '0 0 10px';
+        }
+
+        .citation-container .published-in {
+            box-sizing: 'border-box';
+        }
+
+        .citation-container .container-title {
+            font-style: italic;
+        }
+
+        .citation-container>p+.citation-info>p:first-of-type {
+            margin-bottom: 10px;
+        }
+
+        .citation-container .citation-info-label {
+            font-weight: normal;
+            display: inline-block;
+        }
+
+
+        /* E2E TEST EDIT: sourceMappingURL comments elided */
+    </style>
 </head>
 
 <body>
@@ -13126,7 +13127,7 @@ h6 {
                         <div class="col-md-8">
                             <div class="jumbotron">
                                 <div class="container text-left">
-                                    <h1>GetIt Search Results:</h1>
+                                    <h1>NYU GetIt Results:</h1>
                                     <div>
                                         <div class="citation-container">
                                             <p class="resource-type">Journal</p>
@@ -13153,7 +13154,7 @@ h6 {
                                 <div><button style="border-radius: 3px; background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid rgb(204, 204, 204); padding: 5px 10px; margin-right: 5px;"><span class="link-icon"></span>Create a stable link to this page</button></div>
                             </div>
                             <div class="list-group" style="">
-                                <div class="list-group-item list-group-item-action flex-column border-0"></div>
+                                <div class="list-group-item list-group-item-action flex-column border-0">Resource Available Through NYU Libraries</div>
                                 <div class="list-group-item list-group-item-action flex-column border-0">
                                     <div class="row">
                                         <h3><a href="http://proxy.library.nyu.edu/login?url=http://brill.com/view/journals/ywml/ywml-overview.xml" target="_blank" rel="noopener noreferrer">2022 Brill Journal Collection</a></h3>
@@ -13239,7 +13240,7 @@ h6 {
                 </div>
             </footer>
             <aside id="chat_widget" tabindex="-1">
-                <div class="chat-container"><button class="button chat-tab ss-chat chat-button">Chat with us</button>
+                <div class="chat-container"><button class="button ss-chat chat-button"><img src="/images/chat-icon.svg" alt="Chat-Symbol" class="chat-icon">Chat with us</button>
                     <div class="chat-frame-wrap"></div>
                 </div>
             </aside>

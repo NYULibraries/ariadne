@@ -55,10 +55,10 @@ const Main = () => {
                   </div>
                 </div>
               </div>
-              {backendClient.loading && <Loader />}
               <div className="mt-3 mb-3"> {/* Add Bootstrap margin-top and margin-bottom classes */}
                 <StableLink />
               </div>
+              {backendClient.loading && <Loader />}
               {(backendClient.resource?.length === 0 || backendClient.error) ?
                 (
                   <>
@@ -66,10 +66,11 @@ const Main = () => {
                       {backendClient.error && <Error message={backendClient.error} />}
                     </div>
                     <div>
-                      <p>No results found</p>
+                      <p>Something went wrong: no results found</p>
                     </div>
                   </>) :
-                <List links={backendClient.resource} loading={backendClient.loading} />}
+                <List found={backendClient.found} links={backendClient.resource} loading={backendClient.loading} />
+              }
             </Col>
             <Col md={4}>
               <aside title="ask-librarian">
@@ -83,6 +84,6 @@ const Main = () => {
   );
 };
 
-export const RESULTS_HEADER_TEXT = 'GetIt Search Results:';
+export const RESULTS_HEADER_TEXT = 'NYU GetIt Results:';
 
 export default Main;

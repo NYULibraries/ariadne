@@ -128,12 +128,12 @@ ${e.stderr.toString()}`;
     });
 
     test('returns search results', async ({ page }) => {
-      expect(await page.textContent('h1')).toBe('GetIt Search Results:');
+      expect(await page.textContent('h1')).toBe('NYU GetIt Results:');
     });
 
     test('Chat widget should toggle chat window', async ({ page }) => {
       // Click the "Chat with us" button
-      await page.click('button.chat-tab');
+      await page.click('button.ss-chat.chat-button');
 
       // Verify that the chat window is visible
       const chatFrame = await page.waitForSelector('.chat-frame-wrap');
@@ -141,7 +141,7 @@ ${e.stderr.toString()}`;
       expect(isVisible).toBeTruthy();
 
       // Click the "Close chat window" button
-      await page.click('.chat-close');
+      await page.click('button.chat-close');
 
       // Verify that the chat window is hidden
       const isHidden = await chatFrame.isHidden();

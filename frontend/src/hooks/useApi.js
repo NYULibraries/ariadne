@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 export default (apiFunc) => {
   const [resource, setResource] = useState(null);
+  const [found, setFound] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
@@ -17,6 +18,7 @@ export default (apiFunc) => {
           const arrOfLinks = responseBody.records[0].links;
           arrOfLinks.sort((a, b) => a.display_name.localeCompare(b.display_name));
           setResource(arrOfLinks);
+          setFound(responseBody.found);
         } else {
           setError(`The backend API returned errors: ${responseBody.errors.map((error) => `"${error}"`).join(', ')}`);
         }
@@ -30,5 +32,5 @@ export default (apiFunc) => {
     }
   };
 
-  return { resource, fetchResource, error, loading };
+  return { found, resource, fetchResource, error, loading };
 };
