@@ -19,7 +19,6 @@ const Banner = () => {
               alt={altLibraryLogoImageText}
               width="220"
               height="60"
-              tabIndex="0"
             />
           </Nav.Link>
         </Nav>
