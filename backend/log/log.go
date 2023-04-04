@@ -24,10 +24,7 @@ var programLevel = new(slog.LevelVar)
 var slogger *slog.Logger
 
 func init() {
-	handler := slog.HandlerOptions{Level: programLevel}.NewJSONHandler(os.Stdout)
-	slog.SetDefault(slog.New(handler))
-
-	slogger = slog.New(handler)
+	slogger = newDefaultSlogger()
 }
 
 func Fatal(args ...interface{}) {
@@ -52,4 +49,12 @@ func SetOutput(bytesBuffer *bytes.Buffer) {
 	handler := slog.HandlerOptions{Level: programLevel}.NewJSONHandler(logWriter)
 	slog.SetDefault(slog.New(handler))
 	slogger = slog.New(handler)
+}
+
+func newDefaultSlogger() *slog.Logger {
+	programLevel := slog.LevelInfo
+	handler := slog.HandlerOptions{Level: programLevel}.NewJSONHandler(os.Stdout)
+	slog.SetDefault(slog.New(handler))
+
+	return slog.New(handler)
 }
