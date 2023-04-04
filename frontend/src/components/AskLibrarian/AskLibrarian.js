@@ -3,9 +3,7 @@ const AskLibrarian = () => {
         <div className="ask-librarian">
             <h2>Need Help?</h2>
             <h3>
-                <a href={ASK_LIBRARIAN_URL} target="_blank" rel="noopener noreferrer">
-                    {ASK_LIBRARIAN_TEXT}
-                </a>
+                {ASK_LIBRARIAN_TEXT}
             </h3>
             <div>
                 <p>
