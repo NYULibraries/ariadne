@@ -202,14 +202,14 @@ workflows:
       - backend-build:
           requires:
             - backend-test
-#      - deploy-dev:
-#          requires:
-#              - frontend-build
-#              - backend-build
-#              - e2e
-#          filters:
-#            branches:
-#              ignore: main
+      - deploy-dev:
+          requires:
+              - frontend-build
+              - backend-build
+              - e2e
+          filters:
+            branches:
+              ignore: main
       - deploy-prod:
           requires:
               - frontend-build
