@@ -28,7 +28,7 @@ go build
 ./ariadne server
 ```
 
-Running with a logging disabled:
+Running with logging disabled:
 
 ```shell
 cd backend/
