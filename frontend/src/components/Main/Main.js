@@ -10,7 +10,6 @@ import Citation from '../Citation/Citation';
 import Error from '../Error/Error';
 import List from '../List/List';
 import Loader from '../Loader/Loader';
-import StableLink from '../StableLink/StableLink';
 
 const Main = () => {
   const backendClient = useApi(linksApi.fetchData);
@@ -54,9 +53,6 @@ const Main = () => {
                     <Citation />
                   </div>
                 </div>
-              </div>
-              <div className="mt-3 mb-3"> {/* Add Bootstrap margin-top and margin-bottom classes */}
-                <StableLink />
               </div>
               {backendClient.loading && <Loader />}
               {(backendClient.resource?.length === 0 || backendClient.error) ?

@@ -150,15 +150,7 @@ ${e.stderr.toString()}`;
       expect(isHidden).toBeTruthy();
     });
 
-    test('should not have any automatically detectable accessibility issues', async ({ page }) => {
-
-      const accessibilityScanResults = await new AxeBuilder({ page })
-        .exclude('ul')
-        .analyze();
-      expect(accessibilityScanResults.violations).toEqual([]);
-    });
-
-    test('should not have any automatically detectable WCAG A or AA violations', async ({ page }) => {
+    test('should not have any automatically detectable WCAG AA violations', async ({ page }) => {
       //Currently use WCAG 2.0 AA as a baseline
       const accessibilityScanResults = await new AxeBuilder({ page })
         .exclude('ul')

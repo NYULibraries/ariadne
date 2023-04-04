@@ -5,7 +5,9 @@
 }
 
 /* global font sizes */
-body div h1, body div h2, body div h3 {
+body div h1,
+body div h2,
+body div h3 {
   font-weight: bold;
 }
 
@@ -72,9 +74,6 @@ h6 {
 .row a {
   text-decoration: none;
   color: #0170B2;
-}
-
-.row h3 {
   line-height: 1.2;
 }
 
@@ -112,6 +111,17 @@ h6 {
   background-color: #57068c;
 }
 
+ul.list-group {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-group li a {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
 
 @media screen and (max-width: 800px) {
   .ask-librarian {

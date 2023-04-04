@@ -117,15 +117,16 @@ describe('Backend success', () => {
             render(<Main />);
             // See comment at top of file: 'Clearing "wrap in act()" warnings'
             await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
-            const askALibrarian = await waitFor(() => screen.getByText(ASK_LIBRARIAN_TEXT));
-            expect(askALibrarian).toBeInTheDocument();
+            const askALibrarianLinks = await waitFor(() => screen.getAllByText(ASK_LIBRARIAN_TEXT));
+            expect(askALibrarianLinks.length).toBeGreaterThan(0); // Check that at least one link is present
         });
 
         test(`renders ${ASK_LIBRARIAN_TEXT} with a link to ${ASK_LIBRARIAN_URL}`, async () => {
             render(<Main />);
             await waitForElementToBeRemoved(() => screen.getByText(LOADING_TEXT_REGEXP));
-            const askALibrarian = await waitFor(() => screen.getByText(ASK_LIBRARIAN_TEXT));
-            expect(askALibrarian).toHaveAttribute('href', ASK_LIBRARIAN_URL);
+            const askALibrarianLinks = await waitFor(() => screen.getAllByText(ASK_LIBRARIAN_TEXT));
+            const secondAskALibrarianLink = askALibrarianLinks[1];
+            expect(secondAskALibrarianLink).toHaveAttribute('href', ASK_LIBRARIAN_URL);
         });
     });
 });
