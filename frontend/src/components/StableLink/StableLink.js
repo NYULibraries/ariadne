@@ -81,7 +81,7 @@ const StableLink = () => {
                         ...mainButtonFocus ? focusedStyle : {},
                         backgroundColor: mainButtonHover ? '#6c07ae' : buttonStyle.backgroundColor,
                     }}
-                    aria-label="Create a stable link to this page"
+                    aria-label="stable-link-label"
                 >
                     <span className="link-icon"></span>Create a stable link to this page
                 </button>
@@ -92,7 +92,7 @@ const StableLink = () => {
                             readOnly
                             value={link}
                             ref={inputRef}
-                            id="stable-link-input-text"
+                            id="stable-link-text"
                             style={{
                                 borderRadius: '3px',
                                 backgroundColor: 'white',
@@ -110,7 +110,7 @@ const StableLink = () => {
                                 color: '#1C2127',
                                 backgroundColor: copyButtonHover ? '#e6e6e6' : 'white',
                             }}
-                            aria-label="Copy stable link"
+                            aria-label="copy-stable-link"
                         >
                             Copy
                         </button>
@@ -124,7 +124,7 @@ const StableLink = () => {
                                 backgroundColor: closeButtonHover ? '#e6e6e6' : 'white',
                                 textDecoration: closeButtonHover ? 'underline' : 'none',
                             }}
-                            aria-label="Close stable link"
+                            aria-label="close-stable-link"
                             ref={closeButtonRef}
                         >
                             X
