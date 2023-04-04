@@ -120,9 +120,6 @@ h6 {
         .row a {
             text-decoration: none;
             color: #0170B2;
-        }
-
-        .row h3 {
             line-height: 1.2;
         }
 
@@ -160,19 +157,17 @@ h6 {
             background-color: #57068c;
         }
 
-        .list-group ul {
+        ul.list-group {
             list-style-type: none;
             padding: 0;
             margin: 0;
         }
 
-        .list-group li {
+        .list-group li a {
             font-size: 20px;
             font-weight: bold;
-            margin-bottom: 0.5rem;
-            padding-left: calc(var(--bs-gutter-x)*.5);
+            margin-bottom: 8px;
         }
-
 
         @media screen and (max-width: 800px) {
             .ask-librarian {
@@ -13215,17 +13210,14 @@ h6 {
                                     </div>
                                 </div>
                             </div>
-                            <div class="list-group" style="">
-                                <div class="list-group-item list-group-item-action flex-column border-0">Resource Available Through NYU Libraries</div>
-                                <div class="list-group-item list-group-item-action flex-column border-0">
-                                    <div class="row">
-                                        <ul>
-                                            <li><a href="http://proxy.library.nyu.edu/login?url=https://www.pressreader.com/italy/corriere-fiorentino" target="_blank" rel="noopener noreferrer">PressReader</a></li>
-                                        </ul>
+                            <ul class="list-group">
+                                <li class="list-group-item list-group-item-action flex-column border-0">Resource Available Through NYU Libraries</li>
+                                <li class="list-group-item list-group-item-action flex-column border-0">
+                                    <div class="row"><a href="http://proxy.library.nyu.edu/login?url=https://www.pressreader.com/italy/corriere-fiorentino" target="_blank" rel="noopener noreferrer">PressReader</a>
                                         <p></p>
                                     </div>
-                                </div>
-                            </div>
+                                </li>
+                            </ul>
                         </div>
                         <div class="col-md-4">
                             <aside title="ask-librarian">

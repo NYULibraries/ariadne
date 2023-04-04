@@ -74,9 +74,6 @@ h6 {
 .row a {
   text-decoration: none;
   color: #0170B2;
-}
-
-.row h3 {
   line-height: 1.2;
 }
 
@@ -114,19 +111,17 @@ h6 {
   background-color: #57068c;
 }
 
-.list-group ul {
+ul.list-group {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-.list-group li {
+.list-group li a {
   font-size: 20px;
   font-weight: bold;
-  margin-bottom: 0.5rem;
-  padding-left: calc(var(--bs-gutter-x)*.5);
+  margin-bottom: 8px;
 }
-
 
 @media screen and (max-width: 800px) {
   .ask-librarian {
