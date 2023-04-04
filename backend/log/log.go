@@ -1,6 +1,8 @@
 package log
 
 import (
+	"bufio"
+	"bytes"
 	"fmt"
 	"golang.org/x/exp/slog"
 	"math"
@@ -43,4 +45,11 @@ func Info(message string, args ...interface{}) {
 
 func SetLevel(level Level) {
 	programLevel.Set(slog.Level(level))
+}
+
+func SetOutput(bytesBuffer *bytes.Buffer) {
+	logWriter := bufio.NewWriter(bytesBuffer)
+	handler := slog.HandlerOptions{Level: programLevel}.NewJSONHandler(logWriter)
+	slog.SetDefault(slog.New(handler))
+	slogger = slog.New(handler)
 }
