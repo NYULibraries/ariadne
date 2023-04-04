@@ -28,6 +28,15 @@ go build
 ./ariadne server
 ```
 
+Running with a logging disabled:
+
+```shell
+cd backend/
+go build
+# Run `./ariadne server -h` to get a list of all valid `--logging-level` options
+./ariadne server --logging-level disabled
+```
+
 Running on a different port:
 
 ```shell

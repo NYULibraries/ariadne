@@ -3,16 +3,20 @@ package log
 import (
 	"bufio"
 	"bytes"
+	"errors"
 	"fmt"
 	"golang.org/x/exp/slog"
 	"math"
 	"os"
 	"reflect"
+	"strings"
 )
 
 type Level int
 
 const DefaultLevel = slog.LevelInfo
+
+var DefaultLevelStringOption = getLevelOptionStringForSlogLevel(DefaultLevel)
 
 var (
 	LevelDebug    = Level(reflect.ValueOf(slog.LevelDebug).Int())
@@ -21,6 +25,14 @@ var (
 	LevelError    = Level(reflect.ValueOf(slog.LevelWarn).Int())
 	LevelDisabled = Level(math.MaxInt)
 )
+
+var logLevelStringOptions = map[string]Level{
+	"debug":    LevelDebug,
+	"info":     LevelInfo,
+	"warn":     LevelWarn,
+	"error":    LevelError,
+	"disabled": LevelDisabled,
+}
 
 var programLevel = new(slog.LevelVar)
 var slogger *slog.Logger
@@ -38,6 +50,18 @@ func Fatal(args ...interface{}) {
 	os.Exit(1)
 }
 
+func GetValidLevelOptionStrings() []string {
+	// Note that we are returning the strings in a specific order: i.e. in order of
+	// increasing severity.
+	return []string{
+		"debug",
+		"info",
+		"warn",
+		"error",
+		"disabled",
+	}
+}
+
 func Info(message string, args ...interface{}) {
 	slogger.Info(message, args...)
 }
@@ -46,11 +70,32 @@ func SetLevel(level Level) {
 	programLevel.Set(slog.Level(level))
 }
 
+func SetLevelByString(levelStringArg string) error {
+	level, ok := logLevelStringOptions[levelStringArg]
+	if ok {
+		programLevel.Set(slog.Level(level))
+		return nil
+	} else {
+		return errors.New(fmt.Sprintf("\"%s\" is not a valid error string option.  Valid options: %s",
+			levelStringArg, strings.Join(GetValidLevelOptionStrings(), ", ")))
+	}
+}
+
 func SetOutput(bytesBuffer *bytes.Buffer) {
 	logWriter := bufio.NewWriter(bytesBuffer)
 	handler := slog.HandlerOptions{Level: programLevel}.NewJSONHandler(logWriter)
 	slog.SetDefault(slog.New(handler))
 	slogger = slog.New(handler)
+}
+
+func getLevelOptionStringForSlogLevel(levelArg slog.Level) string {
+	for optionString, levelValue := range logLevelStringOptions {
+		if levelValue == Level(reflect.ValueOf(levelArg).Int()) {
+			return optionString
+		}
+	}
+
+	return ""
 }
 
 func newDefaultSlogger() *slog.Logger {
