@@ -160,6 +160,19 @@ h6 {
             background-color: #57068c;
         }
 
+        .list-group ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .list-group li {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            padding-left: calc(var(--bs-gutter-x)*.5);
+        }
+
 
         @media screen and (max-width: 800px) {
             .ask-librarian {
@@ -13205,41 +13218,37 @@ h6 {
                                     </div>
                                 </div>
                             </div>
-                            <div class="mt-3 mb-3">
-                                <style>
-                                    .link-icon::before {
-                                        content: "\e157";
-                                        font-family: "Material Symbols Sharp";
-                                        color: #fff;
-                                        margin-right: 5px;
-                                        vertical-align: middle;
-                                    }
-                                </style>
-                                <div aria-labelledby="stable-link-label"><button id="stable-link-label" aria-label="stable-link-label" style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid rgb(204, 204, 204); padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"><span class="link-icon"></span>Create a stable link to this page</button></div>
-                            </div>
                             <div class="list-group" style="">
                                 <div class="list-group-item list-group-item-action flex-column border-0">Resource Available Through NYU Libraries</div>
                                 <div class="list-group-item list-group-item-action flex-column border-0">
                                     <div class="row">
-                                        <h3><a href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?atitle=%22life%22+magazine+and+the+power+of+photography&amp;issue=4&amp;sid=Primo&amp;genre=article&amp;spage=144&amp;title=The+Art+Bulletin&amp;date=20211201&amp;issn=0004-3079&amp;volume=103" target="_blank" rel="noopener noreferrer">EBSCOhost Academic Search Complete</a></h3>
+                                        <ul>
+                                            <li><a href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?atitle=%22life%22+magazine+and+the+power+of+photography&amp;issue=4&amp;sid=Primo&amp;genre=article&amp;spage=144&amp;title=The+Art+Bulletin&amp;date=20211201&amp;issn=0004-3079&amp;volume=103" target="_blank" rel="noopener noreferrer">EBSCOhost Academic Search Complete</a></li>
+                                        </ul>
                                         <p>Available from 1975/03/01</p>
                                     </div>
                                 </div>
                                 <div class="list-group-item list-group-item-action flex-column border-0">
                                     <div class="row">
-                                        <h3><a href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?issue=4&amp;atitle=%22life%22+magazine+and+the+power+of+photography&amp;sid=Primo&amp;title=The+Art+Bulletin&amp;genre=article&amp;spage=144&amp;issn=0004-3079&amp;volume=103&amp;date=20211201" target="_blank" rel="noopener noreferrer">EBSCOhost Humanities Full Text</a></h3>
+                                        <ul>
+                                            <li><a href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?issue=4&amp;atitle=%22life%22+magazine+and+the+power+of+photography&amp;sid=Primo&amp;title=The+Art+Bulletin&amp;genre=article&amp;spage=144&amp;issn=0004-3079&amp;volume=103&amp;date=20211201" target="_blank" rel="noopener noreferrer">EBSCOhost Humanities Full Text</a></li>
+                                        </ul>
                                         <p>Available from 1987/12/01</p>
                                     </div>
                                 </div>
                                 <div class="list-group-item list-group-item-action flex-column border-0">
                                     <div class="row">
-                                        <h3><a href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?title=The+Art+Bulletin&amp;genre=article&amp;spage=144&amp;issn=0004-3079&amp;volume=103&amp;date=20211201&amp;issue=4&amp;atitle=%22life%22+magazine+and+the+power+of+photography&amp;sid=Primo" target="_blank" rel="noopener noreferrer">EBSCOhost OmniFile Full Text Mega</a></h3>
+                                        <ul>
+                                            <li><a href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?title=The+Art+Bulletin&amp;genre=article&amp;spage=144&amp;issn=0004-3079&amp;volume=103&amp;date=20211201&amp;issue=4&amp;atitle=%22life%22+magazine+and+the+power+of+photography&amp;sid=Primo" target="_blank" rel="noopener noreferrer">EBSCOhost OmniFile Full Text Mega</a></li>
+                                        </ul>
                                         <p>Available from 1995/03/01</p>
                                     </div>
                                 </div>
                                 <div class="list-group-item list-group-item-action flex-column border-0">
                                     <div class="row">
-                                        <h3><a href="http://proxy.library.nyu.edu/login?url=https://www.tandfonline.com/openurl?issue=4&amp;spage=144&amp;genre=article&amp;volume=103&amp;issn=0004-3079&amp;date=2021" target="_blank" rel="noopener noreferrer">Taylor &amp; Francis Complete Library Database Model</a></h3>
+                                        <ul>
+                                            <li><a href="http://proxy.library.nyu.edu/login?url=https://www.tandfonline.com/openurl?issue=4&amp;spage=144&amp;genre=article&amp;volume=103&amp;issn=0004-3079&amp;date=2021" target="_blank" rel="noopener noreferrer">Taylor &amp; Francis Complete Library Database Model</a></li>
+                                        </ul>
                                         <p>Available from 1913/09/01 volume: 1 issue: 1</p>
                                     </div>
                                 </div>
@@ -13249,9 +13258,9 @@ h6 {
                             <aside title="ask-librarian">
                                 <div class="ask-librarian">
                                     <h2>Need Help?</h2>
-                                    <h3><a href="https://library.nyu.edu/ask/" target="_blank" rel="noopener noreferrer">Ask a Librarian</a></h3>
+                                    <h3>Ask a Librarian</h3>
                                     <div>
-                                        <p>Use <a href="https://library.nyu.edu/ask/" target="_blank" rel="noreferrer">Ask A Librarian</a> or the "Chat with Us" icon at the bottom right corner for any question you have about the Libraries' services.</p>
+                                        <p>Use <a href="https://library.nyu.edu/ask/" target="_blank" rel="noreferrer">Ask a Librarian</a> or the "Chat with Us" icon at the bottom right corner for any question you have about the Libraries' services.</p>
                                         <p>Visit our <a href="https://guides.nyu.edu/online-tutorials/finding-sources" target="_blank" rel="noreferrer">online tutorials</a> for tips on searching the catalog and getting library resources.</p>
                                         <h3>Additional Resources</h3>
                                         <ul>
