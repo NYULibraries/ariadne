@@ -96,7 +96,7 @@ func handleBadRequestError(err error, w http.ResponseWriter, message string) {
 // healthCheck returns a successful response, that's it
 func healthCheck(w http.ResponseWriter, r *http.Request) {
 	w.Header().Add("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(map[string]interface{}{"status": "ok"})
+	json.NewEncoder(w).Encode(map[string]any{"status": "ok"})
 }
 
 func makeJSONResponseFromPrimoResponse(primoResponse *primo.PrimoResponse) string {
