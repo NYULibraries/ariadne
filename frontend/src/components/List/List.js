@@ -6,25 +6,21 @@ const List = ({ found, links, loading }) => {
         loading ? (
             <div className="empty" style={emptyStyle}></div>
         ) :
-            <div className="list-group">
-                <div className="list-group-item list-group-item-action flex-column border-0">
+            <ul className="list-group">
+                <li className="list-group-item list-group-item-action flex-column border-0">
                   {found ? "Resource Available Through NYU Libraries" : "Resource Not Available Through NYU Libraries"}
-                </div>
+                </li>
                 {links?.map((link, idx) => (
-                    <div key={idx} className="list-group-item list-group-item-action flex-column border-0">
+                    <li key={idx} className="list-group-item list-group-item-action flex-column border-0">
                         <div className="row">
-                            <ul>
-                                <li>
                                     <a href={link.url} target="_blank" rel="noopener noreferrer">
                                         {link.display_name}
                                     </a>
-                                </li>
-                            </ul>
                             <p>{link.coverage_text}</p>
                         </div>
-                    </div>
+                    </li>
                 ))}
-            </div>
+            </ul>
     );
 };
 
