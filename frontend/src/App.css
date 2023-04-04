@@ -5,7 +5,9 @@
 }
 
 /* global font sizes */
-body div h1, body div h2, body div h3 {
+body div h1,
+body div h2,
+body div h3 {
   font-weight: bold;
 }
 
@@ -110,6 +112,19 @@ h6 {
   margin-bottom: 0;
   border-radius: 0;
   background-color: #57068c;
+}
+
+.list-group ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-group li {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  padding-left: calc(var(--bs-gutter-x)*.5);
 }
 
 

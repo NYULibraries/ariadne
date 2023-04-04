@@ -13,11 +13,13 @@ const List = ({ found, links, loading }) => {
                 {links?.map((link, idx) => (
                     <div key={idx} className="list-group-item list-group-item-action flex-column border-0">
                         <div className="row">
-                            <h3>
-                                <a href={link.url} target="_blank" rel="noopener noreferrer">
-                                    {link.display_name}
-                                </a>
-                            </h3>
+                            <ul>
+                                <li>
+                                    <a href={link.url} target="_blank" rel="noopener noreferrer">
+                                        {link.display_name}
+                                    </a>
+                                </li>
+                            </ul>
                             <p>{link.coverage_text}</p>
                         </div>
                     </div>
