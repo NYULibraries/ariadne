@@ -39,15 +39,17 @@ exports[`List matches snapshot when links prop is passed 1`] = `
     <div
       class="row"
     >
-      <h3>
-        <a
-          href="https://www.example.com"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Example Website
-        </a>
-      </h3>
+      <ul>
+        <li>
+          <a
+            href="https://www.example.com"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Example Website
+          </a>
+        </li>
+      </ul>
       <p />
     </div>
   </div>
@@ -57,15 +59,17 @@ exports[`List matches snapshot when links prop is passed 1`] = `
     <div
       class="row"
     >
-      <h3>
-        <a
-          href="https://www.example.org"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Example Organization
-        </a>
-      </h3>
+      <ul>
+        <li>
+          <a
+            href="https://www.example.org"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Example Organization
+          </a>
+        </li>
+      </ul>
       <p />
     </div>
   </div>
