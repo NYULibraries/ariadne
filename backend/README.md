@@ -263,6 +263,47 @@ Run tests in a container:
 docker-compose run backend-test
 ```
 
+### Update SFX and Primo response fixture files
+
+These examples use `go run main.go` instead of `./ariadne`, to emphasize that one
+wants to make sure to use the most current version of the code to update the fixture
+files, which in many cases will be the code in the source code of the working directory.
+`./ariadne` can also be used, as long as it is understood that there exists the
+possibility the at the binary is the wrong version.
+
+**SFX**
+
+```shell
+cd backend/
+go run main.go debug sfx-response '?sid=&aulast=Shakespeare&aufirst=William&genre=book&title=The%20Oxford%20Shakespeare:%20Hamlet&date=1987&isbn=9780198129103' > testutils/testdata/fixtures/sfx-fake-responses/hamlet.xml
+```
+
+**Primo**
+
+A lot trickier, because there might be multiple Primo responses that need
+to be made into fixtures.  In theory, in addition to the response to the initial
+ISBN search, there might be multiple FRBR member searches each of which will
+generate a response.  In practice, it might be the case that there will always or
+almost always be only one subsequent FRBR member search for the active FRBR group.
+
+The example below assumes only 1 FRBR member search response.  The `debug primo-api-responses`
+fetches all Primo responses and returns them in an JSON array.  The first `debug primo-api-responses`
+command fetches the full response and uses `jq` to extract the first element in
+the array and redirects it into the ISBN search response fixture.  The second
+command fetches the second element in the array and redirects it into the FRBR
+member search fixture file.
+
+The Primo fake and test currently assume only one single FRBR member request and
+response for what is designated the active FRBR group (type 5).  If a new test
+case is added that requires more than one FRBR member search, we will need to
+rewrite the Primo fake to be able to handle that.
+
+```shell
+cd backend/
+go run main.go debug primo-api-responses '?sid=&aulast=Shakespeare&aufirst=William&genre=book&title=The%20Oxford%20Shakespeare:%20Hamlet&date=1987&isbn=9780198129103' | jq '.[0]' > testutils/testdata/fixtures/primo-fake-responses/hamlet.json
+go run main.go debug primo-api-responses '?sid=&aulast=Shakespeare&aufirst=William&genre=book&title=The%20Oxford%20Shakespeare:%20Hamlet&date=1987&isbn=9780198129103' | jq '.[1]' > testutils/testdata/fixtures/primo-fake-responses/frbr-member-search-data/hamlet.json 
+```
+
 ## Example
 
 This is the existing SFX service response for The New Yorker:
