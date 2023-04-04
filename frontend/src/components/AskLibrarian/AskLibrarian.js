@@ -7,7 +7,7 @@ const AskLibrarian = () => {
             </h3>
             <div>
                 <p>
-                    Use <a href="https://library.nyu.edu/ask/" target="_blank" rel="noreferrer">Ask A Librarian</a> or the &quot;Chat with Us&quot; icon at the bottom right corner for any question you have about the Libraries&apos; services.
+                    Use <a href="https://library.nyu.edu/ask/" target="_blank" rel="noreferrer">{ASK_LIBRARIAN_TEXT}</a> or the &quot;Chat with Us&quot; icon at the bottom right corner for any question you have about the Libraries&apos; services.
                 </p>
                 <p>
                     Visit our <a href="https://guides.nyu.edu/online-tutorials/finding-sources" target="_blank" rel="noreferrer">online tutorials</a> for tips on searching the catalog and getting library resources.
