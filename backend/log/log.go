@@ -52,7 +52,7 @@ func SetOutput(bytesBuffer *bytes.Buffer) {
 }
 
 func newDefaultSlogger() *slog.Logger {
-	programLevel := slog.LevelInfo
+	programLevel.Set(slog.LevelInfo)
 	handler := slog.HandlerOptions{Level: programLevel}.NewJSONHandler(os.Stdout)
 	slog.SetDefault(slog.New(handler))
 
