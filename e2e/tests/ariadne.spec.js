@@ -114,6 +114,8 @@ ${e.stderr.toString()}`;
     });
 
     test('screenshot matches expected', async ({ page }) => {
+      test.skip( process.platform === 'darwin', 'This test is not implemented for Mac' );
+
       // Wait for the response to be returned and the page to render
       await page.waitForSelector('.image');
       await page.waitForSelector('.list-group-item');

@@ -1,12 +1,12 @@
 package api
 
 import (
+	"ariadne/log"
 	"ariadne/primo"
 	"ariadne/sfx"
 	"encoding/json"
 	"errors"
 	"fmt"
-	"log"
 	"net/http"
 	"strings"
 )
@@ -34,6 +34,8 @@ func ResolverHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	log.Info("SFX response", "sfxResponse.DumpedHTTPResponse", sfxResponse.DumpedHTTPResponse)
+
 	var responseJSON string
 
 	if sfxResponse.IsFound() {
@@ -49,6 +51,12 @@ func ResolverHandler(w http.ResponseWriter, r *http.Request) {
 			responseJSON = makeJSONResponseFromSFXResponse(sfxResponse)
 		}
 
+		log.Info("Primo HTTP FRBR member requests",
+			"primoResponse.DumpedFRBRMemberHTTPRequests", primoResponse.DumpedFRBRMemberHTTPRequests)
+
+		log.Info("Primo HTTP responses (initial ISBN search and FRBR member searches)",
+			"primoResponse.DumpedHTTPResponses", primoResponse.DumpedHTTPResponses)
+
 		if primoResponse.IsFound() {
 			responseJSON = makeJSONResponseFromPrimoResponse(primoResponse)
 		} else {
@@ -56,6 +64,8 @@ func ResolverHandler(w http.ResponseWriter, r *http.Request) {
 			responseJSON = makeJSONResponseFromSFXResponse(sfxResponse)
 		}
 	}
+
+	log.Info("Ariadne API response", "json", responseJSON)
 
 	fmt.Fprintln(w, responseJSON)
 }
@@ -65,6 +75,8 @@ func getPrimoResponse(queryString string) (*primo.PrimoResponse, error) {
 	if err != nil {
 		return &primo.PrimoResponse{}, errors.New(invalidPrimoRequestErrorMessage)
 	}
+
+	log.Info("Primo request", "primoRequest.DumpedISBNSearchHTTPRequest", primoRequest.DumpedISBNSearchHTTPRequest)
 
 	return primo.Do(primoRequest)
 }
@@ -77,11 +89,13 @@ func getSFXResponse(queryString string) (*sfx.SFXResponse, error) {
 		return &sfxResponse, errors.New(invalidSFXRequestErrorMessage)
 	}
 
+	log.Info("SFX request", "sfxRequest.DumpedHTTPRequest", sfxRequest.DumpedHTTPRequest)
+
 	return sfx.Do(sfxRequest)
 }
 
 func handleBadRequestError(err error, w http.ResponseWriter, message string) {
-	log.Println(err)
+	log.Error(err.Error())
 
 	response := Response{
 		Errors:  []string{message},

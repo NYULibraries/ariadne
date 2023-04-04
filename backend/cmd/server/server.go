@@ -2,13 +2,16 @@ package server
 
 import (
 	"ariadne/api"
+	"ariadne/log"
+	"fmt"
 	"github.com/spf13/cobra"
-	"log"
 	"net/http"
+	"strings"
 )
 
 const defaultPort = "8080"
 
+var loggingLevel string
 var port string
 
 var ServerCmd = &cobra.Command{
@@ -21,12 +24,24 @@ var ServerCmd = &cobra.Command{
 }
 
 func init() {
+	ServerCmd.Flags().StringVarP(&loggingLevel, "logging-level", "l",
+		log.DefaultLevelStringOption,
+		"Sets logging level: "+strings.Join(log.GetValidLevelOptionStrings(), ", ")+"")
 	ServerCmd.Flags().StringVarP(&port, "port", "p", defaultPort, "Port to run server on")
 }
 
 func start() {
 	router := api.NewRouter()
 
-	log.Println("Listening on port", port)
+	normalizedLogLevel := strings.ToLower(loggingLevel)
+	err := log.SetLevelByString(normalizedLogLevel)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	log.Info(fmt.Sprintf("Logging level set to \"%s\"", normalizedLogLevel))
+
+	log.Info("Listening on port " + port)
+
 	log.Fatal(http.ListenAndServe(":"+port, router))
 }

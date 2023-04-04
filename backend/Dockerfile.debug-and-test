@@ -10,7 +10,7 @@
 # For example, in alpine, one would need to run `apk add build-base` before running
 # `go build` command to avoid a "gcc not in PATH" error.
 
-FROM golang:1.20.2
+FROM golang:1.19.7
 
 WORKDIR /app
 COPY . .
