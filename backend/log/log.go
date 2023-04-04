@@ -14,9 +14,9 @@ import (
 
 type Level int
 
-const DefaultLevel = slog.LevelInfo
+const defaultLevel = slog.LevelInfo
 
-var DefaultLevelStringOption = getLevelOptionStringForSlogLevel(DefaultLevel)
+var DefaultLevelStringOption = getLevelOptionStringForSlogLevel(defaultLevel)
 
 var (
 	LevelDebug    = Level(reflect.ValueOf(slog.LevelDebug).Int())
@@ -99,7 +99,7 @@ func getLevelOptionStringForSlogLevel(levelArg slog.Level) string {
 }
 
 func newDefaultSlogger() *slog.Logger {
-	programLevel.Set(DefaultLevel)
+	programLevel.Set(defaultLevel)
 	handler := slog.HandlerOptions{Level: programLevel}.NewJSONHandler(os.Stdout)
 	slog.SetDefault(slog.New(handler))
 
