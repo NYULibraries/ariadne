@@ -27,13 +27,13 @@ func init() {
 	slogger = newDefaultSlogger()
 }
 
+func Error(message string, args ...interface{}) {
+	slogger.Error(message, args...)
+}
+
 func Fatal(args ...interface{}) {
 	Error(fmt.Sprint(args...))
 	os.Exit(1)
-}
-
-func Error(message string, args ...interface{}) {
-	slogger.Error(message, args...)
 }
 
 func Info(message string, args ...interface{}) {
