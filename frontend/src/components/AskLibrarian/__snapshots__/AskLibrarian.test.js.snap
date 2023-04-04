@@ -8,13 +8,7 @@ exports[`AskLibrarian component matches snapshot 1`] = `
     Need Help?
   </h2>
   <h3>
-    <a
-      href="https://library.nyu.edu/ask/"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      Ask a Librarian
-    </a>
+    Ask a Librarian
   </h3>
   <div>
     <p>
@@ -24,7 +18,7 @@ exports[`AskLibrarian component matches snapshot 1`] = `
         rel="noreferrer"
         target="_blank"
       >
-        Ask A Librarian
+        Ask a Librarian
       </a>
        or the "Chat with Us" icon at the bottom right corner for any question you have about the Libraries' services.
     </p>

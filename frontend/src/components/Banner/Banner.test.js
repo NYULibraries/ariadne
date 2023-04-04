@@ -1,14 +1,13 @@
 import { render, screen, waitFor } from '@testing-library/react';
 
-import Banner from './Banner';
-
 import { bannerInstitutionInfo } from '../../aux/institutionInfo';
+import Banner from './Banner';
 
 const institutionNamesUpperCase = Object.keys(bannerInstitutionInfo).map(institutionName => institutionName.toUpperCase());
 
 describe.each(institutionNamesUpperCase)(
   'Institution name: %s', (institutionNameUpperCase) => {
-    beforeEach( () => {
+    beforeEach(() => {
       delete window.location;
       window.location = new URL(`${process.env.REACT_APP_API_URL}?institution=${institutionNameUpperCase}`);
     });
@@ -36,8 +35,8 @@ describe.each(institutionNamesUpperCase)(
 
     test(`sets the background of the logo correctly for ${institutionNameUpperCase}`, async () => {
       render(<Banner />, {
-                           route: `?institution=${institutionNameUpperCase}`,
-                         });
+        route: `?institution=${institutionNameUpperCase}`,
+      });
       const { altLibraryLogoImageText } = bannerInstitutionInfo[institutionNameUpperCase.toLowerCase()]
       const linkElement = await waitFor(() => screen.getByAltText(altLibraryLogoImageText));
       const { imgClass } = bannerInstitutionInfo[institutionNameUpperCase.toLowerCase()]
@@ -53,7 +52,7 @@ describe('No `institution` parameter in query string', () => {
 
   test('renders the NYU Libraries logo', async () => {
     render(<Banner />);
-    const linkElement = await waitFor(() => screen.getByAltText('NYU Libraries logo - click to go to the NYU Libraries main page').closest('a'));
+    const linkElement = await waitFor(() => screen.getByAltText('NYU Libraries homepage.').closest('a'));
     expect(linkElement).toBeInTheDocument();
   });
 });

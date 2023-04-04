@@ -1,75 +1,71 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`List matches snapshot when error prop is passed 1`] = `
-<div
+<ul
   class="list-group"
 >
-  <div
+  <li
     class="list-group-item list-group-item-action flex-column border-0"
   >
     Resource Not Available Through NYU Libraries
-  </div>
-</div>
+  </li>
+</ul>
 `;
 
 exports[`List matches snapshot when links prop is empty 1`] = `
-<div
+<ul
   class="list-group"
 >
-  <div
+  <li
     class="list-group-item list-group-item-action flex-column border-0"
   >
     Resource Not Available Through NYU Libraries
-  </div>
-</div>
+  </li>
+</ul>
 `;
 
 exports[`List matches snapshot when links prop is passed 1`] = `
-<div
+<ul
   class="list-group"
 >
-  <div
+  <li
     class="list-group-item list-group-item-action flex-column border-0"
   >
     Resource Not Available Through NYU Libraries
-  </div>
-  <div
+  </li>
+  <li
     class="list-group-item list-group-item-action flex-column border-0"
   >
     <div
       class="row"
     >
-      <h3>
-        <a
-          href="https://www.example.com"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Example Website
-        </a>
-      </h3>
+      <a
+        href="https://www.example.com"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Example Website
+      </a>
       <p />
     </div>
-  </div>
-  <div
+  </li>
+  <li
     class="list-group-item list-group-item-action flex-column border-0"
   >
     <div
       class="row"
     >
-      <h3>
-        <a
-          href="https://www.example.org"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Example Organization
-        </a>
-      </h3>
+      <a
+        href="https://www.example.org"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Example Organization
+      </a>
       <p />
     </div>
-  </div>
-</div>
+  </li>
+</ul>
 `;
 
 exports[`List matches snapshot when loading prop is true 1`] = `

@@ -4,42 +4,27 @@ exports[`Institution name: NYU renders NYU page correctly 1`] = `
 <DocumentFragment>
   <nav
     class="color-nav navbar navbar-expand-lg navbar-light"
-    role="navigation"
   >
     <div
       class="container"
     >
-      <button
-        aria-controls="basic-navbar-nav"
-        aria-label="Toggle navigation"
-        class="navbar-toggler collapsed"
-        type="button"
-      >
-        <span
-          class="navbar-toggler-icon"
-        />
-      </button>
       <div
-        class="navbar-collapse collapse"
-        id="basic-navbar-nav"
+        class="me-auto navbar-nav"
       >
-        <div
-          class="me-auto navbar-nav"
+        <a
+          aria-label="nyu home"
+          class="nav-link"
+          data-rr-ui-event-key="https://library.nyu.edu"
+          href="https://library.nyu.edu"
         >
-          <a
-            class="nav-link"
-            data-rr-ui-event-key="http://library.nyu.edu"
-            href="http://library.nyu.edu"
-          >
-            <img
-              alt="NYU Libraries logo - click to go to the NYU Libraries main page"
-              class="image"
-              height="60"
-              src="https://cdn.library.nyu.edu/images/nyulibraries-logo.svg"
-              width="220"
-            />
-          </a>
-        </div>
+          <img
+            alt="NYU Libraries homepage."
+            class="image"
+            height="60"
+            src="https://cdn.library.nyu.edu/images/nyulibraries-logo.svg"
+            width="220"
+          />
+        </a>
       </div>
     </div>
   </nav>
@@ -50,42 +35,27 @@ exports[`Institution name: NYUAD renders NYUAD page correctly 1`] = `
 <DocumentFragment>
   <nav
     class="color-nav navbar navbar-expand-lg navbar-light"
-    role="navigation"
   >
     <div
       class="container"
     >
-      <button
-        aria-controls="basic-navbar-nav"
-        aria-label="Toggle navigation"
-        class="navbar-toggler collapsed"
-        type="button"
-      >
-        <span
-          class="navbar-toggler-icon"
-        />
-      </button>
       <div
-        class="navbar-collapse collapse"
-        id="basic-navbar-nav"
+        class="me-auto navbar-nav"
       >
-        <div
-          class="me-auto navbar-nav"
+        <a
+          aria-label="nyuad home"
+          class="nav-link"
+          data-rr-ui-event-key="https://nyuad.nyu.edu/en/library.html"
+          href="https://nyuad.nyu.edu/en/library.html"
         >
-          <a
-            class="nav-link"
-            data-rr-ui-event-key="https://nyuad.nyu.edu/en/library.html"
-            href="https://nyuad.nyu.edu/en/library.html"
-          >
-            <img
-              alt="NYU Abu Dhabi Library logo - click to go to the NYU Abu Dhabi Library main page"
-              class="image white-bg"
-              height="60"
-              src="/images/abudhabi-logo-color.svg"
-              width="220"
-            />
-          </a>
-        </div>
+          <img
+            alt="NYU Abu Dhabi Library homepage."
+            class="image white-bg"
+            height="60"
+            src="/images/abudhabi-logo-color.svg"
+            width="220"
+          />
+        </a>
       </div>
     </div>
   </nav>
@@ -96,42 +66,27 @@ exports[`Institution name: NYUSH renders NYUSH page correctly 1`] = `
 <DocumentFragment>
   <nav
     class="color-nav navbar navbar-expand-lg navbar-light"
-    role="navigation"
   >
     <div
       class="container"
     >
-      <button
-        aria-controls="basic-navbar-nav"
-        aria-label="Toggle navigation"
-        class="navbar-toggler collapsed"
-        type="button"
-      >
-        <span
-          class="navbar-toggler-icon"
-        />
-      </button>
       <div
-        class="navbar-collapse collapse"
-        id="basic-navbar-nav"
+        class="me-auto navbar-nav"
       >
-        <div
-          class="me-auto navbar-nav"
+        <a
+          aria-label="nyush home"
+          class="nav-link"
+          data-rr-ui-event-key="https://shanghai.nyu.edu/academics/library"
+          href="https://shanghai.nyu.edu/academics/library"
         >
-          <a
-            class="nav-link"
-            data-rr-ui-event-key="https://shanghai.nyu.edu/academics/library"
-            href="https://shanghai.nyu.edu/academics/library"
-          >
-            <img
-              alt="NYU Shanghai Library logo - click to go to the NYU Shanghai Library main page"
-              class="image white-bg"
-              height="60"
-              src="/images/shanghai-logo-color.svg"
-              width="220"
-            />
-          </a>
-        </div>
+          <img
+            alt="NYU Shanghai Library homepage."
+            class="image white-bg"
+            height="60"
+            src="/images/shanghai-logo-color.svg"
+            width="220"
+          />
+        </a>
       </div>
     </div>
   </nav>
