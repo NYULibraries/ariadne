@@ -10,6 +10,9 @@ backend/api/testdata/server/tmp/*
 backend/api/testdata/server/tmp/actual/*
 !backend/api/testdata/server/tmp/actual/.gitkeep
 
+# We are no longer committing MacOS screenshots.
+e2e/tests/ariadne.spec.js-snapshots/*-darwin.png
+
 # For Vlad's dev environment
 c.out
 go.work
