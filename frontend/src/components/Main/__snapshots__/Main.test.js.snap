@@ -1039,10 +1039,48 @@ exports[`Backend success "Life" Magazine and the Power of Photography renders co
                 <div
                   class="citation-container"
                 >
-                  <p />
+                  <p
+                    class="resource-type"
+                  >
+                    Article
+                  </p>
+                  <h2
+                    class="title"
+                  >
+                    "Life" Magazine and the Power of Photography, edited by Katherine A. Bussard and Kristen Gresh: New Haven, CT: Yale University Press, 2020. 336 pp.; 250 color and b/w ills. $60.00.
+                  </h2>
+                  <p>
+                    Berger, Martin A.
+                    <span>
+                      . 
+                    </span>
+                    20211201
+                  </p>
+                  <p>
+                    <span
+                      class="published-in"
+                    >
+                      Published in 
+                    </span>
+                    <span
+                      class="container-title"
+                    >
+                      Art Bulletin. 
+                    </span>
+                    Volume 103. Issue 4. Page 144
+                  </p>
                   <div
                     class="citation-info"
-                  />
+                  >
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       00043079
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1267,7 +1305,14 @@ exports[`Backend success A randomised controlled trial (RCT) for facilitating go
                 <div
                   class="citation-container"
                 >
-                  <p />
+                  <h2
+                    class="title"
+                  >
+                    A randomised controlled trial (RCT) for facilitating goal attainment and improving psychosocial function following acquired brain injury: Comparison of three intervention formats
+                  </h2>
+                  <p>
+                    Ownsworth, TL
+                  </p>
                   <div
                     class="citation-info"
                   />
@@ -1441,10 +1486,48 @@ exports[`Backend success Can community task groups learn from the principles of 
                 <div
                   class="citation-container"
                 >
-                  <p />
+                  <p
+                    class="resource-type"
+                  >
+                    Article
+                  </p>
+                  <h2
+                    class="title"
+                  >
+                    Can community task groups learn from the principles of group therapy?
+                  </h2>
+                  <p>
+                    Zanbar, L.
+                    <span>
+                      . 
+                    </span>
+                    20181020
+                  </p>
+                  <p>
+                    <span
+                      class="published-in"
+                    >
+                      Published in 
+                    </span>
+                    <span
+                      class="container-title"
+                    >
+                      Community Development. 
+                    </span>
+                    Volume 49. Issue 5. Page 574
+                  </p>
                   <div
                     class="citation-info"
-                  />
+                  >
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       19447485
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1615,6 +1698,16 @@ exports[`Backend success Corriere Fiorentino renders correctly 1`] = `
                 <div
                   class="citation-container"
                 >
+                  <p
+                    class="resource-type"
+                  >
+                    Journal
+                  </p>
+                  <h2
+                    class="title"
+                  >
+                    Corriere Fiorentino
+                  </h2>
                   <p />
                   <div
                     class="citation-info"
@@ -1787,10 +1880,48 @@ exports[`Backend success Design of LED light therapy device based on free-form l
                 <div
                   class="citation-container"
                 >
-                  <p />
+                  <p
+                    class="resource-type"
+                  >
+                    Article
+                  </p>
+                  <h2
+                    class="title"
+                  >
+                    Design of LED light therapy device based on free-form lens.
+                  </h2>
+                  <p>
+                    Feng, Zefeng
+                    <span>
+                      . 
+                    </span>
+                    20230305
+                  </p>
+                  <p>
+                    <span
+                      class="published-in"
+                    >
+                      Published in 
+                    </span>
+                    <span
+                      class="container-title"
+                    >
+                      Proceedings of SPIE. 
+                    </span>
+                    Volume 12461. Page 1246106
+                  </p>
                   <div
                     class="citation-info"
-                  />
+                  >
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       0277786X
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1961,10 +2092,46 @@ exports[`Backend success Editorial cartoon renders correctly 1`] = `
                 <div
                   class="citation-container"
                 >
-                  <p />
+                  <p
+                    class="resource-type"
+                  />
+                  <h2
+                    class="title"
+                  >
+                    Editorial cartoon
+                  </h2>
+                  <p>
+                    Payne, Henry
+                    <span>
+                      . 
+                    </span>
+                    2002-12-15
+                  </p>
+                  <p>
+                    <span
+                      class="published-in"
+                    >
+                      Published in 
+                    </span>
+                    <span
+                      class="container-title"
+                    >
+                      Detroit News. 
+                    </span>
+                    Page A18
+                  </p>
                   <div
                     class="citation-info"
-                  />
+                  >
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       10552715
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2135,10 +2302,35 @@ exports[`Backend success Hamlet renders correctly 1`] = `
                 <div
                   class="citation-container"
                 >
-                  <p />
+                  <p
+                    class="resource-type"
+                  >
+                    Book
+                  </p>
+                  <h2
+                    class="title"
+                  >
+                    The Oxford Shakespeare: Hamlet
+                  </h2>
+                  <p>
+                    Shakespeare, William
+                    <span>
+                      . 
+                    </span>
+                    1987
+                  </p>
                   <div
                     class="citation-info"
-                  />
+                  >
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISBN:
+                      </span>
+                       9780198129103
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2323,10 +2515,29 @@ exports[`Backend success History Today renders correctly 1`] = `
                 <div
                   class="citation-container"
                 >
+                  <p
+                    class="resource-type"
+                  >
+                    Article
+                  </p>
+                  <h2
+                    class="title"
+                  >
+                    History Today
+                  </h2>
                   <p />
                   <div
                     class="citation-info"
-                  />
+                  >
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       00182753
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2677,10 +2888,48 @@ exports[`Backend success Modelling Modular Living: Furniture and Life Magazine a
                 <div
                   class="citation-container"
                 >
-                  <p />
+                  <p
+                    class="resource-type"
+                  >
+                    Article
+                  </p>
+                  <h2
+                    class="title"
+                  >
+                    Modelling Modular Living: Furniture and Life Magazine and Interior Design in 1980s China
+                  </h2>
+                  <p>
+                    Altehenger, J.
+                    <span>
+                      . 
+                    </span>
+                    20220601
+                  </p>
+                  <p>
+                    <span
+                      class="published-in"
+                    >
+                      Published in 
+                    </span>
+                    <span
+                      class="container-title"
+                    >
+                      Journal of Design History. 
+                    </span>
+                    Volume 35. Issue 2. Page 151
+                  </p>
                   <div
                     class="citation-info"
-                  />
+                  >
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       17417279
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2851,10 +3100,43 @@ exports[`Backend success Moral psychology is relationship regulation: moral moti
                 <div
                   class="citation-container"
                 >
-                  <p />
+                  <h2
+                    class="title"
+                  >
+                    Moral psychology is relationship regulation: moral motives for unity, hierarchy, equality, and proportionality.
+                  </h2>
+                  <p>
+                    Rai, TS
+                    <span>
+                      . 
+                    </span>
+                    2011
+                  </p>
+                  <p>
+                    <span
+                      class="published-in"
+                    >
+                      Published in 
+                    </span>
+                    <span
+                      class="container-title"
+                    >
+                      Psychological Review. 
+                    </span>
+                    Volume 118. Issue 1. Page 57
+                  </p>
                   <div
                     class="citation-info"
-                  />
+                  >
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       0033-295X
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -3025,10 +3307,31 @@ exports[`Backend success Our Lady of everyday life : la Virgen de Guadalupe and 
                 <div
                   class="citation-container"
                 >
-                  <p />
+                  <p
+                    class="resource-type"
+                  >
+                    Book Chapter
+                  </p>
+                  <h2
+                    class="title"
+                  >
+                    Our Lady of everyday life: la Virgen de Guadalupe and the Catholic imagination of Mexican women in America
+                  </h2>
+                  <p>
+                    20180101
+                  </p>
                   <div
                     class="citation-info"
-                  />
+                  >
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISBN:
+                      </span>
+                       9780190280390
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -3229,10 +3532,48 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
                 <div
                   class="citation-container"
                 >
-                  <p />
+                  <p
+                    class="resource-type"
+                  >
+                    Article
+                  </p>
+                  <h2
+                    class="title"
+                  >
+                    Publish the Picture at Your Peril: Visual Ideas and the Commercial Apparatus of Life Magazine.
+                  </h2>
+                  <p>
+                    Schwartz, Joshua S.
+                    <span>
+                      . 
+                    </span>
+                    20210401
+                  </p>
+                  <p>
+                    <span
+                      class="published-in"
+                    >
+                      Published in 
+                    </span>
+                    <span
+                      class="container-title"
+                    >
+                      Journal of the Gilded Age . 
+                    </span>
+                    Volume 20. Issue 2. Page 301
+                  </p>
                   <div
                     class="citation-info"
-                  />
+                  >
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       15377814
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -3439,10 +3780,48 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
                 <div
                   class="citation-container"
                 >
-                  <p />
+                  <p
+                    class="resource-type"
+                  >
+                    Article
+                  </p>
+                  <h2
+                    class="title"
+                  >
+                    Publish the Picture at Your Peril: Visual Ideas and the Commercial Apparatus of Life Magazine.
+                  </h2>
+                  <p>
+                    Schwartz, Joshua S.
+                    <span>
+                      . 
+                    </span>
+                    20210401
+                  </p>
+                  <p>
+                    <span
+                      class="published-in"
+                    >
+                      Published in 
+                    </span>
+                    <span
+                      class="container-title"
+                    >
+                      Journal of the Gilded Age & Progressive Era. 
+                    </span>
+                    Volume 20. Issue 2. Page 301
+                  </p>
                   <div
                     class="citation-info"
-                  />
+                  >
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       15377814
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -3649,10 +4028,43 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
                 <div
                   class="citation-container"
                 >
-                  <p />
+                  <p
+                    class="resource-type"
+                  >
+                    Journal
+                  </p>
+                  <h2
+                    class="title"
+                  >
+                    New Yorker
+                  </h2>
+                  <p>
+                    Ross
+                    <span>
+                      . 
+                    </span>
+                    2002
+                  </p>
                   <div
                     class="citation-info"
-                  />
+                  >
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       0028-792X
+                    </p>
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        Publisher:
+                      </span>
+                       F-R Pub. Corp.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -4057,7 +4469,23 @@ exports[`Backend success The Sino-Tibetan Languages renders correctly 1`] = `
                 <div
                   class="citation-container"
                 >
-                  <p />
+                  <p
+                    class="resource-type"
+                  >
+                    Book
+                  </p>
+                  <h2
+                    class="title"
+                  >
+                    The Sino-Tibetan Languages
+                  </h2>
+                  <p>
+                    YUE(-HASHIMOTO), Anne O.
+                    <span>
+                      . 
+                    </span>
+                    2003
+                  </p>
                   <div
                     class="citation-info"
                   />
@@ -4229,10 +4657,37 @@ exports[`Backend success The Year's work in modern language studies. renders cor
                 <div
                   class="citation-container"
                 >
+                  <p
+                    class="resource-type"
+                  >
+                    Journal
+                  </p>
+                  <h2
+                    class="title"
+                  >
+                    The Year's work in modern language studies.
+                  </h2>
                   <p />
                   <div
                     class="citation-info"
-                  />
+                  >
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        ISSN:
+                      </span>
+                       00844152
+                    </p>
+                    <p>
+                      <span
+                        class="citation-info-label"
+                      >
+                        Publisher:
+                      </span>
+                       Modern Humanities Research Association [etc.]
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
