@@ -134,7 +134,7 @@ func (sfxResponse *SFXResponse) IsFound() bool {
 	} else {
 		for _, target := range *targets {
 			if !(strings.Contains(target.TargetUrl, ILLLink) ||
-				target.TargetUrl == AskALibrarianLink) {
+				target.TargetUrl == AskALibrarianLink || target.TargetUrl == "") {
 				result = true
 				break
 			}
