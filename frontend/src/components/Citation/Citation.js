@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 
 const Citation = () => {
 
-  const params = (new URL(document.location)).searchParams;
+  const params = (new URL(window.location)).searchParams;
 
   // thanks to umlaut: https://github.com/NYULibraries/umlaut/blob/master/config/locales/en.yml#L28-L43
   const genresDisplayText = {

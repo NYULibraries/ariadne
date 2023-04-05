@@ -34,7 +34,7 @@ func ResolverHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	log.Info("SFX response", "sfxResponse.DumpedHTTPResponse", sfxResponse.DumpedHTTPResponse)
+	log.Debug("SFX response", "sfxResponse.DumpedHTTPResponse", sfxResponse.DumpedHTTPResponse)
 
 	var responseJSON string
 
@@ -54,7 +54,7 @@ func ResolverHandler(w http.ResponseWriter, r *http.Request) {
 		log.Info("Primo HTTP FRBR member requests",
 			"primoResponse.DumpedFRBRMemberHTTPRequests", primoResponse.DumpedFRBRMemberHTTPRequests)
 
-		log.Info("Primo HTTP responses (initial ISBN search and FRBR member searches)",
+		log.Debug("Primo HTTP responses (initial ISBN search and FRBR member searches)",
 			"primoResponse.DumpedHTTPResponses", primoResponse.DumpedHTTPResponses)
 
 		if primoResponse.IsFound() {
@@ -173,6 +173,11 @@ func makeJSONResponseFromSFXResponse(sfxResponse *sfx.SFXResponse) string {
 	// Remove the Ask a Librarian target -- for details, see:
 	// https://nyu-lib.monday.com/boards/765008773/pulses/3548498827
 	sfxResponse.RemoveTarget(sfx.AskALibrarianLink)
+	emptyTarget := sfxResponse.GetTarget("")
+	if emptyTarget != nil {
+		log.Warn("Removing target with empty TargetURL", emptyTarget)
+		sfxResponse.RemoveTarget("")
+	}
 
 	links := []Link{}
 	targets := (*(*sfxResponse.XMLResponseBody.ContextObject)[0].SFXContextObjectTargets)[0].Targets

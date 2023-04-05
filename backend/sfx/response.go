@@ -110,6 +110,17 @@ func (sfxResponse *SFXResponse) RemoveTarget(targetURL string) {
 	(*(*sfxResponse.XMLResponseBody.ContextObject)[0].SFXContextObjectTargets)[0].Targets = &newTargets
 }
 
+// returns Target matching given targetURL
+func (sfxResponse *SFXResponse) GetTarget(targetURL string) *Target {
+	currentTargets := (*(*sfxResponse.XMLResponseBody.ContextObject)[0].SFXContextObjectTargets)[0].Targets
+	for _, target := range *currentTargets {
+		if target.TargetUrl == targetURL {
+			return &target
+		}
+	}
+	return nil
+}
+
 func (sfxResponse *SFXResponse) IsFound() bool {
 	targets := (*(*sfxResponse.XMLResponseBody.ContextObject)[0].SFXContextObjectTargets)[0].Targets
 
@@ -123,7 +134,7 @@ func (sfxResponse *SFXResponse) IsFound() bool {
 	} else {
 		for _, target := range *targets {
 			if !(strings.Contains(target.TargetUrl, ILLLink) ||
-				target.TargetUrl == AskALibrarianLink) {
+				target.TargetUrl == AskALibrarianLink || target.TargetUrl == "") {
 				result = true
 				break
 			}
