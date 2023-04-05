@@ -13300,28 +13300,7 @@ h6 {
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <script>
-        (function() {
-            var env = '%REACT_APP_ENV%';
-            if (env === 'production') {
-                var script = document.createElement('script');
-                script.src = 'https://cdn.library.nyu.edu/statuspage-embed/index.min.js';
-                script.async = true;
-                document.body.appendChild(script);
-            }
-        })();
-    </script>
-    <!-- Place this script as near to the end of your BODY as possible. -->
-    <script type="text/javascript">
-        (function() {
-            var x = document.createElement("script");
-            x.type = "text/javascript";
-            x.async = true;
-            x.src = (document.location.protocol === "https:" ? "https://" : "http://") + "libraryh3lp.com/js/libraryh3lp.js?7516";
-            var y = document.getElementsByTagName("script")[0];
-            y.parentNode.insertBefore(x, y);
-        })();
-    </script>
+
 
 
 </body>
