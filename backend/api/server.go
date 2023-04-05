@@ -173,6 +173,11 @@ func makeJSONResponseFromSFXResponse(sfxResponse *sfx.SFXResponse) string {
 	// Remove the Ask a Librarian target -- for details, see:
 	// https://nyu-lib.monday.com/boards/765008773/pulses/3548498827
 	sfxResponse.RemoveTarget(sfx.AskALibrarianLink)
+	emptyTarget := sfxResponse.GetTarget("")
+	if emptyTarget != nil {
+		log.Warn("Removing target with empty TargetURL", emptyTarget)
+		sfxResponse.RemoveTarget("")
+	}
 
 	links := []Link{}
 	targets := (*(*sfxResponse.XMLResponseBody.ContextObject)[0].SFXContextObjectTargets)[0].Targets

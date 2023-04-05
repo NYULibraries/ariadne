@@ -94,5 +94,11 @@
         "name": "Contrived FRBR Group Test Case",
         "queryString": "?title=Contrived%20FRBR%20Group%20Test%20Case&date=1999&isbn=1111111111111",
         "frontendTest": false
+    },
+    {
+        "key": "acquired-brain-injury",
+        "name": "A randomised controlled trial (RCT) for facilitating goal attainment and improving psychosocial function following acquired brain injury: Comparison of three intervention formats",
+        "queryString": "?sid=google&auinit=TL&aulast=Ownsworth&atitle=A%20randomised%20controlled%20trial%20(RCT)%20for%20facilitating%20goal%20attainment%20and%20improving%20psychosocial%20function%20following%20acquired%20brain%20injury:%20Comparison%20of%20three%20intervention%20formats&id=pmid:18509570",
+        "frontendTest": true
     }
 ]
