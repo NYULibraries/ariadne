@@ -77,6 +77,11 @@ h6 {
   line-height: 1.2;
 }
 
+.empty {
+  height: calc(100vh - 250px);
+  width: 100%;
+}
+
 .ask-librarian {
   margin: 20px 0 20px 0;
 }
@@ -134,4 +139,8 @@ h2.title {
   line-height: 22px;
   margin-top: 0;
   font-weight: normal;
+}
+
+main {
+  margin-bottom: 26px;
 }

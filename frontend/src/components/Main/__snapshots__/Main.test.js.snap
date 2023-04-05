@@ -5,7 +5,6 @@ exports[`Backend HTTP error responses HTTP 400 (Bad Request) error is rendered c
   <main>
     <div
       class="container"
-      style="margin-bottom: 26px;"
     >
       <div
         class="row row-cols-md-12"
@@ -190,7 +189,6 @@ exports[`Backend HTTP error responses HTTP 403 (Forbidden) error is rendered cor
   <main>
     <div
       class="container"
-      style="margin-bottom: 26px;"
     >
       <div
         class="row row-cols-md-12"
@@ -375,7 +373,6 @@ exports[`Backend HTTP error responses HTTP 408 (Request Timeout) error is render
   <main>
     <div
       class="container"
-      style="margin-bottom: 26px;"
     >
       <div
         class="row row-cols-md-12"
@@ -560,7 +557,6 @@ exports[`Backend HTTP error responses HTTP 500 (Internal Server Error) error is 
   <main>
     <div
       class="container"
-      style="margin-bottom: 26px;"
     >
       <div
         class="row row-cols-md-12"
@@ -745,7 +741,6 @@ exports[`Backend fetch exceptions TypeError: Failed to fetch renders backend fet
   <main>
     <div
       class="container"
-      style="margin-bottom: 26px;"
     >
       <div
         class="row row-cols-md-12"
@@ -930,7 +925,6 @@ exports[`Backend response includes errors Response includes 2 errors and an empt
   <main>
     <div
       class="container"
-      style="margin-bottom: 26px;"
     >
       <div
         class="row row-cols-md-12"
@@ -1115,7 +1109,6 @@ exports[`Backend success "Life" Magazine and the Power of Photography renders co
   <main>
     <div
       class="container"
-      style="margin-bottom: 26px;"
     >
       <div
         class="row row-cols-md-12"
@@ -1382,7 +1375,6 @@ exports[`Backend success Can community task groups learn from the principles of 
   <main>
     <div
       class="container"
-      style="margin-bottom: 26px;"
     >
       <div
         class="row row-cols-md-12"
@@ -1595,7 +1587,6 @@ exports[`Backend success Corriere Fiorentino renders correctly 1`] = `
   <main>
     <div
       class="container"
-      style="margin-bottom: 26px;"
     >
       <div
         class="row row-cols-md-12"
@@ -1778,7 +1769,6 @@ exports[`Backend success Design of LED light therapy device based on free-form l
   <main>
     <div
       class="container"
-      style="margin-bottom: 26px;"
     >
       <div
         class="row row-cols-md-12"
@@ -1991,7 +1981,6 @@ exports[`Backend success Editorial cartoon renders correctly 1`] = `
   <main>
     <div
       class="container"
-      style="margin-bottom: 26px;"
     >
       <div
         class="row row-cols-md-12"
@@ -2202,7 +2191,6 @@ exports[`Backend success Hamlet renders correctly 1`] = `
   <main>
     <div
       class="container"
-      style="margin-bottom: 26px;"
     >
       <div
         class="row row-cols-md-12"
@@ -2416,7 +2404,6 @@ exports[`Backend success History Today renders correctly 1`] = `
   <main>
     <div
       class="container"
-      style="margin-bottom: 26px;"
     >
       <div
         class="row row-cols-md-12"
@@ -2790,7 +2777,6 @@ exports[`Backend success Modelling Modular Living: Furniture and Life Magazine a
   <main>
     <div
       class="container"
-      style="margin-bottom: 26px;"
     >
       <div
         class="row row-cols-md-12"
@@ -3003,7 +2989,6 @@ exports[`Backend success Moral psychology is relationship regulation: moral moti
   <main>
     <div
       class="container"
-      style="margin-bottom: 26px;"
     >
       <div
         class="row row-cols-md-12"
@@ -3211,7 +3196,6 @@ exports[`Backend success Our Lady of everyday life : la Virgen de Guadalupe and 
   <main>
     <div
       class="container"
-      style="margin-bottom: 26px;"
     >
       <div
         class="row row-cols-md-12"
@@ -3437,7 +3421,6 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
   <main>
     <div
       class="container"
-      style="margin-bottom: 26px;"
     >
       <div
         class="row row-cols-md-12"
@@ -3686,7 +3669,6 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
   <main>
     <div
       class="container"
-      style="margin-bottom: 26px;"
     >
       <div
         class="row row-cols-md-12"
@@ -3935,7 +3917,6 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
   <main>
     <div
       class="container"
-      style="margin-bottom: 26px;"
     >
       <div
         class="row row-cols-md-12"
@@ -4377,7 +4358,6 @@ exports[`Backend success The Sino-Tibetan Languages renders correctly 1`] = `
   <main>
     <div
       class="container"
-      style="margin-bottom: 26px;"
     >
       <div
         class="row row-cols-md-12"
@@ -4566,7 +4546,6 @@ exports[`Backend success The Year's work in modern language studies. renders cor
   <main>
     <div
       class="container"
-      style="margin-bottom: 26px;"
     >
       <div
         class="row row-cols-md-12"

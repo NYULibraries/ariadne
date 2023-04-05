@@ -110,6 +110,10 @@ jobs:
           name: Build frontend service
           command: |
             docker-compose build frontend
+      - run:
+          name: Test static site built with correct backend subpath
+          command: |
+            docker-compose run frontend grep -r '"/v0/"' build/
       - tag-images-and-push-to-quay:
           image: "ariadne_frontend"
 

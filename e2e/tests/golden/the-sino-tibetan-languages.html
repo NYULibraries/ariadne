@@ -123,6 +123,11 @@ h6 {
             line-height: 1.2;
         }
 
+        .empty {
+            height: calc(100vh - 250px);
+            width: 100%;
+        }
+
         .ask-librarian {
             margin: 20px 0 20px 0;
         }
@@ -180,6 +185,10 @@ h6 {
             line-height: 22px;
             margin-top: 0;
             font-weight: normal;
+        }
+
+        main {
+            margin-bottom: 26px;
         }
 
         /* E2E TEST EDIT: sourceMappingURL comments elided */
@@ -13194,7 +13203,7 @@ h6 {
                 </div>
             </nav>
             <main>
-                <div class="container" style="margin-bottom: 26px;">
+                <div class="container">
                     <div class="row row-cols-md-12">
                         <div class="col-md-8">
                             <div class="jumbotron">
@@ -13288,28 +13297,7 @@ h6 {
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <script>
-        (function() {
-            var env = '%REACT_APP_ENV%';
-            if (env === 'production') {
-                var script = document.createElement('script');
-                script.src = 'https://cdn.library.nyu.edu/statuspage-embed/index.min.js';
-                script.async = true;
-                document.body.appendChild(script);
-            }
-        })();
-    </script>
-    <!-- Place this script as near to the end of your BODY as possible. -->
-    <script type="text/javascript">
-        (function() {
-            var x = document.createElement("script");
-            x.type = "text/javascript";
-            x.async = true;
-            x.src = (document.location.protocol === "https:" ? "https://" : "http://") + "libraryh3lp.com/js/libraryh3lp.js?7516";
-            var y = document.getElementsByTagName("script")[0];
-            y.parentNode.insertBefore(x, y);
-        })();
-    </script>
+
 
 
 </body>

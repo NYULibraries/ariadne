@@ -43,7 +43,7 @@ const Main = () => {
   return (
     <main>
       <>
-        <Container style={{ "marginBottom": "26px" }}>
+        <Container>
           <Row md={12}>
             <Col md={8}>
               <div className="jumbotron">
