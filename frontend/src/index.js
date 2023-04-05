@@ -12,7 +12,7 @@ root.render(
 
 // statuspage embed
 (function () {
-  var env = '%REACT_APP_ENV%';
+  var env = process.env.REACT_APP_ENV;
   if (env === 'production') {
     var script = document.createElement('script');
     script.src = 'https://cdn.library.nyu.edu/statuspage-embed/index.min.js';
