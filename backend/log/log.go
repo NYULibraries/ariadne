@@ -70,6 +70,10 @@ func Warn(message string, args ...interface{}) {
 	slogger.Warn(message, args...)
 }
 
+func Debug(message string, args ...interface{}) {
+	slogger.Debug(message, args...)
+}
+
 func SetLevel(level Level) {
 	programLevel.Set(slog.Level(level))
 }

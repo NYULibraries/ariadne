@@ -34,7 +34,7 @@ func ResolverHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	log.Info("SFX response", "sfxResponse.DumpedHTTPResponse", sfxResponse.DumpedHTTPResponse)
+	log.Debug("SFX response", "sfxResponse.DumpedHTTPResponse", sfxResponse.DumpedHTTPResponse)
 
 	var responseJSON string
 
@@ -54,7 +54,7 @@ func ResolverHandler(w http.ResponseWriter, r *http.Request) {
 		log.Info("Primo HTTP FRBR member requests",
 			"primoResponse.DumpedFRBRMemberHTTPRequests", primoResponse.DumpedFRBRMemberHTTPRequests)
 
-		log.Info("Primo HTTP responses (initial ISBN search and FRBR member searches)",
+		log.Debug("Primo HTTP responses (initial ISBN search and FRBR member searches)",
 			"primoResponse.DumpedHTTPResponses", primoResponse.DumpedHTTPResponses)
 
 		if primoResponse.IsFound() {
