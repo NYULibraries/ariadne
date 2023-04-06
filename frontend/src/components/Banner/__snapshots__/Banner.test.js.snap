@@ -50,9 +50,9 @@ exports[`Institution name: NYUAD renders NYUAD page correctly 1`] = `
         >
           <img
             alt="NYU Abu Dhabi Library homepage."
-            class="image white-bg"
+            class="image"
             height="60"
-            src="/images/abudhabi-logo-color.svg"
+            src="https://cdn.library.nyu.edu/images/abudhabi_white.svg"
             width="220"
           />
         </a>
@@ -81,9 +81,9 @@ exports[`Institution name: NYUSH renders NYUSH page correctly 1`] = `
         >
           <img
             alt="NYU Shanghai Library homepage."
-            class="image white-bg"
+            class="image"
             height="60"
-            src="/images/shanghai-logo-color.svg"
+            src="https://cdn.library.nyu.edu/images/shanghai_white.svg"
             width="220"
           />
         </a>

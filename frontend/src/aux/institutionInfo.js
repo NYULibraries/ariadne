@@ -8,15 +8,15 @@ const bannerInstitutionInfo = deepFreeze({
         altLibraryLogoImageText: 'NYU Libraries homepage.'
     },
     nyuad: {
-        logo: `/images/abudhabi-logo-color.svg`,
+        logo: 'https://cdn.library.nyu.edu/images/abudhabi_white.svg',
         link: 'https://nyuad.nyu.edu/en/library.html',
-        imgClass: 'image white-bg',
+        imgClass: 'image',
         altLibraryLogoImageText: 'NYU Abu Dhabi Library homepage.'
     },
     nyush: {
-        logo: `/images/shanghai-logo-color.svg`,
+        logo: 'https://cdn.library.nyu.edu/images/shanghai_white.svg',
         link: 'https://shanghai.nyu.edu/academics/library',
-        imgClass: 'image white-bg',
+        imgClass: 'image',
         altLibraryLogoImageText: 'NYU Shanghai Library homepage.'
     }
 });
