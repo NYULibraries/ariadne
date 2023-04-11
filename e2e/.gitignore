@@ -10,4 +10,4 @@ tests/actual/*
 !tests/actual/.gitkeep
 tests/diffs/*
 !tests/diffs/.gitkeep
-
+tests/ariadne.spec.js-snapshots/*-darwin.png
