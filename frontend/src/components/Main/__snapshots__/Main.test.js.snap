@@ -44,6 +44,36 @@ exports[`Backend HTTP error responses HTTP 400 (Bad Request) error is rendered c
             </div>
           </div>
           <div
+            class="mt-3 mb-3"
+          >
+             
+            <style>
+              
+        .link-icon::before {
+          content: "\\e157";
+          font-family: "Material Symbols Sharp";
+          color: #fff;
+          margin-right: 5px;
+          vertical-align: middle;
+        }
+      
+            </style>
+            <div
+              aria-labelledby="stable-link-label"
+            >
+              <button
+                aria-label="stable-link-label"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
+              >
+                <span
+                  class="link-icon"
+                />
+                Create a stable link to this page
+              </button>
+            </div>
+          </div>
+          <div
             role="alert"
           >
             <div>
@@ -218,6 +248,36 @@ exports[`Backend HTTP error responses HTTP 403 (Forbidden) error is rendered cor
                   />
                 </div>
               </div>
+            </div>
+          </div>
+          <div
+            class="mt-3 mb-3"
+          >
+             
+            <style>
+              
+        .link-icon::before {
+          content: "\\e157";
+          font-family: "Material Symbols Sharp";
+          color: #fff;
+          margin-right: 5px;
+          vertical-align: middle;
+        }
+      
+            </style>
+            <div
+              aria-labelledby="stable-link-label"
+            >
+              <button
+                aria-label="stable-link-label"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
+              >
+                <span
+                  class="link-icon"
+                />
+                Create a stable link to this page
+              </button>
             </div>
           </div>
           <div
@@ -398,6 +458,36 @@ exports[`Backend HTTP error responses HTTP 408 (Request Timeout) error is render
             </div>
           </div>
           <div
+            class="mt-3 mb-3"
+          >
+             
+            <style>
+              
+        .link-icon::before {
+          content: "\\e157";
+          font-family: "Material Symbols Sharp";
+          color: #fff;
+          margin-right: 5px;
+          vertical-align: middle;
+        }
+      
+            </style>
+            <div
+              aria-labelledby="stable-link-label"
+            >
+              <button
+                aria-label="stable-link-label"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
+              >
+                <span
+                  class="link-icon"
+                />
+                Create a stable link to this page
+              </button>
+            </div>
+          </div>
+          <div
             role="alert"
           >
             <div>
@@ -572,6 +662,36 @@ exports[`Backend HTTP error responses HTTP 500 (Internal Server Error) error is 
                   />
                 </div>
               </div>
+            </div>
+          </div>
+          <div
+            class="mt-3 mb-3"
+          >
+             
+            <style>
+              
+        .link-icon::before {
+          content: "\\e157";
+          font-family: "Material Symbols Sharp";
+          color: #fff;
+          margin-right: 5px;
+          vertical-align: middle;
+        }
+      
+            </style>
+            <div
+              aria-labelledby="stable-link-label"
+            >
+              <button
+                aria-label="stable-link-label"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
+              >
+                <span
+                  class="link-icon"
+                />
+                Create a stable link to this page
+              </button>
             </div>
           </div>
           <div
@@ -752,6 +872,36 @@ exports[`Backend fetch exceptions TypeError: Failed to fetch renders backend fet
             </div>
           </div>
           <div
+            class="mt-3 mb-3"
+          >
+             
+            <style>
+              
+        .link-icon::before {
+          content: "\\e157";
+          font-family: "Material Symbols Sharp";
+          color: #fff;
+          margin-right: 5px;
+          vertical-align: middle;
+        }
+      
+            </style>
+            <div
+              aria-labelledby="stable-link-label"
+            >
+              <button
+                aria-label="stable-link-label"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
+              >
+                <span
+                  class="link-icon"
+                />
+                Create a stable link to this page
+              </button>
+            </div>
+          </div>
+          <div
             role="alert"
           >
             <div>
@@ -926,6 +1076,36 @@ exports[`Backend response includes errors Response includes 2 errors and an empt
                   />
                 </div>
               </div>
+            </div>
+          </div>
+          <div
+            class="mt-3 mb-3"
+          >
+             
+            <style>
+              
+        .link-icon::before {
+          content: "\\e157";
+          font-family: "Material Symbols Sharp";
+          color: #fff;
+          margin-right: 5px;
+          vertical-align: middle;
+        }
+      
+            </style>
+            <div
+              aria-labelledby="stable-link-label"
+            >
+              <button
+                aria-label="stable-link-label"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
+              >
+                <span
+                  class="link-icon"
+                />
+                Create a stable link to this page
+              </button>
             </div>
           </div>
           <div
@@ -1131,6 +1311,36 @@ exports[`Backend success "Life" Magazine and the Power of Photography renders co
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div
+            class="mt-3 mb-3"
+          >
+             
+            <style>
+              
+        .link-icon::before {
+          content: "\\e157";
+          font-family: "Material Symbols Sharp";
+          color: #fff;
+          margin-right: 5px;
+          vertical-align: middle;
+        }
+      
+            </style>
+            <div
+              aria-labelledby="stable-link-label"
+            >
+              <button
+                aria-label="stable-link-label"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
+              >
+                <span
+                  class="link-icon"
+                />
+                Create a stable link to this page
+              </button>
             </div>
           </div>
           <ul
@@ -1376,6 +1586,36 @@ exports[`Backend success A randomised controlled trial (RCT) for facilitating go
               </div>
             </div>
           </div>
+          <div
+            class="mt-3 mb-3"
+          >
+             
+            <style>
+              
+        .link-icon::before {
+          content: "\\e157";
+          font-family: "Material Symbols Sharp";
+          color: #fff;
+          margin-right: 5px;
+          vertical-align: middle;
+        }
+      
+            </style>
+            <div
+              aria-labelledby="stable-link-label"
+            >
+              <button
+                aria-label="stable-link-label"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
+              >
+                <span
+                  class="link-icon"
+                />
+                Create a stable link to this page
+              </button>
+            </div>
+          </div>
           <ul
             class="list-group"
           >
@@ -1596,6 +1836,36 @@ exports[`Backend success Can community task groups learn from the principles of 
               </div>
             </div>
           </div>
+          <div
+            class="mt-3 mb-3"
+          >
+             
+            <style>
+              
+        .link-icon::before {
+          content: "\\e157";
+          font-family: "Material Symbols Sharp";
+          color: #fff;
+          margin-right: 5px;
+          vertical-align: middle;
+        }
+      
+            </style>
+            <div
+              aria-labelledby="stable-link-label"
+            >
+              <button
+                aria-label="stable-link-label"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
+              >
+                <span
+                  class="link-icon"
+                />
+                Create a stable link to this page
+              </button>
+            </div>
+          </div>
           <ul
             class="list-group"
           >
@@ -1786,6 +2056,36 @@ exports[`Backend success Corriere Fiorentino renders correctly 1`] = `
                   />
                 </div>
               </div>
+            </div>
+          </div>
+          <div
+            class="mt-3 mb-3"
+          >
+             
+            <style>
+              
+        .link-icon::before {
+          content: "\\e157";
+          font-family: "Material Symbols Sharp";
+          color: #fff;
+          margin-right: 5px;
+          vertical-align: middle;
+        }
+      
+            </style>
+            <div
+              aria-labelledby="stable-link-label"
+            >
+              <button
+                aria-label="stable-link-label"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
+              >
+                <span
+                  class="link-icon"
+                />
+                Create a stable link to this page
+              </button>
             </div>
           </div>
           <ul
@@ -2006,6 +2306,36 @@ exports[`Backend success Design of LED light therapy device based on free-form l
               </div>
             </div>
           </div>
+          <div
+            class="mt-3 mb-3"
+          >
+             
+            <style>
+              
+        .link-icon::before {
+          content: "\\e157";
+          font-family: "Material Symbols Sharp";
+          color: #fff;
+          margin-right: 5px;
+          vertical-align: middle;
+        }
+      
+            </style>
+            <div
+              aria-labelledby="stable-link-label"
+            >
+              <button
+                aria-label="stable-link-label"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
+              >
+                <span
+                  class="link-icon"
+                />
+                Create a stable link to this page
+              </button>
+            </div>
+          </div>
           <ul
             class="list-group"
           >
@@ -2224,6 +2554,36 @@ exports[`Backend success Editorial cartoon renders correctly 1`] = `
               </div>
             </div>
           </div>
+          <div
+            class="mt-3 mb-3"
+          >
+             
+            <style>
+              
+        .link-icon::before {
+          content: "\\e157";
+          font-family: "Material Symbols Sharp";
+          color: #fff;
+          margin-right: 5px;
+          vertical-align: middle;
+        }
+      
+            </style>
+            <div
+              aria-labelledby="stable-link-label"
+            >
+              <button
+                aria-label="stable-link-label"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
+              >
+                <span
+                  class="link-icon"
+                />
+                Create a stable link to this page
+              </button>
+            </div>
+          </div>
           <ul
             class="list-group"
           >
@@ -2429,6 +2789,36 @@ exports[`Backend success Hamlet renders correctly 1`] = `
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div
+            class="mt-3 mb-3"
+          >
+             
+            <style>
+              
+        .link-icon::before {
+          content: "\\e157";
+          font-family: "Material Symbols Sharp";
+          color: #fff;
+          margin-right: 5px;
+          vertical-align: middle;
+        }
+      
+            </style>
+            <div
+              aria-labelledby="stable-link-label"
+            >
+              <button
+                aria-label="stable-link-label"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
+              >
+                <span
+                  class="link-icon"
+                />
+                Create a stable link to this page
+              </button>
             </div>
           </div>
           <ul
@@ -2644,6 +3034,36 @@ exports[`Backend success History Today renders correctly 1`] = `
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div
+            class="mt-3 mb-3"
+          >
+             
+            <style>
+              
+        .link-icon::before {
+          content: "\\e157";
+          font-family: "Material Symbols Sharp";
+          color: #fff;
+          margin-right: 5px;
+          vertical-align: middle;
+        }
+      
+            </style>
+            <div
+              aria-labelledby="stable-link-label"
+            >
+              <button
+                aria-label="stable-link-label"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
+              >
+                <span
+                  class="link-icon"
+                />
+                Create a stable link to this page
+              </button>
             </div>
           </div>
           <ul
@@ -3046,6 +3466,36 @@ exports[`Backend success Modelling Modular Living: Furniture and Life Magazine a
               </div>
             </div>
           </div>
+          <div
+            class="mt-3 mb-3"
+          >
+             
+            <style>
+              
+        .link-icon::before {
+          content: "\\e157";
+          font-family: "Material Symbols Sharp";
+          color: #fff;
+          margin-right: 5px;
+          vertical-align: middle;
+        }
+      
+            </style>
+            <div
+              aria-labelledby="stable-link-label"
+            >
+              <button
+                aria-label="stable-link-label"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
+              >
+                <span
+                  class="link-icon"
+                />
+                Create a stable link to this page
+              </button>
+            </div>
+          </div>
           <ul
             class="list-group"
           >
@@ -3261,6 +3711,36 @@ exports[`Backend success Moral psychology is relationship regulation: moral moti
               </div>
             </div>
           </div>
+          <div
+            class="mt-3 mb-3"
+          >
+             
+            <style>
+              
+        .link-icon::before {
+          content: "\\e157";
+          font-family: "Material Symbols Sharp";
+          color: #fff;
+          margin-right: 5px;
+          vertical-align: middle;
+        }
+      
+            </style>
+            <div
+              aria-labelledby="stable-link-label"
+            >
+              <button
+                aria-label="stable-link-label"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
+              >
+                <span
+                  class="link-icon"
+                />
+                Create a stable link to this page
+              </button>
+            </div>
+          </div>
           <ul
             class="list-group"
           >
@@ -3462,6 +3942,36 @@ exports[`Backend success Our Lady of everyday life : la Virgen de Guadalupe and 
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div
+            class="mt-3 mb-3"
+          >
+             
+            <style>
+              
+        .link-icon::before {
+          content: "\\e157";
+          font-family: "Material Symbols Sharp";
+          color: #fff;
+          margin-right: 5px;
+          vertical-align: middle;
+        }
+      
+            </style>
+            <div
+              aria-labelledby="stable-link-label"
+            >
+              <button
+                aria-label="stable-link-label"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
+              >
+                <span
+                  class="link-icon"
+                />
+                Create a stable link to this page
+              </button>
             </div>
           </div>
           <ul
@@ -3712,6 +4222,36 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div
+            class="mt-3 mb-3"
+          >
+             
+            <style>
+              
+        .link-icon::before {
+          content: "\\e157";
+          font-family: "Material Symbols Sharp";
+          color: #fff;
+          margin-right: 5px;
+          vertical-align: middle;
+        }
+      
+            </style>
+            <div
+              aria-labelledby="stable-link-label"
+            >
+              <button
+                aria-label="stable-link-label"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
+              >
+                <span
+                  class="link-icon"
+                />
+                Create a stable link to this page
+              </button>
             </div>
           </div>
           <ul
@@ -3970,6 +4510,36 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
               </div>
             </div>
           </div>
+          <div
+            class="mt-3 mb-3"
+          >
+             
+            <style>
+              
+        .link-icon::before {
+          content: "\\e157";
+          font-family: "Material Symbols Sharp";
+          color: #fff;
+          margin-right: 5px;
+          vertical-align: middle;
+        }
+      
+            </style>
+            <div
+              aria-labelledby="stable-link-label"
+            >
+              <button
+                aria-label="stable-link-label"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
+              >
+                <span
+                  class="link-icon"
+                />
+                Create a stable link to this page
+              </button>
+            </div>
+          </div>
           <ul
             class="list-group"
           >
@@ -4219,6 +4789,36 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div
+            class="mt-3 mb-3"
+          >
+             
+            <style>
+              
+        .link-icon::before {
+          content: "\\e157";
+          font-family: "Material Symbols Sharp";
+          color: #fff;
+          margin-right: 5px;
+          vertical-align: middle;
+        }
+      
+            </style>
+            <div
+              aria-labelledby="stable-link-label"
+            >
+              <button
+                aria-label="stable-link-label"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
+              >
+                <span
+                  class="link-icon"
+                />
+                Create a stable link to this page
+              </button>
             </div>
           </div>
           <ul
@@ -4653,6 +5253,36 @@ exports[`Backend success The Sino-Tibetan Languages renders correctly 1`] = `
               </div>
             </div>
           </div>
+          <div
+            class="mt-3 mb-3"
+          >
+             
+            <style>
+              
+        .link-icon::before {
+          content: "\\e157";
+          font-family: "Material Symbols Sharp";
+          color: #fff;
+          margin-right: 5px;
+          vertical-align: middle;
+        }
+      
+            </style>
+            <div
+              aria-labelledby="stable-link-label"
+            >
+              <button
+                aria-label="stable-link-label"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
+              >
+                <span
+                  class="link-icon"
+                />
+                Create a stable link to this page
+              </button>
+            </div>
+          </div>
           <ul
             class="list-group"
           >
@@ -4858,6 +5488,36 @@ exports[`Backend success The Year's work in modern language studies. renders cor
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div
+            class="mt-3 mb-3"
+          >
+             
+            <style>
+              
+        .link-icon::before {
+          content: "\\e157";
+          font-family: "Material Symbols Sharp";
+          color: #fff;
+          margin-right: 5px;
+          vertical-align: middle;
+        }
+      
+            </style>
+            <div
+              aria-labelledby="stable-link-label"
+            >
+              <button
+                aria-label="stable-link-label"
+                id="stable-link-label"
+                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
+              >
+                <span
+                  class="link-icon"
+                />
+                Create a stable link to this page
+              </button>
             </div>
           </div>
           <ul
