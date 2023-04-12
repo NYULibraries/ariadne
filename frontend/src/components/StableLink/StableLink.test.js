@@ -8,9 +8,20 @@ describe('StableLink', () => {
     beforeAll(() => {
         Object.defineProperty(navigator, 'clipboard', {
             value: {
-                writeText: jest.fn().mockResolvedValue(),
+                writeText: jest.fn(),
             },
         });
+        // To suppress this console error output during testing,mock the console.error function, preventing it from outputting the error message during the test
+        jest.spyOn(console, 'error').mockImplementation(() => { });
+    });
+
+    afterAll(() => {
+        // Restore the original implementation of console.error after all the tests have run
+        console.error.mockRestore();
+    });
+
+    beforeEach(() => {
+        jest.resetAllMocks();
     });
 
     test('renders the main button', () => {
@@ -38,5 +49,19 @@ describe('StableLink', () => {
             userEvent.click(mainButton);
         });
         expect(navigator.clipboard.writeText).toHaveBeenCalledWith(window.location.href);
+    });
+
+    test('displays error message when copying fails', async () => {
+        navigator.clipboard.writeText.mockRejectedValue(new Error('Error copying text'));
+
+        render(<StableLink />);
+        const mainButton = screen.getByText('Copy a stable link to this page');
+
+        await act(async () => {
+            userEvent.click(mainButton);
+        });
+
+        const errorMessages = screen.getAllByText('Error copying link. Please try again or manually copy the link.');
+        expect(errorMessages.length).toBeGreaterThanOrEqual(1);
     });
 });
