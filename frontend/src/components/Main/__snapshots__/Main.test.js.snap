@@ -52,14 +52,14 @@ exports[`Backend HTTP error responses HTTP 400 (Bad Request) error is rendered c
             >
               <button
                 aria-label="stable-link-label"
+                class="stable-link-button  "
                 id="stable-link-label"
-                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 Copy a stable link to this page
               </button>
               <div
                 aria-live="polite"
-                style="position: absolute; width: 0px; height: 0px; overflow: hidden; white-space: nowrap;"
+                class="aria-live"
               />
             </div>
           </div>
@@ -249,14 +249,14 @@ exports[`Backend HTTP error responses HTTP 403 (Forbidden) error is rendered cor
             >
               <button
                 aria-label="stable-link-label"
+                class="stable-link-button  "
                 id="stable-link-label"
-                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 Copy a stable link to this page
               </button>
               <div
                 aria-live="polite"
-                style="position: absolute; width: 0px; height: 0px; overflow: hidden; white-space: nowrap;"
+                class="aria-live"
               />
             </div>
           </div>
@@ -446,14 +446,14 @@ exports[`Backend HTTP error responses HTTP 408 (Request Timeout) error is render
             >
               <button
                 aria-label="stable-link-label"
+                class="stable-link-button  "
                 id="stable-link-label"
-                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 Copy a stable link to this page
               </button>
               <div
                 aria-live="polite"
-                style="position: absolute; width: 0px; height: 0px; overflow: hidden; white-space: nowrap;"
+                class="aria-live"
               />
             </div>
           </div>
@@ -643,14 +643,14 @@ exports[`Backend HTTP error responses HTTP 500 (Internal Server Error) error is 
             >
               <button
                 aria-label="stable-link-label"
+                class="stable-link-button  "
                 id="stable-link-label"
-                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 Copy a stable link to this page
               </button>
               <div
                 aria-live="polite"
-                style="position: absolute; width: 0px; height: 0px; overflow: hidden; white-space: nowrap;"
+                class="aria-live"
               />
             </div>
           </div>
@@ -840,14 +840,14 @@ exports[`Backend fetch exceptions TypeError: Failed to fetch renders backend fet
             >
               <button
                 aria-label="stable-link-label"
+                class="stable-link-button  "
                 id="stable-link-label"
-                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 Copy a stable link to this page
               </button>
               <div
                 aria-live="polite"
-                style="position: absolute; width: 0px; height: 0px; overflow: hidden; white-space: nowrap;"
+                class="aria-live"
               />
             </div>
           </div>
@@ -1037,14 +1037,14 @@ exports[`Backend response includes errors Response includes 2 errors and an empt
             >
               <button
                 aria-label="stable-link-label"
+                class="stable-link-button  "
                 id="stable-link-label"
-                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 Copy a stable link to this page
               </button>
               <div
                 aria-live="polite"
-                style="position: absolute; width: 0px; height: 0px; overflow: hidden; white-space: nowrap;"
+                class="aria-live"
               />
             </div>
           </div>
@@ -1262,14 +1262,14 @@ exports[`Backend success "Life" Magazine and the Power of Photography renders co
             >
               <button
                 aria-label="stable-link-label"
+                class="stable-link-button  "
                 id="stable-link-label"
-                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 Copy a stable link to this page
               </button>
               <div
                 aria-live="polite"
-                style="position: absolute; width: 0px; height: 0px; overflow: hidden; white-space: nowrap;"
+                class="aria-live"
               />
             </div>
           </div>
@@ -1525,14 +1525,14 @@ exports[`Backend success A randomised controlled trial (RCT) for facilitating go
             >
               <button
                 aria-label="stable-link-label"
+                class="stable-link-button  "
                 id="stable-link-label"
-                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 Copy a stable link to this page
               </button>
               <div
                 aria-live="polite"
-                style="position: absolute; width: 0px; height: 0px; overflow: hidden; white-space: nowrap;"
+                class="aria-live"
               />
             </div>
           </div>
@@ -1765,14 +1765,14 @@ exports[`Backend success Can community task groups learn from the principles of 
             >
               <button
                 aria-label="stable-link-label"
+                class="stable-link-button  "
                 id="stable-link-label"
-                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 Copy a stable link to this page
               </button>
               <div
                 aria-live="polite"
-                style="position: absolute; width: 0px; height: 0px; overflow: hidden; white-space: nowrap;"
+                class="aria-live"
               />
             </div>
           </div>
@@ -1977,14 +1977,14 @@ exports[`Backend success Corriere Fiorentino renders correctly 1`] = `
             >
               <button
                 aria-label="stable-link-label"
+                class="stable-link-button  "
                 id="stable-link-label"
-                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 Copy a stable link to this page
               </button>
               <div
                 aria-live="polite"
-                style="position: absolute; width: 0px; height: 0px; overflow: hidden; white-space: nowrap;"
+                class="aria-live"
               />
             </div>
           </div>
@@ -2215,14 +2215,14 @@ exports[`Backend success Design of LED light therapy device based on free-form l
             >
               <button
                 aria-label="stable-link-label"
+                class="stable-link-button  "
                 id="stable-link-label"
-                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 Copy a stable link to this page
               </button>
               <div
                 aria-live="polite"
-                style="position: absolute; width: 0px; height: 0px; overflow: hidden; white-space: nowrap;"
+                class="aria-live"
               />
             </div>
           </div>
@@ -2453,14 +2453,14 @@ exports[`Backend success Editorial cartoon renders correctly 1`] = `
             >
               <button
                 aria-label="stable-link-label"
+                class="stable-link-button  "
                 id="stable-link-label"
-                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 Copy a stable link to this page
               </button>
               <div
                 aria-live="polite"
-                style="position: absolute; width: 0px; height: 0px; overflow: hidden; white-space: nowrap;"
+                class="aria-live"
               />
             </div>
           </div>
@@ -2680,14 +2680,14 @@ exports[`Backend success Hamlet renders correctly 1`] = `
             >
               <button
                 aria-label="stable-link-label"
+                class="stable-link-button  "
                 id="stable-link-label"
-                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 Copy a stable link to this page
               </button>
               <div
                 aria-live="polite"
-                style="position: absolute; width: 0px; height: 0px; overflow: hidden; white-space: nowrap;"
+                class="aria-live"
               />
             </div>
           </div>
@@ -2915,14 +2915,14 @@ exports[`Backend success History Today renders correctly 1`] = `
             >
               <button
                 aria-label="stable-link-label"
+                class="stable-link-button  "
                 id="stable-link-label"
-                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 Copy a stable link to this page
               </button>
               <div
                 aria-live="polite"
-                style="position: absolute; width: 0px; height: 0px; overflow: hidden; white-space: nowrap;"
+                class="aria-live"
               />
             </div>
           </div>
@@ -3335,14 +3335,14 @@ exports[`Backend success Modelling Modular Living: Furniture and Life Magazine a
             >
               <button
                 aria-label="stable-link-label"
+                class="stable-link-button  "
                 id="stable-link-label"
-                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 Copy a stable link to this page
               </button>
               <div
                 aria-live="polite"
-                style="position: absolute; width: 0px; height: 0px; overflow: hidden; white-space: nowrap;"
+                class="aria-live"
               />
             </div>
           </div>
@@ -3570,14 +3570,14 @@ exports[`Backend success Moral psychology is relationship regulation: moral moti
             >
               <button
                 aria-label="stable-link-label"
+                class="stable-link-button  "
                 id="stable-link-label"
-                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 Copy a stable link to this page
               </button>
               <div
                 aria-live="polite"
-                style="position: absolute; width: 0px; height: 0px; overflow: hidden; white-space: nowrap;"
+                class="aria-live"
               />
             </div>
           </div>
@@ -3793,14 +3793,14 @@ exports[`Backend success Our Lady of everyday life : la Virgen de Guadalupe and 
             >
               <button
                 aria-label="stable-link-label"
+                class="stable-link-button  "
                 id="stable-link-label"
-                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 Copy a stable link to this page
               </button>
               <div
                 aria-live="polite"
-                style="position: absolute; width: 0px; height: 0px; overflow: hidden; white-space: nowrap;"
+                class="aria-live"
               />
             </div>
           </div>
@@ -4063,14 +4063,14 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
             >
               <button
                 aria-label="stable-link-label"
+                class="stable-link-button  "
                 id="stable-link-label"
-                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 Copy a stable link to this page
               </button>
               <div
                 aria-live="polite"
-                style="position: absolute; width: 0px; height: 0px; overflow: hidden; white-space: nowrap;"
+                class="aria-live"
               />
             </div>
           </div>
@@ -4339,14 +4339,14 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
             >
               <button
                 aria-label="stable-link-label"
+                class="stable-link-button  "
                 id="stable-link-label"
-                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 Copy a stable link to this page
               </button>
               <div
                 aria-live="polite"
-                style="position: absolute; width: 0px; height: 0px; overflow: hidden; white-space: nowrap;"
+                class="aria-live"
               />
             </div>
           </div>
@@ -4610,14 +4610,14 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
             >
               <button
                 aria-label="stable-link-label"
+                class="stable-link-button  "
                 id="stable-link-label"
-                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 Copy a stable link to this page
               </button>
               <div
                 aria-live="polite"
-                style="position: absolute; width: 0px; height: 0px; overflow: hidden; white-space: nowrap;"
+                class="aria-live"
               />
             </div>
           </div>
@@ -5062,14 +5062,14 @@ exports[`Backend success The Sino-Tibetan Languages renders correctly 1`] = `
             >
               <button
                 aria-label="stable-link-label"
+                class="stable-link-button  "
                 id="stable-link-label"
-                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 Copy a stable link to this page
               </button>
               <div
                 aria-live="polite"
-                style="position: absolute; width: 0px; height: 0px; overflow: hidden; white-space: nowrap;"
+                class="aria-live"
               />
             </div>
           </div>
@@ -5289,14 +5289,14 @@ exports[`Backend success The Year's work in modern language studies. renders cor
             >
               <button
                 aria-label="stable-link-label"
+                class="stable-link-button  "
                 id="stable-link-label"
-                style="background-color: rgb(87, 6, 140); color: rgb(255, 255, 255); cursor: pointer; border: 1px solid #ccc; padding: 5px 10px; margin-right: 5px; margin-bottom: 5px;"
               >
                 Copy a stable link to this page
               </button>
               <div
                 aria-live="polite"
-                style="position: absolute; width: 0px; height: 0px; overflow: hidden; white-space: nowrap;"
+                class="aria-live"
               />
             </div>
           </div>
