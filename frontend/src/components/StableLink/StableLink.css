@@ -1,0 +1,40 @@
+/* StableLink.css */
+.stable-link-button {
+    background-color: #57068c;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.stable-link-button:hover,
+.stable-link-button.hover {
+    background-color: #6c07ae;
+}
+
+.stable-link-button:focus,
+.stable-link-button.focus {
+    border: 3px solid black;
+    outline: 3px solid #3DBBDB;
+    padding: 5px;
+    border-radius: 0;
+}
+
+.copied-text {
+    display: inline-block;
+    /* adjust this value according to your button height */
+    line-height: 30px;
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.aria-live {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
