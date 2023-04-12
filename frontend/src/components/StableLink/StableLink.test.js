@@ -1,10 +1,10 @@
-import { render, screen } from '@testing-library/react';
+import { act, render, screen } from '@testing-library/react';
 
-import userEvent from '@testing-library/user-event';
 import React from 'react';
 import StableLink from './StableLink';
+import userEvent from '@testing-library/user-event';
 
-describe.skip('StableLink', () => {
+describe('StableLink', () => {
     beforeAll(() => {
         Object.defineProperty(navigator, 'clipboard', {
             value: {
@@ -13,40 +13,30 @@ describe.skip('StableLink', () => {
         });
     });
 
-    test.skip('renders the main button', () => {
+    test('renders the main button', () => {
         render(<StableLink />);
-        const mainButton = screen.getByText('Create a stable link to this page');
+        const mainButton = screen.getByText('Copy a stable link to this page');
         expect(mainButton).toBeInTheDocument();
     });
 
-    test.skip('clicking the main button shows the input field and copy button', () => {
+    test('clicking the main button shows "Copied!" message', async () => {
         render(<StableLink />);
-        const mainButton = screen.getByText('Create a stable link to this page');
-        userEvent.click(mainButton);
-        const inputField = screen.getByRole('textbox');
-        const copyButton = screen.getByText('Copy');
-        expect(inputField).toBeInTheDocument();
-        expect(copyButton).toBeInTheDocument();
+        const mainButton = screen.getByText('Copy a stable link to this page');
+
+        await act(async () => {
+            userEvent.click(mainButton);
+        });
+
+        expect(screen.getByText('Copied!')).toBeInTheDocument();
     });
 
-    test.skip('clicking the close button hides the input field and copy button', () => {
+    test('clicking the main button calls navigator.clipboard.writeText', async () => {
         render(<StableLink />);
-        const mainButton = screen.getByText('Create a stable link to this page');
-        userEvent.click(mainButton);
-        const closeButton = screen.getByText('X');
-        userEvent.click(closeButton);
-        const inputField = screen.queryByRole('textbox');
-        const copyButton = screen.queryByText('Copy');
-        expect(inputField).not.toBeInTheDocument();
-        expect(copyButton).not.toBeInTheDocument();
-    });
+        const mainButton = screen.getByText('Copy a stable link to this page');
 
-    test.skip('clicking the copy button copies the link to the clipboard', async () => {
-        render(<StableLink />);
-        const mainButton = screen.getByText('Create a stable link to this page');
-        userEvent.click(mainButton);
-        const copyButton = screen.getByText('Copy');
-        userEvent.click(copyButton);
+        await act(async () => {
+            userEvent.click(mainButton);
+        });
         expect(navigator.clipboard.writeText).toHaveBeenCalledWith(window.location.href);
     });
 });
