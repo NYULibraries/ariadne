@@ -138,16 +138,6 @@ exports[`Backend HTTP error responses HTTP 400 (Bad Request) error is rendered c
                     </a>
                   </li>
                   <li>
-                    Reach out to the Libraries on 
-                    <a
-                      href="https://www.instagram.com/nyulibraries/"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      our Instagram
-                    </a>
-                  </li>
-                  <li>
                     Search 
                     <a
                       href="https://www.worldcat.org/search?qt=worldcat_org_all"
@@ -157,6 +147,24 @@ exports[`Backend HTTP error responses HTTP 400 (Bad Request) error is rendered c
                       WorldCat
                     </a>
                      for items in nearby libraries
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_a30SvEFe8f1yXQh"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Problem with an e-resource? Fill out this form
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_blQ3OFOew9vl6Pb?Source=NYU"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Submit feedback about GetIt
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -307,16 +315,6 @@ exports[`Backend HTTP error responses HTTP 403 (Forbidden) error is rendered cor
                     </a>
                   </li>
                   <li>
-                    Reach out to the Libraries on 
-                    <a
-                      href="https://www.instagram.com/nyulibraries/"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      our Instagram
-                    </a>
-                  </li>
-                  <li>
                     Search 
                     <a
                       href="https://www.worldcat.org/search?qt=worldcat_org_all"
@@ -326,6 +324,24 @@ exports[`Backend HTTP error responses HTTP 403 (Forbidden) error is rendered cor
                       WorldCat
                     </a>
                      for items in nearby libraries
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_a30SvEFe8f1yXQh"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Problem with an e-resource? Fill out this form
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_blQ3OFOew9vl6Pb?Source=NYU"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Submit feedback about GetIt
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -476,16 +492,6 @@ exports[`Backend HTTP error responses HTTP 408 (Request Timeout) error is render
                     </a>
                   </li>
                   <li>
-                    Reach out to the Libraries on 
-                    <a
-                      href="https://www.instagram.com/nyulibraries/"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      our Instagram
-                    </a>
-                  </li>
-                  <li>
                     Search 
                     <a
                       href="https://www.worldcat.org/search?qt=worldcat_org_all"
@@ -495,6 +501,24 @@ exports[`Backend HTTP error responses HTTP 408 (Request Timeout) error is render
                       WorldCat
                     </a>
                      for items in nearby libraries
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_a30SvEFe8f1yXQh"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Problem with an e-resource? Fill out this form
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_blQ3OFOew9vl6Pb?Source=NYU"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Submit feedback about GetIt
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -645,16 +669,6 @@ exports[`Backend HTTP error responses HTTP 500 (Internal Server Error) error is 
                     </a>
                   </li>
                   <li>
-                    Reach out to the Libraries on 
-                    <a
-                      href="https://www.instagram.com/nyulibraries/"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      our Instagram
-                    </a>
-                  </li>
-                  <li>
                     Search 
                     <a
                       href="https://www.worldcat.org/search?qt=worldcat_org_all"
@@ -664,6 +678,24 @@ exports[`Backend HTTP error responses HTTP 500 (Internal Server Error) error is 
                       WorldCat
                     </a>
                      for items in nearby libraries
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_a30SvEFe8f1yXQh"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Problem with an e-resource? Fill out this form
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_blQ3OFOew9vl6Pb?Source=NYU"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Submit feedback about GetIt
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -814,16 +846,6 @@ exports[`Backend fetch exceptions TypeError: Failed to fetch renders backend fet
                     </a>
                   </li>
                   <li>
-                    Reach out to the Libraries on 
-                    <a
-                      href="https://www.instagram.com/nyulibraries/"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      our Instagram
-                    </a>
-                  </li>
-                  <li>
                     Search 
                     <a
                       href="https://www.worldcat.org/search?qt=worldcat_org_all"
@@ -833,6 +855,24 @@ exports[`Backend fetch exceptions TypeError: Failed to fetch renders backend fet
                       WorldCat
                     </a>
                      for items in nearby libraries
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_a30SvEFe8f1yXQh"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Problem with an e-resource? Fill out this form
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_blQ3OFOew9vl6Pb?Source=NYU"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Submit feedback about GetIt
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -983,16 +1023,6 @@ exports[`Backend response includes errors Response includes 2 errors and an empt
                     </a>
                   </li>
                   <li>
-                    Reach out to the Libraries on 
-                    <a
-                      href="https://www.instagram.com/nyulibraries/"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      our Instagram
-                    </a>
-                  </li>
-                  <li>
                     Search 
                     <a
                       href="https://www.worldcat.org/search?qt=worldcat_org_all"
@@ -1002,6 +1032,24 @@ exports[`Backend response includes errors Response includes 2 errors and an empt
                       WorldCat
                     </a>
                      for items in nearby libraries
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_a30SvEFe8f1yXQh"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Problem with an e-resource? Fill out this form
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_blQ3OFOew9vl6Pb?Source=NYU"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Submit feedback about GetIt
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -1249,16 +1297,6 @@ exports[`Backend success "Life" Magazine and the Power of Photography renders co
                     </a>
                   </li>
                   <li>
-                    Reach out to the Libraries on 
-                    <a
-                      href="https://www.instagram.com/nyulibraries/"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      our Instagram
-                    </a>
-                  </li>
-                  <li>
                     Search 
                     <a
                       href="https://www.worldcat.org/search?qt=worldcat_org_all"
@@ -1268,6 +1306,24 @@ exports[`Backend success "Life" Magazine and the Power of Photography renders co
                       WorldCat
                     </a>
                      for items in nearby libraries
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_a30SvEFe8f1yXQh"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Problem with an e-resource? Fill out this form
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_blQ3OFOew9vl6Pb?Source=NYU"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Submit feedback about GetIt
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -1430,16 +1486,6 @@ exports[`Backend success A randomised controlled trial (RCT) for facilitating go
                     </a>
                   </li>
                   <li>
-                    Reach out to the Libraries on 
-                    <a
-                      href="https://www.instagram.com/nyulibraries/"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      our Instagram
-                    </a>
-                  </li>
-                  <li>
                     Search 
                     <a
                       href="https://www.worldcat.org/search?qt=worldcat_org_all"
@@ -1449,6 +1495,24 @@ exports[`Backend success A randomised controlled trial (RCT) for facilitating go
                       WorldCat
                     </a>
                      for items in nearby libraries
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_a30SvEFe8f1yXQh"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Problem with an e-resource? Fill out this form
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_blQ3OFOew9vl6Pb?Source=NYU"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Submit feedback about GetIt
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -1642,16 +1706,6 @@ exports[`Backend success Can community task groups learn from the principles of 
                     </a>
                   </li>
                   <li>
-                    Reach out to the Libraries on 
-                    <a
-                      href="https://www.instagram.com/nyulibraries/"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      our Instagram
-                    </a>
-                  </li>
-                  <li>
                     Search 
                     <a
                       href="https://www.worldcat.org/search?qt=worldcat_org_all"
@@ -1661,6 +1715,24 @@ exports[`Backend success Can community task groups learn from the principles of 
                       WorldCat
                     </a>
                      for items in nearby libraries
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_a30SvEFe8f1yXQh"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Problem with an e-resource? Fill out this form
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_blQ3OFOew9vl6Pb?Source=NYU"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Submit feedback about GetIt
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -1824,16 +1896,6 @@ exports[`Backend success Corriere Fiorentino renders correctly 1`] = `
                     </a>
                   </li>
                   <li>
-                    Reach out to the Libraries on 
-                    <a
-                      href="https://www.instagram.com/nyulibraries/"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      our Instagram
-                    </a>
-                  </li>
-                  <li>
                     Search 
                     <a
                       href="https://www.worldcat.org/search?qt=worldcat_org_all"
@@ -1843,6 +1905,24 @@ exports[`Backend success Corriere Fiorentino renders correctly 1`] = `
                       WorldCat
                     </a>
                      for items in nearby libraries
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_a30SvEFe8f1yXQh"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Problem with an e-resource? Fill out this form
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_blQ3OFOew9vl6Pb?Source=NYU"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Submit feedback about GetIt
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -2036,16 +2116,6 @@ exports[`Backend success Design of LED light therapy device based on free-form l
                     </a>
                   </li>
                   <li>
-                    Reach out to the Libraries on 
-                    <a
-                      href="https://www.instagram.com/nyulibraries/"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      our Instagram
-                    </a>
-                  </li>
-                  <li>
                     Search 
                     <a
                       href="https://www.worldcat.org/search?qt=worldcat_org_all"
@@ -2055,6 +2125,24 @@ exports[`Backend success Design of LED light therapy device based on free-form l
                       WorldCat
                     </a>
                      for items in nearby libraries
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_a30SvEFe8f1yXQh"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Problem with an e-resource? Fill out this form
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_blQ3OFOew9vl6Pb?Source=NYU"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Submit feedback about GetIt
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -2246,16 +2334,6 @@ exports[`Backend success Editorial cartoon renders correctly 1`] = `
                     </a>
                   </li>
                   <li>
-                    Reach out to the Libraries on 
-                    <a
-                      href="https://www.instagram.com/nyulibraries/"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      our Instagram
-                    </a>
-                  </li>
-                  <li>
                     Search 
                     <a
                       href="https://www.worldcat.org/search?qt=worldcat_org_all"
@@ -2265,6 +2343,24 @@ exports[`Backend success Editorial cartoon renders correctly 1`] = `
                       WorldCat
                     </a>
                      for items in nearby libraries
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_a30SvEFe8f1yXQh"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Problem with an e-resource? Fill out this form
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_blQ3OFOew9vl6Pb?Source=NYU"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Submit feedback about GetIt
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -2459,16 +2555,6 @@ exports[`Backend success Hamlet renders correctly 1`] = `
                     </a>
                   </li>
                   <li>
-                    Reach out to the Libraries on 
-                    <a
-                      href="https://www.instagram.com/nyulibraries/"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      our Instagram
-                    </a>
-                  </li>
-                  <li>
                     Search 
                     <a
                       href="https://www.worldcat.org/search?qt=worldcat_org_all"
@@ -2478,6 +2564,24 @@ exports[`Backend success Hamlet renders correctly 1`] = `
                       WorldCat
                     </a>
                      for items in nearby libraries
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_a30SvEFe8f1yXQh"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Problem with an e-resource? Fill out this form
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_blQ3OFOew9vl6Pb?Source=NYU"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Submit feedback about GetIt
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -2832,16 +2936,6 @@ exports[`Backend success History Today renders correctly 1`] = `
                     </a>
                   </li>
                   <li>
-                    Reach out to the Libraries on 
-                    <a
-                      href="https://www.instagram.com/nyulibraries/"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      our Instagram
-                    </a>
-                  </li>
-                  <li>
                     Search 
                     <a
                       href="https://www.worldcat.org/search?qt=worldcat_org_all"
@@ -2851,6 +2945,24 @@ exports[`Backend success History Today renders correctly 1`] = `
                       WorldCat
                     </a>
                      for items in nearby libraries
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_a30SvEFe8f1yXQh"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Problem with an e-resource? Fill out this form
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_blQ3OFOew9vl6Pb?Source=NYU"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Submit feedback about GetIt
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -3044,16 +3156,6 @@ exports[`Backend success Modelling Modular Living: Furniture and Life Magazine a
                     </a>
                   </li>
                   <li>
-                    Reach out to the Libraries on 
-                    <a
-                      href="https://www.instagram.com/nyulibraries/"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      our Instagram
-                    </a>
-                  </li>
-                  <li>
                     Search 
                     <a
                       href="https://www.worldcat.org/search?qt=worldcat_org_all"
@@ -3063,6 +3165,24 @@ exports[`Backend success Modelling Modular Living: Furniture and Life Magazine a
                       WorldCat
                     </a>
                      for items in nearby libraries
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_a30SvEFe8f1yXQh"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Problem with an e-resource? Fill out this form
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_blQ3OFOew9vl6Pb?Source=NYU"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Submit feedback about GetIt
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -3251,16 +3371,6 @@ exports[`Backend success Moral psychology is relationship regulation: moral moti
                     </a>
                   </li>
                   <li>
-                    Reach out to the Libraries on 
-                    <a
-                      href="https://www.instagram.com/nyulibraries/"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      our Instagram
-                    </a>
-                  </li>
-                  <li>
                     Search 
                     <a
                       href="https://www.worldcat.org/search?qt=worldcat_org_all"
@@ -3270,6 +3380,24 @@ exports[`Backend success Moral psychology is relationship regulation: moral moti
                       WorldCat
                     </a>
                      for items in nearby libraries
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_a30SvEFe8f1yXQh"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Problem with an e-resource? Fill out this form
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_blQ3OFOew9vl6Pb?Source=NYU"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Submit feedback about GetIt
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -3476,16 +3604,6 @@ exports[`Backend success Our Lady of everyday life : la Virgen de Guadalupe and 
                     </a>
                   </li>
                   <li>
-                    Reach out to the Libraries on 
-                    <a
-                      href="https://www.instagram.com/nyulibraries/"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      our Instagram
-                    </a>
-                  </li>
-                  <li>
                     Search 
                     <a
                       href="https://www.worldcat.org/search?qt=worldcat_org_all"
@@ -3495,6 +3613,24 @@ exports[`Backend success Our Lady of everyday life : la Virgen de Guadalupe and 
                       WorldCat
                     </a>
                      for items in nearby libraries
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_a30SvEFe8f1yXQh"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Problem with an e-resource? Fill out this form
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_blQ3OFOew9vl6Pb?Source=NYU"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Submit feedback about GetIt
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -3724,16 +3860,6 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
                     </a>
                   </li>
                   <li>
-                    Reach out to the Libraries on 
-                    <a
-                      href="https://www.instagram.com/nyulibraries/"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      our Instagram
-                    </a>
-                  </li>
-                  <li>
                     Search 
                     <a
                       href="https://www.worldcat.org/search?qt=worldcat_org_all"
@@ -3743,6 +3869,24 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
                       WorldCat
                     </a>
                      for items in nearby libraries
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_a30SvEFe8f1yXQh"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Problem with an e-resource? Fill out this form
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_blQ3OFOew9vl6Pb?Source=NYU"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Submit feedback about GetIt
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -3972,16 +4116,6 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
                     </a>
                   </li>
                   <li>
-                    Reach out to the Libraries on 
-                    <a
-                      href="https://www.instagram.com/nyulibraries/"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      our Instagram
-                    </a>
-                  </li>
-                  <li>
                     Search 
                     <a
                       href="https://www.worldcat.org/search?qt=worldcat_org_all"
@@ -3991,6 +4125,24 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
                       WorldCat
                     </a>
                      for items in nearby libraries
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_a30SvEFe8f1yXQh"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Problem with an e-resource? Fill out this form
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_blQ3OFOew9vl6Pb?Source=NYU"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Submit feedback about GetIt
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -4413,16 +4565,6 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
                     </a>
                   </li>
                   <li>
-                    Reach out to the Libraries on 
-                    <a
-                      href="https://www.instagram.com/nyulibraries/"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      our Instagram
-                    </a>
-                  </li>
-                  <li>
                     Search 
                     <a
                       href="https://www.worldcat.org/search?qt=worldcat_org_all"
@@ -4432,6 +4574,24 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
                       WorldCat
                     </a>
                      for items in nearby libraries
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_a30SvEFe8f1yXQh"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Problem with an e-resource? Fill out this form
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_blQ3OFOew9vl6Pb?Source=NYU"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Submit feedback about GetIt
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -4601,16 +4761,6 @@ exports[`Backend success The Sino-Tibetan Languages renders correctly 1`] = `
                     </a>
                   </li>
                   <li>
-                    Reach out to the Libraries on 
-                    <a
-                      href="https://www.instagram.com/nyulibraries/"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      our Instagram
-                    </a>
-                  </li>
-                  <li>
                     Search 
                     <a
                       href="https://www.worldcat.org/search?qt=worldcat_org_all"
@@ -4620,6 +4770,24 @@ exports[`Backend success The Sino-Tibetan Languages renders correctly 1`] = `
                       WorldCat
                     </a>
                      for items in nearby libraries
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_a30SvEFe8f1yXQh"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Problem with an e-resource? Fill out this form
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_blQ3OFOew9vl6Pb?Source=NYU"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Submit feedback about GetIt
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -4874,16 +5042,6 @@ exports[`Backend success The Year's work in modern language studies. renders cor
                     </a>
                   </li>
                   <li>
-                    Reach out to the Libraries on 
-                    <a
-                      href="https://www.instagram.com/nyulibraries/"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      our Instagram
-                    </a>
-                  </li>
-                  <li>
                     Search 
                     <a
                       href="https://www.worldcat.org/search?qt=worldcat_org_all"
@@ -4893,6 +5051,24 @@ exports[`Backend success The Year's work in modern language studies. renders cor
                       WorldCat
                     </a>
                      for items in nearby libraries
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_a30SvEFe8f1yXQh"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Problem with an e-resource? Fill out this form
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_blQ3OFOew9vl6Pb?Source=NYU"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Submit feedback about GetIt
+                    </a>
                   </li>
                 </ul>
               </div>

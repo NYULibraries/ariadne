@@ -77,16 +77,6 @@ exports[`AskLibrarian component matches snapshot 1`] = `
         </a>
       </li>
       <li>
-        Reach out to the Libraries on 
-        <a
-          href="https://www.instagram.com/nyulibraries/"
-          rel="noreferrer"
-          target="_blank"
-        >
-          our Instagram
-        </a>
-      </li>
-      <li>
         Search 
         <a
           href="https://www.worldcat.org/search?qt=worldcat_org_all"
@@ -96,6 +86,24 @@ exports[`AskLibrarian component matches snapshot 1`] = `
           WorldCat
         </a>
          for items in nearby libraries
+      </li>
+      <li>
+        <a
+          href="https://nyu.qualtrics.com/jfe/form/SV_a30SvEFe8f1yXQh"
+          rel="noreferrer"
+          target="_blank"
+        >
+          Problem with an e-resource? Fill out this form
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://nyu.qualtrics.com/jfe/form/SV_blQ3OFOew9vl6Pb?Source=NYU"
+          rel="noreferrer"
+          target="_blank"
+        >
+          Submit feedback about GetIt
+        </a>
       </li>
     </ul>
   </div>
