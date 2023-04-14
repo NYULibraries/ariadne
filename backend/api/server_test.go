@@ -145,14 +145,14 @@ func TestResponseJSONRoute(t *testing.T) {
 
 			actualValue := string(body)
 			if actualValue != goldenValue {
-				err := writeActualToTmp(testCase, actualValue)
+				err := writeActualAPIResponseToTmp(testCase, actualValue)
 				if err != nil {
 					t.Fatalf("Error writing actual temp file for test case \"%s\": %s",
 						testCase.Name, err)
 				}
 
 				goldenFile := testutils.APIResponseGoldenFile(testCase)
-				actualFile := tmpFile(testCase)
+				actualFile := tmpAPIResponsesFile(testCase)
 				diff, err := util.Diff(goldenFile, actualFile)
 				if err != nil {
 					t.Fatalf("Error diff'ing %s vs. %s: %s\n"+
@@ -284,8 +284,8 @@ func normalizeLogOutputString(logOutputString string) string {
 	return result
 }
 
-func tmpFile(testCase testutils.TestCase) string {
-	return "testdata/server/tmp/actual/" + testCase.Key + ".json"
+func tmpAPIResponsesFile(testCase testutils.TestCase) string {
+	return "testdata/server/tmp/actual/api-responses/" + testCase.Key + ".json"
 }
 
 func updateAPIResponseGoldenFile(testCase testutils.TestCase, bytes []byte) error {
@@ -296,6 +296,6 @@ func updateLogOutputGoldenFile(testCase testutils.TestCase, bytes []byte) error 
 	return os.WriteFile(testutils.LogOutputGoldenFile(testCase), bytes, 0644)
 }
 
-func writeActualToTmp(testCase testutils.TestCase, actual string) error {
-	return os.WriteFile(tmpFile(testCase), []byte(actual), 0644)
+func writeActualAPIResponseToTmp(testCase testutils.TestCase, actual string) error {
+	return os.WriteFile(tmpAPIResponsesFile(testCase), []byte(actual), 0644)
 }
