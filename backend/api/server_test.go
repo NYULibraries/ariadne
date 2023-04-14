@@ -152,7 +152,7 @@ func TestResponseJSONRoute(t *testing.T) {
 				}
 
 				goldenFile := testutils.APIResponseGoldenFile(testCase)
-				actualFile := tmpAPIResponsesFile(testCase)
+				actualFile := tmpAPIResponseFile(testCase)
 				diff, err := util.Diff(goldenFile, actualFile)
 				if err != nil {
 					t.Fatalf("Error diff'ing %s vs. %s: %s\n"+
@@ -284,7 +284,7 @@ func normalizeLogOutputString(logOutputString string) string {
 	return result
 }
 
-func tmpAPIResponsesFile(testCase testutils.TestCase) string {
+func tmpAPIResponseFile(testCase testutils.TestCase) string {
 	return "testdata/server/tmp/actual/api-responses/" + testCase.Key + ".json"
 }
 
@@ -297,5 +297,5 @@ func updateLogOutputGoldenFile(testCase testutils.TestCase, bytes []byte) error 
 }
 
 func writeActualAPIResponseToTmp(testCase testutils.TestCase, actual string) error {
-	return os.WriteFile(tmpAPIResponsesFile(testCase), []byte(actual), 0644)
+	return os.WriteFile(tmpAPIResponseFile(testCase), []byte(actual), 0644)
 }
