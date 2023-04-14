@@ -270,8 +270,22 @@ func TestLogging(t *testing.T) {
 		actualLogOutputString := normalizeLogOutputString(logOutput.String())
 		expectedLogOutputString := normalizeLogOutputString(goldenValue)
 		if actualLogOutputString != expectedLogOutputString {
-			t.Errorf("Log output is not correct:\n\nexpected:\n\n%s\n\nactual:\n\n%s",
-				expectedLogOutputString, actualLogOutputString)
+			// We don't programmatically diff an actual file vs. the golden file
+			// because the golden file contents are not normalized, but we do
+			// nevertheless want to write out an actual file in case the user
+			// wants to do a manual diff themselves.
+			err := writeActualLogOutputToTmp(loggingTestCase, actualLogOutputString)
+			if err != nil {
+				t.Fatalf("Error writing actual temp file for test case \"%s\": %s",
+					loggingTestCase.Name, err)
+			}
+			actualFile := tmpLogOutputFile(loggingTestCase)
+			goldenFile := testutils.LogOutputGoldenFile(loggingTestCase)
+			// We pass in the file paths because util.DiffStrings prints labels
+			// in the output header, and we want to use the paths for these labels.
+			diff := util.DiffStrings(goldenFile, expectedLogOutputString, actualFile, actualLogOutputString)
+
+			t.Errorf("golden and actual values do not match:\n%s\n", diff)
 		}
 	})
 }
@@ -288,6 +302,10 @@ func tmpAPIResponseFile(testCase testutils.TestCase) string {
 	return "testdata/server/tmp/actual/api-responses/" + testCase.Key + ".json"
 }
 
+func tmpLogOutputFile(testCase testutils.TestCase) string {
+	return "testdata/server/tmp/actual/log-output/" + testCase.Key + ".txt"
+}
+
 func updateAPIResponseGoldenFile(testCase testutils.TestCase, bytes []byte) error {
 	return os.WriteFile(testutils.APIResponseGoldenFile(testCase), bytes, 0644)
 }
@@ -298,4 +316,8 @@ func updateLogOutputGoldenFile(testCase testutils.TestCase, bytes []byte) error 
 
 func writeActualAPIResponseToTmp(testCase testutils.TestCase, actual string) error {
 	return os.WriteFile(tmpAPIResponseFile(testCase), []byte(actual), 0644)
+}
+
+func writeActualLogOutputToTmp(testCase testutils.TestCase, actual string) error {
+	return os.WriteFile(tmpLogOutputFile(testCase), []byte(actual), 0644)
 }

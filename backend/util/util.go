@@ -20,3 +20,9 @@ func DiffFiles(path1 string, path2 string) (string, error) {
 
 	return string(diffBytes), nil
 }
+
+func DiffStrings(label1 string, string1 string, label2, string2 string) string {
+	diffString := string(diff.Diff(label1, []byte(string1), label2, []byte(string2)))
+
+	return diffString
+}
