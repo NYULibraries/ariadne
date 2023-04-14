@@ -160,8 +160,7 @@ func TestResponseJSONRoute(t *testing.T) {
 						goldenFile, actualFile, err)
 				}
 
-				t.Errorf("golden and actual values do not match\noutput of `diff %s %s`:\n%s\n",
-					goldenFile, actualFile, diff)
+				t.Errorf("golden and actual values do not match:\n%s\n", diff)
 			}
 		})
 	}
