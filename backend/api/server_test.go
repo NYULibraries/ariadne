@@ -131,7 +131,7 @@ func TestResponseJSONRoute(t *testing.T) {
 			body, _ := io.ReadAll(response.Body)
 
 			if *updateGoldenFiles {
-				err = updateGoldenFile(testCase, body)
+				err = updateAPIResponseGoldenFile(testCase, body)
 				if err != nil {
 					t.Fatalf("Error updating golden file: %s", err)
 				}
@@ -274,7 +274,7 @@ func tmpFile(testCase testutils.TestCase) string {
 	return "testdata/server/tmp/actual/" + testCase.Key + ".json"
 }
 
-func updateGoldenFile(testCase testutils.TestCase, bytes []byte) error {
+func updateAPIResponseGoldenFile(testCase testutils.TestCase, bytes []byte) error {
 	return os.WriteFile(testutils.APIResponseGoldenFile(testCase), bytes, 0644)
 }
 
