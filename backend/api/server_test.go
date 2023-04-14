@@ -137,7 +137,7 @@ func TestResponseJSONRoute(t *testing.T) {
 				}
 			}
 
-			goldenValue, err := testutils.GetGoldenValue(testCase)
+			goldenValue, err := testutils.GetAPIResponseGoldenValue(testCase)
 			if err != nil {
 				t.Fatalf("Error retrieving golden value for test case \"%s\": %s",
 					testCase.Name, err)
@@ -151,7 +151,7 @@ func TestResponseJSONRoute(t *testing.T) {
 						testCase.Name, err)
 				}
 
-				goldenFile := testutils.GoldenFile(testCase)
+				goldenFile := testutils.APIResponseGoldenFile(testCase)
 				actualFile := tmpFile(testCase)
 				diff, err := util.Diff(goldenFile, actualFile)
 				if err != nil {
@@ -275,7 +275,7 @@ func tmpFile(testCase testutils.TestCase) string {
 }
 
 func updateGoldenFile(testCase testutils.TestCase, bytes []byte) error {
-	return os.WriteFile(testutils.GoldenFile(testCase), bytes, 0644)
+	return os.WriteFile(testutils.APIResponseGoldenFile(testCase), bytes, 0644)
 }
 
 func writeActualToTmp(testCase testutils.TestCase, actual string) error {

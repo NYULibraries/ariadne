@@ -53,8 +53,12 @@ func init() {
 
 }
 
-func GetGoldenValue(testCase TestCase) (string, error) {
-	return GetTestdataFileContents(GoldenFile(testCase))
+func APIResponseGoldenFile(testCase TestCase) string {
+	return testutilsPath + "/testdata/golden/api-responses/" + testCase.Key + ".json"
+}
+
+func GetAPIResponseGoldenValue(testCase TestCase) (string, error) {
+	return GetTestdataFileContents(APIResponseGoldenFile(testCase))
 }
 
 func GetPrimoFakeResponseISBNSearch(testCase TestCase) (string, error) {
@@ -77,10 +81,6 @@ func GetTestdataFileContents(filename string) (string, error) {
 	}
 
 	return string(bytes), nil
-}
-
-func GoldenFile(testCase TestCase) string {
-	return testutilsPath + "/testdata/golden/" + testCase.Key + ".json"
 }
 
 // Returns a url.Values consisting of everything in urlValues1 with everything in
