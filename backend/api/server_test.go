@@ -131,13 +131,13 @@ func TestResponseJSONRoute(t *testing.T) {
 			body, _ := io.ReadAll(response.Body)
 
 			if *updateGoldenFiles {
-				err = updateGoldenFile(testCase, body)
+				err = updateAPIResponseGoldenFile(testCase, body)
 				if err != nil {
 					t.Fatalf("Error updating golden file: %s", err)
 				}
 			}
 
-			goldenValue, err := testutils.GetGoldenValue(testCase)
+			goldenValue, err := testutils.GetAPIResponseGoldenValue(testCase)
 			if err != nil {
 				t.Fatalf("Error retrieving golden value for test case \"%s\": %s",
 					testCase.Name, err)
@@ -145,23 +145,22 @@ func TestResponseJSONRoute(t *testing.T) {
 
 			actualValue := string(body)
 			if actualValue != goldenValue {
-				err := writeActualToTmp(testCase, actualValue)
+				err := writeActualAPIResponseToTmp(testCase, actualValue)
 				if err != nil {
 					t.Fatalf("Error writing actual temp file for test case \"%s\": %s",
 						testCase.Name, err)
 				}
 
-				goldenFile := testutils.GoldenFile(testCase)
-				actualFile := tmpFile(testCase)
-				diff, err := util.Diff(goldenFile, actualFile)
+				goldenFile := testutils.APIResponseGoldenFile(testCase)
+				actualFile := tmpAPIResponseFile(testCase)
+				diff, err := util.DiffFiles(goldenFile, actualFile)
 				if err != nil {
 					t.Fatalf("Error diff'ing %s vs. %s: %s\n"+
 						"Manually diff these files to determine the reasons for test failure.",
 						goldenFile, actualFile, err)
 				}
 
-				t.Errorf("golden and actual values do not match\noutput of `diff %s %s`:\n%s\n",
-					goldenFile, actualFile, diff)
+				t.Errorf("golden and actual values do not match:\n%s\n", diff)
 			}
 		})
 	}
@@ -253,11 +252,39 @@ func TestLogging(t *testing.T) {
 		// it a recorder.
 		responseRecorder := httptest.NewRecorder()
 		router.ServeHTTP(responseRecorder, request)
+
+		if *updateGoldenFiles {
+			err = updateLogOutputGoldenFile(loggingTestCase, logOutput.Bytes())
+			if err != nil {
+				t.Fatalf("Error updating golden file: %s", err)
+			}
+		}
+
+		goldenValue, err := testutils.GetLogOutputGoldenValue(loggingTestCase)
+		if err != nil {
+			t.Fatalf("Error retrieving golden value for test case \"%s\": %s",
+				loggingTestCase.Name, err)
+		}
+
 		actualLogOutputString := normalizeLogOutputString(logOutput.String())
-		expectedLogOutputString := normalizeLogOutputString("{\"time\":\"2023-04-04T13:54:42.80309-04:00\",\"level\":\"INFO\",\"msg\":\"SFX request\",\"sfxRequest.DumpedHTTPRequest\":\"GET /?%3Ftitle=Contrived+FRBR+Group+Test+Case&date=1999&isbn=1111111111111&sfx.doi_url=http%3A%2F%2Fdx.doi.org&sfx.response_type=multi_obj_xml&url_ctx_fmt=info%3Aofi%2Ffmt%3Axml%3Axsd%3Actx HTTP/1.1\\r\\nHost: 127.0.0.1:63502\\r\\n\\r\\n\"}\n{\"time\":\"2023-04-04T13:54:43.644324-04:00\",\"level\":\"DEBUG\",\"msg\":\"SFX response\",\"sfxResponse.DumpedHTTPResponse\":\"HTTP/1.1 200 OK\\r\\nTransfer-Encoding: chunked\\r\\nContent-Type: text/plain; charset=utf-8\\r\\nDate: Tue, 04 Apr 2023 17:54:43 GMT\\r\\n\\r\\n1289\\r\\nHTTP/1.1 200 OK\\r\\nTransfer-Encoding: chunked\\r\\nContent-Type: application/xml; charset=ISO-8859-1\\r\\nDate: Thu, 30 Mar 2023 22:18:01 GMT\\r\\nServer: Apache\\r\\n\\r\\n11e4\\r\\n<?xml version=\\\"1.0\\\" encoding=\\\"utf-8\\\"?>\\n\\n<ctx_obj_set>\\n <ctx_obj identifier=\\\"\\\">\\n  <ctx_obj_attributes>&lt;perldata&gt;\\n &lt;hash&gt;\\n  &lt;item key=\\\"fetchid\\\"&gt;1111111111111&lt;/item&gt;\\n  &lt;item key=\\\"_stash\\\"&gt;\\n   &lt;hash&gt;\\n   &lt;/hash&gt;\\n  &lt;/item&gt;\\n  &lt;item key=\\\"req.session_id\\\"&gt;sBBC5CFFC-CF48-11ED-AF63-75004131B499&lt;/item&gt;\\n  &lt;item key=\\\"rft.btitle\\\"&gt;5-Minute Clinical Suite: Version 9.0&lt;/item&gt;\\n  &lt;item key=\\\"sfx.doi_url\\\"&gt;http://dx.doi.org&lt;/item&gt;\\n  &lt;item key=\\\"url_ctx_fmt\\\"&gt;info:ofi/fmt:xml:xsd:ctx&lt;/item&gt;\\n  &lt;item key=\\\"rft.isbn_10\\\"&gt;&lt;/item&gt;\\n  &lt;item key=\\\"sfx.response_type\\\"&gt;multi_obj_xml&lt;/item&gt;\\n  &lt;item key=\\\"rft.year\\\"&gt;1999&lt;/item&gt;\\n  &lt;item key=\\\"rft.date\\\"&gt;1999&lt;/item&gt;\\n  &lt;item key=\\\"rft.isbn\\\"&gt;1111111111111&lt;/item&gt;\\n  &lt;item key=\\\"rft.object_type\\\"&gt;BOOK&lt;/item&gt;\\n  &lt;item key=\\\"sfx.sourcename\\\"&gt;DEFAULT&lt;/item&gt;\\n  &lt;item key=\\\"rft.language\\\"&gt;eng&lt;/item&gt;\\n  &lt;item key=\\\"sfx.request_id\\\"&gt;25793894&lt;/item&gt;\\n  &lt;item key=\\\"sfx.ignore_char_set\\\"&gt;1&lt;/item&gt;\\n  &lt;item key=\\\"rft.genre\\\"&gt;book&lt;/item&gt;\\n  &lt;item key=\\\"sfx.sid\\\"&gt;DEFAULT&lt;/item&gt;\\n  &lt;item key=\\\"rft.pub\\\"&gt;Lippincott Williams &amp;amp; Wilkins&lt;/item&gt;\\n  &lt;item key=\\\"rft.object_id\\\"&gt;4100000012052805&lt;/item&gt;\\n  &lt;item key=\\\"rft.title\\\"&gt;5-Minute Clinical Suite: Version 9.0&lt;/item&gt;\\n  &lt;item key=\\\"@rfe_id\\\"&gt;\\n   &lt;array&gt;\\n   &lt;/array&gt;\\n  &lt;/item&gt;\\n  &lt;item key=\\\"@sfx.searched_by_identifier\\\"&gt;\\n   &lt;array&gt;\\n    &lt;item key=\\\"0\\\"&gt;\\n     &lt;hash&gt;\\n      &lt;item key=\\\"VALUE\\\"&gt;\\n       &lt;array&gt;\\n        &lt;item key=\\\"0\\\"&gt;1111111111111&lt;/item&gt;\\n       &lt;/array&gt;\\n      &lt;/item&gt;\\n      &lt;item key=\\\"SUBTYPE\\\"&gt;&lt;/item&gt;\\n      &lt;item key=\\\"TYPE\\\"&gt;ISBN&lt;/item&gt;\\n     &lt;/hash&gt;\\n    &lt;/item&gt;\\n   &lt;/array&gt;\\n  &lt;/item&gt;\\n  &lt;item key=\\\"existing_ts_ids\\\"&gt;\\n   &lt;array&gt;\\n    &lt;item key=\\\"0\\\"&gt;20430000000000002&lt;/item&gt;\\n    &lt;item key=\\\"1\\\"&gt;111027614344001&lt;/item&gt;\\n   &lt;/array&gt;\\n  &lt;/item&gt;\\n  &lt;item key=\\\"rft.isbn_13\\\"&gt;1111111111111&lt;/item&gt;\\n  &lt;item key=\\\"@rft_id\\\"&gt;\\n   &lt;array&gt;\\n   &lt;/array&gt;\\n  &lt;/item&gt;\\n  \\n &lt;/hash&gt;\\n&lt;/perldata&gt;\\n</ctx_obj_attributes>\\n  <ctx_obj_targets>\\n   <target>\\n    <target_name>DOCDEL_ILLIAD</target_name>\\n    <target_public_name>Request via Interlibrary Loan</target_public_name>\\n    <object_portfolio_id></object_portfolio_id>\\n    <target_id>111027614344000</target_id>\\n    <interface_id>111027614344000</interface_id>\\n    <interface_name>DOCDEL_ILLIAD</interface_name>\\n    <target_service_id>111027614344001</target_service_id>\\n    <service_type>getDocumentDelivery</service_type>\\n    <parser>ILLiad::DDL</parser>\\n    <parse_param>url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL &amp; id_type=</parse_param>\\n    <proxy>yes</proxy>\\n    <crossref>yes</crossref>\\n    <note></note>\\n    <authentication></authentication>\\n    <char_set>utf8</char_set>\\n    <displayer></displayer>\\n    <target_url>http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?title=5-Minute%20Clinical%20Suite%3A%20Version%209.0&amp;isbn=1111111111111&amp;genre=book&amp;sid=DEFAULT%20(Via%20SFX)&amp;date=1999&amp;year=1999</target_url>\\n    <is_related>no</is_related>\\n    <coverage>\\n     <coverage_text>\\n      <threshold_text></threshold_text>\\n      <embargo_text></embargo_text>\\n     </coverage_text>\\n     <embargo></embargo>\\n    </coverage>\\n   </target>\\n   <target>\\n    <target_name>ASK_A_LIBRARIAN_LCL</target_name>\\n    <target_public_name>Ask a Librarian</target_public_name>\\n    <object_portfolio_id></object_portfolio_id>\\n    <target_id>20430000000000002</target_id>\\n    <interface_id>20430000000000002</interface_id>\\n    <interface_name>ASK_A_LIBRARIAN</interface_name>\\n    <target_service_id>20430000000000002</target_service_id>\\n    <service_type>getWebService</service_type>\\n    <parser>Generic</parser>\\n    <parse_param>IF () \\\"http://library.nyu.edu/ask/\\\"</parse_param>\\n    <proxy>no</proxy>\\n    <crossref>no</crossref>\\n    <note></note>\\n    <authentication></authentication>\\n    <char_set>iso-8859-1</char_set>\\n    <displayer></displayer>\\n    <target_url>http://library.nyu.edu/ask/</target_url>\\n    <is_related>no</is_related>\\n    <coverage>\\n     <coverage_text>\\n      <threshold_text></threshold_text>\\n      <embargo_text></embargo_text>\\n     </coverage_text>\\n     <embargo></embargo>\\n    </coverage>\\n   </target>\\n  </ctx_obj_targets>\\n </ctx_obj>\\n</ctx_obj_set>\\r\\n0\\r\\n\\r\\n\\n\\r\\n0\\r\\n\\r\\n\"}\n{\"time\":\"2023-04-04T13:54:44.404936-04:00\",\"level\":\"INFO\",\"msg\":\"Primo request\",\"primoRequest.DumpedISBNSearchHTTPRequest\":\"GET /?inst=NYU&limit=50&offset=0&q=isbn%2Cexact%2C1111111111111&scope=all&vid=NYU HTTP/1.1\\r\\nHost: 127.0.0.1:63503\\r\\n\\r\\n\"}\n{\"time\":\"2023-04-04T13:54:47.742169-04:00\",\"level\":\"INFO\",\"msg\":\"Primo HTTP FRBR member requests\",\"primoResponse.DumpedFRBRMemberHTTPRequests\":[\"GET /?inst=NYU&limit=50&multiFacets=facet_frbrgroupid%2Cinclude%2C1234567890&offset=0&q=isbn%2Cexact%2C1111111111111&scope=all&vid=NYU HTTP/1.1\\r\\nHost: 127.0.0.1:63503\\r\\n\\r\\n\"]}\n{\"time\":\"2023-04-04T13:54:47.742232-04:00\",\"level\":\"DEBUG\",\"msg\":\"Primo HTTP responses (initial ISBN search and FRBR member searches)\",\"primoResponse.DumpedHTTPResponses\":[\"HTTP/1.1 200 OK\\r\\nTransfer-Encoding: chunked\\r\\nContent-Type: text/plain; charset=utf-8\\r\\nDate: Tue, 04 Apr 2023 17:54:45 GMT\\r\\n\\r\\ndcc\\r\\n{\\n    \\\"docs\\\": [\\n        {\\n            \\\"delivery\\\": {\\n                \\\"link\\\": [\\n                    {\\n                        \\\"hyperlinkText\\\": \\\"[SHOULD NEVER SEE THIS B/C THIS IS AN ACTIVE FRBR GROUP] ISBN search results doc 1, link 1\\\",\\n                        \\\"linkURL\\\": \\\"https://fake-isbn-search.com/1/\\\",\\n                        \\\"linkType\\\": \\\"http://purl.org/pnx/linkType/linktoprice\\\"\\n                    },\\n                    {\\n                        \\\"hyperlinkText\\\": \\\"[SHOULD NEVER SEE THIS B/C THIS IS AN ACTIVE FRBR GROUP] ISBN search results doc 1, link 2\\\",\\n                        \\\"linkURL\\\": \\\"https://fake-isbn-search.com/2/\\\",\\n                        \\\"linkType\\\": \\\"http://purl.org/pnx/linkType/linktorsrc\\\"\\n                    },\\n                    {\\n                        \\\"hyperlinkText\\\": \\\"[SHOULD NEVER SEE THIS B/C THIS IS AN ACTIVE FRBR GROUP] ISBN search results doc 1, link 3\\\",\\n                        \\\"linkURL\\\": \\\"https://fake-isbn-search.com/3/\\\",\\n                        \\\"linkType\\\": \\\"http://purl.org/pnx/linkType/linktoprice\\\"\\n                    },\\n                    {\\n                        \\\"hyperlinkText\\\": \\\"[SHOULD NEVER SEE THIS B/C THIS IS AN ACTIVE FRBR GROUP] ISBN search results doc 1, link 4\\\",\\n                        \\\"linkURL\\\": \\\"https://fake-isbn-search.com/4/\\\",\\n                        \\\"linkType\\\": \\\"http://purl.org/pnx/linkType/linktorsrc\\\"\\n                    }\\n                ]\\n            },\\n            \\\"pnx\\\": {\\n                \\\"facets\\\": {\\n                    \\\"frbrtype\\\": [\\n                        \\\"5\\\"\\n                    ],\\n                    \\\"frbrgroupid\\\": [\\n                        \\\"1234567890\\\"\\n                    ]\\n                }\\n            }\\n        },\\n        {\\n            \\\"delivery\\\": {\\n                \\\"link\\\": [\\n                    {\\n                        \\\"hyperlinkText\\\": \\\"ISBN search results doc 2, link 4\\\",\\n                        \\\"linkURL\\\": \\\"https://fake-isbn-search.com/4/\\\",\\n                        \\\"linkType\\\": \\\"http://purl.org/pnx/linkType/linktorsrc\\\"\\n                    },\\n                    {\\n                        \\\"hyperlinkText\\\": \\\"[SHOULD NEVER SEE THIS B/C NOT THE RIGHT LINK TYPE] ISBN search results doc 2, link 3\\\",\\n                        \\\"linkURL\\\": \\\"https://fake-isbn-search.com/3/\\\",\\n                        \\\"linkType\\\": \\\"http://purl.org/pnx/linkType/linktoprice\\\"\\n                    },\\n                    {\\n                        \\\"hyperlinkText\\\": \\\"ISBN search results doc 2, link 2\\\",\\n                        \\\"linkURL\\\": \\\"https://fake-isbn-search.com/2/\\\",\\n                        \\\"linkType\\\": \\\"http://purl.org/pnx/linkType/linktorsrc\\\"\\n                    },\\n                    {\\n                        \\\"hyperlinkText\\\": \\\"ISBN search results doc 2, link 2\\\",\\n                        \\\"linkURL\\\": \\\"https://fake-isbn-search.com/2/\\\",\\n                        \\\"linkType\\\": \\\"http://purl.org/pnx/linkType/linktorsrc\\\"\\n                    },\\n                    {\\n                        \\\"hyperlinkText\\\": \\\"[SHOULD NEVER SEE THIS B/C NOT THE RIGHT LINK TYPE] ISBN search results doc 2, link 1\\\",\\n                        \\\"linkURL\\\": \\\"https://fake-isbn-search.com/1/\\\",\\n                        \\\"linkType\\\": \\\"http://purl.org/pnx/linkType/linktoprice\\\"\\n                    }\\n                ]\\n            },\\n            \\\"pnx\\\": {\\n                \\\"facets\\\": {\\n                    \\\"frbrtype\\\": [\\n                        \\\"6\\\"\\n                    ],\\n                    \\\"frbrgroupid\\\": [\\n                        \\\"1234567890\\\"\\n                    ]\\n                }\\n            }\\n        }\\n    ]\\n}\\n\\r\\n0\\r\\n\\r\\n\",\"HTTP/1.1 200 OK\\r\\nTransfer-Encoding: chunked\\r\\nContent-Type: text/plain; charset=utf-8\\r\\nDate: Tue, 04 Apr 2023 17:54:47 GMT\\r\\n\\r\\nf48\\r\\n{\\n    \\\"docs\\\": [\\n        {\\n            \\\"delivery\\\": {\\n                \\\"link\\\": [\\n                    {\\n                        \\\"hyperlinkText\\\": \\\"[SHOULD NEVER SEE THIS B/C NOT THE RIGHT LINK TYPE] FRBR member search results doc 1, link 4\\\",\\n                        \\\"linkURL\\\": \\\"https://fake-frbr-member-search.com/4/\\\",\\n                        \\\"linkType\\\": \\\"http://purl.org/pnx/linkType/linktoprice\\\"\\n                    },\\n                    {\\n                        \\\"hyperlinkText\\\": \\\"ISBN search results doc 2, link 4\\\",\\n                        \\\"linkURL\\\": \\\"https://fake-isbn-search.com/4/\\\",\\n                        \\\"linkType\\\": \\\"http://purl.org/pnx/linkType/linktorsrc\\\"\\n                    },\\n                    {\\n                        \\\"hyperlinkText\\\": \\\"FRBR member search results doc 1, link 3\\\",\\n                        \\\"linkURL\\\": \\\"https://fake-frbr-member-search.com/3/\\\",\\n                        \\\"linkType\\\": \\\"http://purl.org/pnx/linkType/linktorsrc\\\"\\n                    },\\n                    {\\n                        \\\"hyperlinkText\\\": \\\"[SHOULD NEVER SEE THIS B/C NOT THE RIGHT LINK TYPE] FRBR member search results doc 1, link 2\\\",\\n                        \\\"linkURL\\\": \\\"https://fake-frbr-member-search.com/2/\\\",\\n                        \\\"linkType\\\": \\\"http://purl.org/pnx/linkType/linktoprice\\\"\\n                    },\\n                    {\\n                        \\\"hyperlinkText\\\": \\\"FRBR member search results doc 1, link 1\\\",\\n                        \\\"linkURL\\\": \\\"https://fake-frbr-member-search.com/1/\\\",\\n                        \\\"linkType\\\": \\\"http://purl.org/pnx/linkType/linktorsrc\\\"\\n                    },\\n                    {\\n                        \\\"hyperlinkText\\\": \\\"FRBR member search results doc 1, link 1\\\",\\n                        \\\"linkURL\\\": \\\"https://fake-frbr-member-search.com/1/\\\",\\n                        \\\"linkType\\\": \\\"http://purl.org/pnx/linkType/linktorsrc\\\"\\n                    }\\n                ]\\n            },\\n            \\\"pnx\\\": {\\n                \\\"search\\\": {\\n                    \\\"isbn\\\": [\\n                        \\\"1111111111111\\\",\\n                        \\\"2222222222222\\\",\\n                        \\\"3333333333333\\\",\\n                        \\\"4444444444444\\\"\\n                    ]\\n                }\\n            }\\n        },\\n        {\\n            \\\"delivery\\\": {\\n                \\\"link\\\": [\\n                    {\\n                        \\\"hyperlinkText\\\": \\\"[SHOULD NEVER SEE THIS B/C NOT AN ISBN MATCH] FRBR member search results doc 2, link 1\\\",\\n                        \\\"linkURL\\\": \\\"https://fake-frbr-member-search.com/1/\\\",\\n                        \\\"linkType\\\": \\\"http://purl.org/pnx/linkType/linktorsrc\\\"\\n                    },\\n                    {\\n                        \\\"hyperlinkText\\\": \\\"[SHOULD NEVER SEE THIS B/C NOT AN ISBN MATCH] FRBR member search results doc 2, link 2\\\",\\n                        \\\"linkURL\\\": \\\"https://fake-frbr-member-search.com/2/\\\",\\n                        \\\"linkType\\\": \\\"http://purl.org/pnx/linkType/linktoprice\\\"\\n                    },\\n                    {\\n                        \\\"hyperlinkText\\\": \\\"[SHOULD NEVER SEE THIS B/C NOT AN ISBN MATCH] FRBR member search results doc 2, link 3\\\",\\n                        \\\"linkURL\\\": \\\"https://fake-frbr-member-search.com/3/\\\",\\n                        \\\"linkType\\\": \\\"http://purl.org/pnx/linkType/linktorsrc\\\"\\n                    },\\n                    {\\n                        \\\"hyperlinkText\\\": \\\"[SHOULD NEVER SEE THIS B/C NOT AN ISBN MATCH] FRBR member search results doc 2, link 4\\\",\\n                        \\\"linkURL\\\": \\\"https://fake-frbr-member-search.com/4/\\\",\\n                        \\\"linkType\\\": \\\"http://purl.org/pnx/linkType/linktoprice\\\"\\n                    }\\n                ]\\n            },\\n            \\\"pnx\\\": {\\n                \\\"search\\\": {\\n                    \\\"isbn\\\": [\\n                        \\\"2222222222222\\\",\\n                        \\\"3333333333333\\\",\\n                        \\\"4444444444444\\\"\\n                    ]\\n                }\\n            }\\n        }\\n    ]\\n}\\n\\r\\n0\\r\\n\\r\\n\"]}\n")
+		expectedLogOutputString := normalizeLogOutputString(goldenValue)
 		if actualLogOutputString != expectedLogOutputString {
-			t.Errorf("Log output is not correct:\n\nexpected:\n\n%s\n\nactual:\n\n%s",
-				expectedLogOutputString, actualLogOutputString)
+			// We don't programmatically diff an actual file vs. the golden file
+			// because the golden file contents are not normalized, but we do
+			// nevertheless want to write out an actual file in case the user
+			// wants to do a manual diff themselves.
+			err := writeActualLogOutputToTmp(loggingTestCase, actualLogOutputString)
+			if err != nil {
+				t.Fatalf("Error writing actual temp file for test case \"%s\": %s",
+					loggingTestCase.Name, err)
+			}
+			actualFile := tmpLogOutputFile(loggingTestCase)
+			goldenFile := testutils.LogOutputGoldenFile(loggingTestCase)
+			// We pass in the file paths because util.DiffStrings prints labels
+			// in the output header, and we want to use the paths for these labels.
+			diff := util.DiffStrings(goldenFile, expectedLogOutputString, actualFile, actualLogOutputString)
+
+			t.Errorf("golden and actual values do not match:\n%s\n", diff)
 		}
 	})
 }
@@ -270,14 +297,26 @@ func normalizeLogOutputString(logOutputString string) string {
 	return result
 }
 
-func tmpFile(testCase testutils.TestCase) string {
-	return "testdata/server/tmp/actual/" + testCase.Key + ".json"
+func tmpAPIResponseFile(testCase testutils.TestCase) string {
+	return "testdata/server/tmp/actual/api-responses/" + testCase.Key + ".json"
 }
 
-func updateGoldenFile(testCase testutils.TestCase, bytes []byte) error {
-	return os.WriteFile(testutils.GoldenFile(testCase), bytes, 0644)
+func tmpLogOutputFile(testCase testutils.TestCase) string {
+	return "testdata/server/tmp/actual/log-output/" + testCase.Key + ".txt"
 }
 
-func writeActualToTmp(testCase testutils.TestCase, actual string) error {
-	return os.WriteFile(tmpFile(testCase), []byte(actual), 0644)
+func updateAPIResponseGoldenFile(testCase testutils.TestCase, bytes []byte) error {
+	return os.WriteFile(testutils.APIResponseGoldenFile(testCase), bytes, 0644)
+}
+
+func updateLogOutputGoldenFile(testCase testutils.TestCase, bytes []byte) error {
+	return os.WriteFile(testutils.LogOutputGoldenFile(testCase), bytes, 0644)
+}
+
+func writeActualAPIResponseToTmp(testCase testutils.TestCase, actual string) error {
+	return os.WriteFile(tmpAPIResponseFile(testCase), []byte(actual), 0644)
+}
+
+func writeActualLogOutputToTmp(testCase testutils.TestCase, actual string) error {
+	return os.WriteFile(tmpLogOutputFile(testCase), []byte(actual), 0644)
 }
