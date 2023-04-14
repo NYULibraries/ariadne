@@ -3,4 +3,3 @@ The only change made was the inclusion of the txtar package (https://github.com/
 directly within this one.
 
 See LICENSE, which is a copy of the LICENSE file for Go.
-
