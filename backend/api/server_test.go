@@ -153,7 +153,7 @@ func TestResponseJSONRoute(t *testing.T) {
 
 				goldenFile := testutils.APIResponseGoldenFile(testCase)
 				actualFile := tmpAPIResponseFile(testCase)
-				diff, err := util.Diff(goldenFile, actualFile)
+				diff, err := util.DiffFiles(goldenFile, actualFile)
 				if err != nil {
 					t.Fatalf("Error diff'ing %s vs. %s: %s\n"+
 						"Manually diff these files to determine the reasons for test failure.",

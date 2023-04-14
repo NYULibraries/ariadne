@@ -5,7 +5,7 @@ import (
 	"os"
 )
 
-func Diff(path1 string, path2 string) (string, error) {
+func DiffFiles(path1 string, path2 string) (string, error) {
 	bytes1, err := os.ReadFile(path1)
 	if err != nil {
 		return "", err
