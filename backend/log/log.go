@@ -1,14 +1,14 @@
 package log
 
 import (
-	"bufio"
-	"bytes"
 	"errors"
 	"fmt"
 	"golang.org/x/exp/slog"
+	"io"
 	"math"
 	"os"
 	"reflect"
+	"sort"
 	"strings"
 )
 
@@ -49,8 +49,12 @@ func init() {
 	slogger = newDefaultSlogger()
 }
 
-func Error(message string, args ...interface{}) {
-	slogger.Error(message, args...)
+func Debug(args ...interface{}) {
+	slogger.Debug(emptyMsg, args...)
+}
+
+func Error(args ...interface{}) {
+	slogger.Error(emptyMsg, args...)
 }
 
 func Fatal(args ...interface{}) {
@@ -58,34 +62,53 @@ func Fatal(args ...interface{}) {
 	os.Exit(1)
 }
 
-func GetValidLevelOptionStrings() []string {
-	// Note that we are returning the strings in a specific order: i.e. in order of
-	// increasing severity.
-	return []string{
-		"debug",
-		"info",
-		"warn",
-		"error",
-		"disabled",
+func GetLevelOptionStringForLogLevel(levelArg Level) string {
+	for optionString, levelValue := range logLevelStringOptions {
+		if levelValue == levelArg {
+			return optionString
+		}
 	}
+
+	return ""
 }
 
-func Info(message string, args ...interface{}) {
-	slogger.Info(message, args...)
+// Returns a slice of level option strings in increasing order of severity
+// for use in help messages.
+// Uses code based on https://stackoverflow.com/questions/18695346/how-can-i-sort-a-mapstringint-by-its-values.
+func GetValidLevelOptionStrings() []string {
+	var orderedLevelOptionStrings []string
+
+	type pair struct {
+		levelString string
+		levelValue  Level
+	}
+
+	var temp []pair
+	for levelString, levelValue := range logLevelStringOptions {
+		temp = append(temp, pair{levelString, levelValue})
+	}
+
+	sort.SliceStable(temp, func(i, j int) bool {
+		return temp[i].levelValue < temp[j].levelValue
+	})
+
+	for _, pair := range temp {
+		orderedLevelOptionStrings = append(orderedLevelOptionStrings, pair.levelString)
+	}
+
+	return orderedLevelOptionStrings
 }
 
-func Warn(message string, args ...interface{}) {
-	slogger.Warn(message, args...)
-}
-
-func Debug(message string, args ...interface{}) {
-	slogger.Debug(message, args...)
+func Info(args ...interface{}) {
+	slogger.Info(emptyMsg, args...)
 }
 
 func SetLevel(level Level) {
 	programLevel.Set(slog.Level(level))
 }
 
+// Useful for setting the level based on a string value set by a user via a flag
+// in CLI mode.
 func SetLevelByString(levelStringArg string) error {
 	level, ok := logLevelStringOptions[levelStringArg]
 	if ok {
@@ -97,11 +120,15 @@ func SetLevelByString(levelStringArg string) error {
 	}
 }
 
-func SetOutput(bytesBuffer *bytes.Buffer) {
-	logWriter := bufio.NewWriter(bytesBuffer)
+// Redirect output to another stream besides stdout, or to a bytes.Buffer for
+// testing.
+func SetOutput(logWriter io.Writer) {
 	handler := slog.HandlerOptions{Level: programLevel}.NewJSONHandler(logWriter)
-	slog.SetDefault(slog.New(handler))
 	slogger = slog.New(handler)
+}
+
+func Warn(args ...interface{}) {
+	slogger.Warn(emptyMsg, args...)
 }
 
 func getLevelOptionStringForSlogLevel(levelArg slog.Level) string {
