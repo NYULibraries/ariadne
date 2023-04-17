@@ -18,13 +18,19 @@ type Level int
 // We do export the string for the Level corresponding to this slog level.
 const defaultSlogLevel = slog.LevelInfo
 
+// We are wrapping slog calls which take an initial argument that is always output
+// to `msg`, which doesn't really fit into our desired scheme for log output
+// as we'd like it to appear in Kibana.  For now, we'll just pass `msg` an empty
+// string.
+const emptyMsg = ""
+
 var DefaultLevelStringOption = getLevelOptionStringForSlogLevel(defaultSlogLevel)
 
 var (
 	LevelDebug    = Level(reflect.ValueOf(slog.LevelDebug).Int())
 	LevelInfo     = Level(reflect.ValueOf(slog.LevelInfo).Int())
 	LevelWarn     = Level(reflect.ValueOf(slog.LevelWarn).Int())
-	LevelError    = Level(reflect.ValueOf(slog.LevelWarn).Int())
+	LevelError    = Level(reflect.ValueOf(slog.LevelError).Int())
 	LevelDisabled = Level(math.MaxInt)
 )
 
