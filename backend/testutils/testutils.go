@@ -61,8 +61,8 @@ func GetAPIResponseGoldenValue(testCase TestCase) (string, error) {
 	return GetTestdataFileContents(APIResponseGoldenFile(testCase))
 }
 
-func GetLogOutputGoldenValue(testCase TestCase) (string, error) {
-	return GetTestdataFileContents(LogOutputGoldenFile(testCase))
+func GetLogOutputGoldenValue(testCase TestCase, level string) (string, error) {
+	return GetTestdataFileContents(LogOutputGoldenFile(testCase, level))
 }
 
 func GetPrimoFakeResponseISBNSearch(testCase TestCase) (string, error) {
@@ -87,8 +87,8 @@ func GetTestdataFileContents(filename string) (string, error) {
 	return string(bytes), nil
 }
 
-func LogOutputGoldenFile(testCase TestCase) string {
-	return testutilsPath + "/testdata/golden/log-output/" + testCase.Key + ".txt"
+func LogOutputGoldenFile(testCase TestCase, level string) string {
+	return testutilsPath + "/testdata/golden/log-output/" + testCase.Key + "_" + level + ".txt"
 }
 
 // Returns a url.Values consisting of everything in urlValues1 with everything in
