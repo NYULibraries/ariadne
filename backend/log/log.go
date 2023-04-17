@@ -14,9 +14,11 @@ import (
 
 type Level int
 
-const defaultLevel = slog.LevelInfo
+// Slog levels are internal, so we don't export this const.
+// We do export the string for the Level corresponding to this slog level.
+const defaultSlogLevel = slog.LevelInfo
 
-var DefaultLevelStringOption = getLevelOptionStringForSlogLevel(defaultLevel)
+var DefaultLevelStringOption = getLevelOptionStringForSlogLevel(defaultSlogLevel)
 
 var (
 	LevelDebug    = Level(reflect.ValueOf(slog.LevelDebug).Int())
@@ -107,9 +109,8 @@ func getLevelOptionStringForSlogLevel(levelArg slog.Level) string {
 }
 
 func newDefaultSlogger() *slog.Logger {
-	programLevel.Set(defaultLevel)
+	programLevel.Set(defaultSlogLevel)
 	handler := slog.HandlerOptions{Level: programLevel}.NewJSONHandler(os.Stdout)
-	slog.SetDefault(slog.New(handler))
 
 	return slog.New(handler)
 }
