@@ -36,12 +36,12 @@ func start() {
 	normalizedLogLevel := strings.ToLower(loggingLevel)
 	err := log.SetLevelByString(normalizedLogLevel)
 	if err != nil {
-		log.Fatal(err)
+		log.Fatal(api.MessageKey, err)
 	}
 
-	log.Info(fmt.Sprintf("Logging level set to \"%s\"", normalizedLogLevel))
+	log.Info(api.MessageKey, fmt.Sprintf("Logging level set to \"%s\"", normalizedLogLevel))
 
-	log.Info("Listening on port " + port)
+	log.Info(api.MessageKey, "Listening on port "+port)
 
-	log.Fatal(http.ListenAndServe(":"+port, router))
+	log.Fatal(api.MessageKey, http.ListenAndServe(":"+port, router))
 }
