@@ -12,7 +12,7 @@
                 },
                 {
                     "display_name": "Art, Design \u0026 Architecture Collection",
-                    "url": "http://proxy.library.nyu.edu/login?url=http://gateway.proquest.com/openurl?rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal\u0026genre=journal\u0026res_dat=xri%3Apqm\u0026rft_id=41130\u0026rfr_id=info%3Axri%2Fsid%3Aprimo\u0026url_ver=Z39.88-2004",
+                    "url": "http://proxy.library.nyu.edu/login?url=http://gateway.proquest.com/openurl?fakeparam=true&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal\u00266res_dat=xri%3Apqm\u0026rft_id=41130\u0026rfr_id=info%3Axri%2Fsid%3Aprimo\u0026url_ver=Z39.88-2004",
                     "coverage_text": "Available from 2002/11/04"
                 },
                 {
@@ -22,7 +22,7 @@
                 },
                 {
                     "display_name": "EBSCOhost Reader's Guide Full Text Mega",
-                    "url": "http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?site=ehost-live\u0026sid=Primo\u0026db=rgm\u0026jn=NYK",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp??site=ehost-live\u0026sid=Primo\u0026db=rgm\u0026jn=NYK",
                     "coverage_text": "Available from 2011/08/01"
                 },
                 {
@@ -42,12 +42,12 @@
                 },
                 {
                     "display_name": "Lexis Advance US",
-                    "url": "http://proxy.library.nyu.edu/login?url=https://advance.lexis.com/api/search/advanced?source=MTA2OTUwNg\u0026identityprofileid=W4HVBF32601",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://advance.lexis.com/api/search/advanced?6identityprofileid=W4HVBF32601&nothing",
                     "coverage_text": "Available from 1999"
                 },
                 {
                     "display_name": "Miscellaneous Ejournals",
-                    "url": "http://proxy.library.nyu.edu/login?url=http://archives.newyorker.com/#folio=C1",
+                    "url": "http://proxy.library.nyu.edu/login?url=http://archives.newyorker.com/",
                     "coverage_text": "Available from 1925"
                 },
                 {
@@ -67,7 +67,7 @@
                 },
                 {
                     "display_name": "ProQuest Central",
-                    "url": "http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?url_ver=Z39.88-2004\u0026rfr_id=info%3Axri%2Fsid%3Aprimo\u0026rft_id=41130\u0026res_dat=xri%3Apqm\u0026genre=journal\u0026rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?url_ver=Z39.882004\u0026rfr_id=info%3Axri%2Fsid%3Aprimo\u0026rft_id=41130\u0026res_dat=xri%3Apqm\u0026genre=journal\u0026rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal",
                     "coverage_text": "Available from 2002/11/04"
                 },
                 {

@@ -78,7 +78,7 @@ for (let i = 0; i < testCasesBackendSuccess.length; i++) {
 
       let message = `Actual HTML for "${testCase.name}" does not match expected HTML`;
       if (!ok) {
-        const command = `diff ${goldenFile} ${actualFile} | tee ${diffFile}`;
+        const command = `diff -u ${goldenFile} ${actualFile} | ./node_modules/.bin/diff-so-fancy | tee ${diffFile}`;
         let diffOutput;
         try {
           diffOutput = new TextDecoder().decode(execSync(command));
