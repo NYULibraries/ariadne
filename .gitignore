@@ -8,7 +8,14 @@ coverage.out
 backend/api/testdata/server/tmp/*
 !backend/api/testdata/server/tmp/actual/
 backend/api/testdata/server/tmp/actual/*
-!backend/api/testdata/server/tmp/actual/.gitkeep
+
+!backend/api/testdata/server/tmp/actual/api-responses/
+backend/api/testdata/server/tmp/actual/api-responses/*
+!backend/api/testdata/server/tmp/actual/api-responses/.gitkeep
+
+!backend/api/testdata/server/tmp/actual/log-output/
+backend/api/testdata/server/tmp/actual/log-output/*
+!backend/api/testdata/server/tmp/actual/log-output/.gitkeep
 
 # We are no longer committing MacOS screenshots.
 e2e/tests/ariadne.spec.js-snapshots/*-darwin.png
