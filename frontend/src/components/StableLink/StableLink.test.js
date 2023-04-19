@@ -1,8 +1,8 @@
 import { act, render, screen } from '@testing-library/react';
 
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 import StableLink from './StableLink';
-import userEvent from '@testing-library/user-event';
 
 describe('StableLink', () => {
     beforeAll(() => {
@@ -30,7 +30,7 @@ describe('StableLink', () => {
         expect(mainButton).toBeInTheDocument();
     });
 
-    test('clicking the main button shows "Copied!" message', async () => {
+    test('clicking the main button shows "Stable link copied to clipboard!" message', async () => {
         render(<StableLink />);
         const mainButton = screen.getByText('Copy a stable link to this page');
 
@@ -38,7 +38,7 @@ describe('StableLink', () => {
             userEvent.click(mainButton);
         });
 
-        expect(screen.getByText('Copied!')).toBeInTheDocument();
+        expect(screen.getByText('Stable link copied to clipboard!')).toBeInTheDocument();
     });
 
     test('clicking the main button calls navigator.clipboard.writeText', async () => {
