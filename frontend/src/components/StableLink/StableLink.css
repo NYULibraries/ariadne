@@ -22,13 +22,14 @@
     border-radius: 0;
 }
 
-.copied-text {
+.copied-link {
     display: inline-block;
-    /* adjust this value according to your button height */
     line-height: 30px;
     padding: 5px 10px;
     margin-right: 5px;
     margin-bottom: 5px;
+    background-color: #e0d5e8;
+    color: #1c2127;
 }
 
 .aria-live {

@@ -27,7 +27,7 @@ const StableLink = () => {
         if (copyStatus !== 'error') {
             setTimeout(() => {
                 setCopyStatus(null);
-            }, 5000);
+            }, 10000);
         }
     };
 
@@ -52,7 +52,7 @@ const StableLink = () => {
                         : 'Copy a stable link to this page'}
                 </button>
             ) : (
-                <span className='copied-text'>Copied!</span>
+                <span className='copied-link'>Stable link copied to clipboard!</span>
             )}
             {/* Aria-live region for status messages */}
             {/* About aria-live: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions */}
