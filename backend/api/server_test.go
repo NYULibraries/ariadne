@@ -6,6 +6,7 @@ import (
 	"ariadne/sfx"
 	"ariadne/testutils"
 	"ariadne/util"
+	"bufio"
 	"bytes"
 	"flag"
 	"fmt"
@@ -18,8 +19,8 @@ import (
 	"testing"
 )
 
-const elidedHost = "\"Host\":\"[ELIDED]\""
-const elidedDatestamp = "\"Date\":\"[ELIDED]\""
+const elidedHost = "Host: [ELIDED]"
+const elidedDatestamp = "Date: [ELIDED]"
 const elidedTimestamp = "\"time\":\"[ELIDED]\""
 
 const loggingTestCaseKey = "contrived-frbr-group-test-case"
@@ -232,61 +233,72 @@ func TestLogging(t *testing.T) {
 		}
 	}
 
-	// Set logging level and redirect output to a buffer.
-	log.SetLevel(log.LevelDebug)
-	var logOutput bytes.Buffer
-	log.SetOutput(&logOutput)
+	for _, level := range []log.Level{log.LevelDebug, log.LevelInfo} {
+		// Needed for golden file stuff
+		levelString := log.GetLevelOptionStringForLogLevel(level)
 
-	t.Run(loggingTestCase.Name, func(t *testing.T) {
-		request, err := http.NewRequest(
-			"GET",
-			"/v0/?"+loggingTestCase.QueryString,
-			nil,
-		)
-		if err != nil {
-			t.Fatalf("Error creating new HTTP request: %s", err)
-		}
+		// Set logging level and redirect output to a buffer.
+		log.SetLevel(level)
+		var logOutput bytes.Buffer
+		logOutputWriter := bufio.NewWriter(&logOutput)
+		log.SetOutput(logOutputWriter)
 
-		// We're not recording any responses at the moment, but we need to pass
-		// in a http.ResponseWriter anyway to router.ServeHTTP, so why not make
-		// it a recorder.
-		responseRecorder := httptest.NewRecorder()
-		router.ServeHTTP(responseRecorder, request)
-
-		if *updateGoldenFiles {
-			err = updateLogOutputGoldenFile(loggingTestCase, logOutput.Bytes())
+		t.Run(loggingTestCase.Name, func(t *testing.T) {
+			request, err := http.NewRequest(
+				"GET",
+				"/v0/?"+loggingTestCase.QueryString,
+				nil,
+			)
 			if err != nil {
-				t.Fatalf("Error updating golden file: %s", err)
+				t.Fatalf("Error creating new HTTP request: %s", err)
 			}
-		}
 
-		goldenValue, err := testutils.GetLogOutputGoldenValue(loggingTestCase)
-		if err != nil {
-			t.Fatalf("Error retrieving golden value for test case \"%s\": %s",
-				loggingTestCase.Name, err)
-		}
+			// We're not recording any responses at the moment, but we need to pass
+			// in a http.ResponseWriter anyway to router.ServeHTTP, so why not make
+			// it a recorder.
+			responseRecorder := httptest.NewRecorder()
+			router.ServeHTTP(responseRecorder, request)
 
-		actualLogOutputString := normalizeLogOutputString(logOutput.String())
-		expectedLogOutputString := normalizeLogOutputString(goldenValue)
-		if actualLogOutputString != expectedLogOutputString {
-			// We don't programmatically diff an actual file vs. the golden file
-			// because the golden file contents are not normalized, but we do
-			// nevertheless want to write out an actual file in case the user
-			// wants to do a manual diff themselves.
-			err := writeActualLogOutputToTmp(loggingTestCase, actualLogOutputString)
+			err = logOutputWriter.Flush()
 			if err != nil {
-				t.Fatalf("Error writing actual temp file for test case \"%s\": %s",
+				t.Fatalf("logOutputWriter.Flush() error: %s", err)
+			}
+
+			actualLogOutputString := normalizeLogOutputString(logOutput.String())
+
+			if *updateGoldenFiles {
+				err = updateLogOutputGoldenFile(loggingTestCase, levelString, actualLogOutputString)
+				if err != nil {
+					t.Fatalf("Error updating golden file: %s", err)
+				}
+			}
+
+			goldenValue, err := testutils.GetLogOutputGoldenValue(loggingTestCase, levelString)
+			if err != nil {
+				t.Fatalf("Error retrieving golden value for test case \"%s\": %s",
 					loggingTestCase.Name, err)
 			}
-			actualFile := tmpLogOutputFile(loggingTestCase)
-			goldenFile := testutils.LogOutputGoldenFile(loggingTestCase)
-			// We pass in the file paths because util.DiffStrings prints labels
-			// in the output header, and we want to use the paths for these labels.
-			diff := util.DiffStrings(goldenFile, expectedLogOutputString, actualFile, actualLogOutputString)
 
-			t.Errorf("golden and actual values do not match:\n%s\n", diff)
-		}
-	})
+			if actualLogOutputString != goldenValue {
+				// We don't programmatically diff an actual file vs. the golden file
+				// because the golden file contents are not normalized, but we do
+				// nevertheless want to write out an actual file in case the user
+				// wants to do a manual diff themselves.
+				err := writeActualLogOutputToTmp(loggingTestCase, actualLogOutputString)
+				if err != nil {
+					t.Fatalf("Error writing actual temp file for test case \"%s\": %s",
+						loggingTestCase.Name, err)
+				}
+				actualFile := tmpLogOutputFile(loggingTestCase)
+				goldenFile := testutils.LogOutputGoldenFile(loggingTestCase, levelString)
+				// We pass in the file paths because util.DiffStrings prints labels
+				// in the output header, and we want to use the paths for these labels.
+				diff := util.DiffStrings(goldenFile, goldenValue, actualFile, actualLogOutputString)
+
+				t.Errorf("golden and actual values do not match:\n%s\n", diff)
+			}
+		})
+	}
 }
 
 func normalizeLogOutputString(logOutputString string) string {
@@ -309,8 +321,8 @@ func updateAPIResponseGoldenFile(testCase testutils.TestCase, bytes []byte) erro
 	return os.WriteFile(testutils.APIResponseGoldenFile(testCase), bytes, 0644)
 }
 
-func updateLogOutputGoldenFile(testCase testutils.TestCase, bytes []byte) error {
-	return os.WriteFile(testutils.LogOutputGoldenFile(testCase), bytes, 0644)
+func updateLogOutputGoldenFile(testCase testutils.TestCase, level string, newGoldenValue string) error {
+	return os.WriteFile(testutils.LogOutputGoldenFile(testCase, level), []byte(newGoldenValue), 0644)
 }
 
 func writeActualAPIResponseToTmp(testCase testutils.TestCase, actual string) error {

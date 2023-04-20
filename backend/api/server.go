@@ -34,12 +34,13 @@ func ResolverHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	log.Debug("SFX response", "sfxResponse.DumpedHTTPResponse", sfxResponse.DumpedHTTPResponse)
+	sfxAPIResponseLogEntry := makeNewSFXAPIResponseLogEntry(r.URL.RawQuery, sfxResponse.DumpedHTTPResponse)
+	log.Debug(MessageKey, "SFX API Response", AriadneKey, sfxAPIResponseLogEntry)
 
-	var responseJSON string
+	var ariadneResponse Response
 
 	if sfxResponse.IsFound() {
-		responseJSON = makeJSONResponseFromSFXResponse(sfxResponse)
+		ariadneResponse = makeAriadneResponseFromSFXResponse(sfxResponse)
 	} else {
 		primoResponse, err := getPrimoResponse(r.URL.RawQuery)
 		if err != nil {
@@ -48,24 +49,41 @@ func ResolverHandler(w http.ResponseWriter, r *http.Request) {
 			// error to be fatal, since this we still technically have a valid
 			// Ariadne request.  We return the SFX results, which at least will
 			// have "helper" links.
-			responseJSON = makeJSONResponseFromSFXResponse(sfxResponse)
-		}
-
-		log.Info("Primo HTTP FRBR member requests",
-			"primoResponse.DumpedFRBRMemberHTTPRequests", primoResponse.DumpedFRBRMemberHTTPRequests)
-
-		log.Debug("Primo HTTP responses (initial ISBN search and FRBR member searches)",
-			"primoResponse.DumpedHTTPResponses", primoResponse.DumpedHTTPResponses)
-
-		if primoResponse.IsFound() {
-			responseJSON = makeJSONResponseFromPrimoResponse(primoResponse)
+			ariadneResponse = makeAriadneResponseFromSFXResponse(sfxResponse)
 		} else {
-			// Back to SFX again, which at least has some "helper" link
-			responseJSON = makeJSONResponseFromSFXResponse(sfxResponse)
+			for i, dumpedFRBRMemberHTTPRequest := range primoResponse.DumpedFRBRMemberHTTPRequests {
+				primoAPIFRBRMemberRequestLogEntry :=
+					makePrimoAPIFRBRMemberRequestLogEntry(r.URL.RawQuery, dumpedFRBRMemberHTTPRequest)
+				log.Info(MessageKey, fmt.Sprintf("Primo API FRBR member request #%d", i+1),
+					AriadneKey, primoAPIFRBRMemberRequestLogEntry)
+			}
+
+			primoAPIISBNSearchResponseLogEntry :=
+				makePrimoAPIISBNSearchResponseLogEntry(r.URL.RawQuery, primoResponse.DumpedHTTPResponses[0])
+			log.Debug(MessageKey, "Primo API ISBN Search Response",
+				AriadneKey, primoAPIISBNSearchResponseLogEntry)
+
+			for i := 1; i < len(primoResponse.DumpedHTTPResponses); i++ {
+				primoAPIFRBRMemberResponseLogEntry :=
+					makePrimoAPIFRBRMemberResponseLogEntry(r.URL.RawQuery, primoResponse.DumpedHTTPResponses[1])
+				log.Debug(MessageKey, fmt.Sprintf("Primo API FRBR Member Response #%d", i),
+					AriadneKey, primoAPIFRBRMemberResponseLogEntry)
+			}
+
+			if primoResponse.IsFound() {
+				ariadneResponse = makeAriadneResponseFromPrimoResponse(primoResponse)
+			} else {
+				// Back to SFX again, which at least has some "helper" link
+				ariadneResponse = makeAriadneResponseFromSFXResponse(sfxResponse)
+			}
 		}
 	}
 
-	log.Info("Ariadne API response", "json", responseJSON)
+	ariadneAPIResponseLogEntry :=
+		makeAriadneAPIResponseLogEntry(r.URL.RawQuery, ariadneResponse)
+	log.Info(MessageKey, "Ariadne API response", AriadneKey, ariadneAPIResponseLogEntry)
+
+	responseJSON := makeAriadneResponseJSON(ariadneResponse)
 
 	fmt.Fprintln(w, responseJSON)
 }
@@ -76,7 +94,9 @@ func getPrimoResponse(queryString string) (*primo.PrimoResponse, error) {
 		return &primo.PrimoResponse{}, errors.New(invalidPrimoRequestErrorMessage)
 	}
 
-	log.Info("Primo request", "primoRequest.DumpedISBNSearchHTTPRequest", primoRequest.DumpedISBNSearchHTTPRequest)
+	primoAPIISBNSearchRequestLogEntry :=
+		makePrimoAPIISBNSearchRequestLogEntry(queryString, primoRequest.DumpedISBNSearchHTTPRequest)
+	log.Info(MessageKey, "Primo API ISBN Search Request", AriadneKey, primoAPIISBNSearchRequestLogEntry)
 
 	return primo.Do(primoRequest)
 }
@@ -89,13 +109,14 @@ func getSFXResponse(queryString string) (*sfx.SFXResponse, error) {
 		return &sfxResponse, errors.New(invalidSFXRequestErrorMessage)
 	}
 
-	log.Info("SFX request", "sfxRequest.DumpedHTTPRequest", sfxRequest.DumpedHTTPRequest)
+	sfxAPIRequestLogEntry := makeNewSFXAPIRequestLogEntry(queryString, sfxRequest.DumpedHTTPRequest)
+	log.Info(MessageKey, "SFX API Request", AriadneKey, sfxAPIRequestLogEntry)
 
 	return sfx.Do(sfxRequest)
 }
 
 func handleBadRequestError(err error, w http.ResponseWriter, message string) {
-	log.Error(err.Error())
+	log.Error(MessageKey, err.Error())
 
 	response := Response{
 		Errors:  []string{message},
@@ -113,7 +134,7 @@ func healthCheck(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(map[string]any{"status": "ok"})
 }
 
-func makeJSONResponseFromPrimoResponse(primoResponse *primo.PrimoResponse) string {
+func makeAriadneResponseFromPrimoResponse(primoResponse *primo.PrimoResponse) Response {
 	links := []Link{}
 	for _, primoLink := range primoResponse.Links {
 		displayName := primoLink.HyperlinkText
@@ -136,46 +157,20 @@ func makeJSONResponseFromPrimoResponse(primoResponse *primo.PrimoResponse) strin
 		},
 	}
 
-	ariadneResponse := Response{
+	return Response{
 		Errors:  []string{},
 		Found:   primoResponse.IsFound(),
 		Records: records,
 	}
-
-	responseJSONBytes, err := json.MarshalIndent(ariadneResponse, "", "    ")
-	// Very unlikely that this will error out.  At the moment, can't even think
-	// of a way to force an error so that can write a test.  Tested this error handling
-	// code during development by setting `err = errors.New("error!")` right after marshalling.
-	// Result:
-	// {
-	// 	   "errors": [
-	//		   "Could not marshal ariadne response to JSON: error!"
-	//	    ],
-	//	    "found": false,
-	//	    "records": []
-	// }
-	if err != nil {
-		ariadneResponse = Response{
-			Errors:  []string{fmt.Sprintf("Could not marshal ariadne response to JSON: %v", err)},
-			Records: []Record{},
-		}
-
-		// Even more unlikely that this marshalling will error out, but if it does
-		// just let the chips fall.  The frontend will report the error to receive
-		// an intelligible response from the backend API.
-		responseJSONBytes, _ = json.MarshalIndent(ariadneResponse, "", "    ")
-	}
-
-	return string(responseJSONBytes)
 }
 
-func makeJSONResponseFromSFXResponse(sfxResponse *sfx.SFXResponse) string {
+func makeAriadneResponseFromSFXResponse(sfxResponse *sfx.SFXResponse) Response {
 	// Remove the Ask a Librarian target -- for details, see:
 	// https://nyu-lib.monday.com/boards/765008773/pulses/3548498827
 	sfxResponse.RemoveTarget(sfx.AskALibrarianLink)
 	emptyTarget := sfxResponse.GetTarget("")
 	if emptyTarget != nil {
-		log.Warn("Removing target with empty TargetURL", emptyTarget)
+		log.Warn(MessageKey, "Removing target with empty TargetURL", emptyTarget)
 		sfxResponse.RemoveTarget("")
 	}
 
@@ -209,12 +204,14 @@ func makeJSONResponseFromSFXResponse(sfxResponse *sfx.SFXResponse) string {
 		},
 	}
 
-	ariadneResponse := Response{
+	return Response{
 		Errors:  []string{},
 		Found:   sfxResponse.IsFound(),
 		Records: records,
 	}
+}
 
+func makeAriadneResponseJSON(ariadneResponse Response) string {
 	responseJSONBytes, err := json.MarshalIndent(ariadneResponse, "", "    ")
 	// Very unlikely that this will error out.  At the moment, can't even think
 	// of a way to force an error so that can write a test.  Tested this error handling
