@@ -1,73 +1,41 @@
+import './StableLink.css';
+
 import { useRef, useState } from 'react';
 
 const StableLink = () => {
-    const [inputVisible, setInputVisible] = useState(false);
-    const [link, setLink] = useState('');
-    const inputRef = useRef(null);
+    // State for handling the copy status: null, success, or error
+    const [copyStatus, setCopyStatus] = useState(null);
     const mainButtonRef = useRef(null);
-    const closeButtonRef = useRef(null);
 
     const [mainButtonHover, setMainButtonHover] = useState(false);
-    const [copyButtonHover, setCopyButtonHover] = useState(false);
-    const [closeButtonHover, setCloseButtonHover] = useState(false);
     const [mainButtonFocus, setMainButtonFocus] = useState(false);
 
-    const buttonStyle = {
-        backgroundColor: '#57068c',
-        color: '#fff',
-        cursor: 'pointer',
-        border: '1px solid #ccc',
-        padding: '5px 10px',
-        marginRight: '5px',
-        marginBottom: '5px',
+    // Function to handle the click event on the main button
+    const handleClick = async () => {
+        const link = window.location.href;
+
+        try {
+            // Attempt to use the Clipboard API to copy the link
+            await navigator.clipboard.writeText(link);
+            setCopyStatus('success');
+        } catch (err) {
+            console.error('Error copying text using Clipboard API: ', err);
+            setCopyStatus('error');
+        }
+
+        // Reset the copy status to null after 5 seconds
+        if (copyStatus !== 'error') {
+            setTimeout(() => {
+                setCopyStatus(null);
+            }, 10000);
+        }
     };
 
-    const closeButtonStyle = {
-        ...buttonStyle,
-        fontSize: '0.8rem',
-        color: '#1C2127',
-    };
-
-    const copyButtonStyle = {
-        ...buttonStyle,
-        padding: '2px 10px',
-    }
-
-    const focusedStyle = {
-        border: '3px solid black',
-        outline: '3px solid #3DBBDB',
-        padding: '5px',
-        borderRadius: '0',
-    };
-
-    const handleClick = () => {
-        setLink(window.location.href);
-        setInputVisible(true);
-    };
-
-    const handleClose = () => {
-        setInputVisible(false);
-        mainButtonRef.current.focus();
-    };
-
-    const copyToClipboard = () => {
-        navigator.clipboard.writeText(link);
-        inputRef.current.focus();
-        inputRef.current.style.color = '#57068c';
-    };
+    const errorMessage = 'Error copying link. Please try again or manually copy the link.';
 
     return (
-        <>
-            <style>{`
-        .link-icon::before {
-          content: "\\e157";
-          font-family: "Material Symbols Sharp";
-          color: #fff;
-          margin-right: 5px;
-          vertical-align: middle;
-        }
-      `}</style>
-            <div aria-labelledby="stable-link-label">
+        <div aria-labelledby="stable-link-label">
+            {copyStatus !== 'success' ? (
                 <button
                     onClick={handleClick}
                     onMouseEnter={() => setMainButtonHover(true)}
@@ -76,64 +44,32 @@ const StableLink = () => {
                     onBlur={() => setMainButtonFocus(false)}
                     id="stable-link-label"
                     ref={mainButtonRef}
-                    style={{
-                        ...buttonStyle,
-                        ...mainButtonFocus ? focusedStyle : {},
-                        backgroundColor: mainButtonHover ? '#6c07ae' : buttonStyle.backgroundColor,
-                    }}
+                    className={`stable-link-button ${mainButtonFocus ? 'focus' : ''} ${mainButtonHover ? 'hover' : ''}`}
                     aria-label="stable-link-label"
                 >
-                    <span className="link-icon"></span>Create a stable link to this page
+                    {copyStatus === 'error'
+                        ? errorMessage
+                        : 'Copy a stable link to this page'}
                 </button>
-                {inputVisible && (
-                    <div>
-                        <input
-                            type="text"
-                            readOnly
-                            value={link}
-                            ref={inputRef}
-                            id="stable-link-text"
-                            style={{
-                                borderRadius: '3px',
-                                backgroundColor: 'white',
-                                marginRight: '5px',
-                            }}
-                            aria-labelledby="stable-link-text"
-                        />
-                        <button
-                            onClick={copyToClipboard}
-                            onMouseEnter={() => setCopyButtonHover(true)}
-                            onMouseLeave={() => setCopyButtonHover(false)}
-                            id="copy-stable-link"
-                            style={{
-                                ...copyButtonStyle,
-                                color: '#1C2127',
-                                backgroundColor: copyButtonHover ? '#e6e6e6' : 'white',
-                            }}
-                            aria-label="copy-stable-link"
-                        >
-                            Copy
-                        </button>
-                        <button
-                            onClick={handleClose}
-                            onMouseEnter={() => setCloseButtonHover(true)}
-                            onMouseLeave={() => setCloseButtonHover(false)}
-                            id="close-stable-link"
-                            style={{
-                                ...closeButtonStyle,
-                                backgroundColor: closeButtonHover ? '#e6e6e6' : 'white',
-                                textDecoration: closeButtonHover ? 'underline' : 'none',
-                            }}
-                            aria-label="close-stable-link"
-                            ref={closeButtonRef}
-                        >
-                            X
-                        </button>
-                    </div>
-                )}
+            ) : (
+                <span className='copied-link'>Stable link copied to clipboard!</span>
+            )}
+            {/* Aria-live region for status messages */}
+            {/* About aria-live: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions */}
+            <div
+                aria-live="polite"
+                className='aria-live'
+            >
+                {copyStatus === 'success'
+                    ? 'Copied! The stable link has been copied to your clipboard.'
+                    : copyStatus === 'error'
+                        ? errorMessage
+                        : ''}
             </div>
-        </>
+        </div>
     );
+
 };
+
 
 export default StableLink;
