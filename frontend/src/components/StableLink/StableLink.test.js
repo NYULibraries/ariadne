@@ -1,52 +1,67 @@
-import { render, screen } from '@testing-library/react';
+import { act, render, screen } from '@testing-library/react';
 
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import StableLink from './StableLink';
 
-describe.skip('StableLink', () => {
+describe('StableLink', () => {
     beforeAll(() => {
         Object.defineProperty(navigator, 'clipboard', {
             value: {
-                writeText: jest.fn().mockResolvedValue(),
+                writeText: jest.fn(),
             },
         });
+        // To suppress this console error output during testing,mock the console.error function, preventing it from outputting the error message during the test
+        jest.spyOn(console, 'error').mockImplementation(() => { });
     });
 
-    test.skip('renders the main button', () => {
+    afterAll(() => {
+        // Restore the original implementation of console.error after all the tests have run
+        console.error.mockRestore();
+    });
+
+    beforeEach(() => {
+        jest.resetAllMocks();
+    });
+
+    test('renders the main button', () => {
         render(<StableLink />);
-        const mainButton = screen.getByText('Create a stable link to this page');
+        const mainButton = screen.getByText('Copy a stable link to this page');
         expect(mainButton).toBeInTheDocument();
     });
 
-    test.skip('clicking the main button shows the input field and copy button', () => {
+    test('clicking the main button shows "Stable link copied to clipboard!" message', async () => {
         render(<StableLink />);
-        const mainButton = screen.getByText('Create a stable link to this page');
-        userEvent.click(mainButton);
-        const inputField = screen.getByRole('textbox');
-        const copyButton = screen.getByText('Copy');
-        expect(inputField).toBeInTheDocument();
-        expect(copyButton).toBeInTheDocument();
+        const mainButton = screen.getByText('Copy a stable link to this page');
+
+        await act(async () => {
+            userEvent.click(mainButton);
+        });
+
+        expect(screen.getByText('Stable link copied to clipboard!')).toBeInTheDocument();
     });
 
-    test.skip('clicking the close button hides the input field and copy button', () => {
+    test('clicking the main button calls navigator.clipboard.writeText', async () => {
         render(<StableLink />);
-        const mainButton = screen.getByText('Create a stable link to this page');
-        userEvent.click(mainButton);
-        const closeButton = screen.getByText('X');
-        userEvent.click(closeButton);
-        const inputField = screen.queryByRole('textbox');
-        const copyButton = screen.queryByText('Copy');
-        expect(inputField).not.toBeInTheDocument();
-        expect(copyButton).not.toBeInTheDocument();
-    });
+        const mainButton = screen.getByText('Copy a stable link to this page');
 
-    test.skip('clicking the copy button copies the link to the clipboard', async () => {
-        render(<StableLink />);
-        const mainButton = screen.getByText('Create a stable link to this page');
-        userEvent.click(mainButton);
-        const copyButton = screen.getByText('Copy');
-        userEvent.click(copyButton);
+        await act(async () => {
+            userEvent.click(mainButton);
+        });
         expect(navigator.clipboard.writeText).toHaveBeenCalledWith(window.location.href);
+    });
+
+    test('displays error message when copying fails', async () => {
+        navigator.clipboard.writeText.mockRejectedValue(new Error('Error copying text'));
+
+        render(<StableLink />);
+        const mainButton = screen.getByText('Copy a stable link to this page');
+
+        await act(async () => {
+            userEvent.click(mainButton);
+        });
+
+        const errorMessages = screen.getAllByText('Error copying link. Please try again or manually copy the link.');
+        expect(errorMessages.length).toBeGreaterThanOrEqual(1);
     });
 });
