@@ -44,6 +44,21 @@
         /* E2E TEST EDIT: sourceMappingURL comments elided */
     </style>
     <style>
+        /* Define the custom variables */
+        :root {
+            --background-color: #57068c;
+            --link-color: #0170B2;
+            --border-bottom-color: #65686c;
+            --dotted-border: 1px dotted var(--border-bottom-color);
+            --chat-stable-link-color: #e0d5e8;
+            --white-color: #fff;
+            --font-size-h1: 1.8em;
+            --font-size-h2: 24px;
+            --font-size-h3: 20px;
+            --footer-color: #acb6c2;
+            --hover-background-color: #6c07ae;
+        }
+
         /* Apply the Gotham font to all elements */
         * {
             font-family: "Gotham SSm A", "Gotham SSm B", Helvetica, Arial, sans-serif;
@@ -58,15 +73,15 @@
         }
 
         body div h1 {
-            font-size: 1.8em;
+            font-size: var(--font-size-h1);
         }
 
         body div h2 {
-            font-size: 24px;
+            font-size: var(--font-size-h2);
         }
 
         body div h3 {
-            font-size: 20px;
+            font-size: var(--font-size-h3);
         }
 
         /* Apply the Montserrat font to all headings */
@@ -114,12 +129,12 @@ h6 {
 
         .row a:hover {
             text-decoration: underline;
-            color: #0170B2;
+            color: var(--link-color);
         }
 
         .row a {
             text-decoration: none;
-            color: #0170B2;
+            color: var(--link-color);
             line-height: 1.2;
         }
 
@@ -148,7 +163,7 @@ h6 {
         }
 
         .image.white-bg {
-            background-color: white;
+            background-color: var(--white-color);
         }
 
 
@@ -159,7 +174,7 @@ h6 {
         .color-nav {
             margin-bottom: 0;
             border-radius: 0;
-            background-color: #57068c;
+            background-color: var(--background-color);
         }
 
         ul.list-group {
@@ -195,7 +210,7 @@ h6 {
     </style>
     <style>
         .chat-tab {
-            color: #e0d5e8;
+            color: var(--chat-stable-link-color);
             padding: 10px 10px 8px;
             font-size: 14px;
             border-radius: 3px 3px 0 0;
@@ -229,7 +244,7 @@ h6 {
             padding: 10px 10px 8px;
             width: 131.38px;
             height: 42px;
-            color: #e0d5e8;
+            color: var(--chat-stable-link-color);
             line-height: normal;
             white-space: nowrap;
             box-sizing: border-box;
@@ -245,8 +260,8 @@ h6 {
         }
 
         .chat-button:hover {
-            background-color: #6c07ae;
-            color: #fff;
+            background-color: var(--hover-background-color);
+            color: var(--white-color);
         }
 
         .chat-frame-wrap {
@@ -346,16 +361,16 @@ h6 {
         }
 
         ::selection {
-            background: #57068c;
-            color: #fff;
+            background: var(--background-color);
+            color: var(--white-color);
         }
 
         .button {
             appearance: none;
             border: 0 none;
             box-shadow: none;
-            background: #57068c;
-            color: #fff;
+            background: var(--background-color);
+            color: var(--white-color);
             font-weight: 400;
             font-size: 14px;
             font-family: "Gotham A", "Gotham B", Helvetica, Arial, sans-serif;
@@ -370,13 +385,13 @@ h6 {
         .primary-footer {
             display: flex;
             background: #22272d;
-            color: #acb6c2;
+            color: var(--footer-color);
             padding-top: 75px;
             padding-bottom: 87px
         }
 
         .footer__social a:not(.ss-navigateright):not(.button) img {
-            background-color: white;
+            background-color: var(--white-color);
             border-radius: 10%;
         }
 
@@ -432,7 +447,7 @@ h6 {
         }
 
         .primary-footer .button {
-            color: #fff;
+            color: var(--white-color);
             font-size: 14px;
             width: 100%;
             display: block;
@@ -443,30 +458,30 @@ h6 {
             margin: 0 0 1em;
             line-height: 1.5;
             font-size: 12px;
-            color: #acb6c2;
+            color: var(--footer-color);
         }
 
         .primary-footer a,
         .primary-footer .block .s-la-widget a,
         .block .s-la-widget .primary-footer a {
-            color: #acb6c2;
+            color: var(--footer-color);
         }
 
         .primary-footer a:hover,
         .primary-footer .block .s-la-widget a:hover,
         .block .s-la-widget .primary-footer a:hover {
-            color: #fff;
+            color: var(--white-color);
             text-decoration: underline;
         }
 
         .primary-footer .list li,
         .primary-footer .block .s-la-widget .list-unstyled li,
         .block .s-la-widget .primary-footer .list-unstyled li {
-            border-bottom-color: #65686c;
+            border-bottom-color: var(--border-bottom-color);
         }
 
         .footer__menu:first-child .list li:last-child {
-            border-bottom: 1px dotted #65686c;
+            border-bottom: var(--dotted-border);
             margin-bottom: 10px;
             padding-bottom: 10px;
         }
@@ -482,8 +497,8 @@ h6 {
         }
 
         .footer__give a:hover {
-            color: white;
-            background-color: #6c07ae;
+            color: var(--white-color);
+            background-color: var(--hover-background-color);
             text-decoration: underline;
         }
 
@@ -509,7 +524,7 @@ h6 {
 
         .footer__copyright {
             font-size: 12px;
-            border-top: 1px dotted #65686c;
+            border-top: var(--dotted-border);
             padding-top: 13px;
             color: #b1b1b1;
             line-height: 1.4;
@@ -564,19 +579,19 @@ h6 {
             }
 
             .primary-footer a {
-                color: #fff;
+                color: var(--white-color);
                 text-decoration: none;
             }
 
             .footer__social p a:after {
-                color: #fff;
+                color: var(--white-color);
                 margin-left: 5px;
                 font-size: 18px;
                 vertical-align: middle;
             }
 
             .list:last-child li:last-child {
-                border-bottom: 1px dotted #65686c;
+                border-bottom: var(--dotted-border);
                 margin: 0 0 10px 0;
                 padding: 0 0 10px 0;
             }
@@ -13194,8 +13209,8 @@ h6 {
     <style>
         /* StableLink.css */
         .stable-link-button {
-            background-color: #57068c;
-            color: #fff;
+            background-color: var(--background-color);
+            color: var(--white-color);
             cursor: pointer;
             border: 1px solid #ccc;
             padding: 5px 10px;
@@ -13205,7 +13220,7 @@ h6 {
 
         .stable-link-button:hover,
         .stable-link-button.hover {
-            background-color: #6c07ae;
+            background-color: var(--hover-background-color);
         }
 
         .stable-link-button:focus,
@@ -13222,7 +13237,7 @@ h6 {
             padding: 5px 10px;
             margin-right: 5px;
             margin-bottom: 5px;
-            background-color: #e0d5e8;
+            background-color: var(--chat-stable-link-color);
             color: #1c2127;
         }
 
