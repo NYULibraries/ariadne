@@ -1,3 +1,18 @@
+/* Define the custom variables */
+:root {
+  --background-color: #57068c;
+  --link-color: #0170B2;
+  --border-bottom-color: #65686c;
+  --dotted-border: 1px dotted var(--border-bottom-color);
+  --chat-stable-link-color: #e0d5e8;
+  --white-color: #fff;
+  --font-size-h1: 1.8em;
+  --font-size-h2: 24px;
+  --font-size-h3: 20px;
+  --footer-color: #acb6c2;
+  --hover-background-color: #6c07ae;
+}
+
 /* Apply the Gotham font to all elements */
 * {
   font-family: "Gotham SSm A", "Gotham SSm B", Helvetica, Arial, sans-serif;
@@ -12,15 +27,15 @@ body div h3 {
 }
 
 body div h1 {
-  font-size: 1.8em;
+  font-size: var(--font-size-h1);
 }
 
 body div h2 {
-  font-size: 24px;
+  font-size: var(--font-size-h2);
 }
 
 body div h3 {
-  font-size: 20px;
+  font-size: var(--font-size-h3);
 }
 
 /* Apply the Montserrat font to all headings */
@@ -68,12 +83,12 @@ h6 {
 
 .row a:hover {
   text-decoration: underline;
-  color: #0170B2;
+  color: var(--link-color);
 }
 
 .row a {
   text-decoration: none;
-  color: #0170B2;
+  color: var(--link-color);
   line-height: 1.2;
 }
 
@@ -102,7 +117,7 @@ h6 {
 }
 
 .image.white-bg {
-  background-color: white;
+  background-color: var(--white-color);
 }
 
 
@@ -113,7 +128,7 @@ h6 {
 .color-nav {
   margin-bottom: 0;
   border-radius: 0;
-  background-color: #57068c;
+  background-color: var(--background-color);
 }
 
 ul.list-group {
