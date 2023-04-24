@@ -81,7 +81,7 @@ func noOpenURLTimeParams(params url.Values) bool {
 }
 
 func noOpenURLIdentifiers(params url.Values) bool {
-  return !(params.Get("doi") != "" || params.Get("rft.doi") != "" || params.Get("pmid") != "" || params.Get("rft.pmid") != "");
+	return !(params.Get("doi") != "" || params.Get("rft.doi") != "" || params.Get("pmid") != "" || params.Get("rft.pmid") != "")
 }
 
 func newSFXHTTPRequest(queryStringValues url.Values) (*http.Request, error) {
