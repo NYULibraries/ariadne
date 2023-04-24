@@ -7,7 +7,7 @@
             "links": [
                 {
                     "display_name": "Taylor \u0026 Francis Current Content Access",
-                    "url": "http://proxy.library.nyu.edu/login?url=https://www.tandfonline.com/openurl?spage=574\u0026date=2018\u0026genre=article\u0026volume=49\u0026issue=5\u0026issn=1557-5330",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://www.tandfonline.com/openurl?issue=5\u0026issn=1557-5330\u0026volume=49\u0026genre=article\u0026spage=574\u0026date=2018",
                     "coverage_text": "Available from 2005/03/01 volume: 36 issue: 1"
                 }
             ]

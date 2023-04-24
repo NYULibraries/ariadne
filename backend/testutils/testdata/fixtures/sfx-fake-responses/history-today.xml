@@ -1,26 +1,23 @@
 HTTP/1.1 200 OK
 Transfer-Encoding: chunked
 Content-Type: application/xml; charset=ISO-8859-1
-Date: Tue, 21 Mar 2023 22:08:22 GMT
+Date: Mon, 24 Apr 2023 18:47:01 GMT
 Server: Apache
 
-55f6
+5540
 <?xml version="1.0" encoding="utf-8"?>
 
 <ctx_obj_set>
  <ctx_obj identifier="">
   <ctx_obj_attributes>&lt;perldata&gt;
  &lt;hash&gt;
-  &lt;item key="@sfx.category"&gt;
-   &lt;array&gt;
-    &lt;item key="0"&gt;Arts and Humanities&lt;/item&gt;
-    &lt;item key="1"&gt;Arts and Humanities&lt;/item&gt;
-    &lt;item key="2"&gt;Arts and Humanities&lt;/item&gt;
-   &lt;/array&gt;
-  &lt;/item&gt;
-  &lt;item key="sfx.show_availability"&gt;1&lt;/item&gt;
-  &lt;item key="req.session_id"&gt;sE4F6646A-C834-11ED-B8C7-97024131B499&lt;/item&gt;
-  &lt;item key="sfx.request_id"&gt;25773786&lt;/item&gt;
+  &lt;item key="sfx.request_id"&gt;25844803&lt;/item&gt;
+  &lt;item key="sfx.doi_url"&gt;http://dx.doi.org&lt;/item&gt;
+  &lt;item key="rft.genre"&gt;journal&lt;/item&gt;
+  &lt;item key="rft_dat"&gt;Academic Search Complete -- Publications&lt;/item&gt;
+  &lt;item key="req.session_id"&gt;s66903A90-E2D0-11ED-BB6C-CFAE4031B499&lt;/item&gt;
+  &lt;item key="rft.pub"&gt;History Today Ltd.&lt;/item&gt;
+  &lt;item key="url_ctx_fmt"&gt;info:ofi/fmt:xml:xsd:ctx&lt;/item&gt;
   &lt;item key="rft.place"&gt;[London,]&lt;/item&gt;
   &lt;item key="_stash"&gt;
    &lt;hash&gt;
@@ -31,17 +28,44 @@ Server: Apache
     &lt;/item&gt;
    &lt;/hash&gt;
   &lt;/item&gt;
-  &lt;item key="fetchid"&gt;00182753&lt;/item&gt;
-  &lt;item key="@rfr_id"&gt;
+  &lt;item key="@sfx.category"&gt;
    &lt;array&gt;
-    &lt;item key="0"&gt;EBSCO:Academic Search Complete -- Publications&lt;/item&gt;
+    &lt;item key="0"&gt;Arts and Humanities&lt;/item&gt;
+    &lt;item key="1"&gt;Arts and Humanities&lt;/item&gt;
+    &lt;item key="2"&gt;Arts and Humanities&lt;/item&gt;
    &lt;/array&gt;
   &lt;/item&gt;
-  &lt;item key="url_ctx_fmt"&gt;info:ofi/fmt:xml:xsd:ctx&lt;/item&gt;
-  &lt;item key="rft.genre"&gt;article&lt;/item&gt;
+  &lt;item key="sfx.response_type"&gt;multi_obj_xml&lt;/item&gt;
+  &lt;item key="sfx.ignore_char_set"&gt;1&lt;/item&gt;
+  &lt;item key="sfx.ignore_date_threshold"&gt;1&lt;/item&gt;
+  &lt;item key="rft.issn"&gt;0018-2753&lt;/item&gt;
+  &lt;item key="rft.lccn"&gt;   53039027 &lt;/item&gt;
+  &lt;item key="sfx.show_availability"&gt;1&lt;/item&gt;
+  &lt;item key="fetchid"&gt;00182753&lt;/item&gt;
+  &lt;item key="rft.object_id"&gt;954925404652&lt;/item&gt;
+  &lt;item key="rft.language"&gt;eng&lt;/item&gt;
+  &lt;item key="rft.jtitle"&gt;History Today&lt;/item&gt;
   &lt;item key="@rft.stitle"&gt;
    &lt;array&gt;
     &lt;item key="0"&gt;HIST TODAY&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="existing_ts_ids"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;20430000000000002&lt;/item&gt;
+    &lt;item key="1"&gt;111027614344001&lt;/item&gt;
+    &lt;item key="2"&gt;2560000000000075&lt;/item&gt;
+    &lt;item key="3"&gt;111080144102002&lt;/item&gt;
+    &lt;item key="4"&gt;3450000000000033&lt;/item&gt;
+    &lt;item key="5"&gt;111021039760001&lt;/item&gt;
+    &lt;item key="6"&gt;3790000000000359&lt;/item&gt;
+    &lt;item key="7"&gt;2470000000000017&lt;/item&gt;
+    &lt;item key="8"&gt;3450000000000055&lt;/item&gt;
+    &lt;item key="9"&gt;1000000000002159&lt;/item&gt;
+    &lt;item key="10"&gt;3410000000000028&lt;/item&gt;
+    &lt;item key="11"&gt;3580000000000012&lt;/item&gt;
+    &lt;item key="12"&gt;3450000000000063&lt;/item&gt;
+    &lt;item key="13"&gt;3170000000000073&lt;/item&gt;
    &lt;/array&gt;
   &lt;/item&gt;
   &lt;item key="@sfx.subcategory"&gt;
@@ -56,44 +80,20 @@ Server: Apache
    &lt;array&gt;
    &lt;/array&gt;
   &lt;/item&gt;
+  &lt;item key="sfx.sid"&gt;DEFAULT&lt;/item&gt;
+  &lt;item key="rft.title"&gt;History Today&lt;/item&gt;
   &lt;item key="sfx.has_full_text"&gt;yes&lt;/item&gt;
-  &lt;item key="sfx.ignore_char_set"&gt;1&lt;/item&gt;
-  &lt;item key="sfx.ignore_date_threshold"&gt;1&lt;/item&gt;
-  &lt;item key="sfx.sourcename"&gt;DEFAULT&lt;/item&gt;
-  &lt;item key="rft.issn"&gt;0018-2753&lt;/item&gt;
   &lt;item key="@rfe_id"&gt;
    &lt;array&gt;
    &lt;/array&gt;
   &lt;/item&gt;
-  &lt;item key="sfx.response_type"&gt;multi_obj_xml&lt;/item&gt;
-  &lt;item key="sfx.sid"&gt;DEFAULT&lt;/item&gt;
-  &lt;item key="existing_ts_ids"&gt;
+  &lt;item key="@rfr_id"&gt;
    &lt;array&gt;
-    &lt;item key="0"&gt;111027614344001&lt;/item&gt;
-    &lt;item key="1"&gt;20430000000000002&lt;/item&gt;
-    &lt;item key="2"&gt;3450000000000033&lt;/item&gt;
-    &lt;item key="3"&gt;3790000000000359&lt;/item&gt;
-    &lt;item key="4"&gt;3410000000000028&lt;/item&gt;
-    &lt;item key="5"&gt;3170000000000073&lt;/item&gt;
-    &lt;item key="6"&gt;1000000000002159&lt;/item&gt;
-    &lt;item key="7"&gt;111021039760001&lt;/item&gt;
-    &lt;item key="8"&gt;3450000000000063&lt;/item&gt;
-    &lt;item key="9"&gt;3450000000000055&lt;/item&gt;
-    &lt;item key="10"&gt;111080144102002&lt;/item&gt;
-    &lt;item key="11"&gt;3580000000000012&lt;/item&gt;
-    &lt;item key="12"&gt;2560000000000075&lt;/item&gt;
-    &lt;item key="13"&gt;2470000000000017&lt;/item&gt;
+    &lt;item key="0"&gt;EBSCO:Academic Search Complete -- Publications&lt;/item&gt;
    &lt;/array&gt;
   &lt;/item&gt;
   
-  &lt;item key="rft.jtitle"&gt;History Today&lt;/item&gt;
-  &lt;item key="rft.lccn"&gt;   53039027 &lt;/item&gt;
-  &lt;item key="sfx.doi_url"&gt;http://dx.doi.org&lt;/item&gt;
-  &lt;item key="rft.object_id"&gt;954925404652&lt;/item&gt;
-  &lt;item key="rft.language"&gt;eng&lt;/item&gt;
-  &lt;item key="rft.pub"&gt;History Today Ltd.&lt;/item&gt;
-  &lt;item key="rft_dat"&gt;Academic Search Complete -- Publications&lt;/item&gt;
-  &lt;item key="rft.title"&gt;History Today&lt;/item&gt;
+  &lt;item key="sfx.sourcename"&gt;DEFAULT&lt;/item&gt;
  &lt;/hash&gt;
 &lt;/perldata&gt;
 </ctx_obj_attributes>
@@ -115,7 +115,7 @@ Server: Apache
     <authentication></authentication>
     <char_set>utf8</char_set>
     <displayer></displayer>
-    <target_url>http://proxy.library.nyu.edu/login?url=http://gateway.proquest.com/openurl?rfr_id=info%3Axri%2Fsid%3Aprimo&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;res_dat=xri%3Apqm&amp;genre=journal&amp;rft_id=42454&amp;url_ver=Z39.88-2004</target_url>
+    <target_url>http://proxy.library.nyu.edu/login?url=http://gateway.proquest.com/openurl?rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;url_ver=Z39.88-2004&amp;genre=journal&amp;res_dat=xri%3Apqm&amp;rfr_id=info%3Axri%2Fsid%3Aprimo&amp;rft_id=42454</target_url>
     <is_related>no</is_related>
     <coverage>
      <coverage_text>
@@ -154,7 +154,7 @@ Server: Apache
     <authentication></authentication>
     <char_set>utf8</char_set>
     <displayer></displayer>
-    <target_url>http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?sid=Primo&amp;issn=0018-2753&amp;title=History+Today&amp;genre=article</target_url>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?sid=Primo&amp;jn=HIT&amp;site=ehost-live&amp;db=a9h</target_url>
     <is_related>no</is_related>
     <coverage>
      <coverage_text>
@@ -186,7 +186,7 @@ Server: Apache
     <authentication></authentication>
     <char_set>utf8</char_set>
     <displayer></displayer>
-    <target_url>http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?title=History+Today&amp;genre=article&amp;sid=Primo&amp;issn=0018-2753</target_url>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?jn=HIT&amp;db=31h&amp;site=ehost-live&amp;sid=Primo</target_url>
     <is_related>no</is_related>
     <coverage>
      <coverage_text>
@@ -220,7 +220,7 @@ Server: Apache
     <authentication></authentication>
     <char_set></char_set>
     <displayer></displayer>
-    <target_url>http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?title=History+Today&amp;genre=article&amp;sid=Primo&amp;issn=0018-2753</target_url>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?sid=Primo&amp;db=khh&amp;site=ehost-live&amp;jn=HIT</target_url>
     <is_related>no</is_related>
     <coverage>
      <coverage_text>
@@ -254,7 +254,7 @@ Server: Apache
     <authentication></authentication>
     <char_set>iso-8859-1</char_set>
     <displayer></displayer>
-    <target_url>http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?title=History+Today&amp;genre=article&amp;sid=Primo&amp;issn=0018-2753</target_url>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?sid=Primo&amp;db=hft&amp;site=ehost-live&amp;jn=HIT</target_url>
     <is_related>no</is_related>
     <coverage>
      <coverage_text>
@@ -293,7 +293,7 @@ Server: Apache
     <authentication></authentication>
     <char_set>iso-8859-1</char_set>
     <displayer></displayer>
-    <target_url>http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?genre=article&amp;title=History+Today&amp;issn=0018-2753&amp;sid=Primo</target_url>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?sid=Primo&amp;db=HUS&amp;site=ehost-live&amp;jn=HIT</target_url>
     <is_related>no</is_related>
     <coverage>
      <coverage_text>
@@ -327,7 +327,7 @@ Server: Apache
     <authentication></authentication>
     <char_set>iso-8859-1</char_set>
     <displayer></displayer>
-    <target_url>http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?genre=article&amp;title=History+Today&amp;issn=0018-2753&amp;sid=Primo</target_url>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?db=ofm&amp;site=ehost-live&amp;jn=HIT&amp;sid=Primo</target_url>
     <is_related>no</is_related>
     <coverage>
      <coverage_text>
@@ -366,7 +366,7 @@ Server: Apache
     <authentication></authentication>
     <char_set>iso-8859-1</char_set>
     <displayer></displayer>
-    <target_url>http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?sid=Primo&amp;issn=0018-2753&amp;title=History+Today&amp;genre=article</target_url>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?sid=Primo&amp;jn=HIT&amp;db=rgm&amp;site=ehost-live</target_url>
     <is_related>no</is_related>
     <coverage>
      <coverage_text>
@@ -444,7 +444,7 @@ Server: Apache
     <authentication></authentication>
     <char_set>iso-8859-1</char_set>
     <displayer></displayer>
-    <target_url>http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rfr_id=info%3Axri%2Fsid%3Aprimo&amp;res_dat=xri%3Apqm&amp;genre=journal&amp;rft_id=1821543&amp;url_ver=Z39.88-2004</target_url>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_id=1821543&amp;rfr_id=info%3Axri%2Fsid%3Aprimo&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;url_ver=Z39.88-2004&amp;genre=journal&amp;res_dat=xri%3Apqm</target_url>
     <is_related>no</is_related>
     <coverage>
      <coverage_text>
@@ -483,7 +483,7 @@ Server: Apache
     <authentication></authentication>
     <char_set>iso-8859-1</char_set>
     <displayer></displayer>
-    <target_url>http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rfr_id=info%3Axri%2Fsid%3Aprimo&amp;res_dat=xri%3Apqm&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;url_ver=Z39.88-2004&amp;rft_id=42454&amp;genre=journal</target_url>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_id=42454&amp;res_dat=xri%3Apqm&amp;genre=journal&amp;url_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rfr_id=info%3Axri%2Fsid%3Aprimo</target_url>
     <is_related>no</is_related>
     <coverage>
      <coverage_text>

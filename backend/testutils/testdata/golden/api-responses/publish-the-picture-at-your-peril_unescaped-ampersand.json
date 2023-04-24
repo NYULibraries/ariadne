@@ -12,12 +12,12 @@
                 },
                 {
                     "display_name": "EBSCOhost America History and Life with Full Text",
-                    "url": "http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?sid=Primo\u0026issue=2\u0026atitle=publish+the+picture+at+your+peril\u0026issn=1537-7814\u0026volume=20\u0026date=20210401\u0026title=JOURNAL+OF+THE+GILDED+AGE+AND+PROGRESSIVE+ERA\u0026genre=article\u0026spage=301",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?volume=20\u0026sid=Primo\u0026title=JOURNAL+OF+THE+GILDED+AGE+AND+PROGRESSIVE+ERA\u0026spage=301\u0026date=20210401\u0026atitle=publish+the+picture+at+your+peril\u0026genre=article\u0026issn=1537-7814\u0026issue=2",
                     "coverage_text": "Available from 2008/07/01"
                 },
                 {
                     "display_name": "ProQuest Central",
-                    "url": "http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Aarticle\u0026res_dat=xri%3Apqm\u0026spage=301\u0026genre=article\u0026volume=20\u0026issn=1537-7814\u0026date=2021-04-01\u0026issue=2\u0026jtitle=JOURNAL%2BOF%2BTHE%2BGILDED%2BAGE%2BAND%2BPROGRESSIVE%2BERA\u0026url_ver=Z39.88-2004",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?issue=2\u0026issn=1537-7814\u0026res_dat=xri%3Apqm\u0026rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Aarticle\u0026url_ver=Z39.88-2004\u0026genre=article\u0026spage=301\u0026date=2021-04-01\u0026volume=20\u0026jtitle=JOURNAL%2BOF%2BTHE%2BGILDED%2BAGE%2BAND%2BPROGRESSIVE%2BERA",
                     "coverage_text": "Available from 2011/01/01"
                 }
             ]

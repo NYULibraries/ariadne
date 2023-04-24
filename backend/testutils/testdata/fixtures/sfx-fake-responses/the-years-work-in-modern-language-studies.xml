@@ -1,82 +1,30 @@
 HTTP/1.1 200 OK
 Transfer-Encoding: chunked
 Content-Type: application/xml; charset=ISO-8859-1
-Date: Tue, 07 Mar 2023 22:22:29 GMT
+Date: Mon, 24 Apr 2023 18:46:55 GMT
 Server: Apache
 
-302d
+2b01
 <?xml version="1.0" encoding="utf-8"?>
 
 <ctx_obj_set>
  <ctx_obj identifier="">
   <ctx_obj_attributes>&lt;perldata&gt;
  &lt;hash&gt;
+  &lt;item key="sfx.doi_url"&gt;http://dx.doi.org&lt;/item&gt;
+  &lt;item key="sfx.request_id"&gt;25844797&lt;/item&gt;
+  &lt;item key="url_ctx_fmt"&gt;info:ofi/fmt:xml:xsd:ctx&lt;/item&gt;
+  &lt;item key="rft.pub"&gt;Brill&lt;/item&gt;
+  &lt;item key="req.session_id"&gt;s628B5024-E2D0-11ED-A69A-65094131B499&lt;/item&gt;
+  &lt;item key="rft.genre"&gt;journal&lt;/item&gt;
   &lt;item key="@sfx.category"&gt;
    &lt;array&gt;
     &lt;item key="0"&gt;Arts and Humanities&lt;/item&gt;
     &lt;item key="1"&gt;Arts and Humanities&lt;/item&gt;
    &lt;/array&gt;
   &lt;/item&gt;
-  &lt;item key="sfx.request_id"&gt;25747333&lt;/item&gt;
-  &lt;item key="rft.language"&gt;eng&lt;/item&gt;
-  &lt;item key="ctx_ver"&gt;Z39.88-2004&lt;/item&gt;
-  &lt;item key="rft.issn"&gt;0084-4152&lt;/item&gt;
-  &lt;item key="@rfr_id"&gt;
-   &lt;array&gt;
-    &lt;item key="0"&gt;info:sid/sfxit.com:citation&lt;/item&gt;
-   &lt;/array&gt;
-  &lt;/item&gt;
-  &lt;item key="rft.title"&gt;The Year&amp;apos;s Work in Modern Language Studies&lt;/item&gt;
-  &lt;item key="sfx.has_full_text"&gt;yes&lt;/item&gt;
-  &lt;item key="rft.place"&gt;London [etc.]&lt;/item&gt;
-  &lt;item key="rft.object_type"&gt;JOURNAL&lt;/item&gt;
-  &lt;item key="existing_ts_ids"&gt;
-   &lt;array&gt;
-    &lt;item key="0"&gt;20430000000000002&lt;/item&gt;
-    &lt;item key="1"&gt;111027614344001&lt;/item&gt;
-    &lt;item key="2"&gt;5490000000001184&lt;/item&gt;
-    &lt;item key="3"&gt;20430000000000091&lt;/item&gt;
-    &lt;item key="4"&gt;3230000000000098&lt;/item&gt;
-    &lt;item key="5"&gt;3230000000000072&lt;/item&gt;
-    &lt;item key="6"&gt;3170000000000258&lt;/item&gt;
-   &lt;/array&gt;
-  &lt;/item&gt;
-  &lt;item key="sfx.response_type"&gt;multi_obj_xml&lt;/item&gt;
-  &lt;item key="rft.pub"&gt;Brill&lt;/item&gt;
-  &lt;item key="rft.btitle"&gt;The Year&amp;apos;s work in modern language studies.&lt;/item&gt;
-  &lt;item key="fetchid"&gt;00844152&lt;/item&gt;
-  &lt;item key="rft.genre"&gt;journal&lt;/item&gt;
-  &lt;item key="rft.oclcnum"&gt;1770339&lt;/item&gt;
-  &lt;item key="rft.jtitle"&gt;The Year&amp;apos;s Work in Modern Language Studies&lt;/item&gt;
-  &lt;item key="@sfx.subcategory"&gt;
-   &lt;array&gt;
-    &lt;item key="0"&gt;Language &amp;amp; Linguistics&lt;/item&gt;
-    &lt;item key="1"&gt;Literature&lt;/item&gt;
-   &lt;/array&gt;
-  &lt;/item&gt;
-  &lt;item key="sfx.sid"&gt;sfxit.com:citation&lt;/item&gt;
-  &lt;item key="sfx.show_availability"&gt;1&lt;/item&gt;
-  &lt;item key="sfx.doi_url"&gt;http://dx.doi.org&lt;/item&gt;
-  &lt;item key="ctx_enc"&gt;UTF-8&lt;/item&gt;
   &lt;item key="ctx_tim"&gt;2022-11-10T10:42:37-05:00&lt;/item&gt;
-  &lt;item key="rft.lccn"&gt;   31032540 &lt;/item&gt;
-  &lt;item key="rft.object_id"&gt;110978977977146&lt;/item&gt;
-  &lt;item key="url_ctx_fmt"&gt;info:ofi/fmt:xml:xsd:ctx&lt;/item&gt;
-  &lt;item key="sfx.ignore_date_threshold"&gt;1&lt;/item&gt;
-  &lt;item key="@rfe_id"&gt;
-   &lt;array&gt;
-   &lt;/array&gt;
-  &lt;/item&gt;
-  &lt;item key="rfr.rfr"&gt;sfxit.com:citation&lt;/item&gt;
-  &lt;item key="@rft.stitle"&gt;
-   &lt;array&gt;
-    &lt;item key="0"&gt;YEARS WORK IN MODERN LANGUAGE STUDIES&lt;/item&gt;
-    &lt;item key="1"&gt;YEARS WORK IN MODERN LANGUAGE STUDIES&lt;/item&gt;
-    &lt;item key="2"&gt;YEAR&amp;apos;S WORK IN MODERN LANGUAGE STUDIES&lt;/item&gt;
-   &lt;/array&gt;
-  &lt;/item&gt;
-  &lt;item key="req.session_id"&gt;s8C342C8A-BD36-11ED-83EE-92014131B499&lt;/item&gt;
-  &lt;item key="rft_val_fmt"&gt;journal&lt;/item&gt;
+  &lt;item key="rft.place"&gt;London [etc.]&lt;/item&gt;
   &lt;item key="_stash"&gt;
    &lt;hash&gt;
     &lt;item key="@rft_id"&gt;
@@ -91,16 +39,67 @@ Server: Apache
     &lt;/item&gt;
    &lt;/hash&gt;
   &lt;/item&gt;
+  &lt;item key="rft_val_fmt"&gt;journal&lt;/item&gt;
+  &lt;item key="rft.eissn"&gt;2222-4297&lt;/item&gt;
   &lt;item key="url_ver"&gt;Z39.88-2004&lt;/item&gt;
+  &lt;item key="rft.issn"&gt;0084-4152&lt;/item&gt;
+  &lt;item key="sfx.ignore_date_threshold"&gt;1&lt;/item&gt;
+  &lt;item key="sfx.response_type"&gt;multi_obj_xml&lt;/item&gt;
+  &lt;item key="sfx.ignore_char_set"&gt;1&lt;/item&gt;
+  &lt;item key="ctx_ver"&gt;Z39.88-2004&lt;/item&gt;
+  &lt;item key="rfr.rfr"&gt;sfxit.com:citation&lt;/item&gt;
+  &lt;item key="rft.language"&gt;eng&lt;/item&gt;
+  &lt;item key="rft.jtitle"&gt;The Year&amp;apos;s Work in Modern Language Studies&lt;/item&gt;
+  &lt;item key="rft.btitle"&gt;The Year&amp;apos;s work in modern language studies.&lt;/item&gt;
+  &lt;item key="rft.object_id"&gt;110978977977146&lt;/item&gt;
+  &lt;item key="rft.lccn"&gt;   31032540 &lt;/item&gt;
+  &lt;item key="fetchid"&gt;00844152&lt;/item&gt;
+  &lt;item key="sfx.show_availability"&gt;1&lt;/item&gt;
+  &lt;item key="rft.oclcnum"&gt;1770339&lt;/item&gt;
+  &lt;item key="@sfx.subcategory"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;Language &amp;amp; Linguistics&lt;/item&gt;
+    &lt;item key="1"&gt;Literature&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="existing_ts_ids"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;20430000000000002&lt;/item&gt;
+    &lt;item key="1"&gt;111027614344001&lt;/item&gt;
+    &lt;item key="2"&gt;3230000000000072&lt;/item&gt;
+    &lt;item key="3"&gt;3230000000000098&lt;/item&gt;
+    &lt;item key="4"&gt;5490000000001184&lt;/item&gt;
+    &lt;item key="5"&gt;3170000000000258&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="@rft.stitle"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;YEARS WORK IN MODERN LANGUAGE STUDIES&lt;/item&gt;
+    &lt;item key="1"&gt;YEARS WORK IN MODERN LANGUAGE STUDIES&lt;/item&gt;
+    &lt;item key="2"&gt;YEAR&amp;apos;S WORK IN MODERN LANGUAGE STUDIES&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="sfx.has_full_text"&gt;yes&lt;/item&gt;
+  &lt;item key="sfx.sid"&gt;sfxit.com:citation&lt;/item&gt;
+  &lt;item key="rft.title"&gt;The Year&amp;apos;s Work in Modern Language Studies&lt;/item&gt;
+  &lt;item key="rft.object_type"&gt;JOURNAL&lt;/item&gt;
   &lt;item key="@rft_id"&gt;
    &lt;array&gt;
     &lt;item key="0"&gt;info:lccn/31032540&lt;/item&gt;
    &lt;/array&gt;
   &lt;/item&gt;
-  
-  &lt;item key="rft.eissn"&gt;2222-4297&lt;/item&gt;
+  &lt;item key="ctx_enc"&gt;UTF-8&lt;/item&gt;
   &lt;item key="sfx.sourcename"&gt;CITATION&lt;/item&gt;
-  &lt;item key="sfx.ignore_char_set"&gt;1&lt;/item&gt;
+  
+  &lt;item key="@rfr_id"&gt;
+   &lt;array&gt;
+    &lt;item key="0"&gt;info:sid/sfxit.com:citation&lt;/item&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
+  &lt;item key="@rfe_id"&gt;
+   &lt;array&gt;
+   &lt;/array&gt;
+  &lt;/item&gt;
  &lt;/hash&gt;
 &lt;/perldata&gt;
 </ctx_obj_attributes>
@@ -147,40 +146,6 @@ Server: Apache
     <interface_id>3170000000000148</interface_id>
     <interface_name>BRILLONLINE</interface_name>
     <target_service_id>3230000000000072</target_service_id>
-    <service_type>getFullTxt</service_type>
-    <parser>BRILL::journals</parser>
-    <parse_param>url=http://brill.com&amp;jkey=journals/22224297</parse_param>
-    <proxy>yes</proxy>
-    <crossref>yes</crossref>
-    <note></note>
-    <authentication></authentication>
-    <char_set>iso-8859-1</char_set>
-    <displayer></displayer>
-    <target_url>http://proxy.library.nyu.edu/login?url=http://brill.com/content/journals/22224297</target_url>
-    <is_related>no</is_related>
-    <coverage>
-     <coverage_text>
-      <threshold_text>
-       <coverage_statement>Available from 1931 volume: 1 issue: 1</coverage_statement>
-      </threshold_text>
-      <embargo_text></embargo_text>
-     </coverage_text>
-     <from>
-      <year>1931</year>
-      <volume>1</volume>
-      <issue>1</issue>
-     </from>
-     <embargo></embargo>
-    </coverage>
-   </target>
-   <target>
-    <target_name>BRILLONLINE_JOURNALS_LCL</target_name>
-    <target_public_name>Brill Online Journals</target_public_name>
-    <object_portfolio_id>20430000000148665</object_portfolio_id>
-    <target_id>20430000000000085</target_id>
-    <interface_id>20430000000000085</interface_id>
-    <interface_name>BRILLONLINE_JOURNALS</interface_name>
-    <target_service_id>20430000000000091</target_service_id>
     <service_type>getFullTxt</service_type>
     <parser>BRILL::journals</parser>
     <parse_param>url=http://brill.com&amp;jkey=journals/22224297</parse_param>
@@ -265,7 +230,7 @@ Server: Apache
     <authentication></authentication>
     <char_set>iso-8859-1</char_set>
     <displayer></displayer>
-    <target_url>http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?url_ver=Z39.88-2004&amp;rfr_id=info%3Axri%2Fsid%3Aprimo&amp;rft_id=1817653&amp;res_dat=xri%3Apqm&amp;genre=journal&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal</target_url>
+    <target_url>http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rfr_id=info%3Axri%2Fsid%3Aprimo&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;url_ver=Z39.88-2004&amp;genre=journal&amp;rft_id=1817653&amp;res_dat=xri%3Apqm</target_url>
     <is_related>no</is_related>
     <coverage>
      <coverage_text>

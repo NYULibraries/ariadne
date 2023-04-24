@@ -12,22 +12,22 @@
                 },
                 {
                     "display_name": "Art, Design \u0026 Architecture Collection",
-                    "url": "http://proxy.library.nyu.edu/login?url=http://gateway.proquest.com/openurl?rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal\u0026genre=journal\u0026res_dat=xri%3Apqm\u0026rft_id=41130\u0026rfr_id=info%3Axri%2Fsid%3Aprimo\u0026url_ver=Z39.88-2004",
+                    "url": "http://proxy.library.nyu.edu/login?url=http://gateway.proquest.com/openurl?rft_id=41130\u0026rfr_id=info%3Axri%2Fsid%3Aprimo\u0026res_dat=xri%3Apqm\u0026genre=journal\u0026url_ver=Z39.88-2004\u0026rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal",
                     "coverage_text": "Available from 2002/11/04"
                 },
                 {
                     "display_name": "EBSCOhost Academic Search Complete",
-                    "url": "http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?sid=Primo\u0026site=ehost-live\u0026db=a9h\u0026jn=NYK",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?sid=Primo\u0026db=a9h\u0026site=ehost-live\u0026jn=NYK",
                     "coverage_text": "Available from 2004/01/05"
                 },
                 {
                     "display_name": "EBSCOhost Reader's Guide Full Text Mega",
-                    "url": "http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?site=ehost-live\u0026sid=Primo\u0026db=rgm\u0026jn=NYK",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?sid=Primo\u0026site=ehost-live\u0026db=rgm\u0026jn=NYK",
                     "coverage_text": "Available from 2011/08/01"
                 },
                 {
                     "display_name": "Flipster",
-                    "url": "http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?db=eon\u0026bquery=HJ+NYK\u0026sid=Primo\u0026site=ehost-live",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?bquery=HJ+NYK\u0026db=eon\u0026site=ehost-live\u0026sid=Primo",
                     "coverage_text": "Available from 2015/01/26"
                 },
                 {
@@ -52,12 +52,12 @@
                 },
                 {
                     "display_name": "Music \u0026 Performing Arts Collection",
-                    "url": "http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?genre=journal\u0026res_dat=xri%3Apqm\u0026rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal\u0026rft_id=41130\u0026url_ver=Z39.88-2004\u0026rfr_id=info%3Axri%2Fsid%3Aprimo",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_id=41130\u0026rfr_id=info%3Axri%2Fsid%3Aprimo\u0026res_dat=xri%3Apqm\u0026genre=journal\u0026url_ver=Z39.88-2004\u0026rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal",
                     "coverage_text": "Available from 2002/11/04"
                 },
                 {
                     "display_name": "Music \u0026 Performing Arts Collection",
-                    "url": "http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?url_ver=Z39.88-2004\u0026rfr_id=info%3Axri%2Fsid%3Aprimo\u0026rft_id=16493\u0026res_dat=xri%3Apqm\u0026genre=journal\u0026rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_id=16493\u0026res_dat=xri%3Apqm\u0026genre=journal\u0026url_ver=Z39.88-2004\u0026rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal\u0026rfr_id=info%3Axri%2Fsid%3Aprimo",
                     "coverage_text": "Available from 2001/08/20  until 2017/01/02"
                 },
                 {
@@ -67,12 +67,12 @@
                 },
                 {
                     "display_name": "ProQuest Central",
-                    "url": "http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?url_ver=Z39.88-2004\u0026rfr_id=info%3Axri%2Fsid%3Aprimo\u0026rft_id=41130\u0026res_dat=xri%3Apqm\u0026genre=journal\u0026rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rfr_id=info%3Axri%2Fsid%3Aprimo\u0026res_dat=xri%3Apqm\u0026url_ver=Z39.88-2004\u0026genre=journal\u0026rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal\u0026rft_id=41130",
                     "coverage_text": "Available from 2002/11/04"
                 },
                 {
                     "display_name": "Factiva",
-                    "url": "http://proxy.library.nyu.edu/login?url=https://global.factiva.com/en/du/headlines.asp?XSID=S001dbr5DEs5DEmN9MpMD6mNDVyMHmnRsIuMcNG1pRRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQQAA\u0026CurrentSourcesDesc=sc_u_gtny%2CNew+Yorker\u0026CurrentSources=U%7Cgtny",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://global.factiva.com/en/du/headlines.asp?XSID=S001dbr5DEs5DEmN9MpMD6mNDVyMHmnRsIuMcNG1pRRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQQAA\u0026searchLanguage=custom\u0026CurrentSourcesDesc=sc_u_gtny%2CNew+Yorker\u0026CurrentSources=U%7Cgtny",
                     "coverage_text": "Available from 1997"
                 }
             ]

@@ -16,18 +16,13 @@
                     "coverage_text": "Available from 1931 volume: 1 issue: 1"
                 },
                 {
-                    "display_name": "Brill Online Journals",
-                    "url": "http://proxy.library.nyu.edu/login?url=http://brill.com/content/journals/22224297",
-                    "coverage_text": "Available from 1931 volume: 1 issue: 1"
-                },
-                {
                     "display_name": "JSTOR Arts \u0026 Sciences XI",
                     "url": "http://proxy.library.nyu.edu/login?url=https://www.jstor.org/action/showPublication?journalCode=yearworkmodlang",
                     "coverage_text": "Available from 1930/06/30 volume: 1  until 2019/01/31 volume: 79"
                 },
                 {
                     "display_name": "Periodicals Archive Online Collection 2",
-                    "url": "http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?url_ver=Z39.88-2004\u0026rfr_id=info%3Axri%2Fsid%3Aprimo\u0026rft_id=1817653\u0026res_dat=xri%3Apqm\u0026genre=journal\u0026rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rfr_id=info%3Axri%2Fsid%3Aprimo\u0026rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal\u0026url_ver=Z39.88-2004\u0026genre=journal\u0026rft_id=1817653\u0026res_dat=xri%3Apqm",
                     "coverage_text": "Available from 1930/01/01  until 1940/12/31. Available from 1950/01/01  until 1994/01/31"
                 }
             ]

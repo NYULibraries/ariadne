@@ -7,42 +7,42 @@
             "links": [
                 {
                     "display_name": "Art, Design \u0026 Architecture Collection",
-                    "url": "http://proxy.library.nyu.edu/login?url=http://gateway.proquest.com/openurl?rfr_id=info%3Axri%2Fsid%3Aprimo\u0026rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal\u0026res_dat=xri%3Apqm\u0026genre=journal\u0026rft_id=42454\u0026url_ver=Z39.88-2004",
+                    "url": "http://proxy.library.nyu.edu/login?url=http://gateway.proquest.com/openurl?rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal\u0026url_ver=Z39.88-2004\u0026genre=journal\u0026res_dat=xri%3Apqm\u0026rfr_id=info%3Axri%2Fsid%3Aprimo\u0026rft_id=42454",
                     "coverage_text": "Available from 1992/01/01  until 2010/12/31"
                 },
                 {
                     "display_name": "EBSCOhost Academic Search Complete",
-                    "url": "http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?sid=Primo\u0026issn=0018-2753\u0026title=History+Today\u0026genre=article",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?sid=Primo\u0026jn=HIT\u0026site=ehost-live\u0026db=a9h",
                     "coverage_text": "Available from 1975"
                 },
                 {
                     "display_name": "EBSCOhost America History and Life with Full Text",
-                    "url": "http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?title=History+Today\u0026genre=article\u0026sid=Primo\u0026issn=0018-2753",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?jn=HIT\u0026db=31h\u0026site=ehost-live\u0026sid=Primo",
                     "coverage_text": "Available from 1951/01/01"
                 },
                 {
                     "display_name": "EBSCOhost History Reference Center",
-                    "url": "http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?title=History+Today\u0026genre=article\u0026sid=Primo\u0026issn=0018-2753",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?sid=Primo\u0026db=khh\u0026site=ehost-live\u0026jn=HIT",
                     "coverage_text": "Available from 1975/01/01"
                 },
                 {
                     "display_name": "EBSCOhost Humanities Full Text",
-                    "url": "http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?title=History+Today\u0026genre=article\u0026sid=Primo\u0026issn=0018-2753",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?sid=Primo\u0026db=hft\u0026site=ehost-live\u0026jn=HIT",
                     "coverage_text": "Available from 1983/02/01  until 2011/12/31"
                 },
                 {
                     "display_name": "EBSCOhost Humanities Source",
-                    "url": "http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?genre=article\u0026title=History+Today\u0026issn=0018-2753\u0026sid=Primo",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?sid=Primo\u0026db=HUS\u0026site=ehost-live\u0026jn=HIT",
                     "coverage_text": "Available from 1983/02/01"
                 },
                 {
                     "display_name": "EBSCOhost OmniFile Full Text Mega",
-                    "url": "http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?genre=article\u0026title=History+Today\u0026issn=0018-2753\u0026sid=Primo",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?db=ofm\u0026site=ehost-live\u0026jn=HIT\u0026sid=Primo",
                     "coverage_text": "Available from 2000/01/01  until 2010/01/31"
                 },
                 {
                     "display_name": "EBSCOhost Reader's Guide Full Text Mega",
-                    "url": "http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?sid=Primo\u0026issn=0018-2753\u0026title=History+Today\u0026genre=article",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?sid=Primo\u0026jn=HIT\u0026db=rgm\u0026site=ehost-live",
                     "coverage_text": "Available from 1983/02/01  until 2011/12/01"
                 },
                 {
@@ -52,12 +52,12 @@
                 },
                 {
                     "display_name": "Periodicals Archive Online Collection 1",
-                    "url": "http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal\u0026rfr_id=info%3Axri%2Fsid%3Aprimo\u0026res_dat=xri%3Apqm\u0026genre=journal\u0026rft_id=1821543\u0026url_ver=Z39.88-2004",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_id=1821543\u0026rfr_id=info%3Axri%2Fsid%3Aprimo\u0026rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal\u0026url_ver=Z39.88-2004\u0026genre=journal\u0026res_dat=xri%3Apqm",
                     "coverage_text": "Available from 1951/01/01  until 2000/12/31"
                 },
                 {
                     "display_name": "ProQuest Central",
-                    "url": "http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rfr_id=info%3Axri%2Fsid%3Aprimo\u0026res_dat=xri%3Apqm\u0026rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal\u0026url_ver=Z39.88-2004\u0026rft_id=42454\u0026genre=journal",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_id=42454\u0026res_dat=xri%3Apqm\u0026genre=journal\u0026url_ver=Z39.88-2004\u0026rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal\u0026rfr_id=info%3Axri%2Fsid%3Aprimo",
                     "coverage_text": "Available from 1992/01/01  until 2010/12/31"
                 }
             ]

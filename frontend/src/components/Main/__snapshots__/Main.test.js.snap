@@ -1791,7 +1791,7 @@ exports[`Backend success Can community task groups learn from the principles of 
                 class="row"
               >
                 <a
-                  href="http://proxy.library.nyu.edu/login?url=https://www.tandfonline.com/openurl?spage=574&date=2018&genre=article&volume=49&issue=5&issn=1557-5330"
+                  href="http://proxy.library.nyu.edu/login?url=https://www.tandfonline.com/openurl?issue=5&issn=1557-5330&volume=49&genre=article&spage=574&date=2018"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -2941,7 +2941,7 @@ exports[`Backend success History Today renders correctly 1`] = `
                 class="row"
               >
                 <a
-                  href="http://proxy.library.nyu.edu/login?url=http://gateway.proquest.com/openurl?rfr_id=info%3Axri%2Fsid%3Aprimo&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&res_dat=xri%3Apqm&genre=journal&rft_id=42454&url_ver=Z39.88-2004"
+                  href="http://proxy.library.nyu.edu/login?url=http://gateway.proquest.com/openurl?rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&url_ver=Z39.88-2004&genre=journal&res_dat=xri%3Apqm&rfr_id=info%3Axri%2Fsid%3Aprimo&rft_id=42454"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -2959,7 +2959,7 @@ exports[`Backend success History Today renders correctly 1`] = `
                 class="row"
               >
                 <a
-                  href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?sid=Primo&issn=0018-2753&title=History+Today&genre=article"
+                  href="http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?sid=Primo&jn=HIT&site=ehost-live&db=a9h"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -2977,7 +2977,7 @@ exports[`Backend success History Today renders correctly 1`] = `
                 class="row"
               >
                 <a
-                  href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?title=History+Today&genre=article&sid=Primo&issn=0018-2753"
+                  href="http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?jn=HIT&db=31h&site=ehost-live&sid=Primo"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -2995,7 +2995,7 @@ exports[`Backend success History Today renders correctly 1`] = `
                 class="row"
               >
                 <a
-                  href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?title=History+Today&genre=article&sid=Primo&issn=0018-2753"
+                  href="http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?sid=Primo&db=khh&site=ehost-live&jn=HIT"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -3013,7 +3013,7 @@ exports[`Backend success History Today renders correctly 1`] = `
                 class="row"
               >
                 <a
-                  href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?title=History+Today&genre=article&sid=Primo&issn=0018-2753"
+                  href="http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?sid=Primo&db=hft&site=ehost-live&jn=HIT"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -3031,7 +3031,7 @@ exports[`Backend success History Today renders correctly 1`] = `
                 class="row"
               >
                 <a
-                  href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?genre=article&title=History+Today&issn=0018-2753&sid=Primo"
+                  href="http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?sid=Primo&db=HUS&site=ehost-live&jn=HIT"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -3049,7 +3049,7 @@ exports[`Backend success History Today renders correctly 1`] = `
                 class="row"
               >
                 <a
-                  href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?genre=article&title=History+Today&issn=0018-2753&sid=Primo"
+                  href="http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?db=ofm&site=ehost-live&jn=HIT&sid=Primo"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -3067,7 +3067,7 @@ exports[`Backend success History Today renders correctly 1`] = `
                 class="row"
               >
                 <a
-                  href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?sid=Primo&issn=0018-2753&title=History+Today&genre=article"
+                  href="http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?sid=Primo&jn=HIT&db=rgm&site=ehost-live"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -3103,7 +3103,7 @@ exports[`Backend success History Today renders correctly 1`] = `
                 class="row"
               >
                 <a
-                  href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rfr_id=info%3Axri%2Fsid%3Aprimo&res_dat=xri%3Apqm&genre=journal&rft_id=1821543&url_ver=Z39.88-2004"
+                  href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_id=1821543&rfr_id=info%3Axri%2Fsid%3Aprimo&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&url_ver=Z39.88-2004&genre=journal&res_dat=xri%3Apqm"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -3121,7 +3121,7 @@ exports[`Backend success History Today renders correctly 1`] = `
                 class="row"
               >
                 <a
-                  href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rfr_id=info%3Axri%2Fsid%3Aprimo&res_dat=xri%3Apqm&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&url_ver=Z39.88-2004&rft_id=42454&genre=journal"
+                  href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_id=42454&res_dat=xri%3Apqm&genre=journal&url_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rfr_id=info%3Axri%2Fsid%3Aprimo"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -3596,7 +3596,7 @@ exports[`Backend success Moral psychology is relationship regulation: moral moti
                 class="row"
               >
                 <a
-                  href="http://proxy.library.nyu.edu/login?url=http://doi.apa.org/getdoi.cfm?doi=10.1037%2Fa0021867"
+                  href="http://proxy.library.nyu.edu/login?url=https://doi.apa.org/getdoi.cfm?doi=10.1037%2Fa0021867"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -4107,7 +4107,7 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
                 class="row"
               >
                 <a
-                  href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?sid=Primo&issue=2&atitle=publish+the+picture+at+your+peril&issn=1537-7814&volume=20&date=20210401&title=JOURNAL+OF+THE+GILDED+AGE+AND+PROGRESSIVE+ERA&genre=article&spage=301"
+                  href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?volume=20&sid=Primo&title=JOURNAL+OF+THE+GILDED+AGE+AND+PROGRESSIVE+ERA&spage=301&date=20210401&atitle=publish+the+picture+at+your+peril&genre=article&issn=1537-7814&issue=2"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -4125,7 +4125,7 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
                 class="row"
               >
                 <a
-                  href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Aarticle&res_dat=xri%3Apqm&spage=301&genre=article&volume=20&issn=1537-7814&date=2021-04-01&issue=2&jtitle=JOURNAL%2BOF%2BTHE%2BGILDED%2BAGE%2BAND%2BPROGRESSIVE%2BERA&url_ver=Z39.88-2004"
+                  href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?issue=2&issn=1537-7814&res_dat=xri%3Apqm&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Aarticle&url_ver=Z39.88-2004&genre=article&spage=301&date=2021-04-01&volume=20&jtitle=JOURNAL%2BOF%2BTHE%2BGILDED%2BAGE%2BAND%2BPROGRESSIVE%2BERA"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -4383,7 +4383,7 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
                 class="row"
               >
                 <a
-                  href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?date=20210401&issn=1537-7814&volume=20&genre=article&spage=301&title=JOURNAL+OF+THE+GILDED+AGE+AND+PROGRESSIVE+ERA&sid=Primo&atitle=publish+the+picture+at+your+peril&issue=2"
+                  href="http://proxy.library.nyu.edu/login?url=https://openurl.ebsco.com/linksvc/linking.aspx?volume=20&title=JOURNAL+OF+THE+GILDED+AGE+AND+PROGRESSIVE+ERA&sid=Primo&genre=article&atitle=publish+the+picture+at+your+peril&issn=1537-7814&issue=2&spage=301&date=20210401"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -4401,7 +4401,7 @@ exports[`Backend success Publish the Picture at Your Peril: Visual Ideas and the
                 class="row"
               >
                 <a
-                  href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?url_ver=Z39.88-2004&jtitle=JOURNAL%2BOF%2BTHE%2BGILDED%2BAGE%2BAND%2BPROGRESSIVE%2BERA&issue=2&genre=article&spage=301&res_dat=xri%3Apqm&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Aarticle&date=2021-04-01&issn=1537-7814&volume=20"
+                  href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?res_dat=xri%3Apqm&issue=2&issn=1537-7814&genre=article&url_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Aarticle&date=2021-04-01&spage=301&volume=20&jtitle=JOURNAL%2BOF%2BTHE%2BGILDED%2BAGE%2BAND%2BPROGRESSIVE%2BERA"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -4636,7 +4636,7 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
                 class="row"
               >
                 <a
-                  href="http://proxy.library.nyu.edu/login?url=http://gateway.proquest.com/openurl?rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&genre=journal&res_dat=xri%3Apqm&rft_id=41130&rfr_id=info%3Axri%2Fsid%3Aprimo&url_ver=Z39.88-2004"
+                  href="http://proxy.library.nyu.edu/login?url=http://gateway.proquest.com/openurl?rft_id=41130&rfr_id=info%3Axri%2Fsid%3Aprimo&res_dat=xri%3Apqm&genre=journal&url_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -4672,7 +4672,7 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
                 class="row"
               >
                 <a
-                  href="http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?sid=Primo&site=ehost-live&db=a9h&jn=NYK"
+                  href="http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?sid=Primo&db=a9h&site=ehost-live&jn=NYK"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -4690,7 +4690,7 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
                 class="row"
               >
                 <a
-                  href="http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?site=ehost-live&sid=Primo&db=rgm&jn=NYK"
+                  href="http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?sid=Primo&site=ehost-live&db=rgm&jn=NYK"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -4708,7 +4708,7 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
                 class="row"
               >
                 <a
-                  href="http://proxy.library.nyu.edu/login?url=https://global.factiva.com/en/du/headlines.asp?XSID=S001dbr5DEs5DEmN9MpMD6mNDVyMHmnRsIuMcNG1pRRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQQAA&CurrentSourcesDesc=sc_u_gtny%2CNew+Yorker&CurrentSources=U%7Cgtny"
+                  href="http://proxy.library.nyu.edu/login?url=https://global.factiva.com/en/du/headlines.asp?XSID=S001dbr5DEs5DEmN9MpMD6mNDVyMHmnRsIuMcNG1pRRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQQAA&searchLanguage=custom&CurrentSourcesDesc=sc_u_gtny%2CNew+Yorker&CurrentSources=U%7Cgtny"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -4726,7 +4726,7 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
                 class="row"
               >
                 <a
-                  href="http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?db=eon&bquery=HJ+NYK&sid=Primo&site=ehost-live"
+                  href="http://proxy.library.nyu.edu/login?url=https://search.ebscohost.com/direct.asp?bquery=HJ+NYK&db=eon&site=ehost-live&sid=Primo"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -4816,7 +4816,7 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
                 class="row"
               >
                 <a
-                  href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?genre=journal&res_dat=xri%3Apqm&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft_id=41130&url_ver=Z39.88-2004&rfr_id=info%3Axri%2Fsid%3Aprimo"
+                  href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_id=41130&rfr_id=info%3Axri%2Fsid%3Aprimo&res_dat=xri%3Apqm&genre=journal&url_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -4834,7 +4834,7 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
                 class="row"
               >
                 <a
-                  href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?url_ver=Z39.88-2004&rfr_id=info%3Axri%2Fsid%3Aprimo&rft_id=16493&res_dat=xri%3Apqm&genre=journal&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal"
+                  href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rft_id=16493&res_dat=xri%3Apqm&genre=journal&url_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rfr_id=info%3Axri%2Fsid%3Aprimo"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -4870,7 +4870,7 @@ exports[`Backend success The New Yorker renders correctly 1`] = `
                 class="row"
               >
                 <a
-                  href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?url_ver=Z39.88-2004&rfr_id=info%3Axri%2Fsid%3Aprimo&rft_id=41130&res_dat=xri%3Apqm&genre=journal&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal"
+                  href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rfr_id=info%3Axri%2Fsid%3Aprimo&res_dat=xri%3Apqm&url_ver=Z39.88-2004&genre=journal&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft_id=41130"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -5088,11 +5088,11 @@ exports[`Backend success The Sino-Tibetan Languages renders correctly 1`] = `
                 class="row"
               >
                 <a
-                  href="http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?date=2003&sid=DEFAULT%20(Via%20SFX)&title=Sino-Tibetan%20languages&aufirst=Anne&year=2003&isbn=0-7007-1129-5&genre=book&aulast=YUE-HASHIMOTO"
+                  href="http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?sid=DEFAULT%20(Via%20SFX)&title=Routledge%20Language%20Family%20Series%20%3A%20The%20Sino-Tibetan%20Languages%20(2)&aufirst=Anne&isbn=1-138-78332-3&genre=book&date=2003&year=2003&aulast=YUE-HASHIMOTO"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  Bobst Library  Interlibrary Loan
+                  Request via Interlibrary Loan
                 </a>
                 <p />
               </div>
@@ -5351,24 +5351,6 @@ exports[`Backend success The Year's work in modern language studies. renders cor
                 class="row"
               >
                 <a
-                  href="http://proxy.library.nyu.edu/login?url=http://brill.com/content/journals/22224297"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Brill Online Journals
-                </a>
-                <p>
-                  Available from 1931 volume: 1 issue: 1
-                </p>
-              </div>
-            </li>
-            <li
-              class="list-group-item list-group-item-action flex-column border-0"
-            >
-              <div
-                class="row"
-              >
-                <a
                   href="http://proxy.library.nyu.edu/login?url=https://www.jstor.org/action/showPublication?journalCode=yearworkmodlang"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -5387,7 +5369,7 @@ exports[`Backend success The Year's work in modern language studies. renders cor
                 class="row"
               >
                 <a
-                  href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?url_ver=Z39.88-2004&rfr_id=info%3Axri%2Fsid%3Aprimo&rft_id=1817653&res_dat=xri%3Apqm&genre=journal&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal"
+                  href="http://proxy.library.nyu.edu/login?url=https://gateway.proquest.com/openurl?rfr_id=info%3Axri%2Fsid%3Aprimo&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&url_ver=Z39.88-2004&genre=journal&rft_id=1817653&res_dat=xri%3Apqm"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
