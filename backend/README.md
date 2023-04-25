@@ -261,10 +261,32 @@ go test ./...
 Update test golden files:
 
 ```
+cd backend/api/
+go test --update-golden-files ./...
+# Files in backend/api/testutils/testdata/golden/ have been updated. 
+```
+
+Note that recursively running all tests in _backend/_ with the custom `--update-golden-files`
+flag will cause `go test` to only run tests at the top level (and there are none).
+Thus, this will not work as one might expect:
+
+```
+# DO NOT DO THIS - IT WON'T UPDATE THE GOLDEN FILES
 cd backend/
 go test --update-golden-files ./...
-# Files ./testdata/server/golden/*.json have been updated. 
+# Files in backend/api/testutils/testdata/golden/ have NOT been updated.
+# The result instead is this:
+#
+# ?       ariadne [no test files]
 ```
+
+For details on the reasons for this potentially confusing behavior:
+
+* [cmd/go: go test quietly skips test if custom flag is defined \#36527](https://github.com/golang/go/issues/36527)
+* [cmd/go: "go test \-notrealflag \./\.\.\." fails silently if the current directory has no tests \#35097](https://github.com/golang/go/issues/35097)
+
+Therefore, always run `go test --update-golden-files` in the _api/_ directory.
+Currently `api` is the only package that processes the `--update-golden-files` flag.
 
 Run tests in a container:
 
