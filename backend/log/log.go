@@ -49,15 +49,15 @@ func init() {
 	slogger = newDefaultSlogger()
 }
 
-func Debug(args ...interface{}) {
+func Debug(args ...any) {
 	slogger.Debug(emptyMsg, args...)
 }
 
-func Error(args ...interface{}) {
+func Error(args ...any) {
 	slogger.Error(emptyMsg, args...)
 }
 
-func Fatal(args ...interface{}) {
+func Fatal(args ...any) {
 	Error(fmt.Sprint(args...))
 	os.Exit(1)
 }
@@ -99,7 +99,7 @@ func GetValidLevelOptionStrings() []string {
 	return orderedLevelOptionStrings
 }
 
-func Info(args ...interface{}) {
+func Info(args ...any) {
 	slogger.Info(emptyMsg, args...)
 }
 
@@ -127,7 +127,7 @@ func SetOutput(logWriter io.Writer) {
 	slogger = slog.New(handler)
 }
 
-func Warn(args ...interface{}) {
+func Warn(args ...any) {
 	slogger.Warn(emptyMsg, args...)
 }
 
