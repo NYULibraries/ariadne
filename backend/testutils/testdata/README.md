@@ -8,6 +8,8 @@
   the `primo` package code.  Obviously also a Primo service test case (see next section).
 * **corriere-fiorentino**: a simple, basic test case with a short response 
 * **editorial-cartoon**: `genre` is "unknown"
+* **efficiency-of-geospatial-technology_unescaped-semicolon**: `au` contains an
+unescaped semicolon, which is considered a bad request (HTTP 400).
 * **history-today**: ISSN-based search for which Ariadne was originally incorrectly
 constructing the SFX query due to testing only for the absence of `date` query param
 and not testing for the existence of the `date` param with an empty value.
