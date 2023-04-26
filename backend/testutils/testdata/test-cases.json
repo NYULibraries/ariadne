@@ -36,6 +36,12 @@
         "frontendTest": true
     },
     {
+        "key": "efficiency-of-geospatial-technology_unescaped-semicolon",
+        "name": "Efficiency of Geospatial Technology and Multi-Criteria Decision Analysis for Groundwater Potential Mapping in a Semi-Arid Region [unescaped semicolon in `au` query param]",
+        "queryString": "institution=01NYU_INST&vid=01NYU_INST:NYU&rft_val_fmt=info:ofi%2Ffmt:kev:mtx:journal&date=2022-01-01&issue=6&rft_id=info:eric%2F&rft_id=info:doi%2F10.3390%2Fw14060882&isbn=&spage=882&title=Water&atitle=Efficiency%20of%20Geospatial%20Technology%20and%20Multi-Criteria%20Decision%20Analysis%20for%20Groundwater%20Potential%20Mapping%20in%20a%20Semi-Arid%20Region&sid=ProQ:ProQ:aqualine&volume=14&url_ver=Z39.88-2004&issn=&au=Masoud,%20Ahmed%20M;Quoc%20Bao%20Pham;Alezabawy,%20Ahmed%20K;Abu%20El-Magd,%20Sherif%20A&genre=article&btitle=&jtitle=Water",
+        "frontendTest": false
+    },
+    {
         "key": "hamlet",
         "name": "Hamlet",
         "queryString": "?sid=&aulast=Shakespeare&aufirst=William&genre=book&title=The%20Oxford%20Shakespeare:%20Hamlet&date=1987&isbn=9780198129103",
