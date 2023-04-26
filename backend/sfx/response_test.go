@@ -98,6 +98,13 @@ func TestRemoveTarget(t *testing.T) {
 				t.Fatal(err)
 			}
 
+			// This is an error test case, where no SFX response is ever received
+			// due to failure to construct or execute a request to the SFX API.
+			// This test only makes sense with a valid SFX response.
+			if sfxFakeResponseFixture == "" {
+				continue
+			}
+
 			fakeSFXResponse := makeFakeSFXResponse(makeFakeHTTPResponse(sfxFakeResponseFixture))
 
 			// Generate stringified expected targets slice

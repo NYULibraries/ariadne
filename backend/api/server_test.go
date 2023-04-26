@@ -23,7 +23,11 @@ const elidedHost = "Host: [ELIDED]"
 const elidedDatestamp = "Date: [ELIDED]"
 const elidedTimestamp = "\"time\":\"[ELIDED]\""
 
-const loggingTestCaseKey = "contrived-frbr-group-test-case"
+// Lookup table for logging test cases
+var loggingTestCaseKeys = map[string]struct{}{
+	"contrived-frbr-group-test-case":                          {},
+	"efficiency-of-geospatial-technology_unescaped-semicolon": {},
+}
 
 var logOutputStringDatestampRegexp = regexp.MustCompile("Date:.*GMT")
 var logOutputStringHostRegexp = regexp.MustCompile("Host: 127.0.0.1:\\d*")
@@ -168,12 +172,12 @@ func TestResponseJSONRoute(t *testing.T) {
 }
 
 func TestLogging(t *testing.T) {
-	var loggingTestCase testutils.TestCase
+	var currentTestCase testutils.TestCase
 
 	// Set up SFX service fake
 	fakeSFXServer := httptest.NewServer(
 		http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-			sfxFakeResponse, err := testutils.GetSFXFakeResponse(loggingTestCase)
+			sfxFakeResponse, err := testutils.GetSFXFakeResponse(currentTestCase)
 			if err != nil {
 				t.Fatal(err)
 			}
@@ -205,9 +209,9 @@ func TestLogging(t *testing.T) {
 			//       to the query string of the ISBN search request.
 			var primoFakeResponse string
 			if params.Get(primo.FRBRMemberSearchQueryParamName) == "" {
-				primoFakeResponse, err = testutils.GetPrimoFakeResponseISBNSearch(loggingTestCase)
+				primoFakeResponse, err = testutils.GetPrimoFakeResponseISBNSearch(currentTestCase)
 			} else {
-				primoFakeResponse, err = testutils.GetPrimoFakeResponseFRBRMemberSearch(loggingTestCase)
+				primoFakeResponse, err = testutils.GetPrimoFakeResponseFRBRMemberSearch(currentTestCase)
 			}
 
 			if err != nil {
@@ -227,77 +231,78 @@ func TestLogging(t *testing.T) {
 	router := NewRouter()
 
 	for _, testCase := range testutils.TestCases {
-		if testCase.Key == loggingTestCaseKey {
-			loggingTestCase = testCase
-			break
+		if _, ok := loggingTestCaseKeys[testCase.Key]; !ok {
+			continue
 		}
-	}
 
-	for _, level := range []log.Level{log.LevelDebug, log.LevelInfo} {
-		// Needed for golden file stuff
-		levelString := log.GetLevelOptionStringForLogLevel(level)
+		currentTestCase = testCase
 
-		// Set logging level and redirect output to a buffer.
-		log.SetLevel(level)
-		var logOutput bytes.Buffer
-		logOutputWriter := bufio.NewWriter(&logOutput)
-		log.SetOutput(logOutputWriter)
+		for _, level := range []log.Level{log.LevelDebug, log.LevelInfo} {
+			// Needed for golden file stuff
+			levelString := log.GetLevelOptionStringForLogLevel(level)
 
-		t.Run(loggingTestCase.Name, func(t *testing.T) {
-			request, err := http.NewRequest(
-				"GET",
-				"/v0/?"+loggingTestCase.QueryString,
-				nil,
-			)
-			if err != nil {
-				t.Fatalf("Error creating new HTTP request: %s", err)
-			}
+			// Set logging level and redirect output to a buffer.
+			log.SetLevel(level)
+			var logOutput bytes.Buffer
+			logOutputWriter := bufio.NewWriter(&logOutput)
+			log.SetOutput(logOutputWriter)
 
-			// We're not recording any responses at the moment, but we need to pass
-			// in a http.ResponseWriter anyway to router.ServeHTTP, so why not make
-			// it a recorder.
-			responseRecorder := httptest.NewRecorder()
-			router.ServeHTTP(responseRecorder, request)
-
-			err = logOutputWriter.Flush()
-			if err != nil {
-				t.Fatalf("logOutputWriter.Flush() error: %s", err)
-			}
-
-			actualLogOutputString := normalizeLogOutputString(logOutput.String())
-
-			if *updateGoldenFiles {
-				err = updateLogOutputGoldenFile(loggingTestCase, levelString, actualLogOutputString)
+			t.Run(testCase.Name, func(t *testing.T) {
+				request, err := http.NewRequest(
+					"GET",
+					"/v0/?"+testCase.QueryString,
+					nil,
+				)
 				if err != nil {
-					t.Fatalf("Error updating golden file: %s", err)
+					t.Fatalf("Error creating new HTTP request: %s", err)
 				}
-			}
 
-			goldenValue, err := testutils.GetLogOutputGoldenValue(loggingTestCase, levelString)
-			if err != nil {
-				t.Fatalf("Error retrieving golden value for test case \"%s\": %s",
-					loggingTestCase.Name, err)
-			}
+				// We're not recording any responses at the moment, but we need to pass
+				// in a http.ResponseWriter anyway to router.ServeHTTP, so why not make
+				// it a recorder.
+				responseRecorder := httptest.NewRecorder()
+				router.ServeHTTP(responseRecorder, request)
 
-			if actualLogOutputString != goldenValue {
-				// We don't programmatically diff an actual file vs. the golden file
-				// because the golden file contents are not normalized, but we do
-				// nevertheless want to write out an actual file in case the user
-				// wants to do a manual diff themselves.
-				err := writeActualLogOutputToTmp(loggingTestCase, actualLogOutputString)
+				err = logOutputWriter.Flush()
 				if err != nil {
-					t.Fatalf("Error writing actual temp file for test case \"%s\": %s",
-						loggingTestCase.Name, err)
+					t.Fatalf("logOutputWriter.Flush() error: %s", err)
 				}
-				actualFile := tmpLogOutputFile(loggingTestCase)
-				goldenFile := testutils.LogOutputGoldenFile(loggingTestCase, levelString)
-				// We pass in the file paths because util.DiffStrings prints labels
-				// in the output header, and we want to use the paths for these labels.
-				diff := util.DiffStrings(goldenFile, goldenValue, actualFile, actualLogOutputString)
 
-				t.Errorf("golden and actual values do not match:\n%s\n", diff)
-			}
-		})
+				actualLogOutputString := normalizeLogOutputString(logOutput.String())
+
+				if *updateGoldenFiles {
+					err = updateLogOutputGoldenFile(testCase, levelString, actualLogOutputString)
+					if err != nil {
+						t.Fatalf("Error updating golden file: %s", err)
+					}
+				}
+
+				goldenValue, err := testutils.GetLogOutputGoldenValue(testCase, levelString)
+				if err != nil {
+					t.Fatalf("Error retrieving golden value for test case \"%s\": %s",
+						testCase.Name, err)
+				}
+
+				if actualLogOutputString != goldenValue {
+					// We don't programmatically diff an actual file vs. the golden file
+					// because the golden file contents are not normalized, but we do
+					// nevertheless want to write out an actual file in case the user
+					// wants to do a manual diff themselves.
+					err := writeActualLogOutputToTmp(testCase, actualLogOutputString)
+					if err != nil {
+						t.Fatalf("Error writing actual temp file for test case \"%s\": %s",
+							testCase.Name, err)
+					}
+					actualFile := tmpLogOutputFile(testCase)
+					goldenFile := testutils.LogOutputGoldenFile(testCase, levelString)
+					// We pass in the file paths because util.DiffStrings prints labels
+					// in the output header, and we want to use the paths for these labels.
+					diff := util.DiffStrings(goldenFile, goldenValue, actualFile, actualLogOutputString)
+
+					t.Errorf("golden and actual values do not match:\n%s\n", diff)
+				}
+			})
+		}
 	}
 }
 

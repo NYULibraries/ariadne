@@ -5,6 +5,16 @@ import (
 	"strings"
 )
 
+type ariadneAPIErrorResponse struct {
+	Status int      `json:"status"`
+	Body   Response `json:"body"`
+}
+
+type ariadneAPIErrorResponseLogEntry struct {
+	sharedLogEntryFields
+	Response ariadneAPIErrorResponse `json:"response"`
+}
+
 type ariadneAPIResponse struct {
 	Type        string   `json:"type"`
 	APIResponse Response `json:"apiResponse"`
@@ -90,13 +100,29 @@ func getSharedLogEntryFields(queryString string) sharedLogEntryFields {
 		queryString = strings.TrimPrefix(queryString, prefixToTrim)
 	}
 
-	// We are assuming errors are not possible, since bad query strings are caught
-	// early.
+	// We don't really care if `url.ParseQuery` returns an error or not.  If it
+	// does return an error we are likely dealing with a bad request, in which
+	// case we would expect some params to get lost (for example, if a query param
+	// value contained a semicolon), but there would still likely be some params
+	// that we would be useful to have in the log entry for querying and for easy
+	// reading.
 	params, _ := url.ParseQuery(queryString)
 
 	return sharedLogEntryFields{
 		QueryString: queryString,
 		QueryParams: params,
+	}
+}
+
+func makeAriadneAPIErrorResponseLogEntry(queryString string, err error, httpStatusCode int, apiResponse Response) ariadneAPIErrorResponseLogEntry {
+	sharedLogEntryFields := getSharedLogEntryFields(queryString)
+
+	return ariadneAPIErrorResponseLogEntry{
+		sharedLogEntryFields: sharedLogEntryFields,
+		Response: ariadneAPIErrorResponse{
+			Status: httpStatusCode,
+			Body:   apiResponse,
+		},
 	}
 }
 
