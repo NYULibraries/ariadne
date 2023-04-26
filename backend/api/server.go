@@ -266,6 +266,10 @@ func recoverWrap(handler http.Handler) http.Handler {
 				}
 				responseJSON, _ := json.MarshalIndent(response, "", "    ")
 
+				ariadneAPIErrorResponseLogEntry :=
+					makeAriadneAPIErrorResponseLogEntry(r.URL.RawQuery, err, http.StatusBadRequest, response)
+				log.Error(MessageKey, err.Error(), AriadneKey, ariadneAPIErrorResponseLogEntry)
+
 				http.Error(w, string(responseJSON), http.StatusInternalServerError)
 			}
 		}()
