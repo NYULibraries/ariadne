@@ -30,7 +30,7 @@ func ResolverHandler(w http.ResponseWriter, r *http.Request) {
 
 	sfxResponse, err := getSFXResponse(r.URL.RawQuery)
 	if err != nil {
-		handleBadRequestError(err, w, err.Error())
+		handleBadRequestError(err, r, w, err.Error())
 		return
 	}
 
@@ -115,15 +115,17 @@ func getSFXResponse(queryString string) (*sfx.SFXResponse, error) {
 	return sfx.Do(sfxRequest)
 }
 
-func handleBadRequestError(err error, w http.ResponseWriter, message string) {
-	log.Error(MessageKey, err.Error())
-
+func handleBadRequestError(err error, r *http.Request, w http.ResponseWriter, message string) {
 	response := Response{
 		Errors:  []string{message},
 		Found:   false,
 		Records: []Record{},
 	}
 	responseJSON, _ := json.MarshalIndent(response, "", "    ")
+
+	ariadneAPIErrorResponseLogEntry :=
+		makeAriadneAPIErrorResponseLogEntry(r.URL.RawQuery, err, http.StatusBadRequest, response)
+	log.Error(MessageKey, err.Error(), AriadneKey, ariadneAPIErrorResponseLogEntry)
 
 	http.Error(w, string(responseJSON), http.StatusBadRequest)
 }

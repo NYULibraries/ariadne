@@ -5,6 +5,16 @@ import (
 	"strings"
 )
 
+type ariadneAPIErrorResponse struct {
+	Status int      `json:"status"`
+	Body   Response `json:"body"`
+}
+
+type ariadneAPIErrorResponseLogEntry struct {
+	sharedLogEntryFields
+	Response ariadneAPIErrorResponse `json:"response"`
+}
+
 type ariadneAPIResponse struct {
 	Type        string   `json:"type"`
 	APIResponse Response `json:"apiResponse"`
@@ -97,6 +107,18 @@ func getSharedLogEntryFields(queryString string) sharedLogEntryFields {
 	return sharedLogEntryFields{
 		QueryString: queryString,
 		QueryParams: params,
+	}
+}
+
+func makeAriadneAPIErrorResponseLogEntry(queryString string, err error, httpStatusCode int, apiResponse Response) ariadneAPIErrorResponseLogEntry {
+	sharedLogEntryFields := getSharedLogEntryFields(queryString)
+
+	return ariadneAPIErrorResponseLogEntry{
+		sharedLogEntryFields: sharedLogEntryFields,
+		Response: ariadneAPIErrorResponse{
+			Status: httpStatusCode,
+			Body:   apiResponse,
+		},
 	}
 }
 
