@@ -106,5 +106,11 @@
         "name": "The Year's work in modern language studies.",
         "queryString": "umlaut.institution=NYU%C2%A8aut.institution%3DNYU&umlaut.referent_id=19185671&url_ver=Z39.88-2004&url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&ctx_ver=Z39.88-2004&ctx_tim=2022-11-10T10%3A42%3A37-05%3A00&ctx_id=&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rft.btitle=The+Year%27s+work+in+modern+language+studies.&rft.eissn=2222-4297&rft.genre=journal&rft.issn=00844152&rft.jtitle=The+Year%27s+work+in+modern+language+studies&rft.language=eng&rft.lccn=+++31032540+&rft.object_id=110978977977146&rft.oclcnum=1770339&rft.place=London+%5Betc.%5D&rft.pub=Modern+Humanities+Research+Association+%5Betc.%5D&rft.stitle=YEARS+WORK+IN+MODERN+LANGUAGE+STUDIES&rft.title=The+Year%27s+work+in+modern+language+studies.&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft_id=info%3Alccn%2F31032540&rfr_id=info%3Asid%2Fsfxit.com%3Acitation",
         "frontendTest": true
+    },
+    {
+        "key": "mattityahu-strashun",
+        "name": "Mattityahu Strashun",
+        "queryString": "sid=f689b8dd-b6be-4b48-94ad-dc96a6765d37@redis&vid=0&sl=smartlink&st=ilslink_new&sv=sdbn%253Dedsram%2526pbt%253DBook%2526issn%253D16146492%2526ttl%253DPaRDeS%25253B%252520Zeitschrift%252520der%252520Vereinigung%252520f%C3%BCr%252520J%C3%BCdische%252520Studien%2526stp%253DC%2526asi%253DY%2526ldc%253DCheck%252520for%252520full%252520text%2526lna%253DSFX%252520Link%252520Resolver%252520%252528all%252520content%252529%2526lca%253Dother%2526lo_an%253Dedsram.990006111490705171&su=http%3A%2F%2Fgetit.library.nyu.edu%2Fresolve%3Fgenre%3Darticle%26isbn%3D%26issn%3D16146492%26title%3DPaRDeS%3B%20Zeitschrift%20der%20Vereinigung%20f%C3%BCr%20J%C3%BCdische%20Studien%26volume%3D24%26issue%3D%26date%3D20180101%26atitle%3DMattityahu%2520Strashun%2520%25281817-1885%2529%2520and%2520his%2520relationship%2520with%2520the%2520early%2520founders%2520of%2520%2527Wissenschaft%2520des%2520Judentums%2527%26aulast%3DBrodt%CC%A3%2C%20Eli%CA%BBezer%20Yehudah%20ben%20Tsevi%20Ya%CA%BBak%CC%A3ov%26spage%3D27%26sid%3DEBSCO%3ARAMBI%26pid%3DBrodt%CC%A3%2C%20Eli%CA%BBezer%20Yehudah%20ben%20Tsevi%20Ya%CA%BBak%CC%A3ovedsram.99000611149070517120180101RAMBI",
+        "frontendTest": true
     }
 ]

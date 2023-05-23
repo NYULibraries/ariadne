@@ -1,0 +1,16 @@
+{
+    "errors": [],
+    "found": false,
+    "records": [
+        {
+            "citation_supplemental": {},
+            "links": [
+                {
+                    "display_name": "Request via Interlibrary Loan",
+                    "url": "http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?genre=book\u0026sid=DEFAULT%20(Via%20SFX)",
+                    "coverage_text": ""
+                }
+            ]
+        }
+    ]
+}

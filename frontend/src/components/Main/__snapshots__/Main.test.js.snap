@@ -3255,6 +3255,206 @@ exports[`Backend success History Today renders correctly 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Backend success Mattityahu Strashun renders correctly 1`] = `
+<DocumentFragment>
+  <main>
+    <div
+      class="container"
+    >
+      <div
+        class="row row-cols-md-12"
+      >
+        <div
+          class="col-md-8"
+        >
+          <div
+            class="jumbotron"
+          >
+            <div
+              class="container text-left"
+            >
+              <h1>
+                NYU GetIt Results:
+              </h1>
+              <div>
+                <div
+                  class="citation-container"
+                >
+                  <p />
+                  <div
+                    class="citation-info"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="mt-3 mb-3"
+          >
+             
+            <div
+              aria-labelledby="stable-link-label"
+            >
+              <button
+                aria-label="stable-link-label"
+                class="stable-link-button  "
+                id="stable-link-label"
+              >
+                Copy a stable link to this page
+              </button>
+              <div
+                aria-live="polite"
+                class="aria-live"
+              />
+            </div>
+          </div>
+          <ul
+            class="list-group"
+          >
+            <li
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              Resource Not Available Through NYU Libraries
+            </li>
+            <li
+              class="list-group-item list-group-item-action flex-column border-0"
+            >
+              <div
+                class="row"
+              >
+                <a
+                  href="http://proxy.library.nyu.edu/login?url=https://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?genre=book&sid=DEFAULT%20(Via%20SFX)"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Request via Interlibrary Loan
+                </a>
+                <p />
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="col-md-4"
+        >
+          <aside
+            title="ask-librarian"
+          >
+            <div
+              class="ask-librarian"
+            >
+              <h2>
+                Need Help?
+              </h2>
+              <h3>
+                Ask a Librarian
+              </h3>
+              <div>
+                <p>
+                  Use 
+                  <a
+                    href="https://library.nyu.edu/ask/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    Ask a Librarian
+                  </a>
+                   or the "Chat with Us" icon at the bottom right corner for any question you have about the Libraries' services.
+                </p>
+                <p>
+                  Visit our 
+                  <a
+                    href="https://guides.nyu.edu/online-tutorials/finding-sources"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    online tutorials
+                  </a>
+                   for tips on searching the catalog and getting library resources.
+                </p>
+                <h3>
+                  Additional Resources
+                </h3>
+                <ul>
+                  <li>
+                    Use 
+                    <a
+                      href="https://ezborrow.reshare.indexdata.com/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      EZBorrow
+                    </a>
+                     or 
+                    <a
+                      href="https://library.nyu.edu/services/borrowing/from-non-nyu-libraries/interlibrary-loan/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      InterLibrary Loan (ILL)
+                    </a>
+                     for materials unavailable at NYU
+                  </li>
+                  <li>
+                    Discover subject specific resources using 
+                    <a
+                      href="http://guides.nyu.edu"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      expert curated research guides
+                    </a>
+                  </li>
+                  <li>
+                    Explore the 
+                    <a
+                      href="https://library.nyu.edu/services/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      complete list of library services
+                    </a>
+                  </li>
+                  <li>
+                    Search 
+                    <a
+                      href="https://www.worldcat.org/search?qt=worldcat_org_all"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      WorldCat
+                    </a>
+                     for items in nearby libraries
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_a30SvEFe8f1yXQh"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Problem with an e-resource? Fill out this form
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://nyu.qualtrics.com/jfe/form/SV_blQ3OFOew9vl6Pb?Source=NYU"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Submit feedback about GetIt
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+</DocumentFragment>
+`;
+
 exports[`Backend success Modelling Modular Living: Furniture and Life Magazine and Interior Design in 1980s China renders correctly 1`] = `
 <DocumentFragment>
   <main>
