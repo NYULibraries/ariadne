@@ -14,6 +14,7 @@ chatWidget.run();
 
 export const renderChatWidget = () => {
     const chatContainer = document.querySelector('.chat-container');
+    chatContainer.id = 'chat_widget';
     chatContainer.innerHTML = '';
 
     if (!showChat) {

@@ -44,7 +44,6 @@ export default class AskALibrarianWidget {
     }
 }
 
-// window.AskALibrarianWidget = AskALibrarianWidget;
 
 
 

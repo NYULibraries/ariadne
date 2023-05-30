@@ -5,7 +5,7 @@
     border-radius: 3px 3px 0 0;
 }
 
-.chat-icon {
+#chat_widget .chat-icon {
     width: 24px;
     height: 24px;
     vertical-align: middle;
@@ -33,6 +33,7 @@
     padding: 10px 10px 8px;
     width: 131.38px;
     height: 42px;
+    background-color: #57068c;
     color: #e0d5e8;
     line-height: normal;
     white-space: nowrap;
@@ -48,17 +49,17 @@
     }
 }
 
-.chat-button:hover {
+#chat_widget .chat-button:hover {
     background-color: #6c07ae;
     color: #fff;
 }
 
-.chat-frame-wrap {
+#chat_widget .chat-frame-wrap {
     position: relative;
     right: 10px;
 }
 
-.chat-close {
+#chat_widget .chat-close {
     position: absolute;
     top: -15px;
     right: -5px;
@@ -75,7 +76,7 @@
 }
 
 
-.libraryh3lp iframe {
+#chat_widget .libraryh3lp iframe {
     width: 300px !important;
     height: 280px !important;
     vertical-align: bottom;
