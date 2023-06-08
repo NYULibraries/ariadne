@@ -1,9 +1,8 @@
 import './App.css';
 
 import Banner from './components/Banner/Banner';
-import ChatWidget from './components/ChatWidget/ChatWidget';
-import PageFooter from './components/Footer/Footer';
 import Main from './components/Main/Main';
+import PageFooter from './components/Footer/Footer';
 
 const App = () => {
   return (
@@ -11,7 +10,6 @@ const App = () => {
       <Banner />
       <Main />
       <PageFooter />
-      <ChatWidget />
     </div>
   );
 };

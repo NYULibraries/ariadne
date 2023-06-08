@@ -23,7 +23,7 @@ export const renderChatWidget = () => {
         button.onclick = handleChatToggle;
 
         const img = document.createElement('img');
-        img.src = '/chat-icon.svg';
+        img.src = 'https://chatwidgetuniversal2.s3.amazonaws.com/dist/chat-icon.svg';
         img.alt = 'Chat-Symbol.';
         img.className = 'chat-icon';
 
