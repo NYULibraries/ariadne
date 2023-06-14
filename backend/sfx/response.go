@@ -171,7 +171,7 @@ func newSFXResponse(httpResponse *http.Response) (*SFXResponse, error) {
 	}
 
 	if xmlResponseBody.ContextObject == nil {
-		return sfxResponse, fmt.Errorf("could not identify context object in response")
+		return sfxResponse, fmt.Errorf("could not identify context object in response XML: %s", sfxResponse.XML)
 	}
 
 	sfxResponse.XMLResponseBody = xmlResponseBody
