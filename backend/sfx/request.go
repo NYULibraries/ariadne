@@ -17,7 +17,7 @@ func (c SFXRequest) do() (*SFXResponse, error) {
 	client := http.Client{}
 	response, err := client.Do(&c.HTTPRequest)
 	if err != nil {
-		return &SFXResponse{}, fmt.Errorf("could not do request to SFX server: %v", err)
+		return &SFXResponse{}, fmt.Errorf("Could not do request to SFX server: %v", err)
 	}
 	defer response.Body.Close()
 
@@ -39,7 +39,7 @@ func NewSFXRequest(queryString string) (*SFXRequest, error) {
 
 	httpRequest, err := newSFXHTTPRequest(queryStringValues)
 	if err != nil {
-		return sfxRequest, fmt.Errorf("could not create new SFX request: %v", err)
+		return sfxRequest, fmt.Errorf("Could not create new SFX request: %v", err)
 	}
 	// NOTE: This appears to drain httpRequest.Body, so when getting the dumped
 	// HTTP request later, make sure to get it from sfxRequest.HTTPRequest
@@ -100,7 +100,7 @@ func newSFXHTTPRequest(queryStringValues url.Values) (*http.Request, error) {
 	queryURL := sfxURL + "?" + params.Encode()
 	request, err := http.NewRequest("GET", queryURL, nil)
 	if err != nil {
-		return request, fmt.Errorf("could not initialize request to SFX server: %v", err)
+		return request, fmt.Errorf("Could not initialize request to SFX server: %v", err)
 	}
 
 	return request, nil

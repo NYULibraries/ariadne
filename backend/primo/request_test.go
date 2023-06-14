@@ -47,7 +47,7 @@ Host: bobcat.library.nyu.edu`,
 	{
 		name:                                "Query string without `isbn` param",
 		expectedDumpedISBNSearchHTTPRequest: "",
-		expectedError:                       errors.New("could not create new Primo request: query string params do not contain required ISBN param"),
+		expectedError:                       errors.New("Could not create new Primo request: query string params do not contain required ISBN param"),
 		expectedQueryStringValues: url.Values{
 			"param1": {"1"},
 			"param2": {"2"},
@@ -58,7 +58,7 @@ Host: bobcat.library.nyu.edu`,
 	{
 		name:                                "Empty query string",
 		expectedDumpedISBNSearchHTTPRequest: "",
-		expectedError:                       errors.New("could not create new Primo request: query string params do not contain required ISBN param"),
+		expectedError:                       errors.New("Could not create new Primo request: query string params do not contain required ISBN param"),
 		expectedQueryStringValues:           url.Values{},
 		queryString:                         "",
 	},

@@ -26,13 +26,13 @@ func (primoRequest PrimoRequest) do() (*PrimoResponse, error) {
 	client := http.Client{}
 	httpResponse, err := client.Do(&primoRequest.ISBNSearchHTTPRequest)
 	if err != nil {
-		return &PrimoResponse{}, fmt.Errorf("could not do request to Primo server: %v", err)
+		return &PrimoResponse{}, fmt.Errorf("Could not do request to Primo server: %v", err)
 	}
 	defer httpResponse.Body.Close()
 
 	isbnSearchResponse, err := primoResponse.addHTTPResponseData(httpResponse)
 	if err != nil {
-		return primoResponse, fmt.Errorf("error adding to Primo response: %v", err)
+		return primoResponse, fmt.Errorf("Error adding to Primo response: %v", err)
 	}
 
 	isbn := getISBN(primoRequest.QueryStringValues)
@@ -59,7 +59,7 @@ func NewPrimoRequest(queryString string) (*PrimoRequest, error) {
 
 	httpRequest, err := newPrimoISBNSearchHTTPRequest(queryStringValues)
 	if err != nil {
-		return primoRequest, fmt.Errorf("could not create new Primo request: %v", err)
+		return primoRequest, fmt.Errorf("Could not create new Primo request: %v", err)
 	}
 	// NOTE: This appears to drain httpRequest.Body, so when getting the dumped
 	// HTTP request later, make sure to get it from primoRequest.ISBNSearchHTTPRequest
@@ -133,7 +133,7 @@ func newPrimoHTTPRequest(isbn string, frbrGroupID *string) (*http.Request, error
 
 	request, err := http.NewRequest("GET", queryURL, nil)
 	if err != nil {
-		return request, fmt.Errorf("could not initialize request to Primo server: %v", err)
+		return request, fmt.Errorf("Could not initialize request to Primo server: %v", err)
 	}
 
 	return request, nil

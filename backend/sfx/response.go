@@ -154,13 +154,13 @@ func newSFXResponse(httpResponse *http.Response) (*SFXResponse, error) {
 
 	dumpedHTTPResponse, err := httputil.DumpResponse(httpResponse, true)
 	if err != nil {
-		return sfxResponse, fmt.Errorf("could not dump HTTP response")
+		return sfxResponse, fmt.Errorf("Could not dump HTTP response: %v", err)
 	}
 	sfxResponse.DumpedHTTPResponse = string(dumpedHTTPResponse)
 
 	body, err := io.ReadAll(httpResponse.Body)
 	if err != nil {
-		return sfxResponse, fmt.Errorf("could not read response from SFX server: %v", err)
+		return sfxResponse, fmt.Errorf("Could not read response from SFX server: %v", err)
 	}
 
 	sfxResponse.XML = string(body)
@@ -171,14 +171,14 @@ func newSFXResponse(httpResponse *http.Response) (*SFXResponse, error) {
 	}
 
 	if xmlResponseBody.ContextObject == nil {
-		return sfxResponse, fmt.Errorf("could not identify context object in response")
+		return sfxResponse, fmt.Errorf("Could not identify context object in response XML: %s", sfxResponse.XML)
 	}
 
 	sfxResponse.XMLResponseBody = xmlResponseBody
 
 	json, err := json.MarshalIndent(xmlResponseBody, "", "    ")
 	if err != nil {
-		return sfxResponse, fmt.Errorf("could not marshal SFX response body to JSON: %v", err)
+		return sfxResponse, fmt.Errorf("Could not marshal SFX response body to JSON: %v", err)
 	}
 
 	sfxResponse.JSON = string(json)
