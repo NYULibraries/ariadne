@@ -61,7 +61,7 @@ func TestNewSFXResponse(t *testing.T) {
 	}{
 		{"Good SFX response", makeFakeHTTPResponse(dummyGoodXMLResponse), dummyJSONResponse, nil},
 		{"Bad SFX response", makeFakeHTTPResponse(dummyBadXMLResponse), "", errors.New("XML syntax error on line 2: unexpected EOF")},
-		{"Error SFX response", makeFakeHTTPResponse(dummyErrorXMLResponse), "", errors.New(fmt.Sprintf("could not identify context object in response XML: %s", dummyErrorXMLResponse))},
+		{"Error SFX response", makeFakeHTTPResponse(dummyErrorXMLResponse), "", errors.New(fmt.Sprintf("Could not identify context object in response XML: %s", dummyErrorXMLResponse))},
 	}
 
 	for _, testCase := range testCases {
