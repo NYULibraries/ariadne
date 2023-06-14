@@ -65,14 +65,14 @@ func (primoResponse *PrimoResponse) addHTTPResponseData(httpResponse *http.Respo
 
 	dumpedHTTPResponse, err := httputil.DumpResponse(httpResponse, true)
 	if err != nil {
-		return APIResponse{}, fmt.Errorf("could not dump HTTP response")
+		return APIResponse{}, fmt.Errorf("Could not dump HTTP response")
 	}
 
 	primoResponse.DumpedHTTPResponses = append(primoResponse.DumpedHTTPResponses, string(dumpedHTTPResponse))
 
 	body, err := io.ReadAll(httpResponse.Body)
 	if err != nil {
-		return APIResponse{}, fmt.Errorf("could not read response from Primo server: %v", err)
+		return APIResponse{}, fmt.Errorf("Could not read response from Primo server: %v", err)
 	}
 
 	var apiResponse APIResponse
@@ -120,7 +120,7 @@ func (primoResponse *PrimoResponse) getDocsForFRBRGroup(isbn, frbrGroupID string
 
 	httpRequest, err := newPrimoHTTPRequest(isbn, &frbrGroupID)
 	if err != nil {
-		return docs, fmt.Errorf("could not create new FRBR group Primo request: %v", err)
+		return docs, fmt.Errorf("Could not create new FRBR group Primo request: %v", err)
 	}
 
 	// NOTE: This appears to drain httpRequest.Body, but currently these requests
@@ -138,13 +138,13 @@ func (primoResponse *PrimoResponse) getDocsForFRBRGroup(isbn, frbrGroupID string
 	client := http.Client{}
 	httpResponse, err := client.Do(httpRequest)
 	if err != nil {
-		return docs, fmt.Errorf("could not do FRBR group request to Primo server: %v", err)
+		return docs, fmt.Errorf("Could not do FRBR group request to Primo server: %v", err)
 	}
 	defer httpResponse.Body.Close()
 
 	apiResponse, err := primoResponse.addHTTPResponseData(httpResponse)
 	if err != nil {
-		return docs, fmt.Errorf("error adding to Primo response: %v", err)
+		return docs, fmt.Errorf("Error adding to Primo response: %v", err)
 	}
 
 	return apiResponse.Docs, nil
@@ -158,7 +158,7 @@ func (primoResponse *PrimoResponse) getLinks(isbn string, isbnSearchResponse API
 			docsForFRBRGroup, err :=
 				primoResponse.getDocsForFRBRGroup(isbn, doc.PNX.Facets.FRBRGroupID[0])
 			if err != nil {
-				return fmt.Errorf("error fetching FRBR group links: %v", err)
+				return fmt.Errorf("Error fetching FRBR group links: %v", err)
 			}
 			// Only collect links from docs that match the user-specified ISBN.
 			for _, frbrGroupDoc := range docsForFRBRGroup {
