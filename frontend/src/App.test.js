@@ -2,9 +2,8 @@ import { cleanup, render } from '@testing-library/react';
 
 import App from './App';
 import Banner from './components/Banner/Banner';
-import ChatWidget from './components/ChatWidget/ChatWidget';
-import PageFooter from './components/Footer/Footer';
 import Main from './components/Main/Main';
+import PageFooter from './components/Footer/Footer';
 
 afterEach(cleanup);
 
@@ -24,7 +23,4 @@ test('renders the PageFooter component', () => {
   render(<PageFooter />);
 });
 
-test('renders the ChatWidget component', () => {
-  render(<ChatWidget />);
-});
 
