@@ -31,10 +31,20 @@ root.render(
 
 // chatwidget-embed
 (function () {
+  var env = process.env.REACT_APP_ENV;
+  var src;
+
+  if (env === 'production') {
+    src = 'https://cdn.library.nyu.edu/chatwidget-embed/index.min.js';
+  } else {
+    src = 'https://cdn-dev.library.nyu.edu/chatwidget-embed/index.min.js';
+  }
+
   var s = document.createElement('script');
   s.type = 'text/javascript';
   s.async = true;
-  s.src = 'https://cdn-dev.library.nyu.edu/chatwidget-embed/index.min.js';
+  s.src = src;
+
   var x = document.getElementsByTagName('script')[0];
   x.parentNode.insertBefore(s, x);
 })();
