@@ -192,7 +192,7 @@ h6 {
             margin-bottom: 26px;
         }
 
-        /* chatWidget */
+        /* ChatWidget  CSS*/
 
         .chat-tab {
             color: #e0d5e8;
@@ -210,22 +210,17 @@ h6 {
             min-height: 24px;
         }
 
-        #app {
+        .chat-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
             position: fixed;
             bottom: 0px;
             right: 10px;
         }
 
-        /* ChatWidget.css */
-
-        #app .chat-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-        }
-
         /* chatwidget button styles */
-        #app .chat-button {
+        #chat_widget .chat-button {
             padding: 10px 10px 8px;
             width: 131.38px;
             height: 42px;
@@ -245,11 +240,16 @@ h6 {
         }
 
         @media screen and (max-width: 930px) {
-            #app .chat-button {
+            #chat_widget .chat-button {
                 width: 100%;
                 max-width: none;
                 right: 0;
                 border-radius: 0;
+            }
+
+            .chat-frame-wrap {
+                position: relative;
+                right: 10px;
             }
         }
 
@@ -258,11 +258,6 @@ h6 {
             color: #fff;
         }
 
-
-        /* .chat-frame-wrap {
-  position: relative;
-  right: 10px;
-} */
 
         .chat-close {
             position: absolute;
@@ -282,7 +277,7 @@ h6 {
 
 
         @media only screen and (max-width: 930px) {
-            #app {
+            .chat-container {
                 width: 100%;
                 right: 0;
                 border-radius: 0;
@@ -13368,12 +13363,9 @@ h6 {
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <!-- This is the root div where the 'chatwidget-embed' will be installed. -->
-    <div id="app">
-        <div class="chat-container" id="chat_widget"><button class="button ss-chat chat-button"><img src="https://cdn-dev.library.nyu.edu/chatwidget-embed/chat-icon.svg" alt="Chat-Symbol." class="chat-icon">Chat with us</button></div>
-    </div>
 
 
+    <div class="chat-container" id="chat_widget"><button class="button ss-chat chat-button"><img src="https://cdn-dev.library.nyu.edu/chatwidget-embed/chat-icon.svg" alt="Chat-Symbol." class="chat-icon">Chat with us</button></div>
 </body>
 
 </html>
