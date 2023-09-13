@@ -6,6 +6,7 @@
     <link rel="icon" href="https://cdn.library.nyu.edu/images/favicon.ico">
     <link rel="stylesheet" type="text/css" async="" href="//cloud.typography.com/7436432/789146/css/fonts.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" type="text/css" href="https://cdn.library.nyu.edu/chatwidget-embed/index.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#000000">
 
@@ -194,31 +195,6 @@ h6 {
 
         /* chatWidget-embed styles */
 
-        .chat-tab {
-            color: #e0d5e8;
-            padding: 10px 10px 8px;
-            font-size: 14px;
-            border-radius: 3px 3px 0 0;
-        }
-
-        .chat-icon {
-            width: 24px;
-            height: 24px;
-            vertical-align: middle;
-            margin-right: 5px;
-            min-width: 24px;
-            min-height: 24px;
-        }
-
-        .chat-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-            position: fixed;
-            bottom: 0px;
-            right: 10px;
-        }
-
         /* chatwidget button styles */
         #chat_widget .chat-button {
             padding: 10px 10px 8px;
@@ -228,15 +204,6 @@ h6 {
             line-height: normal;
             white-space: nowrap;
             box-sizing: border-box;
-        }
-
-        /* open chat styles */
-        .libraryh3lp iframe {
-            width: 300px !important;
-            height: 280px !important;
-            vertical-align: bottom;
-            border-radius: 3px 3px 0 0;
-            border: none !important;
         }
 
         @media screen and (max-width: 930px) {
@@ -253,25 +220,12 @@ h6 {
             }
         }
 
-        .chat-button:hover {
-            background-color: #6c07ae;
-            color: #fff;
-        }
 
-
-        .chat-close {
+        .close-icon {
             position: absolute;
-            top: -15px;
-            right: -5px;
-            border-radius: 50%;
-            width: 24px;
-            height: 24px;
-            line-height: 24px;
-            text-align: center;
-            background: #f5f7fa;
-            border: 1px solid rgb(192, 192, 192);
-            border: 0 none;
-            cursor: pointer;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             font-size: 16px;
         }
 
