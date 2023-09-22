@@ -195,7 +195,7 @@ h6 {
         /* chatWidget-embed styles */
 
         /* chatwidget button styles */
-        #chat_widget .chat-button {
+        #nyulibraries_chat_widget .nyulibraries-chat-button {
             padding: 10px 10px 8px;
             width: 131.38px;
             height: 42px;
@@ -206,21 +206,21 @@ h6 {
         }
 
         @media screen and (max-width: 930px) {
-            #chat_widget .chat-button {
+            #nyulibraries_chat_widget .nyulibraries-chat-button {
                 width: 100%;
                 max-width: none;
                 right: 0;
                 border-radius: 0;
             }
 
-            .chat-frame-wrap {
+            .nyulibraries-chat-frame-wrap {
                 position: relative;
                 right: 10px;
             }
         }
 
 
-        .close-icon {
+        .nyulibraries-close-icon {
             position: absolute;
             top: 45%;
             left: 50%;
@@ -230,7 +230,7 @@ h6 {
 
 
         @media only screen and (max-width: 930px) {
-            .chat-container {
+            .nyulibraries-chat-container {
                 width: 100%;
                 right: 0;
                 border-radius: 0;
@@ -13298,7 +13298,11 @@ h6 {
     -->
 
 
-    <div class="chat-container" id="chat_widget"><button class="button ss-chat chat-button"><img src="https://cdn.library.nyu.edu/chatwidget-embed/chat-icon.svg" alt="Chat-Symbol." class="chat-icon">Chat with us</button></div>
+    <div class="nyulibraries-chat-container" id="nyulibraries_chat_widget"><button class="button ss-chat nyulibraries-chat-button" id="chat-button"><img src="https://cdn.library.nyu.edu/chatwidget-embed/chat-icon.svg" alt="Chat-Symbol." class="nyulibraries-chat-icon">Chat with us</button>
+        <div class="nyulibraries-chat-frame-wrap" style="display: none;"><button class="nyulibraries-chat-close ss-icon nyulibraries-chatwidget-js-toggle" title="Close chat window" aria-label="Close chat window"><span class="nyulibraries-close-icon">×</span></button>
+            <div class="libraryh3lp" data-lh3-jid="nyu-aal-chat@chat.libraryh3lp.com"><iframe title="Ask a Librarian chat" src="https://libraryh3lp.com/chat/nyu-aal-chat@chat.libraryh3lp.com?skin=23106&amp;amp;referer=https%3A%2F%2Flibrary.nyu.edu%2F"></iframe></div>
+        </div>
+    </div>
 </body>
 
 </html>

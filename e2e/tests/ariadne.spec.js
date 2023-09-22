@@ -114,7 +114,7 @@ ${e.stderr.toString()}`;
     });
 
     test('screenshot matches expected', async ({ page }) => {
-      test.skip( process.platform === 'darwin', 'This test is not implemented for Mac' );
+      test.skip(process.platform === 'darwin', 'This test is not implemented for Mac');
 
       // Wait for the response to be returned and the page to render
       await page.waitForSelector('.image');
@@ -135,15 +135,15 @@ ${e.stderr.toString()}`;
 
     test('Chat widget should toggle chat window', async ({ page }) => {
       // Click the "Chat with us" button
-      await page.click('button.ss-chat.chat-button');
+      await page.click('button.ss-chat.nyulibraries-chat-button');
 
       // Verify that the chat window is visible
-      const chatFrame = await page.waitForSelector('.chat-frame-wrap');
+      const chatFrame = await page.waitForSelector('.nyulibraries-chat-frame-wrap');
       const isVisible = await chatFrame.isVisible();
       expect(isVisible).toBeTruthy();
 
       // Click the "Close chat window" button
-      await page.click('button.chat-close');
+      await page.click('button.nyulibraries-chat-close');
 
       // Verify that the chat window is hidden
       const isHidden = await chatFrame.isHidden();
