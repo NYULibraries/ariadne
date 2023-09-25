@@ -6,6 +6,7 @@
     <link rel="icon" href="https://cdn.library.nyu.edu/images/favicon.ico">
     <link rel="stylesheet" type="text/css" async="" href="//cloud.typography.com/7436432/789146/css/fonts.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" type="text/css" href="https://cdn.library.nyu.edu/chatwidget-embed/index.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#000000">
 
@@ -24,7 +25,7 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>GetIt | Corriere Fiorentino</title>
-    <script type="text/javascript" async="" src="http://libraryh3lp.com/js/libraryh3lp.js?7516"></script>
+    <script type="text/javascript" async="" src="https://cdn.library.nyu.edu/chatwidget-embed/index.min.js"></script>
     <script defer="" src="/static/js/bundle.js"></script>
     <style>
         body {
@@ -191,41 +192,10 @@ h6 {
             margin-bottom: 26px;
         }
 
-        /* E2E TEST EDIT: sourceMappingURL comments elided */
-    </style>
-    <style>
-        .chat-tab {
-            color: #e0d5e8;
-            padding: 10px 10px 8px;
-            font-size: 14px;
-            border-radius: 3px 3px 0 0;
-        }
+        /* chatWidget-embed styles */
 
-        .chat-icon {
-            width: 24px;
-            height: 24px;
-            vertical-align: middle;
-            margin-right: 5px;
-            min-width: 24px;
-            min-height: 24px;
-        }
-
-
-        #chat_widget {
-            position: fixed;
-            bottom: 0px;
-            right: 10px;
-        }
-
-        /* ChatWidget.css */
-
-        #chat_widget .chat-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-        }
-
-        #chat_widget .chat-button {
+        /* chatwidget button styles */
+        #nyulibraries_chat_widget .nyulibraries-chat-button {
             padding: 10px 10px 8px;
             width: 131.38px;
             height: 42px;
@@ -236,382 +206,34 @@ h6 {
         }
 
         @media screen and (max-width: 930px) {
-            #chat_widget .chat-button {
+            #nyulibraries_chat_widget .nyulibraries-chat-button {
                 width: 100%;
                 max-width: none;
                 right: 0;
                 border-radius: 0;
             }
+
+            .nyulibraries-chat-frame-wrap {
+                position: relative;
+                right: 10px;
+            }
         }
 
-        .chat-button:hover {
-            background-color: #6c07ae;
-            color: #fff;
-        }
 
-        .chat-frame-wrap {
-            position: relative;
-            right: 10px;
-        }
-
-        .chat-close {
+        .nyulibraries-close-icon {
             position: absolute;
-            top: -15px;
-            right: -5px;
-            border-radius: 50%;
-            width: 24px;
-            height: 24px;
-            line-height: 24px;
-            text-align: center;
-            background: #f5f7fa;
-            border: 1px solid rgb(192, 192, 192);
-            border: 0 none;
-            cursor: pointer;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             font-size: 16px;
         }
 
 
-        .libraryh3lp iframe {
-            width: 300px !important;
-            height: 280px !important;
-            vertical-align: bottom;
-            border-radius: 3px 3px 0 0;
-            border: none !important;
-        }
-
         @media only screen and (max-width: 930px) {
-            #chat_widget {
+            .nyulibraries-chat-container {
                 width: 100%;
                 right: 0;
                 border-radius: 0;
-            }
-        }
-
-        /* E2E TEST EDIT: sourceMappingURL comments elided */
-    </style>
-    <style>
-        div {
-            display: block;
-        }
-
-        p {
-            display: block;
-            margin-block-start: 1em;
-            margin-block-end: 1em;
-            margin-inline-start: 0px;
-            margin-inline-end: 0px;
-        }
-
-        ul {
-            display: block;
-            list-style-type: disc;
-            margin-block-start: 1em;
-            margin-block-end: 1em;
-            margin-inline-start: 0px;
-            margin-inline-end: 0px;
-            padding-inline-start: 40px;
-        }
-
-        ul.list,
-        .block .s-la-widget ul.list-unstyled {
-            list-style: none;
-        }
-
-
-        li {
-            display: list-item;
-            text-align: -webkit-match-parent;
-        }
-
-        .list a,
-        .list .block .s-la-widget a,
-        .block .s-la-widget .list a,
-        .block .s-la-widget .list-unstyled a {
-            text-decoration: none;
-        }
-
-
-        .list li,
-        .block .s-la-widget .list-unstyled li {
-            border-bottom: 1px dotted #bbbdbf;
-            margin: 0 0 10px 0;
-            padding: 0 0 10px 0;
-        }
-
-        .list:last-child li:last-child,
-        .block .s-la-widget .list-unstyled:last-child li:last-child {
-            border-bottom: 0 none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        ::selection {
-            background: #57068c;
-            color: #fff;
-        }
-
-        .button {
-            appearance: none;
-            border: 0 none;
-            box-shadow: none;
-            background: #57068c;
-            color: #fff;
-            font-weight: 400;
-            font-size: 14px;
-            font-family: "Gotham A", "Gotham B", Helvetica, Arial, sans-serif;
-            text-align: center;
-            text-decoration: none;
-            padding: 15px 30px;
-            border-radius: 3px;
-            display: inline-block;
-        }
-
-
-        .primary-footer {
-            display: flex;
-            background: #22272d;
-            color: #acb6c2;
-            padding-top: 75px;
-            padding-bottom: 87px
-        }
-
-        .footer__social a:not(.ss-navigateright):not(.button) img {
-            background-color: white;
-            border-radius: 10%;
-        }
-
-        .footer__social a:hover img {
-            opacity: 0.7;
-        }
-
-        .wrap {
-            width: 95%;
-            max-width: 1170px;
-            margin: auto;
-            position: relative;
-        }
-
-        .block-container,
-        .block {
-            zoom: 1;
-            box-sizing: border-box;
-            display: block;
-        }
-
-        .block-container:before {
-            content: "";
-            display: table;
-        }
-
-        .block-container:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        .primary-footer .block {
-            margin-bottom: 30px;
-        }
-
-        .block {
-            margin: 0 0 45px;
-        }
-
-        .block--25 {
-            width: 25%;
-            float: left;
-            padding: 0 15px;
-        }
-
-        .block--25:first-child {
-            padding-left: 0;
-        }
-
-        .block--25:nth-of-type(4n) {
-            padding-right: 0;
-        }
-
-        .primary-footer .button {
-            color: #fff;
-            font-size: 14px;
-            width: 100%;
-            display: block;
-            padding: 25px 20px;
-        }
-
-        .primary-footer p {
-            margin: 0 0 1em;
-            line-height: 1.5;
-            font-size: 12px;
-            color: #acb6c2;
-        }
-
-        .primary-footer a,
-        .primary-footer .block .s-la-widget a,
-        .block .s-la-widget .primary-footer a {
-            color: #acb6c2;
-        }
-
-        .primary-footer a:hover,
-        .primary-footer .block .s-la-widget a:hover,
-        .block .s-la-widget .primary-footer a:hover {
-            color: #fff;
-            text-decoration: underline;
-        }
-
-        .primary-footer .list li,
-        .primary-footer .block .s-la-widget .list-unstyled li,
-        .block .s-la-widget .primary-footer .list-unstyled li {
-            border-bottom-color: #65686c;
-        }
-
-        .footer__menu:first-child .list li:last-child {
-            border-bottom: 1px dotted #65686c;
-            margin-bottom: 10px;
-            padding-bottom: 10px;
-        }
-
-        .block {
-            margin: 0 0 45px;
-        }
-
-        .block--25 {
-            width: 25%;
-            float: left;
-            padding: 0 15px;
-        }
-
-        .footer__give a:hover {
-            color: white;
-            background-color: #6c07ae;
-            text-decoration: underline;
-        }
-
-        .footer__give a:visited {
-            border: 3px solid #72c5e9;
-        }
-
-
-        .footer__social p {
-            margin: 0 0 1em;
-            line-height: 1.5;
-            font-size: 12px;
-        }
-
-        .footer__social .ss-icon,
-        .footer__social .table__cell--sortable[data-sort]:after {
-            color: #d8dee5;
-            font-size: 20px;
-            display: inline-block;
-            margin-right: 10px;
-            text-decoration: none;
-        }
-
-        .footer__copyright {
-            font-size: 12px;
-            border-top: 1px dotted #65686c;
-            padding-top: 13px;
-            color: #b1b1b1;
-            line-height: 1.4;
-            width: 100%;
-            bottom: 0;
-            position: absolute;
-        }
-
-        .footer__copyright a,
-        .footer__copyright .block .s-la-widget a,
-        .block .s-la-widget .footer__copyright a {
-            color: #b1b1b1;
-            text-decoration: underline;
-        }
-
-        .footer__logo {
-            position: absolute;
-            top: 13px;
-            right: 0;
-            width: 200px;
-            /* height: 100%; */
-            text-align: right;
-            padding: 0 0 0 15px;
-        }
-
-        .footer__logo img:hover {
-            opacity: 0.7;
-        }
-
-        @media only screen and (max-width: 730px) {
-
-            .footer__give,
-            .footer__social {
-                width: 100%;
-                padding: 0;
-            }
-        }
-
-        @media only screen and (max-width: 500px) {
-            .primary-footer .block {
-                width: 100%;
-                padding: 0;
-                margin-bottom: 30px;
-            }
-
-            ul {
-                padding-left: 0 !important;
-            }
-
-            .ss-navigateright.right::after {
-                content: ">";
-            }
-
-            .primary-footer a {
-                color: #fff;
-                text-decoration: none;
-            }
-
-            .footer__social p a:after {
-                color: #fff;
-                margin-left: 5px;
-                font-size: 18px;
-                vertical-align: middle;
-            }
-
-            .list:last-child li:last-child {
-                border-bottom: 1px dotted #65686c;
-                margin: 0 0 10px 0;
-                padding: 0 0 10px 0;
-            }
-
-            .footer__menu:nth-of-type(2) {
-                margin-bottom: 0;
-            }
-
-            .footer__copyright {
-                position: static;
-                padding-top: 30px;
-            }
-
-            .footer__logo {
-                position: static;
-                padding: 0;
-                text-align: left;
-            }
-        }
-
-
-
-        @media only screen and (max-width: 730px) {
-            .block--25 {
-                width: 50%;
-                padding: 0 15px 0 0;
-            }
-        }
-
-        @media only screen and (max-width: 910px) {
-            .footer__logo {
-                float: none;
-                top: auto;
-                margin-top: 5px;
-                display: block;
             }
         }
 
@@ -13236,6 +12858,334 @@ h6 {
 
         /* E2E TEST EDIT: sourceMappingURL comments elided */
     </style>
+    <style>
+        div {
+            display: block;
+        }
+
+        p {
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        ul {
+            display: block;
+            list-style-type: disc;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 40px;
+        }
+
+        ul.list,
+        .block .s-la-widget ul.list-unstyled {
+            list-style: none;
+        }
+
+
+        li {
+            display: list-item;
+            text-align: -webkit-match-parent;
+        }
+
+        .list a,
+        .list .block .s-la-widget a,
+        .block .s-la-widget .list a,
+        .block .s-la-widget .list-unstyled a {
+            text-decoration: none;
+        }
+
+
+        .list li,
+        .block .s-la-widget .list-unstyled li {
+            border-bottom: 1px dotted #bbbdbf;
+            margin: 0 0 10px 0;
+            padding: 0 0 10px 0;
+        }
+
+        .list:last-child li:last-child,
+        .block .s-la-widget .list-unstyled:last-child li:last-child {
+            border-bottom: 0 none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        ::selection {
+            background: #57068c;
+            color: #fff;
+        }
+
+        .button {
+            appearance: none;
+            border: 0 none;
+            box-shadow: none;
+            background: #57068c;
+            color: #fff;
+            font-weight: 400;
+            font-size: 14px;
+            font-family: "Gotham A", "Gotham B", Helvetica, Arial, sans-serif;
+            text-align: center;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 3px;
+            display: inline-block;
+        }
+
+
+        .primary-footer {
+            display: flex;
+            background: #22272d;
+            color: #acb6c2;
+            padding-top: 75px;
+            padding-bottom: 87px
+        }
+
+        .footer__social a:not(.ss-navigateright):not(.button) img {
+            background-color: white;
+            border-radius: 10%;
+        }
+
+        .footer__social a:hover img {
+            opacity: 0.7;
+        }
+
+        .wrap {
+            width: 95%;
+            max-width: 1170px;
+            margin: auto;
+            position: relative;
+        }
+
+        .block-container,
+        .block {
+            zoom: 1;
+            box-sizing: border-box;
+            display: block;
+        }
+
+        .block-container:before {
+            content: "";
+            display: table;
+        }
+
+        .block-container:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .primary-footer .block {
+            margin-bottom: 30px;
+        }
+
+        .block {
+            margin: 0 0 45px;
+        }
+
+        .block--25 {
+            width: 25%;
+            float: left;
+            padding: 0 15px;
+        }
+
+        .block--25:first-child {
+            padding-left: 0;
+        }
+
+        .block--25:nth-of-type(4n) {
+            padding-right: 0;
+        }
+
+        .primary-footer .button {
+            color: #fff;
+            font-size: 14px;
+            width: 100%;
+            display: block;
+            padding: 25px 20px;
+        }
+
+        .primary-footer p {
+            margin: 0 0 1em;
+            line-height: 1.5;
+            font-size: 12px;
+            color: #acb6c2;
+        }
+
+        .primary-footer a,
+        .primary-footer .block .s-la-widget a,
+        .block .s-la-widget .primary-footer a {
+            color: #acb6c2;
+        }
+
+        .primary-footer a:hover,
+        .primary-footer .block .s-la-widget a:hover,
+        .block .s-la-widget .primary-footer a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .primary-footer .list li,
+        .primary-footer .block .s-la-widget .list-unstyled li,
+        .block .s-la-widget .primary-footer .list-unstyled li {
+            border-bottom-color: #65686c;
+        }
+
+        .footer__menu:first-child .list li:last-child {
+            border-bottom: 1px dotted #65686c;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+        }
+
+        .block {
+            margin: 0 0 45px;
+        }
+
+        .block--25 {
+            width: 25%;
+            float: left;
+            padding: 0 15px;
+        }
+
+        .footer__give a:hover {
+            color: white;
+            background-color: #6c07ae;
+            text-decoration: underline;
+        }
+
+        .footer__give a:visited {
+            border: 3px solid #72c5e9;
+        }
+
+
+        .footer__social p {
+            margin: 0 0 1em;
+            line-height: 1.5;
+            font-size: 12px;
+        }
+
+        .footer__social .ss-icon,
+        .footer__social .table__cell--sortable[data-sort]:after {
+            color: #d8dee5;
+            font-size: 20px;
+            display: inline-block;
+            margin-right: 10px;
+            text-decoration: none;
+        }
+
+        .footer__copyright {
+            font-size: 12px;
+            border-top: 1px dotted #65686c;
+            padding-top: 13px;
+            color: #b1b1b1;
+            line-height: 1.4;
+            width: 100%;
+            bottom: 0;
+            position: absolute;
+        }
+
+        .footer__copyright a,
+        .footer__copyright .block .s-la-widget a,
+        .block .s-la-widget .footer__copyright a {
+            color: #b1b1b1;
+            text-decoration: underline;
+        }
+
+        .footer__logo {
+            position: absolute;
+            top: 13px;
+            right: 0;
+            width: 200px;
+            /* height: 100%; */
+            text-align: right;
+            padding: 0 0 0 15px;
+        }
+
+        .footer__logo img:hover {
+            opacity: 0.7;
+        }
+
+        @media only screen and (max-width: 730px) {
+
+            .footer__give,
+            .footer__social {
+                width: 100%;
+                padding: 0;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .primary-footer .block {
+                width: 100%;
+                padding: 0;
+                margin-bottom: 30px;
+            }
+
+            ul {
+                padding-left: 0 !important;
+            }
+
+            .ss-navigateright.right::after {
+                content: ">";
+            }
+
+            .primary-footer a {
+                color: #fff;
+                text-decoration: none;
+            }
+
+            .footer__social p a:after {
+                color: #fff;
+                margin-left: 5px;
+                font-size: 18px;
+                vertical-align: middle;
+            }
+
+            .list:last-child li:last-child {
+                border-bottom: 1px dotted #65686c;
+                margin: 0 0 10px 0;
+                padding: 0 0 10px 0;
+            }
+
+            .footer__menu:nth-of-type(2) {
+                margin-bottom: 0;
+            }
+
+            .footer__copyright {
+                position: static;
+                padding-top: 30px;
+            }
+
+            .footer__logo {
+                position: static;
+                padding: 0;
+                text-align: left;
+            }
+        }
+
+
+
+        @media only screen and (max-width: 730px) {
+            .block--25 {
+                width: 50%;
+                padding: 0 15px 0 0;
+            }
+        }
+
+        @media only screen and (max-width: 910px) {
+            .footer__logo {
+                float: none;
+                top: auto;
+                margin-top: 5px;
+                display: block;
+            }
+        }
+
+        /* E2E TEST EDIT: sourceMappingURL comments elided */
+    </style>
 </head>
 
 <body>
@@ -13331,11 +13281,6 @@ h6 {
                     <div class="footer__copyright">Unless otherwise noted, all content copyright New York University. All rights reserved.<a href="https://library.nyu.edu/privacy-policy/">Privacy policy</a><a class="footer__logo" href="https://www.nyu.edu"><img src="/images/nyu-footer-logo.svg" alt="New York University homepage." height="27"></a></div>
                 </div>
             </footer>
-            <aside id="chat_widget" tabindex="-1">
-                <div class="chat-container"><button class="button ss-chat chat-button"><img src="/images/chat-icon.svg" alt="Chat-Symbol." class="chat-icon">Chat with us</button>
-                    <div class="chat-frame-wrap"></div>
-                </div>
-            </aside>
         </div>
     </div>
     <!--
@@ -13350,7 +13295,11 @@ h6 {
     -->
 
 
-
+    <div class="nyulibraries-chat-container" id="nyulibraries_chat_widget"><button class="button ss-chat nyulibraries-chat-button" id="chat-button"><img src="https://cdn.library.nyu.edu/chatwidget-embed/chat-icon.svg" alt="Chat-Symbol." class="nyulibraries-chat-icon">Chat with us</button>
+        <div class="nyulibraries-chat-frame-wrap" style="display: none;"><button class="nyulibraries-chat-close ss-icon nyulibraries-chatwidget-js-toggle" title="Close chat window" aria-label="Close chat window"><span class="nyulibraries-close-icon">×</span></button>
+            <div class="libraryh3lp" data-lh3-jid="nyu-aal-chat@chat.libraryh3lp.com"><iframe title="Ask a Librarian chat" src="https://libraryh3lp.com/chat/nyu-aal-chat@chat.libraryh3lp.com?skin=23106&amp;amp;referer=https%3A%2F%2Flibrary.nyu.edu%2F"></iframe></div>
+        </div>
+    </div>
 </body>
 
 </html>
