@@ -2,10 +2,10 @@ FROM node:18.9.0-alpine
 
 ARG production
 
+ENV INSTALL_PATH /app
+
 RUN addgroup --gid 1001 docker && \
   adduser --uid 1001 --ingroup docker --disabled-password --gecos "" docker
-
-ENV INSTALL_PATH /app
 
 COPY frontend/package.json frontend/yarn.lock /tmp/
 RUN cd /tmp && yarn install $(if [[ ! -z $production ]]; then echo "--production"; fi) \
@@ -18,9 +18,11 @@ WORKDIR ${INSTALL_PATH}
 
 COPY frontend .
 
-RUN REACT_APP_API_URL=/v0/ yarn run build
+RUN chown -R docker:docker ${INSTALL_PATH}
 
 USER docker
+
+RUN REACT_APP_API_URL=/v0/ yarn run build
 
 EXPOSE 3000
 

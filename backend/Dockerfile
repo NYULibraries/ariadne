@@ -15,6 +15,7 @@ RUN addgroup --gid 1000 docker && \
 
 WORKDIR /app
 COPY --from=builder /app ./
+RUN chown -R docker:docker /app
 
 USER docker
 EXPOSE 8080
