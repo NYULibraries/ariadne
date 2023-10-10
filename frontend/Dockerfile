@@ -15,6 +15,10 @@ WORKDIR ${INSTALL_PATH}
 
 COPY frontend .
 
+RUN chown -R node:node ${INSTALL_PATH}
+
+USER node
+
 RUN REACT_APP_API_URL=/v0/ yarn run build
 
 EXPOSE 3000
