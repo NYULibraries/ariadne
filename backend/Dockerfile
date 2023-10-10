@@ -10,8 +10,9 @@ RUN go mod tidy && \
 
 FROM alpine:latest
 
-RUN addgroup --gid 1000 docker && \
-    adduser --uid 1000 --ingroup docker --disabled-password --gecos "" docker
+RUN addgroup -g 1001 docker && \
+    adduser -D -u 1001 -G docker docker
+
 
 WORKDIR /app
 COPY --from=builder /app ./

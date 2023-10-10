@@ -4,8 +4,8 @@ ARG production
 
 ENV INSTALL_PATH /app
 
-RUN addgroup --gid 1001 docker && \
-  adduser --uid 1001 --ingroup docker --disabled-password --gecos "" docker
+RUN addgroup -g 1001 docker && \
+  adduser -D -u 1001 -G docker docker
 
 COPY frontend/package.json frontend/yarn.lock /tmp/
 RUN cd /tmp && yarn install $(if [[ ! -z $production ]]; then echo "--production"; fi) \
