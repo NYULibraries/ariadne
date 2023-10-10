@@ -4,9 +4,6 @@ ARG production
 
 ENV INSTALL_PATH /app
 
-RUN addgroup -g 1001 docker && \
-  adduser -D -u 1001 -G docker docker
-
 COPY frontend/package.json frontend/yarn.lock /tmp/
 RUN cd /tmp && yarn install $(if [[ ! -z $production ]]; then echo "--production"; fi) \
   && mkdir -p ${INSTALL_PATH} \
@@ -18,9 +15,9 @@ WORKDIR ${INSTALL_PATH}
 
 COPY frontend .
 
-RUN chown -R docker:docker ${INSTALL_PATH}
+RUN chown -R node:node ${INSTALL_PATH}
 
-USER docker
+USER node
 
 RUN REACT_APP_API_URL=/v0/ yarn run build
 
